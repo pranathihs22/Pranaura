@@ -4,36 +4,195 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pranaura | Premier Real Estate Advisory</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
     <style>
         :root {
-            --primary: #0f172a;
-            --accent: #d4af37;
-            --light: #f8fafc;
-            --gray: #64748b;
+            --cream: #f7f3eb;
+            --light-cream: #fffdf8;
+            --brown: #4b2e1e;
+            --brown-soft: #6b4a32;
+            --accent: #b08968;
+            --text: #3a2a1f;
         }
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-        body { background-color: var(--primary); color: var(--light); line-height: 1.6; }
-        header { display: flex; justify-content: space-between; align-items: center; padding: 2rem 5%; border-bottom: 1px solid rgba(255,255,255,0.1); }
-        .logo { font-size: 1.8rem; font-weight: 700; letter-spacing: 2px; color: var(--accent); text-transform: uppercase; }
-        nav a { color: var(--light); text-decoration: none; margin-left: 2rem; font-size: 0.95rem; transition: color 0.3s; }
-        nav a:hover { color: var(--accent); }
-        .hero { text-align: center; padding: 8rem 5% 5rem 5%; max-width: 900px; margin: 0 auto; }
-        .hero h1 { font-size: 3.5rem; margin-bottom: 1.5rem; font-weight: 600; letter-spacing: -1px; }
-        .hero h1 span { color: var(--accent); }
-        .hero p { font-size: 1.25rem; color: var(--gray); margin-bottom: 2.5rem; }
-        .cta-btn { display: inline-block; background-color: var(--accent); color: var(--primary); padding: 0.9rem 2.2rem; font-weight: 600; text-decoration: none; border-radius: 4px; transition: opacity 0.3s; }
-        .cta-btn:hover { opacity: 0.9; }
-        .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; padding: 5rem 10%; background: #090d16; }
-        .card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); padding: 2.5rem; border-radius: 6px; }
-        .card h3 { color: var(--accent); margin-bottom: 1rem; font-size: 1.3rem; }
-        .card p { color: var(--gray); font-size: 0.95rem; }
-        footer { text-align: center; padding: 3rem; color: var(--gray); font-size: 0.85rem; border-top: 1px solid rgba(255,255,255,0.05); }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: var(--cream);
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 6%;
+            background: var(--light-cream);
+            border-bottom: 1px solid rgba(75, 46, 30, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-container img {
+            width: 48px;
+            height: 48px;
+            object-fit: contain;
+        }
+
+        .logo-text {
+            font-size: 1.6rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            color: var(--brown);
+        }
+
+        nav a {
+            color: var(--brown);
+            text-decoration: none;
+            margin-left: 2rem;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--accent);
+        }
+
+        .hero {
+            text-align: center;
+            padding: 7rem 5% 6rem;
+            max-width: 950px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3.4rem;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+            color: var(--brown);
+        }
+
+        .hero h1 span {
+            color: var(--accent);
+        }
+
+        .hero p {
+            font-size: 1.15rem;
+            color: var(--brown-soft);
+            margin-bottom: 2.5rem;
+            max-width: 760px;
+            margin-inline: auto;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            background: var(--brown);
+            color: var(--light-cream);
+            padding: 0.95rem 2.4rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 18px rgba(75, 46, 30, 0.15);
+        }
+
+        .cta-btn:hover {
+            background: var(--accent);
+            transform: translateY(-2px);
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            padding: 5rem 8%;
+            background: #efe7da;
+        }
+
+        .card {
+            background: var(--light-cream);
+            padding: 2.5rem;
+            border-radius: 20px;
+            border: 1px solid rgba(75, 46, 30, 0.08);
+            box-shadow: 0 8px 24px rgba(75, 46, 30, 0.06);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 14px 32px rgba(75, 46, 30, 0.12);
+        }
+
+        .card h3 {
+            color: var(--brown);
+            margin-bottom: 1rem;
+            font-size: 1.25rem;
+            font-weight: 600;
+        }
+
+        .card p {
+            color: var(--brown-soft);
+            font-size: 0.95rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 3rem 1rem;
+            background: var(--brown);
+            color: #e8dccb;
+        }
+
+        footer p {
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            nav a {
+                margin: 0 0.8rem;
+            }
+
+            .hero h1 {
+                font-size: 2.4rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+        }
     </style>
 </head>
+
 <body>
 
     <header>
-        <div class="logo">Pranaura</div>
+        <div class="logo-container">
+            <img src="logo.png" alt="Pranaura Logo">
+            <div class="logo-text">Pranaura</div>
+        </div>
+
         <nav>
             <a href="#about">About</a>
             <a href="#services">Services</a>
@@ -41,25 +200,45 @@
         </nav>
     </header>
 
-    <section class="hero">
+    <section class="hero" id="about">
         <h1>Bridging Premier Builders & <span>Strategic Investors</span></h1>
-        <p>Pranaura is an exclusive real estate advisory platform aligning high-yield investment opportunities with elite development projects.</p>
+
+        <p>
+            Pranaura is an exclusive real estate advisory platform that aligns
+            high-yield investment opportunities with elite development projects,
+            creating long-term value through trust, strategy, and premium partnerships.
+        </p>
+
         <a href="#contact" class="cta-btn">Partner With Us</a>
     </section>
 
     <section class="features" id="services">
+
         <div class="card">
             <h3>For Builders</h3>
-            <p>We connect your elite developments directly with vetted institutional and high-net-worth strategic investors to accelerate project capitalization.</p>
+            <p>
+                We connect your premium developments directly with vetted
+                institutional and high-net-worth investors, accelerating project
+                capitalization and market reach.
+            </p>
         </div>
+
         <div class="card">
             <h3>For Investors</h3>
-            <p>Gain privileged access to high-potential real estate assets and prime commercial properties through transparent advisory partnerships.</p>
+            <p>
+                Access carefully curated real estate opportunities, prime commercial
+                assets, and transparent advisory partnerships designed for sustainable returns.
+            </p>
         </div>
+
         <div class="card">
             <h3>Strategic Advisory</h3>
-            <p>Expert commission-based structuring, market alignment, and seamless deal facilitation tailored for optimal ROI.</p>
+            <p>
+                Commission-based deal structuring, market alignment, negotiation
+                support, and seamless transaction facilitation tailored for optimal ROI.
+            </p>
         </div>
+
     </section>
 
     <footer id="contact">
