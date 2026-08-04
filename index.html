@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pranaura | Real Estate Advisory</title>
+  <title>PRANAURA | REAL ESTATE ADVISORY</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Cinzel:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
   <style>
     :root{
@@ -72,26 +72,30 @@
       max-width:1100px;
       margin:auto;
       text-align:center;
-      padding:42px 24px 20px;
+      padding:48px 24px 24px;
     }
 
     .brand-name{
-      font-family:'Cormorant Garamond',serif;
-      font-size:5.4rem;
+      font-family:'Cinzel',serif;
+      font-size:5rem;
       font-weight:700;
-      letter-spacing:1px;
+      letter-spacing:2px;
       color:var(--brown);
       line-height:1;
-      margin-bottom:18px;
+      margin-bottom:20px;
+      text-transform:uppercase;
+      text-align:center;
     }
 
     .hero h2{
       font-family:'Cinzel',serif;
-      font-size:3rem;
-      line-height:1.18;
-      margin-bottom:20px;
+      font-size:2.7rem;
+      line-height:1.25;
+      margin-bottom:18px;
       color:var(--brown);
       font-weight:700;
+      text-transform:uppercase;
+      letter-spacing:1px;
     }
 
     .hero h2 span{
@@ -99,15 +103,16 @@
     }
 
     .hero p{
-      max-width:780px;
+      max-width:760px;
       margin:auto;
-      font-size:1.08rem;
+      font-size:1.05rem;
       color:var(--brown-soft);
+      text-align:center;
     }
 
     .btn{
       display:inline-block;
-      margin-top:26px;
+      margin-top:28px;
       padding:15px 36px;
       border-radius:999px;
       background:var(--brown);
@@ -123,10 +128,10 @@
       background:var(--gold);
     }
 
-    /* BIG CENTERED LOGO */
+    /* HUGE CENTERED LOGO */
     .hero-logo{
-      margin-top:22px;
-      margin-bottom:6px;
+      margin-top:38px;
+      margin-bottom:38px;
       display:flex;
       justify-content:center;
       align-items:center;
@@ -134,12 +139,12 @@
     }
 
     .hero-logo img{
-      width:380px;
-      height:380px;
+      width:430px;
+      height:430px;
       object-fit:contain;
       display:block;
       margin:auto;
-      filter:drop-shadow(0 22px 42px rgba(75,46,30,0.32));
+      filter:drop-shadow(0 26px 48px rgba(75,46,30,0.32));
       transition:transform .3s ease;
     }
 
@@ -151,7 +156,7 @@
     section{
       max-width:1200px;
       margin:auto;
-      padding:44px 24px;
+      padding:48px 24px;
     }
 
     .section-title{
@@ -162,14 +167,20 @@
     .section-title h3{
       font-family:'Cinzel',serif;
       font-size:2.35rem;
-      margin-bottom:10px;
+      margin-bottom:12px;
       color:var(--brown);
+      text-transform:uppercase;
+      letter-spacing:1px;
     }
 
     .section-title p{
       color:var(--brown-soft);
       max-width:680px;
       margin:auto;
+      text-align:center;
+      text-transform:uppercase;
+      font-size:.95rem;
+      letter-spacing:.5px;
     }
 
     .about-box,
@@ -183,6 +194,13 @@
 
     .about-box{
       padding:42px;
+    }
+
+    .about-box p,
+    .card p,
+    .contact-item p{
+      text-align:center;
+      color:var(--brown-soft);
     }
 
     /* SERVICES */
@@ -207,11 +225,8 @@
       color:var(--brown);
       margin-bottom:12px;
       font-size:1.25rem;
-    }
-
-    .card p{
-      color:var(--brown-soft);
-      font-size:.96rem;
+      text-align:center;
+      text-transform:uppercase;
     }
 
     /* CONTACT */
@@ -225,14 +240,18 @@
       gap:28px;
     }
 
+    .contact-item{
+      text-align:center;
+    }
+
     .contact-item h5{
       font-family:'Cinzel',serif;
       margin-bottom:10px;
       color:var(--brown);
       font-size:1.08rem;
+      text-transform:uppercase;
     }
 
-    .contact-item p,
     .contact-item a{
       color:var(--brown-soft);
       text-decoration:none;
@@ -251,6 +270,7 @@
       color:#eadfce;
       margin-top:48px;
       font-size:.95rem;
+      letter-spacing:.5px;
     }
 
     /* MOBILE */
@@ -265,26 +285,39 @@
         font-size:.95rem;
       }
 
+      .hero{
+        padding:36px 18px 18px;
+      }
+
       .brand-name{
-        font-size:4rem;
+        font-size:3.8rem;
       }
 
       .hero h2{
-        font-size:2.2rem;
+        font-size:2rem;
       }
 
       .hero p{
         font-size:1rem;
       }
 
+      .hero-logo{
+        margin-top:32px;
+        margin-bottom:32px;
+      }
+
       .hero-logo img{
-        width:290px;
-        height:290px;
+        width:340px;
+        height:340px;
       }
 
       .about-box,
       .contact{
         padding:28px;
+      }
+
+      .section-title h3{
+        font-size:2rem;
       }
     }
   </style>
@@ -304,100 +337,111 @@
 
   <section class="hero">
 
-    <div class="brand-name">Pranaura</div>
+    <div class="brand-name">PRANAURA</div>
 
-    <h2>Bridging Premier Builders & <span>Strategic Investors</span></h2>
+    <h2>BRIDGING PREMIER BUILDERS & <span>STRATEGIC INVESTORS</span></h2>
 
     <p>
-      Pranaura is a real estate advisory platform connecting premium builders,
-      high-net-worth investors, and strategic development opportunities through trust,
-      transparency, and long-term value creation.
+      PRANAURA IS A REAL ESTATE ADVISORY PLATFORM CONNECTING PREMIUM BUILDERS,
+      HIGH-NET-WORTH INVESTORS, AND STRATEGIC DEVELOPMENT OPPORTUNITIES THROUGH TRUST,
+      TRANSPARENCY, AND LONG-TERM VALUE CREATION.
     </p>
 
     <a href="#contact" class="btn">Partner With Us</a>
 
     <div class="hero-logo">
-      <img src="logo.png" alt="Pranaura Logo" onerror="this.style.display='none'">
+      <img src="logo.png" alt="PRANAURA LOGO" onerror="this.style.display='none'">
     </div>
 
   </section>
 
   <section id="about">
     <div class="section-title">
-      <h3>About Pranaura</h3>
-      <p>Advisory for premium real estate partnerships and investment opportunities.</p>
+      <h3>ABOUT PRANAURA</h3>
+      <p>ADVISORY FOR PREMIUM REAL ESTATE PARTNERSHIPS AND INVESTMENT OPPORTUNITIES.</p>
     </div>
 
     <div class="about-box">
       <p>
-        Pranaura specializes in connecting trusted builders with qualified investors.
-        Our approach is relationship-driven, commission-based, and focused on creating
-        sustainable value for both developers and investment partners.
+        PRANAURA SPECIALIZES IN CONNECTING TRUSTED BUILDERS WITH QUALIFIED INVESTORS.
+        OUR APPROACH IS RELATIONSHIP-DRIVEN, COMMISSION-BASED, AND FOCUSED ON CREATING
+        SUSTAINABLE VALUE FOR BOTH DEVELOPERS AND INVESTMENT PARTNERS.
       </p>
       <br>
       <p>
-        We provide strategic guidance, market alignment, investor facilitation, and
-        seamless deal coordination across residential, commercial, and high-growth
-        real estate opportunities.
+        WE PROVIDE STRATEGIC GUIDANCE, MARKET ALIGNMENT, INVESTOR FACILITATION, AND
+        SEAMLESS DEAL COORDINATION ACROSS RESIDENTIAL, COMMERCIAL, AND HIGH-GROWTH
+        REAL ESTATE OPPORTUNITIES.
       </p>
     </div>
   </section>
 
   <section id="services">
     <div class="section-title">
-      <h3>Our Services</h3>
-      <p>Tailored solutions for builders, investors, and strategic real estate partnerships.</p>
+      <h3>OUR SERVICES</h3>
+      <p>TAILORED SOLUTIONS FOR BUILDERS, INVESTORS, AND STRATEGIC REAL ESTATE PARTNERSHIPS.</p>
     </div>
 
     <div class="services">
+
       <div class="card">
-        <h4>Builder Advisory</h4>
-        <p>Investor introductions, project positioning, and strategic capital facilitation for premium developments.</p>
+        <h4>BUILDER ADVISORY</h4>
+        <p>
+          INVESTOR INTRODUCTIONS, PROJECT POSITIONING, AND STRATEGIC CAPITAL
+          FACILITATION FOR PREMIUM DEVELOPMENTS.
+        </p>
       </div>
 
       <div class="card">
-        <h4>Investor Access</h4>
-        <p>Curated access to high-potential residential, commercial, and land investment opportunities.</p>
+        <h4>INVESTOR ACCESS</h4>
+        <p>
+          CURATED ACCESS TO HIGH-POTENTIAL RESIDENTIAL, COMMERCIAL,
+          AND LAND INVESTMENT OPPORTUNITIES.
+        </p>
       </div>
 
       <div class="card">
-        <h4>Deal Structuring</h4>
-        <p>Transparent commission-based coordination, negotiation support, and transaction facilitation.</p>
+        <h4>DEAL STRUCTURING</h4>
+        <p>
+          TRANSPARENT COMMISSION-BASED COORDINATION, NEGOTIATION SUPPORT,
+          AND TRANSACTION FACILITATION.
+        </p>
       </div>
+
     </div>
   </section>
 
   <section id="contact">
     <div class="section-title">
-      <h3>Contact Us</h3>
-      <p>Connect with Pranaura for partnerships, investment opportunities, or project advisory services.</p>
+      <h3>CONTACT US</h3>
+      <p>CONNECT WITH PRANAURA FOR PARTNERSHIPS, INVESTMENT OPPORTUNITIES, OR PROJECT ADVISORY SERVICES.</p>
     </div>
 
     <div class="contact">
       <div class="contact-grid">
 
         <div class="contact-item">
-          <h5>Phone</h5>
+          <h5>PHONE</h5>
           <a href="tel:+919019746649">+91 90197 46649</a>
         </div>
 
         <div class="contact-item">
-          <h5>Email</h5>
+          <h5>EMAIL</h5>
           <a href="mailto:pranauraconnect@gmail.com">
-            pranauraconnect@gmail.com
+            PRANAURACONNECT@GMAIL.COM
           </a>
         </div>
 
         <div class="contact-item">
-          <h5>Instagram</h5>
+          <h5>INSTAGRAM</h5>
           <a href="https://instagram.com/Pranaura_" target="_blank">
-            @Pranaura_
+            @PRANAURA_
           </a>
         </div>
 
         <div class="contact-item">
-          <h5>Location</h5>
-          <p>Vijayanagar, Mysore, Karnataka, India</p>
+          <h5>LOCATION</h5>
+          <p>VIJAYANAGAR, MYSORE, KARNATAKA, INDIA</p>
         </div>
 
       </div>
@@ -405,7 +449,7 @@
   </section>
 
   <footer>
-    <p>&copy; 2026 Pranaura. All rights reserved.</p>
+    <p>&copy; 2026 PRANAURA. ALL RIGHTS RESERVED.</p>
   </footer>
 
 </body>
