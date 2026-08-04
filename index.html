@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>PRANAURA | Real Estate Advisory</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Poppins:wght@300;400;500;600&family=Noto+Sans+Kannada:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
     :root{
@@ -35,7 +35,10 @@
       -webkit-font-smoothing:antialiased;
     }
 
-    /* HEADER */
+    .kannada{
+      font-family:'Noto Sans Kannada',sans-serif;
+      line-height:1.9;
+    }
 
     header{
       position:sticky;
@@ -53,12 +56,20 @@
       display:flex;
       justify-content:center;
       align-items:center;
+      gap:18px;
+      flex-wrap:wrap;
+    }
+
+    nav{
+      display:flex;
+      align-items:center;
+      gap:18px;
+      flex-wrap:wrap;
     }
 
     nav a{
       text-decoration:none;
       color:var(--brown);
-      margin:0 18px;
       font-weight:500;
       transition:0.3s;
       font-size:0.96rem;
@@ -68,7 +79,30 @@
       color:var(--gold);
     }
 
-    /* HERO */
+    .lang-switch{
+      display:flex;
+      gap:10px;
+      align-items:center;
+    }
+
+    .lang-btn{
+      border:none;
+      background:var(--light);
+      color:var(--brown);
+      padding:9px 16px;
+      border-radius:999px;
+      font-weight:600;
+      cursor:pointer;
+      box-shadow:0 4px 10px rgba(75,46,30,0.08);
+      transition:0.3s;
+      font-size:0.9rem;
+    }
+
+    .lang-btn.active,
+    .lang-btn:hover{
+      background:var(--brown);
+      color:var(--light);
+    }
 
     .hero{
       max-width:980px;
@@ -104,8 +138,6 @@
       color:var(--brown-soft);
       text-align:center;
     }
-
-    /* LOGO */
 
     .hero-logo{
       margin:42px 0 34px;
@@ -144,8 +176,6 @@
       }
     }
 
-    /* BUTTON */
-
     .btn{
       display:inline-block;
       margin-top:6px;
@@ -165,8 +195,6 @@
       background:var(--gold);
       box-shadow:0 16px 30px rgba(184,138,90,0.28);
     }
-
-    /* SECTIONS */
 
     section{
       max-width:1100px;
@@ -215,8 +243,6 @@
       font-size:1rem;
     }
 
-    /* SERVICES */
-
     .services{
       display:grid;
       grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
@@ -249,8 +275,6 @@
       color:var(--brown-soft);
       font-size:0.97rem;
     }
-
-    /* CONTACT */
 
     .contact{
       background:var(--light);
@@ -311,8 +335,6 @@
       color:var(--gold);
     }
 
-    /* FOOTER */
-
     footer{
       text-align:center;
       padding:30px 20px;
@@ -322,8 +344,6 @@
       font-size:0.92rem;
       letter-spacing:0.5px;
     }
-
-    /* MOBILE */
 
     @media(max-width:900px){
       .contact-grid{
@@ -338,13 +358,12 @@
         padding:16px 14px;
       }
 
-      nav a{
-        margin:0 10px;
-        font-size:0.92rem;
+      nav{
+        justify-content:center;
       }
 
-      .hero{
-        padding-top:48px;
+      nav a{
+        font-size:0.92rem;
       }
 
       .brand-name{
@@ -385,7 +404,6 @@
         grid-template-columns:1fr;
       }
     }
-
   </style>
 </head>
 
@@ -393,11 +411,18 @@
 
   <header>
     <div class="navbar">
+
       <nav>
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#contact">Contact</a>
+        <a href="#about" id="nav-about">About</a>
+        <a href="#services" id="nav-services">Services</a>
+        <a href="#contact" id="nav-contact">Contact</a>
       </nav>
+
+      <div class="lang-switch">
+        <button class="lang-btn active" onclick="setLanguage('en', this)">EN</button>
+        <button class="lang-btn" onclick="setLanguage('kn', this)">KN</button>
+      </div>
+
     </div>
   </header>
 
@@ -405,52 +430,63 @@
 
     <div class="brand-name">PRANAURA</div>
 
-    <div class="tagline">Strategic Builder & Investor Partnerships</div>
+    <div id="tagline-en" class="tagline">Strategic Builder & Investor Partnerships</div>
+    <div id="tagline-kn" class="tagline kannada" style="display:none;">ತಂತ್ರಾತ್ಮಕ ಬಿಲ್ಡರ್ ಮತ್ತು ಹೂಡಿಕೆದಾರರ ಸಹಭಾಗಿತ್ವ</div>
 
-    <p>
-      Pranaura is a premium real estate advisory platform that brings together credible developers
-      and qualified investors, fostering high-value partnerships built on trust, transparency,
-      and long-term growth. Our approach is centered on understanding the objectives of every
-      stakeholder and facilitating opportunities that support sustainable development, efficient
-      project execution, and enduring business relationships.
+    <p id="hero-en">
+      Pranaura is a premium real estate advisory platform that brings together credible developers and qualified investors, fostering high-value partnerships built on trust, transparency, and long-term growth.
+    </p>
+
+    <p id="hero-kn" class="kannada" style="display:none;">
+      ಪ್ರಣೌರಾ ವಿಶ್ವಾಸಾರ್ಹ ಡೆವಲಪರ್‌ಗಳು ಮತ್ತು ಅರ್ಹ ಹೂಡಿಕೆದಾರರನ್ನು ಒಂದೇ ವೇದಿಕೆಯಲ್ಲಿ ಸಂಪರ್ಕಿಸುವ ಪ್ರೀಮಿಯಂ ರಿಯಲ್ ಎಸ್ಟೇಟ್ ಸಲಹಾ ವೇದಿಕೆಯಾಗಿದೆ. ನಮ್ಮ ಉದ್ದೇಶ ವಿಶ್ವಾಸ, ಪಾರದರ್ಶಕತೆ ಮತ್ತು ದೀರ್ಘಕಾಲಿಕ ಬೆಳವಣಿಗೆಯ ಆಧಾರದ ಮೇಲೆ ಮೌಲ್ಯಯುತ ಸಹಭಾಗಿತ್ವಗಳನ್ನು ನಿರ್ಮಿಸುವುದಾಗಿದೆ.
     </p>
 
     <div class="hero-logo">
       <img src="logo.png" alt="PRANAURA Logo" onerror="this.style.display='none'">
     </div>
 
-    <a href="#contact" class="btn">Partner With Us</a>
+    <a href="#contact" class="btn" id="partner-btn">Partner With Us</a>
 
   </section>
 
   <section id="about">
 
     <div class="section-title">
-      <h3>About Pranaura</h3>
-      <p>Strategic real estate partnerships designed for sustainable growth and long-term value.</p>
+      <h3 id="about-title-en">About Pranaura</h3>
+      <h3 id="about-title-kn" class="kannada" style="display:none;">ಪ್ರಣೌರಾ ಕುರಿತು</h3>
+
+      <p id="about-sub-en">Strategic real estate partnerships designed for sustainable growth and long-term value.</p>
+      <p id="about-sub-kn" class="kannada" style="display:none;">ಸ್ಥಿರ ಬೆಳವಣಿಗೆ ಮತ್ತು ದೀರ್ಘಕಾಲಿಕ ಮೌಲ್ಯಕ್ಕಾಗಿ ರೂಪುಗೊಂಡ ತಂತ್ರಾತ್ಮಕ ರಿಯಲ್ ಎಸ್ಟೇಟ್ ಸಹಭಾಗಿತ್ವಗಳು.</p>
     </div>
 
     <div class="about-box">
 
-      <p>
-        Pranaura specializes in connecting trusted builders with qualified investors, helping
-        projects secure the right strategic backing while offering investors access to carefully
-        evaluated opportunities.
+      <p id="about1-en">
+        Pranaura specializes in connecting trusted builders with qualified investors, helping projects secure the right strategic backing while offering investors access to carefully evaluated opportunities.
+      </p>
+
+      <p id="about1-kn" class="kannada" style="display:none;">
+        ಪ್ರಣೌರಾ ವಿಶ್ವಾಸಾರ್ಹ ಬಿಲ್ಡರ್‌ಗಳನ್ನು ಅರ್ಹ ಹೂಡಿಕೆದಾರರೊಂದಿಗೆ ಸಂಪರ್ಕಿಸುವಲ್ಲಿ ಪರಿಣತಿ ಹೊಂದಿದ್ದು, ಯೋಜನೆಗಳಿಗೆ ಸೂಕ್ತ ತಂತ್ರಾತ್ಮಕ ಬೆಂಬಲವನ್ನು ಒದಗಿಸುವುದರೊಂದಿಗೆ ಹೂಡಿಕೆದಾರರಿಗೆ ಪರಿಶೀಲಿತ ಅವಕಾಶಗಳನ್ನು ಪರಿಚಯಿಸುತ್ತದೆ.
       </p>
 
       <br>
 
-      <p>
-        By understanding the aspirations of both developers and investors, we help align
-        opportunities that encourage efficient project execution, sustainable growth, and
-        mutually beneficial outcomes.
+      <p id="about2-en">
+        By understanding the aspirations of both developers and investors, we help align opportunities that encourage efficient project execution, sustainable growth, and mutually beneficial outcomes.
+      </p>
+
+      <p id="about2-kn" class="kannada" style="display:none;">
+        ಡೆವಲಪರ್‌ಗಳು ಮತ್ತು ಹೂಡಿಕೆದಾರರ ಆಶಯಗಳನ್ನು ಅರ್ಥಮಾಡಿಕೊಂಡು, ಪರಿಣಾಮಕಾರಿ ಯೋಜನೆ ಜಾರಿಗೆ, ಸ್ಥಿರ ಬೆಳವಣಿಗೆಗೆ ಮತ್ತು ಪರಸ್ಪರ ಲಾಭದಾಯಕ ಫಲಿತಾಂಶಗಳಿಗೆ ಅನುಕೂಲವಾಗುವ ಅವಕಾಶಗಳನ್ನು ಹೊಂದಾಣಿಕೆ ಮಾಡುತ್ತೇವೆ.
       </p>
 
       <br>
 
-      <p>
-        Every engagement is guided by professionalism, discretion, and a commitment to delivering
-        value-driven partnerships tailored to the unique requirements of each client.
+      <p id="about3-en">
+        Every engagement is guided by professionalism, discretion, and a commitment to delivering value-driven partnerships tailored to the unique requirements of each client.
+      </p>
+
+      <p id="about3-kn" class="kannada" style="display:none;">
+        ಪ್ರತಿಯೊಂದು ಸಹಭಾಗಿತ್ವವೂ ವೃತ್ತಿಪರತೆ, ಗೌಪ್ಯತೆ ಮತ್ತು ಪ್ರತಿಯೊಬ್ಬ ಗ್ರಾಹಕರ ವಿಶಿಷ್ಟ ಅಗತ್ಯಗಳಿಗೆ ಹೊಂದಿಕೊಂಡ ಮೌಲ್ಯಾಧಾರಿತ ಸಂಬಂಧಗಳನ್ನು ನಿರ್ಮಿಸುವ ಬದ್ಧತೆಯಿಂದ ನಡೆಸಲ್ಪಡುತ್ತದೆ.
       </p>
 
     </div>
@@ -460,33 +496,51 @@
   <section id="services">
 
     <div class="section-title">
-      <h3>Our Services</h3>
-      <p>Tailored solutions for builders, investors, and strategic real estate collaborations.</p>
+      <h3 id="services-title-en">Our Services</h3>
+      <h3 id="services-title-kn" class="kannada" style="display:none;">ನಮ್ಮ ಸೇವೆಗಳು</h3>
+
+      <p id="services-sub-en">Tailored solutions for builders, investors, and strategic real estate collaborations.</p>
+      <p id="services-sub-kn" class="kannada" style="display:none;">ಬಿಲ್ಡರ್‌ಗಳು, ಹೂಡಿಕೆದಾರರು ಮತ್ತು ತಂತ್ರಾತ್ಮಕ ರಿಯಲ್ ಎಸ್ಟೇಟ್ ಸಹಕಾರಗಳಿಗೆ ಹೊಂದಿಕೊಂಡ ಪರಿಹಾರಗಳು.</p>
     </div>
 
     <div class="services">
 
       <div class="card">
-        <h4>Builder Partnerships</h4>
-        <p>
-          Supporting developers in connecting with suitable investment partners
-          and strengthening project growth opportunities.
+        <h4 id="s1-en">Builder Partnerships</h4>
+        <h4 id="s1-kn" class="kannada" style="display:none;">ಬಿಲ್ಡರ್ ಸಹಭಾಗಿತ್ವಗಳು</h4>
+
+        <p id="s1p-en">
+          Supporting developers in connecting with suitable investment partners and strengthening project growth opportunities.
+        </p>
+
+        <p id="s1p-kn" class="kannada" style="display:none;">
+          ಡೆವಲಪರ್‌ಗಳಿಗೆ ಸೂಕ್ತ ಹೂಡಿಕೆ ಸಹಭಾಗಿಗಳನ್ನು ಸಂಪರ್ಕಿಸಲು ಮತ್ತು ಯೋಜನೆಗಳ ಬೆಳವಣಿಗೆ ಅವಕಾಶಗಳನ್ನು ಬಲಪಡಿಸಲು ಬೆಂಬಲ ನೀಡುವುದು.
         </p>
       </div>
 
       <div class="card">
-        <h4>Investor Access</h4>
-        <p>
-          Providing access to carefully assessed residential, commercial,
-          and land investment opportunities aligned with long-term objectives.
+        <h4 id="s2-en">Investor Access</h4>
+        <h4 id="s2-kn" class="kannada" style="display:none;">ಹೂಡಿಕೆದಾರರ ಪ್ರವೇಶ</h4>
+
+        <p id="s2p-en">
+          Providing access to carefully assessed residential, commercial, and land investment opportunities aligned with long-term objectives.
+        </p>
+
+        <p id="s2p-kn" class="kannada" style="display:none;">
+          ದೀರ್ಘಕಾಲಿಕ ಗುರಿಗಳಿಗೆ ಹೊಂದಿಕೊಂಡ ವಸತಿ, ವಾಣಿಜ್ಯ ಮತ್ತು ಭೂಮಿ ಹೂಡಿಕೆ ಅವಕಾಶಗಳಿಗೆ ಪರಿಶೀಲಿತ ಪ್ರವೇಶ ಒದಗಿಸುವುದು.
         </p>
       </div>
 
       <div class="card">
-        <h4>Partnership Facilitation</h4>
-        <p>
-          Coordinating discussions, opportunity evaluation, and relationship management
-          between stakeholders with complete professionalism.
+        <h4 id="s3-en">Partnership Facilitation</h4>
+        <h4 id="s3-kn" class="kannada" style="display:none;">ಸಹಭಾಗಿತ್ವ ಸುಗಮೀಕರಣ</h4>
+
+        <p id="s3p-en">
+          Coordinating discussions, opportunity evaluation, and relationship management between stakeholders with complete professionalism.
+        </p>
+
+        <p id="s3p-kn" class="kannada" style="display:none;">
+          ಸಂಪೂರ್ಣ ವೃತ್ತಿಪರತೆಯೊಂದಿಗೆ ಚರ್ಚೆಗಳು, ಅವಕಾಶ ಮೌಲ್ಯಮಾಪನ ಮತ್ತು ಪಾಲುದಾರರ ನಡುವಿನ ಸಂಬಂಧ ನಿರ್ವಹಣೆಯನ್ನು ಸಮನ್ವಯಗೊಳಿಸುವುದು.
         </p>
       </div>
 
@@ -497,11 +551,11 @@
   <section id="contact">
 
     <div class="section-title">
-      <h3>Contact Us</h3>
-      <p>
-        Connect with Pranaura for partnerships, investment opportunities,
-        or project advisory services.
-      </p>
+      <h3 id="contact-title-en">Contact Us</h3>
+      <h3 id="contact-title-kn" class="kannada" style="display:none;">ನಮ್ಮನ್ನು ಸಂಪರ್ಕಿಸಿ</h3>
+
+      <p id="contact-sub-en">Connect with Pranaura for partnerships, investment opportunities, or project advisory services.</p>
+      <p id="contact-sub-kn" class="kannada" style="display:none;">ಸಹಭಾಗಿತ್ವಗಳು, ಹೂಡಿಕೆ ಅವಕಾಶಗಳು ಅಥವಾ ಯೋಜನಾ ಸಲಹಾ ಸೇವೆಗಳಿಗಾಗಿ ಪ್ರಣೌರಾವನ್ನು ಸಂಪರ್ಕಿಸಿ.</p>
     </div>
 
     <div class="contact">
@@ -510,30 +564,32 @@
 
         <div class="contact-item">
           <div class="contact-icon">☎</div>
-          <h5>Phone</h5>
+          <h5 id="phone-en">Phone</h5>
+          <h5 id="phone-kn" class="kannada" style="display:none;">ದೂರವಾಣಿ</h5>
           <a href="tel:+919019746649">+91 90197 46649</a>
         </div>
 
         <div class="contact-item">
           <div class="contact-icon">✉</div>
-          <h5>Email</h5>
-          <a href="mailto:pranauraconnect@gmail.com">
-            pranauraconnect@gmail.com
-          </a>
+          <h5 id="email-en">Email</h5>
+          <h5 id="email-kn" class="kannada" style="display:none;">ಇಮೇಲ್</h5>
+          <a href="mailto:pranauraconnect@gmail.com">pranauraconnect@gmail.com</a>
         </div>
 
         <div class="contact-item">
           <div class="contact-icon">⌂</div>
-          <h5>Location</h5>
-          <p>Vijayanagar, Mysore, Karnataka, India</p>
+          <h5 id="location-en">Location</h5>
+          <h5 id="location-kn" class="kannada" style="display:none;">ಸ್ಥಳ</h5>
+
+          <p id="loc-en">Vijayanagar, Mysore, Karnataka, India</p>
+          <p id="loc-kn" class="kannada" style="display:none;">ವಿಜಯನಗರ, ಮೈಸೂರು, ಕರ್ನಾಟಕ, ಭಾರತ</p>
         </div>
 
         <div class="contact-item">
           <div class="contact-icon">◎</div>
-          <h5>Instagram</h5>
-          <a href="https://instagram.com/Pranaura_" target="_blank">
-            @Pranaura_
-          </a>
+          <h5 id="insta-en">Instagram</h5>
+          <h5 id="insta-kn" class="kannada" style="display:none;">ಇನ್‌ಸ್ಟಾಗ್ರಾಮ್</h5>
+          <a href="https://instagram.com/Pranaura_" target="_blank">@Pranaura_</a>
         </div>
 
       </div>
@@ -543,8 +599,41 @@
   </section>
 
   <footer>
-    <p>&copy; 2026 PRANAURA. All rights reserved.</p>
+    <p id="footer-en">&copy; 2026 PRANAURA. All rights reserved.</p>
+    <p id="footer-kn" class="kannada" style="display:none;">&copy; 2026 ಪ್ರಣೌರಾ. ಎಲ್ಲಾ ಹಕ್ಕುಗಳು ಕಾಯ್ದಿರಿಸಲಾಗಿದೆ.</p>
   </footer>
+
+  <script>
+    function setLanguage(lang, btn){
+
+      document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const ids = [
+        'tagline','hero',
+        'about-title','about-sub','about1','about2','about3',
+        'services-title','services-sub','s1','s1p','s2','s2p','s3','s3p',
+        'contact-title','contact-sub',
+        'phone','email','location','insta','loc',
+        'footer'
+      ];
+
+      ids.forEach(id => {
+        const en = document.getElementById(id+'-en');
+        const kn = document.getElementById(id+'-kn');
+
+        if(en) en.style.display = (lang === 'en') ? '' : 'none';
+        if(kn) kn.style.display = (lang === 'kn') ? '' : 'none';
+      });
+
+      document.getElementById('nav-about').textContent = lang === 'kn' ? 'ಕುರಿತು' : 'About';
+      document.getElementById('nav-services').textContent = lang === 'kn' ? 'ಸೇವೆಗಳು' : 'Services';
+      document.getElementById('nav-contact').textContent = lang === 'kn' ? 'ಸಂಪರ್ಕ' : 'Contact';
+      document.getElementById('partner-btn').textContent = lang === 'kn' ? 'ನಮ್ಮೊಂದಿಗೆ ಸಹಭಾಗಿತ್ವ' : 'Partner With Us';
+
+      document.documentElement.lang = lang === 'kn' ? 'kn' : 'en';
+    }
+  </script>
 
 </body>
 </html>
