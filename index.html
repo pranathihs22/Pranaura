@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PRANAURA | REAL ESTATE ADVISORY</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PRANAURA | Real Estate Advisory</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Cinzel:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
   <style>
+
     :root{
-      --cream:#e9dccb;
-      --light:#f7efe5;
+      --cream:#e8d8c5;
+      --light:#f6ede3;
       --brown:#4b2e1e;
       --brown-soft:#6d4c3d;
       --gold:#b88a5a;
@@ -33,15 +34,15 @@
       color:var(--brown);
       line-height:1.7;
       -webkit-font-smoothing:antialiased;
-      text-rendering:optimizeLegibility;
     }
 
     /* HEADER */
+
     header{
       position:sticky;
       top:0;
       z-index:1000;
-      background:rgba(247,239,229,0.95);
+      background:rgba(246,237,227,0.96);
       backdrop-filter:blur(10px);
       border-bottom:1px solid rgba(75,46,30,0.08);
     }
@@ -58,9 +59,8 @@
     nav a{
       text-decoration:none;
       color:var(--brown);
-      margin-left:30px;
+      margin-left:28px;
       font-weight:500;
-      font-size:1rem;
       transition:0.3s;
     }
 
@@ -69,48 +69,45 @@
     }
 
     /* HERO */
+
     .hero{
       max-width:1100px;
       margin:auto;
       text-align:center;
-      padding:48px 24px 24px;
+      padding:50px 24px 24px;
     }
 
     .brand-name{
       font-family:'Cormorant Garamond',serif;
-      font-size:3.4rem;
+      font-size:3.2rem;
       font-weight:700;
       letter-spacing:3px;
       color:var(--brown);
       text-transform:uppercase;
-      margin-bottom:14px;
+      margin-bottom:16px;
     }
 
     .hero h2{
-      font-family:'Cinzel',serif;
+      font-family:'Cormorant Garamond',serif;
       font-size:2rem;
-      line-height:1.35;
-      margin-bottom:18px;
-      color:var(--brown);
-      text-transform:uppercase;
+      font-weight:600;
       letter-spacing:1px;
-    }
-
-    .hero h2 span{
       color:var(--gold);
+      margin-bottom:22px;
+      text-transform:uppercase;
     }
 
     .hero p{
       max-width:760px;
       margin:auto;
-      font-size:1.05rem;
+      font-size:1.06rem;
       color:var(--brown-soft);
       text-align:center;
     }
 
     .btn{
       display:inline-block;
-      margin-top:28px;
+      margin-top:30px;
       padding:15px 38px;
       border-radius:999px;
       background:var(--brown);
@@ -126,20 +123,20 @@
       background:var(--gold);
     }
 
-    /* HUGE LOGO */
+    /* LOGO */
+
     .hero-logo{
-      margin-top:44px;
-      margin-bottom:50px;
+      margin-top:48px;
+      margin-bottom:56px;
       display:flex;
       justify-content:center;
-      align-items:center;
     }
 
     .hero-logo img{
-      width:560px;
-      max-width:96vw;
+      width:580px;
+      max-width:98vw;
       height:auto;
-      filter:drop-shadow(0 28px 48px rgba(75,46,30,0.28));
+      filter:drop-shadow(0 30px 50px rgba(31,26,23,0.28));
       transition:0.3s;
     }
 
@@ -148,36 +145,36 @@
     }
 
     /* PREMIUM GALLERY */
+
     .gallery{
       max-width:1200px;
-      margin:0 auto 70px;
+      margin:0 auto 80px;
       padding:0 24px;
       display:grid;
-      grid-template-columns:2fr 1fr;
-      gap:20px;
+      grid-template-columns:1fr 1fr;
+      gap:22px;
     }
 
-    .gallery-main img,
-    .gallery-side img{
+    .gallery img{
       width:100%;
-      height:100%;
+      height:360px;
       object-fit:cover;
-      border-radius:24px;
+      border-radius:28px;
       display:block;
-      box-shadow:0 18px 38px rgba(31,26,23,0.16);
+      box-shadow:0 18px 38px rgba(31,26,23,0.18);
+      transition:0.3s;
     }
 
-    .gallery-side{
-      display:grid;
-      grid-template-rows:1fr 1fr;
-      gap:20px;
+    .gallery img:hover{
+      transform:translateY(-4px);
     }
 
     /* SECTIONS */
+
     section{
       max-width:1200px;
       margin:auto;
-      padding:60px 24px;
+      padding:64px 24px;
     }
 
     .section-title{
@@ -186,12 +183,13 @@
     }
 
     .section-title h3{
-      font-family:'Cinzel',serif;
-      font-size:2rem;
-      margin-bottom:12px;
+      font-family:'Cormorant Garamond',serif;
+      font-size:2.4rem;
+      font-weight:700;
+      letter-spacing:2px;
       color:var(--brown);
       text-transform:uppercase;
-      letter-spacing:1px;
+      margin-bottom:12px;
     }
 
     .section-title p{
@@ -205,13 +203,13 @@
     .card,
     .contact{
       background:var(--light);
-      border-radius:26px;
+      border-radius:28px;
       border:1px solid rgba(75,46,30,0.08);
       box-shadow:0 14px 34px rgba(75,46,30,0.08);
     }
 
     .about-box{
-      padding:46px;
+      padding:48px;
     }
 
     .about-box p,
@@ -221,6 +219,7 @@
     }
 
     /* SERVICES */
+
     .services{
       display:grid;
       grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
@@ -238,17 +237,20 @@
     }
 
     .card h4{
-      font-family:'Cinzel',serif;
-      font-size:1.18rem;
+      font-family:'Cormorant Garamond',serif;
+      font-size:1.45rem;
+      font-weight:700;
       text-align:center;
       text-transform:uppercase;
+      letter-spacing:1px;
       margin-bottom:14px;
       color:var(--brown);
     }
 
     /* CONTACT */
+
     .contact{
-      padding:46px;
+      padding:48px;
     }
 
     .contact-grid{
@@ -262,11 +264,13 @@
     }
 
     .contact-item h5{
-      font-family:'Cinzel',serif;
+      font-family:'Cormorant Garamond',serif;
+      font-size:1.3rem;
+      font-weight:700;
+      letter-spacing:1px;
       text-transform:uppercase;
       margin-bottom:10px;
       color:var(--brown);
-      font-size:1.02rem;
     }
 
     .contact-item p,
@@ -280,30 +284,20 @@
     }
 
     /* FOOTER */
+
     footer{
       text-align:center;
-      padding:28px 20px;
+      padding:30px 20px;
       background:var(--black);
       color:#eadfce;
-      margin-top:54px;
+      margin-top:60px;
       font-size:0.95rem;
       letter-spacing:0.5px;
     }
 
     /* MOBILE */
-    @media (max-width:900px){
 
-      .gallery{
-        grid-template-columns:1fr;
-      }
-
-      .gallery-side{
-        grid-template-columns:1fr 1fr;
-        grid-template-rows:auto;
-      }
-    }
-
-    @media (max-width:768px){
+    @media(max-width:768px){
 
       .navbar{
         justify-content:center;
@@ -319,7 +313,7 @@
       }
 
       .hero h2{
-        font-size:1.45rem;
+        font-size:1.55rem;
       }
 
       .hero p{
@@ -327,12 +321,16 @@
       }
 
       .hero-logo img{
-        width:440px;
-        max-width:98vw;
+        width:460px;
+        max-width:100vw;
       }
 
-      .gallery-side{
+      .gallery{
         grid-template-columns:1fr;
+      }
+
+      .gallery img{
+        height:260px;
       }
 
       .about-box,
@@ -341,9 +339,10 @@
       }
 
       .section-title h3{
-        font-size:1.7rem;
+        font-size:2rem;
       }
     }
+
   </style>
 </head>
 
@@ -363,12 +362,12 @@
 
     <div class="brand-name">PRANAURA</div>
 
-    <h2>Bridging Premier Builders & <span>Strategic Investors</span></h2>
+    <h2>Strategic Builder & Investor Partnerships</h2>
 
     <p>
-      Pranaura is a strategic real estate advisory platform dedicated to connecting
-      credible developers with qualified investors, creating meaningful partnerships
-      that support sustainable growth, efficient project execution, and long-term value creation.
+      Pranaura is a premium real estate advisory platform that connects credible developers
+      with qualified investors, creating high-value partnerships built on trust, transparency,
+      and long-term growth.
     </p>
 
     <a href="#contact" class="btn">Partner With Us</a>
@@ -381,14 +380,13 @@
 
   <section class="gallery">
 
-    <div class="gallery-main">
-      <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1400&q=80" alt="Luxury Villa">
-    </div>
+    <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80" alt="Luxury Mansion">
 
-    <div class="gallery-side">
-      <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=80" alt="Modern Residence">
-      <img src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?auto=format&fit=crop&w=900&q=80" alt="Premium Mansion">
-    </div>
+    <img src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?auto=format&fit=crop&w=1200&q=80" alt="Premium Villa">
+
+    <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1200&q=80" alt="Modern Luxury Home">
+
+    <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1200&q=80" alt="Elegant Residence">
 
   </section>
 
@@ -396,14 +394,14 @@
 
     <div class="section-title">
       <h3>About Pranaura</h3>
-      <p>Strategic real estate partnerships built on trust, transparency, and long-term value.</p>
+      <p>Strategic real estate partnerships designed for sustainable growth and long-term value.</p>
     </div>
 
     <div class="about-box">
 
       <p>
         Pranaura specializes in connecting trusted builders with qualified investors,
-        helping projects gain the right financial backing while providing investors
+        helping projects secure the right strategic backing while offering investors
         access to carefully evaluated opportunities.
       </p>
 
@@ -411,7 +409,7 @@
 
       <p>
         By understanding the objectives of both developers and investors, we help align
-        opportunities that support sustainable growth, efficient project execution,
+        opportunities that support efficient project execution, sustainable growth,
         and mutually beneficial outcomes.
       </p>
 
@@ -436,18 +434,18 @@
     <div class="services">
 
       <div class="card">
-        <h4>Strategic Builder Partnerships</h4>
+        <h4>Builder Partnerships</h4>
         <p>
-          Supporting developers in connecting with suitable investment partners and
-          strengthening project growth opportunities.
+          Supporting developers in connecting with suitable investment partners
+          and strengthening project growth opportunities.
         </p>
       </div>
 
       <div class="card">
-        <h4>Investor Opportunity Access</h4>
+        <h4>Investor Access</h4>
         <p>
-          Providing access to carefully assessed residential, commercial, and land
-          investment opportunities aligned with long-term objectives.
+          Providing access to carefully assessed residential, commercial,
+          and land investment opportunities aligned with long-term objectives.
         </p>
       </div>
 
