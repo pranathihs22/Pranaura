@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PRANAURA | Real Estate Advisory</title> 
+  <title>PRANAURA | Real Estate Networking & Intermediary Platform</title>
 
-  <meta name="description" content="Pranaura is a premium real estate advisory platform connecting trusted builders and qualified investors in Mysore and Karnataka."> <meta name="keywords" content="Pranaura, Mysore real estate, builders, investors, Karnataka property"> <meta name="author" content="Pranathi H.S"> <link rel="icon" type="image/png" href="logo.png">
-  
-  <meta name="description" content="Pranaura is a premium real estate advisory platform connecting trusted builders and qualified investors in Mysore and Karnataka.">
+  <meta name="description" content="Pranaura is a real-estate networking and introduction platform connecting builders, landowners, and prospective investors or buyers in Mysore and Karnataka.">
+  <meta name="keywords" content="Pranaura, Mysore real estate, builders, investors, Karnataka property, channel partner">
+  <meta name="author" content="Pranathi H.S">
   <link rel="icon" type="image/png" href="logo.png">
   <meta name="google-site-verification" content="X_lXYSvXF3MhSMWri7vHf0EYd3T-wqr6NOT6wwOPB4w" />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Poppins:wght@300;400;500;600&family=Noto+Sans+Kannada:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -114,6 +114,20 @@
       margin:auto;
       text-align:center;
       padding:64px 24px 44px;
+    }
+
+    .launch-badge{
+      display:inline-block;
+      background:rgba(184,138,90,0.15);
+      color:var(--brown);
+      padding:6px 18px;
+      border-radius:999px;
+      font-size:0.85rem;
+      font-weight:600;
+      letter-spacing:1px;
+      text-transform:uppercase;
+      margin-bottom:18px;
+      border:1px solid rgba(184,138,90,0.3);
     }
 
     .brand-name{
@@ -342,12 +356,23 @@
 
     footer{
       text-align:center;
-      padding:30px 20px;
+      padding:40px 20px;
       background:var(--black);
       color:#eadfce;
       margin-top:64px;
       font-size:0.92rem;
       letter-spacing:0.5px;
+    }
+
+    .footer-disclaimer {
+      max-width: 900px;
+      margin: 0 auto 20px auto;
+      font-size: 0.8rem;
+      color: #b5a494;
+      line-height: 1.6;
+      text-align: justify;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding-top: 20px;
     }
 
     @media(max-width:900px){
@@ -358,47 +383,37 @@
     }
 
     @media(max-width:768px){
-
       .navbar{
         padding:16px 14px;
       }
-
       nav{
         justify-content:center;
       }
-
       nav a{
         font-size:0.92rem;
       }
-
       .brand-name{
         font-size:2.05rem;
         letter-spacing:3px;
       }
-
       .tagline{
         font-size:1.16rem;
         letter-spacing:1px;
       }
-
       .hero p{
         font-size:0.98rem;
       }
-
       .hero-logo{
         margin:38px 0 30px;
       }
-
       .hero-logo img{
         width:500px;
         max-width:100vw;
       }
-
       .about-box,
       .contact{
         padding:30px;
       }
-
       .section-title h3{
         font-size:1.9rem;
       }
@@ -506,9 +521,9 @@
       width:66px;
       height:66px;
       border-radius:50%;
-      background:var(--light);        /* cream background */
-      color:var(--brown);             /* brown icon */
-      border:2px solid var(--brown);  /* brown border */
+      background:var(--light);
+      color:var(--brown);
+      border:2px solid var(--brown);
       display:flex;
       align-items:center;
       justify-content:center;
@@ -531,7 +546,6 @@
 
   <header>
     <div class="navbar">
-
       <nav>
         <a href="#about" id="nav-about">About</a>
         <a href="#services" id="nav-services">Services</a>
@@ -542,23 +556,24 @@
         <button class="lang-btn active" onclick="setLanguage('en', this)">ENG</button>
         <button class="lang-btn" onclick="setLanguage('kn', this)">KAN</button>
       </div>
-
     </div>
   </header>
 
   <section class="hero">
+    <div class="launch-badge" id="badge-en">Launching September 2026</div>
+    <div class="launch-badge kannada" id="badge-kn" style="display:none;">ಸೆಪ್ಟೆಂಬರ್ 2026 ರಲ್ಲಿ ಬಿಡುಗಡೆ</div>
 
     <div class="brand-name">PRANAURA</div>
 
-    <div id="tagline-en" class="tagline">Strategic Builder & Investor Partnerships</div>
-    <div id="tagline-kn" class="tagline kannada" style="display:none;">ತಂತ್ರಾತ್ಮಕ ಬಿಲ್ಡರ್ ಮತ್ತು ಹೂಡಿಕೆದಾರರ ಸಹಭಾಗಿತ್ವ</div>
+    <div id="tagline-en" class="tagline">Connecting Builders, Landowners & Investors</div>
+    <div id="tagline-kn" class="tagline kannada" style="display:none;">ಬಿಲ್ಡರ್‌ಗಳು, ಭೂಮಾಲೀಕರು ಮತ್ತು ಹೂಡಿಕೆದಾರರ ಸಂಪರ್ಕ</div>
 
     <p id="hero-en">
-      Pranaura is a premium real estate advisory platform that brings together credible developers and qualified investors, fostering high-value partnerships built on trust, transparency, and long-term growth.
+      Pranaura is a relationship-driven real-estate networking platform focused on introducing credible opportunities and facilitating meaningful business connections.
     </p>
 
     <p id="hero-kn" class="kannada" style="display:none;">
-      ಪ್ರಣೌರಾ ವಿಶ್ವಾಸಾರ್ಹ ಡೆವಲಪರ್‌ಗಳು ಮತ್ತು ಅರ್ಹ ಹೂಡಿಕೆದಾರರನ್ನು ಒಂದೇ ವೇದಿಕೆಯಲ್ಲಿ ಸಂಪರ್ಕಿಸುವ ಪ್ರೀಮಿಯಂ ರಿಯಲ್ ಎಸ್ಟೇಟ್ ಸಲಹಾ ವೇದಿಕೆಯಾಗಿದೆ. ನಮ್ಮ ಉದ್ದೇಶ ವಿಶ್ವಾಸ, ಪಾರದರ್ಶಕತೆ ಮತ್ತು ದೀರ್ಘಕಾಲಿಕ ಬೆಳವಣಿಗೆಯ ಆಧಾರದ ಮೇಲೆ ಮೌಲ್ಯಯುತ ಸಹಭಾಗಿತ್ವಗಳನ್ನು ನಿರ್ಮಿಸುವುದಾಗಿದೆ.
+      ಪ್ರಣೌರಾ ಎನ್ನುವುದು ವಿಶ್ವಾಸಾರ್ಹ ಅವಕಾಶಗಳನ್ನು ಪರಿಚಯಿಸಲು ಮತ್ತು ಅರ್ಥಪೂರ್ಣ ವ್ಯಾಪಾರ ಸಂಪರ್ಕಗಳನ್ನು ಸುಗಮಗೊಳಿಸಲು ಕೇಂದ್ರೀಕೃತವಾಗಿರುವ ರಿಯಲ್ ಎಸ್ಟೇಟ್ ನೆಟ್‌ವರ್ಕಿಂಗ್ ವೇದಿಕೆಯಾಗಿದೆ.
     </p>
 
     <div class="hero-logo">
@@ -573,163 +588,150 @@
     <div class="section-title">
       <h3 id="why-title-en">Why Choose Pranaura</h3>
       <h3 id="why-title-kn" class="kannada" style="display:none;">ಪ್ರಣೌರಾವನ್ನುೇಕೆ ಆರಿಸಬೇಕು</h3>
-      <p id="why-sub-en">Unmatched expertise, transparency, and strategic vision for your real estate investments.</p>
-      <p id="why-sub-kn" class="kannada" style="display:none;">ನಿಮ್ಮ ರಿಯಲ್ ಎಸ್ಟೇಟ್ ಹೂಡಿಕೆಗಳಿಗಾಗಿ ಸಾಟಿಯಿಲ್ಲದ ಪರಿಣತಿ, ಪಾರದರ್ಶಕತೆ ಮತ್ತು ತಂತ್ರಾತ್ಮಕ ದೃಷ್ಟಿಕೋನ.</p>
+      <p id="why-sub-en">Relationship-focused networking, discretion, and professional engagement.</p>
+      <p id="why-sub-kn" class="kannada" style="display:none;">ಸಂಬಂಧ-ಕೇಂದ್ರಿತ ನೆಟ್‌ವರ್ಕಿಂಗ್, ಗೌಪ್ಯತೆ ಮತ್ತು ವೃತ್ತಿಪರ ಒಡನಾಟ.</p>
     </div>
     <div class="why-grid">
       <div class="card">
-        <h4 id="w1-en">Trusted Network</h4>
-        <h4 id="w1-kn" class="kannada" style="display:none;">ವಿಶ್ವಾಸಾರ್ಹ ನೆಟ್‌ವರ್ಕ್</h4>
-        <p id="w1p-en">Direct connection with verified developers and high-net-worth investors.</p>
-        <p id="w1p-kn" class="kannada" style="display:none;">ಪರಿಶೀಲಿತ ಡೆವಲಪರ್‌ಗಳು ಮತ್ತು ಉನ್ನತ ಮೌಲ್ಯದ ಹೂಡಿಕೆದಾರರೊಂದಿಗೆ ನೇರ ಸಂಪರ್ಕ.</p>
+        <h4 id="w1-en">Professional Network</h4>
+        <h4 id="w1-kn" class="kannada" style="display:none;">ವೃತ್ತಿಪರ ನೆಟ್‌ವರ್ಕ್</h4>
+        <p id="w1p-en">Direct networking with active builders, landowners, and prospective buyers.</p>
+        <p id="w1p-kn" class="kannada" style="display:none;">ಸಕ್ರಿಯ ಬಿಲ್ಡರ್‌ಗಳು, ಭೂಮಾಲೀಕರು ಮತ್ತು prospective ಖರೀದಿದಾರರೊಂದಿಗೆ ನೇರ ಸಂಪರ್ಕ.</p>
       </div>
       <div class="card">
-        <h4 id="w2-en">Strategic Matching</h4>
-        <h4 id="w2-kn" class="kannada" style="display:none;">ತಂತ್ರಾತ್ಮಕ ಹೊಂದಾಣಿಕೆ</h4>
-        <p id="w2p-en">Carefully curated alignments designed for optimal project and investment success.</p>
-        <p id="w2p-kn" class="kannada" style="display:none;">ಅಪೇಕ್ಷಿತ ಯೋಜನೆ ಮತ್ತು ಹೂಡಿಕೆ ಯಶಸ್ಸಿಗಾಗಿ ಎಚ್ಚರಿಕೆಯಿಂದ ರೂಪುಗೊಂಡ ಹೊಂದಾಣಿಕೆಗಳು.</p>
+        <h4 id="w2-en">Opportunity Introductions</h4>
+        <h4 id="w2-kn" class="kannada" style="display:none;">ಅವಕಾಶ ಪರಿಚಯಗಳು</h4>
+        <p id="w2p-en">Facilitating initial discussions based on available information and mutual interest.</p>
+        <p id="w2p-kn" class="kannada" style="display:none;">ಲಭ್ಯವಿರುವ ಮಾಹಿತಿ ಮತ್ತು ಪರಸ್ಪರ ಆಸಕ್ತಿಯ ಆಧಾರದ ಮೇಲೆ ಆರಂಭಿಕ ಚರ್ಚೆಗಳನ್ನು ಸುಗಮಗೊಳಿಸುವುದು.</p>
       </div>
       <div class="card">
         <h4 id="w3-en">Complete Discretion</h4>
         <h4 id="w3-kn" class="kannada" style="display:none;">ಸಂಪೂರ್ಣ ಗೌಪ್ಯತೆ</h4>
-        <p id="w3p-en">Strict confidentiality maintained across all high-value discussions and deals.</p>
-        <p id="w3p-kn" class="kannada" style="display:none;">ಎಲ್ಲಾ ಮೌಲ್ಯಯುತ ಚರ್ಚೆಗಳು ಮತ್ತು ಒಪ್ಪಂದಗಳಲ್ಲಿ ಕಟ್ಟುನಿಟ್ಟಾದ ಗೌಪ್ಯತೆ.</p>
+        <p id="w3p-en">Strict confidentiality maintained across all introductory discussions and meetings.</p>
+        <p id="w3p-kn" class="kannada" style="display:none;">ಎಲ್ಲಾ ಪರಿಚಯಾತ್ಮಕ ಚರ್ಚೆಗಳು ಮತ್ತು ಸಭೆಗಳಲ್ಲಿ ಕಟ್ಟುನಿಟ್ಟಾದ ಗೌಪ್ಯತೆ.</p>
       </div>
     </div>
   </section>
 
   <section id="about">
-
     <div class="section-title">
       <h3 id="about-title-en">About Pranaura</h3>
       <h3 id="about-title-kn" class="kannada" style="display:none;">ಪ್ರಣೌರಾ ಕುರಿತು</h3>
-
-      <p id="about-sub-en">Strategic real estate partnerships designed for sustainable growth and long-term value.</p>
-      <p id="about-sub-kn" class="kannada" style="display:none;">ಸ್ಥಿರ ಬೆಳವಣಿಗೆ ಮತ್ತು ದೀರ್ಘಕಾಲಿಕ ಮೌಲ್ಯಕ್ಕಾಗಿ ರೂಪುಗೊಂಡ ತಂತ್ರಾತ್ಮಕ ರಿಯಲ್ ಎಸ್ಟೇಟ್ ಸಹಭಾಗಿತ್ವಗಳು.</p>
+      <p id="about-sub-en">Real-estate networking and introduction platform.</p>
+      <p id="about-sub-kn" class="kannada" style="display:none;">ರಿಯಲ್ ಎಸ್ಟೇಟ್ ನೆಟ್‌ವರ್ಕಿಂಗ್ ಮತ್ತು ಪರಿಚಯ ವೇದಿಕೆ.</p>
     </div>
 
     <div class="about-box">
-
       <p id="about1-en">
-        Pranaura specializes in connecting trusted builders with qualified investors, helping projects secure the right strategic backing while offering investors access to carefully evaluated opportunities.
+        Pranaura acts as a professional intermediary and networking platform connecting builders, developers, landowners, and prospective investors or buyers in Mysore and Karnataka.
       </p>
-
       <p id="about1-kn" class="kannada" style="display:none;">
-        ಪ್ರಣೌರಾ ವಿಶ್ವಾಸಾರ್ಹ ಬಿಲ್ಡರ್‌ಗಳನ್ನು ಅರ್ಹ ಹೂಡಿಕೆದಾರರೊಂದಿಗೆ ಸಂಪರ್ಕಿಸುವಲ್ಲಿ ಪರಿಣತಿ ಹೊಂದಿದ್ದು, ಯೋಜನೆಗಳಿಗೆ ಸೂಕ್ತ ತಂತ್ರಾತ್ಮಕ ಬೆಂಬಲವನ್ನು ಒದಗಿಸುವುದರೊಂದಿಗೆ ಹೂಡಿಕೆದಾರರಿಗೆ ಪರಿಶೀಲಿತ ಅವಕಾಶಗಳನ್ನು ಪರಿಚಯಿಸುತ್ತದೆ.
+        ಪ್ರಣೌರಾ ಮೈಸೂರು ಮತ್ತು ಕರ್ನಾಟಕದಲ್ಲಿ ಬಿಲ್ಡರ್‌ಗಳು, ಡೆವಲಪರ್‌ಗಳು, ಭೂಮಾಲೀಕರು ಮತ್ತು ಆಸಕ್ತ ಖರೀದಿದಾರರನ್ನು ಸಂಪರ್ಕಿಸುವ ವೃತ್ತಿಪರ ಮಧ್ಯವರ್ತಿ ಮತ್ತು ನೆಟ್‌ವರ್ಕಿಂಗ್ ವೇದಿಕೆಯಾಗಿ ಕಾರ್ಯನಿರ್ವಹಿಸುತ್ತದೆ.
       </p>
 
       <br>
 
       <p id="about2-en">
-        By understanding the aspirations of both developers and investors, we help align opportunities that encourage efficient project execution, sustainable growth, and mutually beneficial outcomes.
+        We do not buy, sell, or guarantee projects; instead, we facilitate introductions and business discussions between interested parties based on shared requirements.
       </p>
-
       <p id="about2-kn" class="kannada" style="display:none;">
-        ಡೆವಲಪರ್‌ಗಳು ಮತ್ತು ಹೂಡಿಕೆದಾರರ ಆಶಯಗಳನ್ನು ಅರ್ಥಮಾಡಿಕೊಂಡು, ಪರಿಣಾಮಕಾರಿ ಯೋಜನೆ ಜಾರಿಗೆ, ಸ್ಥಿರ ಬೆಳವಣಿಗೆಗೆ ಮತ್ತು ಪರಸ್ಪರ ಲಾಭದಾಯಕ ಫಲಿತಾಂಶಗಳಿಗೆ ಅನುಕೂಲವಾಗುವ ಅವಕಾಶಗಳನ್ನು ಹೊಂದಾಣಿಕೆ ಮಾಡುತ್ತೇವೆ.
+        ನಾವು ಯೋಜನೆಗಳನ್ನು ಖರೀದಿಸುವುದಿಲ್ಲ, ಮಾರಾಟ ಮಾಡುವುದಿಲ್ಲ ಅಥವಾ ಖಾತರಿಪಡಿಸುವುದಿಲ್ಲ; ಬದಲಿಗೆ ಹಂಚಿಕೊಳ್ಳಲಾದ ಅವಶ್ಯಕತೆಗಳ ಆಧಾರದ ಮೇಲೆ ಆಸಕ್ತ ಪಕ್ಷಗಳ ನಡುವೆ ಪರಿಚಯ ಮತ್ತು ವ್ಯಾಪಾರ ಚರ್ಚೆಗಳನ್ನು ಸುಗಮಗೊಳಿಸುತ್ತೇವೆ.
       </p>
 
       <br>
 
       <p id="about3-en">
-        Every engagement is guided by professionalism, discretion, and a commitment to delivering value-driven partnerships tailored to the unique requirements of each client.
+        Every interaction is guided by professionalism, clear communication, and a commitment to fostering valuable connections tailored to each client.
       </p>
-
       <p id="about3-kn" class="kannada" style="display:none;">
-        ಪ್ರತಿಯೊಂದು ಸಹಭಾಗಿತ್ವವೂ ವೃತ್ತಿಪರತೆ, ಗೌಪ್ಯತೆ ಮತ್ತು ಪ್ರತಿಯೊಬ್ಬ ಗ್ರಾಹಕರ ವಿಶಿಷ್ಟ ಅಗತ್ಯಗಳಿಗೆ ಹೊಂದಿಕೊಂಡ ಮೌಲ್ಯಾಧಾರಿತ ಸಂಬಂಧಗಳನ್ನು ನಿರ್ಮಿಸುವ ಬದ್ಧತೆಯಿಂದ ನಡೆಸಲ್ಪಡುತ್ತದೆ.
+        ಪ್ರತಿಯೊಂದು ಪರಸ್ಪರ ಕ್ರಿಯೆಯು ವೃತ್ತಿಪರತೆ, ಸ್ಪಷ್ಟ ಸಂವಹನ ಮತ್ತು ಮೌಲ್ಯಯುತ ಸಂಪರ್ಕಗಳನ್ನು ಬೆಳೆಸುವ ಬದ್ಧತೆಯಿಂದ ನಡೆಸಲ್ಪಡುತ್ತದೆ.
       </p>
-
     </div>
-
   </section>
 
   <section class="fade-in">
     <div class="section-title">
-      <h3 id="who-title-en">Who We Work With</h3>
-      <h3 id="who-title-kn" class="kannada" style="display:none;">ನಾವು ಯಾರೊಂದಿಗೆ ಕೆಲಸ ಮಾಡುತ್ತೇವೆ</h3>
-      <p id="who-sub-en">Empowering developers and investors to achieve exceptional real estate milestones.</p>
-      <p id="who-sub-kn" class="kannada" style="display:none;">ಅಪೂರ್ವ ರಿಯಲ್ ಎಸ್ಟೇಟ್ ಮೈಲಿಲುಗಳನ್ನು ತಲುಪಲು ಡೆವಲಪರ್‌ಗಳು ಮತ್ತು ಹೂಡಿಕೆದಾರರಿಗೆ ಅಧಿಕಾರ ನೀಡುವುದು.</p>
+      <h3 id="what-title-en">What Pranaura Does</h3>
+      <h3 id="what-title-kn" class="kannada" style="display:none;">ಪ್ರಣೌರಾ ಏನು ಮಾಡುತ್ತದೆ</h3>
+      <p id="what-sub-en">Bridging the gap between real estate stakeholders through structured introductions.</p>
+      <p id="what-sub-kn" class="kannada" style="display:none;">ರಚನಾತ್ಮಕ ಪರಿಚಯಗಳ ಮೂಲಕ ರಿಯಲ್ ಎಸ್ಟೇಟ್ ಪಾಲುದಾರರ ನಡುವಿನ ಅಂತರವನ್ನು ಕಡಿಮೆ ಮಾಡುವುದು.</p>
     </div>
     <div class="who-grid">
       <div class="card">
-        <h4 id="who1-en">Developers & Builders</h4>
-        <h4 id="who1-kn" class="kannada" style="display:none;">ಡೆವಲಪರ್‌ಗಳು ಮತ್ತು ಬಿಲ್ಡರ್‌ಗಳು</h4>
-        <p id="who1p-en">Looking to secure reliable financial backing and strategic partnerships for projects.</p>
-        <p id="who1p-kn" class="kannada" style="display:none;">ಯೋಜನೆಗಳಿಗಾಗಿ ವಿಶ್ವಾಸಾರ್ಹ ಆರ್ಥಿಕ ಬೆಂಬಲ ಮತ್ತು ತಂತ್ರಾತ್ಮಕ ಸಹಭಾಗಿತ್ವವನ್ನು ಬಯಸುವವರು.</p>
+        <h4 id="what1-en">Connects with Builders</h4>
+        <h4 id="what1-kn" class="kannada" style="display:none;">ಬಿಲ್ಡರ್‌ಗಳೊಂದಿಗೆ ಸಂಪರ್ಕ</h4>
+        <p id="what1p-en">Residential, commercial, and plotted development networking opportunities.</p>
+        <p id="what1p-kn" class="kannada" style="display:none;">ವಸತಿ, ವಾಣಿಜ್ಯ ಮತ್ತು ಪ್ಲಾಟ್ ಅಭಿವೃದ್ಧಿ ನೆಟ್‌ವರ್ಕಿಂಗ್ ಅವಕಾಶಗಳು.</p>
       </div>
       <div class="card">
-        <h4 id="who2-en">Investors & HNIs</h4>
-        <h4 id="who2-kn" class="kannada" style="display:none;">ಹೂಡಿಕೆದಾರರು ಮತ್ತು ಎಚ್.ಎನ್.ಐ.ಗಳು</h4>
-        <p id="who2p-en">Seeking evaluated, high-potential real estate opportunities with strong returns.</p>
-        <p id="who2p-kn" class="kannada" style="display:none;">ಬಲವಾದ ಲಾಭದೊಂದಿಗೆ ಪರಿಶೀಲಿತ, ಉನ್ನತ ಸಾಮರ್ಥ್ಯದ ರಿಯಲ್ ಎಸ್ಟೇಟ್ ಅವಕಾಶಗಳನ್ನು ಹುಡುಕುತ್ತಿರುವವರು.</p>
+        <h4 id="what2-en">Introduces Interested Parties</h4>
+        <h4 id="what2-kn" class="kannada" style="display:none;">ಆಸಕ್ತ ಪಕ್ಷಗಳ ಪರಿಚಯ</h4>
+        <p id="what2p-en">Individuals and business contacts interested in exploring opportunities.</p>
+        <p id="what2p-kn" class="kannada" style="display:none;">ಅವಕಾಶಗಳನ್ನು ಅನ್ವೇಷಿಸಲು ಆಸಕ್ತಿ ಹೊಂದಿರುವ ವ್ಯಕ್ತಿಗಳು ಮತ್ತು ವ್ಯಾಪಾರ ಸಂಪರ್ಕಗಳು.</p>
+      </div>
+      <div class="card">
+        <h4 id="what3-en">Facilitates Discussions</h4>
+        <h4 id="what3-kn" class="kannada" style="display:none;">ಚರ್ಚೆಗಳನ್ನು ಸುಗಮಗೊಳಿಸುವುದು</h4>
+        <p id="what3p-en">Conversations, meetings, and follow-ups between concerned parties.</p>
+        <p id="what3p-kn" class="kannada" style="display:none;">ಸಂಬಂಧಿತ ಪಕ್ಷಗಳ ನಡುವೆ ಸಂಭಾಷಣೆಗಳು, ಸಭೆಗಳು ಮತ್ತು ಫಾಲೋ-ಅಪ್‌ಗಳು.</p>
       </div>
     </div>
   </section>
 
   <section id="services">
-
     <div class="section-title">
       <h3 id="services-title-en">Our Services</h3>
       <h3 id="services-title-kn" class="kannada" style="display:none;">ನಮ್ಮ ಸೇವೆಗಳು</h3>
-
-      <p id="services-sub-en">Tailored solutions for builders, investors, and strategic real estate collaborations.</p>
-      <p id="services-sub-kn" class="kannada" style="display:none;">ಬಿಲ್ಡರ್‌ಗಳು, ಹೂಡಿಕೆದಾರರು ಮತ್ತು ತಂತ್ರಾತ್ಮಕ ರಿಯಲ್ ಎಸ್ಟೇಟ್ ಸಹಕಾರಗಳಿಗೆ ಹೊಂದಿಕೊಂಡ ಪರಿಹಾರಗಳು.</p>
+      <p id="services-sub-en">Channel partnership support and stakeholder networking.</p>
+      <p id="services-sub-kn" class="kannada" style="display:none;">ಚಾನೆಲ್ ಪಾರ್ಟ್ನರ್ ಬೆಂಬಲ ಮತ್ತು ಪಾಲುದಾರರ ನೆಟ್‌ವರ್ಕಿಂಗ್.</p>
     </div>
 
     <div class="services">
-
       <div class="card">
-        <h4 id="s1-en">Builder Partnerships</h4>
-        <h4 id="s1-kn" class="kannada" style="display:none;">ಬಿಲ್ಡರ್ ಸಹಭಾಗಿತ್ವಗಳು</h4>
-
+        <h4 id="s1-en">Builder Connections</h4>
+        <h4 id="s1-kn" class="kannada" style="display:none;">ಬಿಲ್ಡರ್ ಸಂಪರ್ಕಗಳು</h4>
         <p id="s1p-en">
-          Supporting developers in connecting with suitable investment partners and strengthening project growth opportunities.
+          Supporting developers by connecting them with prospective buyers or channel partners.
         </p>
-
         <p id="s1p-kn" class="kannada" style="display:none;">
-          ಡೆವಲಪರ್‌ಗಳಿಗೆ ಸೂಕ್ತ ಹೂಡಿಕೆ ಸಹಭಾಗಿಗಳನ್ನು ಸಂಪರ್ಕಿಸಲು ಮತ್ತು ಯೋಜನೆಗಳ ಬೆಳವಣಿಗೆ ಅವಕಾಶಗಳನ್ನು ಬಲಪಡಿಸಲು ಬೆಂಬಲ ನೀಡುವುದು.
+          ಡೆವಲಪರ್‌ಗಳನ್ನು ಆಸಕ್ತ ಖರೀದಿದಾರರು ಅಥವಾ ಚಾನೆಲ್ ಪಾಲುದಾರರೊಂದಿಗೆ ಸಂಪರ್ಕಿಸುವ ಮೂಲಕ ಬೆಂಬಲಿಸುವುದು.
         </p>
       </div>
 
       <div class="card">
-        <h4 id="s2-en">Investor Access</h4>
-        <h4 id="s2-kn" class="kannada" style="display:none;">ಹೂಡಿಕೆದಾರರ ಪ್ರವೇಶ</h4>
-
+        <h4 id="s2-en">Buyer & Investor Introductions</h4>
+        <h4 id="s2-kn" class="kannada" style="display:none;">ಖರೀದಿದಾರ ಮತ್ತು ಹೂಡಿಕೆದಾರರ ಪರಿಚಯ</h4>
         <p id="s2p-en">
-          Providing access to carefully assessed residential, commercial, and land investment opportunities aligned with long-term objectives.
+          Introducing interested individuals to available properties, landowners, and developers.
         </p>
-
         <p id="s2p-kn" class="kannada" style="display:none;">
-          ದೀರ್ಘಕಾಲಿಕ ಗುರಿಗಳಿಗೆ ಹೊಂದಿಕೊಂಡ ವಸತಿ, ವಾಣಿಜ್ಯ ಮತ್ತು ಭೂಮಿ ಹೂಡಿಕೆ ಅವಕಾಶಗಳಿಗೆ ಪರಿಶೀಲಿತ ಪ್ರವೇಶ ಒದಗಿಸುವುದು.
+          ಆಸಕ್ತ ವ್ಯಕ್ತಿಗಳಿಗೆ ಲಭ್ಯವಿರುವ ಆಸ್ತಿಗಳು, ಭೂಮಾಲೀಕರು ಮತ್ತು ಡೆವಲಪರ್‌ಗಳನ್ನು ಪರಿಚಯಿಸುವುದು.
         </p>
       </div>
 
       <div class="card">
-        <h4 id="s3-en">Partnership Facilitation</h4>
-        <h4 id="s3-kn" class="kannada" style="display:none;">ಸಹಭಾಗಿತ್ವ ಸುಗಮೀಕರಣ</h4>
-
+        <h4 id="s3-en">Networking & Facilitation</h4>
+        <h4 id="s3-kn" class="kannada" style="display:none;">ನೆಟ್‌ವರ್ಕಿಂಗ್ ಮತ್ತು ಸುಗಮೀಕರಣ</h4>
         <p id="s3p-en">
-          Coordinating discussions, opportunity evaluation, and relationship management between stakeholders with complete professionalism.
+          Coordinating meetings, discussions, and communication between stakeholders professionally.
         </p>
-
         <p id="s3p-kn" class="kannada" style="display:none;">
-          ಸಂಪೂರ್ಣ ವೃತ್ತಿಪರತೆಯೊಂದಿಗೆ ಚರ್ಚೆಗಳು, ಅವಕಾಶ ಮೌಲ್ಯಮಾಪನ ಮತ್ತು ಪಾಲುದಾರರ ನಡುವಿನ ಸಂಬಂಧ ನಿರ್ವಹಣೆಯನ್ನು ಸಮನ್ವಯಗೊಳಿಸುವುದು.
+          ಪಾಲುದಾರರ ನಡುವೆ ವೃತ್ತಿಪರವಾಗಿ ಸಭೆಗಳು, ಚರ್ಚೆಗಳು ಮತ್ತು ಸಂವಹನವನ್ನು ಸಮನ್ವಯಗೊಳಿಸುವುದು.
         </p>
       </div>
-
     </div>
-
   </section>
 
   <section class="fade-in">
     <div class="founder-box">
       <h4 id="founder-name">Pranathi H.S.</h4>
-      <div id="founder-title-en" class="title">Founder & Advisory Lead</div>
-      <div id="founder-title-kn" class="title kannada" style="display:none;">ಸ್ಥಾಪಕಿ ಮತ್ತು ಸಲಹಾ ಮುಖ್ಯಸ್ಥೆ</div>
+      <div id="founder-title-en" class="title">Founder & Networking Lead</div>
+      <div id="founder-title-kn" class="title kannada" style="display:none;">ಸ್ಥಾಪಕಿ ಮತ್ತು ನೆಟ್‌ವರ್ಕಿಂಗ್ ಮುಖ್ಯಸ್ಥೆ</div>
       <p id="founder-desc-en">
-        "Pranaura was founded with a clear vision: to bridge the gap between credible developers and visionary investors. We believe that true real estate growth is built on transparency, integrity, and robust strategic partnerships."
+        "Pranaura was established to simplify real-estate networking. By focusing on transparent introductions and professional relationships, we bridge the communication gap between builders, landowners, and interested buyers."
       </p>
-      <p id="founder-desc-kn" class="kannada" style="display:none;" style="display:none;">
-        "ಪ್ರಣೌರಾ ಸ್ಪಷ್ಟ ದೃಷ್ಟಿಕೋನದೊಂದಿಗೆ ಸ್ಥಾಪಿಸಲ್ಪಟ್ಟಿದೆ: ವಿಶ್ವಾಸಾರ್ಹ ಡೆವಲಪರ್‌ಗಳು ಮತ್ತು ದೂರದೃಷ್ಟಿಯ ಹೂಡಿಕೆದಾರರ ನಡುವಿನ ಅಂತರವನ್ನು ಕಡಿಮೆ ಮಾಡುವುದು. ನಿಜವಾದ ರಿಯಲ್ ಎಸ್ಟೇಟ್ ಬೆಳವಣಿಗೆಯು ಪಾರದರ್ಶಕತೆ, ಸಮಗ್ರತೆ ಮತ್ತು ಬಲವಾದ ತಂತ್ರಾತ್ಮಕ ಸಹಭಾಗಿತ್ವದ ಮೇಲೆ ನಿರ್ಮಿಸಲ್ಪಟ್ಟಿದೆ ಎಂದು ನಾವು ನಂಬುತ್ತೇವೆ."
+      <p id="founder-desc-kn" class="kannada" style="display:none;">
+        "ಪ್ರಣೌರಾ ರಿಯಲ್ ಎಸ್ಟೇಟ್ ನೆಟ್‌ವರ್ಕಿಂಗ್ ಅನ್ನು ಸರಳಗೊಳಿಸಲು ಸ್ಥಾಪಿಸಲಾಗಿದೆ. ಪಾರದರ್ಶಕ ಪರಿಚಯಗಳು ಮತ್ತು ವೃತ್ತಿಪರ ಸಂಬಂಧಗಳ ಮೇಲೆ ಗಮನಹರಿಸುವ ಮೂಲಕ, ನಾವು ಬಿಲ್ಡರ್‌ಗಳು, ಭೂಮಾಲೀಕರು ಮತ್ತು ಆಸಕ್ತ ಖರೀದಿದಾರರ ನಡುವಿನ ಸಂವಹನ ಅಂತರವನ್ನು ಕಡಿಮೆ ಮಾಡುತ್ತೇವೆ."
       </p>
     </div>
   </section>
@@ -759,8 +761,10 @@
           <select id="interest">
             <option value="builder" id="opt-builder-en">Builder / Developer</option>
             <option value="builder" id="opt-builder-kn" class="kannada" style="display:none;">ಬಿಲ್ಡರ್ / ಡೆವಲಪರ್</option>
-            <option value="investor" id="opt-investor-en">Investor</option>
-            <option value="investor" id="opt-investor-kn" class="kannada" style="display:none;">ಹೂಡಿಕೆದಾರ</option>
+            <option value="landowner" id="opt-landowner-en">Landowner</option>
+            <option value="landowner" id="opt-landowner-kn" class="kannada" style="display:none;">ಭೂಮಾಲೀಕ</option>
+            <option value="investor" id="opt-investor-en">Prospective Investor / Buyer</option>
+            <option value="investor" id="opt-investor-kn" class="kannada" style="display:none;">ಆಸಕ್ತ ಹೂಡಿಕೆದಾರ / ಖರೀದಿದಾರ</option>
             <option value="other" id="opt-other-en">Other Inquiry</option>
             <option value="other" id="opt-other-kn" class="kannada" style="display:none;">ಇತರ ವಿಚಾರಣೆ</option>
           </select>
@@ -776,19 +780,15 @@
   </section>
 
   <section id="contact">
-
     <div class="section-title">
       <h3 id="contact-title-en">Contact Us</h3>
       <h3 id="contact-title-kn" class="kannada" style="display:none;">ನಮ್ಮನ್ನು ಸಂಪರ್ಕಿಸಿ</h3>
-
-      <p id="contact-sub-en">Connect with Pranaura for partnerships, investment opportunities, or project advisory services.</p>
-      <p id="contact-sub-kn" class="kannada" style="display:none;">ಸಹಭಾಗಿತ್ವಗಳು, ಹೂಡಿಕೆ ಅವಕಾಶಗಳು ಅಥವಾ ಯೋಜನಾ ಸಲಹಾ ಸೇವೆಗಳಿಗಾಗಿ ಪ್ರಣೌರಾವನ್ನು ಸಂಪರ್ಕಿಸಿ.</p>
+      <p id="contact-sub-en">Connect with Pranaura for networking inquiries or intermediary support.</p>
+      <p id="contact-sub-kn" class="kannada" style="display:none;">ನೆಟ್‌ವರ್ಕಿಂಗ್ ವಿಚಾರಣೆಗಳು ಅಥವಾ ಮಧ್ಯವರ್ತಿ ಬೆಂಬಲಕ್ಕಾಗಿ ಪ್ರಣೌರಾವನ್ನು ಸಂಪರ್ಕಿಸಿ.</p>
     </div>
 
     <div class="contact">
-
       <div class="contact-grid">
-
         <div class="contact-item">
           <div class="contact-icon">☎</div>
           <h5 id="phone-en">Phone</h5>
@@ -807,7 +807,6 @@
           <div class="contact-icon">⌂</div>
           <h5 id="location-en">Location</h5>
           <h5 id="location-kn" class="kannada" style="display:none;">ಸ್ಥಳ</h5>
-
           <p id="loc-en">Vijayanagar, Mysore, Karnataka, India</p>
           <p id="loc-kn" class="kannada" style="display:none;">ವಿಜಯನಗರ, ಮೈಸೂರು, ಕರ್ನಾಟಕ, ಭಾರತ</p>
         </div>
@@ -818,14 +817,14 @@
           <h5 id="insta-kn" class="kannada" style="display:none;">ಇನ್‌ಸ್ಟಾಗ್ರಾಮ್</h5>
           <a href="https://instagram.com/Pranaura_" target="_blank">@Pranaura_</a>
         </div>
-
       </div>
-
     </div>
-
   </section>
 
   <footer>
+    <div class="footer-disclaimer">
+      <strong>Disclaimer:</strong> Pranaura acts as a real-estate networking and introduction platform connecting builders, developers, landowners, and prospective investors or buyers. Pranaura does not provide financial, legal, tax, or investment advice and does not guarantee project approvals, returns, profitability, or completion. Any transaction or agreement is solely between the concerned parties, and independent due diligence is recommended.
+    </div>
     <p id="footer-en">&copy; 2026 PRANAURA. All rights reserved.</p>
     <p id="footer-kn" class="kannada" style="display:none;">&copy; 2026 ಪ್ರಣೌರಾ. ಎಲ್ಲಾ ಹಕ್ಕುಗಳು ಕಾಯ್ದಿರಿಸಲಾಗಿದೆ.</p>
   </footer>
@@ -836,13 +835,13 @@
       if(btn) btn.classList.add('active');
 
       const ids = [
-        'tagline','hero',
+        'badge','tagline','hero',
         'why-title','why-sub','w1','w1p','w2','w2p','w3','w3p',
         'about-title','about-sub','about1','about2','about3',
-        'who-title','who-sub','who1','who1p','who2','who2p',
+        'what-title','what-sub','what1','what1p','what2','what2p','what3','what3p',
         'services-title','services-sub','s1','s1p','s2','s2p','s3','s3p',
         'founder-title','founder-desc',
-        'form-title','form-sub','label-name','label-phone','label-interest','opt-builder','opt-investor','opt-other','label-message','form-submit-btn',
+        'form-title','form-sub','label-name','label-phone','label-interest','opt-builder','opt-landowner','opt-investor','opt-other','label-message','form-submit-btn',
         'contact-title','contact-sub',
         'phone','email','location','insta','loc',
         'footer'
