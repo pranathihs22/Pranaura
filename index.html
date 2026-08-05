@@ -497,8 +497,7 @@
     }
 
     .form-group input,
-    .form-group select,
-    .form-group textarea {
+    .form-group select {
       width: 100%;
       padding: 12px 16px;
       border-radius: 12px;
@@ -507,11 +506,6 @@
       color: var(--brown);
       font-family: 'Poppins', sans-serif;
       font-size: 0.95rem;
-    }
-
-    .form-group textarea {
-      resize: vertical;
-      height: 120px;
     }
 
     .whatsapp-float{
@@ -580,7 +574,7 @@
       <img src="logo.png" alt="PRANAURA Logo" onerror="this.style.display='none'">
     </div>
 
-    <a href="#contact" class="btn" id="partner-btn">Partner With Us</a>
+    <a href="#contact" class="btn" id="partner-btn">Become an Early Partner</a>
 
   </section>
 
@@ -596,7 +590,7 @@
         <h4 id="w1-en">Professional Network</h4>
         <h4 id="w1-kn" class="kannada" style="display:none;">ವೃತ್ತಿಪರ ನೆಟ್‌ವರ್ಕ್</h4>
         <p id="w1p-en">Direct networking with active builders, landowners, and prospective buyers.</p>
-        <p id="w1p-kn" class="kannada" style="display:none;">ಸಕ್ರಿಯ ಬಿಲ್ಡರ್‌ಗಳು, ಭೂಮಾಲೀಕರು ಮತ್ತು prospective ಖರೀದಿದಾರರೊಂದಿಗೆ ನೇರ ಸಂಪರ್ಕ.</p>
+        <p id="w1p-kn" class="kannada" style="display:none;">ಸಕ್ರಿಯ ಬಿಲ್ಡರ್‌ಗಳು, ಭೂಮಾಲೀಕರು ಮತ್ತು ಖರೀದಿದಾರರೊಂದಿಗೆ ನೇರ ಸಂಪರ್ಕ.</p>
       </div>
       <div class="card">
         <h4 id="w2-en">Opportunity Introductions</h4>
@@ -736,53 +730,48 @@
     </div>
   </section>
 
-  <section class="fade-in">
+  <section class="fade-in" id="contact">
     <div class="section-title">
-      <h3 id="form-title-en">Partner With Us</h3>
-      <h3 id="form-title-kn" class="kannada" style="display:none;">ನಮ್ಮೊಂದಿಗೆ ಪಾಲುದಾರರಾಗಿ</h3>
-      <p id="form-sub-en">Fill out the form below and our team will get in touch with you shortly.</p>
-      <p id="form-sub-kn" class="kannada" style="display:none;">ಕೆಳಗಿನ ಫಾರ್ಮ್ ಅನ್ನು ಭರ್ತಿ ಮಾಡಿ ಮತ್ತು ನಮ್ಮ ತಂಡವು ಶೀಘ್ರದಲ್ಲೇ ನಿಮ್ಮನ್ನು ಸಂಪರ್ಕಿಸುತ್ತದೆ.</p>
+      <h3 id="form-title-en">Become an Early Partner</h3>
+      <h3 id="form-title-kn" class="kannada" style="display:none;">ಮುಂಚಿನ ಪಾಲುದಾರರಾಗಿ</h3>
+      <p id="form-sub-en">Join the first circle of builders and investors connecting with Pranaura before launch.</p>
+      <p id="form-sub-kn" class="kannada" style="display:none;">ಬಿಡುಗಡೆಗೆ ಮುನ್ನ ಪ್ರಣೌರಾದೊಂದಿಗೆ ಸಂಪರ್ಕ ಸಾಧಿಸುವ ಬಿಲ್ಡರ್‌ಗಳು ಮತ್ತು ಹೂಡಿಕೆದಾರರ ಮೊದಲ ವಲಯಕ್ಕೆ ಸೇರಿಕೊಳ್ಳಿ.</p>
     </div>
     <div class="form-box">
       <form onsubmit="event.preventDefault(); alert('Thank you for reaching out! We will contact you soon.');">
         <div class="form-group">
-          <label id="label-name-en" for="name">Full Name</label>
-          <label id="label-name-kn" for="name" class="kannada" style="display:none;">ಪೂರ್ಣ ಹೆಸರು</label>
-          <input type="text" id="name" required placeholder="Enter your full name">
+          <label id="label-name-en" for="name">Name</label>
+          <label id="label-name-kn" for="name" class="kannada" style="display:none;">ಹೆಸರು</label>
+          <input type="text" id="name" required placeholder="Enter your name">
         </div>
         <div class="form-group">
-          <label id="label-phone-en" for="phone">Phone Number</label>
-          <label id="label-phone-kn" for="phone" class="kannada" style="display:none;">ದೂರವಾಣಿ ಸಂಖ್ಯೆ</label>
-          <input type="tel" id="phone" required placeholder="Enter your phone number">
+          <label id="label-phone-en" for="phone">Phone / WhatsApp</label>
+          <label id="label-phone-kn" for="phone" class="kannada" style="display:none;">ದೂರವಾಣಿ / ವಾಟ್ಸಾಪ್</label>
+          <input type="tel" id="phone" required placeholder="Enter your phone or WhatsApp number">
         </div>
         <div class="form-group">
           <label id="label-interest-en" for="interest">I am a</label>
           <label id="label-interest-kn" for="interest" class="kannada" style="display:none;">ನಾನು ಒಬ್ಬ</label>
           <select id="interest">
-            <option value="builder" id="opt-builder-en">Builder / Developer</option>
-            <option value="builder" id="opt-builder-kn" class="kannada" style="display:none;">ಬಿಲ್ಡರ್ / ಡೆವಲಪರ್</option>
-            <option value="landowner" id="opt-landowner-en">Landowner</option>
+            <option value="builder" id="opt-builder-en">Builder</option>
+            <option value="builder" id="opt-builder-kn" class="kannada" style="display:none;">ಬಿಲ್ಡರ್</option>
+            <option value="investor" id="opt-investor-en">Investor</option>
+            <option value="investor" id="opt-investor-kn" class="kannada" style="display:none;">ಹೂಡಿಕೆದಾರ</option>
+            <option value="landowner" id="opt-landowner-en">Land Owner</option>
             <option value="landowner" id="opt-landowner-kn" class="kannada" style="display:none;">ಭೂಮಾಲೀಕ</option>
-            <option value="investor" id="opt-investor-en">Prospective Investor / Buyer</option>
-            <option value="investor" id="opt-investor-kn" class="kannada" style="display:none;">ಆಸಕ್ತ ಹೂಡಿಕೆದಾರ / ಖರೀದಿದಾರ</option>
-            <option value="other" id="opt-other-en">Other Inquiry</option>
-            <option value="other" id="opt-other-kn" class="kannada" style="display:none;">ಇತರ ವಿಚಾರಣೆ</option>
+            <option value="other" id="opt-other-en">Other</option>
+            <option value="other" id="opt-other-kn" class="kannada" style="display:none;">ಇತರ</option>
           </select>
         </div>
-        <div class="form-group">
-          <label id="label-message-en" for="message">Message / Details</label>
-          <label id="label-message-kn" for="message" class="kannada" style="display:none;">ಸಂದೇಶ / ವಿವರಗಳು</label>
-          <textarea id="message" placeholder="Tell us about your requirements..."></textarea>
-        </div>
-        <button type="submit" class="btn" style="width: 100%; text-align: center;" id="form-submit-btn">Submit Inquiry</button>
+        <button type="submit" class="btn" style="width: 100%; text-align: center;" id="form-submit-btn">Connect With Us</button>
       </form>
     </div>
   </section>
 
-  <section id="contact">
+  <section>
     <div class="section-title">
-      <h3 id="contact-title-en">Contact Us</h3>
-      <h3 id="contact-title-kn" class="kannada" style="display:none;">ನಮ್ಮನ್ನು ಸಂಪರ್ಕಿಸಿ</h3>
+      <h3 id="contact-info-title-en">Direct Contact</h3>
+      <h3 id="contact-info-title-kn" class="kannada" style="display:none;">ನೇರ ಸಂಪರ್ಕ</h3>
       <p id="contact-sub-en">Connect with Pranaura for networking inquiries or intermediary support.</p>
       <p id="contact-sub-kn" class="kannada" style="display:none;">ನೆಟ್‌ವರ್ಕಿಂಗ್ ವಿಚಾರಣೆಗಳು ಅಥವಾ ಮಧ್ಯವರ್ತಿ ಬೆಂಬಲಕ್ಕಾಗಿ ಪ್ರಣೌರಾವನ್ನು ಸಂಪರ್ಕಿಸಿ.</p>
     </div>
@@ -791,30 +780,30 @@
       <div class="contact-grid">
         <div class="contact-item">
           <div class="contact-icon">☎</div>
-          <h5 id="phone-en">Phone</h5>
-          <h5 id="phone-kn" class="kannada" style="display:none;">ದೂರವಾಣಿ</h5>
+          <h5 id="phone-heading-en">Phone</h5>
+          <h5 id="phone-heading-kn" class="kannada" style="display:none;">ದೂರವಾಣಿ</h5>
           <a href="tel:+919019746649">+91 90197 46649</a>
         </div>
 
         <div class="contact-item">
           <div class="contact-icon">✉</div>
-          <h5 id="email-en">Email</h5>
-          <h5 id="email-kn" class="kannada" style="display:none;">ಇಮೇಲ್</h5>
+          <h5 id="email-heading-en">Email</h5>
+          <h5 id="email-heading-kn" class="kannada" style="display:none;">ಇಮೇಲ್</h5>
           <a href="mailto:pranauraconnect@gmail.com">pranauraconnect@gmail.com</a>
         </div>
 
         <div class="contact-item">
           <div class="contact-icon">⌂</div>
-          <h5 id="location-en">Location</h5>
-          <h5 id="location-kn" class="kannada" style="display:none;">ಸ್ಥಳ</h5>
+          <h5 id="location-heading-en">Location</h5>
+          <h5 id="location-heading-kn" class="kannada" style="display:none;">ಸ್ಥಳ</h5>
           <p id="loc-en">Vijayanagar, Mysore, Karnataka, India</p>
           <p id="loc-kn" class="kannada" style="display:none;">ವಿಜಯನಗರ, ಮೈಸೂರು, ಕರ್ನಾಟಕ, ಭಾರತ</p>
         </div>
 
         <div class="contact-item">
           <div class="contact-icon">◎</div>
-          <h5 id="insta-en">Instagram</h5>
-          <h5 id="insta-kn" class="kannada" style="display:none;">ಇನ್‌ಸ್ಟಾಗ್ರಾಮ್</h5>
+          <h5 id="insta-heading-en">Instagram</h5>
+          <h5 id="insta-heading-kn" class="kannada" style="display:none;">ಇನ್‌ಸ್ಟಾಗ್ರಾಮ್</h5>
           <a href="https://instagram.com/Pranaura_" target="_blank">@Pranaura_</a>
         </div>
       </div>
@@ -841,9 +830,9 @@
         'what-title','what-sub','what1','what1p','what2','what2p','what3','what3p',
         'services-title','services-sub','s1','s1p','s2','s2p','s3','s3p',
         'founder-title','founder-desc',
-        'form-title','form-sub','label-name','label-phone','label-interest','opt-builder','opt-landowner','opt-investor','opt-other','label-message','form-submit-btn',
-        'contact-title','contact-sub',
-        'phone','email','location','insta','loc',
+        'form-title','form-sub','label-name','label-phone','label-interest','opt-builder','opt-investor','opt-landowner','opt-other','form-submit-btn',
+        'contact-info-title','contact-sub',
+        'phone-heading','email-heading','location-heading','insta-heading','loc',
         'footer'
       ];
 
@@ -863,7 +852,7 @@
       if(navAbout) navAbout.textContent = lang === 'kn' ? 'ಕುರಿತು' : 'About';
       if(navServices) navServices.textContent = lang === 'kn' ? 'ಸೇವೆಗಳು' : 'Services';
       if(navContact) navContact.textContent = lang === 'kn' ? 'ಸಂಪರ್ಕ' : 'Contact';
-      if(partnerBtn) partnerBtn.textContent = lang === 'kn' ? 'ನಮ್ಮೊಂದಿಗೆ ಸಹಭಾಗಿತ್ವ' : 'Partner With Us';
+      if(partnerBtn) partnerBtn.textContent = lang === 'kn' ? 'ಮುಂಚಿನ ಪಾಲುದಾರರಾಗಿ' : 'Become an Early Partner';
 
       document.documentElement.lang = lang === 'kn' ? 'kn' : 'en';
       localStorage.setItem('pranaura_lang', lang);
