@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 
   <meta charset="UTF-8">
@@ -8,3262 +7,3900 @@
 
   <title>PRANAURA | Real Estate Networking & Intermediary Platform</title>
 
-  <meta name="description"
-    content="Pranaura is a real-estate networking and introduction platform connecting builders, landowners, and prospective investors or buyers in Mysore and Karnataka.">
-
-  <meta name="keywords"
-    content="Pranaura, Mysore real estate, builders, investors, Karnataka property, channel partner">
-
+  <meta name="description" content="Pranaura is a real-estate networking and introduction platform connecting builders, landowners, and prospective investors or buyers in Mysore and Karnataka.">
+  <meta name="keywords" content="Pranaura, Mysore real estate, builders, investors, Karnataka property, channel partner, landowners, property networking">
   <meta name="author" content="Pranathi H.S">
+
+  <meta name="theme-color" content="#4b2e1e">
+
+  <meta property="og:title" content="PRANAURA | Real Estate Networking & Intermediary Platform">
+  <meta property="og:description" content="Connecting Builders, Landowners & Investors">
+  <meta property="og:type" content="website">
 
   <link rel="icon" type="image/png" href="logo.png">
 
-  <meta name="google-site-verification"
-    content="X_lXYSvXF3MhSMWri7vHf0EYd3T-wqr6NOT6wwOPB4w">
-
-  <link
-    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Poppins:wght@300;400;500;600&family=Noto+Sans+Kannada:wght@400;500;600;700&display=swap"
-    rel="stylesheet">
-
-  <style>
-
-    /* =========================================================
-       PRANAURA DESIGN SYSTEM
-    ========================================================= */
-
-    :root {
-      --cream: #e9d8c5;
-      --light: #f7efe5;
-      --brown: #4b2e1e;
-      --brown-soft: #6d4c3d;
-      --gold: #b88a5a;
-      --gold-light: #d1aa7a;
-      --black: #1f1a17;
-      --white: #ffffff;
-
-      --shadow-soft:
-        0 14px 34px rgba(75, 46, 30, 0.08);
-
-      --shadow-medium:
-        0 20px 45px rgba(75, 46, 30, 0.13);
-
-      --shadow-heavy:
-        0 30px 70px rgba(31, 26, 23, 0.20);
-
-      --radius: 28px;
-    }
-
-
-    /* =========================================================
-       RESET
-    ========================================================= */
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-      scroll-padding-top: 90px;
-    }
-
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: var(--cream);
-      color: var(--brown);
-      line-height: 1.7;
-      -webkit-font-smoothing: antialiased;
-      overflow-x: hidden;
-    }
-
-    body.modal-open {
-      overflow: hidden;
-    }
-
-    .kannada {
-      font-family: 'Noto Sans Kannada', sans-serif;
-      line-height: 1.9;
-    }
-
-
-    /* =========================================================
-       SCROLL PROGRESS
-    ========================================================= */
-
-    .scroll-progress {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 0%;
-      height: 3px;
-      background: var(--gold);
-      z-index: 9999;
-      transition: width 0.08s linear;
-    }
-
-
-    /* =========================================================
-       HEADER
-    ========================================================= */
-
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      background: rgba(247, 239, 229, 0.94);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
-      border-bottom: 1px solid rgba(75, 46, 30, 0.08);
-      transition: 0.3s ease;
-    }
-
-    header.scrolled {
-      box-shadow: 0 8px 25px rgba(75, 46, 30, 0.08);
-    }
-
-    .navbar {
-      max-width: 1200px;
-      margin: auto;
-      padding: 17px 24px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 28px;
-      flex-wrap: wrap;
-    }
-
-    nav {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 22px;
-      flex-wrap: wrap;
-    }
-
-    nav a {
-      position: relative;
-      text-decoration: none;
-      color: var(--brown);
-      font-weight: 500;
-      transition: 0.3s;
-      font-size: 0.96rem;
-      padding: 5px 0;
-    }
-
-    nav a::after {
-      content: "";
-      position: absolute;
-      left: 50%;
-      bottom: 0;
-      width: 0;
-      height: 2px;
-      background: var(--gold);
-      transform: translateX(-50%);
-      transition: 0.3s ease;
-    }
-
-    nav a:hover,
-    nav a.active {
-      color: var(--gold);
-    }
-
-    nav a:hover::after,
-    nav a.active::after {
-      width: 100%;
-    }
-
-
-    /* =========================================================
-       LANGUAGE SWITCH
-    ========================================================= */
-
-    .lang-switch {
-      display: flex;
-      gap: 8px;
-      align-items: center;
-    }
-
-    .lang-btn {
-      border: none;
-      background: var(--light);
-      color: var(--brown);
-      padding: 8px 15px;
-      border-radius: 999px;
-      font-weight: 600;
-      cursor: pointer;
-      box-shadow: 0 4px 10px rgba(75, 46, 30, 0.08);
-      transition: 0.3s;
-      font-size: 0.85rem;
-    }
-
-    .lang-btn.active,
-    .lang-btn:hover {
-      background: var(--brown);
-      color: var(--light);
-      transform: translateY(-1px);
-    }
-
-
-    /* =========================================================
-       HERO
-    ========================================================= */
-
-    .hero {
-      position: relative;
-      max-width: 980px;
-      margin: auto;
-      text-align: center;
-      padding: 70px 24px 48px;
-    }
-
-    .hero::before {
-      content: "";
-      position: absolute;
-      width: 300px;
-      height: 300px;
-      border-radius: 50%;
-      background: rgba(184, 138, 90, 0.07);
-      top: 40px;
-      left: -180px;
-      filter: blur(5px);
-      pointer-events: none;
-    }
-
-    .hero::after {
-      content: "";
-      position: absolute;
-      width: 260px;
-      height: 260px;
-      border-radius: 50%;
-      background: rgba(75, 46, 30, 0.04);
-      bottom: 20px;
-      right: -150px;
-      pointer-events: none;
-    }
-
-    .launch-badge {
-      display: inline-block;
-      background: rgba(184, 138, 90, 0.15);
-      color: var(--brown);
-      padding: 7px 19px;
-      border-radius: 999px;
-      font-size: 0.82rem;
-      font-weight: 600;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      margin-bottom: 18px;
-      border: 1px solid rgba(184, 138, 90, 0.3);
-      animation: badgePulse 3s infinite;
-    }
-
-    @keyframes badgePulse {
-
-      0%,
-      100% {
-        box-shadow: 0 0 0 0 rgba(184, 138, 90, 0);
-      }
-
-      50% {
-        box-shadow: 0 0 0 8px rgba(184, 138, 90, 0.05);
-      }
-    }
-
-    .brand-name {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 3.25rem;
-      font-weight: 700;
-      letter-spacing: 7px;
-      color: var(--brown);
-      text-transform: uppercase;
-      margin-bottom: 8px;
-    }
-
-    .tagline {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.5rem;
-      font-weight: 600;
-      letter-spacing: 1.3px;
-      color: var(--gold);
-      text-transform: uppercase;
-      margin-bottom: 26px;
-    }
-
-    .hero p {
-      max-width: 760px;
-      margin: 0 auto;
-      font-size: 1.05rem;
-      color: var(--brown-soft);
-      text-align: center;
-    }
-
-
-    /* =========================================================
-       HERO LOGO
-    ========================================================= */
-
-    .hero-logo {
-      margin: 44px 0 36px;
-      display: flex;
-      justify-content: center;
-      position: relative;
-    }
-
-    .hero-logo img {
-      width: 560px;
-      max-width: 96vw;
-      height: auto;
-      opacity: 0.18;
-      filter: brightness(1.15) drop-shadow(0 24px 40px rgba(31, 26, 23, 0.18));
-      animation: logoReveal 2.4s ease forwards;
-      transition: transform 0.4s ease, filter 0.4s ease;
-    }
-
-    .hero-logo img:hover {
-      transform: scale(1.025);
-      filter: brightness(1) drop-shadow(0 30px 50px rgba(31, 26, 23, 0.25));
-    }
-
-    @keyframes logoReveal {
-
-      0% {
-        opacity: 0.08;
-        transform: scale(0.96);
-      }
-
-      60% {
-        opacity: 0.55;
-      }
-
-      100% {
-        opacity: 1;
-        transform: scale(1);
-      }
-    }
-
-
-    /* =========================================================
-       BUTTONS
-    ========================================================= */
-
-    .btn {
-      display: inline-block;
-      margin-top: 6px;
-      padding: 15px 38px;
-      border-radius: 999px;
-      background: var(--brown);
-      color: var(--light);
-      text-decoration: none;
-      font-weight: 600;
-      letter-spacing: 0.3px;
-      border: none;
-      cursor: pointer;
-      box-shadow: 0 10px 24px rgba(75, 46, 30, 0.18);
-      transition: 0.3s ease;
-    }
-
-    .btn:hover {
-      transform: translateY(-3px);
-      background: var(--gold);
-      box-shadow: 0 16px 30px rgba(184, 138, 90, 0.28);
-    }
-
-    .btn:active {
-      transform: translateY(-1px);
-    }
-
-    .btn-outline {
-      display: inline-block;
-      margin-top: 6px;
-      padding: 13px 30px;
-      border-radius: 999px;
-      background: transparent;
-      color: var(--brown);
-      text-decoration: none;
-      font-weight: 600;
-      border: 1px solid rgba(75, 46, 30, 0.25);
-      cursor: pointer;
-      transition: 0.3s ease;
-    }
-
-    .btn-outline:hover {
-      background: var(--brown);
-      color: var(--light);
-      transform: translateY(-2px);
-    }
-
-
-    /* =========================================================
-       SECTIONS
-    ========================================================= */
-
-    section {
-      max-width: 1100px;
-      margin: auto;
-      padding: 76px 24px;
-    }
-
-    .section-title {
-      text-align: center;
-      margin-bottom: 42px;
-    }
-
-    .section-title h3 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 2.25rem;
-      font-weight: 700;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: var(--brown);
-      margin-bottom: 10px;
-    }
-
-    .section-title p {
-      max-width: 700px;
-      margin: auto;
-      color: var(--brown-soft);
-      text-align: center;
-    }
-
-
-    /* =========================================================
-       CARDS
-    ========================================================= */
-
-    .about-box,
-    .card,
-    .contact,
-    .founder-box,
-    .form-box {
-      background: rgba(247, 239, 229, 0.95);
-      border-radius: var(--radius);
-      border: 1px solid rgba(75, 46, 30, 0.08);
-      box-shadow: var(--shadow-soft);
-    }
-
-    .about-box {
-      padding: 50px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .about-box::before {
-      content: "PRANAURA";
-      position: absolute;
-      right: -40px;
-      top: 20px;
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 6rem;
-      font-weight: 700;
-      opacity: 0.025;
-      letter-spacing: 5px;
-    }
-
-    .about-box p {
-      text-align: center;
-      color: var(--brown-soft);
-      font-size: 1rem;
-    }
-
-
-    /* =========================================================
-       GRIDS
-    ========================================================= */
-
-    .services,
-    .why-grid,
-    .who-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 24px;
-    }
-
-    .card {
-      padding: 35px;
-      transition: 0.35s ease;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .card::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 3px;
-      background: linear-gradient(
-        90deg,
-        transparent,
-        var(--gold),
-        transparent
-      );
-      opacity: 0;
-      transition: 0.35s;
-    }
-
-    .card:hover {
-      transform: translateY(-7px);
-      box-shadow: var(--shadow-medium);
-    }
-
-    .card:hover::before {
-      opacity: 1;
-    }
-
-    .card h4 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.48rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      text-align: center;
-      margin-bottom: 14px;
-      color: var(--brown);
-    }
-
-    .card p {
-      text-align: center;
-      color: var(--brown-soft);
-      font-size: 0.97rem;
-    }
-
-
-    /* =========================================================
-       FOUNDER
-    ========================================================= */
-
-    .founder-box {
-      padding: 50px;
-      text-align: center;
-      position: relative;
-    }
-
-    .founder-box::before {
-      content: "“";
-      font-family: Georgia, serif;
-      font-size: 7rem;
-      color: var(--gold);
-      opacity: 0.15;
-      position: absolute;
-      left: 25px;
-      top: 5px;
-    }
-
-    .founder-box h4 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.7rem;
-      color: var(--brown);
-      margin-bottom: 6px;
-    }
-
-    .founder-box .title {
-      font-size: 0.95rem;
-      color: var(--gold);
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      margin-bottom: 20px;
-    }
-
-    .founder-box p {
-      color: var(--brown-soft);
-      max-width: 750px;
-      margin: 0 auto;
-    }
-
-
-    /* =========================================================
-       FORM
-    ========================================================= */
-
-    .form-box {
-      padding: 48px;
-      max-width: 700px;
-      margin: 0 auto;
-    }
-
-    .form-group {
-      margin-bottom: 20px;
-      text-align: left;
-    }
-
-    .form-group label {
-      display: block;
-      font-size: 0.9rem;
-      font-weight: 600;
-      color: var(--brown);
-      margin-bottom: 6px;
-    }
-
-    .form-group input,
-    .form-group select {
-      width: 100%;
-      padding: 13px 16px;
-      border-radius: 12px;
-      border: 1px solid rgba(75, 46, 30, 0.2);
-      background: #fff;
-      color: var(--brown);
-      font-family: 'Poppins', sans-serif;
-      font-size: 0.95rem;
-      outline: none;
-      transition: 0.25s;
-    }
-
-    .form-group input:focus,
-    .form-group select:focus {
-      border-color: var(--gold);
-      box-shadow: 0 0 0 4px rgba(184, 138, 90, 0.10);
-    }
-
-    .form-group input::placeholder {
-      color: #a69587;
-    }
-
-    .consent {
-      display: flex;
-      align-items: flex-start;
-      gap: 10px;
-      margin: 8px 0 20px;
-      font-size: 0.78rem;
-      color: var(--brown-soft);
-    }
-
-    .consent input {
-      margin-top: 4px;
-      accent-color: var(--brown);
-    }
-
-
-    /* =========================================================
-       CONTACT
-    ========================================================= */
-
-    .contact {
-      padding: 56px 42px;
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-
-    .contact-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 28px;
-      align-items: start;
-    }
-
-    .contact-item {
-      text-align: center;
-      padding: 10px 6px;
-    }
-
-    .contact-icon {
-      width: 54px;
-      height: 54px;
-      margin: 0 auto 18px;
-      border-radius: 50%;
-      background: rgba(184, 138, 90, 0.12);
-      color: var(--gold);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.25rem;
-      font-weight: 600;
-      transition: 0.3s ease;
-    }
-
-    .contact-item:hover .contact-icon {
-      background: var(--brown);
-      color: var(--light);
-      transform: translateY(-3px);
-    }
-
-    .contact-item h5 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.18rem;
-      font-weight: 700;
-      letter-spacing: 1.2px;
-      text-transform: uppercase;
-      margin-bottom: 10px;
-      color: var(--brown);
-    }
-
-    .contact-item p,
-    .contact-item a {
-      color: var(--brown-soft);
-      text-decoration: none;
-      font-size: 0.96rem;
-      line-height: 1.7;
-      word-break: break-word;
-    }
-
-    .contact-item a:hover {
-      color: var(--gold);
-    }
-
-
-    /* =========================================================
-       WHATSAPP FLOAT
-    ========================================================= */
-
-    .whatsapp-float {
-      position: fixed;
-      right: 20px;
-      bottom: 20px;
-      width: 64px;
-      height: 64px;
-      border-radius: 50%;
-      background: var(--light);
-      color: var(--brown);
-      border: 2px solid var(--brown);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 30px;
-      text-decoration: none;
-      box-shadow: 0 14px 28px rgba(75, 46, 30, 0.18);
-      z-index: 2000;
-      transition: all 0.3s ease;
-    }
-
-    .whatsapp-float:hover {
-      transform: translateY(-4px) scale(1.06);
-      background: var(--brown);
-      color: var(--light);
-    }
-
-    .whatsapp-label {
-      position: fixed;
-      right: 92px;
-      bottom: 34px;
-      background: var(--brown);
-      color: var(--light);
-      padding: 7px 13px;
-      border-radius: 8px;
-      font-size: 0.75rem;
-      opacity: 0;
-      transform: translateX(10px);
-      pointer-events: none;
-      transition: 0.3s;
-      z-index: 1999;
-    }
-
-    .whatsapp-float:hover + .whatsapp-label {
-      opacity: 1;
-      transform: translateX(0);
-    }
-
-
-    /* =========================================================
-       BACK TO TOP
-    ========================================================= */
-
-    .back-top {
-      position: fixed;
-      right: 20px;
-      bottom: 98px;
-      width: 46px;
-      height: 46px;
-      border: none;
-      border-radius: 50%;
-      background: var(--brown);
-      color: var(--light);
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 20px;
-      opacity: 0;
-      visibility: hidden;
-      transform: translateY(10px);
-      transition: 0.3s;
-      z-index: 1900;
-      box-shadow: 0 10px 24px rgba(75, 46, 30, 0.18);
-    }
-
-    .back-top.show {
-      opacity: 1;
-      visibility: visible;
-      transform: translateY(0);
-    }
-
-    .back-top:hover {
-      background: var(--gold);
-      transform: translateY(-2px);
-    }
-
-
-    /* =========================================================
-       POPUP / MODAL
-    ========================================================= */
-
-    .modal-overlay {
-      position: fixed;
-      inset: 0;
-      background: rgba(31, 26, 23, 0.60);
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
-      opacity: 0;
-      visibility: hidden;
-      transition: 0.35s ease;
-      z-index: 5000;
-    }
-
-    .modal-overlay.show {
-      opacity: 1;
-      visibility: visible;
-    }
-
-    .modal {
-      width: min(560px, 100%);
-      max-height: 90vh;
-      overflow-y: auto;
-      background: var(--light);
-      border-radius: 28px;
-      padding: 42px;
-      position: relative;
-      box-shadow: var(--shadow-heavy);
-      transform: translateY(25px) scale(0.97);
-      transition: 0.35s ease;
-    }
-
-    .modal-overlay.show .modal {
-      transform: translateY(0) scale(1);
-    }
-
-    .modal-close {
-      position: absolute;
-      right: 18px;
-      top: 15px;
-      width: 38px;
-      height: 38px;
-      border: none;
-      border-radius: 50%;
-      background: rgba(75, 46, 30, 0.07);
-      color: var(--brown);
-      font-size: 20px;
-      cursor: pointer;
-      transition: 0.25s;
-    }
-
-    .modal-close:hover {
-      background: var(--brown);
-      color: var(--light);
-      transform: rotate(90deg);
-    }
-
-    .modal-logo {
-      width: 90px;
-      height: 90px;
-      object-fit: contain;
-      display: block;
-      margin: 0 auto 15px;
-    }
-
-    .modal h3 {
-      font-family: 'Cormorant Garamond', serif;
-      text-align: center;
-      font-size: 2rem;
-      color: var(--brown);
-      margin-bottom: 8px;
-    }
-
-    .modal-subtitle {
-      text-align: center;
-      color: var(--brown-soft);
-      font-size: 0.9rem;
-      margin-bottom: 24px;
-    }
-
-    .modal-divider {
-      width: 60px;
-      height: 2px;
-      background: var(--gold);
-      margin: 15px auto 22px;
-    }
-
-
-    /* =========================================================
-       SUCCESS MODAL
-    ========================================================= */
-
-    .success-icon {
-      width: 68px;
-      height: 68px;
-      margin: 0 auto 18px;
-      border-radius: 50%;
-      background: rgba(184, 138, 90, 0.15);
-      color: var(--gold);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 32px;
-    }
-
-
-    /* =========================================================
-       TOAST
-    ========================================================= */
-
-    .toast {
-      position: fixed;
-      left: 50%;
-      bottom: 30px;
-      transform: translate(-50%, 20px);
-      background: var(--brown);
-      color: var(--light);
-      padding: 13px 22px;
-      border-radius: 999px;
-      font-size: 0.85rem;
-      box-shadow: var(--shadow-medium);
-      opacity: 0;
-      visibility: hidden;
-      transition: 0.3s ease;
-      z-index: 7000;
-      white-space: nowrap;
-    }
-
-    .toast.show {
-      opacity: 1;
-      visibility: visible;
-      transform: translate(-50%, 0);
-    }
-
-
-    /* =========================================================
-       FOOTER
-    ========================================================= */
-
-    footer {
-      text-align: center;
-      padding: 44px 20px;
-      background: var(--black);
-      color: #eadfce;
-      margin-top: 64px;
-      font-size: 0.92rem;
-      letter-spacing: 0.5px;
-    }
-
-    .footer-disclaimer {
-      max-width: 900px;
-      margin: 0 auto 20px auto;
-      font-size: 0.8rem;
-      color: #b5a494;
-      line-height: 1.6;
-      text-align: justify;
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
-      padding-top: 20px;
-    }
-
-
-    /* =========================================================
-       ANIMATIONS
-    ========================================================= */
-
-    .fade-in {
-      opacity: 0;
-      transform: translateY(24px);
-      transition: all 0.8s ease;
-    }
-
-    .fade-in.appear {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .floating {
-      animation: floating 5s ease-in-out infinite;
-    }
-
-    @keyframes floating {
-
-      0%,
-      100% {
-        transform: translateY(0);
-      }
-
-      50% {
-        transform: translateY(-7px);
-      }
-    }
-
-
-    /* =========================================================
-       LOADING
-    ========================================================= */
-
-    .loading-spinner {
-      display: none;
-      width: 18px;
-      height: 18px;
-      border: 2px solid rgba(255, 255, 255, 0.4);
-      border-top-color: white;
-      border-radius: 50%;
-      animation: spin 0.7s linear infinite;
-      vertical-align: middle;
-      margin-right: 8px;
-    }
-
-    .btn.loading .loading-spinner {
-      display: inline-block;
-    }
-
-    @keyframes spin {
-      to {
-        transform: rotate(360deg);
-      }
-    }
-
-
-    /* =========================================================
-       RESPONSIVE
-    ========================================================= */
-
-    @media (max-width: 900px) {
-
-      .contact-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 24px;
-      }
-
-    }
-
-
-    @media (max-width: 768px) {
-
-      .navbar {
-        padding: 14px;
-        gap: 12px;
-      }
-
-      nav {
-        gap: 14px;
-      }
-
-      nav a {
-        font-size: 0.88rem;
-      }
-
-      .brand-name {
-        font-size: 2.4rem;
-        letter-spacing: 4px;
-      }
-
-      .tagline {
-        font-size: 1.15rem;
-        letter-spacing: 1px;
-      }
-
-      .hero {
-        padding-top: 52px;
-      }
-
-      .hero p {
-        font-size: 0.96rem;
-      }
-
-      .hero-logo {
-        margin: 35px 0 28px;
-      }
-
-      .hero-logo img {
-        width: 500px;
-        max-width: 100vw;
-      }
-
-      .about-box,
-      .contact,
-      .founder-box,
-      .form-box {
-        padding: 30px;
-      }
-
-      .section-title h3 {
-        font-size: 1.9rem;
-      }
-
-      .modal {
-        padding: 32px 24px;
-      }
-
-    }
-
-
-    @media (max-width: 560px) {
-
-      .navbar {
-        flex-direction: column;
-      }
-
-      nav {
-        gap: 13px;
-      }
-
-      .contact-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .brand-name {
-        font-size: 2.05rem;
-        letter-spacing: 3px;
-      }
-
-      .tagline {
-        font-size: 1rem;
-      }
-
-      section {
-        padding: 60px 18px;
-      }
-
-      .card {
-        padding: 28px 22px;
-      }
-
-      .whatsapp-label {
-        display: none;
-      }
-
-      .toast {
-        max-width: 90%;
-        white-space: normal;
-        text-align: center;
-      }
-
-    }
-
-
-    @media (prefers-reduced-motion: reduce) {
-
-      *,
-      *::before,
-      *::after {
-        scroll-behavior: auto !important;
-        animation-duration: 0.01ms !important;
-        transition-duration: 0.01ms !important;
-      }
-
-    }
-
-  </style>
-
+  <meta name="google-site-verification" content="X_lXYSvXF3MhSMWri7vHf0EYd3T-wqr6NOT6wwOPB4w">
+
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&family=Noto+Sans+Kannada:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+
+  <!-- REAL ESTATE BUSINESS STRUCTURED DATA -->
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "RealEstateAgent",
+    "name": "Pranaura",
+    "description": "Real-estate networking and introduction platform connecting builders, developers, landowners, investors and prospective buyers.",
+    "founder": {
+      "@type": "Person",
+      "name": "Pranathi H.S."
+    },
+    "telephone": "+91 90197 46649",
+    "email": "pranauraconnect@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Mysore",
+      "addressRegion": "Karnataka",
+      "addressCountry": "India"
+    },
+    "sameAs": [
+      "https://instagram.com/Pranaura_"
+    ]
+  }
+  </script>
+
+
+<style>
+
+:root{
+  --cream:#e9d8c5;
+  --light:#f7efe5;
+  --white:#fffaf4;
+  --brown:#4b2e1e;
+  --brown-soft:#6d4c3d;
+  --gold:#b88a5a;
+  --gold-light:#d2ad7d;
+  --black:#1f1a17;
+  --shadow:0 14px 34px rgba(75,46,30,0.08);
+  --shadow-heavy:0 25px 60px rgba(75,46,30,0.15);
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+  scroll-padding-top:100px;
+}
+
+body{
+  font-family:'Poppins',sans-serif;
+  background:var(--cream);
+  color:var(--brown);
+  line-height:1.7;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+
+body.modal-open{
+  overflow:hidden;
+}
+
+.kannada{
+  font-family:'Noto Sans Kannada',sans-serif;
+  line-height:1.9;
+}
+
+
+/* =========================================
+   SCROLL PROGRESS
+========================================= */
+
+.scroll-progress{
+  position:fixed;
+  top:0;
+  left:0;
+  width:0%;
+  height:4px;
+  background:linear-gradient(90deg,var(--gold),var(--brown));
+  z-index:9999;
+}
+
+
+/* =========================================
+   TOP ANNOUNCEMENT BAR
+========================================= */
+
+.announcement{
+  background:var(--brown);
+  color:var(--light);
+  text-align:center;
+  padding:8px 15px;
+  font-size:0.78rem;
+  letter-spacing:0.7px;
+}
+
+.announcement span{
+  color:var(--gold-light);
+  font-weight:600;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+header{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:rgba(247,239,229,0.94);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid rgba(75,46,30,0.08);
+  transition:0.3s;
+}
+
+header.scrolled{
+  box-shadow:0 8px 25px rgba(75,46,30,0.08);
+}
+
+.navbar{
+  max-width:1200px;
+  margin:auto;
+  padding:16px 24px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:30px;
+}
+
+.nav-logo{
+  display:none;
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.5rem;
+  font-weight:700;
+  letter-spacing:3px;
+}
+
+nav{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:22px;
+}
+
+nav a{
+  position:relative;
+  text-decoration:none;
+  color:var(--brown);
+  font-weight:500;
+  font-size:0.94rem;
+  transition:0.3s;
+}
+
+nav a::after{
+  content:"";
+  position:absolute;
+  bottom:-7px;
+  left:0;
+  width:0;
+  height:2px;
+  background:var(--gold);
+  transition:0.3s;
+}
+
+nav a:hover,
+nav a.active{
+  color:var(--gold);
+}
+
+nav a:hover::after,
+nav a.active::after{
+  width:100%;
+}
+
+.lang-switch{
+  display:flex;
+  gap:8px;
+  align-items:center;
+}
+
+.lang-btn{
+  border:none;
+  background:var(--light);
+  color:var(--brown);
+  padding:8px 15px;
+  border-radius:999px;
+  font-weight:600;
+  cursor:pointer;
+  box-shadow:0 4px 10px rgba(75,46,30,0.08);
+  transition:0.3s;
+  font-size:0.82rem;
+}
+
+.lang-btn.active,
+.lang-btn:hover{
+  background:var(--brown);
+  color:var(--light);
+}
+
+.menu-toggle{
+  display:none;
+  border:none;
+  background:none;
+  color:var(--brown);
+  font-size:1.7rem;
+  cursor:pointer;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero{
+  max-width:1100px;
+  margin:auto;
+  text-align:center;
+  padding:70px 24px 55px;
+  position:relative;
+}
+
+.hero::before{
+  content:"";
+  position:absolute;
+  width:350px;
+  height:350px;
+  border-radius:50%;
+  background:rgba(184,138,90,0.08);
+  filter:blur(5px);
+  top:40px;
+  left:-170px;
+  z-index:-1;
+}
+
+.hero::after{
+  content:"";
+  position:absolute;
+  width:280px;
+  height:280px;
+  border-radius:50%;
+  background:rgba(75,46,30,0.05);
+  right:-130px;
+  bottom:30px;
+  z-index:-1;
+}
+
+.launch-badge{
+  display:inline-block;
+  background:rgba(184,138,90,0.15);
+  color:var(--brown);
+  padding:7px 19px;
+  border-radius:999px;
+  font-size:0.82rem;
+  font-weight:600;
+  letter-spacing:1px;
+  text-transform:uppercase;
+  margin-bottom:20px;
+  border:1px solid rgba(184,138,90,0.3);
+}
+
+.brand-name{
+  font-family:'Cormorant Garamond',serif;
+  font-size:4.2rem;
+  font-weight:700;
+  letter-spacing:9px;
+  color:var(--brown);
+  text-transform:uppercase;
+  margin-bottom:8px;
+  line-height:1;
+}
+
+.tagline{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.55rem;
+  font-weight:600;
+  letter-spacing:1.6px;
+  color:var(--gold);
+  text-transform:uppercase;
+  margin-bottom:25px;
+}
+
+.hero p{
+  max-width:780px;
+  margin:0 auto;
+  font-size:1.04rem;
+  color:var(--brown-soft);
+}
+
+.hero-logo{
+  margin:40px 0 32px;
+  display:flex;
+  justify-content:center;
+}
+
+.hero-logo img{
+  width:500px;
+  max-width:90vw;
+  height:auto;
+  filter:drop-shadow(0 25px 45px rgba(31,26,23,0.18));
+  animation:logoReveal 2s ease forwards;
+  transition:0.5s;
+}
+
+.hero-logo img:hover{
+  transform:scale(1.035);
+}
+
+@keyframes logoReveal{
+  0%{
+    opacity:0;
+    transform:scale(.9);
+  }
+  100%{
+    opacity:1;
+    transform:scale(1);
+  }
+}
+
+.hero-actions{
+  display:flex;
+  justify-content:center;
+  gap:13px;
+  flex-wrap:wrap;
+}
+
+.btn{
+  display:inline-block;
+  padding:14px 32px;
+  border-radius:999px;
+  background:var(--brown);
+  color:var(--light);
+  text-decoration:none;
+  font-weight:600;
+  letter-spacing:0.3px;
+  box-shadow:0 10px 24px rgba(75,46,30,0.18);
+  transition:0.3s ease;
+  border:none;
+  cursor:pointer;
+  font-family:'Poppins',sans-serif;
+}
+
+.btn:hover{
+  transform:translateY(-3px);
+  background:var(--gold);
+  box-shadow:0 16px 30px rgba(184,138,90,0.28);
+}
+
+.btn-outline{
+  background:transparent;
+  color:var(--brown);
+  border:1px solid var(--brown);
+  box-shadow:none;
+}
+
+.btn-outline:hover{
+  color:var(--light);
+}
+
+
+/* =========================================
+   COUNTDOWN
+========================================= */
+
+.countdown{
+  margin:25px auto 0;
+  display:flex;
+  justify-content:center;
+  gap:12px;
+  flex-wrap:wrap;
+}
+
+.time-box{
+  min-width:72px;
+  padding:10px 12px;
+  background:rgba(247,239,229,0.75);
+  border:1px solid rgba(75,46,30,0.08);
+  border-radius:15px;
+}
+
+.time-box strong{
+  display:block;
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.5rem;
+  color:var(--brown);
+}
+
+.time-box span{
+  font-size:0.63rem;
+  text-transform:uppercase;
+  letter-spacing:1px;
+  color:var(--brown-soft);
+}
+
+
+/* =========================================
+   GENERAL SECTIONS
+========================================= */
+
+section{
+  max-width:1100px;
+  margin:auto;
+  padding:80px 24px;
+}
+
+.section-title{
+  text-align:center;
+  margin-bottom:42px;
+}
+
+.section-title h3{
+  font-family:'Cormorant Garamond',serif;
+  font-size:2.3rem;
+  font-weight:700;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  color:var(--brown);
+  margin-bottom:10px;
+}
+
+.section-title p{
+  max-width:700px;
+  margin:auto;
+  color:var(--brown-soft);
+}
+
+
+/* =========================================
+   TRUST STRIP
+========================================= */
+
+.trust-strip{
+  max-width:1000px;
+  margin:0 auto;
+  padding:10px 24px 50px;
+}
+
+.trust-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  background:var(--light);
+  border:1px solid rgba(75,46,30,0.08);
+  border-radius:25px;
+  box-shadow:var(--shadow);
+  overflow:hidden;
+}
+
+.trust-item{
+  padding:28px 15px;
+  text-align:center;
+  border-right:1px solid rgba(75,46,30,0.08);
+}
+
+.trust-item:last-child{
+  border-right:none;
+}
+
+.trust-number{
+  font-family:'Cormorant Garamond',serif;
+  font-size:2rem;
+  font-weight:700;
+  color:var(--gold);
+}
+
+.trust-label{
+  font-size:0.8rem;
+  color:var(--brown-soft);
+}
+
+
+/* =========================================
+   CARDS
+========================================= */
+
+.about-box,
+.card,
+.contact,
+.founder-box,
+.form-box,
+.partner-box{
+  background:var(--light);
+  border-radius:28px;
+  border:1px solid rgba(75,46,30,0.08);
+  box-shadow:var(--shadow);
+}
+
+.about-box{
+  padding:48px;
+}
+
+.about-box p{
+  text-align:center;
+  color:var(--brown-soft);
+  font-size:1rem;
+}
+
+.services,
+.why-grid,
+.who-grid,
+.audience-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:24px;
+}
+
+.card{
+  padding:34px;
+  transition:0.35s ease;
+  position:relative;
+  overflow:hidden;
+}
+
+.card::before{
+  content:"";
+  position:absolute;
+  width:80px;
+  height:80px;
+  border-radius:50%;
+  background:rgba(184,138,90,0.07);
+  top:-35px;
+  right:-35px;
+  transition:0.4s;
+}
+
+.card:hover::before{
+  transform:scale(2);
+}
+
+.card:hover{
+  transform:translateY(-7px);
+  box-shadow:var(--shadow-heavy);
+}
+
+.card-icon{
+  width:52px;
+  height:52px;
+  border-radius:50%;
+  margin:0 auto 17px;
+  background:rgba(184,138,90,0.12);
+  color:var(--gold);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:1.3rem;
+  position:relative;
+  z-index:1;
+}
+
+.card h4{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.48rem;
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:1px;
+  text-align:center;
+  margin-bottom:14px;
+  color:var(--brown);
+}
+
+.card p{
+  text-align:center;
+  color:var(--brown-soft);
+  font-size:0.94rem;
+}
+
+
+/* =========================================
+   PROCESS
+========================================= */
+
+.process{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:20px;
+  position:relative;
+}
+
+.process::before{
+  content:"";
+  position:absolute;
+  top:35px;
+  left:11%;
+  right:11%;
+  height:1px;
+  background:rgba(184,138,90,0.4);
+  z-index:0;
+}
+
+.process-step{
+  text-align:center;
+  position:relative;
+  z-index:1;
+}
+
+.process-number{
+  width:70px;
+  height:70px;
+  margin:0 auto 20px;
+  border-radius:50%;
+  background:var(--light);
+  border:2px solid var(--gold);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.5rem;
+  font-weight:700;
+  color:var(--brown);
+}
+
+.process-step h4{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.35rem;
+  margin-bottom:8px;
+}
+
+.process-step p{
+  color:var(--brown-soft);
+  font-size:0.86rem;
+}
+
+
+/* =========================================
+   AUDIENCE
+========================================= */
+
+.audience-card{
+  text-align:center;
+  padding:35px 20px;
+  background:rgba(247,239,229,0.62);
+  border:1px solid rgba(75,46,30,0.08);
+  border-radius:24px;
+  transition:.3s;
+}
+
+.audience-card:hover{
+  background:var(--light);
+  transform:translateY(-5px);
+  box-shadow:var(--shadow);
+}
+
+.audience-icon{
+  font-size:2rem;
+  margin-bottom:10px;
+}
+
+.audience-card h4{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.35rem;
+  margin-bottom:8px;
+}
+
+.audience-card p{
+  font-size:.88rem;
+  color:var(--brown-soft);
+}
+
+
+/* =========================================
+   PARTNER CTA
+========================================= */
+
+.partner-box{
+  padding:55px 35px;
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+}
+
+.partner-box::before{
+  content:"";
+  position:absolute;
+  width:250px;
+  height:250px;
+  border-radius:50%;
+  background:rgba(184,138,90,0.08);
+  top:-130px;
+  left:-100px;
+}
+
+.partner-box h3{
+  position:relative;
+  font-family:'Cormorant Garamond',serif;
+  font-size:2.3rem;
+  margin-bottom:12px;
+}
+
+.partner-box p{
+  position:relative;
+  max-width:680px;
+  margin:0 auto 25px;
+  color:var(--brown-soft);
+}
+
+
+/* =========================================
+   FOUNDER
+========================================= */
+
+.founder-box{
+  padding:48px;
+  text-align:center;
+}
+
+.founder-avatar{
+  width:80px;
+  height:80px;
+  margin:0 auto 18px;
+  border-radius:50%;
+  background:var(--brown);
+  color:var(--light);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.6rem;
+  font-weight:700;
+}
+
+.founder-box h4{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.65rem;
+  color:var(--brown);
+  margin-bottom:6px;
+}
+
+.founder-box .title{
+  font-size:0.9rem;
+  color:var(--gold);
+  font-weight:600;
+  text-transform:uppercase;
+  letter-spacing:1px;
+  margin-bottom:20px;
+}
+
+.founder-box p{
+  color:var(--brown-soft);
+  max-width:750px;
+  margin:0 auto;
+}
+
+
+/* =========================================
+   FORM
+========================================= */
+
+.form-box{
+  padding:48px;
+  max-width:700px;
+  margin:0 auto;
+}
+
+.form-group{
+  margin-bottom:20px;
+  text-align:left;
+}
+
+.form-group label{
+  display:block;
+  font-size:0.9rem;
+  font-weight:600;
+  color:var(--brown);
+  margin-bottom:7px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea{
+  width:100%;
+  padding:13px 16px;
+  border-radius:12px;
+  border:1px solid rgba(75,46,30,0.2);
+  background:#fff;
+  color:var(--brown);
+  font-family:'Poppins',sans-serif;
+  font-size:0.94rem;
+  outline:none;
+  transition:.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus{
+  border-color:var(--gold);
+  box-shadow:0 0 0 3px rgba(184,138,90,0.1);
+}
+
+.form-group textarea{
+  min-height:100px;
+  resize:vertical;
+}
+
+
+/* =========================================
+   CONTACT
+========================================= */
+
+.contact{
+  padding:55px 42px;
+  max-width:1100px;
+  margin:0 auto;
+}
+
+.contact-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:28px;
+  align-items:start;
+}
+
+.contact-item{
+  text-align:center;
+  padding:10px 6px;
+}
+
+.contact-icon{
+  width:54px;
+  height:54px;
+  margin:0 auto 18px;
+  border-radius:50%;
+  background:rgba(184,138,90,0.12);
+  color:var(--gold);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:1.25rem;
+  font-weight:600;
+}
+
+.contact-item h5{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.18rem;
+  font-weight:700;
+  letter-spacing:1.2px;
+  text-transform:uppercase;
+  margin-bottom:10px;
+  color:var(--brown);
+}
+
+.contact-item p,
+.contact-item a{
+  color:var(--brown-soft);
+  text-decoration:none;
+  font-size:0.93rem;
+  line-height:1.7;
+  word-break:break-word;
+}
+
+.contact-item a:hover{
+  color:var(--gold);
+}
+
+
+/* =========================================
+   FAQ
+========================================= */
+
+.faq{
+  max-width:850px;
+  margin:auto;
+}
+
+.faq-item{
+  background:var(--light);
+  border:1px solid rgba(75,46,30,0.08);
+  border-radius:18px;
+  margin-bottom:12px;
+  overflow:hidden;
+  box-shadow:0 7px 18px rgba(75,46,30,0.05);
+}
+
+.faq-question{
+  width:100%;
+  border:none;
+  background:none;
+  padding:20px 22px;
+  text-align:left;
+  color:var(--brown);
+  font-family:'Poppins',sans-serif;
+  font-weight:600;
+  cursor:pointer;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:15px;
+}
+
+.faq-question span:last-child{
+  font-size:1.3rem;
+  transition:.3s;
+}
+
+.faq-answer{
+  max-height:0;
+  overflow:hidden;
+  transition:max-height .4s ease;
+}
+
+.faq-answer p{
+  padding:0 22px 20px;
+  color:var(--brown-soft);
+  font-size:.9rem;
+}
+
+.faq-item.open .faq-answer{
+  max-height:200px;
+}
+
+.faq-item.open .faq-question span:last-child{
+  transform:rotate(45deg);
+}
+
+
+/* =========================================
+   MODAL
+========================================= */
+
+.modal{
+  position:fixed;
+  inset:0;
+  background:rgba(31,26,23,0.65);
+  backdrop-filter:blur(8px);
+  display:none;
+  align-items:center;
+  justify-content:center;
+  padding:20px;
+  z-index:5000;
+}
+
+.modal.show{
+  display:flex;
+  animation:modalFade .3s ease;
+}
+
+@keyframes modalFade{
+  from{opacity:0}
+  to{opacity:1}
+}
+
+.modal-content{
+  width:100%;
+  max-width:580px;
+  max-height:90vh;
+  overflow-y:auto;
+  background:var(--light);
+  border-radius:28px;
+  padding:40px;
+  position:relative;
+  box-shadow:0 30px 80px rgba(0,0,0,.25);
+  animation:modalUp .35s ease;
+}
+
+@keyframes modalUp{
+  from{
+    transform:translateY(30px);
+    opacity:0;
+  }
+  to{
+    transform:translateY(0);
+    opacity:1;
+  }
+}
+
+.modal-close{
+  position:absolute;
+  right:18px;
+  top:14px;
+  width:38px;
+  height:38px;
+  border:none;
+  border-radius:50%;
+  background:rgba(75,46,30,.08);
+  color:var(--brown);
+  font-size:1.3rem;
+  cursor:pointer;
+}
+
+.modal-content h3{
+  font-family:'Cormorant Garamond',serif;
+  font-size:2rem;
+  margin-bottom:7px;
+  text-align:center;
+}
+
+.modal-content > p{
+  text-align:center;
+  color:var(--brown-soft);
+  font-size:.9rem;
+  margin-bottom:25px;
+}
+
+
+/* =========================================
+   TOAST
+========================================= */
+
+.toast{
+  position:fixed;
+  left:50%;
+  bottom:30px;
+  transform:translate(-50%,120px);
+  background:var(--brown);
+  color:var(--light);
+  padding:14px 22px;
+  border-radius:999px;
+  font-size:.88rem;
+  box-shadow:0 12px 30px rgba(0,0,0,.2);
+  z-index:8000;
+  transition:.4s;
+}
+
+.toast.show{
+  transform:translate(-50%,0);
+}
+
+
+/* =========================================
+   WHATSAPP
+========================================= */
+
+.whatsapp-float{
+  position:fixed;
+  right:20px;
+  bottom:20px;
+  width:62px;
+  height:62px;
+  border-radius:50%;
+  background:var(--light);
+  color:var(--brown);
+  border:2px solid var(--brown);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-decoration:none;
+  box-shadow:0 14px 28px rgba(75,46,30,0.2);
+  z-index:2000;
+  transition:.3s;
+}
+
+.whatsapp-float:hover{
+  transform:translateY(-4px) scale(1.05);
+  background:var(--brown);
+  color:var(--light);
+}
+
+
+/* =========================================
+   BACK TO TOP
+========================================= */
+
+.back-top{
+  position:fixed;
+  right:20px;
+  bottom:95px;
+  width:43px;
+  height:43px;
+  border:none;
+  border-radius:50%;
+  background:var(--brown);
+  color:var(--light);
+  cursor:pointer;
+  opacity:0;
+  visibility:hidden;
+  transition:.3s;
+  z-index:1500;
+}
+
+.back-top.show{
+  opacity:1;
+  visibility:visible;
+}
+
+
+/* =========================================
+   COOKIE NOTICE
+========================================= */
+
+.cookie-notice{
+  position:fixed;
+  left:20px;
+  bottom:20px;
+  max-width:390px;
+  background:var(--light);
+  border:1px solid rgba(75,46,30,.12);
+  border-radius:18px;
+  padding:18px;
+  box-shadow:var(--shadow-heavy);
+  z-index:6000;
+  display:none;
+}
+
+.cookie-notice.show{
+  display:block;
+  animation:cookieUp .4s ease;
+}
+
+@keyframes cookieUp{
+  from{
+    transform:translateY(30px);
+    opacity:0;
+  }
+  to{
+    transform:translateY(0);
+    opacity:1;
+  }
+}
+
+.cookie-notice p{
+  font-size:.78rem;
+  color:var(--brown-soft);
+  margin-bottom:12px;
+}
+
+.cookie-actions{
+  display:flex;
+  gap:8px;
+}
+
+.cookie-actions button{
+  padding:8px 14px;
+  border-radius:999px;
+  border:none;
+  cursor:pointer;
+  font-family:'Poppins',sans-serif;
+  font-weight:600;
+}
+
+.accept-cookie{
+  background:var(--brown);
+  color:var(--light);
+}
+
+.dismiss-cookie{
+  background:rgba(75,46,30,.08);
+  color:var(--brown);
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer{
+  text-align:center;
+  padding:48px 20px;
+  background:var(--black);
+  color:#eadfce;
+  margin-top:64px;
+  font-size:0.9rem;
+  letter-spacing:0.5px;
+}
+
+.footer-brand{
+  font-family:'Cormorant Garamond',serif;
+  font-size:2rem;
+  font-weight:700;
+  letter-spacing:4px;
+  margin-bottom:8px;
+}
+
+.footer-links{
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  margin:15px 0 25px;
+  flex-wrap:wrap;
+}
+
+.footer-links a{
+  color:#eadfce;
+  text-decoration:none;
+  font-size:.8rem;
+}
+
+.footer-links a:hover{
+  color:var(--gold-light);
+}
+
+.footer-disclaimer{
+  max-width:900px;
+  margin:0 auto 20px;
+  font-size:0.76rem;
+  color:#b5a494;
+  line-height:1.6;
+  text-align:justify;
+  border-top:1px solid rgba(255,255,255,0.1);
+  padding-top:20px;
+}
+
+
+/* =========================================
+   FADE IN
+========================================= */
+
+.fade-in{
+  opacity:0;
+  transform:translateY(25px);
+  transition:all .8s ease;
+}
+
+.fade-in.appear{
+  opacity:1;
+  transform:translateY(0);
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media(max-width:900px){
+
+  .contact-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .process{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .process::before{
+    display:none;
+  }
+
+  .trust-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .trust-item:nth-child(2){
+    border-right:none;
+  }
+
+  .trust-item:nth-child(-n+2){
+    border-bottom:1px solid rgba(75,46,30,0.08);
+  }
+
+}
+
+
+@media(max-width:768px){
+
+  .announcement{
+    font-size:.7rem;
+  }
+
+  .navbar{
+    justify-content:space-between;
+    padding:14px 16px;
+  }
+
+  .nav-logo{
+    display:block;
+  }
+
+  .menu-toggle{
+    display:block;
+  }
+
+  nav{
+    position:absolute;
+    top:100%;
+    left:0;
+    width:100%;
+    background:var(--light);
+    display:none;
+    flex-direction:column;
+    padding:20px;
+    box-shadow:0 15px 25px rgba(75,46,30,.08);
+  }
+
+  nav.open{
+    display:flex;
+  }
+
+  nav a{
+    padding:7px;
+  }
+
+  .lang-switch{
+    margin-left:auto;
+    margin-right:8px;
+  }
+
+  .brand-name{
+    font-size:3rem;
+    letter-spacing:6px;
+  }
+
+  .tagline{
+    font-size:1.18rem;
+  }
+
+  .hero{
+    padding-top:55px;
+  }
+
+  .hero p{
+    font-size:.94rem;
+  }
+
+  section{
+    padding:65px 18px;
+  }
+
+  .about-box,
+  .founder-box,
+  .form-box,
+  .contact{
+    padding:30px 22px;
+  }
+
+  .section-title h3{
+    font-size:2rem;
+  }
+
+  .modal-content{
+    padding:32px 22px;
+  }
+
+}
+
+
+@media(max-width:560px){
+
+  .brand-name{
+    font-size:2.45rem;
+    letter-spacing:4px;
+  }
+
+  .hero-logo img{
+    width:380px;
+  }
+
+  .trust-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .trust-item{
+    padding:22px 10px;
+  }
+
+  .contact-grid{
+    grid-template-columns:1fr;
+  }
+
+  .process{
+    grid-template-columns:1fr;
+    gap:30px;
+  }
+
+  .hero-actions{
+    flex-direction:column;
+    align-items:center;
+  }
+
+  .hero-actions .btn{
+    width:100%;
+    max-width:300px;
+  }
+
+  .whatsapp-float{
+    width:56px;
+    height:56px;
+    right:15px;
+    bottom:15px;
+  }
+
+  .back-top{
+    right:15px;
+    bottom:82px;
+  }
+
+  .cookie-notice{
+    left:12px;
+    right:12px;
+    bottom:12px;
+  }
+
+}
+
+
+/* REDUCED MOTION */
+
+@media(prefers-reduced-motion:reduce){
+
+  *,
+  *::before,
+  *::after{
+    animation-duration:.01ms!important;
+    animation-iteration-count:1!important;
+    scroll-behavior:auto!important;
+    transition-duration:.01ms!important;
+  }
+
+}
+
+</style>
 </head>
 
 
 <body>
 
-  <!-- =======================================================
-       SCROLL PROGRESS
-  ======================================================== -->
 
-  <div class="scroll-progress" id="scrollProgress"></div>
+<!-- SCROLL PROGRESS -->
 
-
-  <!-- =======================================================
-       HEADER
-  ======================================================== -->
-
-  <header id="mainHeader">
-
-    <div class="navbar">
-
-      <nav aria-label="Main navigation">
-
-        <a href="#about" id="nav-about">About</a>
-
-        <a href="#services" id="nav-services">Services</a>
-
-        <a href="#contact" id="nav-contact">Contact</a>
-
-      </nav>
+<div class="scroll-progress" id="scrollProgress"></div>
 
 
-      <div class="lang-switch">
+<!-- ANNOUNCEMENT -->
 
-        <button
-          class="lang-btn active"
-          onclick="setLanguage('en', this)"
-          type="button">
-          ENG
-        </button>
-
-        <button
-          class="lang-btn"
-          onclick="setLanguage('kn', this)"
-          type="button">
-          KAN
-        </button>
-
-      </div>
-
-    </div>
-
-  </header>
+<div class="announcement">
+  <span>PRANAURA</span> — Building meaningful real-estate connections before launch.
+</div>
 
 
-  <!-- =======================================================
-       HERO
-  ======================================================== -->
+<!-- HEADER -->
 
-  <section class="hero">
+<header id="header">
 
-    <div
-      class="launch-badge"
-      id="badge-en">
-      Launching September 2026
-    </div>
+  <div class="navbar">
 
-    <div
-      class="launch-badge kannada"
-      id="badge-kn"
-      style="display:none;">
-      ಸೆಪ್ಟೆಂಬರ್ 2026 ರಲ್ಲಿ ಬಿಡುಗಡೆ
-    </div>
+    <div class="nav-logo">PRANAURA</div>
 
+    <nav id="mainNav">
 
-    <div class="brand-name">
-      PRANAURA
-    </div>
+      <a href="#about" id="nav-about">About</a>
+
+      <a href="#services" id="nav-services">Services</a>
+
+      <a href="#process" id="nav-process">Process</a>
+
+      <a href="#faq" id="nav-faq">FAQ</a>
+
+      <a href="#contact" id="nav-contact">Contact</a>
+
+    </nav>
 
 
-    <div
-      id="tagline-en"
-      class="tagline">
-      Connecting Builders, Landowners & Investors
-    </div>
+    <div class="lang-switch">
 
-    <div
-      id="tagline-kn"
-      class="tagline kannada"
-      style="display:none;">
-      ಬಿಲ್ಡರ್‌ಗಳು, ಭೂಮಾಲೀಕರು ಮತ್ತು ಹೂಡಿಕೆದಾರರ ಸಂಪರ್ಕ
-    </div>
+      <button class="lang-btn active"
+              onclick="setLanguage('en', this)">
+        ENG
+      </button>
 
-
-    <p id="hero-en">
-
-      Pranaura is a relationship-driven real-estate networking platform
-      focused on introducing credible opportunities and facilitating
-      meaningful business connections.
-
-    </p>
-
-
-    <p
-      id="hero-kn"
-      class="kannada"
-      style="display:none;">
-
-      ಪ್ರಣೌರಾ ಎನ್ನುವುದು ವಿಶ್ವಾಸಾರ್ಹ ಅವಕಾಶಗಳನ್ನು ಪರಿಚಯಿಸಲು ಮತ್ತು
-      ಅರ್ಥಪೂರ್ಣ ವ್ಯಾಪಾರ ಸಂಪರ್ಕಗಳನ್ನು ಸುಗಮಗೊಳಿಸಲು ಕೇಂದ್ರೀಕೃತವಾಗಿರುವ
-      ರಿಯಲ್ ಎಸ್ಟೇಟ್ ನೆಟ್‌ವರ್ಕಿಂಗ್ ವೇದಿಕೆಯಾಗಿದೆ.
-
-    </p>
-
-
-    <div class="hero-logo floating">
-
-      <img
-        src="logo.png"
-        alt="PRANAURA Logo"
-        onerror="this.style.display='none'">
+      <button class="lang-btn"
+              onclick="setLanguage('kn', this)">
+        KAN
+      </button>
 
     </div>
 
 
-    <a
-      href="#contact"
-      class="btn"
-      id="partner-btn">
+    <button class="menu-toggle"
+            onclick="toggleMenu()"
+            aria-label="Open menu">
+      ☰
+    </button>
 
+  </div>
+
+</header>
+
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+  <div class="launch-badge"
+       id="badge-en">
+    Launching September 2026
+  </div>
+
+  <div class="launch-badge kannada"
+       id="badge-kn"
+       style="display:none;">
+    ಸೆಪ್ಟೆಂಬರ್ 2026 ರಲ್ಲಿ ಬಿಡುಗಡೆ
+  </div>
+
+
+  <div class="brand-name">
+    PRANAURA
+  </div>
+
+
+  <div id="tagline-en"
+       class="tagline">
+    Connecting Builders, Landowners & Investors
+  </div>
+
+  <div id="tagline-kn"
+       class="tagline kannada"
+       style="display:none;">
+    ಬಿಲ್ಡರ್‌ಗಳು, ಭೂಮಾಲೀಕರು ಮತ್ತು ಹೂಡಿಕೆದಾರರ ಸಂಪರ್ಕ
+  </div>
+
+
+  <p id="hero-en">
+    Pranaura is a relationship-driven real-estate networking platform focused on introducing credible opportunities and facilitating meaningful business connections.
+  </p>
+
+  <p id="hero-kn"
+     class="kannada"
+     style="display:none;">
+    ಪ್ರಣೌರಾ ಎನ್ನುವುದು ವಿಶ್ವಾಸಾರ್ಹ ಅವಕಾಶಗಳನ್ನು ಪರಿಚಯಿಸಲು ಮತ್ತು ಅರ್ಥಪೂರ್ಣ ವ್ಯಾಪಾರ ಸಂಪರ್ಕಗಳನ್ನು ಸುಗಮಗೊಳಿಸಲು ಕೇಂದ್ರೀಕೃತವಾಗಿರುವ ರಿಯಲ್ ಎಸ್ಟೇಟ್ ನೆಟ್‌ವರ್ಕಿಂಗ್ ವೇದಿಕೆಯಾಗಿದೆ.
+  </p>
+
+
+  <div class="hero-logo">
+
+    <img src="logo.png"
+         alt="PRANAURA Logo"
+         onerror="this.style.display='none'">
+
+  </div>
+
+
+  <div class="hero-actions">
+
+    <a href="#contact"
+       class="btn"
+       id="partner-btn">
       Become an Early Partner
-
     </a>
 
-  </section>
+    <button class="btn btn-outline"
+            onclick="openModal()"
+            id="quick-enquiry-btn">
+      Quick Enquiry
+    </button>
+
+  </div>
 
 
-  <!-- =======================================================
-       WHY PRANAURA
-  ======================================================== -->
+  <!-- COUNTDOWN -->
 
-  <section class="fade-in">
+  <div class="countdown"
+       aria-label="Launch countdown">
 
-    <div class="section-title">
+    <div class="time-box">
+      <strong id="days">--</strong>
+      <span>Days</span>
+    </div>
 
-      <h3 id="why-title-en">
-        Why Choose Pranaura
-      </h3>
+    <div class="time-box">
+      <strong id="hours">--</strong>
+      <span>Hours</span>
+    </div>
 
-      <h3
-        id="why-title-kn"
-        class="kannada"
-        style="display:none;">
-        ಪ್ರಣೌರಾವನ್ನುೇಕೆ ಆರಿಸಬೇಕು
-      </h3>
+    <div class="time-box">
+      <strong id="minutes">--</strong>
+      <span>Minutes</span>
+    </div>
+
+    <div class="time-box">
+      <strong id="seconds">--</strong>
+      <span>Seconds</span>
+    </div>
+
+  </div>
+
+</section>
 
 
-      <p id="why-sub-en">
-        Relationship-focused networking, discretion, and professional engagement.
-      </p>
 
-      <p
-        id="why-sub-kn"
-        class="kannada"
-        style="display:none;">
-        ಸಂಬಂಧ-ಕೇಂದ್ರಿತ ನೆಟ್‌ವರ್ಕಿಂಗ್, ಗೌಪ್ಯತೆ ಮತ್ತು ವೃತ್ತಿಪರ ಒಡನಾಟ.
-      </p>
+<!-- TRUST -->
 
+<div class="trust-strip">
+
+  <div class="trust-grid">
+
+    <div class="trust-item">
+      <div class="trust-number">01</div>
+      <div class="trust-label" id="trust1-en">
+        Relationship First
+      </div>
+      <div class="trust-label kannada"
+           id="trust1-kn"
+           style="display:none;">
+        ಸಂಬಂಧಗಳಿಗೆ ಆದ್ಯತೆ
+      </div>
     </div>
 
 
-    <div class="why-grid">
-
-      <div class="card">
-
-        <h4 id="w1-en">
-          Professional Network
-        </h4>
-
-        <h4
-          id="w1-kn"
-          class="kannada"
-          style="display:none;">
-          ವೃತ್ತಿಪರ ನೆಟ್‌ವರ್ಕ್
-        </h4>
-
-        <p id="w1p-en">
-          Direct networking with active builders, landowners,
-          and prospective buyers.
-        </p>
-
-        <p
-          id="w1p-kn"
-          class="kannada"
-          style="display:none;">
-          ಸಕ್ರಿಯ ಬಿಲ್ಡರ್‌ಗಳು, ಭೂಮಾಲೀಕರು ಮತ್ತು ಖರೀದಿದಾರರೊಂದಿಗೆ ನೇರ ಸಂಪರ್ಕ.
-        </p>
-
+    <div class="trust-item">
+      <div class="trust-number">02</div>
+      <div class="trust-label" id="trust2-en">
+        Professional Introductions
       </div>
-
-
-      <div class="card">
-
-        <h4 id="w2-en">
-          Opportunity Introductions
-        </h4>
-
-        <h4
-          id="w2-kn"
-          class="kannada"
-          style="display:none;">
-          ಅವಕಾಶ ಪರಿಚಯಗಳು
-        </h4>
-
-        <p id="w2p-en">
-          Facilitating initial discussions based on available
-          information and mutual interest.
-        </p>
-
-        <p
-          id="w2p-kn"
-          class="kannada"
-          style="display:none;">
-          ಲಭ್ಯವಿರುವ ಮಾಹಿತಿ ಮತ್ತು ಪರಸ್ಪರ ಆಸಕ್ತಿಯ ಆಧಾರದ ಮೇಲೆ
-          ಆರಂಭಿಕ ಚರ್ಚೆಗಳನ್ನು ಸುಗಮಗೊಳಿಸುವುದು.
-        </p>
-
+      <div class="trust-label kannada"
+           id="trust2-kn"
+           style="display:none;">
+        ವೃತ್ತಿಪರ ಪರಿಚಯಗಳು
       </div>
-
-
-      <div class="card">
-
-        <h4 id="w3-en">
-          Complete Discretion
-        </h4>
-
-        <h4
-          id="w3-kn"
-          class="kannada"
-          style="display:none;">
-          ಸಂಪೂರ್ಣ ಗೌಪ್ಯತೆ
-        </h4>
-
-        <p id="w3p-en">
-          Strict confidentiality maintained across all introductory
-          discussions and meetings.
-        </p>
-
-        <p
-          id="w3p-kn"
-          class="kannada"
-          style="display:none;">
-          ಎಲ್ಲಾ ಪರಿಚಯಾತ್ಮಕ ಚರ್ಚೆಗಳು ಮತ್ತು ಸಭೆಗಳಲ್ಲಿ ಕಟ್ಟುನಿಟ್ಟಾದ ಗೌಪ್ಯತೆ.
-        </p>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- =======================================================
-       ABOUT
-  ======================================================== -->
-
-  <section id="about">
-
-    <div class="section-title">
-
-      <h3 id="about-title-en">
-        About Pranaura
-      </h3>
-
-      <h3
-        id="about-title-kn"
-        class="kannada"
-        style="display:none;">
-        ಪ್ರಣೌರಾ ಕುರಿತು
-      </h3>
-
-
-      <p id="about-sub-en">
-        Real-estate networking and introduction platform.
-      </p>
-
-      <p
-        id="about-sub-kn"
-        class="kannada"
-        style="display:none;">
-        ರಿಯಲ್ ಎಸ್ಟೇಟ್ ನೆಟ್‌ವರ್ಕಿಂಗ್ ಮತ್ತು ಪರಿಚಯ ವೇದಿಕೆ.
-      </p>
-
     </div>
 
 
-    <div class="about-box">
-
-      <p id="about1-en">
-
-        Pranaura acts as a professional intermediary and networking
-        platform connecting builders, developers, landowners, and
-        prospective investors or buyers in Mysore and Karnataka.
-
-      </p>
-
-      <p
-        id="about1-kn"
-        class="kannada"
-        style="display:none;">
-
-        ಪ್ರಣೌರಾ ಮೈಸೂರು ಮತ್ತು ಕರ್ನಾಟಕದಲ್ಲಿ ಬಿಲ್ಡರ್‌ಗಳು, ಡೆವಲಪರ್‌ಗಳು,
-        ಭೂಮಾಲೀಕರು ಮತ್ತು ಆಸಕ್ತ ಖರೀದಿದಾರರನ್ನು ಸಂಪರ್ಕಿಸುವ ವೃತ್ತಿಪರ
-        ಮಧ್ಯವರ್ತಿ ಮತ್ತು ನೆಟ್‌ವರ್ಕಿಂಗ್ ವೇದಿಕೆಯಾಗಿ ಕಾರ್ಯನಿರ್ವಹಿಸುತ್ತದೆ.
-
-      </p>
-
-
-      <br>
-
-
-      <p id="about2-en">
-
-        We do not buy, sell, or guarantee projects; instead, we
-        facilitate introductions and business discussions between
-        interested parties based on shared requirements.
-
-      </p>
-
-      <p
-        id="about2-kn"
-        class="kannada"
-        style="display:none;">
-
-        ನಾವು ಯೋಜನೆಗಳನ್ನು ಖರೀದಿಸುವುದಿಲ್ಲ, ಮಾರಾಟ ಮಾಡುವುದಿಲ್ಲ ಅಥವಾ
-        ಖಾತರಿಪಡಿಸುವುದಿಲ್ಲ; ಬದಲಿಗೆ ಹಂಚಿಕೊಳ್ಳಲಾದ ಅವಶ್ಯಕತೆಗಳ ಆಧಾರದ ಮೇಲೆ
-        ಆಸಕ್ತ ಪಕ್ಷಗಳ ನಡುವೆ ಪರಿಚಯ ಮತ್ತು ವ್ಯಾಪಾರ ಚರ್ಚೆಗಳನ್ನು ಸುಗಮಗೊಳಿಸುತ್ತೇವೆ.
-
-      </p>
-
-
-      <br>
-
-
-      <p id="about3-en">
-
-        Every interaction is guided by professionalism, clear
-        communication, and a commitment to fostering valuable
-        connections tailored to each client.
-
-      </p>
-
-      <p
-        id="about3-kn"
-        class="kannada"
-        style="display:none;">
-
-        ಪ್ರತಿಯೊಂದು ಪರಸ್ಪರ ಕ್ರಿಯೆಯು ವೃತ್ತಿಪರತೆ, ಸ್ಪಷ್ಟ ಸಂವಹನ ಮತ್ತು
-        ಮೌಲ್ಯಯುತ ಸಂಪರ್ಕಗಳನ್ನು ಬೆಳೆಸುವ ಬದ್ಧತೆಯಿಂದ ನಡೆಸಲ್ಪಡುತ್ತದೆ.
-
-      </p>
-
-    </div>
-
-  </section>
-
-
-  <!-- =======================================================
-       WHAT PRANAURA DOES
-  ======================================================== -->
-
-  <section class="fade-in">
-
-    <div class="section-title">
-
-      <h3 id="what-title-en">
-        What Pranaura Does
-      </h3>
-
-      <h3
-        id="what-title-kn"
-        class="kannada"
-        style="display:none;">
-        ಪ್ರಣೌರಾ ಏನು ಮಾಡುತ್ತದೆ
-      </h3>
-
-
-      <p id="what-sub-en">
-        Bridging the gap between real estate stakeholders
-        through structured introductions.
-      </p>
-
-      <p
-        id="what-sub-kn"
-        class="kannada"
-        style="display:none;">
-        ರಚನಾತ್ಮಕ ಪರಿಚಯಗಳ ಮೂಲಕ ರಿಯಲ್ ಎಸ್ಟೇಟ್ ಪಾಲುದಾರರ ನಡುವಿನ
-        ಅಂತರವನ್ನು ಕಡಿಮೆ ಮಾಡುವುದು.
-      </p>
-
+    <div class="trust-item">
+      <div class="trust-number">03</div>
+      <div class="trust-label" id="trust3-en">
+        Confidential Approach
+      </div>
+      <div class="trust-label kannada"
+           id="trust3-kn"
+           style="display:none;">
+        ಗೌಪ್ಯ ವಿಧಾನ
+      </div>
     </div>
 
 
-    <div class="who-grid">
-
-      <div class="card">
-
-        <h4 id="what1-en">
-          Connects with Builders
-        </h4>
-
-        <h4
-          id="what1-kn"
-          class="kannada"
-          style="display:none;">
-          ಬಿಲ್ಡರ್‌ಗಳೊಂದಿಗೆ ಸಂಪರ್ಕ
-        </h4>
-
-        <p id="what1p-en">
-          Residential, commercial, and plotted development
-          networking opportunities.
-        </p>
-
-        <p
-          id="what1p-kn"
-          class="kannada"
-          style="display:none;">
-          ವಸತಿ, ವಾಣಿಜ್ಯ ಮತ್ತು ಪ್ಲಾಟ್ ಅಭಿವೃದ್ಧಿ ನೆಟ್‌ವರ್ಕಿಂಗ್ ಅವಕಾಶಗಳು.
-        </p>
-
+    <div class="trust-item">
+      <div class="trust-number">04</div>
+      <div class="trust-label" id="trust4-en">
+        Mysore & Karnataka
       </div>
-
-
-      <div class="card">
-
-        <h4 id="what2-en">
-          Introduces Interested Parties
-        </h4>
-
-        <h4
-          id="what2-kn"
-          class="kannada"
-          style="display:none;">
-          ಆಸಕ್ತ ಪಕ್ಷಗಳ ಪರಿಚಯ
-        </h4>
-
-        <p id="what2p-en">
-          Individuals and business contacts interested in
-          exploring opportunities.
-        </p>
-
-        <p
-          id="what2p-kn"
-          class="kannada"
-          style="display:none;">
-          ಅವಕಾಶಗಳನ್ನು ಅನ್ವೇಷಿಸಲು ಆಸಕ್ತಿ ಹೊಂದಿರುವ ವ್ಯಕ್ತಿಗಳು ಮತ್ತು
-          ವ್ಯಾಪಾರ ಸಂಪರ್ಕಗಳು.
-        </p>
-
+      <div class="trust-label kannada"
+           id="trust4-kn"
+           style="display:none;">
+        ಮೈಸೂರು ಮತ್ತು ಕರ್ನಾಟಕ
       </div>
-
-
-      <div class="card">
-
-        <h4 id="what3-en">
-          Facilitates Discussions
-        </h4>
-
-        <h4
-          id="what3-kn"
-          class="kannada"
-          style="display:none;">
-          ಚರ್ಚೆಗಳನ್ನು ಸುಗಮಗೊಳಿಸುವುದು
-        </h4>
-
-        <p id="what3p-en">
-          Conversations, meetings, and follow-ups between
-          concerned parties.
-        </p>
-
-        <p
-          id="what3p-kn"
-          class="kannada"
-          style="display:none;">
-          ಸಂಬಂಧಿತ ಪಕ್ಷಗಳ ನಡುವೆ ಸಂಭಾಷಣೆಗಳು, ಸಭೆಗಳು ಮತ್ತು ಫಾಲೋ-ಅಪ್‌ಗಳು.
-        </p>
-
-      </div>
-
     </div>
 
-  </section>
+  </div>
+
+</div>
 
 
-  <!-- =======================================================
-       SERVICES
-  ======================================================== -->
 
-  <section id="services">
+<!-- WHY CHOOSE -->
 
-    <div class="section-title">
+<section class="fade-in">
 
-      <h3 id="services-title-en">
-        Our Services
-      </h3>
+  <div class="section-title">
 
-      <h3
-        id="services-title-kn"
+    <h3 id="why-title-en">
+      Why Choose Pranaura
+    </h3>
+
+    <h3 id="why-title-kn"
         class="kannada"
         style="display:none;">
-        ನಮ್ಮ ಸೇವೆಗಳು
-      </h3>
+      ಪ್ರಣೌರಾವನ್ನು ಏಕೆ ಆರಿಸಬೇಕು
+    </h3>
 
 
-      <p id="services-sub-en">
-        Channel partnership support and stakeholder networking.
-      </p>
+    <p id="why-sub-en">
+      Relationship-focused networking, discretion, and professional engagement.
+    </p>
 
-      <p
-        id="services-sub-kn"
-        class="kannada"
-        style="display:none;">
-        ಚಾನೆಲ್ ಪಾರ್ಟ್ನರ್ ಬೆಂಬಲ ಮತ್ತು ಪಾಲುದಾರರ ನೆಟ್‌ವರ್ಕಿಂಗ್.
-      </p>
+    <p id="why-sub-kn"
+       class="kannada"
+       style="display:none;">
+      ಸಂಬಂಧ-ಕೇಂದ್ರಿತ ನೆಟ್‌ವರ್ಕಿಂಗ್, ಗೌಪ್ಯತೆ ಮತ್ತು ವೃತ್ತಿಪರ ಒಡನಾಟ.
+    </p>
 
-    </div>
-
-
-    <div class="services">
-
-      <div class="card">
-
-        <h4 id="s1-en">
-          Builder Connections
-        </h4>
-
-        <h4
-          id="s1-kn"
-          class="kannada"
-          style="display:none;">
-          ಬಿಲ್ಡರ್ ಸಂಪರ್ಕಗಳು
-        </h4>
-
-        <p id="s1p-en">
-          Supporting developers by connecting them with prospective
-          buyers or channel partners.
-        </p>
-
-        <p
-          id="s1p-kn"
-          class="kannada"
-          style="display:none;">
-          ಡೆವಲಪರ್‌ಗಳನ್ನು ಆಸಕ್ತ ಖರೀದಿದಾರರು ಅಥವಾ ಚಾನೆಲ್ ಪಾಲುದಾರರೊಂದಿಗೆ
-          ಸಂಪರ್ಕಿಸುವ ಮೂಲಕ ಬೆಂಬಲಿಸುವುದು.
-        </p>
-
-      </div>
+  </div>
 
 
-      <div class="card">
-
-        <h4 id="s2-en">
-          Buyer & Investor Introductions
-        </h4>
-
-        <h4
-          id="s2-kn"
-          class="kannada"
-          style="display:none;">
-          ಖರೀದಿದಾರ ಮತ್ತು ಹೂಡಿಕೆದಾರರ ಪರಿಚಯ
-        </h4>
-
-        <p id="s2p-en">
-          Introducing interested individuals to available properties,
-          landowners, and developers.
-        </p>
-
-        <p
-          id="s2p-kn"
-          class="kannada"
-          style="display:none;">
-          ಆಸಕ್ತ ವ್ಯಕ್ತಿಗಳಿಗೆ ಲಭ್ಯವಿರುವ ಆಸ್ತಿಗಳು, ಭೂಮಾಲೀಕರು ಮತ್ತು
-          ಡೆವಲಪರ್‌ಗಳನ್ನು ಪರಿಚಯಿಸುವುದು.
-        </p>
-
-      </div>
+  <div class="why-grid">
 
 
-      <div class="card">
+    <div class="card">
 
-        <h4 id="s3-en">
-          Networking & Facilitation
-        </h4>
+      <div class="card-icon">◆</div>
 
-        <h4
-          id="s3-kn"
-          class="kannada"
-          style="display:none;">
-          ನೆಟ್‌ವರ್ಕಿಂಗ್ ಮತ್ತು ಸುಗಮೀಕರಣ
-        </h4>
-
-        <p id="s3p-en">
-          Coordinating meetings, discussions, and communication
-          between stakeholders professionally.
-        </p>
-
-        <p
-          id="s3p-kn"
-          class="kannada"
-          style="display:none;">
-          ಪಾಲುದಾರರ ನಡುವೆ ವೃತ್ತಿಪರವಾಗಿ ಸಭೆಗಳು, ಚರ್ಚೆಗಳು ಮತ್ತು
-          ಸಂವಹನವನ್ನು ಸಮನ್ವಯಗೊಳಿಸುವುದು.
-        </p>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- =======================================================
-       FOUNDER
-  ======================================================== -->
-
-  <section class="fade-in">
-
-    <div class="founder-box">
-
-      <h4 id="founder-name">
-        Pranathi H.S.
+      <h4 id="w1-en">
+        Professional Network
       </h4>
 
-      <div
-        id="founder-title-en"
-        class="title">
-        Founder & Networking Lead
-      </div>
+      <h4 id="w1-kn"
+          class="kannada"
+          style="display:none;">
+        ವೃತ್ತಿಪರ ನೆಟ್‌ವರ್ಕ್
+      </h4>
 
-      <div
-        id="founder-title-kn"
-        class="title kannada"
-        style="display:none;">
-        ಸ್ಥಾಪಕಿ ಮತ್ತು ನೆಟ್‌ವರ್ಕಿಂಗ್ ಮುಖ್ಯಸ್ಥೆ
-      </div>
-
-
-      <p id="founder-desc-en">
-
-        "Pranaura was established to simplify real-estate networking.
-        By focusing on transparent introductions and professional
-        relationships, we bridge the communication gap between builders,
-        landowners, and interested buyers."
-
+      <p id="w1p-en">
+        Direct networking with active builders, landowners, and prospective buyers.
       </p>
 
+      <p id="w1p-kn"
+         class="kannada"
+         style="display:none;">
+        ಸಕ್ರಿಯ ಬಿಲ್ಡರ್‌ಗಳು, ಭೂಮಾಲೀಕರು ಮತ್ತು ಖರೀದಿದಾರರೊಂದಿಗೆ ನೇರ ಸಂಪರ್ಕ.
+      </p>
 
-      <p
-        id="founder-desc-kn"
+    </div>
+
+
+    <div class="card">
+
+      <div class="card-icon">◇</div>
+
+      <h4 id="w2-en">
+        Opportunity Introductions
+      </h4>
+
+      <h4 id="w2-kn"
+          class="kannada"
+          style="display:none;">
+        ಅವಕಾಶ ಪರಿಚಯಗಳು
+      </h4>
+
+      <p id="w2p-en">
+        Facilitating initial discussions based on available information and mutual interest.
+      </p>
+
+      <p id="w2p-kn"
+         class="kannada"
+         style="display:none;">
+        ಲಭ್ಯವಿರುವ ಮಾಹಿತಿ ಮತ್ತು ಪರಸ್ಪರ ಆಸಕ್ತಿಯ ಆಧಾರದ ಮೇಲೆ ಆರಂಭಿಕ ಚರ್ಚೆಗಳನ್ನು ಸುಗಮಗೊಳಿಸುವುದು.
+      </p>
+
+    </div>
+
+
+    <div class="card">
+
+      <div class="card-icon">○</div>
+
+      <h4 id="w3-en">
+        Complete Discretion
+      </h4>
+
+      <h4 id="w3-kn"
+          class="kannada"
+          style="display:none;">
+        ಸಂಪೂರ್ಣ ಗೌಪ್ಯತೆ
+      </h4>
+
+      <p id="w3p-en">
+        Strict confidentiality maintained across all introductory discussions and meetings.
+      </p>
+
+      <p id="w3p-kn"
+         class="kannada"
+         style="display:none;">
+        ಎಲ್ಲಾ ಪರಿಚಯಾತ್ಮಕ ಚರ್ಚೆಗಳು ಮತ್ತು ಸಭೆಗಳಲ್ಲಿ ಕಟ್ಟುನಿಟ್ಟಾದ ಗೌಪ್ಯತೆ.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- ABOUT -->
+
+<section id="about">
+
+  <div class="section-title">
+
+    <h3 id="about-title-en">
+      About Pranaura
+    </h3>
+
+    <h3 id="about-title-kn"
         class="kannada"
         style="display:none;">
-
-        "ಪ್ರಣೌರಾ ರಿಯಲ್ ಎಸ್ಟೇಟ್ ನೆಟ್‌ವರ್ಕಿಂಗ್ ಅನ್ನು ಸರಳಗೊಳಿಸಲು ಸ್ಥಾಪಿಸಲಾಗಿದೆ.
-        ಪಾರದರ್ಶಕ ಪರಿಚಯಗಳು ಮತ್ತು ವೃತ್ತಿಪರ ಸಂಬಂಧಗಳ ಮೇಲೆ ಗಮನಹರಿಸುವ ಮೂಲಕ,
-        ನಾವು ಬಿಲ್ಡರ್‌ಗಳು, ಭೂಮಾಲೀಕರು ಮತ್ತು ಆಸಕ್ತ ಖರೀದಿದಾರರ ನಡುವಿನ
-        ಸಂವಹನ ಅಂತರವನ್ನು ಕಡಿಮೆ ಮಾಡುತ್ತೇವೆ."
-
-      </p>
-
-    </div>
-
-  </section>
-
-
-  <!-- =======================================================
-       CONTACT / EARLY PARTNER FORM
-  ======================================================== -->
-
-  <section class="fade-in" id="contact">
-
-    <div class="section-title">
-
-      <h3 id="form-title-en">
-        Become an Early Partner
-      </h3>
-
-      <h3
-        id="form-title-kn"
-        class="kannada"
-        style="display:none;">
-        ಮುಂಚಿನ ಪಾಲುದಾರರಾಗಿ
-      </h3>
-
-
-      <p id="form-sub-en">
-        Join the first circle of builders and investors connecting
-        with Pranaura before launch.
-      </p>
-
-      <p
-        id="form-sub-kn"
-        class="kannada"
-        style="display:none;">
-        ಬಿಡುಗಡೆಗೆ ಮುನ್ನ ಪ್ರಣೌರಾದೊಂದಿಗೆ ಸಂಪರ್ಕ ಸಾಧಿಸುವ ಬಿಲ್ಡರ್‌ಗಳು
-        ಮತ್ತು ಹೂಡಿಕೆದಾರರ ಮೊದಲ ವಲಯಕ್ಕೆ ಸೇರಿಕೊಳ್ಳಿ.
-      </p>
-
-    </div>
-
-
-    <div class="form-box">
-
-      <form id="partnerForm">
-
-        <div class="form-group">
-
-          <label
-            id="label-name-en"
-            for="name">
-            Name
-          </label>
-
-          <label
-            id="label-name-kn"
-            for="name"
-            class="kannada"
-            style="display:none;">
-            ಹೆಸರು
-          </label>
-
-          <input
-            type="text"
-            id="name"
-            required
-            autocomplete="name"
-            placeholder="Enter your name">
-
-        </div>
-
-
-        <div class="form-group">
-
-          <label
-            id="label-phone-en"
-            for="phone">
-            Phone / WhatsApp
-          </label>
-
-          <label
-            id="label-phone-kn"
-            for="phone"
-            class="kannada"
-            style="display:none;">
-            ದೂರವಾಣಿ / ವಾಟ್ಸಾಪ್
-          </label>
-
-          <input
-            type="tel"
-            id="phone"
-            required
-            autocomplete="tel"
-            placeholder="Enter your phone or WhatsApp number">
-
-        </div>
-
-
-        <div class="form-group">
-
-          <label
-            id="label-interest-en"
-            for="interest">
-            I am a
-          </label>
-
-          <label
-            id="label-interest-kn"
-            for="interest"
-            class="kannada"
-            style="display:none;">
-            ನಾನು ಒಬ್ಬ
-          </label>
-
-
-          <select id="interest">
-
-            <option value="builder">
-              Builder
-            </option>
-
-            <option value="investor">
-              Investor
-            </option>
-
-            <option value="landowner">
-              Land Owner
-            </option>
-
-            <option value="other">
-              Other
-            </option>
-
-          </select>
-
-        </div>
-
-
-        <div class="consent">
-
-          <input
-            type="checkbox"
-            id="consent"
-            required>
-
-          <label for="consent">
-
-            I confirm that the information provided is accurate
-            and I would like Pranaura to contact me regarding
-            networking opportunities.
-
-          </label>
-
-        </div>
-
-
-        <button
-          type="submit"
-          class="btn"
-          style="width:100%; text-align:center;"
-          id="form-submit-btn">
-
-          <span class="loading-spinner"></span>
-
-          <span id="submit-text">
-            Connect With Us
-          </span>
-
-        </button>
-
-      </form>
-
-    </div>
-
-  </section>
-
-
-  <!-- =======================================================
-       DIRECT CONTACT
-  ======================================================== -->
-
-  <section>
-
-    <div class="section-title">
-
-      <h3 id="contact-info-title-en">
-        Direct Contact
-      </h3>
-
-      <h3
-        id="contact-info-title-kn"
-        class="kannada"
-        style="display:none;">
-        ನೇರ ಸಂಪರ್ಕ
-      </h3>
-
-
-      <p id="contact-sub-en">
-        Connect with Pranaura for networking inquiries or
-        intermediary support.
-      </p>
-
-      <p
-        id="contact-sub-kn"
-        class="kannada"
-        style="display:none;">
-        ನೆಟ್‌ವರ್ಕಿಂಗ್ ವಿಚಾರಣೆಗಳು ಅಥವಾ ಮಧ್ಯವರ್ತಿ ಬೆಂಬಲಕ್ಕಾಗಿ
-        ಪ್ರಣೌರಾವನ್ನು ಸಂಪರ್ಕಿಸಿ.
-      </p>
-
-    </div>
-
-
-    <div class="contact">
-
-      <div class="contact-grid">
-
-
-        <div class="contact-item">
-
-          <div class="contact-icon">
-            ☎
-          </div>
-
-          <h5 id="phone-heading-en">
-            Phone
-          </h5>
-
-          <h5
-            id="phone-heading-kn"
-            class="kannada"
-            style="display:none;">
-            ದೂರವಾಣಿ
-          </h5>
-
-          <a href="tel:+919019746649">
-            +91 90197 46649
-          </a>
-
-        </div>
-
-
-        <div class="contact-item">
-
-          <div class="contact-icon">
-            ✉
-          </div>
-
-          <h5 id="email-heading-en">
-            Email
-          </h5>
-
-          <h5
-            id="email-heading-kn"
-            class="kannada"
-            style="display:none;">
-            ಇಮೇಲ್
-          </h5>
-
-          <a href="mailto:pranauraconnect@gmail.com">
-            pranauraconnect@gmail.com
-          </a>
-
-        </div>
-
-
-        <div class="contact-item">
-
-          <div class="contact-icon">
-            ⌂
-          </div>
-
-          <h5 id="location-heading-en">
-            Location
-          </h5>
-
-          <h5
-            id="location-heading-kn"
-            class="kannada"
-            style="display:none;">
-            ಸ್ಥಳ
-          </h5>
-
-          <p id="loc-en">
-            Vijayanagar, Mysore, Karnataka, India
-          </p>
-
-          <p
-            id="loc-kn"
-            class="kannada"
-            style="display:none;">
-            ವಿಜಯನಗರ, ಮೈಸೂರು, ಕರ್ನಾಟಕ, ಭಾರತ
-          </p>
-
-        </div>
-
-
-        <div class="contact-item">
-
-          <div class="contact-icon">
-            ◎
-          </div>
-
-          <h5 id="insta-heading-en">
-            Instagram
-          </h5>
-
-          <h5
-            id="insta-heading-kn"
-            class="kannada"
-            style="display:none;">
-            ಇನ್‌ಸ್ಟಾಗ್ರಾಮ್
-          </h5>
-
-          <a
-            href="https://instagram.com/Pranaura_"
-            target="_blank"
-            rel="noopener noreferrer">
-            @Pranaura_
-          </a>
-
-        </div>
-
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- =======================================================
-       FOOTER
-  ======================================================== -->
-
-  <footer>
-
-    <div class="footer-disclaimer">
-
-      <strong>Disclaimer:</strong>
-
-      Pranaura acts as a real-estate networking and introduction
-      platform connecting builders, developers, landowners, and
-      prospective investors or buyers. Pranaura does not provide
-      financial, legal, tax, or investment advice and does not
-      guarantee project approvals, returns, profitability, or
-      completion. Any transaction or agreement is solely between
-      the concerned parties, and independent due diligence is recommended.
-
-    </div>
-
-
-    <p id="footer-en">
-      &copy; 2026 PRANAURA. All rights reserved.
+      ಪ್ರಣೌರಾ ಕುರಿತು
+    </h3>
+
+    <p id="about-sub-en">
+      Real-estate networking and introduction platform.
     </p>
 
-    <p
-      id="footer-kn"
-      class="kannada"
-      style="display:none;">
-      &copy; 2026 ಪ್ರಣೌರಾ. ಎಲ್ಲಾ ಹಕ್ಕುಗಳು ಕಾಯ್ದಿರಿಸಲಾಗಿದೆ.
+    <p id="about-sub-kn"
+       class="kannada"
+       style="display:none;">
+      ರಿಯಲ್ ಎಸ್ಟೇಟ್ ನೆಟ್‌ವರ್ಕಿಂಗ್ ಮತ್ತು ಪರಿಚಯ ವೇದಿಕೆ.
     </p>
 
-  </footer>
+  </div>
 
 
-  <!-- =======================================================
-       WELCOME POPUP
-  ======================================================== -->
+  <div class="about-box">
 
-  <div
-    class="modal-overlay"
-    id="welcomeModal"
-    role="dialog"
-    aria-modal="true"
-    aria-labelledby="welcomeTitle">
+    <p id="about1-en">
+      Pranaura acts as a professional intermediary and networking platform connecting builders, developers, landowners, and prospective investors or buyers in Mysore and Karnataka.
+    </p>
 
-    <div class="modal">
+    <p id="about1-kn"
+       class="kannada"
+       style="display:none;">
+      ಪ್ರಣೌರಾ ಮೈಸೂರು ಮತ್ತು ಕರ್ನಾಟಕದಲ್ಲಿ ಬಿಲ್ಡರ್‌ಗಳು, ಡೆವಲಪರ್‌ಗಳು, ಭೂಮಾಲೀಕರು ಮತ್ತು ಆಸಕ್ತ ಖರೀದಿದಾರರನ್ನು ಸಂಪರ್ಕಿಸುವ ವೃತ್ತಿಪರ ಮಧ್ಯವರ್ತಿ ಮತ್ತು ನೆಟ್‌ವರ್ಕಿಂಗ್ ವೇದಿಕೆಯಾಗಿ ಕಾರ್ಯನಿರ್ವಹಿಸುತ್ತದೆ.
+    </p>
 
-      <button
-        class="modal-close"
-        onclick="closeModal('welcomeModal')"
-        aria-label="Close">
-        ×
-      </button>
+    <br>
+
+    <p id="about2-en">
+      We do not buy, sell, or guarantee projects; instead, we facilitate introductions and business discussions between interested parties based on shared requirements.
+    </p>
+
+    <p id="about2-kn"
+       class="kannada"
+       style="display:none;">
+      ನಾವು ಯೋಜನೆಗಳನ್ನು ಖರೀದಿಸುವುದಿಲ್ಲ, ಮಾರಾಟ ಮಾಡುವುದಿಲ್ಲ ಅಥವಾ ಖಾತರಿಪಡಿಸುವುದಿಲ್ಲ; ಬದಲಿಗೆ ಹಂಚಿಕೊಳ್ಳಲಾದ ಅವಶ್ಯಕತೆಗಳ ಆಧಾರದ ಮೇಲೆ ಆಸಕ್ತ ಪಕ್ಷಗಳ ನಡುವೆ ಪರಿಚಯ ಮತ್ತು ವ್ಯಾಪಾರ ಚರ್ಚೆಗಳನ್ನು ಸುಗಮಗೊಳಿಸುತ್ತೇವೆ.
+    </p>
+
+    <br>
+
+    <p id="about3-en">
+      Every interaction is guided by professionalism, clear communication, and a commitment to fostering valuable connections tailored to each client.
+    </p>
+
+    <p id="about3-kn"
+       class="kannada"
+       style="display:none;">
+      ಪ್ರತಿಯೊಂದು ಪರಸ್ಪರ ಕ್ರಿಯೆಯು ವೃತ್ತಿಪರತೆ, ಸ್ಪಷ್ಟ ಸಂವಹನ ಮತ್ತು ಮೌಲ್ಯಯುತ ಸಂಪರ್ಕಗಳನ್ನು ಬೆಳೆಸುವ ಬದ್ಧತೆಯಿಂದ ನಡೆಸಲ್ಪಡುತ್ತದೆ.
+    </p>
+
+  </div>
+
+</section>
 
 
-      <img
-        src="logo.png"
-        class="modal-logo"
-        alt="PRANAURA Logo"
-        onerror="this.style.display='none'">
+
+<!-- WHO WE WORK WITH -->
+
+<section class="fade-in">
+
+  <div class="section-title">
+
+    <h3 id="audience-title-en">
+      Who We Work With
+    </h3>
+
+    <h3 id="audience-title-kn"
+        class="kannada"
+        style="display:none;">
+      ನಾವು ಯಾರೊಂದಿಗೆ ಕೆಲಸ ಮಾಡುತ್ತೇವೆ
+    </h3>
+
+    <p id="audience-sub-en">
+      Building a focused network across the real-estate ecosystem.
+    </p>
+
+    <p id="audience-sub-kn"
+       class="kannada"
+       style="display:none;">
+      ರಿಯಲ್ ಎಸ್ಟೇಟ್ ಪರಿಸರ ವ್ಯವಸ್ಥೆಯಾದ್ಯಂತ ಕೇಂದ್ರೀಕೃತ ನೆಟ್‌ವರ್ಕ್ ನಿರ್ಮಿಸುವುದು.
+    </p>
+
+  </div>
 
 
-      <h3 id="welcomeTitle">
-        Welcome to PRANAURA
-      </h3>
+  <div class="audience-grid">
 
-      <div class="modal-divider"></div>
+    <div class="audience-card">
+      <div class="audience-icon">🏢</div>
+      <h4 id="aud1-en">Builders & Developers</h4>
+      <h4 id="aud1-kn"
+          class="kannada"
+          style="display:none;">
+        ಬಿಲ್ಡರ್‌ಗಳು ಮತ್ತು ಡೆವಲಪರ್‌ಗಳು
+      </h4>
+      <p id="aud1p-en">
+        Residential, commercial and plotted development stakeholders.
+      </p>
+      <p id="aud1p-kn"
+         class="kannada"
+         style="display:none;">
+        ವಸತಿ, ವಾಣಿಜ್ಯ ಮತ್ತು ಪ್ಲಾಟ್ ಅಭಿವೃದ್ಧಿ ಪಾಲುದಾರರು.
+      </p>
+    </div>
 
 
-      <p
-        class="modal-subtitle"
-        id="welcomeText">
+    <div class="audience-card">
+      <div class="audience-icon">🌳</div>
+      <h4 id="aud2-en">Landowners</h4>
+      <h4 id="aud2-kn"
+          class="kannada"
+          style="display:none;">
+        ಭೂಮಾಲೀಕರು
+      </h4>
+      <p id="aud2p-en">
+        Landowners exploring suitable development or business connections.
+      </p>
+      <p id="aud2p-kn"
+         class="kannada"
+         style="display:none;">
+        ಸೂಕ್ತ ಅಭಿವೃದ್ಧಿ ಅಥವಾ ವ್ಯಾಪಾರ ಸಂಪರ್ಕಗಳನ್ನು ಅನ್ವೇಷಿಸುವ ಭೂಮಾಲೀಕರು.
+      </p>
+    </div>
 
-        Launching September 2026 — Connecting Builders,
-        Landowners & Investors.
 
+    <div class="audience-card">
+      <div class="audience-icon">◈</div>
+      <h4 id="aud3-en">Investors</h4>
+      <h4 id="aud3-kn"
+          class="kannada"
+          style="display:none;">
+        ಹೂಡಿಕೆದಾರರು
+      </h4>
+      <p id="aud3p-en">
+        Individuals and business contacts exploring opportunities.
+      </p>
+      <p id="aud3p-kn"
+         class="kannada"
+         style="display:none;">
+        ಅವಕಾಶಗಳನ್ನು ಅನ್ವೇಷಿಸುವ ವ್ಯಕ್ತಿಗಳು ಮತ್ತು ವ್ಯಾಪಾರ ಸಂಪರ್ಕಗಳು.
+      </p>
+    </div>
+
+
+    <div class="audience-card">
+      <div class="audience-icon">⌂</div>
+      <h4 id="aud4-en">Prospective Buyers</h4>
+      <h4 id="aud4-kn"
+          class="kannada"
+          style="display:none;">
+        ಆಸಕ್ತ ಖರೀದಿದಾರರು
+      </h4>
+      <p id="aud4p-en">
+        Individuals seeking to explore available real-estate opportunities.
+      </p>
+      <p id="aud4p-kn"
+         class="kannada"
+         style="display:none;">
+        ಲಭ್ಯವಿರುವ ರಿಯಲ್ ಎಸ್ಟೇಟ್ ಅವಕಾಶಗಳನ್ನು ಅನ್ವೇಷಿಸಲು ಬಯಸುವ ವ್ಯಕ್ತಿಗಳು.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- WHAT PRANAURA DOES -->
+
+<section class="fade-in">
+
+  <div class="section-title">
+
+    <h3 id="what-title-en">
+      What Pranaura Does
+    </h3>
+
+    <h3 id="what-title-kn"
+        class="kannada"
+        style="display:none;">
+      ಪ್ರಣೌರಾ ಏನು ಮಾಡುತ್ತದೆ
+    </h3>
+
+    <p id="what-sub-en">
+      Bridging the gap between real estate stakeholders through structured introductions.
+    </p>
+
+    <p id="what-sub-kn"
+       class="kannada"
+       style="display:none;">
+      ರಚನಾತ್ಮಕ ಪರಿಚಯಗಳ ಮೂಲಕ ರಿಯಲ್ ಎಸ್ಟೇಟ್ ಪಾಲುದಾರರ ನಡುವಿನ ಅಂತರವನ್ನು ಕಡಿಮೆ ಮಾಡುವುದು.
+    </p>
+
+  </div>
+
+
+  <div class="who-grid">
+
+
+    <div class="card">
+
+      <div class="card-icon">🏢</div>
+
+      <h4 id="what1-en">
+        Connects with Builders
+      </h4>
+
+      <h4 id="what1-kn"
+          class="kannada"
+          style="display:none;">
+        ಬಿಲ್ಡರ್‌ಗಳೊಂದಿಗೆ ಸಂಪರ್ಕ
+      </h4>
+
+      <p id="what1p-en">
+        Residential, commercial, and plotted development networking opportunities.
       </p>
 
+      <p id="what1p-kn"
+         class="kannada"
+         style="display:none;">
+        ವಸತಿ, ವಾಣಿಜ್ಯ ಮತ್ತು ಪ್ಲಾಟ್ ಅಭಿವೃದ್ಧಿ ನೆಟ್‌ವರ್ಕಿಂಗ್ ಅವಕಾಶಗಳು.
+      </p>
 
-      <div style="text-align:center;">
+    </div>
 
-        <button
-          class="btn"
-          type="button"
-          onclick="closeModal('welcomeModal'); openPartnerModal();">
 
-          Become an Early Partner
+    <div class="card">
 
-        </button>
+      <div class="card-icon">◎</div>
+
+      <h4 id="what2-en">
+        Introduces Interested Parties
+      </h4>
+
+      <h4 id="what2-kn"
+          class="kannada"
+          style="display:none;">
+        ಆಸಕ್ತ ಪಕ್ಷಗಳ ಪರಿಚಯ
+      </h4>
+
+      <p id="what2p-en">
+        Individuals and business contacts interested in exploring opportunities.
+      </p>
+
+      <p id="what2p-kn"
+         class="kannada"
+         style="display:none;">
+        ಅವಕಾಶಗಳನ್ನು ಅನ್ವೇಷಿಸಲು ಆಸಕ್ತಿ ಹೊಂದಿರುವ ವ್ಯಕ್ತಿಗಳು ಮತ್ತು ವ್ಯಾಪಾರ ಸಂಪರ್ಕಗಳು.
+      </p>
+
+    </div>
+
+
+    <div class="card">
+
+      <div class="card-icon">↔</div>
+
+      <h4 id="what3-en">
+        Facilitates Discussions
+      </h4>
+
+      <h4 id="what3-kn"
+          class="kannada"
+          style="display:none;">
+        ಚರ್ಚೆಗಳನ್ನು ಸುಗಮಗೊಳಿಸುವುದು
+      </h4>
+
+      <p id="what3p-en">
+        Conversations, meetings, and follow-ups between concerned parties.
+      </p>
+
+      <p id="what3p-kn"
+         class="kannada"
+         style="display:none;">
+        ಸಂಬಂಧಿತ ಪಕ್ಷಗಳ ನಡುವೆ ಸಂಭಾಷಣೆಗಳು, ಸಭೆಗಳು ಮತ್ತು ಫಾಲೋ-ಅಪ್‌ಗಳು.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- SERVICES -->
+
+<section id="services">
+
+  <div class="section-title">
+
+    <h3 id="services-title-en">
+      Our Services
+    </h3>
+
+    <h3 id="services-title-kn"
+        class="kannada"
+        style="display:none;">
+      ನಮ್ಮ ಸೇವೆಗಳು
+    </h3>
+
+    <p id="services-sub-en">
+      Channel partnership support and stakeholder networking.
+    </p>
+
+    <p id="services-sub-kn"
+       class="kannada"
+       style="display:none;">
+      ಚಾನೆಲ್ ಪಾರ್ಟ್ನರ್ ಬೆಂಬಲ ಮತ್ತು ಪಾಲುದಾರರ ನೆಟ್‌ವರ್ಕಿಂಗ್.
+    </p>
+
+  </div>
+
+
+  <div class="services">
+
+
+    <div class="card">
+
+      <div class="card-icon">◆</div>
+
+      <h4 id="s1-en">
+        Builder Connections
+      </h4>
+
+      <h4 id="s1-kn"
+          class="kannada"
+          style="display:none;">
+        ಬಿಲ್ಡರ್ ಸಂಪರ್ಕಗಳು
+      </h4>
+
+      <p id="s1p-en">
+        Supporting developers by connecting them with prospective buyers or channel partners.
+      </p>
+
+      <p id="s1p-kn"
+         class="kannada"
+         style="display:none;">
+        ಡೆವಲಪರ್‌ಗಳನ್ನು ಆಸಕ್ತ ಖರೀದಿದಾರರು ಅಥವಾ ಚಾನೆಲ್ ಪಾಲುದಾರರೊಂದಿಗೆ ಸಂಪರ್ಕಿಸುವ ಮೂಲಕ ಬೆಂಬಲಿಸುವುದು.
+      </p>
+
+    </div>
+
+
+    <div class="card">
+
+      <div class="card-icon">◈</div>
+
+      <h4 id="s2-en">
+        Buyer & Investor Introductions
+      </h4>
+
+      <h4 id="s2-kn"
+          class="kannada"
+          style="display:none;">
+        ಖರೀದಿದಾರ ಮತ್ತು ಹೂಡಿಕೆದಾರರ ಪರಿಚಯ
+      </h4>
+
+      <p id="s2p-en">
+        Introducing interested individuals to available properties, landowners, and developers.
+      </p>
+
+      <p id="s2p-kn"
+         class="kannada"
+         style="display:none;">
+        ಆಸಕ್ತ ವ್ಯಕ್ತಿಗಳಿಗೆ ಲಭ್ಯವಿರುವ ಆಸ್ತಿಗಳು, ಭೂಮಾಲೀಕರು ಮತ್ತು ಡೆವಲಪರ್‌ಗಳನ್ನು ಪರಿಚಯಿಸುವುದು.
+      </p>
+
+    </div>
+
+
+    <div class="card">
+
+      <div class="card-icon">↔</div>
+
+      <h4 id="s3-en">
+        Networking & Facilitation
+      </h4>
+
+      <h4 id="s3-kn"
+          class="kannada"
+          style="display:none;">
+        ನೆಟ್‌ವರ್ಕಿಂಗ್ ಮತ್ತು ಸುಗಮೀಕರಣ
+      </h4>
+
+      <p id="s3p-en">
+        Coordinating meetings, discussions, and communication between stakeholders professionally.
+      </p>
+
+      <p id="s3p-kn"
+         class="kannada"
+         style="display:none;">
+        ಪಾಲುದಾರರ ನಡುವೆ ವೃತ್ತಿಪರವಾಗಿ ಸಭೆಗಳು, ಚರ್ಚೆಗಳು ಮತ್ತು ಸಂವಹನವನ್ನು ಸಮನ್ವಯಗೊಳಿಸುವುದು.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- PROCESS -->
+
+<section id="process" class="fade-in">
+
+  <div class="section-title">
+
+    <h3 id="process-title-en">
+      The Pranaura Process
+    </h3>
+
+    <h3 id="process-title-kn"
+        class="kannada"
+        style="display:none;">
+      ಪ್ರಣೌರಾ ಪ್ರಕ್ರಿಯೆ
+    </h3>
+
+    <p id="process-sub-en">
+      A simple and professional approach to real-estate networking.
+    </p>
+
+    <p id="process-sub-kn"
+       class="kannada"
+       style="display:none;">
+      ರಿಯಲ್ ಎಸ್ಟೇಟ್ ನೆಟ್‌ವರ್ಕಿಂಗ್‌ಗೆ ಸರಳ ಮತ್ತು ವೃತ್ತಿಪರ ವಿಧಾನ.
+    </p>
+
+  </div>
+
+
+  <div class="process">
+
+
+    <div class="process-step">
+
+      <div class="process-number">01</div>
+
+      <h4 id="p1-en">
+        Connect
+      </h4>
+
+      <h4 id="p1-kn"
+          class="kannada"
+          style="display:none;">
+        ಸಂಪರ್ಕಿಸಿ
+      </h4>
+
+      <p id="p1p-en">
+        Share your requirement or opportunity with Pranaura.
+      </p>
+
+      <p id="p1p-kn"
+         class="kannada"
+         style="display:none;">
+        ನಿಮ್ಮ ಅವಶ್ಯಕತೆ ಅಥವಾ ಅವಕಾಶವನ್ನು ಪ್ರಣೌರಾದೊಂದಿಗೆ ಹಂಚಿಕೊಳ್ಳಿ.
+      </p>
+
+    </div>
+
+
+    <div class="process-step">
+
+      <div class="process-number">02</div>
+
+      <h4 id="p2-en">
+        Understand
+      </h4>
+
+      <h4 id="p2-kn"
+          class="kannada"
+          style="display:none;">
+        ಅರ್ಥಮಾಡಿಕೊಳ್ಳಿ
+      </h4>
+
+      <p id="p2p-en">
+        We understand the requirements and relevant details.
+      </p>
+
+      <p id="p2p-kn"
+         class="kannada"
+         style="display:none;">
+        ನಾವು ಅವಶ್ಯಕತೆಗಳು ಮತ್ತು ಸಂಬಂಧಿತ ವಿವರಗಳನ್ನು ಅರ್ಥಮಾಡಿಕೊಳ್ಳುತ್ತೇವೆ.
+      </p>
+
+    </div>
+
+
+    <div class="process-step">
+
+      <div class="process-number">03</div>
+
+      <h4 id="p3-en">
+        Introduce
+      </h4>
+
+      <h4 id="p3-kn"
+          class="kannada"
+          style="display:none;">
+        ಪರಿಚಯಿಸಿ
+      </h4>
+
+      <p id="p3p-en">
+        Suitable parties may be introduced based on mutual interest.
+      </p>
+
+      <p id="p3p-kn"
+         class="kannada"
+         style="display:none;">
+        ಪರಸ್ಪರ ಆಸಕ್ತಿಯ ಆಧಾರದ ಮೇಲೆ ಸೂಕ್ತ ಪಕ್ಷಗಳನ್ನು ಪರಿಚಯಿಸಬಹುದು.
+      </p>
+
+    </div>
+
+
+    <div class="process-step">
+
+      <div class="process-number">04</div>
+
+      <h4 id="p4-en">
+        Facilitate
+      </h4>
+
+      <h4 id="p4-kn"
+          class="kannada"
+          style="display:none;">
+        ಸುಗಮಗೊಳಿಸಿ
+      </h4>
+
+      <p id="p4p-en">
+        Discussions, meetings and follow-ups are professionally coordinated.
+      </p>
+
+      <p id="p4p-kn"
+         class="kannada"
+         style="display:none;">
+        ಚರ್ಚೆಗಳು, ಸಭೆಗಳು ಮತ್ತು ಫಾಲೋ-ಅಪ್‌ಗಳನ್ನು ವೃತ್ತಿಪರವಾಗಿ ಸಮನ್ವಯಗೊಳಿಸಲಾಗುತ್ತದೆ.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- EARLY PARTNER CTA -->
+
+<section class="fade-in">
+
+  <div class="partner-box">
+
+    <h3 id="cta-title-en">
+      Build the Right Connection
+    </h3>
+
+    <h3 id="cta-title-kn"
+        class="kannada"
+        style="display:none;">
+      ಸರಿಯಾದ ಸಂಪರ್ಕವನ್ನು ನಿರ್ಮಿಸಿ
+    </h3>
+
+    <p id="cta-sub-en">
+      Whether you are a builder, landowner, investor or prospective buyer, Pranaura is creating a professional network for meaningful real-estate conversations.
+    </p>
+
+    <p id="cta-sub-kn"
+       class="kannada"
+       style="display:none;">
+      ನೀವು ಬಿಲ್ಡರ್, ಭೂಮಾಲೀಕ, ಹೂಡಿಕೆದಾರ ಅಥವಾ ಆಸಕ್ತ ಖರೀದಿದಾರರಾಗಿದ್ದರೂ, ಅರ್ಥಪೂರ್ಣ ರಿಯಲ್ ಎಸ್ಟೇಟ್ ಸಂಭಾಷಣೆಗಳಿಗಾಗಿ ಪ್ರಣೌರಾ ವೃತ್ತಿಪರ ನೆಟ್‌ವರ್ಕ್ ನಿರ್ಮಿಸುತ್ತಿದೆ.
+    </p>
+
+    <button class="btn"
+            onclick="openModal()"
+            id="cta-btn">
+      Start a Conversation
+    </button>
+
+  </div>
+
+</section>
+
+
+
+<!-- FOUNDER -->
+
+<section class="fade-in">
+
+  <div class="founder-box">
+
+    <div class="founder-avatar">
+      PH
+    </div>
+
+    <h4 id="founder-name">
+      Pranathi H.S.
+    </h4>
+
+    <div id="founder-title-en"
+         class="title">
+      Founder & Networking Lead
+    </div>
+
+    <div id="founder-title-kn"
+         class="title kannada"
+         style="display:none;">
+      ಸ್ಥಾಪಕಿ ಮತ್ತು ನೆಟ್‌ವರ್ಕಿಂಗ್ ಮುಖ್ಯಸ್ಥೆ
+    </div>
+
+    <p id="founder-desc-en">
+      "Pranaura was established to simplify real-estate networking. By focusing on transparent introductions and professional relationships, we bridge the communication gap between builders, landowners, and interested buyers."
+    </p>
+
+    <p id="founder-desc-kn"
+       class="kannada"
+       style="display:none;">
+      "ಪ್ರಣೌರಾ ರಿಯಲ್ ಎಸ್ಟೇಟ್ ನೆಟ್‌ವರ್ಕಿಂಗ್ ಅನ್ನು ಸರಳಗೊಳಿಸಲು ಸ್ಥಾಪಿಸಲಾಗಿದೆ. ಪಾರದರ್ಶಕ ಪರಿಚಯಗಳು ಮತ್ತು ವೃತ್ತಿಪರ ಸಂಬಂಧಗಳ ಮೇಲೆ ಗಮನಹರಿಸುವ ಮೂಲಕ, ನಾವು ಬಿಲ್ಡರ್‌ಗಳು, ಭೂಮಾಲೀಕರು ಮತ್ತು ಆಸಕ್ತ ಖರೀದಿದಾರರ ನಡುವಿನ ಸಂವಹನ ಅಂತರವನ್ನು ಕಡಿಮೆ ಮಾಡುತ್ತೇವೆ."
+    </p>
+
+  </div>
+
+</section>
+
+
+
+<!-- FAQ -->
+
+<section id="faq" class="fade-in">
+
+  <div class="section-title">
+
+    <h3 id="faq-title-en">
+      Frequently Asked Questions
+    </h3>
+
+    <h3 id="faq-title-kn"
+        class="kannada"
+        style="display:none;">
+      ಪದೇ ಪದೇ ಕೇಳಲಾಗುವ ಪ್ರಶ್ನೆಗಳು
+    </h3>
+
+    <p id="faq-sub-en">
+      A few things you may want to know about Pranaura.
+    </p>
+
+    <p id="faq-sub-kn"
+       class="kannada"
+       style="display:none;">
+      ಪ್ರಣೌರಾ ಕುರಿತು ನೀವು ತಿಳಿದುಕೊಳ್ಳಲು ಬಯಸಬಹುದಾದ ಕೆಲವು ವಿಷಯಗಳು.
+    </p>
+
+  </div>
+
+
+  <div class="faq">
+
+
+    <div class="faq-item">
+
+      <button class="faq-question">
+        <span id="faq1q-en">
+          What is Pranaura?
+        </span>
+
+        <span id="faq1q-kn"
+              class="kannada"
+              style="display:none;">
+          ಪ್ರಣೌರಾ ಎಂದರೇನು?
+        </span>
+
+        <span>+</span>
+      </button>
+
+      <div class="faq-answer">
+
+        <p id="faq1a-en">
+          Pranaura is a real-estate networking and introduction platform designed to connect builders, developers, landowners, investors and prospective buyers.
+        </p>
+
+        <p id="faq1a-kn"
+           class="kannada"
+           style="display:none;">
+          ಪ್ರಣೌರಾ ಬಿಲ್ಡರ್‌ಗಳು, ಡೆವಲಪರ್‌ಗಳು, ಭೂಮಾಲೀಕರು, ಹೂಡಿಕೆದಾರರು ಮತ್ತು ಆಸಕ್ತ ಖರೀದಿದಾರರನ್ನು ಸಂಪರ್ಕಿಸಲು ವಿನ್ಯಾಸಗೊಳಿಸಲಾದ ರಿಯಲ್ ಎಸ್ಟೇಟ್ ನೆಟ್‌ವರ್ಕಿಂಗ್ ಮತ್ತು ಪರಿಚಯ ವೇದಿಕೆಯಾಗಿದೆ.
+        </p>
 
       </div>
 
     </div>
 
-  </div>
 
+    <div class="faq-item">
 
-  <!-- =======================================================
-       EARLY PARTNER MODAL
-  ======================================================== -->
+      <button class="faq-question">
 
-  <div
-    class="modal-overlay"
-    id="partnerModal"
-    role="dialog"
-    aria-modal="true"
-    aria-labelledby="partnerModalTitle">
+        <span id="faq2q-en">
+          Does Pranaura sell properties?
+        </span>
 
-    <div class="modal">
+        <span id="faq2q-kn"
+              class="kannada"
+              style="display:none;">
+          ಪ್ರಣೌರಾ ಆಸ್ತಿಗಳನ್ನು ಮಾರಾಟ ಮಾಡುತ್ತದೆಯೇ?
+        </span>
 
-      <button
-        class="modal-close"
-        onclick="closeModal('partnerModal')"
-        aria-label="Close">
-        ×
+        <span>+</span>
+
       </button>
 
+      <div class="faq-answer">
 
-      <h3 id="partnerModalTitle">
-        Become an Early Partner
-      </h3>
+        <p id="faq2a-en">
+          Pranaura does not buy, sell, or guarantee projects. It facilitates introductions and business discussions between interested parties.
+        </p>
 
-      <div class="modal-divider"></div>
+        <p id="faq2a-kn"
+           class="kannada"
+           style="display:none;">
+          ಪ್ರಣೌರಾ ಆಸ್ತಿಗಳನ್ನು ಖರೀದಿಸುವುದಿಲ್ಲ, ಮಾರಾಟ ಮಾಡುವುದಿಲ್ಲ ಅಥವಾ ಯೋಜನೆಗಳಿಗೆ ಖಾತರಿ ನೀಡುವುದಿಲ್ಲ. ಆಸಕ್ತ ಪಕ್ಷಗಳ ನಡುವೆ ಪರಿಚಯ ಮತ್ತು ವ್ಯಾಪಾರ ಚರ್ಚೆಗಳನ್ನು ಸುಗಮಗೊಳಿಸುತ್ತದೆ.
+        </p>
 
-
-      <p class="modal-subtitle">
-
-        Connect with Pranaura before launch.
-
-      </p>
-
-
-      <form id="modalPartnerForm">
-
-        <div class="form-group">
-
-          <label for="modalName">
-            Name
-          </label>
-
-          <input
-            type="text"
-            id="modalName"
-            required
-            placeholder="Enter your name">
-
-        </div>
-
-
-        <div class="form-group">
-
-          <label for="modalPhone">
-            Phone / WhatsApp
-          </label>
-
-          <input
-            type="tel"
-            id="modalPhone"
-            required
-            placeholder="Enter your phone number">
-
-        </div>
-
-
-        <div class="form-group">
-
-          <label for="modalInterest">
-            I am a
-          </label>
-
-          <select id="modalInterest">
-
-            <option value="Builder">
-              Builder
-            </option>
-
-            <option value="Investor">
-              Investor
-            </option>
-
-            <option value="Land Owner">
-              Land Owner
-            </option>
-
-            <option value="Other">
-              Other
-            </option>
-
-          </select>
-
-        </div>
-
-
-        <button
-          type="submit"
-          class="btn"
-          style="width:100%;">
-
-          <span class="loading-spinner"></span>
-
-          Connect With Us
-
-        </button>
-
-      </form>
+      </div>
 
     </div>
 
+
+    <div class="faq-item">
+
+      <button class="faq-question">
+
+        <span id="faq3q-en">
+          Who can contact Pranaura?
+        </span>
+
+        <span id="faq3q-kn"
+              class="kannada"
+              style="display:none;">
+          ಪ್ರಣೌರಾವನ್ನು ಯಾರು ಸಂಪರ್ಕಿಸಬಹುದು?
+        </span>
+
+        <span>+</span>
+
+      </button>
+
+      <div class="faq-answer">
+
+        <p id="faq3a-en">
+          Builders, developers, landowners, investors, prospective buyers and relevant business contacts can reach out.
+        </p>
+
+        <p id="faq3a-kn"
+           class="kannada"
+           style="display:none;">
+          ಬಿಲ್ಡರ್‌ಗಳು, ಡೆವಲಪರ್‌ಗಳು, ಭೂಮಾಲೀಕರು, ಹೂಡಿಕೆದಾರರು, ಆಸಕ್ತ ಖರೀದಿದಾರರು ಮತ್ತು ಸಂಬಂಧಿತ ವ್ಯಾಪಾರ ಸಂಪರ್ಕಗಳು ಸಂಪರ್ಕಿಸಬಹುದು.
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <div class="faq-item">
+
+      <button class="faq-question">
+
+        <span id="faq4q-en">
+          Does Pranaura provide investment advice?
+        </span>
+
+        <span id="faq4q-kn"
+              class="kannada"
+              style="display:none;">
+          ಪ್ರಣೌರಾ ಹೂಡಿಕೆ ಸಲಹೆ ನೀಡುತ್ತದೆಯೇ?
+        </span>
+
+        <span>+</span>
+
+      </button>
+
+      <div class="faq-answer">
+
+        <p id="faq4a-en">
+          No. Pranaura does not provide financial, legal, tax or investment advice. Independent due diligence is recommended before entering into any transaction.
+        </p>
+
+        <p id="faq4a-kn"
+           class="kannada"
+           style="display:none;">
+          ಇಲ್ಲ. ಪ್ರಣೌರಾ ಹಣಕಾಸು, ಕಾನೂನು, ತೆರಿಗೆ ಅಥವಾ ಹೂಡಿಕೆ ಸಲಹೆ ನೀಡುವುದಿಲ್ಲ. ಯಾವುದೇ ವ್ಯವಹಾರಕ್ಕೆ ಮುನ್ನ ಸ್ವತಂತ್ರ ಪರಿಶೀಲನೆಯನ್ನು ಶಿಫಾರಸು ಮಾಡಲಾಗುತ್ತದೆ.
+        </p>
+
+      </div>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- CONTACT FORM -->
+
+<section class="fade-in" id="contact">
+
+  <div class="section-title">
+
+    <h3 id="form-title-en">
+      Become an Early Partner
+    </h3>
+
+    <h3 id="form-title-kn"
+        class="kannada"
+        style="display:none;">
+      ಮುಂಚಿನ ಪಾಲುದಾರರಾಗಿ
+    </h3>
+
+    <p id="form-sub-en">
+      Join the first circle of builders and investors connecting with Pranaura before launch.
+    </p>
+
+    <p id="form-sub-kn"
+       class="kannada"
+       style="display:none;">
+      ಬಿಡುಗಡೆಗೆ ಮುನ್ನ ಪ್ರಣೌರಾದೊಂದಿಗೆ ಸಂಪರ್ಕ ಸಾಧಿಸುವ ಬಿಲ್ಡರ್‌ಗಳು ಮತ್ತು ಹೂಡಿಕೆದಾರರ ಮೊದಲ ವಲಯಕ್ಕೆ ಸೇರಿಕೊಳ್ಳಿ.
+    </p>
+
   </div>
 
 
-  <!-- =======================================================
-       SUCCESS MODAL
-  ======================================================== -->
+  <div class="form-box">
 
-  <div
-    class="modal-overlay"
-    id="successModal"
-    role="dialog"
-    aria-modal="true">
+    <form id="mainForm">
 
-    <div class="modal" style="text-align:center;">
+      <div class="form-group">
 
-      <button
-        class="modal-close"
-        onclick="closeModal('successModal')"
-        aria-label="Close">
-        ×
-      </button>
+        <label id="label-name-en"
+               for="name">
+          Name
+        </label>
 
+        <label id="label-name-kn"
+               for="name"
+               class="kannada"
+               style="display:none;">
+          ಹೆಸರು
+        </label>
 
-      <div class="success-icon">
-        ✓
+        <input type="text"
+               id="name"
+               required
+               placeholder="Enter your name">
+
       </div>
 
 
-      <h3>
-        Thank You
-      </h3>
+      <div class="form-group">
+
+        <label id="label-phone-en"
+               for="phone">
+          Phone / WhatsApp
+        </label>
+
+        <label id="label-phone-kn"
+               for="phone"
+               class="kannada"
+               style="display:none;">
+          ದೂರವಾಣಿ / ವಾಟ್ಸಾಪ್
+        </label>
+
+        <input type="tel"
+               id="phone"
+               required
+               placeholder="Enter your phone or WhatsApp number">
+
+      </div>
 
 
-      <div class="modal-divider"></div>
+      <div class="form-group">
+
+        <label id="label-interest-en"
+               for="interest">
+          I am a
+        </label>
+
+        <label id="label-interest-kn"
+               for="interest"
+               class="kannada"
+               style="display:none;">
+          ನಾನು ಒಬ್ಬ
+        </label>
+
+        <select id="interest">
+
+          <option value="Builder">
+            Builder
+          </option>
+
+          <option value="Investor">
+            Investor
+          </option>
+
+          <option value="Land Owner">
+            Land Owner
+          </option>
+
+          <option value="Prospective Buyer">
+            Prospective Buyer
+          </option>
+
+          <option value="Other">
+            Other
+          </option>
+
+        </select>
+
+      </div>
 
 
-      <p class="modal-subtitle">
+      <div class="form-group">
 
-        Thank you for reaching out! We will contact you soon.
+        <label id="message-label-en"
+               for="message">
+          Requirement / Message
+        </label>
 
-      </p>
+        <label id="message-label-kn"
+               for="message"
+               class="kannada"
+               style="display:none;">
+          ಅವಶ್ಯಕತೆ / ಸಂದೇಶ
+        </label>
+
+        <textarea id="message"
+                  placeholder="Tell us briefly how Pranaura can help you..."></textarea>
+
+      </div>
 
 
-      <button
-        class="btn"
-        onclick="closeModal('successModal')">
-
-        Close
-
+      <button type="submit"
+              class="btn"
+              style="width:100%;"
+              id="form-submit-btn">
+        Connect With Us
       </button>
+
+    </form>
+
+  </div>
+
+</section>
+
+
+
+<!-- DIRECT CONTACT -->
+
+<section class="fade-in">
+
+  <div class="section-title">
+
+    <h3 id="contact-info-title-en">
+      Direct Contact
+    </h3>
+
+    <h3 id="contact-info-title-kn"
+        class="kannada"
+        style="display:none;">
+      ನೇರ ಸಂಪರ್ಕ
+    </h3>
+
+    <p id="contact-sub-en">
+      Connect with Pranaura for networking inquiries or intermediary support.
+    </p>
+
+    <p id="contact-sub-kn"
+       class="kannada"
+       style="display:none;">
+      ನೆಟ್‌ವರ್ಕಿಂಗ್ ವಿಚಾರಣೆಗಳು ಅಥವಾ ಮಧ್ಯವರ್ತಿ ಬೆಂಬಲಕ್ಕಾಗಿ ಪ್ರಣೌರಾವನ್ನು ಸಂಪರ್ಕಿಸಿ.
+    </p>
+
+  </div>
+
+
+  <div class="contact">
+
+    <div class="contact-grid">
+
+
+      <div class="contact-item">
+
+        <div class="contact-icon">
+          ☎
+        </div>
+
+        <h5 id="phone-heading-en">
+          Phone
+        </h5>
+
+        <h5 id="phone-heading-kn"
+            class="kannada"
+            style="display:none;">
+          ದೂರವಾಣಿ
+        </h5>
+
+        <a href="tel:+919019746649">
+          +91 90197 46649
+        </a>
+
+      </div>
+
+
+      <div class="contact-item">
+
+        <div class="contact-icon">
+          ✉
+        </div>
+
+        <h5 id="email-heading-en">
+          Email
+        </h5>
+
+        <h5 id="email-heading-kn"
+            class="kannada"
+            style="display:none;">
+          ಇಮೇಲ್
+        </h5>
+
+        <a href="mailto:pranauraconnect@gmail.com">
+          pranauraconnect@gmail.com
+        </a>
+
+      </div>
+
+
+      <div class="contact-item">
+
+        <div class="contact-icon">
+          ⌂
+        </div>
+
+        <h5 id="location-heading-en">
+          Location
+        </h5>
+
+        <h5 id="location-heading-kn"
+            class="kannada"
+            style="display:none;">
+          ಸ್ಥಳ
+        </h5>
+
+        <p id="loc-en">
+          Vijayanagar, Mysore, Karnataka, India
+        </p>
+
+        <p id="loc-kn"
+           class="kannada"
+           style="display:none;">
+          ವಿಜಯನಗರ, ಮೈಸೂರು, ಕರ್ನಾಟಕ, ಭಾರತ
+        </p>
+
+      </div>
+
+
+      <div class="contact-item">
+
+        <div class="contact-icon">
+          ◎
+        </div>
+
+        <h5 id="insta-heading-en">
+          Instagram
+        </h5>
+
+        <h5 id="insta-heading-kn"
+            class="kannada"
+            style="display:none;">
+          ಇನ್‌ಸ್ಟಾಗ್ರಾಮ್
+        </h5>
+
+        <a href="https://instagram.com/Pranaura_"
+           target="_blank"
+           rel="noopener">
+          @Pranaura_
+        </a>
+
+      </div>
+
 
     </div>
 
   </div>
 
+</section>
 
-  <!-- =======================================================
-       TOAST
-  ======================================================== -->
 
-  <div
-    class="toast"
-    id="toast"
-    role="status">
+
+<!-- FOOTER -->
+
+<footer>
+
+  <div class="footer-brand">
+    PRANAURA
+  </div>
+
+  <p id="footer-tagline">
+    Strategic real-estate networking & introductions
+  </p>
+
+
+  <div class="footer-links">
+
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#process">Process</a>
+    <a href="#faq">FAQ</a>
+    <a href="#contact">Contact</a>
+
   </div>
 
 
-  <!-- =======================================================
-       BACK TO TOP
-  ======================================================== -->
+  <div class="footer-disclaimer">
 
-  <button
-    class="back-top"
-    id="backTop"
-    onclick="window.scrollTo({top:0, behavior:'smooth'})"
-    aria-label="Back to top">
+    <strong>Disclaimer:</strong>
+    Pranaura acts as a real-estate networking and introduction platform connecting builders, developers, landowners, and prospective investors or buyers. Pranaura does not provide financial, legal, tax, or investment advice and does not guarantee project approvals, returns, profitability, or completion. Any transaction or agreement is solely between the concerned parties, and independent due diligence is recommended.
 
-    ↑
-
-  </button>
-
-
-  <!-- =======================================================
-       WHATSAPP
-  ======================================================== -->
-
-  <a
-    href="https://wa.me/919019746649"
-    class="whatsapp-float"
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="WhatsApp">
-
-    <svg
-      width="32"
-      height="32"
-      viewBox="0 0 24 24"
-      fill="currentColor"
-      xmlns="http://www.w3.org/2000/svg">
-
-      <path d="M20.52 3.48A11.86 11.86 0 0 0 12.06 0C5.46 0 .1 5.36.1 11.96c0 2.1.55 4.15 1.6 5.96L0 24l6.25-1.64a11.92 11.92 0 0 0 5.81 1.48h.01c6.6 0 11.96-5.36 11.96-11.96 0-3.2-1.25-6.2-3.51-8.4ZM12.07 21.7a9.77 9.77 0 0 1-4.97-1.36l-.36-.21-3.7.97.99-3.61-.24-.37a9.73 9.73 0 0 1-1.49-5.16c0-5.39 4.38-9.77 9.77-9.77 2.61 0 5.07 1.02 6.92 2.86a9.7 9.7 0 0 1 2.85 6.91c0 5.39-4.38 9.77-9.77 9.77Zm5.36-7.33c-.29-.14-1.71-.84-1.98-.94-.27-.1-.46-.14-.66.14-.19.29-.75.94-.92 1.13-.17.19-.34.22-.63.07-.29-.14-1.22-.45-2.33-1.44-.86-.77-1.45-1.72-1.62-2.01-.17-.29-.02-.45.13-.59.13-.13.29-.34.43-.51.14-.17.19-.29.29-.48.1-.19.05-.36-.02-.51-.07-.14-.66-1.58-.9-2.17-.24-.57-.48-.49-.66-.5h-.56c-.19 0-.51.07-.77.36-.27.29-1.01.99-1.01 2.42 0 1.43 1.03 2.81 1.17 3 .14.19 2.02 3.09 4.89 4.33.68.29 1.21.46 1.62.59.68.22 1.3.19 1.79.12.55-.08 1.71-.7 1.95-1.38.24-.68.24-1.26.17-1.38-.07-.12-.26-.19-.55-.33Z"/>
-
-    </svg>
-
-  </a>
-
-  <div class="whatsapp-label">
-    Chat on WhatsApp
   </div>
 
 
-  <!-- =======================================================
-       JAVASCRIPT
-  ======================================================== -->
+  <p id="footer-en">
+    &copy; 2026 PRANAURA. All rights reserved.
+  </p>
 
-  <script>
+  <p id="footer-kn"
+     class="kannada"
+     style="display:none;">
+    &copy; 2026 ಪ್ರಣೌರಾ. ಎಲ್ಲಾ ಹಕ್ಕುಗಳು ಕಾಯ್ದಿರಿಸಲಾಗಿದೆ.
+  </p>
+
+</footer>
 
 
-    /* =======================================================
-       LANGUAGE SYSTEM
-    ======================================================== */
 
-    function setLanguage(lang, btn) {
+<!-- QUICK ENQUIRY MODAL -->
+
+<div class="modal"
+     id="enquiryModal"
+     role="dialog"
+     aria-modal="true">
+
+  <div class="modal-content">
+
+    <button class="modal-close"
+            onclick="closeModal()"
+            aria-label="Close">
+      ×
+    </button>
+
+
+    <h3 id="modal-title-en">
+      Quick Enquiry
+    </h3>
+
+    <h3 id="modal-title-kn"
+        class="kannada"
+        style="display:none;">
+      ತ್ವರಿತ ವಿಚಾರಣೆ
+    </h3>
+
+
+    <p id="modal-sub-en">
+      Tell us what kind of real-estate connection you are looking for.
+    </p>
+
+    <p id="modal-sub-kn"
+       class="kannada"
+       style="display:none;">
+      ನೀವು ಹುಡುಕುತ್ತಿರುವ ರಿಯಲ್ ಎಸ್ಟೇಟ್ ಸಂಪರ್ಕದ ಬಗ್ಗೆ ನಮಗೆ ತಿಳಿಸಿ.
+    </p>
+
+
+    <form id="modalForm">
+
+      <div class="form-group">
+
+        <label for="modalName">
+          Name
+        </label>
+
+        <input type="text"
+               id="modalName"
+               required
+               placeholder="Your name">
+
+      </div>
+
+
+      <div class="form-group">
+
+        <label for="modalPhone">
+          Phone / WhatsApp
+        </label>
+
+        <input type="tel"
+               id="modalPhone"
+               required
+               placeholder="Your number">
+
+      </div>
+
+
+      <div class="form-group">
+
+        <label for="modalInterest">
+          I am a
+        </label>
+
+        <select id="modalInterest">
+
+          <option>Builder</option>
+          <option>Investor</option>
+          <option>Land Owner</option>
+          <option>Prospective Buyer</option>
+          <option>Other</option>
+
+        </select>
+
+      </div>
+
+
+      <div class="form-group">
+
+        <label for="modalMessage">
+          Message
+        </label>
+
+        <textarea id="modalMessage"
+                  placeholder="Briefly describe your requirement..."></textarea>
+
+      </div>
+
+
+      <button type="submit"
+              class="btn"
+              style="width:100%;">
+        Continue to WhatsApp
+      </button>
+
+    </form>
+
+  </div>
+
+</div>
+
+
+
+<!-- TOAST -->
+
+<div class="toast"
+     id="toast">
+  Thank you. Opening WhatsApp...
+</div>
+
+
+
+<!-- COOKIE -->
+
+<div class="cookie-notice"
+     id="cookieNotice">
+
+  <p>
+    This website uses essential browser storage such as language preference to improve your experience. No unnecessary tracking is required for this website.
+  </p>
+
+  <div class="cookie-actions">
+
+    <button class="accept-cookie"
+            onclick="acceptCookie()">
+      Okay
+    </button>
+
+    <button class="dismiss-cookie"
+            onclick="dismissCookie()">
+      Close
+    </button>
+
+  </div>
+
+</div>
+
+
+
+<!-- BACK TO TOP -->
+
+<button class="back-top"
+        id="backTop"
+        onclick="window.scrollTo({top:0,behavior:'smooth'})"
+        aria-label="Back to top">
+  ↑
+</button>
+
+
+
+<!-- WHATSAPP FLOAT -->
+
+<a href="https://wa.me/919019746649?text=Hello%20Pranaura,%20I%20would%20like%20to%20know%20more%20about%20your%20real-estate%20networking%20services."
+   class="whatsapp-float"
+   target="_blank"
+   rel="noopener"
+   aria-label="WhatsApp">
+
+  <svg width="30"
+       height="30"
+       viewBox="0 0 24 24"
+       fill="currentColor"
+       xmlns="http://www.w3.org/2000/svg">
+
+    <path d="M20.52 3.48A11.86 11.86 0 0 0 12.06 0C5.46 0 .1 5.36.1 11.96c0 2.1.55 4.15 1.6 5.96L0 24l6.25-1.64a11.92 11.92 0 0 0 5.81 1.48h.01c6.6 0 11.96-5.36 11.96-11.96 0-3.2-1.25-6.2-3.51-8.4ZM12.07 21.7a9.77 9.77 0 0 1-4.97-1.36l-.36-.21-3.7.97.99-3.61-.24-.37a9.73 9.73 0 0 1-1.49-5.16c0-5.39 4.38-9.77 9.77-9.77 2.61 0 5.07 1.02 6.92 2.86a9.7 9.7 0 0 1 2.85 6.91c0 5.39-4.38 9.77-9.77 9.77Zm5.36-7.33c-.29-.14-1.71-.84-1.98-.94-.27-.1-.46-.14-.66.14-.19.29-.75.94-.92 1.13-.17.19-.34.22-.63.07-.29-.14-1.22-.45-2.33-1.44-.86-.77-1.45-1.72-1.62-2.01-.17-.29-.02-.45.13-.59.13-.13.29-.34.43-.51.14-.17.19-.29.29-.48.1-.19.05-.36-.02-.51-.07-.14-.66-1.58-.9-2.17-.24-.57-.48-.49-.66-.5h-.56c-.19 0-.51.07-.77.36-.27.29-1.01.99-1.01 2.42 0 1.43 1.03 2.81 1.17 3 .14.19 2.02 3.09 4.89 4.33.68.29 1.21.46 1.62.59.68.22 1.3.19 1.79.12.55-.08 1.71-.7 1.95-1.38.24-.68.24-1.26.17-1.38-.07-.12-.26-.19-.55-.33Z"/>
+
+  </svg>
+
+</a>
+
+
+
+<script>
+
+/* =========================================
+   LANGUAGE SYSTEM
+========================================= */
+
+function setLanguage(lang, btn){
+
+  document.querySelectorAll('.lang-btn')
+    .forEach(b => b.classList.remove('active'));
+
+  if(btn){
+    btn.classList.add('active');
+  }
+
+
+  const ids = [
+
+    'badge',
+    'tagline',
+    'hero',
+
+    'why-title',
+    'why-sub',
+    'w1',
+    'w1p',
+    'w2',
+    'w2p',
+    'w3',
+    'w3p',
+
+    'about-title',
+    'about-sub',
+    'about1',
+    'about2',
+    'about3',
+
+    'audience-title',
+    'audience-sub',
+    'aud1',
+    'aud1p',
+    'aud2',
+    'aud2p',
+    'aud3',
+    'aud3p',
+    'aud4',
+    'aud4p',
+
+    'what-title',
+    'what-sub',
+    'what1',
+    'what1p',
+    'what2',
+    'what2p',
+    'what3',
+    'what3p',
+
+    'services-title',
+    'services-sub',
+    's1',
+    's1p',
+    's2',
+    's2p',
+    's3',
+    's3p',
+
+    'process-title',
+    'process-sub',
+    'p1',
+    'p1p',
+    'p2',
+    'p2p',
+    'p3',
+    'p3p',
+    'p4',
+    'p4p',
+
+    'cta-title',
+    'cta-sub',
+
+    'founder-title',
+    'founder-desc',
+
+    'faq-title',
+    'faq-sub',
+    'faq1q',
+    'faq1a',
+    'faq2q',
+    'faq2a',
+    'faq3q',
+    'faq3a',
+    'faq4q',
+    'faq4a',
+
+    'form-title',
+    'form-sub',
+    'label-name',
+    'label-phone',
+    'label-interest',
+    'message-label',
+
+    'contact-info-title',
+    'contact-sub',
+
+    'phone-heading',
+    'email-heading',
+    'location-heading',
+    'insta-heading',
+    'loc',
+
+    'footer'
+  ];
+
+
+  ids.forEach(id => {
+
+    const en =
+      document.getElementById(id + '-en');
+
+    const kn =
+      document.getElementById(id + '-kn');
+
+
+    if(en){
+      en.style.display =
+        lang === 'en' ? '' : 'none';
+    }
+
+    if(kn){
+      kn.style.display =
+        lang === 'kn' ? '' : 'none';
+    }
+
+  });
+
+
+  const navAbout =
+    document.getElementById('nav-about');
+
+  const navServices =
+    document.getElementById('nav-services');
+
+  const navProcess =
+    document.getElementById('nav-process');
+
+  const navFaq =
+    document.getElementById('nav-faq');
+
+  const navContact =
+    document.getElementById('nav-contact');
+
+  const partnerBtn =
+    document.getElementById('partner-btn');
+
+  const quickBtn =
+    document.getElementById('quick-enquiry-btn');
+
+  const ctaBtn =
+    document.getElementById('cta-btn');
+
+
+  if(navAbout)
+    navAbout.textContent =
+      lang === 'kn' ? 'ಕುರಿತು' : 'About';
+
+  if(navServices)
+    navServices.textContent =
+      lang === 'kn' ? 'ಸೇವೆಗಳು' : 'Services';
+
+  if(navProcess)
+    navProcess.textContent =
+      lang === 'kn' ? 'ಪ್ರಕ್ರಿಯೆ' : 'Process';
+
+  if(navFaq)
+    navFaq.textContent =
+      lang === 'kn' ? 'FAQ' : 'FAQ';
+
+  if(navContact)
+    navContact.textContent =
+      lang === 'kn' ? 'ಸಂಪರ್ಕ' : 'Contact';
+
+  if(partnerBtn)
+    partnerBtn.textContent =
+      lang === 'kn'
+      ? 'ಮುಂಚಿನ ಪಾಲುದಾರರಾಗಿ'
+      : 'Become an Early Partner';
+
+  if(quickBtn)
+    quickBtn.textContent =
+      lang === 'kn'
+      ? 'ತ್ವರಿತ ವಿಚಾರಣೆ'
+      : 'Quick Enquiry';
+
+  if(ctaBtn)
+    ctaBtn.textContent =
+      lang === 'kn'
+      ? 'ಸಂಭಾಷಣೆಯನ್ನು ಪ್ರಾರಂಭಿಸಿ'
+      : 'Start a Conversation';
+
+
+  document.documentElement.lang =
+    lang === 'kn' ? 'kn' : 'en';
+
+
+  localStorage.setItem(
+    'pranaura_lang',
+    lang
+  );
+
+}
+
+
+/* =========================================
+   MOBILE MENU
+========================================= */
+
+function toggleMenu(){
+
+  const nav =
+    document.getElementById('mainNav');
+
+  nav.classList.toggle('open');
+
+}
+
+
+document.querySelectorAll('#mainNav a')
+  .forEach(link => {
+
+    link.addEventListener('click', () => {
 
       document
-        .querySelectorAll('.lang-btn')
-        .forEach(b => b.classList.remove('active'));
+        .getElementById('mainNav')
+        .classList.remove('open');
 
-      if (btn) {
-        btn.classList.add('active');
-      }
+    });
 
-
-      const ids = [
-
-        'badge',
-        'tagline',
-        'hero',
-
-        'why-title',
-        'why-sub',
-
-        'w1',
-        'w1p',
-        'w2',
-        'w2p',
-        'w3',
-        'w3p',
-
-        'about-title',
-        'about-sub',
-        'about1',
-        'about2',
-        'about3',
-
-        'what-title',
-        'what-sub',
-
-        'what1',
-        'what1p',
-        'what2',
-        'what2p',
-        'what3',
-        'what3p',
-
-        'services-title',
-        'services-sub',
-
-        's1',
-        's1p',
-        's2',
-        's2p',
-        's3',
-        's3p',
-
-        'founder-title',
-        'founder-desc',
-
-        'form-title',
-        'form-sub',
-
-        'label-name',
-        'label-phone',
-        'label-interest',
-
-        'form-submit-btn',
-
-        'contact-info-title',
-        'contact-sub',
-
-        'phone-heading',
-        'email-heading',
-        'location-heading',
-        'insta-heading',
-
-        'loc',
-
-        'footer'
-
-      ];
+  });
 
 
-      ids.forEach(id => {
 
-        const en =
-          document.getElementById(id + '-en');
+/* =========================================
+   MODAL
+========================================= */
 
-        const kn =
-          document.getElementById(id + '-kn');
+function openModal(){
 
+  document
+    .getElementById('enquiryModal')
+    .classList.add('show');
 
-        if (en) {
-          en.style.display =
-            lang === 'en' ? '' : 'none';
-        }
+  document.body.classList.add('modal-open');
 
-
-        if (kn) {
-          kn.style.display =
-            lang === 'kn' ? '' : 'none';
-        }
-
-      });
+}
 
 
-      const navAbout =
-        document.getElementById('nav-about');
+function closeModal(){
 
-      const navServices =
-        document.getElementById('nav-services');
+  document
+    .getElementById('enquiryModal')
+    .classList.remove('show');
 
-      const navContact =
-        document.getElementById('nav-contact');
+  document.body.classList.remove('modal-open');
 
-      const partnerBtn =
-        document.getElementById('partner-btn');
+}
 
 
-      if (navAbout) {
+document
+  .getElementById('enquiryModal')
+  .addEventListener('click', function(e){
 
-        navAbout.textContent =
-          lang === 'kn'
-            ? 'ಕುರಿತು'
-            : 'About';
+    if(e.target === this){
+      closeModal();
+    }
 
-      }
-
-
-      if (navServices) {
-
-        navServices.textContent =
-          lang === 'kn'
-            ? 'ಸೇವೆಗಳು'
-            : 'Services';
-
-      }
+  });
 
 
-      if (navContact) {
+document.addEventListener('keydown', function(e){
 
-        navContact.textContent =
-          lang === 'kn'
-            ? 'ಸಂಪರ್ಕ'
-            : 'Contact';
+  if(e.key === 'Escape'){
+    closeModal();
+  }
 
-      }
-
-
-      if (partnerBtn) {
-
-        partnerBtn.textContent =
-          lang === 'kn'
-            ? 'ಮುಂಚಿನ ಪಾಲುದಾರರಾಗಿ'
-            : 'Become an Early Partner';
-
-      }
+});
 
 
-      document.documentElement.lang =
-        lang === 'kn' ? 'kn' : 'en';
+
+/* =========================================
+   WHATSAPP FORM
+========================================= */
+
+function sendToWhatsApp(name, phone, interest, message){
+
+  const text =
+`Hello Pranaura,
+
+My name is ${name}.
+
+I am a: ${interest}
+
+Phone / WhatsApp: ${phone}
+
+Requirement:
+${message || 'I would like to know more about Pranaura.'}
+
+I would like to connect with Pranaura.`;
+
+  const url =
+    'https://wa.me/919019746649?text=' +
+    encodeURIComponent(text);
+
+  window.open(url, '_blank');
+
+}
 
 
-      localStorage.setItem(
-        'pranaura_lang',
-        lang
-      );
+document
+  .getElementById('mainForm')
+  .addEventListener('submit', function(e){
+
+    e.preventDefault();
 
 
-      updateSelectLanguage(lang);
+    const name =
+      document.getElementById('name').value.trim();
+
+    const phone =
+      document.getElementById('phone').value.trim();
+
+    const interest =
+      document.getElementById('interest').value;
+
+    const message =
+      document.getElementById('message').value.trim();
+
+
+    if(phone.length < 8){
+
+      showToast('Please enter a valid phone number.');
+
+      return;
 
     }
 
 
-    /* =======================================================
-       SELECT LANGUAGE
-    ======================================================== */
+    showToast('Opening WhatsApp...');
 
-    function updateSelectLanguage(lang) {
-
-      const select =
-        document.getElementById('interest');
-
-      if (!select) return;
-
-
-      const options = select.options;
-
-
-      if (lang === 'kn') {
-
-        options[0].textContent = 'ಬಿಲ್ಡರ್';
-        options[1].textContent = 'ಹೂಡಿಕೆದಾರ';
-        options[2].textContent = 'ಭೂಮಾಲೀಕ';
-        options[3].textContent = 'ಇತರ';
-
-      } else {
-
-        options[0].textContent = 'Builder';
-        options[1].textContent = 'Investor';
-        options[2].textContent = 'Land Owner';
-        options[3].textContent = 'Other';
-
-      }
-
-    }
-
-
-    /* =======================================================
-       MODALS
-    ======================================================== */
-
-    function openModal(id) {
-
-      const modal =
-        document.getElementById(id);
-
-      if (!modal) return;
-
-      modal.classList.add('show');
-
-      document.body.classList.add('modal-open');
-
-    }
-
-
-    function closeModal(id) {
-
-      const modal =
-        document.getElementById(id);
-
-      if (!modal) return;
-
-      modal.classList.remove('show');
-
-      const anyOpen =
-        document.querySelector('.modal-overlay.show');
-
-      if (!anyOpen) {
-        document.body.classList.remove('modal-open');
-      }
-
-    }
-
-
-    function openPartnerModal() {
-
-      openModal('partnerModal');
-
-    }
-
-
-    /* =======================================================
-       CLICK OUTSIDE MODAL
-    ======================================================== */
-
-    document
-      .querySelectorAll('.modal-overlay')
-      .forEach(overlay => {
-
-        overlay.addEventListener(
-          'click',
-          function (event) {
-
-            if (event.target === overlay) {
-
-              closeModal(overlay.id);
-
-            }
-
-          }
-        );
-
-      });
-
-
-    /* =======================================================
-       ESCAPE KEY
-    ======================================================== */
-
-    document.addEventListener(
-      'keydown',
-      function (event) {
-
-        if (event.key === 'Escape') {
-
-          document
-            .querySelectorAll('.modal-overlay.show')
-            .forEach(modal => {
-
-              closeModal(modal.id);
-
-            });
-
-        }
-
-      }
-    );
-
-
-    /* =======================================================
-       TOAST
-    ======================================================== */
-
-    let toastTimer;
-
-
-    function showToast(message) {
-
-      const toast =
-        document.getElementById('toast');
-
-      toast.textContent = message;
-
-      toast.classList.add('show');
-
-      clearTimeout(toastTimer);
-
-      toastTimer =
-        setTimeout(() => {
-
-          toast.classList.remove('show');
-
-        }, 3000);
-
-    }
-
-
-    /* =======================================================
-       WHATSAPP FORM FUNCTION
-    ======================================================== */
-
-    function sendToWhatsApp(
+    sendToWhatsApp(
       name,
       phone,
-      interest
-    ) {
-
-      const message =
-        `Hello Pranaura,%0A%0A` +
-        `Name: ${encodeURIComponent(name)}%0A` +
-        `Phone / WhatsApp: ${encodeURIComponent(phone)}%0A` +
-        `I am a: ${encodeURIComponent(interest)}%0A%0A` +
-        `I would like to connect with Pranaura regarding networking opportunities.`;
-
-      const url =
-        `https://wa.me/919019746649?text=${message}`;
-
-      window.open(
-        url,
-        '_blank',
-        'noopener,noreferrer'
-      );
-
-    }
-
-
-    /* =======================================================
-       MAIN FORM
-    ======================================================== */
-
-    const partnerForm =
-      document.getElementById('partnerForm');
-
-
-    if (partnerForm) {
-
-      partnerForm.addEventListener(
-        'submit',
-        function (event) {
-
-          event.preventDefault();
-
-
-          const name =
-            document.getElementById('name').value.trim();
-
-          const phone =
-            document.getElementById('phone').value.trim();
-
-          const interest =
-            document.getElementById('interest').value;
-
-          const consent =
-            document.getElementById('consent').checked;
-
-
-          if (!name || !phone) {
-
-            showToast(
-              'Please complete all required fields.'
-            );
-
-            return;
-
-          }
-
-
-          if (!consent) {
-
-            showToast(
-              'Please confirm the checkbox before continuing.'
-            );
-
-            return;
-
-          }
-
-
-          const button =
-            document.getElementById('form-submit-btn');
-
-          button.classList.add('loading');
-
-          button.disabled = true;
-
-
-          setTimeout(() => {
-
-            button.classList.remove('loading');
-            button.disabled = false;
-
-
-            showToast(
-              'Thank you! Opening WhatsApp...'
-            );
-
-
-            sendToWhatsApp(
-              name,
-              phone,
-              interest
-            );
-
-
-            partnerForm.reset();
-
-
-            setTimeout(() => {
-
-              openModal('successModal');
-
-            }, 600);
-
-
-          }, 700);
-
-        }
-      );
-
-    }
-
-
-    /* =======================================================
-       MODAL PARTNER FORM
-    ======================================================== */
-
-    const modalPartnerForm =
-      document.getElementById(
-        'modalPartnerForm'
-      );
-
-
-    if (modalPartnerForm) {
-
-      modalPartnerForm.addEventListener(
-        'submit',
-        function (event) {
-
-          event.preventDefault();
-
-
-          const name =
-            document
-              .getElementById('modalName')
-              .value
-              .trim();
-
-          const phone =
-            document
-              .getElementById('modalPhone')
-              .value
-              .trim();
-
-          const interest =
-            document
-              .getElementById('modalInterest')
-              .value;
-
-
-          if (!name || !phone) {
-
-            showToast(
-              'Please complete all required fields.'
-            );
-
-            return;
-
-          }
-
-
-          const button =
-            modalPartnerForm.querySelector(
-              'button[type="submit"]'
-            );
-
-
-          button.classList.add('loading');
-          button.disabled = true;
-
-
-          setTimeout(() => {
-
-            button.classList.remove('loading');
-            button.disabled = false;
-
-
-            closeModal('partnerModal');
-
-
-            sendToWhatsApp(
-              name,
-              phone,
-              interest
-            );
-
-
-            modalPartnerForm.reset();
-
-
-            setTimeout(() => {
-
-              openModal('successModal');
-
-            }, 500);
-
-
-          }, 700);
-
-        }
-      );
-
-    }
-
-
-    /* =======================================================
-       SCROLL EFFECTS
-    ======================================================== */
-
-    function handleScroll() {
-
-      const scrollTop =
-        window.scrollY;
-
-      const documentHeight =
-        document.documentElement.scrollHeight -
-        window.innerHeight;
-
-
-      const progress =
-        documentHeight > 0
-          ? (scrollTop / documentHeight) * 100
-          : 0;
-
-
-      document.getElementById(
-        'scrollProgress'
-      ).style.width =
-        progress + '%';
-
-
-      const header =
-        document.getElementById(
-          'mainHeader'
-        );
-
-
-      if (scrollTop > 20) {
-
-        header.classList.add('scrolled');
-
-      } else {
-
-        header.classList.remove('scrolled');
-
-      }
-
-
-      const backTop =
-        document.getElementById(
-          'backTop'
-        );
-
-
-      if (scrollTop > 500) {
-
-        backTop.classList.add('show');
-
-      } else {
-
-        backTop.classList.remove('show');
-
-      }
-
-
-      updateActiveNavigation();
-
-    }
-
-
-    window.addEventListener(
-      'scroll',
-      handleScroll,
-      { passive: true }
+      interest,
+      message
     );
 
-
-    /* =======================================================
-       ACTIVE NAVIGATION
-    ======================================================== */
-
-    function updateActiveNavigation() {
-
-      const sections =
-        document.querySelectorAll(
-          'section[id]'
-        );
+  });
 
 
-      let current = '';
+
+document
+  .getElementById('modalForm')
+  .addEventListener('submit', function(e){
+
+    e.preventDefault();
 
 
-      sections.forEach(section => {
+    const name =
+      document.getElementById('modalName').value.trim();
 
-        const top =
-          section.offsetTop - 150;
+    const phone =
+      document.getElementById('modalPhone').value.trim();
 
-        if (
-          window.scrollY >= top
-        ) {
+    const interest =
+      document.getElementById('modalInterest').value;
 
-          current =
-            section.getAttribute('id');
+    const message =
+      document.getElementById('modalMessage').value.trim();
+
+
+    if(phone.length < 8){
+
+      showToast('Please enter a valid phone number.');
+
+      return;
+
+    }
+
+
+    closeModal();
+
+    showToast('Opening WhatsApp...');
+
+    sendToWhatsApp(
+      name,
+      phone,
+      interest,
+      message
+    );
+
+  });
+
+
+
+/* =========================================
+   TOAST
+========================================= */
+
+let toastTimer;
+
+function showToast(message){
+
+  const toast =
+    document.getElementById('toast');
+
+  toast.textContent = message;
+
+  toast.classList.add('show');
+
+  clearTimeout(toastTimer);
+
+  toastTimer =
+    setTimeout(() => {
+
+      toast.classList.remove('show');
+
+    }, 3000);
+
+}
+
+
+
+/* =========================================
+   FAQ
+========================================= */
+
+document
+  .querySelectorAll('.faq-question')
+  .forEach(button => {
+
+    button.addEventListener('click', () => {
+
+      const item =
+        button.parentElement;
+
+
+      document
+        .querySelectorAll('.faq-item')
+        .forEach(other => {
+
+          if(other !== item){
+            other.classList.remove('open');
+          }
+
+        });
+
+
+      item.classList.toggle('open');
+
+    });
+
+  });
+
+
+
+/* =========================================
+   SCROLL PROGRESS + HEADER + BACK TOP
+========================================= */
+
+window.addEventListener('scroll', () => {
+
+  const scrollTop =
+    window.scrollY;
+
+  const height =
+    document.documentElement.scrollHeight -
+    document.documentElement.clientHeight;
+
+
+  const progress =
+    (scrollTop / height) * 100;
+
+
+  document
+    .getElementById('scrollProgress')
+    .style.width =
+    progress + '%';
+
+
+  const header =
+    document.getElementById('header');
+
+
+  if(scrollTop > 30){
+    header.classList.add('scrolled');
+  }else{
+    header.classList.remove('scrolled');
+  }
+
+
+  const backTop =
+    document.getElementById('backTop');
+
+
+  if(scrollTop > 500){
+    backTop.classList.add('show');
+  }else{
+    backTop.classList.remove('show');
+  }
+
+});
+
+
+
+/* =========================================
+   ACTIVE NAVIGATION
+========================================= */
+
+const sections =
+  document.querySelectorAll('section[id]');
+
+const navLinks =
+  document.querySelectorAll('#mainNav a');
+
+
+window.addEventListener('scroll', () => {
+
+  let current = '';
+
+  sections.forEach(section => {
+
+    const sectionTop =
+      section.offsetTop - 150;
+
+    if(window.scrollY >= sectionTop){
+
+      current =
+        section.getAttribute('id');
+
+    }
+
+  });
+
+
+  navLinks.forEach(link => {
+
+    link.classList.remove('active');
+
+    if(
+      link.getAttribute('href') ===
+      '#' + current
+    ){
+
+      link.classList.add('active');
+
+    }
+
+  });
+
+});
+
+
+
+/* =========================================
+   REVEAL ANIMATIONS
+========================================= */
+
+const observer =
+  new IntersectionObserver(
+    (entries, obs) => {
+
+      entries.forEach(entry => {
+
+        if(entry.isIntersecting){
+
+          entry.target
+            .classList
+            .add('appear');
+
+          obs.unobserve(entry.target);
 
         }
 
       });
 
-
-      document
-        .querySelectorAll('nav a')
-        .forEach(link => {
-
-          link.classList.remove('active');
-
-
-          const href =
-            link.getAttribute('href');
-
-
-          if (href === '#' + current) {
-
-            link.classList.add('active');
-
-          }
-
-        });
-
+    },
+    {
+      threshold:0.1
     }
+  );
 
 
-    /* =======================================================
-       REVEAL ANIMATION
-    ======================================================== */
-
-    function initializeAnimations() {
-
-      const observer =
-        new IntersectionObserver(
-          (entries, obs) => {
-
-            entries.forEach(entry => {
-
-              if (entry.isIntersecting) {
-
-                entry.target
-                  .classList
-                  .add('appear');
-
-                obs.unobserve(
-                  entry.target
-                );
-
-              }
-
-            });
-
-          },
-          {
-            threshold: 0.1
-          }
-        );
+document
+  .querySelectorAll('.fade-in')
+  .forEach(el => observer.observe(el));
 
 
-      document
-        .querySelectorAll('.fade-in')
-        .forEach(el => {
 
-          observer.observe(el);
+/* =========================================
+   LAUNCH COUNTDOWN
+========================================= */
 
-        });
+function updateCountdown(){
 
-    }
+  const launch =
+    new Date(
+      'September 1, 2026 00:00:00'
+    ).getTime();
 
+  const now =
+    new Date().getTime();
 
-    /* =======================================================
-       WELCOME POPUP
-    ======================================================== */
-
-    function initializeWelcomePopup() {
-
-      const shown =
-        sessionStorage.getItem(
-          'pranaura_welcome_shown'
-        );
+  const distance =
+    launch - now;
 
 
-      if (!shown) {
+  if(distance <= 0){
 
-        setTimeout(() => {
+    document.getElementById('days').textContent = '00';
+    document.getElementById('hours').textContent = '00';
+    document.getElementById('minutes').textContent = '00';
+    document.getElementById('seconds').textContent = '00';
 
-          openModal(
-            'welcomeModal'
-          );
+    return;
 
-          sessionStorage.setItem(
-            'pranaura_welcome_shown',
-            'true'
-          );
-
-        }, 1200);
-
-      }
-
-    }
+  }
 
 
-    /* =======================================================
-       INITIALIZATION
-    ======================================================== */
+  const days =
+    Math.floor(
+      distance / (1000 * 60 * 60 * 24)
+    );
 
-    window.addEventListener(
-      'DOMContentLoaded',
-      function () {
+  const hours =
+    Math.floor(
+      (distance % (1000 * 60 * 60 * 24))
+      / (1000 * 60 * 60)
+    );
 
-        const savedLang =
-          localStorage.getItem(
-            'pranaura_lang'
-          ) || 'en';
+  const minutes =
+    Math.floor(
+      (distance % (1000 * 60 * 60))
+      / (1000 * 60)
+    );
 
-
-        const activeBtn =
-          document.querySelector(
-            `.lang-btn[onclick*="${savedLang}"]`
-          );
-
-
-        setLanguage(
-          savedLang,
-          activeBtn
-        );
-
-
-        initializeAnimations();
-
-        initializeWelcomePopup();
-
-        handleScroll();
-
-      }
+  const seconds =
+    Math.floor(
+      (distance % (1000 * 60))
+      / 1000
     );
 
 
-  </script>
+  document.getElementById('days')
+    .textContent =
+    String(days).padStart(2,'0');
+
+  document.getElementById('hours')
+    .textContent =
+    String(hours).padStart(2,'0');
+
+  document.getElementById('minutes')
+    .textContent =
+    String(minutes).padStart(2,'0');
+
+  document.getElementById('seconds')
+    .textContent =
+    String(seconds).padStart(2,'0');
+
+}
+
+
+updateCountdown();
+
+setInterval(updateCountdown,1000);
+
+
+
+/* =========================================
+   COOKIE NOTICE
+========================================= */
+
+function acceptCookie(){
+
+  localStorage.setItem(
+    'pranaura_cookie',
+    'accepted'
+  );
+
+  document
+    .getElementById('cookieNotice')
+    .classList.remove('show');
+
+}
+
+
+function dismissCookie(){
+
+  localStorage.setItem(
+    'pranaura_cookie',
+    'dismissed'
+  );
+
+  document
+    .getElementById('cookieNotice')
+    .classList.remove('show');
+
+}
+
+
+
+/* =========================================
+   INITIALIZATION
+========================================= */
+
+window.addEventListener(
+  'DOMContentLoaded',
+  () => {
+
+    const savedLang =
+      localStorage.getItem('pranaura_lang')
+      || 'en';
+
+
+    const activeBtn =
+      document.querySelector(
+        `.lang-btn[onclick*="${savedLang}"]`
+      );
+
+
+    setLanguage(
+      savedLang,
+      activeBtn
+    );
+
+
+    /* Cookie */
+
+    const cookieStatus =
+      localStorage.getItem(
+        'pranaura_cookie'
+      );
+
+
+    if(!cookieStatus){
+
+      setTimeout(() => {
+
+        document
+          .getElementById('cookieNotice')
+          .classList.add('show');
+
+      }, 2500);
+
+    }
+
+
+    /* First visit welcome */
+
+    const welcomed =
+      sessionStorage.getItem(
+        'pranaura_welcomed'
+      );
+
+
+    if(!welcomed){
+
+      setTimeout(() => {
+
+        openModal();
+
+        sessionStorage.setItem(
+          'pranaura_welcomed',
+          'true'
+        );
+
+      }, 4500);
+
+    }
+
+  }
+);
+
+</script>
 
 
 </body>
-
 </html>
