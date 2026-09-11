@@ -4,25 +4,19 @@
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>PRANAURA | Real Estate Intelligence & Partnerships</title>
+<title>PRANAURA | Strategic Builder & Investor Partnerships</title>
 
 <meta name="description"
-content="PRANAURA connects builders, developers, landowners, investors and property buyers through structured real estate networking, smart matching and AI-assisted workflows.">
+content="PRANAURA connects builders, developers, landowners, investors and property buyers through structured professional networking and AI-assisted property workflows.">
 
 <meta name="keywords"
-content="PRANAURA, Mysuru real estate, Mysore property, builders, investors, landowners, property advisory">
+content="PRANAURA, real estate advisory, Mysuru real estate, builders, investors, landowners, property networking">
 
 <meta name="author" content="Pranathi H.S.">
 
 <meta name="theme-color" content="#5b3a20">
-
-<meta property="og:title"
-content="PRANAURA | Strategic Builder & Investor Partnerships">
-
-<meta property="og:description"
-content="Connecting Builders, Landowners & Investors.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -34,54 +28,58 @@ rel="stylesheet">
 <style>
 
 /* =========================================================
-   ROOT
+   PRANAURA
+   COMPLETE SINGLE-PAGE WEBSITE
 ========================================================= */
 
 :root{
 
---cream:#f7f0e6;
---cream2:#fffaf2;
---cream3:#eee1d0;
+    --cream:#f7f0e6;
+    --cream2:#fffaf2;
+    --cream3:#eee1d0;
 
---brown:#5b3a20;
---brown2:#79502f;
---brown3:#382216;
+    --brown:#5b3a20;
+    --brown2:#7a5230;
+    --brown3:#382216;
 
---gold:#a87b42;
+    --gold:#a87b42;
 
---text:#342418;
---muted:#756657;
+    --text:#342418;
+    --muted:#756657;
 
---border:#d7c3ac;
+    --border:#d7c3ac;
 
---green:#25D366;
+    --white:#ffffff;
 
---red:#a84d42;
+    --green:#25D366;
 
---white:#ffffff;
+    --red:#a84d42;
 
---shadow:0 15px 45px rgba(70,42,22,.12);
+    --success:#47744c;
 
---radius:16px;
+    --shadow:
+        0 15px 45px rgba(70,42,22,.12);
+
+    --radius:17px;
 
 }
 
 body.dark{
 
---cream:#15100c;
---cream2:#201711;
---cream3:#2a1e15;
+    --cream:#15100c;
+    --cream2:#211811;
+    --cream3:#2a1e15;
 
---brown:#c59b6b;
---brown2:#dfb984;
---brown3:#f2dcc0;
+    --brown:#c59b6b;
+    --brown2:#dfba89;
+    --brown3:#f2dcc0;
 
---text:#f6eadb;
---muted:#c6b6a4;
+    --text:#f6eadb;
+    --muted:#c6b6a4;
 
---border:#554233;
+    --border:#554233;
 
---white:#211812;
+    --white:#211811;
 
 }
 
@@ -91,197 +89,343 @@ body.dark{
 ========================================================= */
 
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
+
+    margin:0;
+    padding:0;
+
+    box-sizing:border-box;
+
 }
 
 html{
-scroll-behavior:smooth;
+
+    scroll-behavior:smooth;
+
 }
 
 body{
 
-font-family:Poppins,sans-serif;
+    font-family:"Poppins",sans-serif;
 
-background:var(--cream);
+    background:var(--cream);
 
-color:var(--text);
+    color:var(--text);
 
-line-height:1.6;
+    line-height:1.6;
 
-overflow-x:hidden;
+    overflow-x:hidden;
+
+}
+
+body,
+button,
+input,
+select,
+textarea{
+
+    transition:
+        background-color .25s ease,
+        color .25s ease,
+        border-color .25s ease;
 
 }
 
 a{
-text-decoration:none;
-color:inherit;
+
+    text-decoration:none;
+
+    color:inherit;
+
 }
 
-button,input,select,textarea{
-font:inherit;
+button,
+input,
+select,
+textarea{
+
+    font:inherit;
+
 }
 
 button{
-cursor:pointer;
+
+    cursor:pointer;
+
 }
 
 img{
-max-width:100%;
+
+    max-width:100%;
+
+    display:block;
+
 }
 
 ::selection{
-background:var(--brown);
-color:white;
+
+    background:var(--brown);
+
+    color:#fff;
+
+}
+
+
+/* =========================================================
+   LOADER
+========================================================= */
+
+.loader{
+
+    position:fixed;
+
+    inset:0;
+
+    z-index:100000;
+
+    background:var(--cream2);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    transition:.6s ease;
+
+}
+
+.loader.hide{
+
+    opacity:0;
+
+    visibility:hidden;
+
+}
+
+.loader-inner{
+
+    text-align:center;
+
+}
+
+.loader-logo{
+
+    width:90px;
+
+    height:90px;
+
+    object-fit:contain;
+
+    margin:auto;
+
+}
+
+.loader-brand{
+
+    font-family:"Cormorant Garamond",serif;
+
+    color:var(--brown);
+
+    font-size:32px;
+
+    font-weight:700;
+
+    letter-spacing:6px;
+
+    margin-top:10px;
+
+}
+
+.loader-line{
+
+    width:120px;
+
+    height:2px;
+
+    background:var(--brown);
+
+    margin:13px auto 0;
+
+    animation:loaderLine 1.3s infinite;
+
+}
+
+@keyframes loaderLine{
+
+    0%{
+        transform:scaleX(0);
+    }
+
+    50%{
+        transform:scaleX(1);
+    }
+
+    100%{
+        transform:scaleX(0);
+    }
+
 }
 
 
 /* =========================================================
    HEADER
+   IMPORTANT:
+   NO LOGO
+   NO PRANAURA NAME
 ========================================================= */
 
 header{
 
-position:fixed;
-top:0;
-left:0;
-right:0;
+    position:fixed;
 
-z-index:10000;
+    top:0;
 
-background:rgba(247,240,230,.94);
+    left:0;
 
-backdrop-filter:blur(18px);
+    right:0;
 
-border-bottom:1px solid var(--border);
+    z-index:10000;
+
+    background:rgba(247,240,230,.94);
+
+    backdrop-filter:blur(18px);
+
+    border-bottom:1px solid var(--border);
 
 }
 
 body.dark header{
-background:rgba(21,16,12,.94);
+
+    background:rgba(21,16,12,.94);
+
 }
 
 .nav{
 
-max-width:1250px;
-margin:auto;
+    max-width:1250px;
 
-height:74px;
+    height:72px;
 
-padding:0 22px;
+    margin:auto;
 
-display:flex;
-align-items:center;
-justify-content:space-between;
+    padding:0 22px;
 
-gap:20px;
+    display:flex;
 
-}
+    align-items:center;
 
-.brand{
+    justify-content:center;
 
-display:flex;
-align-items:center;
-gap:10px;
-
-}
-
-.brand img{
-
-width:43px;
-height:43px;
-
-object-fit:contain;
-
-}
-
-.brand-name{
-
-font-family:"Cormorant Garamond",serif;
-
-font-size:27px;
-
-font-weight:700;
-
-letter-spacing:4px;
-
-color:var(--brown);
+    gap:20px;
 
 }
 
 .navlinks{
 
-display:flex;
-gap:20px;
-align-items:center;
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:24px;
 
 }
 
 .navlinks a{
 
-font-size:11px;
+    font-size:10px;
 
-text-transform:uppercase;
+    letter-spacing:.9px;
 
-letter-spacing:.8px;
+    text-transform:uppercase;
 
-color:var(--muted);
+    color:var(--muted);
 
-transition:.25s;
+    position:relative;
+
+    transition:.25s;
 
 }
 
 .navlinks a:hover,
 .navlinks a.active{
 
-color:var(--brown);
+    color:var(--brown);
+
+}
+
+.navlinks a.active::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    right:0;
+
+    bottom:-9px;
+
+    height:2px;
+
+    background:var(--brown);
 
 }
 
 .navtools{
 
-display:flex;
-gap:7px;
-align-items:center;
+    position:absolute;
+
+    right:22px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:7px;
 
 }
 
-.icon-btn{
+.nav-btn{
 
-border:1px solid var(--border);
+    border:1px solid var(--border);
 
-background:transparent;
+    background:transparent;
 
-color:var(--brown);
+    color:var(--brown);
 
-padding:8px 10px;
+    padding:8px 10px;
 
-border-radius:9px;
+    border-radius:8px;
 
-}
-
-.cta{
-
-background:var(--brown);
-
-color:white;
-
-border:none;
-
-padding:10px 14px;
-
-border-radius:9px;
-
-font-size:11px;
-
-text-transform:uppercase;
+    font-size:11px;
 
 }
 
-.menu{
+.nav-cta{
 
-display:none;
+    background:var(--brown);
+
+    color:white;
+
+    border:none;
+
+    padding:10px 14px;
+
+    border-radius:9px;
+
+    font-size:10px;
+
+    text-transform:uppercase;
+
+    letter-spacing:.6px;
+
+}
+
+.menu-btn{
+
+    display:none;
 
 }
 
@@ -292,325 +436,363 @@ display:none;
 
 .container{
 
-max-width:1150px;
+    max-width:1150px;
 
-margin:auto;
+    margin:auto;
 
 }
 
 section{
 
-padding:110px 22px;
+    padding:110px 22px;
 
 }
 
 .label{
 
-font-size:10px;
+    color:var(--brown);
 
-letter-spacing:2px;
+    font-size:10px;
 
-text-transform:uppercase;
+    text-transform:uppercase;
 
-font-weight:600;
+    letter-spacing:2px;
 
-color:var(--brown);
+    font-weight:600;
 
-margin-bottom:10px;
+    margin-bottom:10px;
 
 }
 
 .title{
 
-font-family:"Cormorant Garamond",serif;
+    font-family:"Cormorant Garamond",serif;
 
-font-size:54px;
+    color:var(--brown3);
 
-line-height:1.02;
+    font-size:55px;
 
-color:var(--brown3);
+    line-height:1.02;
 
-margin-bottom:18px;
+    margin-bottom:18px;
 
 }
 
 .text{
 
-font-size:13px;
+    color:var(--muted);
 
-color:var(--muted);
+    font-size:13px;
 
-max-width:720px;
+    max-width:720px;
 
 }
 
 .grid{
 
-display:grid;
+    display:grid;
 
-gap:18px;
+    gap:18px;
 
 }
 
 .g2{
-grid-template-columns:repeat(2,1fr);
+
+    grid-template-columns:repeat(2,1fr);
+
 }
 
 .g3{
-grid-template-columns:repeat(3,1fr);
+
+    grid-template-columns:repeat(3,1fr);
+
 }
 
 .g4{
-grid-template-columns:repeat(4,1fr);
+
+    grid-template-columns:repeat(4,1fr);
+
 }
 
 .card{
 
-background:var(--cream2);
+    background:var(--cream2);
 
-border:1px solid var(--border);
+    border:1px solid var(--border);
 
-border-radius:var(--radius);
+    border-radius:var(--radius);
 
-padding:25px;
+    padding:26px;
 
-transition:.3s;
+    transition:.3s ease;
 
 }
 
 .card:hover{
 
-transform:translateY(-4px);
+    transform:translateY(-5px);
 
-border-color:var(--brown);
+    border-color:var(--brown);
 
 }
 
 .card-icon{
 
-width:45px;
-height:45px;
+    width:46px;
 
-display:flex;
-align-items:center;
-justify-content:center;
+    height:46px;
 
-border:1px solid var(--border);
+    border:1px solid var(--border);
 
-border-radius:11px;
+    border-radius:11px;
 
-color:var(--brown);
+    display:flex;
 
-font-size:20px;
+    align-items:center;
 
-margin-bottom:17px;
+    justify-content:center;
+
+    color:var(--brown);
+
+    font-size:20px;
+
+    margin-bottom:17px;
 
 }
 
 .card h3{
 
-font-family:"Cormorant Garamond",serif;
+    font-family:"Cormorant Garamond",serif;
 
-font-size:27px;
+    font-size:28px;
 
-color:var(--brown3);
+    color:var(--brown3);
 
-margin-bottom:8px;
+    margin-bottom:8px;
 
 }
 
 .card p{
 
-font-size:12px;
+    font-size:12px;
 
-color:var(--muted);
-
-}
-
-.btn{
-
-display:inline-flex;
-
-align-items:center;
-justify-content:center;
-
-gap:8px;
-
-padding:12px 17px;
-
-border-radius:9px;
-
-border:1px solid var(--border);
-
-font-size:11px;
-
-transition:.25s;
-
-}
-
-.btn.primary{
-
-background:var(--brown);
-
-color:white;
-
-border-color:var(--brown);
-
-}
-
-.btn.primary:hover{
-
-background:var(--brown2);
-
-transform:translateY(-2px);
-
-}
-
-.btn.outline{
-
-background:transparent;
-
-color:var(--brown);
-
-}
-
-.btn.outline:hover{
-
-background:var(--cream3);
+    color:var(--muted);
 
 }
 
 .row{
 
-display:flex;
-gap:10px;
-flex-wrap:wrap;
+    display:flex;
+
+    gap:10px;
+
+    flex-wrap:wrap;
 
 }
 
-.center{
-text-align:center;
+.btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:8px;
+
+    border-radius:9px;
+
+    padding:12px 17px;
+
+    border:1px solid var(--border);
+
+    font-size:11px;
+
+    transition:.25s;
+
+}
+
+.btn-primary{
+
+    background:var(--brown);
+
+    color:white;
+
+    border-color:var(--brown);
+
+}
+
+.btn-primary:hover{
+
+    background:var(--brown2);
+
+    transform:translateY(-2px);
+
+}
+
+.btn-outline{
+
+    color:var(--brown);
+
+    background:transparent;
+
+}
+
+.btn-outline:hover{
+
+    background:var(--cream3);
+
 }
 
 
 /* =========================================================
    HERO
+   LOGO + PRANAURA APPEAR HERE
 ========================================================= */
 
 .hero{
 
-min-height:100vh;
+    min-height:100vh;
 
-padding-top:145px;
+    padding-top:120px;
 
-display:flex;
-align-items:center;
+    display:flex;
 
-}
+    align-items:center;
 
-.hero-grid{
+    justify-content:center;
 
-display:grid;
-
-grid-template-columns:1.1fr .9fr;
-
-gap:70px;
-
-align-items:center;
+    text-align:center;
 
 }
 
-.badge{
+.hero-inner{
 
-display:inline-flex;
+    max-width:900px;
 
-align-items:center;
-
-gap:8px;
-
-padding:8px 13px;
-
-border:1px solid var(--border);
-
-border-radius:30px;
-
-font-size:10px;
-
-text-transform:uppercase;
-
-letter-spacing:1px;
-
-color:var(--brown);
-
-margin-bottom:22px;
-
-}
-
-.dot{
-
-width:7px;
-height:7px;
-
-background:var(--brown);
-
-border-radius:50%;
-
-}
-
-.hero-title{
-
-font-family:"Cormorant Garamond",serif;
-
-font-size:90px;
-
-line-height:.82;
-
-letter-spacing:8px;
-
-color:var(--brown);
-
-margin-bottom:22px;
-
-}
-
-.hero-sub{
-
-font-size:18px;
-
-max-width:650px;
-
-margin-bottom:30px;
+    margin:auto;
 
 }
 
 .hero-logo{
 
-display:flex;
+    width:145px;
 
-align-items:center;
-justify-content:center;
+    height:145px;
+
+    object-fit:contain;
+
+    margin:0 auto 20px;
 
 }
 
-.hero-logo img{
+.hero-brand{
 
-width:min(390px,80%);
+    font-family:"Cormorant Garamond",serif;
 
-object-fit:contain;
+    color:var(--brown);
+
+    font-size:92px;
+
+    line-height:.8;
+
+    letter-spacing:10px;
+
+    font-weight:700;
+
+    margin-bottom:23px;
+
+}
+
+.hero-tagline{
+
+    font-family:"Cormorant Garamond",serif;
+
+    color:var(--brown3);
+
+    font-size:29px;
+
+    margin-bottom:15px;
+
+}
+
+.hero-sub{
+
+    max-width:680px;
+
+    margin:auto;
+
+    color:var(--muted);
+
+    font-size:14px;
+
+}
+
+.launch{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    padding:7px 13px;
+
+    border:1px solid var(--border);
+
+    border-radius:30px;
+
+    color:var(--brown);
+
+    font-size:9px;
+
+    letter-spacing:1px;
+
+    text-transform:uppercase;
+
+    margin-bottom:25px;
+
+}
+
+.launch-dot{
+
+    width:7px;
+
+    height:7px;
+
+    border-radius:50%;
+
+    background:var(--brown);
+
+}
+
+.hero-actions{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:10px;
+
+    flex-wrap:wrap;
+
+    margin-top:30px;
 
 }
 
 .hero-note{
 
-margin-top:25px;
+    max-width:600px;
 
-padding-top:16px;
+    margin:25px auto 0;
 
-border-top:1px solid var(--border);
+    padding-top:16px;
 
-font-size:10px;
+    border-top:1px solid var(--border);
 
-color:var(--muted);
+    color:var(--muted);
+
+    font-size:10px;
 
 }
 
@@ -621,51 +803,112 @@ color:var(--muted);
 
 .stats{
 
-display:grid;
+    display:grid;
 
-grid-template-columns:repeat(4,1fr);
+    grid-template-columns:repeat(4,1fr);
 
-border-top:1px solid var(--border);
+    border-top:1px solid var(--border);
 
-border-bottom:1px solid var(--border);
+    border-bottom:1px solid var(--border);
 
 }
 
 .stat{
 
-padding:25px;
+    text-align:center;
 
-text-align:center;
+    padding:25px;
 
-border-right:1px solid var(--border);
+    border-right:1px solid var(--border);
 
 }
 
 .stat:last-child{
-border-right:none;
+
+    border-right:none;
+
 }
 
 .stat strong{
 
-display:block;
+    display:block;
 
-font-family:"Cormorant Garamond",serif;
+    color:var(--brown);
 
-font-size:38px;
+    font-family:"Cormorant Garamond",serif;
 
-color:var(--brown);
+    font-size:38px;
 
 }
 
 .stat span{
 
-font-size:10px;
+    color:var(--muted);
 
-text-transform:uppercase;
+    font-size:9px;
 
-color:var(--muted);
+    text-transform:uppercase;
 
-letter-spacing:1px;
+    letter-spacing:1px;
+
+}
+
+
+/* =========================================================
+   ABOUT
+========================================================= */
+
+.about-grid{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:50px;
+
+    align-items:center;
+
+}
+
+.about-highlight{
+
+    border-left:3px solid var(--brown);
+
+    padding-left:25px;
+
+}
+
+.about-list{
+
+    margin-top:25px;
+
+    display:grid;
+
+    gap:9px;
+
+}
+
+.about-list div{
+
+    border:1px solid var(--border);
+
+    border-radius:9px;
+
+    padding:12px;
+
+    color:var(--muted);
+
+    font-size:11px;
+
+}
+
+.about-list span{
+
+    color:var(--brown);
+
+    font-weight:600;
+
+    margin-right:8px;
 
 }
 
@@ -676,22 +919,25 @@ letter-spacing:1px;
 
 .process-number{
 
-width:42px;
-height:42px;
+    width:42px;
 
-background:var(--brown);
+    height:42px;
 
-color:white;
+    border-radius:10px;
 
-display:flex;
-align-items:center;
-justify-content:center;
+    background:var(--brown);
 
-border-radius:10px;
+    color:white;
 
-margin-bottom:15px;
+    display:flex;
 
-font-size:11px;
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:10px;
+
+    margin-bottom:16px;
 
 }
 
@@ -702,114 +948,188 @@ font-size:11px;
 
 .platform{
 
-background:var(--cream3);
+    background:var(--cream3);
 
 }
 
-.platform-card{
+.platform-grid{
 
-padding:21px;
+    display:grid;
 
-background:var(--cream2);
+    grid-template-columns:repeat(3,1fr);
 
-border:1px solid var(--border);
+    gap:15px;
 
-border-radius:13px;
-
-}
-
-.platform-card strong{
-
-display:block;
-
-color:var(--brown);
-
-font-size:13px;
-
-margin-bottom:4px;
+    margin-top:35px;
 
 }
 
-.platform-card span{
+.platform-item{
 
-font-size:11px;
+    background:var(--cream2);
 
-color:var(--muted);
+    border:1px solid var(--border);
+
+    border-radius:12px;
+
+    padding:20px;
+
+}
+
+.platform-item strong{
+
+    display:block;
+
+    color:var(--brown);
+
+    font-size:12px;
+
+    margin-bottom:4px;
+
+}
+
+.platform-item span{
+
+    font-size:10px;
+
+    color:var(--muted);
 
 }
 
 
 /* =========================================================
-   MATCH
+   SERVICES
+========================================================= */
+
+.service-button{
+
+    margin-top:18px;
+
+}
+
+
+/* =========================================================
+   OPPORTUNITIES
+========================================================= */
+
+.opportunity-status{
+
+    color:var(--brown);
+
+    font-size:9px;
+
+    text-transform:uppercase;
+
+    letter-spacing:1px;
+
+}
+
+.opportunity-meta{
+
+    display:grid;
+
+    gap:5px;
+
+    margin:13px 0;
+
+    font-size:10px;
+
+    color:var(--muted);
+
+}
+
+.disclaimer{
+
+    margin-top:20px;
+
+    padding:15px;
+
+    border:1px dashed var(--border);
+
+    border-radius:10px;
+
+    color:var(--muted);
+
+    font-size:9px;
+
+}
+
+
+/* =========================================================
+   SMART MATCH
 ========================================================= */
 
 .match{
 
-background:var(--brown);
-
-color:white;
+    background:var(--brown);
 
 }
 
 .match .label{
-color:#dfbd94;
+
+    color:#dfbd94;
+
 }
 
 .match .title{
-color:white;
+
+    color:white;
+
 }
 
 .match .text{
-color:#e8d8c6;
+
+    color:#e8d9c8;
+
 }
 
 .form{
 
-background:var(--cream2);
+    background:var(--cream2);
 
-color:var(--text);
+    padding:30px;
 
-padding:30px;
+    border-radius:20px;
 
-border-radius:20px;
-
-margin-top:35px;
+    margin-top:35px;
 
 }
 
-.formgrid{
+.form-grid{
 
-display:grid;
+    display:grid;
 
-grid-template-columns:repeat(2,1fr);
+    grid-template-columns:repeat(2,1fr);
 
-gap:15px;
+    gap:15px;
 
 }
 
 .field{
 
-display:flex;
+    display:flex;
 
-flex-direction:column;
+    flex-direction:column;
 
-gap:6px;
+    gap:6px;
 
 }
 
 .field.full{
-grid-column:1/-1;
+
+    grid-column:1/-1;
+
 }
 
 .field label{
 
-font-size:10px;
+    font-size:9px;
 
-text-transform:uppercase;
+    text-transform:uppercase;
 
-letter-spacing:.7px;
+    letter-spacing:.7px;
 
-color:var(--muted);
+    color:var(--muted);
 
 }
 
@@ -817,25 +1137,27 @@ color:var(--muted);
 .field select,
 .field textarea{
 
-border:1px solid var(--border);
+    width:100%;
 
-background:var(--white);
+    padding:12px;
 
-color:var(--text);
+    border:1px solid var(--border);
 
-padding:12px;
+    border-radius:9px;
 
-border-radius:9px;
+    background:var(--white);
 
-outline:none;
+    color:var(--text);
+
+    outline:none;
 
 }
 
 .field textarea{
 
-min-height:110px;
+    min-height:110px;
 
-resize:vertical;
+    resize:vertical;
 
 }
 
@@ -843,110 +1165,158 @@ resize:vertical;
 .field select:focus,
 .field textarea:focus{
 
-border-color:var(--brown);
+    border-color:var(--brown);
 
 }
 
 .result{
 
-display:none;
+    display:none;
 
-padding:20px;
+    margin-top:20px;
 
-margin-top:20px;
+    padding:20px;
 
-border:1px solid var(--border);
+    background:var(--cream);
 
-border-radius:12px;
+    border:1px solid var(--border);
 
-background:var(--cream);
+    border-radius:12px;
+
+    color:var(--text);
 
 }
 
 .result.show{
-display:block;
+
+    display:block;
+
+}
+
+.result-id{
+
+    color:var(--brown);
+
+    font-weight:700;
+
+    letter-spacing:1px;
+
 }
 
 
 /* =========================================================
-   AI
+   AI SECTION
 ========================================================= */
 
 .ai-section{
 
-background:var(--cream2);
+    background:var(--cream2);
 
 }
 
-.ai-grid{
+.ai-panel{
 
-display:grid;
+    display:grid;
 
-grid-template-columns:1fr 1fr;
+    grid-template-columns:1fr 1fr;
 
-border:1px solid var(--border);
+    border:1px solid var(--border);
 
-border-radius:20px;
+    border-radius:20px;
 
-overflow:hidden;
+    overflow:hidden;
 
-}
-
-.ai-left{
-
-padding:45px;
-
-background:var(--brown);
-
-color:white;
+    margin-top:35px;
 
 }
 
-.ai-left h3{
+.ai-info{
 
-font-family:"Cormorant Garamond",serif;
+    padding:45px;
 
-font-size:50px;
+    background:var(--brown);
 
-margin-bottom:15px;
-
-}
-
-.ai-left p{
-
-font-size:12px;
-
-color:#eadac7;
+    color:white;
 
 }
 
-.ai-list{
+.ai-info h3{
 
-display:grid;
+    font-family:"Cormorant Garamond",serif;
 
-gap:8px;
+    font-size:50px;
 
-margin-top:25px;
-
-}
-
-.ai-list div{
-
-padding:11px;
-
-border:1px solid rgba(255,255,255,.2);
-
-border-radius:8px;
-
-font-size:11px;
+    margin-bottom:14px;
 
 }
 
-.ai-right{
+.ai-info p{
 
-padding:30px;
+    font-size:12px;
 
-background:var(--cream);
+    color:#eadac7;
+
+}
+
+.ai-capabilities{
+
+    display:grid;
+
+    gap:8px;
+
+    margin-top:25px;
+
+}
+
+.ai-capabilities div{
+
+    border:1px solid rgba(255,255,255,.2);
+
+    border-radius:8px;
+
+    padding:10px;
+
+    font-size:10px;
+
+}
+
+.ai-preview{
+
+    padding:30px;
+
+    background:var(--cream);
+
+}
+
+.preview-message{
+
+    max-width:80%;
+
+    padding:11px 13px;
+
+    border-radius:12px;
+
+    font-size:11px;
+
+    margin-bottom:10px;
+
+}
+
+.preview-bot{
+
+    background:var(--cream2);
+
+    border:1px solid var(--border);
+
+}
+
+.preview-user{
+
+    margin-left:auto;
+
+    background:var(--brown);
+
+    color:white;
 
 }
 
@@ -955,133 +1325,55 @@ background:var(--cream);
    CRM
 ========================================================= */
 
-.crm-section{
+.crm{
 
-background:var(--cream3);
+    background:var(--cream3);
 
 }
 
 .dashboard{
 
-display:grid;
+    display:grid;
 
-grid-template-columns:repeat(4,1fr);
+    grid-template-columns:repeat(4,1fr);
 
-gap:15px;
+    gap:15px;
 
-margin-top:30px;
+    margin-top:30px;
 
 }
 
 .metric{
 
-padding:20px;
+    background:var(--cream2);
 
-background:var(--cream2);
+    border:1px solid var(--border);
 
-border:1px solid var(--border);
+    border-radius:12px;
 
-border-radius:13px;
+    padding:20px;
 
 }
 
 .metric span{
 
-display:block;
+    display:block;
 
-font-size:10px;
+    font-size:9px;
 
-text-transform:uppercase;
+    text-transform:uppercase;
 
-color:var(--muted);
+    color:var(--muted);
 
 }
 
 .metric strong{
 
-display:block;
+    display:block;
 
-font-size:30px;
+    font-size:30px;
 
-color:var(--brown);
-
-}
-
-
-/* =========================================================
-   TABLE
-========================================================= */
-
-.table-wrap{
-
-overflow-x:auto;
-
-margin-top:20px;
-
-}
-
-table{
-
-width:100%;
-
-border-collapse:collapse;
-
-font-size:11px;
-
-}
-
-th,td{
-
-padding:12px;
-
-border-bottom:1px solid var(--border);
-
-text-align:left;
-
-white-space:nowrap;
-
-}
-
-th{
-
-color:var(--brown);
-
-font-size:10px;
-
-text-transform:uppercase;
-
-}
-
-
-/* =========================================================
-   BADGES
-========================================================= */
-
-.status{
-
-display:inline-block;
-
-padding:4px 8px;
-
-border-radius:6px;
-
-font-size:9px;
-
-border:1px solid var(--border);
-
-color:var(--brown);
-
-}
-
-.status.green{
-
-color:#47744c;
-
-}
-
-.status.red{
-
-color:#a84d42;
+    color:var(--brown);
 
 }
 
@@ -1090,50 +1382,32 @@ color:#a84d42;
    APPOINTMENTS
 ========================================================= */
 
-.timeline{
+.appointment-grid{
 
-display:grid;
+    display:grid;
 
-gap:12px;
+    grid-template-columns:1fr 1fr;
 
-margin-top:25px;
+    gap:18px;
 
-}
-
-.timeline-item{
-
-display:flex;
-
-gap:15px;
-
-padding:18px;
-
-background:var(--cream2);
-
-border:1px solid var(--border);
-
-border-radius:12px;
+    margin-top:30px;
 
 }
 
-.timeline-number{
 
-width:34px;
-height:34px;
+/* =========================================================
+   VERIFICATION
+========================================================= */
 
-background:var(--brown);
+.verification-grid{
 
-color:white;
+    display:grid;
 
-display:flex;
-align-items:center;
-justify-content:center;
+    grid-template-columns:repeat(4,1fr);
 
-border-radius:8px;
+    gap:15px;
 
-font-size:10px;
-
-flex:none;
+    margin-top:30px;
 
 }
 
@@ -1144,55 +1418,55 @@ flex:none;
 
 .founder{
 
-display:grid;
+    display:grid;
 
-grid-template-columns:.65fr 1.35fr;
+    grid-template-columns:.7fr 1.3fr;
 
-gap:45px;
+    gap:45px;
 
-align-items:center;
-
-}
-
-.founder-box{
-
-padding:50px;
-
-border:1px solid var(--border);
-
-border-radius:20px;
-
-text-align:center;
+    align-items:center;
 
 }
 
-.founder-box strong{
+.founder-mark{
 
-font-family:"Cormorant Garamond",serif;
+    padding:50px;
 
-font-size:75px;
+    text-align:center;
 
-color:var(--brown);
+    border:1px solid var(--border);
+
+    border-radius:20px;
+
+}
+
+.founder-mark strong{
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:75px;
+
+    color:var(--brown);
 
 }
 
 .founder-name{
 
-font-family:"Cormorant Garamond",serif;
+    font-family:"Cormorant Garamond",serif;
 
-font-size:48px;
+    color:var(--brown);
 
-color:var(--brown);
+    font-size:48px;
 
 }
 
-.role{
+.founder-role{
 
-font-size:11px;
+    color:var(--gold);
 
-color:var(--gold);
+    font-size:11px;
 
-margin-bottom:15px;
+    margin-bottom:15px;
 
 }
 
@@ -1201,53 +1475,61 @@ margin-bottom:15px;
    FAQ
 ========================================================= */
 
+.faq{
+
+    margin-top:30px;
+
+}
+
 .faq-item{
 
-border-bottom:1px solid var(--border);
+    border-bottom:1px solid var(--border);
 
 }
 
-.faq-q{
+.faq-question{
 
-width:100%;
+    width:100%;
 
-background:none;
+    padding:19px 0;
 
-border:none;
+    background:none;
 
-color:var(--text);
+    border:none;
 
-display:flex;
+    color:var(--text);
 
-justify-content:space-between;
+    text-align:left;
 
-padding:19px 0;
+    display:flex;
 
-text-align:left;
+    align-items:center;
 
-font-size:13px;
+    justify-content:space-between;
 
-}
-
-.faq-a{
-
-max-height:0;
-
-overflow:hidden;
-
-transition:.35s;
-
-color:var(--muted);
-
-font-size:12px;
+    font-size:12px;
 
 }
 
-.faq-item.open .faq-a{
+.faq-answer{
 
-max-height:300px;
+    max-height:0;
 
-padding-bottom:18px;
+    overflow:hidden;
+
+    transition:.35s ease;
+
+    color:var(--muted);
+
+    font-size:11px;
+
+}
+
+.faq-item.open .faq-answer{
+
+    max-height:300px;
+
+    padding-bottom:18px;
 
 }
 
@@ -1258,65 +1540,67 @@ padding-bottom:18px;
 
 .contact-grid{
 
-display:grid;
+    display:grid;
 
-grid-template-columns:repeat(2,1fr);
+    grid-template-columns:repeat(2,1fr);
 
-gap:15px;
+    gap:15px;
 
-margin-top:30px;
+    margin-top:30px;
 
 }
 
-.contact{
+.contact-card{
 
-display:flex;
+    display:flex;
 
-gap:13px;
+    gap:13px;
 
-padding:20px;
+    padding:20px;
 
-border:1px solid var(--border);
+    border:1px solid var(--border);
 
-border-radius:12px;
+    border-radius:12px;
 
 }
 
 .contact-icon{
 
-width:42px;
-height:42px;
+    width:42px;
 
-border:1px solid var(--border);
+    height:42px;
 
-border-radius:10px;
+    flex:none;
 
-display:flex;
+    border:1px solid var(--border);
 
-align-items:center;
-justify-content:center;
+    border-radius:10px;
 
-color:var(--brown);
+    display:flex;
 
-flex:none;
+    align-items:center;
 
-}
+    justify-content:center;
 
-.contact small{
-
-display:block;
-
-font-size:9px;
-
-text-transform:uppercase;
-
-color:var(--muted);
+    color:var(--brown);
 
 }
 
-.contact strong{
+.contact-card small{
 
-font-size:12px;
+    display:block;
+
+    color:var(--muted);
+
+    font-size:9px;
+
+    text-transform:uppercase;
+
+}
+
+.contact-card strong{
+
+    font-size:11px;
 
 }
 
@@ -1327,481 +1611,549 @@ font-size:12px;
 
 footer{
 
-background:var(--brown3);
+    background:var(--brown3);
 
-color:#e7d6c4;
+    color:#e7d6c4;
 
-padding:45px 22px;
+    padding:45px 22px;
 
 }
 
 .footer-grid{
 
-max-width:1150px;
+    max-width:1150px;
 
-margin:auto;
+    margin:auto;
 
-display:grid;
+    display:grid;
 
-grid-template-columns:1.5fr 1fr 1fr;
+    grid-template-columns:1.5fr 1fr 1fr;
 
-gap:30px;
+    gap:30px;
 
 }
 
 .footer-brand{
 
-font-family:"Cormorant Garamond",serif;
+    font-family:"Cormorant Garamond",serif;
 
-font-size:35px;
+    font-size:35px;
 
-letter-spacing:4px;
+    letter-spacing:4px;
 
-color:white;
+    color:white;
 
 }
 
 footer h4{
 
-font-size:11px;
+    font-size:11px;
 
-color:white;
+    color:white;
 
-margin-bottom:10px;
+    margin-bottom:10px;
 
 }
 
 footer a{
 
-display:block;
+    display:block;
 
-font-size:10px;
+    color:#c7b5a2;
 
-color:#c8b6a3;
+    font-size:10px;
 
-margin:7px 0;
+    margin:7px 0;
 
 }
 
 footer p{
 
-font-size:10px;
+    font-size:10px;
 
-color:#bba995;
+    color:#bba998;
 
-margin-top:8px;
+    margin-top:8px;
 
 }
 
 .footer-bottom{
 
-max-width:1150px;
+    max-width:1150px;
 
-margin:30px auto 0;
+    margin:30px auto 0;
 
-padding-top:20px;
+    padding-top:20px;
 
-border-top:1px solid rgba(255,255,255,.15);
+    border-top:1px solid rgba(255,255,255,.12);
 
-font-size:9px;
+    font-size:9px;
 
-color:#9f8c79;
+    color:#9e8b78;
 
 }
 
 
 /* =========================================================
-   FLOATING BUTTONS
+   FLOATING WHATSAPP
 ========================================================= */
 
 .whatsapp{
 
-position:fixed;
+    position:fixed;
 
-right:24px;
+    right:24px;
 
-bottom:22px;
+    bottom:22px;
 
-width:58px;
+    width:58px;
 
-height:58px;
+    height:58px;
 
-background:#25D366;
+    background:#25D366;
 
-border-radius:16px;
+    border-radius:16px;
 
-display:flex;
+    display:flex;
 
-align-items:center;
-justify-content:center;
+    align-items:center;
 
-z-index:9997;
+    justify-content:center;
 
-box-shadow:0 10px 30px rgba(37,211,102,.22);
+    z-index:9997;
 
-transition:.3s;
+    box-shadow:0 10px 30px rgba(37,211,102,.25);
+
+    transition:.3s;
 
 }
 
 .whatsapp:hover{
 
-transform:translateY(-4px);
+    transform:translateY(-4px);
 
 }
 
 .whatsapp svg{
 
-width:31px;
+    width:31px;
 
-height:31px;
+    height:31px;
 
-fill:white;
-
-}
-
-.ai-float{
-
-position:fixed;
-
-right:24px;
-
-bottom:94px;
-
-width:58px;
-
-height:58px;
-
-background:var(--brown);
-
-color:white;
-
-border:none;
-
-border-radius:16px;
-
-z-index:9997;
-
-font-size:23px;
-
-box-shadow:var(--shadow);
+    fill:white;
 
 }
 
 
 /* =========================================================
-   AI CHAT
+   AI FLOATING BUTTON
+========================================================= */
+
+.ai-float{
+
+    position:fixed;
+
+    right:24px;
+
+    bottom:94px;
+
+    width:58px;
+
+    height:58px;
+
+    background:var(--brown);
+
+    color:white;
+
+    border:none;
+
+    border-radius:16px;
+
+    z-index:9997;
+
+    font-size:23px;
+
+    box-shadow:var(--shadow);
+
+    transition:.3s;
+
+}
+
+.ai-float:hover{
+
+    transform:translateY(-4px);
+
+}
+
+
+/* =========================================================
+   AI CHAT WINDOW
 ========================================================= */
 
 .ai-chat{
 
-position:fixed;
+    position:fixed;
 
-right:24px;
+    right:24px;
 
-bottom:165px;
+    bottom:165px;
 
-width:380px;
+    width:380px;
 
-max-width:calc(100vw - 30px);
+    max-width:calc(100vw - 30px);
 
-height:530px;
+    height:530px;
 
-background:var(--cream2);
+    background:var(--cream2);
 
-border:1px solid var(--border);
+    border:1px solid var(--border);
 
-border-radius:20px;
+    border-radius:20px;
 
-z-index:9999;
+    z-index:9999;
 
-display:none;
+    display:none;
 
-flex-direction:column;
+    flex-direction:column;
 
-overflow:hidden;
+    overflow:hidden;
 
-box-shadow:0 25px 70px rgba(30,18,10,.25);
+    box-shadow:0 25px 70px rgba(30,18,10,.25);
 
 }
 
 .ai-chat.active{
-display:flex;
-}
 
-.ai-head{
-
-padding:17px;
-
-background:var(--brown);
-
-color:white;
-
-display:flex;
-
-align-items:center;
-
-justify-content:space-between;
+    display:flex;
 
 }
 
-.ai-head-left{
+.ai-header{
 
-display:flex;
+    background:var(--brown);
 
-gap:10px;
+    color:white;
 
-align-items:center;
+    padding:17px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+}
+
+.ai-header-left{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
 
 }
 
 .ai-avatar{
 
-width:40px;
-height:40px;
+    width:40px;
 
-background:white;
+    height:40px;
 
-color:var(--brown);
+    background:white;
 
-border-radius:10px;
+    color:var(--brown);
 
-display:flex;
+    border-radius:10px;
 
-align-items:center;
-justify-content:center;
+    display:flex;
 
-}
+    align-items:center;
 
-.ai-head strong{
-
-font-family:"Cormorant Garamond",serif;
-
-font-size:21px;
+    justify-content:center;
 
 }
 
-.ai-head small{
+.ai-header strong{
 
-display:block;
+    font-family:"Cormorant Garamond",serif;
 
-font-size:9px;
+    font-size:21px;
 
-opacity:.8;
+}
+
+.ai-header small{
+
+    display:block;
+
+    font-size:9px;
+
+    opacity:.8;
 
 }
 
 .ai-close{
 
-background:none;
+    background:none;
 
-border:none;
+    border:none;
 
-color:white;
+    color:white;
 
-font-size:23px;
+    font-size:23px;
 
 }
 
 .ai-messages{
 
-flex:1;
+    flex:1;
 
-overflow-y:auto;
+    overflow-y:auto;
 
-padding:17px;
+    padding:17px;
 
-background:var(--cream);
-
-}
-
-.msg{
-
-max-width:82%;
-
-padding:11px 13px;
-
-border-radius:13px;
-
-font-size:11px;
-
-margin-bottom:10px;
+    background:var(--cream);
 
 }
 
-.msg.bot{
+.ai-message{
 
-background:var(--cream2);
+    max-width:82%;
 
-border:1px solid var(--border);
+    padding:11px 13px;
 
-}
+    border-radius:13px;
 
-.msg.user{
+    font-size:11px;
 
-margin-left:auto;
-
-background:var(--brown);
-
-color:white;
+    margin-bottom:10px;
 
 }
 
-.ai-suggest{
+.ai-message.bot{
 
-display:flex;
+    background:var(--cream2);
 
-gap:6px;
-
-padding:9px;
-
-overflow-x:auto;
-
-border-top:1px solid var(--border);
+    border:1px solid var(--border);
 
 }
 
-.ai-suggest button{
+.ai-message.user{
 
-white-space:nowrap;
+    margin-left:auto;
 
-padding:7px 9px;
+    background:var(--brown);
 
-font-size:9px;
+    color:white;
 
-border:1px solid var(--border);
+}
 
-background:none;
+.ai-suggestions{
 
-color:var(--brown);
+    display:flex;
 
-border-radius:7px;
+    gap:6px;
+
+    padding:9px;
+
+    overflow-x:auto;
+
+    border-top:1px solid var(--border);
+
+}
+
+.ai-suggestions button{
+
+    white-space:nowrap;
+
+    padding:7px 9px;
+
+    font-size:9px;
+
+    border:1px solid var(--border);
+
+    background:none;
+
+    color:var(--brown);
+
+    border-radius:7px;
 
 }
 
 .ai-input{
 
-display:flex;
+    display:flex;
 
-gap:7px;
+    gap:7px;
 
-padding:10px;
+    padding:10px;
 
-border-top:1px solid var(--border);
+    border-top:1px solid var(--border);
 
 }
 
 .ai-input input{
 
-flex:1;
+    flex:1;
 
-border:1px solid var(--border);
+    border:1px solid var(--border);
 
-border-radius:8px;
+    border-radius:8px;
 
-padding:10px;
+    padding:10px;
 
-background:var(--white);
+    background:var(--white);
 
-color:var(--text);
+    color:var(--text);
 
-outline:none;
+    outline:none;
 
 }
 
 .ai-input button{
 
-width:43px;
+    width:43px;
 
-border:none;
+    border:none;
 
-border-radius:8px;
+    border-radius:8px;
 
-background:var(--brown);
+    background:var(--brown);
 
-color:white;
+    color:white;
 
 }
 
 
 /* =========================================================
-   MODAL
+   MODALS
 ========================================================= */
 
 .overlay{
 
-position:fixed;
+    position:fixed;
 
-inset:0;
+    inset:0;
 
-background:rgba(20,12,7,.65);
+    background:rgba(20,12,7,.65);
 
-backdrop-filter:blur(6px);
+    backdrop-filter:blur(6px);
 
-z-index:50000;
+    z-index:50000;
 
-display:none;
+    display:none;
 
-align-items:center;
+    align-items:center;
 
-justify-content:center;
+    justify-content:center;
 
-padding:20px;
+    padding:20px;
 
 }
 
 .overlay.active{
-display:flex;
+
+    display:flex;
+
 }
 
 .modal{
 
-width:min(700px,100%);
+    width:min(700px,100%);
 
-max-height:90vh;
+    max-height:90vh;
 
-overflow:auto;
+    overflow:auto;
 
-background:var(--cream2);
+    background:var(--cream2);
 
-border:1px solid var(--border);
+    border:1px solid var(--border);
 
-border-radius:20px;
+    border-radius:20px;
 
-padding:30px;
+    padding:30px;
 
-position:relative;
+    position:relative;
 
 }
 
 .modal-close{
 
-position:absolute;
+    position:absolute;
 
-right:16px;
+    top:15px;
 
-top:15px;
+    right:16px;
 
-width:34px;
+    width:34px;
 
-height:34px;
+    height:34px;
 
-border:1px solid var(--border);
+    border:1px solid var(--border);
 
-background:none;
+    background:none;
 
-border-radius:8px;
+    color:var(--brown);
 
-color:var(--brown);
+    border-radius:8px;
 
 }
 
 .modal h2{
 
-font-family:"Cormorant Garamond",serif;
+    font-family:"Cormorant Garamond",serif;
 
-font-size:40px;
+    color:var(--brown);
 
-color:var(--brown);
+    font-size:40px;
+
+    margin-bottom:8px;
+
+}
+
+
+/* =========================================================
+   ADMIN TABLE
+========================================================= */
+
+.table-wrap{
+
+    overflow-x:auto;
+
+    margin-top:25px;
+
+}
+
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    font-size:10px;
+
+}
+
+th,
+td{
+
+    padding:10px;
+
+    border-bottom:1px solid var(--border);
+
+    text-align:left;
+
+    white-space:nowrap;
+
+}
+
+th{
+
+    color:var(--brown);
+
+    text-transform:uppercase;
+
+    font-size:9px;
 
 }
 
@@ -1812,182 +2164,135 @@ color:var(--brown);
 
 .toasts{
 
-position:fixed;
+    position:fixed;
 
-right:18px;
+    right:18px;
 
-top:88px;
+    top:88px;
 
-z-index:60000;
+    z-index:60000;
 
-display:grid;
+    display:grid;
 
-gap:8px;
+    gap:8px;
 
 }
 
 .toast{
 
-background:var(--cream2);
+    min-width:270px;
 
-border:1px solid var(--border);
+    max-width:350px;
 
-border-left:4px solid var(--brown);
+    padding:13px 15px;
 
-padding:13px 15px;
+    border:1px solid var(--border);
 
-min-width:260px;
+    border-left:4px solid var(--brown);
 
-border-radius:9px;
+    border-radius:9px;
 
-font-size:11px;
+    background:var(--cream2);
 
-box-shadow:var(--shadow);
+    color:var(--text);
+
+    font-size:10px;
+
+    box-shadow:var(--shadow);
 
 }
 
 
 /* =========================================================
-   COOKIE
+   CONSENT
 ========================================================= */
 
 .consent{
 
-position:fixed;
+    position:fixed;
 
-bottom:0;
+    left:0;
 
-left:0;
+    right:0;
 
-right:0;
+    bottom:0;
 
-background:var(--cream2);
+    z-index:45000;
 
-border-top:1px solid var(--border);
+    background:var(--cream2);
 
-padding:16px 22px;
+    border-top:1px solid var(--border);
 
-z-index:45000;
+    padding:15px 22px;
 
-display:none;
+    display:none;
 
 }
 
 .consent.show{
-display:block;
+
+    display:block;
+
 }
 
 .consent-inner{
 
-max-width:1150px;
+    max-width:1150px;
 
-margin:auto;
+    margin:auto;
 
-display:flex;
+    display:flex;
 
-justify-content:space-between;
+    align-items:center;
 
-align-items:center;
+    justify-content:space-between;
 
-gap:20px;
+    gap:20px;
 
 }
 
 .consent p{
 
-font-size:10px;
+    color:var(--muted);
 
-color:var(--muted);
+    font-size:9px;
 
 }
 
 
 /* =========================================================
-   BACK TOP
+   BACK TO TOP
 ========================================================= */
 
-.back{
+.back-top{
 
-position:fixed;
+    position:fixed;
 
-left:22px;
+    left:22px;
 
-bottom:22px;
+    bottom:22px;
 
-width:44px;
+    width:44px;
 
-height:44px;
+    height:44px;
 
-border:1px solid var(--border);
+    background:var(--cream2);
 
-background:var(--cream2);
+    color:var(--brown);
 
-color:var(--brown);
+    border:1px solid var(--border);
 
-border-radius:10px;
+    border-radius:10px;
 
-display:none;
+    display:none;
 
-z-index:9000;
-
-}
-
-.back.show{
-display:block;
-}
-
-
-/* =========================================================
-   LOADER
-========================================================= */
-
-.loader{
-
-position:fixed;
-
-inset:0;
-
-background:var(--cream2);
-
-z-index:100000;
-
-display:flex;
-
-align-items:center;
-
-justify-content:center;
-
-transition:.5s;
+    z-index:9000;
 
 }
 
-.loader.hide{
+.back-top.show{
 
-opacity:0;
-visibility:hidden;
-
-}
-
-.loader img{
-
-width:85px;
-height:85px;
-
-object-fit:contain;
-
-}
-
-.loader-brand{
-
-font-family:"Cormorant Garamond",serif;
-
-font-size:30px;
-
-letter-spacing:5px;
-
-color:var(--brown);
-
-text-align:center;
+    display:block;
 
 }
 
@@ -1996,165 +2301,265 @@ text-align:center;
    RESPONSIVE
 ========================================================= */
 
-@media(max-width:950px){
+@media(max-width:1000px){
 
-.navlinks{
+    .nav{
 
-position:absolute;
+        justify-content:flex-end;
 
-left:15px;
-right:15px;
-top:70px;
+    }
 
-background:var(--cream2);
+    .navlinks{
 
-border:1px solid var(--border);
+        position:absolute;
 
-border-radius:12px;
+        left:15px;
 
-padding:18px;
+        right:15px;
 
-display:none;
+        top:70px;
 
-flex-direction:column;
+        padding:18px;
 
-align-items:flex-start;
+        background:var(--cream2);
 
-}
+        border:1px solid var(--border);
 
-.navlinks.open{
-display:flex;
-}
+        border-radius:12px;
 
-.menu{
-display:block;
-}
+        display:none;
 
-.navtools .cta{
-display:none;
-}
+        flex-direction:column;
 
-.hero-grid,
-.ai-grid,
-.founder{
+        align-items:flex-start;
 
-grid-template-columns:1fr;
+    }
 
-}
+    .navlinks.open{
 
-.g4{
-grid-template-columns:repeat(2,1fr);
-}
+        display:flex;
 
-.g3{
-grid-template-columns:repeat(2,1fr);
-}
+    }
 
-.dashboard{
+    .menu-btn{
 
-grid-template-columns:repeat(2,1fr);
+        display:block;
 
-}
+    }
 
-.stats{
+    .nav-cta{
 
-grid-template-columns:repeat(2,1fr);
+        display:none;
 
-}
+    }
 
-.stat:nth-child(2){
+    .hero-brand{
 
-border-right:none;
+        font-size:70px;
 
-}
+    }
 
-.stat:nth-child(-n+2){
+    .hero-grid{
 
-border-bottom:1px solid var(--border);
+        grid-template-columns:1fr;
 
-}
+    }
 
-.footer-grid{
+    .g4{
 
-grid-template-columns:1fr;
+        grid-template-columns:repeat(2,1fr);
 
-}
+    }
 
-}
+    .g3{
 
+        grid-template-columns:repeat(2,1fr);
 
-@media(max-width:600px){
+    }
 
-section{
-padding:80px 17px;
-}
+    .platform-grid{
 
-.hero{
-padding-top:125px;
-}
+        grid-template-columns:repeat(2,1fr);
 
-.hero-title{
-font-size:52px;
-letter-spacing:5px;
-}
+    }
 
-.title{
-font-size:42px;
-}
+    .dashboard{
 
-.g2,
-.g3,
-.g4,
-.formgrid,
-.contact-grid,
-.dashboard{
+        grid-template-columns:repeat(2,1fr);
 
-grid-template-columns:1fr;
+    }
 
-}
+    .verification-grid{
 
-.field.full{
-grid-column:auto;
-}
+        grid-template-columns:repeat(2,1fr);
 
-.ai-chat{
+    }
 
-right:15px;
-bottom:90px;
+    .stats{
 
-width:calc(100vw - 30px);
+        grid-template-columns:repeat(2,1fr);
 
-height:510px;
+    }
+
+    .stat:nth-child(2){
+
+        border-right:none;
+
+    }
+
+    .stat:nth-child(-n+2){
+
+        border-bottom:1px solid var(--border);
+
+    }
+
+    .footer-grid{
+
+        grid-template-columns:1fr;
+
+    }
 
 }
 
-.ai-float{
 
-right:15px;
-bottom:80px;
+@media(max-width:700px){
+
+    section{
+
+        padding:80px 17px;
+
+    }
+
+    .navtools{
+
+        right:15px;
+
+    }
+
+    .hero{
+
+        padding-top:110px;
+
+    }
+
+    .hero-logo{
+
+        width:115px;
+
+        height:115px;
+
+    }
+
+    .hero-brand{
+
+        font-size:50px;
+
+        letter-spacing:5px;
+
+    }
+
+    .hero-tagline{
+
+        font-size:23px;
+
+    }
+
+    .title{
+
+        font-size:42px;
+
+    }
+
+    .about-grid,
+    .ai-panel,
+    .founder,
+    .appointment-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .g2,
+    .g3,
+    .g4,
+    .platform-grid,
+    .form-grid,
+    .contact-grid,
+    .dashboard,
+    .verification-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .field.full{
+
+        grid-column:auto;
+
+    }
+
+    .ai-chat{
+
+        right:15px;
+
+        bottom:90px;
+
+        width:calc(100vw - 30px);
+
+        height:510px;
+
+    }
+
+    .ai-float{
+
+        right:15px;
+
+        bottom:80px;
+
+    }
+
+    .whatsapp{
+
+        right:15px;
+
+        bottom:15px;
+
+    }
+
+    .back-top{
+
+        left:15px;
+
+        bottom:15px;
+
+    }
+
+    .consent-inner{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+    }
 
 }
 
-.whatsapp{
 
-right:15px;
-bottom:15px;
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
 
-}
+@media(prefers-reduced-motion:reduce){
 
-.back{
+    *{
 
-left:15px;
-bottom:15px;
+        scroll-behavior:auto!important;
 
-}
+        animation-duration:.01ms!important;
 
-.consent-inner{
+        transition-duration:.01ms!important;
 
-flex-direction:column;
-align-items:flex-start;
-
-}
+    }
 
 }
 
@@ -2172,13 +2577,18 @@ align-items:flex-start;
 
 <div class="loader" id="loader">
 
-<div>
+<div class="loader-inner">
 
-<img src="logo.png" alt="PRANAURA">
+<img
+src="logo.png"
+class="loader-logo"
+alt="PRANAURA logo">
 
 <div class="loader-brand">
 PRANAURA
 </div>
+
+<div class="loader-line"></div>
 
 </div>
 
@@ -2187,56 +2597,93 @@ PRANAURA
 
 <!-- ======================================================
      HEADER
+     NO LOGO
+     NO PRANAURA
 ====================================================== -->
 
 <header>
 
 <nav class="nav">
 
-<a href="#home" class="brand">
 
-<img src="logo.png" alt="PRANAURA logo">
+<div
+class="navlinks"
+id="navlinks">
 
-<span class="brand-name">
-PRANAURA
-</span>
-
+<a href="#about">
+About
 </a>
 
+<a href="#process">
+Process
+</a>
 
-<div class="navlinks" id="navlinks">
+<a href="#network">
+Network
+</a>
 
-<a href="#about">About</a>
-<a href="#process">Process</a>
-<a href="#network">Network</a>
-<a href="#services">Services</a>
-<a href="#opportunities">Opportunities</a>
-<a href="#ai">AI</a>
-<a href="#platform">Platform</a>
-<a href="#faq">FAQ</a>
-<a href="#contact">Contact</a>
+<a href="#services">
+Services
+</a>
+
+<a href="#opportunities">
+Opportunities
+</a>
+
+<a href="#ai">
+AI
+</a>
+
+<a href="#platform">
+Platform
+</a>
+
+<a href="#faq">
+FAQ
+</a>
+
+<a href="#contact">
+Contact
+</a>
 
 </div>
 
 
 <div class="navtools">
 
-<button class="icon-btn" id="langBtn">
+<button
+class="nav-btn"
+id="languageBtn">
+
 EN
+
 </button>
 
-<button class="icon-btn" id="themeBtn">
+
+<button
+class="nav-btn"
+id="themeBtn">
+
 ◐
+
 </button>
 
-<button class="cta"
+
+<button
+class="nav-cta"
 onclick="openModal('contactModal')">
+
 Connect
+
 </button>
 
-<button class="icon-btn menu"
+
+<button
+class="nav-btn menu-btn"
 id="menuBtn">
+
 ☰
+
 </button>
 
 </div>
@@ -2248,48 +2695,62 @@ id="menuBtn">
 
 <!-- ======================================================
      HERO
+     LOGO + PRANAURA FIRST THING
 ====================================================== -->
 
-<section class="hero" id="home">
+<section
+class="hero"
+id="home">
 
-<div class="container hero-grid">
+
+<div class="hero-inner">
 
 
-<div>
+<div class="launch">
 
-<div class="badge">
-
-<span class="dot"></span>
+<span class="launch-dot"></span>
 
 Launching September 2026
 
 </div>
 
 
-<div class="label">
-Strategic Builder & Investor Partnerships
+<img
+src="logo.png"
+class="hero-logo"
+alt="PRANAURA Logo">
+
+
+<div class="hero-brand">
+
+PRANAURA
+
 </div>
 
 
-<h1 class="hero-title">
-PRANAURA
-</h1>
+<div class="hero-tagline">
+
+Strategic Builder & Investor Partnerships
+
+</div>
 
 
 <p class="hero-sub">
 
-Connecting builders, developers, landowners,
-investors and property buyers through structured
-professional networking and technology-enabled
-property workflows.
+Connecting Builders, Developers, Landowners,
+Investors and Property Buyers through structured
+professional networking, smart matching and
+technology-enabled workflows.
 
 </p>
 
 
-<div class="row">
+<div class="hero-actions">
 
-<a href="#match"
-class="btn primary">
+
+<a
+href="#match"
+class="btn btn-primary">
 
 Find a Connection →
 
@@ -2297,21 +2758,22 @@ Find a Connection →
 
 
 <button
-class="btn outline"
+class="btn btn-outline"
 onclick="openModal('contactModal')">
 
-Partner With PRANAURA
+Partner With Us
 
 </button>
 
 
 <button
-class="btn outline"
+class="btn btn-outline"
 onclick="openAI()">
 
 Ask PRANAURA AI
 
 </button>
+
 
 </div>
 
@@ -2319,21 +2781,11 @@ Ask PRANAURA AI
 <div class="hero-note">
 
 Initially focused on Mysuru and Karnataka.
-PRANAURA facilitates introductions and business
-discussions and does not guarantee project outcomes
-or investment returns.
+PRANAURA facilitates professional introductions
+and business discussions and does not guarantee
+investment returns or transaction outcomes.
 
 </div>
-
-</div>
-
-
-<div class="hero-logo">
-
-<img src="logo.png" alt="PRANAURA">
-
-</div>
-
 
 </div>
 
@@ -2348,15 +2800,19 @@ or investment returns.
 
 <div class="stats">
 
+
 <div class="stat">
 
 <strong id="statMatches">
 0
 </strong>
 
-<span>Match Profiles</span>
+<span>
+Match Profiles
+</span>
 
 </div>
+
 
 <div class="stat">
 
@@ -2364,27 +2820,38 @@ or investment returns.
 0
 </strong>
 
-<span>Enquiries</span>
+<span>
+Enquiries
+</span>
 
 </div>
 
+
 <div class="stat">
 
-<strong id="statAppointments">
+<strong id="statMeetings">
 0
 </strong>
 
-<span>Appointments</span>
+<span>
+Appointments
+</span>
 
 </div>
+
 
 <div class="stat">
 
-<strong>24/7</strong>
+<strong>
+24/7
+</strong>
 
-<span>AI Assistant</span>
+<span>
+AI Assistant
+</span>
 
 </div>
+
 
 </div>
 
@@ -2397,20 +2864,21 @@ or investment returns.
 
 <section id="about">
 
-<div class="container">
+<div class="container about-grid">
+
+
+<div>
 
 <div class="label">
 About PRANAURA
 </div>
 
 <h2 class="title">
-A bridge between opportunity
-and connection.
+
+A bridge between
+opportunity and connection.
+
 </h2>
-
-<div class="grid g2">
-
-<div>
 
 <p class="text">
 
@@ -2429,29 +2897,45 @@ into a more structured workflow.
 </div>
 
 
-<div class="card">
+<div class="about-highlight">
 
-<h3>
-What PRANAURA does
+<h3 style="
+font-family:'Cormorant Garamond';
+font-size:36px;
+margin-bottom:15px;
+">
+
+What we do
+
 </h3>
 
-<p>
 
-Builder and developer connections.
+<div class="about-list">
 
-<br>
-Investor and buyer requirements.
+<div>
+<span>01</span>
+Builder & Developer Connections
+</div>
 
-<br>
-Landowner development discussions.
+<div>
+<span>02</span>
+Investor & Buyer Requirements
+</div>
 
-<br>
-Structured introductions.
+<div>
+<span>03</span>
+Landowner Development Discussions
+</div>
 
-<br>
-Technology-assisted matching.
+<div>
+<span>04</span>
+Structured Introductions
+</div>
 
-</p>
+<div>
+<span>05</span>
+Technology-Assisted Matching
+</div>
 
 </div>
 
@@ -2479,7 +2963,9 @@ From requirement to relationship.
 </h2>
 
 
-<div class="grid g3" style="margin-top:35px">
+<div
+class="grid g3"
+style="margin-top:35px">
 
 
 <div class="card">
@@ -2493,8 +2979,8 @@ Requirement
 </h3>
 
 <p>
-Capture the stakeholder's requirement,
-objective, location, budget and timeline.
+Understand the stakeholder's objective,
+location, budget and timeline.
 </p>
 
 </div>
@@ -2511,8 +2997,7 @@ Review
 </h3>
 
 <p>
-Organize and review the information
-before potential matching.
+Organize and review submitted information.
 </p>
 
 </div>
@@ -2529,8 +3014,7 @@ Matching
 </h3>
 
 <p>
-Compare relevant requirements and
-available project information.
+Identify potentially relevant connections.
 </p>
 
 </div>
@@ -2547,8 +3031,7 @@ Introduction
 </h3>
 
 <p>
-Facilitate a professional introduction
-between relevant parties.
+Facilitate a professional introduction.
 </p>
 
 </div>
@@ -2565,8 +3048,7 @@ Follow-up
 </h3>
 
 <p>
-Maintain a structured record of
-communication and next steps.
+Track communication and next steps.
 </p>
 
 </div>
@@ -2583,8 +3065,8 @@ Transaction
 </h3>
 
 <p>
-Relevant parties independently conduct
-their commercial and legal due diligence.
+Relevant parties conduct their own
+commercial and legal due diligence.
 </p>
 
 </div>
@@ -2614,7 +3096,9 @@ Five stakeholder pathways.
 </h2>
 
 
-<div class="grid g3" style="margin-top:35px">
+<div
+class="grid g3"
+style="margin-top:35px">
 
 
 <div class="card">
@@ -2664,7 +3148,7 @@ Landowners
 </h3>
 
 <p>
-Explore development and partnership
+Development and strategic partnership
 possibilities.
 </p>
 
@@ -2682,8 +3166,8 @@ Investors
 </h3>
 
 <p>
-Submit investment preferences and
-property requirements.
+Investment preferences and property
+requirements.
 </p>
 
 </div>
@@ -2700,8 +3184,8 @@ Buyers
 </h3>
 
 <p>
-Create a structured property requirement
-for future matching.
+Structured property requirements and
+future matching.
 </p>
 
 </div>
@@ -2727,12 +3211,13 @@ Services
 </div>
 
 <h2 class="title">
-Designed around real
-business requirements.
+Designed around real requirements.
 </h2>
 
 
-<div class="grid g3" style="margin-top:35px">
+<div
+class="grid g3"
+style="margin-top:35px">
 
 
 <div class="card">
@@ -2746,17 +3231,15 @@ Builder Partnerships
 </h3>
 
 <p>
-Professional builder onboarding,
-project information and investor/buyer
-networking.
+Professional builder onboarding, project
+information and investor/buyer networking.
 </p>
 
-<br>
-
-<button class="btn outline"
+<button
+class="btn btn-outline service-button"
 onclick="setRole('Builder')">
 
-Start Builder Request →
+Become a Builder Partner →
 
 </button>
 
@@ -2774,13 +3257,12 @@ Investor Networking
 </h3>
 
 <p>
-Capture investment preferences,
-location, budget and timeline.
+Capture investment preferences, location,
+budget and timeline.
 </p>
 
-<br>
-
-<button class="btn outline"
+<button
+class="btn btn-outline service-button"
 onclick="setRole('Investor')">
 
 Submit Investor Requirement →
@@ -2801,13 +3283,12 @@ Landowner Partnerships
 </h3>
 
 <p>
-Structure land development and
-strategic partnership enquiries.
+Structure land development and partnership
+requirements.
 </p>
 
-<br>
-
-<button class="btn outline"
+<button
+class="btn btn-outline service-button"
 onclick="setRole('Landowner')">
 
 Discuss Land Partnership →
@@ -2828,13 +3309,12 @@ Buyer Requirements
 </h3>
 
 <p>
-Capture property preferences and
-future matching requirements.
+Capture property preferences for future
+matching.
 </p>
 
-<br>
-
-<button class="btn outline"
+<button
+class="btn btn-outline service-button"
 onclick="setRole('Buyer')">
 
 Find Property →
@@ -2855,13 +3335,12 @@ AI-Assisted Matching
 </h3>
 
 <p>
-Use structured information and AI
-workflows to organize potential connections.
+Technology-assisted organization of
+property requirements.
 </p>
 
-<br>
-
-<button class="btn outline"
+<button
+class="btn btn-outline service-button"
 onclick="openAI()">
 
 Ask PRANAURA AI →
@@ -2878,17 +3357,16 @@ Ask PRANAURA AI →
 </div>
 
 <h3>
-Private Opportunity Rooms
+Opportunity Rooms
 </h3>
 
 <p>
-Future secure spaces for project documents,
-stakeholder communication and collaboration.
+Future secure spaces for project
+collaboration and document sharing.
 </p>
 
-<br>
-
-<button class="btn outline"
+<button
+class="btn btn-outline service-button"
 onclick="openModal('roomModal')">
 
 Explore Opportunity Room →
@@ -2909,7 +3387,9 @@ Explore Opportunity Room →
      PLATFORM
 ====================================================== -->
 
-<section class="platform" id="platform">
+<section
+class="platform"
+id="platform">
 
 <div class="container">
 
@@ -2918,90 +3398,173 @@ PRANAURA Platform
 </div>
 
 <h2 class="title">
-The website is only the
-front door.
+Built to become more than a website.
 </h2>
 
 <p class="text">
 
-PRANAURA is designed to evolve into a complete
-real estate networking and intelligence platform.
+PRANAURA is designed to evolve into a technology-enabled
+real estate networking ecosystem.
 
 </p>
 
 
-<div class="grid g3" style="margin-top:35px">
+<div class="platform-grid">
 
 
-<div class="platform-card">
-<strong>Admin Dashboard</strong>
-<span>Manage enquiries, matches and workflows.</span>
+<div class="platform-item">
+
+<strong>
+Admin Dashboard
+</strong>
+
+<span>
+Manage enquiries and workflows.
+</span>
+
 </div>
 
 
-<div class="platform-card">
-<strong>CRM</strong>
-<span>Track leads and follow-ups.</span>
+<div class="platform-item">
+
+<strong>
+CRM
+</strong>
+
+<span>
+Lead and follow-up management.
+</span>
+
 </div>
 
 
-<div class="platform-card">
-<strong>Smart Matching</strong>
-<span>Compare stakeholder requirements.</span>
+<div class="platform-item">
+
+<strong>
+Smart Matching
+</strong>
+
+<span>
+Requirement-based matching.
+</span>
+
 </div>
 
 
-<div class="platform-card">
-<strong>AI Assistant</strong>
-<span>Natural-language property guidance.</span>
+<div class="platform-item">
+
+<strong>
+PRANAURA AI
+</strong>
+
+<span>
+AI-assisted property guidance.
+</span>
+
 </div>
 
 
-<div class="platform-card">
-<strong>Verification</strong>
-<span>Project and partner verification workflow.</span>
+<div class="platform-item">
+
+<strong>
+Verification
+</strong>
+
+<span>
+Project information review.
+</span>
+
 </div>
 
 
-<div class="platform-card">
-<strong>Document Vault</strong>
-<span>Future secure document management.</span>
+<div class="platform-item">
+
+<strong>
+Document Vault
+</strong>
+
+<span>
+Future secure document management.
+</span>
+
 </div>
 
 
-<div class="platform-card">
-<strong>Appointments</strong>
-<span>Meeting and callback workflow.</span>
+<div class="platform-item">
+
+<strong>
+Appointments
+</strong>
+
+<span>
+Meeting and callback workflow.
+</span>
+
 </div>
 
 
-<div class="platform-card">
-<strong>Notifications</strong>
-<span>Future automated communication.</span>
+<div class="platform-item">
+
+<strong>
+Notifications
+</strong>
+
+<span>
+Follow-up notifications.
+</span>
+
 </div>
 
 
-<div class="platform-card">
-<strong>Analytics</strong>
-<span>Business and lead performance tracking.</span>
+<div class="platform-item">
+
+<strong>
+Analytics
+</strong>
+
+<span>
+Business performance insights.
+</span>
+
 </div>
 
 
-<div class="platform-card">
-<strong>Audit Log</strong>
-<span>Track important platform actions.</span>
+<div class="platform-item">
+
+<strong>
+Audit Log
+</strong>
+
+<span>
+Important platform activity tracking.
+</span>
+
 </div>
 
 
-<div class="platform-card">
-<strong>Referral System</strong>
-<span>Future partner referral management.</span>
+<div class="platform-item">
+
+<strong>
+Referral Network
+</strong>
+
+<span>
+Partner referral management.
+</span>
+
 </div>
 
 
-<div class="platform-card">
-<strong>Commission Management</strong>
-<span>Track agreed commercial arrangements.</span>
+<div class="platform-item">
+
+<strong>
+Commission Management
+</strong>
+
+<span>
+Commercial workflow management.
+</span>
+
 </div>
 
 
@@ -3030,33 +3593,45 @@ Structured opportunity management.
 
 <p class="text">
 
-These are workflow examples, not live property listings.
-Actual projects should only be displayed after
-PRANAURA's verification process.
+The examples below demonstrate the future opportunity
+workflow. They are not current live property listings.
 
 </p>
 
 
-<div class="grid g3" style="margin-top:35px">
+<div
+class="grid g3"
+style="margin-top:35px">
 
 
 <div class="card">
 
-<span class="status">
+<div class="opportunity-status">
 Information Received
-</span>
+</div>
 
 <h3>
 Plotted Development
 </h3>
 
-<p>
-Mysuru Region · Development
-</p>
+<div class="opportunity-meta">
 
-<br>
+<div>
+Location: Mysuru Region
+</div>
 
-<button class="btn outline"
+<div>
+Type: Development
+</div>
+
+<div>
+Status: Initial Information
+</div>
+
+</div>
+
+<button
+class="btn btn-outline"
 onclick="openModal('interestModal')">
 
 Express Interest →
@@ -3068,21 +3643,32 @@ Express Interest →
 
 <div class="card">
 
-<span class="status">
+<div class="opportunity-status">
 Preliminary Review
-</span>
+</div>
 
 <h3>
 Residential Development
 </h3>
 
-<p>
-Karnataka · Residential
-</p>
+<div class="opportunity-meta">
 
-<br>
+<div>
+Location: Karnataka
+</div>
 
-<button class="btn outline"
+<div>
+Type: Residential
+</div>
+
+<div>
+Status: Review Stage
+</div>
+
+</div>
+
+<button
+class="btn btn-outline"
 onclick="openModal('interestModal')">
 
 Request Information →
@@ -3094,21 +3680,32 @@ Request Information →
 
 <div class="card">
 
-<span class="status">
+<div class="opportunity-status">
 Partner Discussion
-</span>
+</div>
 
 <h3>
 Land Partnership
 </h3>
 
-<p>
-Mysuru Region · Partnership
-</p>
+<div class="opportunity-meta">
 
-<br>
+<div>
+Location: Mysuru Region
+</div>
 
-<button class="btn outline"
+<div>
+Type: Partnership
+</div>
+
+<div>
+Status: Discussion
+</div>
+
+</div>
+
+<button
+class="btn btn-outline"
 onclick="openModal('interestModal')">
 
 Discuss →
@@ -3117,6 +3714,20 @@ Discuss →
 
 </div>
 
+
+</div>
+
+
+<div class="disclaimer">
+
+<strong>
+Important:
+</strong>
+
+These cards demonstrate the PRANAURA opportunity
+workflow only. They should be replaced by verified
+project records before being presented as actual
+opportunities.
 
 </div>
 
@@ -3129,7 +3740,9 @@ Discuss →
      SMART MATCH
 ====================================================== -->
 
-<section class="match" id="match">
+<section
+class="match"
+id="match">
 
 <div class="container">
 
@@ -3138,25 +3751,24 @@ PRANAURA Smart Match
 </div>
 
 <h2 class="title">
-Tell PRANAURA what
-you need.
+Tell PRANAURA what you need.
 </h2>
 
 <p class="text">
 
-Create a structured Match Profile.
-The system generates a unique reference ID and
-stores the profile locally in this prototype.
+Create a structured Match Profile with a unique
+reference ID and lead-priority score.
 
 </p>
 
 
 <div class="form">
 
+
 <form id="matchForm">
 
 
-<div class="formgrid">
+<div class="form-grid">
 
 
 <div class="field">
@@ -3165,18 +3777,37 @@ stores the profile locally in this prototype.
 Role
 </label>
 
-<select id="role" required>
+<select
+id="matchRole"
+required>
 
 <option value="">
-Select
+Select Role
 </option>
 
-<option>Builder</option>
-<option>Developer</option>
-<option>Landowner</option>
-<option>Investor</option>
-<option>Buyer</option>
-<option>Other</option>
+<option>
+Builder
+</option>
+
+<option>
+Developer
+</option>
+
+<option>
+Landowner
+</option>
+
+<option>
+Investor
+</option>
+
+<option>
+Buyer
+</option>
+
+<option>
+Other
+</option>
 
 </select>
 
@@ -3186,12 +3817,12 @@ Select
 <div class="field">
 
 <label>
-Location
+Preferred Location
 </label>
 
 <input
-id="location"
-placeholder="Mysuru / Bengaluru / etc."
+id="matchLocation"
+placeholder="e.g. Mysuru"
 required>
 
 </div>
@@ -3203,18 +3834,37 @@ required>
 Property Type
 </label>
 
-<select id="propertyType" required>
+<select
+id="matchProperty"
+required>
 
 <option value="">
-Select
+Select Property Type
 </option>
 
-<option>Residential</option>
-<option>Plots / Land</option>
-<option>Commercial</option>
-<option>Industrial</option>
-<option>Investment Opportunity</option>
-<option>Development Partnership</option>
+<option>
+Residential
+</option>
+
+<option>
+Plots / Land
+</option>
+
+<option>
+Commercial
+</option>
+
+<option>
+Industrial
+</option>
+
+<option>
+Investment Opportunity
+</option>
+
+<option>
+Development Partnership
+</option>
 
 </select>
 
@@ -3224,11 +3874,11 @@ Select
 <div class="field">
 
 <label>
-Budget
+Approximate Budget
 </label>
 
 <input
-id="budget"
+id="matchBudget"
 placeholder="e.g. ₹50 Lakhs">
 
 </div>
@@ -3240,17 +3890,32 @@ placeholder="e.g. ₹50 Lakhs">
 Timeline
 </label>
 
-<select id="timeline">
+<select
+id="matchTimeline">
 
 <option value="">
-Select
+Select Timeline
 </option>
 
-<option>Immediately</option>
-<option>Within 1 Month</option>
-<option>1–3 Months</option>
-<option>3–6 Months</option>
-<option>6+ Months</option>
+<option>
+Immediately
+</option>
+
+<option>
+Within 1 Month
+</option>
+
+<option>
+1–3 Months
+</option>
+
+<option>
+3–6 Months
+</option>
+
+<option>
+6+ Months
+</option>
 
 </select>
 
@@ -3264,7 +3929,7 @@ Phone
 </label>
 
 <input
-id="phone"
+id="matchPhone"
 type="tel"
 placeholder="+91"
 required>
@@ -3279,7 +3944,7 @@ Requirement
 </label>
 
 <textarea
-id="requirement"
+id="matchRequirement"
 placeholder="Describe your requirement..."
 required></textarea>
 
@@ -3289,28 +3954,32 @@ required></textarea>
 </div>
 
 
-<div class="row" style="margin-top:20px">
+<div class="row"
+style="margin-top:20px">
+
 
 <button
-class="btn primary"
-type="submit">
+class="btn btn-primary">
 
 Create Match Profile →
 
 </button>
 
+
 <button
-class="btn outline"
-type="reset">
+type="reset"
+class="btn btn-outline">
 
 Clear
 
 </button>
 
+
 </div>
 
 
-<div class="result"
+<div
+class="result"
 id="matchResult">
 
 </div>
@@ -3329,7 +3998,9 @@ id="matchResult">
      AI
 ====================================================== -->
 
-<section class="ai-section" id="ai">
+<section
+class="ai-section"
+id="ai">
 
 <div class="container">
 
@@ -3338,23 +4009,22 @@ PRANAURA AI
 </div>
 
 <h2 class="title">
-Your property intelligence
-assistant.
+Your property intelligence assistant.
 </h2>
 
 <p class="text">
 
-Ask PRANAURA AI about requirements, partnerships,
-investment workflows, Smart Match and the PRANAURA
-platform.
+Ask questions about investments, property requirements,
+builder partnerships, landowner opportunities and the
+PRANAURA process.
 
 </p>
 
 
-<div class="ai-grid" style="margin-top:35px">
+<div class="ai-panel">
 
 
-<div class="ai-left">
+<div class="ai-info">
 
 <h3>
 PRANAURA AI
@@ -3362,20 +4032,28 @@ PRANAURA AI
 
 <p>
 
-The production version can connect this interface
+The chatbot interface is ready to be connected
 to your Ollama + Qwen + PRANAURA knowledge system.
 
 </p>
 
 
-<div class="ai-list">
+<div class="ai-capabilities">
 
 <div>
 ◇ Requirement Classification
 </div>
 
 <div>
-◇ Builder / Investor / Buyer Guidance
+◇ Investor Guidance
+</div>
+
+<div>
+◇ Builder Partnership Guidance
+</div>
+
+<div>
+◇ Landowner Assistance
 </div>
 
 <div>
@@ -3386,51 +4064,45 @@ to your Ollama + Qwen + PRANAURA knowledge system.
 ◇ Knowledge Base Retrieval
 </div>
 
-<div>
-◇ Project Information Assistance
-</div>
-
-<div>
-◇ Follow-up Recommendations
-</div>
-
 </div>
 
 </div>
 
 
-<div class="ai-right">
+<div class="ai-preview">
 
-<div class="msg bot">
+
+<div class="preview-message preview-bot">
 
 Hello. I'm PRANAURA AI.
 
 </div>
 
 
-<div class="msg user">
+<div class="preview-message preview-user">
 
 I want to invest in property in Mysuru.
 
 </div>
 
 
-<div class="msg bot">
+<div class="preview-message preview-bot">
 
 I can help structure your investment
-requirement. Start with your location,
+requirement. Tell me your preferred location,
 property type, budget and timeline.
 
 </div>
 
 
 <button
-class="btn primary"
+class="btn btn-primary"
 onclick="openAI()">
 
 Open Full PRANAURA AI →
 
 </button>
+
 
 </div>
 
@@ -3442,10 +4114,12 @@ Open Full PRANAURA AI →
 
 
 <!-- ======================================================
-     CRM / ADMIN
+     CRM
 ====================================================== -->
 
-<section class="crm-section" id="dashboard">
+<section
+class="crm"
+id="crm">
 
 <div class="container">
 
@@ -3459,15 +4133,15 @@ CRM & Admin Intelligence.
 
 <p class="text">
 
-This local prototype dashboard shows records created
-on this browser. A production system should replace
-localStorage with a secure database and authenticated
-admin API.
+The current single-file version uses browser storage
+for demonstration. Production deployment should use
+a secure backend and database.
 
 </p>
 
 
 <div class="dashboard">
+
 
 <div class="metric">
 
@@ -3498,10 +4172,10 @@ Enquiries
 <div class="metric">
 
 <span>
-Appointments
+Meetings
 </span>
 
-<strong id="dashAppointments">
+<strong id="dashMeetings">
 0
 </strong>
 
@@ -3511,14 +4185,15 @@ Appointments
 <div class="metric">
 
 <span>
-Events
+Referrals
 </span>
 
-<strong id="dashEvents">
+<strong id="dashReferrals">
 0
 </strong>
 
 </div>
+
 
 </div>
 
@@ -3526,7 +4201,7 @@ Events
 <div style="margin-top:25px">
 
 <button
-class="btn primary"
+class="btn btn-primary"
 onclick="openAdmin()">
 
 Open Admin Console →
@@ -3544,7 +4219,8 @@ Open Admin Console →
      APPOINTMENTS
 ====================================================== -->
 
-<section id="appointments">
+<section
+id="appointments">
 
 <div class="container">
 
@@ -3556,8 +4232,8 @@ Meetings & Follow-up
 Keep every connection moving.
 </h2>
 
-<div class="grid g2"
-style="margin-top:30px">
+
+<div class="appointment-grid">
 
 
 <div class="card">
@@ -3566,33 +4242,46 @@ style="margin-top:30px">
 Request a Meeting
 </h3>
 
-<form id="meetingForm"
+
+<form
+id="meetingForm"
 style="margin-top:20px">
 
 
 <div class="field">
 
-<label>Name</label>
+<label>
+Name
+</label>
 
-<input id="meetingName" required>
-
-</div>
-
-
-<div class="field">
-
-<label>Phone</label>
-
-<input id="meetingPhone" required>
+<input
+id="meetingName"
+required>
 
 </div>
 
 
 <div class="field">
 
-<label>Date</label>
+<label>
+Phone
+</label>
 
-<input id="meetingDate"
+<input
+id="meetingPhone"
+required>
+
+</div>
+
+
+<div class="field">
+
+<label>
+Preferred Date
+</label>
+
+<input
+id="meetingDate"
 type="date"
 required>
 
@@ -3601,9 +4290,12 @@ required>
 
 <div class="field">
 
-<label>Preferred Time</label>
+<label>
+Preferred Time
+</label>
 
-<input id="meetingTime"
+<input
+id="meetingTime"
 type="time"
 required>
 
@@ -3611,12 +4303,13 @@ required>
 
 
 <button
-class="btn primary"
+class="btn btn-primary"
 style="margin-top:15px">
 
 Request Meeting →
 
 </button>
+
 
 </form>
 
@@ -3629,44 +4322,59 @@ Request Meeting →
 Callback Request
 </h3>
 
-<form id="callbackForm"
+
+<form
+id="callbackForm"
 style="margin-top:20px">
 
 
 <div class="field">
 
-<label>Name</label>
+<label>
+Name
+</label>
 
-<input id="callbackName" required>
-
-</div>
-
-
-<div class="field">
-
-<label>Phone</label>
-
-<input id="callbackPhone" required>
+<input
+id="callbackName"
+required>
 
 </div>
 
 
 <div class="field">
 
-<label>Reason</label>
+<label>
+Phone
+</label>
 
-<textarea id="callbackReason" required></textarea>
+<input
+id="callbackPhone"
+required>
+
+</div>
+
+
+<div class="field">
+
+<label>
+Reason
+</label>
+
+<textarea
+id="callbackReason"
+required></textarea>
 
 </div>
 
 
 <button
-class="btn primary"
+class="btn btn-primary"
 style="margin-top:15px">
 
 Request Callback →
 
 </button>
+
 
 </form>
 
@@ -3697,8 +4405,7 @@ Trust should be structured.
 </h2>
 
 
-<div class="grid g4"
-style="margin-top:30px">
+<div class="verification-grid">
 
 
 <div class="card">
@@ -3712,7 +4419,7 @@ Information Received
 </h3>
 
 <p>
-Initial information submitted.
+Initial project or partner information.
 </p>
 
 </div>
@@ -3746,8 +4453,7 @@ Verification
 </h3>
 
 <p>
-Supporting documents and details can
-be reviewed.
+Supporting information can be reviewed.
 </p>
 
 </div>
@@ -3764,8 +4470,7 @@ Available for Introduction
 </h3>
 
 <p>
-Relevant stakeholders may be introduced
-after appropriate review.
+Relevant stakeholders may be introduced.
 </p>
 
 </div>
@@ -3782,7 +4487,8 @@ after appropriate review.
      DOCUMENT VAULT
 ====================================================== -->
 
-<section class="platform">
+<section
+class="platform">
 
 <div class="container">
 
@@ -3796,19 +4502,23 @@ Organized project information.
 
 <p class="text">
 
-The production version should use encrypted,
-authenticated cloud storage. This interface currently
-records document metadata only.
+The production version should use encrypted
+authenticated cloud storage. This prototype
+stores metadata only.
 
 </p>
 
 
-<div class="card"
+<div
+class="card"
 style="margin-top:30px">
 
-<form id="documentForm">
 
-<div class="formgrid">
+<form
+id="documentForm">
+
+
+<div class="form-grid">
 
 
 <div class="field">
@@ -3819,11 +4529,25 @@ Document Type
 
 <select id="documentType">
 
-<option>Project Brochure</option>
-<option>Approval Document</option>
-<option>Land Document</option>
-<option>Company Document</option>
-<option>Other</option>
+<option>
+Project Brochure
+</option>
+
+<option>
+Approval Document
+</option>
+
+<option>
+Land Document
+</option>
+
+<option>
+Company Document
+</option>
+
+<option>
+Other
+</option>
 
 </select>
 
@@ -3837,7 +4561,7 @@ Reference
 </label>
 
 <input
-id="documentRef"
+id="documentReference"
 placeholder="Project / Partner reference">
 
 </div>
@@ -3846,7 +4570,7 @@ placeholder="Project / Partner reference">
 <div class="field full">
 
 <label>
-Document File
+Document
 </label>
 
 <input
@@ -3860,12 +4584,13 @@ type="file">
 
 
 <button
-class="btn primary"
+class="btn btn-primary"
 style="margin-top:18px">
 
 Register Document →
 
 </button>
+
 
 </form>
 
@@ -3877,7 +4602,7 @@ Register Document →
 
 
 <!-- ======================================================
-     REFERRALS
+     REFERRAL
 ====================================================== -->
 
 <section>
@@ -3893,14 +4618,16 @@ Grow through trusted connections.
 </h2>
 
 
-<div class="card"
+<div
+class="card"
 style="margin-top:30px">
 
 
-<form id="referralForm">
+<form
+id="referralForm">
 
 
-<div class="formgrid">
+<div class="form-grid">
 
 
 <div class="field">
@@ -3909,7 +4636,9 @@ style="margin-top:30px">
 Your Name
 </label>
 
-<input id="refName" required>
+<input
+id="refYourName"
+required>
 
 </div>
 
@@ -3920,7 +4649,9 @@ Your Name
 Referral Name
 </label>
 
-<input id="refPerson" required>
+<input
+id="refName"
+required>
 
 </div>
 
@@ -3931,7 +4662,9 @@ Referral Name
 Referral Phone
 </label>
 
-<input id="refPhone" required>
+<input
+id="refPhone"
+required>
 
 </div>
 
@@ -3944,11 +4677,25 @@ Stakeholder Type
 
 <select id="refType">
 
-<option>Builder</option>
-<option>Investor</option>
-<option>Landowner</option>
-<option>Buyer</option>
-<option>Other</option>
+<option>
+Builder
+</option>
+
+<option>
+Investor
+</option>
+
+<option>
+Landowner
+</option>
+
+<option>
+Buyer
+</option>
+
+<option>
+Other
+</option>
 
 </select>
 
@@ -3959,12 +4706,13 @@ Stakeholder Type
 
 
 <button
-class="btn primary"
+class="btn btn-primary"
 style="margin-top:18px">
 
 Create Referral →
 
 </button>
+
 
 </form>
 
@@ -3993,18 +4741,18 @@ Commission calculator.
 
 <p class="text">
 
-Use this only as an internal estimation tool.
-Actual commercial arrangements must be agreed
-with the relevant parties.
+Internal estimation tool only. Actual commercial
+arrangements must be agreed with the relevant parties.
 
 </p>
 
 
-<div class="card"
+<div
+class="card"
 style="margin-top:30px">
 
 
-<div class="formgrid">
+<div class="form-grid">
 
 
 <div class="field">
@@ -4024,13 +4772,13 @@ placeholder="5000000">
 <div class="field">
 
 <label>
-Commission %
+Commission Rate %
 </label>
 
 <input
-id="commission"
+id="commissionRate"
 type="number"
-step=".01"
+step="0.01"
 placeholder="1">
 
 </div>
@@ -4040,7 +4788,7 @@ placeholder="1">
 
 
 <button
-class="btn primary"
+class="btn btn-primary"
 style="margin-top:18px"
 onclick="calculateCommission()">
 
@@ -4049,10 +4797,12 @@ Calculate →
 </button>
 
 
-<div id="commissionResult"
+<div
+id="commissionResult"
 style="margin-top:20px">
 
 </div>
+
 
 </div>
 
@@ -4070,7 +4820,7 @@ style="margin-top:20px">
 <div class="container founder">
 
 
-<div class="founder-box">
+<div class="founder-mark">
 
 <strong>
 P
@@ -4093,23 +4843,26 @@ Founder
 Pranathi H.S.
 </div>
 
-<div class="role">
+<div class="founder-role">
 Founder & Networking Lead
 </div>
 
 <p class="text">
 
-PRANAURA was created with the vision of building
-a more structured and professional approach to
-property networking and stakeholder connections.
+PRANAURA was created with the vision of bringing
+greater structure and professionalism to property
+networking and stakeholder connections.
 
-The long-term objective is to combine human
-networking with technology, structured data and
-AI-assisted workflows.
+<br><br>
+
+The long-term objective is to combine human networking
+with structured data, technology and AI-assisted
+workflows.
 
 </p>
 
 </div>
+
 
 </div>
 
@@ -4133,20 +4886,22 @@ Questions, answered.
 </h2>
 
 
-<div style="margin-top:25px">
+<div class="faq">
 
 
 <div class="faq-item">
 
-<button class="faq-q">
+<button class="faq-question">
 
 What is PRANAURA?
 
-<span>+</span>
+<span>
++
+</span>
 
 </button>
 
-<div class="faq-a">
+<div class="faq-answer">
 
 PRANAURA is a professional real estate networking
 and advisory intermediary connecting builders,
@@ -4159,19 +4914,21 @@ developers, landowners, investors and buyers.
 
 <div class="faq-item">
 
-<button class="faq-q">
+<button class="faq-question">
 
 Does PRANAURA own properties?
 
-<span>+</span>
+<span>
++
+</span>
 
 </button>
 
-<div class="faq-a">
+<div class="faq-answer">
 
-No. PRANAURA is not positioned as the owner of
-properties. It facilitates networking and
-introductions.
+No. PRANAURA operates as a networking and advisory
+intermediary and does not represent itself as the
+owner of properties.
 
 </div>
 
@@ -4180,19 +4937,21 @@ introductions.
 
 <div class="faq-item">
 
-<button class="faq-q">
+<button class="faq-question">
 
 Does PRANAURA guarantee investment returns?
 
-<span>+</span>
+<span>
++
+</span>
 
 </button>
 
-<div class="faq-a">
+<div class="faq-answer">
 
 No. PRANAURA does not guarantee investment returns,
-project completion, legal title, approvals or
-transaction outcomes.
+property appreciation, project completion, legal title,
+approvals or transaction outcomes.
 
 </div>
 
@@ -4201,21 +4960,21 @@ transaction outcomes.
 
 <div class="faq-item">
 
-<button class="faq-q">
+<button class="faq-question">
 
-Is the AI connected to Ollama?
+How does Smart Match work?
 
-<span>+</span>
+<span>
++
+</span>
 
 </button>
 
-<div class="faq-a">
+<div class="faq-answer">
 
-The website includes the AI interface and an
-optional Ollama connection configuration. A secure
-production deployment should connect Ollama through
-a backend rather than exposing internal services
-directly to the public browser.
+Smart Match collects structured information such as
+role, location, property type, budget, timeline and
+requirement to help organize potential connections.
 
 </div>
 
@@ -4224,20 +4983,21 @@ directly to the public browser.
 
 <div class="faq-item">
 
-<button class="faq-q">
+<button class="faq-question">
 
-Is the database real?
+Is PRANAURA AI connected to Ollama?
 
-<span>+</span>
+<span>
++
+</span>
 
 </button>
 
-<div class="faq-a">
+<div class="faq-answer">
 
-The current single-file prototype stores data in the
-browser using localStorage. A production PRANAURA
-platform should use a real database with authentication,
-authorization, backups and server-side validation.
+The website contains the chatbot interface and can be
+connected to your Ollama and Qwen-based PRANAURA AI
+through a secure backend.
 
 </div>
 
@@ -4260,7 +5020,7 @@ authorization, backups and server-side validation.
 <div class="container">
 
 <div class="label">
-Contact
+Contact PRANAURA
 </div>
 
 <h2 class="title">
@@ -4272,12 +5032,14 @@ Let's build the right connection.
 
 
 <a
-class="contact"
-href="tel:+919019746649">
+href="tel:+919019746649"
+class="contact-card">
+
 
 <div class="contact-icon">
 ☎
 </div>
+
 
 <div>
 
@@ -4291,16 +5053,19 @@ Phone
 
 </div>
 
+
 </a>
 
 
 <a
-class="contact"
-href="mailto:pranauraconnect@gmail.com">
+href="mailto:pranauraconnect@gmail.com"
+class="contact-card">
+
 
 <div class="contact-icon">
 ✉
 </div>
+
 
 <div>
 
@@ -4314,14 +5079,17 @@ pranauraconnect@gmail.com
 
 </div>
 
+
 </a>
 
 
-<div class="contact">
+<div class="contact-card">
+
 
 <div class="contact-icon">
 ⌂
 </div>
+
 
 <div>
 
@@ -4335,18 +5103,21 @@ Vijayanagar, Mysore, Karnataka, India
 
 </div>
 
+
 </div>
 
 
 <a
-class="contact"
 href="https://instagram.com/Pranaura_"
 target="_blank"
-rel="noopener">
+rel="noopener"
+class="contact-card">
+
 
 <div class="contact-icon">
 ◎
 </div>
+
 
 <div>
 
@@ -4360,6 +5131,7 @@ Instagram
 
 </div>
 
+
 </a>
 
 
@@ -4369,10 +5141,10 @@ Instagram
 <div style="margin-top:25px">
 
 <button
-class="btn primary"
+class="btn btn-primary"
 onclick="openModal('contactModal')">
 
-Send Enquiry →
+Send an Enquiry →
 
 </button>
 
@@ -4387,7 +5159,11 @@ Send Enquiry →
      LEGAL
 ====================================================== -->
 
-<section style="padding:45px 22px;background:var(--cream3)">
+<section
+style="
+padding:45px 22px;
+background:var(--cream3);
+">
 
 <div class="container">
 
@@ -4396,18 +5172,18 @@ Important Information
 </div>
 
 <p class="text"
-style="font-size:10px">
+style="font-size:9px">
 
 PRANAURA operates as a real estate networking and
-advisory intermediary. Information supplied by
-third parties should be independently verified.
-PRANAURA does not guarantee property availability,
-legal title, approvals, project completion,
-investment returns or transaction outcomes.
+advisory intermediary. Information supplied by third
+parties should be independently verified. PRANAURA
+does not guarantee property availability, legal title,
+approvals, project completion, investment returns or
+transaction outcomes.
 
 Any commercial, investment or property transaction
-should be independently evaluated and documented
-by the relevant parties.
+should be independently evaluated and documented by
+the relevant parties.
 
 </p>
 
@@ -4436,8 +5212,7 @@ Strategic Builder & Investor Partnerships.
 </p>
 
 <p>
-Connecting opportunities through
-professional networking.
+Connecting opportunities through professional networking.
 </p>
 
 </div>
@@ -4449,11 +5224,25 @@ professional networking.
 Explore
 </h4>
 
-<a href="#about">About</a>
-<a href="#process">Process</a>
-<a href="#network">Network</a>
-<a href="#services">Services</a>
-<a href="#opportunities">Opportunities</a>
+<a href="#about">
+About
+</a>
+
+<a href="#process">
+Process
+</a>
+
+<a href="#network">
+Network
+</a>
+
+<a href="#services">
+Services
+</a>
+
+<a href="#opportunities">
+Opportunities
+</a>
 
 </div>
 
@@ -4464,11 +5253,20 @@ Explore
 Connect
 </h4>
 
-<a href="#match">Smart Match</a>
-<a href="#ai">PRANAURA AI</a>
-<a href="#contact">Contact</a>
+<a href="#match">
+Smart Match
+</a>
 
-<a href="https://wa.me/919019746649"
+<a href="#ai">
+PRANAURA AI
+</a>
+
+<a href="#contact">
+Contact
+</a>
+
+<a
+href="https://wa.me/919019746649"
 target="_blank">
 
 WhatsApp
@@ -4491,7 +5289,7 @@ WhatsApp
 
 
 <!-- ======================================================
-     AI FLOAT
+     FLOATING AI
 ====================================================== -->
 
 <button
@@ -4505,20 +5303,58 @@ aria-label="Open PRANAURA AI">
 
 
 <!-- ======================================================
-     REAL WHATSAPP ICON
+     REAL WHATSAPP LOGO
 ====================================================== -->
 
 <a
-class="whatsapp"
 href="https://wa.me/919019746649"
 target="_blank"
 rel="noopener noreferrer"
+class="whatsapp"
 aria-label="Chat with PRANAURA on WhatsApp">
 
 
-<svg viewBox="0 0 32 32">
+<svg
+viewBox="0 0 32 32">
 
-<path d="M16.02 3.2C9.03 3.2 3.36 8.86 3.36 15.84c0 2.23.58 4.33 1.6 6.17L3.2 28.8l6.97-1.77a12.62 12.62 0 0 0 5.85 1.48c6.98 0 12.64-5.67 12.64-12.65C28.66 8.88 23 3.2 16.02 3.2Zm6.97 16.68c-.29.81-1.7 1.52-2.45 1.61-.72.09-1.64.13-2.65-.19-.61-.19-1.39-.44-2.38-.87-4.17-1.8-6.89-6.01-7.08-6.29-.19-.28-1.69-2.27-1.69-4.33 0-2.06 1.08-3.07 1.46-3.49.38-.42.83-.52 1.12-.52s.58 0 .83.01c.27.01.64-.1 1 .77.38.91 1.29 3.12 1.4 3.34.11.22.18.47.03.75-.15.28-.23.45-.45.71-.22.26-.46.58-.66.78-.22.23-.44.48-.19.91.25.43 1.1 1.81 2.36 2.92 1.61 1.43 2.97 1.88 3.4 2.1.43.22.68.18.93-.1.25-.28 1.08-1.25 1.37-1.68.29-.43.58-.36.97-.22.39.14 2.47 1.16 2.9 1.38.43.22.72.33.83.51.11.18.11 1.09-.25 1.9Z"/>
+<path d="
+
+M16.02 3.2
+C9.03 3.2 3.36 8.86 3.36 15.84
+C3.36 18.07 3.94 20.17 4.96 22.01
+L3.2 28.8
+L10.17 27.03
+C11.91 27.98 13.92 28.51 16.02 28.51
+C23 28.51 28.66 22.84 28.66 15.86
+C28.66 8.88 23 3.2 16.02 3.2
+Z
+
+M22.99 19.88
+C22.7 20.69 21.29 21.4 20.54 21.49
+C19.82 21.58 18.9 21.62 17.89 21.3
+C17.28 21.11 16.5 20.86 15.51 20.43
+C11.34 18.63 8.62 14.42 8.43 14.14
+C8.24 13.86 6.74 11.87 6.74 9.81
+C6.74 7.75 7.82 6.74 8.2 6.32
+C8.58 5.9 9.03 5.8 9.32 5.8
+C9.61 5.8 9.9 5.8 10.15 5.81
+C10.42 5.82 10.79 5.71 11.15 6.58
+C11.53 7.49 12.44 9.7 12.55 9.92
+C12.66 10.14 12.73 10.39 12.58 10.67
+C12.43 10.95 12.35 11.12 12.13 11.38
+C11.91 11.64 11.67 11.96 11.47 12.16
+C11.25 12.39 11.03 12.64 11.28 13.07
+C11.53 13.5 12.38 14.88 13.64 15.99
+C15.25 17.42 16.61 17.87 17.04 18.09
+C17.47 18.31 17.72 18.27 17.97 17.99
+C18.22 17.71 19.05 16.74 19.34 16.31
+C19.63 15.88 19.92 15.95 20.31 16.09
+C20.7 16.23 22.78 17.25 23.21 17.47
+C23.64 17.69 23.93 17.8 24.04 17.98
+C24.15 18.16 24.15 19.07 22.99 19.88
+Z
+
+"/>
 
 </svg>
 
@@ -4526,12 +5362,12 @@ aria-label="Chat with PRANAURA on WhatsApp">
 
 
 <!-- ======================================================
-     BACK
+     BACK TO TOP
 ====================================================== -->
 
 <button
-class="back"
-id="back">
+class="back-top"
+id="backTop">
 
 ↑
 
@@ -4561,13 +5397,13 @@ id="consent">
 
 <p>
 
-PRANAURA uses browser storage in this prototype
-to remember submitted records and preferences.
+This prototype uses browser storage to remember
+submitted records and preferences.
 
 </p>
 
 <button
-class="btn primary"
+class="btn btn-primary"
 onclick="acceptConsent()">
 
 Continue
@@ -4589,6 +5425,7 @@ id="contactModal">
 
 <div class="modal">
 
+
 <button
 class="modal-close"
 onclick="closeModal('contactModal')">
@@ -4603,15 +5440,18 @@ Connect with PRANAURA
 </h2>
 
 <p class="text">
+
 Tell us how we can help.
+
 </p>
 
 
-<form id="contactForm"
+<form
+id="contactForm"
 style="margin-top:25px">
 
 
-<div class="formgrid">
+<div class="form-grid">
 
 
 <div class="field">
@@ -4620,7 +5460,9 @@ style="margin-top:25px">
 Name
 </label>
 
-<input id="contactName" required>
+<input
+id="contactName"
+required>
 
 </div>
 
@@ -4631,7 +5473,9 @@ Name
 Phone
 </label>
 
-<input id="contactPhone" required>
+<input
+id="contactPhone"
+required>
 
 </div>
 
@@ -4642,7 +5486,8 @@ Phone
 Email
 </label>
 
-<input id="contactEmail"
+<input
+id="contactEmail"
 type="email">
 
 </div>
@@ -4651,16 +5496,31 @@ type="email">
 <div class="field">
 
 <label>
-Type
+Enquiry Type
 </label>
 
-<select id="contactType">
+<select
+id="contactType">
 
-<option>Builder Partnership</option>
-<option>Investor Enquiry</option>
-<option>Landowner Partnership</option>
-<option>Buyer Enquiry</option>
-<option>General Enquiry</option>
+<option>
+Builder Partnership
+</option>
+
+<option>
+Investor Enquiry
+</option>
+
+<option>
+Landowner Partnership
+</option>
+
+<option>
+Buyer Enquiry
+</option>
+
+<option>
+General Enquiry
+</option>
 
 </select>
 
@@ -4673,7 +5533,8 @@ Type
 Message
 </label>
 
-<textarea id="contactMessage"
+<textarea
+id="contactMessage"
 required></textarea>
 
 </div>
@@ -4683,7 +5544,7 @@ required></textarea>
 
 
 <button
-class="btn primary"
+class="btn btn-primary"
 style="margin-top:18px">
 
 Submit Enquiry →
@@ -4707,6 +5568,7 @@ class="overlay"
 id="adminModal">
 
 <div class="modal">
+
 
 <button
 class="modal-close"
@@ -4733,7 +5595,9 @@ Local prototype operations console.
 
 <div class="metric">
 
-<span>Matches</span>
+<span>
+Matches
+</span>
 
 <strong id="adminMatches">
 0
@@ -4744,7 +5608,9 @@ Local prototype operations console.
 
 <div class="metric">
 
-<span>Enquiries</span>
+<span>
+Enquiries
+</span>
 
 <strong id="adminEnquiries">
 0
@@ -4755,7 +5621,9 @@ Local prototype operations console.
 
 <div class="metric">
 
-<span>Meetings</span>
+<span>
+Meetings
+</span>
 
 <strong id="adminMeetings">
 0
@@ -4766,7 +5634,9 @@ Local prototype operations console.
 
 <div class="metric">
 
-<span>Referrals</span>
+<span>
+Referrals
+</span>
 
 <strong id="adminReferrals">
 0
@@ -4786,15 +5656,24 @@ Local prototype operations console.
 
 <tr>
 
-<th>ID</th>
-<th>Type</th>
-<th>Date</th>
+<th>
+ID
+</th>
+
+<th>
+Type
+</th>
+
+<th>
+Date
+</th>
 
 </tr>
 
 </thead>
 
-<tbody id="adminTable">
+<tbody
+id="adminTable">
 
 </tbody>
 
@@ -4803,11 +5682,13 @@ Local prototype operations console.
 </div>
 
 
-<div class="row"
+<div
+class="row"
 style="margin-top:20px">
 
+
 <button
-class="btn outline"
+class="btn btn-outline"
 onclick="exportData()">
 
 Export Data
@@ -4816,7 +5697,7 @@ Export Data
 
 
 <button
-class="btn outline"
+class="btn btn-outline"
 onclick="importData()">
 
 Import Data
@@ -4825,25 +5706,30 @@ Import Data
 
 
 <button
-class="btn outline"
+class="btn btn-outline"
 onclick="clearData()">
 
 Clear Local Data
 
 </button>
 
+
 </div>
 
 
 <p
-style="font-size:9px;color:var(--muted);margin-top:20px">
+style="
+font-size:9px;
+color:var(--muted);
+margin-top:20px;
+">
 
-Production note: secure authentication, database,
-server-side authorization, encrypted storage and
-audit infrastructure are required before this console
-handles real customer information.
+Production deployment requires secure authentication,
+database access controls, server-side validation,
+encrypted storage and audit infrastructure.
 
 </p>
+
 
 </div>
 
@@ -4859,6 +5745,7 @@ class="overlay"
 id="roomModal">
 
 <div class="modal">
+
 
 <button
 class="modal-close"
@@ -4880,7 +5767,8 @@ A future secure workspace for verified stakeholders.
 </p>
 
 
-<div class="grid g2"
+<div
+class="grid g2"
 style="margin-top:25px">
 
 
@@ -4946,7 +5834,7 @@ Activity Log
 </h3>
 
 <p>
-Track important actions.
+Track important project activity.
 </p>
 
 </div>
@@ -4955,13 +5843,13 @@ Track important actions.
 </div>
 
 
-<div class="disclaimer"
-style="margin-top:20px">
+<div class="disclaimer">
 
-Secure rooms require a real authenticated backend.
-This website demonstrates the interface only.
+Secure rooms require an authenticated backend.
+This interface demonstrates the future workflow.
 
 </div>
+
 
 </div>
 
@@ -4978,6 +5866,7 @@ id="interestModal">
 
 <div class="modal">
 
+
 <button
 class="modal-close"
 onclick="closeModal('interestModal')">
@@ -4993,13 +5882,13 @@ Express Interest
 
 <p class="text">
 
-Submit your contact information and PRANAURA can
-record your interest for follow-up.
+Submit your information for follow-up.
 
 </p>
 
 
-<form id="interestForm"
+<form
+id="interestForm"
 style="margin-top:25px">
 
 
@@ -5009,7 +5898,9 @@ style="margin-top:25px">
 Name
 </label>
 
-<input id="interestName" required>
+<input
+id="interestName"
+required>
 
 </div>
 
@@ -5020,7 +5911,9 @@ Name
 Phone
 </label>
 
-<input id="interestPhone" required>
+<input
+id="interestPhone"
+required>
 
 </div>
 
@@ -5039,12 +5932,13 @@ required></textarea>
 
 
 <button
-class="btn primary"
+class="btn btn-primary"
 style="margin-top:18px">
 
 Submit Interest →
 
 </button>
+
 
 </form>
 
@@ -5062,10 +5956,11 @@ class="ai-chat"
 id="aiChat">
 
 
-<div class="ai-head">
+<div class="ai-header">
 
 
-<div class="ai-head-left">
+<div class="ai-header-left">
+
 
 <div class="ai-avatar">
 ✦
@@ -5084,6 +5979,7 @@ Property Intelligence Assistant
 
 </div>
 
+
 </div>
 
 
@@ -5095,6 +5991,7 @@ onclick="closeAI()">
 
 </button>
 
+
 </div>
 
 
@@ -5103,7 +6000,7 @@ class="ai-messages"
 id="aiMessages">
 
 
-<div class="msg bot">
+<div class="ai-message bot">
 
 Hello! I'm <strong>PRANAURA AI</strong>.
 
@@ -5119,36 +6016,59 @@ Smart Match and PRANAURA services.
 </div>
 
 
-<div class="ai-suggest">
+<div class="ai-suggestions">
 
-<button onclick="askAI('I want to invest in property')">
+
+<button
+onclick="askAI('I want to invest in property')">
+
 Investment
+
 </button>
 
-<button onclick="askAI('I am a builder')">
+
+<button
+onclick="askAI('I am a builder looking for investors')">
+
 Builder
+
 </button>
 
-<button onclick="askAI('I have land')">
+
+<button
+onclick="askAI('I have land for development')">
+
 Landowner
+
 </button>
 
-<button onclick="askAI('I want to buy property')">
+
+<button
+onclick="askAI('I want to buy property')">
+
 Buyer
+
 </button>
 
-<button onclick="askAI('How does Smart Match work?')">
+
+<button
+onclick="askAI('How does Smart Match work?')">
+
 Smart Match
+
 </button>
+
 
 </div>
 
 
 <div class="ai-input">
 
+
 <input
 id="aiInput"
 placeholder="Ask PRANAURA AI...">
+
 
 <button
 onclick="sendAI()">
@@ -5156,6 +6076,7 @@ onclick="sendAI()">
 →
 
 </button>
+
 
 </div>
 
@@ -5165,93 +6086,127 @@ onclick="sendAI()">
 <script>
 
 /* =========================================================
+   HELPER
+========================================================= */
+
+const $ = id =>
+document.getElementById(id);
+
+
+/* =========================================================
    STORAGE
 ========================================================= */
 
-const DB_PREFIX="pranaura_";
+const PREFIX =
+"pranaura_";
 
 
 function getData(key){
 
-try{
+    try{
 
-return JSON.parse(
-localStorage.getItem(DB_PREFIX+key)
-) || [];
+        return JSON.parse(
+            localStorage.getItem(
+                PREFIX + key
+            )
+        ) || [];
 
-}catch{
+    }catch{
 
-return [];
+        return [];
 
-}
+    }
 
 }
 
 
 function saveData(key,data){
 
-localStorage.setItem(
-DB_PREFIX+key,
-JSON.stringify(data)
-);
+    localStorage.setItem(
+        PREFIX + key,
+        JSON.stringify(data)
+    );
 
 }
 
 
 function addData(key,item){
 
-const data=getData(key);
+    const data =
+        getData(key);
 
-data.push(item);
+    data.push(item);
 
-saveData(key,data);
+    saveData(key,data);
 
 }
 
 
 /* =========================================================
-   HELPERS
+   ID
 ========================================================= */
 
-function $(id){
-return document.getElementById(id);
+function generateID(prefix){
+
+    const d =
+        new Date();
+
+    const date =
+        String(
+            d.getFullYear()
+        ).slice(-2)
+        +
+        String(
+            d.getMonth()+1
+        ).padStart(2,"0")
+        +
+        String(
+            d.getDate()
+        ).padStart(2,"0");
+
+
+    const random =
+        Math.floor(
+            100 +
+            Math.random()*900
+        );
+
+
+    return `
+        PRN-${prefix}-${date}-${random}
+    `.replace(/\s/g,"");
+
 }
 
+
+/* =========================================================
+   TOAST
+========================================================= */
 
 function toast(message){
 
-const box=$("toasts");
+    const container =
+        $("toasts");
 
-const t=document.createElement("div");
+    const element =
+        document.createElement("div");
 
-t.className="toast";
+    element.className =
+        "toast";
 
-t.textContent=message;
+    element.textContent =
+        message;
 
-box.appendChild(t);
-
-setTimeout(()=>{
-
-t.remove();
-
-},3500);
-
-}
+    container.appendChild(
+        element
+    );
 
 
-function id(prefix){
+    setTimeout(()=>{
 
-const d=new Date();
+        element.remove();
 
-const date=
-String(d.getFullYear()).slice(-2)+
-String(d.getMonth()+1).padStart(2,"0")+
-String(d.getDate()).padStart(2,"0");
-
-const random=
-Math.floor(100+Math.random()*900);
-
-return `PRN-${prefix}-${date}-${random}`;
+    },3500);
 
 }
 
@@ -5260,37 +6215,53 @@ return `PRN-${prefix}-${date}-${random}`;
    LOADER
 ========================================================= */
 
-window.addEventListener("load",()=>{
+window.addEventListener(
+    "load",
+    ()=>{
 
-setTimeout(()=>{
+        setTimeout(()=>{
 
-$("loader").classList.add("hide");
+            $("loader")
+            .classList
+            .add("hide");
 
-},700);
+        },700);
 
-});
+    }
+);
 
 
 /* =========================================================
-   MOBILE
+   MOBILE MENU
 ========================================================= */
 
-$("menuBtn").addEventListener("click",()=>{
+$("menuBtn")
+.addEventListener(
+    "click",
+    ()=>{
 
-$("navlinks").classList.toggle("open");
+        $("navlinks")
+        .classList
+        .toggle("open");
 
-});
+    }
+);
 
 
 document
 .querySelectorAll(".navlinks a")
-.forEach(a=>{
+.forEach(link=>{
 
-a.addEventListener("click",()=>{
+    link.addEventListener(
+        "click",
+        ()=>{
 
-$("navlinks").classList.remove("open");
+            $("navlinks")
+            .classList
+            .remove("open");
 
-});
+        }
+    );
 
 });
 
@@ -5300,125 +6271,180 @@ $("navlinks").classList.remove("open");
 ========================================================= */
 
 if(
-localStorage.getItem("pranaura_theme")
-==="dark"
+    localStorage.getItem(
+        "pranaura_theme"
+    ) === "dark"
 ){
 
-document.body.classList.add("dark");
+    document.body
+    .classList
+    .add("dark");
 
 }
 
 
-$("themeBtn").addEventListener("click",()=>{
+$("themeBtn")
+.addEventListener(
+    "click",
+    ()=>{
 
-document.body.classList.toggle("dark");
+        document.body
+        .classList
+        .toggle("dark");
 
-localStorage.setItem(
-"pranaura_theme",
 
-document.body.classList.contains("dark")
-?"dark"
-:"light"
+        localStorage.setItem(
 
+            "pranaura_theme",
+
+            document.body
+            .classList
+            .contains("dark")
+            ? "dark"
+            : "light"
+
+        );
+
+    }
 );
-
-});
 
 
 /* =========================================================
    LANGUAGE
 ========================================================= */
 
-let language="EN";
+let currentLanguage =
+    "EN";
 
 
-$("langBtn").addEventListener("click",()=>{
+$("languageBtn")
+.addEventListener(
+    "click",
+    ()=>{
 
-language=
-language==="EN"
-?"KN"
-:"EN";
+        currentLanguage =
+            currentLanguage === "EN"
+            ? "KN"
+            : "EN";
 
-$("langBtn").textContent=language;
 
-toast(
-language==="KN"
-?"Kannada interface selected."
-:"English interface selected."
+        $("languageBtn")
+        .textContent =
+            currentLanguage;
+
+
+        toast(
+            currentLanguage === "KN"
+            ? "Kannada interface selected."
+            : "English interface selected."
+        );
+
+    }
 );
-
-});
 
 
 /* =========================================================
-   SCROLL
+   BACK TO TOP
 ========================================================= */
 
-window.addEventListener("scroll",()=>{
+window.addEventListener(
+    "scroll",
+    ()=>{
 
-if(window.scrollY>500){
+        if(window.scrollY > 500){
 
-$("back").classList.add("show");
+            $("backTop")
+            .classList
+            .add("show");
 
-}else{
+        }else{
 
-$("back").classList.remove("show");
+            $("backTop")
+            .classList
+            .remove("show");
 
-}
+        }
 
-});
+    }
+);
 
 
-$("back").addEventListener("click",()=>{
+$("backTop")
+.addEventListener(
+    "click",
+    ()=>{
 
-window.scrollTo({
-top:0,
-behavior:"smooth"
-});
+        window.scrollTo({
 
-});
+            top:0,
+
+            behavior:"smooth"
+
+        });
+
+    }
+);
 
 
 /* =========================================================
    ACTIVE NAV
 ========================================================= */
 
-const observer=
+const navObserver =
 new IntersectionObserver(
-entries=>{
+    entries=>{
 
-entries.forEach(entry=>{
+        entries.forEach(entry=>{
 
-if(entry.isIntersecting){
+            if(
+                entry.isIntersecting
+            ){
 
-document
-.querySelectorAll(".navlinks a")
-.forEach(a=>{
-a.classList.remove("active");
-});
+                document
+                .querySelectorAll(
+                    ".navlinks a"
+                )
+                .forEach(a=>
+                    a.classList
+                    .remove("active")
+                );
 
-const link=
-document.querySelector(
-`.navlinks a[href="#${entry.target.id}"]`
-);
 
-if(link)
-link.classList.add("active");
+                const link =
+                    document.querySelector(
+                        `.navlinks a[href="#${entry.target.id}"]`
+                    );
 
-}
 
-});
+                if(link){
 
-},
-{
-rootMargin:"-40% 0px -50% 0px"
-}
+                    link
+                    .classList
+                    .add("active");
+
+                }
+
+            }
+
+        });
+
+    },
+    {
+        rootMargin:
+        "-40% 0px -50% 0px"
+    }
 );
 
 
 document
 .querySelectorAll("section[id]")
-.forEach(s=>observer.observe(s));
+.forEach(section=>{
+
+    navObserver.observe(
+        section
+    );
+
+});
 
 
 /* =========================================================
@@ -5427,31 +6453,42 @@ document
 
 function openModal(id){
 
-$(id).classList.add("active");
+    $(id)
+    .classList
+    .add("active");
 
 }
 
 
 function closeModal(id){
 
-$(id).classList.remove("active");
+    $(id)
+    .classList
+    .remove("active");
 
 }
 
 
 document
 .querySelectorAll(".overlay")
-.forEach(o=>{
+.forEach(overlay=>{
 
-o.addEventListener("click",e=>{
+    overlay.addEventListener(
+        "click",
+        event=>{
 
-if(e.target===o){
+            if(
+                event.target === overlay
+            ){
 
-o.classList.remove("active");
+                overlay
+                .classList
+                .remove("active");
 
-}
+            }
 
-});
+        }
+    );
 
 });
 
@@ -5462,144 +6499,185 @@ o.classList.remove("active");
 
 function calculateLeadScore(data){
 
-let score=50;
+    let score = 50;
 
 
-if(data.budget)
-score+=10;
-
-if(data.timeline==="Immediately")
-score+=15;
-
-if(data.timeline==="Within 1 Month")
-score+=12;
-
-if(data.phone)
-score+=5;
-
-if(data.requirement.length>40)
-score+=10;
-
-if(
-data.role==="Builder" ||
-data.role==="Investor"
-)
-score+=8;
+    if(data.budget)
+        score += 10;
 
 
-return Math.min(score,100);
+    if(
+        data.timeline ===
+        "Immediately"
+    )
+        score += 15;
+
+
+    if(
+        data.timeline ===
+        "Within 1 Month"
+    )
+        score += 12;
+
+
+    if(data.phone)
+        score += 5;
+
+
+    if(
+        data.requirement.length > 40
+    )
+        score += 10;
+
+
+    if(
+        data.role === "Builder" ||
+        data.role === "Investor"
+    )
+        score += 8;
+
+
+    return Math.min(
+        score,
+        100
+    );
 
 }
 
 
 $("matchForm")
-.addEventListener("submit",e=>{
+.addEventListener(
+    "submit",
+    event=>{
 
-e.preventDefault();
-
-
-const data={
-
-id:id(
-$("role").value
-.substring(0,3)
-.toUpperCase()
-),
-
-role:$("role").value,
-
-location:$("location").value,
-
-propertyType:$("propertyType").value,
-
-budget:$("budget").value,
-
-timeline:$("timeline").value,
-
-phone:$("phone").value,
-
-requirement:$("requirement").value,
-
-leadScore:0,
-
-createdAt:new Date().toISOString()
-
-};
+        event.preventDefault();
 
 
-if(
-data.phone.replace(/\D/g,"").length<10
-){
+        const data = {
 
-toast(
-"Please enter a valid phone number."
+            id:
+                generateID(
+                    $("matchRole")
+                    .value
+                    .substring(0,3)
+                    .toUpperCase()
+                ),
+
+            role:
+                $("matchRole").value,
+
+            location:
+                $("matchLocation").value,
+
+            propertyType:
+                $("matchProperty").value,
+
+            budget:
+                $("matchBudget").value,
+
+            timeline:
+                $("matchTimeline").value,
+
+            phone:
+                $("matchPhone").value,
+
+            requirement:
+                $("matchRequirement").value,
+
+            createdAt:
+                new Date().toISOString()
+
+        };
+
+
+        if(
+            data.phone
+            .replace(/\D/g,"")
+            .length < 10
+        ){
+
+            toast(
+                "Please enter a valid phone number."
+            );
+
+            return;
+
+        }
+
+
+        data.leadScore =
+            calculateLeadScore(data);
+
+
+        addData(
+            "matches",
+            data
+        );
+
+
+        $("matchResult")
+        .innerHTML = `
+
+            <strong class="result-id">
+
+                ${data.id}
+
+            </strong>
+
+            <br><br>
+
+            <strong>
+                Match Profile Created
+            </strong>
+
+            <br><br>
+
+            Lead Priority Score:
+            <strong>
+                ${data.leadScore}/100
+            </strong>
+
+            <br><br>
+
+            ${data.role}
+            ·
+            ${data.location}
+            ·
+            ${data.propertyType}
+
+            <br><br>
+
+            <a
+            class="btn btn-primary"
+            target="_blank"
+            href="https://wa.me/919019746649?text=${encodeURIComponent(
+                "Hello PRANAURA. My Match Profile is "
+                + data.id
+                + ". Requirement: "
+                + data.requirement
+            )}">
+
+                Continue on WhatsApp →
+
+            </a>
+
+        `;
+
+
+        $("matchResult")
+        .classList
+        .add("show");
+
+
+        toast(
+            `Match Profile ${data.id} created.`
+        );
+
+
+        updateStats();
+
+    }
 );
-
-return;
-
-}
-
-
-data.leadScore=
-calculateLeadScore(data);
-
-
-addData("matches",data);
-
-
-$("matchResult").innerHTML=`
-
-<strong class="result-id">
-
-${data.id}
-
-</strong>
-
-<br><br>
-
-<strong>Match Profile Created</strong>
-
-<br><br>
-
-Lead Priority Score:
-<strong>${data.leadScore}/100</strong>
-
-<br><br>
-
-${data.role} ·
-${data.location} ·
-${data.propertyType}
-
-<br><br>
-
-<a
-class="btn primary"
-target="_blank"
-href="https://wa.me/919019746649?text=${encodeURIComponent(
-"Hello PRANAURA. My Match Profile is "+data.id+
-". Requirement: "+data.requirement
-)}">
-
-Continue on WhatsApp →
-
-</a>
-
-`;
-
-$("matchResult").classList.add("show");
-
-track(
-"match_created",
-data.id
-);
-
-updateStats();
-
-toast(
-`Match Profile ${data.id} created.`
-);
-
-});
 
 
 /* =========================================================
@@ -5608,66 +6686,89 @@ toast(
 
 function setRole(role){
 
-$("role").value=role;
+    $("matchRole")
+    .value =
+        role;
 
-$("match").scrollIntoView({
-behavior:"smooth"
-});
 
-setTimeout(()=>{
+    $("match")
+    .scrollIntoView({
+        behavior:"smooth"
+    });
 
-$("role").focus();
 
-},600);
+    setTimeout(()=>{
+
+        $("matchRole")
+        .focus();
+
+    },600);
 
 }
 
 
 /* =========================================================
-   CONTACT
+   CONTACT FORM
 ========================================================= */
 
 $("contactForm")
-.addEventListener("submit",e=>{
+.addEventListener(
+    "submit",
+    event=>{
 
-e.preventDefault();
-
-
-const record={
-
-id:id("CON"),
-
-name:$("contactName").value,
-
-phone:$("contactPhone").value,
-
-email:$("contactEmail").value,
-
-type:$("contactType").value,
-
-message:$("contactMessage").value,
-
-createdAt:new Date().toISOString()
-
-};
+        event.preventDefault();
 
 
-addData("enquiries",record);
+        const record={
+
+            id:
+                generateID("CON"),
+
+            name:
+                $("contactName").value,
+
+            phone:
+                $("contactPhone").value,
+
+            email:
+                $("contactEmail").value,
+
+            type:
+                $("contactType").value,
+
+            message:
+                $("contactMessage").value,
+
+            createdAt:
+                new Date().toISOString()
+
+        };
 
 
-closeModal("contactModal");
+        addData(
+            "enquiries",
+            record
+        );
 
 
-toast(
-`Enquiry ${record.id} submitted successfully.`
+        closeModal(
+            "contactModal"
+        );
+
+
+        toast(
+            `Enquiry ${record.id} submitted.`
+        );
+
+
+        $("contactForm")
+        .reset();
+
+
+        updateStats();
+
+    }
 );
-
-
-$("contactForm").reset();
-
-updateStats();
-
-});
 
 
 /* =========================================================
@@ -5675,41 +6776,55 @@ updateStats();
 ========================================================= */
 
 $("meetingForm")
-.addEventListener("submit",e=>{
+.addEventListener(
+    "submit",
+    event=>{
 
-e.preventDefault();
-
-
-const record={
-
-id:id("MTG"),
-
-name:$("meetingName").value,
-
-phone:$("meetingPhone").value,
-
-date:$("meetingDate").value,
-
-time:$("meetingTime").value,
-
-createdAt:new Date().toISOString()
-
-};
+        event.preventDefault();
 
 
-addData("meetings",record);
+        const record={
+
+            id:
+                generateID("MTG"),
+
+            name:
+                $("meetingName").value,
+
+            phone:
+                $("meetingPhone").value,
+
+            date:
+                $("meetingDate").value,
+
+            time:
+                $("meetingTime").value,
+
+            createdAt:
+                new Date().toISOString()
+
+        };
 
 
-toast(
-`Meeting request ${record.id} created.`
+        addData(
+            "meetings",
+            record
+        );
+
+
+        toast(
+            `Meeting request ${record.id} created.`
+        );
+
+
+        $("meetingForm")
+        .reset();
+
+
+        updateStats();
+
+    }
 );
-
-
-$("meetingForm").reset();
-
-updateStats();
-
-});
 
 
 /* =========================================================
@@ -5717,39 +6832,49 @@ updateStats();
 ========================================================= */
 
 $("callbackForm")
-.addEventListener("submit",e=>{
+.addEventListener(
+    "submit",
+    event=>{
 
-e.preventDefault();
-
-
-const record={
-
-id:id("CBK"),
-
-name:$("callbackName").value,
-
-phone:$("callbackPhone").value,
-
-reason:$("callbackReason").value,
-
-createdAt:new Date().toISOString()
-
-};
+        event.preventDefault();
 
 
-addData("callbacks",record);
+        const record={
+
+            id:
+                generateID("CBK"),
+
+            name:
+                $("callbackName").value,
+
+            phone:
+                $("callbackPhone").value,
+
+            reason:
+                $("callbackReason").value,
+
+            createdAt:
+                new Date().toISOString()
+
+        };
 
 
-toast(
-`Callback request ${record.id} created.`
+        addData(
+            "callbacks",
+            record
+        );
+
+
+        toast(
+            `Callback ${record.id} created.`
+        );
+
+
+        $("callbackForm")
+        .reset();
+
+    }
 );
-
-
-$("callbackForm").reset();
-
-updateStats();
-
-});
 
 
 /* =========================================================
@@ -5757,43 +6882,56 @@ updateStats();
 ========================================================= */
 
 $("documentForm")
-.addEventListener("submit",e=>{
+.addEventListener(
+    "submit",
+    event=>{
 
-e.preventDefault();
-
-
-const file=
-$("documentFile").files[0];
+        event.preventDefault();
 
 
-const record={
-
-id:id("DOC"),
-
-type:$("documentType").value,
-
-reference:$("documentRef").value,
-
-filename:file
-?file.name
-:"No file selected",
-
-createdAt:new Date().toISOString()
-
-};
+        const file =
+            $("documentFile")
+            .files[0];
 
 
-addData("documents",record);
+        const record={
+
+            id:
+                generateID("DOC"),
+
+            type:
+                $("documentType").value,
+
+            reference:
+                $("documentReference").value,
+
+            filename:
+                file
+                ? file.name
+                : "No file selected",
+
+            createdAt:
+                new Date().toISOString()
+
+        };
 
 
-toast(
-`Document ${record.id} registered.`
+        addData(
+            "documents",
+            record
+        );
+
+
+        toast(
+            `Document ${record.id} registered.`
+        );
+
+
+        $("documentForm")
+        .reset();
+
+    }
 );
-
-
-$("documentForm").reset();
-
-});
 
 
 /* =========================================================
@@ -5801,41 +6939,55 @@ $("documentForm").reset();
 ========================================================= */
 
 $("referralForm")
-.addEventListener("submit",e=>{
+.addEventListener(
+    "submit",
+    event=>{
 
-e.preventDefault();
-
-
-const record={
-
-id:id("REF"),
-
-name:$("refName").value,
-
-person:$("refPerson").value,
-
-phone:$("refPhone").value,
-
-type:$("refType").value,
-
-createdAt:new Date().toISOString()
-
-};
+        event.preventDefault();
 
 
-addData("referrals",record);
+        const record={
+
+            id:
+                generateID("REF"),
+
+            yourName:
+                $("refYourName").value,
+
+            referralName:
+                $("refName").value,
+
+            phone:
+                $("refPhone").value,
+
+            type:
+                $("refType").value,
+
+            createdAt:
+                new Date().toISOString()
+
+        };
 
 
-toast(
-`Referral ${record.id} created.`
+        addData(
+            "referrals",
+            record
+        );
+
+
+        toast(
+            `Referral ${record.id} created.`
+        );
+
+
+        $("referralForm")
+        .reset();
+
+
+        updateStats();
+
+    }
 );
-
-
-$("referralForm").reset();
-
-updateStats();
-
-});
 
 
 /* =========================================================
@@ -5843,40 +6995,54 @@ updateStats();
 ========================================================= */
 
 $("interestForm")
-.addEventListener("submit",e=>{
+.addEventListener(
+    "submit",
+    event=>{
 
-e.preventDefault();
-
-
-const record={
-
-id:id("INT"),
-
-name:$("interestName").value,
-
-phone:$("interestPhone").value,
-
-interest:$("interestText").value,
-
-createdAt:new Date().toISOString()
-
-};
+        event.preventDefault();
 
 
-addData("interests",record);
+        const record={
+
+            id:
+                generateID("INT"),
+
+            name:
+                $("interestName").value,
+
+            phone:
+                $("interestPhone").value,
+
+            interest:
+                $("interestText").value,
+
+            createdAt:
+                new Date().toISOString()
+
+        };
 
 
-closeModal("interestModal");
+        addData(
+            "interests",
+            record
+        );
 
 
-toast(
-`Interest ${record.id} recorded.`
+        closeModal(
+            "interestModal"
+        );
+
+
+        toast(
+            `Interest ${record.id} recorded.`
+        );
+
+
+        $("interestForm")
+        .reset();
+
+    }
 );
-
-
-$("interestForm").reset();
-
-});
 
 
 /* =========================================================
@@ -5885,464 +7051,471 @@ $("interestForm").reset();
 
 function calculateCommission(){
 
-const value=
-parseFloat($("dealValue").value);
-
-const rate=
-parseFloat($("commission").value);
-
-
-if(
-!Number.isFinite(value) ||
-!Number.isFinite(rate)
-){
-
-$("commissionResult").textContent=
-"Please enter valid values.";
-
-return;
-
-}
+    const value =
+        parseFloat(
+            $("dealValue").value
+        );
 
 
-const result=
-value*rate/100;
+    const rate =
+        parseFloat(
+            $("commissionRate").value
+        );
 
 
-$("commissionResult").innerHTML=`
+    if(
+        !Number.isFinite(value) ||
+        !Number.isFinite(rate)
+    ){
 
-<div class="card">
+        $("commissionResult")
+        .textContent =
+            "Please enter valid values.";
 
-<strong style="color:var(--brown)">
-Estimated Commission
-</strong>
+        return;
 
-<br><br>
+    }
 
-<span style="
-font-family:'Cormorant Garamond';
-font-size:35px;
-color:var(--brown);
-">
 
-₹${result.toLocaleString("en-IN")}
+    const result =
+        value * rate / 100;
 
-</span>
 
-<br><br>
+    $("commissionResult")
+    .innerHTML = `
 
-Transaction:
-₹${value.toLocaleString("en-IN")}
+        <div
+        class="card">
 
-<br>
+            <strong
+            style="color:var(--brown)">
 
-Rate:
-${rate}%
+                Estimated Commission
 
-</div>
+            </strong>
 
-`;
+            <br><br>
+
+            <span
+            style="
+            font-family:'Cormorant Garamond';
+            font-size:35px;
+            color:var(--brown);
+            ">
+
+                ₹${result.toLocaleString("en-IN")}
+
+            </span>
+
+            <br><br>
+
+            Transaction:
+            ₹${value.toLocaleString("en-IN")}
+
+            <br>
+
+            Rate:
+            ${rate}%
+
+        </div>
+
+    `;
 
 }
 
 
 /* =========================================================
-   AI
+   AI CHAT
 ========================================================= */
 
 function openAI(){
 
-$("aiChat").classList.add("active");
+    $("aiChat")
+    .classList
+    .add("active");
 
-setTimeout(()=>{
 
-$("aiInput").focus();
+    setTimeout(()=>{
 
-},200);
+        $("aiInput")
+        .focus();
+
+    },200);
 
 }
 
 
 function closeAI(){
 
-$("aiChat").classList.remove("active");
+    $("aiChat")
+    .classList
+    .remove("active");
 
 }
 
 
 $("aiFloat")
 .addEventListener(
-"click",
-openAI
+    "click",
+    openAI
 );
 
 
-function addMessage(text,type){
-
-const el=
-document.createElement("div");
-
-el.className=
-"msg "+type;
-
-el.innerHTML=text;
-
-$("aiMessages").appendChild(el);
-
-$("aiMessages").scrollTop=
-$("aiMessages").scrollHeight;
-
-}
-
-
-function aiResponse(text){
-
-const q=text.toLowerCase();
-
-
-if(
-q.includes("invest") ||
-q.includes("investor")
+function addAIMessage(
+    text,
+    type
 ){
 
-return `
+    const element =
+        document.createElement(
+            "div"
+        );
 
-I can help structure your investment
-requirement.
 
-<br><br>
+    element.className =
+        "ai-message "
+        + type;
 
-Use <strong>Smart Match</strong> to provide
-your preferred location, property type,
-budget and timeline.
 
-`;
+    element.innerHTML =
+        text;
+
+
+    $("aiMessages")
+    .appendChild(
+        element
+    );
+
+
+    $("aiMessages")
+    .scrollTop =
+        $("aiMessages")
+        .scrollHeight;
 
 }
 
 
-if(
-q.includes("builder") ||
-q.includes("developer")
+function generateAIResponse(
+    text
 ){
 
-return `
+    const q =
+        text.toLowerCase();
 
-PRANAURA can help structure builder and
-developer partnership requirements.
 
-<br><br>
+    if(
+        q.includes("invest") ||
+        q.includes("investor")
+    ){
 
-You can submit a Builder Partnership request
-through Smart Match.
+        return `
 
-`;
+            I can help structure your
+            investment requirement.
+
+            <br><br>
+
+            Use <strong>PRANAURA Smart Match</strong>
+            to provide your preferred location,
+            property type, budget and timeline.
+
+        `;
+
+    }
+
+
+    if(
+        q.includes("builder") ||
+        q.includes("developer")
+    ){
+
+        return `
+
+            PRANAURA can help structure
+            builder and developer partnership
+            requirements.
+
+            <br><br>
+
+            You can submit a Builder Partnership
+            requirement through Smart Match.
+
+        `;
+
+    }
+
+
+    if(
+        q.includes("land") ||
+        q.includes("landowner")
+    ){
+
+        return `
+
+            If you are a landowner interested
+            in development or partnership,
+            PRANAURA can help structure the
+            requirement for professional
+            follow-up.
+
+        `;
+
+    }
+
+
+    if(
+        q.includes("buy") ||
+        q.includes("property") ||
+        q.includes("home")
+    ){
+
+        return `
+
+            I can help organize your property
+            requirement.
+
+            <br><br>
+
+            Tell me your preferred location,
+            property type, budget and timeline.
+
+        `;
+
+    }
+
+
+    if(
+        q.includes("smart match") ||
+        q.includes("match")
+    ){
+
+        return `
+
+            PRANAURA Smart Match collects your
+            role, location, property type, budget,
+            timeline and requirement.
+
+            <br><br>
+
+            The current prototype creates a
+            reference ID and lead-priority score.
+
+        `;
+
+    }
+
+
+    if(
+        q.includes("mysore") ||
+        q.includes("mysuru")
+    ){
+
+        return `
+
+            PRANAURA is initially focused on
+            developing professional property
+            networking relationships in Mysuru
+            and Karnataka.
+
+        `;
+
+    }
+
+
+    if(
+        q.includes("commission")
+    ){
+
+        return `
+
+            PRANAURA may operate under agreed
+            commercial terms depending on the
+            relationship and transaction.
+
+            <br><br>
+
+            You can use the commission calculator
+            for internal estimation.
+
+        `;
+
+    }
+
+
+    if(
+        q.includes("contact") ||
+        q.includes("whatsapp")
+    ){
+
+        return `
+
+            You can contact PRANAURA at:
+
+            <br><br>
+
+            <strong>
+            +91 90197 46649
+            </strong>
+
+            <br>
+
+            pranauraconnect@gmail.com
+
+            <br><br>
+
+            You can also use the WhatsApp
+            button on the website.
+
+        `;
+
+    }
+
+
+    return `
+
+        Hello! I'm <strong>PRANAURA AI</strong>.
+
+        <br><br>
+
+        I can currently help you with:
+
+        <br>• Investments
+
+        <br>• Property requirements
+
+        <br>• Builder partnerships
+
+        <br>• Landowner partnerships
+
+        <br>• Smart Match
+
+        <br>• PRANAURA services
+
+        <br><br>
+
+        Tell me what you are looking for.
+
+    `;
 
 }
 
 
-if(
-q.includes("land") ||
-q.includes("landowner")
-){
+async function sendAI(){
 
-return `
+    const input =
+        $("aiInput");
 
-For land development requirements,
-PRANAURA can help structure the landowner's
-requirement and facilitate relevant
-professional introductions.
 
-`;
+    const text =
+        input.value.trim();
 
-}
 
+    if(!text)
+        return;
 
-if(
-q.includes("buy") ||
-q.includes("property") ||
-q.includes("home")
-){
 
-return `
+    addAIMessage(
+        text,
+        "user"
+    );
 
-I can help organize your property requirement.
 
-<br><br>
+    input.value =
+        "";
 
-Please provide location, property type,
-budget and timeline through Smart Match.
 
-`;
+    const typing =
+        document.createElement(
+            "div"
+        );
 
-}
 
+    typing.className =
+        "ai-message bot";
 
-if(
-q.includes("smart match") ||
-q.includes("match")
-){
 
-return `
+    typing.id =
+        "typing";
 
-PRANAURA Smart Match captures your role,
-location, property type, budget, timeline and
-requirement.
 
-<br><br>
+    typing.textContent =
+        "PRANAURA AI is thinking...";
 
-The current prototype creates a reference ID
-and lead-priority score.
 
-`;
+    $("aiMessages")
+    .appendChild(
+        typing
+    );
 
-}
 
+    $("aiMessages")
+    .scrollTop =
+        $("aiMessages")
+        .scrollHeight;
 
-if(
-q.includes("mysore") ||
-q.includes("mysuru")
-){
 
-return `
+    /*
+        Optional future Ollama connection.
 
-PRANAURA is initially focused on developing
-professional property networking relationships
-in Mysuru and Karnataka.
+        The public website should NOT expose
+        a production Ollama server directly.
 
-`;
+        Production architecture:
 
-}
+        Website
+             ↓
+        Secure Backend
+             ↓
+        Ollama
+             ↓
+        Qwen / PRANAURA AI
+    */
 
 
-if(
-q.includes("commission")
-){
+    setTimeout(()=>{
 
-return `
+        typing.remove();
 
-PRANAURA may operate under agreed commercial
-terms depending on the relationship and
-transaction.
 
-Use the calculator on the website for
-internal estimation only.
+        addAIMessage(
+            generateAIResponse(text),
+            "bot"
+        );
 
-`;
-
-}
-
-
-if(
-q.includes("contact") ||
-q.includes("whatsapp")
-){
-
-return `
-
-You can contact PRANAURA at:
-
-<br><br>
-
-<strong>
-+91 90197 46649
-</strong>
-
-<br>
-
-pranauraconnect@gmail.com
-
-<br><br>
-
-You can also use the WhatsApp button.
-
-`;
-
-}
-
-
-return `
-
-I'm PRANAURA AI.
-
-<br><br>
-
-I can currently help with:
-
-<br>• Investments
-
-<br>• Property buying
-
-<br>• Builder partnerships
-
-<br>• Landowner partnerships
-
-<br>• Smart Match
-
-<br>• PRANAURA services
-
-<br><br>
-
-Tell me what you are looking for.
-
-`;
-
-}
-
-
-function sendAI(){
-
-const input=$("aiInput");
-
-const text=input.value.trim();
-
-if(!text)
-return;
-
-
-addMessage(
-text,
-"user"
-);
-
-
-input.value="";
-
-
-const typing=
-document.createElement("div");
-
-typing.className="msg bot";
-
-typing.textContent=
-"PRANAURA AI is thinking...";
-
-$("aiMessages")
-.appendChild(typing);
-
-
-setTimeout(()=>{
-
-typing.remove();
-
-addMessage(
-aiResponse(text),
-"bot"
-);
-
-},650);
+    },650);
 
 }
 
 
 $("aiInput")
-.addEventListener("keydown",e=>{
+.addEventListener(
+    "keydown",
+    event=>{
 
-if(e.key==="Enter")
-sendAI();
+        if(
+            event.key ===
+            "Enter"
+        ){
 
-});
+            sendAI();
+
+        }
+
+    }
+);
 
 
 function askAI(question){
 
-openAI();
-
-$("aiInput").value=question;
-
-sendAI();
-
-}
+    openAI();
 
 
-/* =========================================================
-   OPTIONAL OLLAMA CONNECTOR
-========================================================= */
-
-/*
-   IMPORTANT:
-
-   Do NOT expose a public Ollama server directly to the
-   internet.
-
-   For local testing, you may configure your own endpoint.
-
-   Example:
-
-   http://localhost:11434/api/generate
-
-   Production:
-   Website → Secure Backend → Ollama
-*/
-
-async function askOllama(question){
-
-const endpoint=
-localStorage.getItem(
-"pranaura_ollama_endpoint"
-);
-
-const model=
-localStorage.getItem(
-"pranaura_ollama_model"
-);
+    $("aiInput")
+    .value =
+        question;
 
 
-if(!endpoint || !model){
-
-return null;
-
-}
-
-
-try{
-
-const response=
-await fetch(endpoint,{
-
-method:"POST",
-
-headers:{
-"Content-Type":
-"application/json"
-},
-
-body:JSON.stringify({
-
-model:model,
-
-prompt:
-`You are PRANAURA AI,
-a professional real estate networking
-assistant.
-
-Answer clearly and professionally.
-
-User:
-${question}`,
-
-stream:false
-
-})
-
-});
-
-
-if(!response.ok)
-return null;
-
-
-const data=
-await response.json();
-
-
-return data.response || null;
-
-}catch{
-
-return null;
-
-}
+    sendAI();
 
 }
 
@@ -6353,150 +7526,171 @@ return null;
 
 function openAdmin(){
 
-updateAdmin();
+    updateAdmin();
 
-openModal("adminModal");
+    openModal(
+        "adminModal"
+    );
 
 }
 
 
 function updateAdmin(){
 
-const matches=getData("matches");
+    const matches =
+        getData("matches");
 
-const enquiries=getData("enquiries");
+    const enquiries =
+        getData("enquiries");
 
-const meetings=getData("meetings");
+    const meetings =
+        getData("meetings");
 
-const referrals=getData("referrals");
-
-const events=getData("events");
-
-
-$("adminMatches").textContent=
-matches.length;
-
-$("adminEnquiries").textContent=
-enquiries.length;
-
-$("adminMeetings").textContent=
-meetings.length;
-
-$("adminReferrals").textContent=
-referrals.length;
+    const referrals =
+        getData("referrals");
 
 
-const all=[
-
-...matches.map(x=>({
-id:x.id,
-type:"Match",
-date:x.createdAt
-})),
-
-...enquiries.map(x=>({
-id:x.id,
-type:"Enquiry",
-date:x.createdAt
-})),
-
-...meetings.map(x=>({
-id:x.id,
-type:"Meeting",
-date:x.createdAt
-})),
-
-...referrals.map(x=>({
-id:x.id,
-type:"Referral",
-date:x.createdAt
-}))
-
-];
+    $("adminMatches")
+    .textContent =
+        matches.length;
 
 
-$("adminTable").innerHTML=
-all.slice(-20)
-.reverse()
-.map(x=>`
+    $("adminEnquiries")
+    .textContent =
+        enquiries.length;
 
-<tr>
 
-<td>${x.id}</td>
+    $("adminMeetings")
+    .textContent =
+        meetings.length;
 
-<td>${x.type}</td>
 
-<td>
-${new Date(x.date).toLocaleDateString()}
-</td>
+    $("adminReferrals")
+    .textContent =
+        referrals.length;
 
-</tr>
 
-`)
-.join("");
+    const rows=[
+
+        ...matches.map(
+            x=>({
+                id:x.id,
+                type:"Match",
+                date:x.createdAt
+            })
+        ),
+
+        ...enquiries.map(
+            x=>({
+                id:x.id,
+                type:"Enquiry",
+                date:x.createdAt
+            })
+        ),
+
+        ...meetings.map(
+            x=>({
+                id:x.id,
+                type:"Meeting",
+                date:x.createdAt
+            })
+        ),
+
+        ...referrals.map(
+            x=>({
+                id:x.id,
+                type:"Referral",
+                date:x.createdAt
+            })
+        )
+
+    ];
+
+
+    $("adminTable")
+    .innerHTML =
+        rows
+        .slice(-25)
+        .reverse()
+        .map(
+            row=>`
+
+                <tr>
+
+                    <td>
+                        ${row.id}
+                    </td>
+
+                    <td>
+                        ${row.type}
+                    </td>
+
+                    <td>
+                        ${new Date(
+                            row.date
+                        ).toLocaleDateString()}
+                    </td>
+
+                </tr>
+
+            `
+        )
+        .join("");
 
 }
 
 
 function updateStats(){
 
-const matches=
-getData("matches").length;
-
-const leads=
-getData("enquiries").length;
-
-const appointments=
-getData("meetings").length;
-
-const events=
-getData("events").length;
+    const matches =
+        getData("matches").length;
 
 
-$("statMatches").textContent=
-matches;
-
-$("statLeads").textContent=
-leads;
-
-$("statAppointments").textContent=
-appointments;
-
-$("dashMatches").textContent=
-matches;
-
-$("dashEnquiries").textContent=
-leads;
-
-$("dashAppointments").textContent=
-appointments;
-
-$("dashEvents").textContent=
-events;
-
-}
+    const enquiries =
+        getData("enquiries").length;
 
 
-/* =========================================================
-   ANALYTICS
-========================================================= */
+    const meetings =
+        getData("meetings").length;
 
-function track(name,value){
 
-addData(
-"events",
-{
+    const referrals =
+        getData("referrals").length;
 
-name,
-value,
-timestamp:
-new Date().toISOString()
 
-}
+    $("statMatches")
+    .textContent =
+        matches;
 
-);
 
-updateStats();
+    $("statLeads")
+    .textContent =
+        enquiries;
+
+
+    $("statMeetings")
+    .textContent =
+        meetings;
+
+
+    $("dashMatches")
+    .textContent =
+        matches;
+
+
+    $("dashEnquiries")
+    .textContent =
+        enquiries;
+
+
+    $("dashMeetings")
+    .textContent =
+        meetings;
+
+
+    $("dashReferrals")
+    .textContent =
+        referrals;
 
 }
 
@@ -6507,56 +7701,87 @@ updateStats();
 
 function exportData(){
 
-const data={};
+    const data={};
 
 
-for(let i=0;i<localStorage.length;i++){
+    for(
+        let i=0;
+        i<localStorage.length;
+        i++
+    ){
 
-const key=
-localStorage.key(i);
-
-if(key.startsWith(DB_PREFIX)){
-
-data[
-key.replace(DB_PREFIX,"")
-]=localStorage.getItem(key);
-
-}
-
-}
+        const key =
+            localStorage.key(i);
 
 
-const blob=
-new Blob(
-[
-JSON.stringify(data,null,2)
-],
-{
-type:"application/json"
-}
-);
+        if(
+            key.startsWith(
+                PREFIX
+            )
+        ){
+
+            data[
+                key.replace(
+                    PREFIX,
+                    ""
+                )
+            ] =
+                localStorage.getItem(
+                    key
+                );
+
+        }
+
+    }
 
 
-const url=
-URL.createObjectURL(blob);
+    const blob =
+        new Blob(
+            [
+                JSON.stringify(
+                    data,
+                    null,
+                    2
+                )
+            ],
+            {
+                type:
+                "application/json"
+            }
+        );
 
 
-const a=
-document.createElement("a");
-
-a.href=url;
-
-a.download=
-"pranaura-backup.json";
-
-a.click();
-
-URL.revokeObjectURL(url);
+    const url =
+        URL.createObjectURL(
+            blob
+        );
 
 
-toast(
-"PRANAURA data exported."
-);
+    const a =
+        document.createElement(
+            "a"
+        );
+
+
+    a.href =
+        url;
+
+
+    a.download =
+        "pranaura-backup.json";
+
+
+    a.click();
+
+
+    URL.revokeObjectURL(
+        url
+    );
+
+
+    toast(
+        "PRANAURA data exported."
+    );
 
 }
 
@@ -6567,114 +7792,153 @@ toast(
 
 function importData(){
 
-const input=
-document.createElement("input");
-
-input.type="file";
-
-input.accept=".json";
+    const input =
+        document.createElement(
+            "input"
+        );
 
 
-input.onchange=()=>{
-
-const file=input.files[0];
-
-if(!file)
-return;
+    input.type =
+        "file";
 
 
-const reader=
-new FileReader();
+    input.accept =
+        ".json";
 
 
-reader.onload=()=>{
+    input.onchange =
+        ()=>{
 
-try{
-
-const data=
-JSON.parse(reader.result);
-
-
-Object.entries(data)
-.forEach(([key,value])=>{
-
-localStorage.setItem(
-DB_PREFIX+key,
-value
-);
-
-});
+            const file =
+                input.files[0];
 
 
-updateStats();
-updateAdmin();
-
-toast(
-"PRANAURA data imported."
-);
-
-}catch{
-
-toast(
-"Invalid backup file."
-);
-
-}
-
-};
+            if(!file)
+                return;
 
 
-reader.readAsText(file);
+            const reader =
+                new FileReader();
 
-};
+
+            reader.onload =
+                ()=>{
+
+                    try{
+
+                        const data =
+                            JSON.parse(
+                                reader.result
+                            );
 
 
-input.click();
+                        Object
+                        .entries(data)
+                        .forEach(
+                            ([key,value])=>{
+
+                                localStorage.setItem(
+
+                                    PREFIX + key,
+
+                                    value
+
+                                );
+
+                            }
+                        );
+
+
+                        updateStats();
+
+                        updateAdmin();
+
+
+                        toast(
+                            "PRANAURA data imported."
+                        );
+
+
+                    }catch{
+
+                        toast(
+                            "Invalid backup file."
+                        );
+
+                    }
+
+                };
+
+
+            reader.readAsText(
+                file
+            );
+
+        };
+
+
+    input.click();
 
 }
 
 
 /* =========================================================
-   CLEAR
+   CLEAR DATA
 ========================================================= */
 
 function clearData(){
 
-if(
-!confirm(
-"Clear all PRANAURA local records?"
-)
-)
-return;
+    if(
+        !confirm(
+            "Clear all PRANAURA local records?"
+        )
+    )
+        return;
 
 
-const keys=[];
+    const keys=[];
 
 
-for(let i=0;i<localStorage.length;i++){
+    for(
+        let i=0;
+        i<localStorage.length;
+        i++
+    ){
 
-const key=
-localStorage.key(i);
-
-if(key.startsWith(DB_PREFIX))
-keys.push(key);
-
-}
-
-
-keys.forEach(key=>{
-
-localStorage.removeItem(key);
-
-});
+        const key =
+            localStorage.key(i);
 
 
-updateStats();
-updateAdmin();
+        if(
+            key.startsWith(
+                PREFIX
+            )
+        ){
 
-toast(
-"Local PRANAURA data cleared."
-);
+            keys.push(key);
+
+        }
+
+    }
+
+
+    keys.forEach(
+        key=>{
+            localStorage.removeItem(
+                key
+            );
+        }
+    );
+
+
+    updateStats();
+
+    updateAdmin();
+
+
+    toast(
+        "Local PRANAURA data cleared."
+    );
 
 }
 
@@ -6685,29 +7949,32 @@ toast(
 
 function acceptConsent(){
 
-localStorage.setItem(
-"pranaura_consent",
-"yes"
-);
+    localStorage.setItem(
+        "pranaura_consent",
+        "yes"
+    );
 
-$("consent")
-.classList.remove("show");
+
+    $("consent")
+    .classList
+    .remove("show");
 
 }
 
 
 if(
-!localStorage.getItem(
-"pranaura_consent"
-)
+    !localStorage.getItem(
+        "pranaura_consent"
+    )
 ){
 
-setTimeout(()=>{
+    setTimeout(()=>{
 
-$("consent")
-.classList.add("show");
+        $("consent")
+        .classList
+        .add("show");
 
-},1200);
+    },1300);
 
 }
 
@@ -6717,58 +7984,76 @@ $("consent")
 ========================================================= */
 
 document
-.querySelectorAll(".faq-q")
+.querySelectorAll(".faq-question")
 .forEach(button=>{
 
-button.addEventListener(
-"click",
-()=>{
+    button.addEventListener(
+        "click",
+        ()=>{
 
-const item=
-button.parentElement;
-
-const open=
-item.classList.contains("open");
+            const item =
+                button.parentElement;
 
 
-document
-.querySelectorAll(".faq-item")
-.forEach(x=>
-x.classList.remove("open")
-);
+            const isOpen =
+                item.classList
+                .contains("open");
 
 
-if(!open)
-item.classList.add("open");
+            document
+            .querySelectorAll(
+                ".faq-item"
+            )
+            .forEach(
+                x=>
+                x.classList
+                .remove("open")
+            );
 
-}
 
-);
+            if(!isOpen){
+
+                item.classList
+                .add("open");
+
+            }
+
+        }
+    );
 
 });
 
 
 /* =========================================================
-   KEYBOARD
+   ESCAPE
 ========================================================= */
 
 document.addEventListener(
-"keydown",
-e=>{
+    "keydown",
+    event=>{
 
-if(e.key==="Escape"){
+        if(
+            event.key ===
+            "Escape"
+        ){
 
-document
-.querySelectorAll(".overlay.active")
-.forEach(x=>
-x.classList.remove("active")
+            document
+            .querySelectorAll(
+                ".overlay.active"
+            )
+            .forEach(
+                x=>
+                x.classList
+                .remove("active")
+            );
+
+
+            closeAI();
+
+        }
+
+    }
 );
-
-closeAI();
-
-}
-
-});
 
 
 /* =========================================================
@@ -6781,49 +8066,28 @@ updateAdmin();
 
 
 /* =========================================================
-   ADMIN SHORTCUT
-========================================================= */
-
-document.addEventListener(
-"keydown",
-e=>{
-
-if(
-e.ctrlKey &&
-e.shiftKey &&
-e.key.toLowerCase()==="a"
-){
-
-openAdmin();
-
-}
-
-});
-
-
-/* =========================================================
    FIRST VISIT
 ========================================================= */
 
 if(
-!sessionStorage.getItem(
-"pranaura_welcome"
-)
+    !sessionStorage.getItem(
+        "pranaura_welcome"
+    )
 ){
 
-sessionStorage.setItem(
-"pranaura_welcome",
-"yes"
-);
+    sessionStorage.setItem(
+        "pranaura_welcome",
+        "yes"
+    );
 
 
-setTimeout(()=>{
+    setTimeout(()=>{
 
-toast(
-"Welcome to PRANAURA."
-);
+        toast(
+            "Welcome to PRANAURA."
+        );
 
-},1700);
+    },1800);
 
 }
 
