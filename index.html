@@ -1,63 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>PRANAURA | Strategic Builder & Investor Partnerships</title>
 
 <meta name="description" content="PRANAURA connects builders, developers, landowners, investors and property buyers through structured relationships, requirement-focused introductions and technology-enabled guidance.">
-
-<meta name="keywords" content="PRANAURA, real estate advisory, real estate networking, builders, developers, investors, landowners, property buyers, Mysuru real estate, Karnataka real estate">
-
-<meta name="author" content="PRANAURA">
-<meta name="robots" content="index, follow">
-
-<link rel="canonical" href="https://pranathihs22.github.io/Pranaura/">
+<meta name="keywords" content="PRANAURA, real estate advisory, Mysuru real estate, property investors, builders, developers, landowners, property buyers, real estate networking, property matching">
+<meta name="author" content="Pranathi H.S.">
 
 <meta property="og:title" content="PRANAURA | Strategic Builder & Investor Partnerships">
-<meta property="og:description" content="Structured real estate relationships and technology-enabled property networking.">
+<meta property="og:description" content="Structured relationships across builders, developers, landowners, investors and property buyers.">
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://pranathihs22.github.io/Pranaura/">
+
+<meta name="theme-color" content="#4b2e22">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Noto+Sans+Kannada:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Noto+Sans+Kannada:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 
 /* =========================================================
-   PRANAURA
-   PREMIUM IMAGE-FREE REAL ESTATE WEBSITE
-========================================================= */
+   PRANAURA — PREMIUM IMAGE-FREE WEBSITE
+   ========================================================= */
 
 :root{
-    --cream:#f6f0e6;
-    --cream2:#fbf8f3;
-    --cream3:#e9dfd1;
-
-    --brown:#4c3024;
-    --brown2:#2b1a13;
-    --brown3:#725343;
-
-    --gold:#b49363;
-    --gold2:#d4bd91;
-
-    --text:#30231d;
-    --muted:#75685f;
-
-    --white:#ffffff;
-
-    --border:rgba(76,48,36,.14);
-
-    --shadow:0 25px 70px rgba(45,27,18,.11);
-    --shadow2:0 10px 35px rgba(45,27,18,.08);
-
+    --bg:#f7f1e8;
+    --bg2:#efe4d4;
+    --card:#fffaf3;
+    --text:#2b211c;
+    --muted:#75665b;
+    --brown:#5a392b;
+    --brown2:#795340;
+    --gold:#a98456;
+    --line:rgba(90,57,43,.16);
+    --shadow:0 20px 60px rgba(55,35,25,.10);
     --radius:24px;
-    --max:1240px;
+    --nav:rgba(247,241,232,.88);
+    --success:#55715a;
+}
 
-    --transition:.35s ease;
+body.dark{
+    --bg:#1d1714;
+    --bg2:#281f1b;
+    --card:#2b221e;
+    --text:#f5ede3;
+    --muted:#c4b5a8;
+    --brown:#d5b99c;
+    --brown2:#ead0b2;
+    --gold:#c6a06b;
+    --line:rgba(255,255,255,.12);
+    --shadow:0 20px 60px rgba(0,0,0,.30);
+    --nav:rgba(29,23,20,.90);
+    --success:#9db39f;
 }
 
 *{
@@ -71,20 +70,34 @@ html{
 }
 
 body{
-    font-family:'Poppins',sans-serif;
-    background:var(--cream2);
+    font-family:"Poppins",sans-serif;
+    background:var(--bg);
     color:var(--text);
     line-height:1.7;
     overflow-x:hidden;
+    transition:.3s ease;
 }
 
 body.kn{
-    font-family:'Noto Sans Kannada','Poppins',sans-serif;
+    font-family:"Noto Sans Kannada","Poppins",sans-serif;
+}
+
+h1,h2,h3,h4{
+    font-family:"Cormorant Garamond",serif;
+    line-height:1.05;
+}
+
+body.kn h1,
+body.kn h2,
+body.kn h3,
+body.kn h4{
+    font-family:"Noto Sans Kannada","Poppins",sans-serif;
+    line-height:1.3;
 }
 
 a{
-    text-decoration:none;
     color:inherit;
+    text-decoration:none;
 }
 
 button,
@@ -98,805 +111,743 @@ button{
     cursor:pointer;
 }
 
-::selection{
-    background:var(--brown);
-    color:white;
-}
-
 .container{
-    width:min(92%,var(--max));
+    width:min(1180px,92%);
     margin:auto;
 }
 
-.section{
+section{
     padding:105px 0;
     position:relative;
 }
 
-.eyebrow{
-    display:flex;
-    align-items:center;
-    gap:10px;
+.section-label{
     color:var(--gold);
-    font-size:10px;
-    font-weight:700;
-    letter-spacing:3px;
     text-transform:uppercase;
-    margin-bottom:18px;
-}
-
-.eyebrow:before{
-    content:"";
-    width:32px;
-    height:1px;
-    background:var(--gold);
-}
-
-h1,
-h2,
-h3,
-h4{
-    font-family:'Cormorant Garamond',serif;
-    color:var(--brown2);
-    line-height:1.05;
-}
-
-h1{
-    font-size:clamp(50px,7vw,90px);
-    font-weight:500;
-    letter-spacing:-2px;
-}
-
-h2{
-    font-size:clamp(42px,5vw,68px);
-    font-weight:500;
-}
-
-h3{
-    font-size:28px;
-}
-
-p{
-    color:var(--muted);
-}
-
-.btn{
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-    gap:9px;
-    min-height:52px;
-    padding:0 24px;
-    border-radius:999px;
-    border:1px solid transparent;
+    letter-spacing:3px;
     font-size:12px;
     font-weight:600;
-    transition:var(--transition);
+    margin-bottom:15px;
 }
 
-.btn-primary{
-    background:var(--brown);
-    color:#fff;
-    box-shadow:0 12px 28px rgba(76,48,36,.18);
+.section-title{
+    font-size:clamp(42px,5vw,70px);
+    max-width:800px;
+    margin-bottom:20px;
 }
 
-.btn-primary:hover{
-    background:var(--brown2);
-    transform:translateY(-3px);
+.section-title span{
+    color:var(--gold);
 }
 
-.btn-outline{
-    border-color:var(--border);
-    background:rgba(255,255,255,.4);
-    color:var(--brown);
+.section-intro{
+    max-width:680px;
+    color:var(--muted);
+    font-size:15px;
 }
 
-.btn-outline:hover{
-    background:var(--brown);
-    color:#fff;
-    transform:translateY(-3px);
+.reveal{
+    opacity:0;
+    transform:translateY(25px);
+    transition:opacity .8s ease,transform .8s ease;
 }
 
-.btn-gold{
-    background:var(--gold);
-    color:#fff;
+.reveal.visible{
+    opacity:1;
+    transform:none;
 }
 
-.btn-gold:hover{
-    background:var(--brown);
-    transform:translateY(-3px);
-}
-
-/* =========================================================
+/* =========================
    ACCESSIBILITY
-========================================================= */
+   ========================= */
 
 .skip{
     position:fixed;
-    left:20px;
+    left:15px;
     top:-100px;
-    z-index:9999;
-    padding:12px 18px;
     background:var(--brown);
-    color:#fff;
+    color:white;
+    padding:10px 18px;
+    z-index:9999;
     border-radius:8px;
 }
 
 .skip:focus{
-    top:20px;
+    top:15px;
 }
 
-/* =========================================================
-   HEADER
-========================================================= */
+/* =========================
+   NAVIGATION
+   ========================= */
 
 header{
     position:fixed;
     top:0;
     left:0;
-    right:0;
+    width:100%;
     z-index:1000;
-    padding:17px 0;
-    transition:var(--transition);
+    background:var(--nav);
+    backdrop-filter:blur(18px);
+    border-bottom:1px solid var(--line);
 }
 
-header.scrolled{
-    padding:9px 0;
-}
-
-.navbar{
-    min-height:58px;
+.nav{
+    min-height:76px;
     display:flex;
     align-items:center;
-    gap:12px;
-    padding:8px 10px 8px 22px;
-    border:1px solid var(--border);
-    border-radius:999px;
-    background:rgba(251,248,243,.84);
-    backdrop-filter:blur(20px);
-    box-shadow:var(--shadow2);
+    justify-content:space-between;
+    gap:20px;
 }
 
-.navlinks{
-    display:flex;
-    align-items:center;
-    gap:3px;
-    margin-right:auto;
-}
-
-.navlinks a{
-    padding:9px 11px;
-    border-radius:999px;
-    color:var(--brown3);
-    font-size:11px;
-    font-weight:600;
-    transition:var(--transition);
-}
-
-.navlinks a:hover,
-.navlinks a.active{
-    background:rgba(76,48,36,.07);
-    color:var(--brown);
-}
-
-.actions{
-    display:flex;
-    align-items:center;
-    gap:7px;
-}
-
-.lang{
-    height:42px;
-    min-width:50px;
-    padding:0 10px;
-    border:1px solid var(--border);
-    border-radius:999px;
-    background:transparent;
-    color:var(--brown);
-    font-size:11px;
+.nav-brand{
+    font-family:"Cormorant Garamond",serif;
+    font-size:28px;
     font-weight:700;
+    letter-spacing:3px;
 }
 
-.icon{
-    width:42px;
-    height:42px;
+.nav-links{
+    display:flex;
+    align-items:center;
+    gap:24px;
+}
+
+.nav-links a{
+    font-size:12px;
+    font-weight:500;
+    color:var(--muted);
+    transition:.25s;
+}
+
+.nav-links a:hover,
+.nav-links a.active{
+    color:var(--brown);
+}
+
+.nav-actions{
+    display:flex;
+    align-items:center;
+    gap:8px;
+}
+
+.icon-btn,
+.lang-btn{
+    width:40px;
+    height:40px;
+    border:1px solid var(--line);
+    background:transparent;
+    color:var(--text);
+    border-radius:50%;
     display:grid;
     place-items:center;
-    border:1px solid var(--border);
-    border-radius:50%;
-    background:transparent;
-    color:var(--brown);
+    font-size:12px;
 }
 
-.icon:hover,
-.lang:hover{
+.connect-btn{
     background:var(--brown);
     color:#fff;
+    border:0;
+    padding:12px 19px;
+    border-radius:30px;
+    font-size:12px;
+    font-weight:600;
 }
 
-.mobile{
+.menu-btn{
     display:none;
+    width:42px;
+    height:42px;
+    border:1px solid var(--line);
+    background:transparent;
+    color:var(--text);
+    border-radius:50%;
 }
 
-/* =========================================================
+/* =========================
    HERO
-========================================================= */
+   ========================= */
 
 .hero{
     min-height:100vh;
-    padding:155px 0 90px;
     display:flex;
     align-items:center;
+    padding-top:120px;
     overflow:hidden;
 }
 
 .hero-grid{
     display:grid;
-    grid-template-columns:1.08fr .92fr;
-    gap:65px;
+    grid-template-columns:1.05fr .95fr;
+    gap:70px;
     align-items:center;
 }
 
-.brand{
-    margin-bottom:28px;
+.hero-eyebrow{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    color:var(--gold);
+    font-size:11px;
+    font-weight:600;
+    text-transform:uppercase;
+    letter-spacing:3px;
+    margin-bottom:20px;
 }
 
-.brand-name{
-    font-family:'Cormorant Garamond',serif;
-    font-size:clamp(60px,8vw,105px);
-    letter-spacing:8px;
-    line-height:.8;
-    color:var(--brown2);
-}
-
-.brand-line{
-    width:120px;
+.hero-eyebrow:before{
+    content:"";
+    width:35px;
     height:1px;
     background:var(--gold);
-    margin:20px 0 14px;
-}
-
-.brand-tag{
-    font-size:9px;
-    letter-spacing:3px;
-    text-transform:uppercase;
-    color:var(--brown3);
-    font-weight:700;
 }
 
 .hero h1{
+    font-size:clamp(65px,9vw,125px);
+    letter-spacing:5px;
+    margin-bottom:4px;
+}
+
+.hero-subtitle{
+    color:var(--gold);
+    font-family:"Cormorant Garamond",serif;
+    font-size:clamp(24px,3vw,38px);
     margin-bottom:25px;
 }
 
-.hero-copy{
-    max-width:690px;
-    font-size:15px;
-    margin-bottom:32px;
+.hero-text{
+    color:var(--muted);
+    max-width:650px;
+    font-size:16px;
 }
 
 .hero-buttons{
     display:flex;
     flex-wrap:wrap;
-    gap:11px;
+    gap:12px;
+    margin-top:32px;
 }
 
-.launch{
-    display:flex;
+.btn{
+    border:1px solid var(--brown);
+    padding:14px 22px;
+    border-radius:40px;
+    font-size:12px;
+    font-weight:600;
+    transition:.3s;
+    display:inline-flex;
     align-items:center;
-    gap:10px;
-    margin-top:28px;
-    font-size:11px;
-    color:var(--muted);
+    justify-content:center;
+    gap:8px;
 }
 
-.dot{
-    width:8px;
-    height:8px;
-    border-radius:50%;
-    background:var(--gold);
-    box-shadow:0 0 0 6px rgba(180,147,99,.12);
-}
-
-/* IMAGE-FREE ARCHITECTURAL VISUAL */
-
-.arch{
-    min-height:570px;
-    position:relative;
-    overflow:hidden;
-    border-radius:36px;
-    background:
-        linear-gradient(135deg,#2f1c14,#634535 52%,#b49363);
-    box-shadow:var(--shadow);
-}
-
-.arch:before{
-    content:"";
-    position:absolute;
-    inset:0;
-    background:
-        repeating-linear-gradient(
-            90deg,
-            transparent 0 13%,
-            rgba(255,255,255,.09) 13.1% 13.4%,
-            transparent 13.5% 26%
-        );
-}
-
-.arch:after{
-    content:"";
-    position:absolute;
-    width:580px;
-    height:580px;
-    right:-230px;
-    bottom:-240px;
-    border-radius:50%;
-    border:1px solid rgba(255,255,255,.18);
-    box-shadow:
-        0 0 0 65px rgba(255,255,255,.025),
-        0 0 0 130px rgba(255,255,255,.02),
-        0 0 0 195px rgba(255,255,255,.015);
-}
-
-.windows{
-    position:absolute;
-    left:12%;
-    right:12%;
-    top:13%;
-    bottom:19%;
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:11px;
-}
-
-.windows span{
-    border:1px solid rgba(255,255,255,.18);
-    background:linear-gradient(
-        180deg,
-        rgba(255,255,255,.11),
-        rgba(0,0,0,.18)
-    );
-}
-
-.floor{
-    position:absolute;
-    left:0;
-    right:0;
-    bottom:0;
-    height:19%;
-    background:linear-gradient(
-        180deg,
-        transparent,
-        rgba(0,0,0,.35)
-    );
-}
-
-.arch-caption{
-    position:absolute;
-    left:34px;
-    bottom:30px;
-    z-index:3;
+.btn-primary{
+    background:var(--brown);
     color:#fff;
 }
 
-.arch-caption small{
+.btn-secondary{
+    background:transparent;
+    color:var(--brown);
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 12px 25px rgba(60,40,30,.15);
+}
+
+.hero-note{
+    margin-top:25px;
+    color:var(--muted);
+    font-size:11px;
+    max-width:600px;
+}
+
+/* CSS ARCHITECTURAL VISUAL */
+
+.architecture{
+    min-height:550px;
+    position:relative;
+    border-radius:40px;
+    overflow:hidden;
+    background:
+        linear-gradient(145deg,rgba(255,255,255,.35),transparent 35%),
+        repeating-linear-gradient(
+            90deg,
+            transparent 0,
+            transparent 48px,
+            rgba(90,57,43,.08) 49px,
+            transparent 50px
+        ),
+        linear-gradient(135deg,var(--bg2),var(--card));
+    border:1px solid var(--line);
+    box-shadow:var(--shadow);
+}
+
+.architecture:before{
+    content:"";
+    position:absolute;
+    width:300px;
+    height:300px;
+    border:1px solid rgba(169,132,86,.35);
+    border-radius:50%;
+    top:-90px;
+    right:-80px;
+}
+
+.architecture:after{
+    content:"";
+    position:absolute;
+    width:450px;
+    height:1px;
+    background:rgba(90,57,43,.20);
+    transform:rotate(-35deg);
+    left:-80px;
+    bottom:120px;
+}
+
+.arch-lines{
+    position:absolute;
+    inset:12%;
+    border:1px solid rgba(90,57,43,.18);
+}
+
+.arch-lines:before,
+.arch-lines:after{
+    content:"";
+    position:absolute;
+    border:1px solid rgba(90,57,43,.13);
+}
+
+.arch-lines:before{
+    inset:12%;
+}
+
+.arch-lines:after{
+    inset:24%;
+}
+
+.arch-center{
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+    text-align:center;
+    z-index:2;
+}
+
+.arch-center small{
     display:block;
-    text-transform:uppercase;
-    letter-spacing:3px;
-    font-size:8px;
-    opacity:.65;
+    color:var(--gold);
+    letter-spacing:4px;
+    font-size:10px;
+    margin-bottom:10px;
 }
 
-.arch-caption strong{
-    font-family:'Cormorant Garamond',serif;
-    font-size:32px;
-    font-weight:500;
+.arch-center strong{
+    display:block;
+    font-family:"Cormorant Garamond",serif;
+    font-size:45px;
+    letter-spacing:5px;
 }
 
-/* =========================================================
+/* =========================
    TRUST STRIP
-========================================================= */
+   ========================= */
 
-.strip{
-    border-top:1px solid var(--border);
-    border-bottom:1px solid var(--border);
-    background:var(--cream);
+.trust-strip{
+    border-top:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+    padding:24px 0;
 }
 
-.strip-grid{
+.trust-grid{
     display:grid;
     grid-template-columns:repeat(4,1fr);
+    gap:20px;
 }
 
-.strip-item{
-    padding:24px 15px;
+.trust-item{
     text-align:center;
-    border-right:1px solid var(--border);
+    padding:8px;
 }
 
-.strip-item:last-child{
-    border-right:0;
-}
-
-.strip-item strong{
+.trust-item strong{
     display:block;
-    color:var(--brown);
-    font-size:12px;
+    font-family:"Cormorant Garamond",serif;
+    font-size:24px;
 }
 
-.strip-item span{
-    display:block;
-    margin-top:3px;
+.trust-item span{
     color:var(--muted);
-    font-size:10px;
+    font-size:11px;
 }
 
-/* =========================================================
+/* =========================
    ABOUT
-========================================================= */
+   ========================= */
 
 .about-grid{
     display:grid;
     grid-template-columns:.85fr 1.15fr;
-    gap:75px;
+    gap:80px;
+    align-items:start;
 }
 
-.about-lead{
-    font-family:'Cormorant Garamond',serif;
-    font-size:31px;
-    line-height:1.35;
-    color:var(--brown);
+.about-number{
+    font-family:"Cormorant Garamond",serif;
+    font-size:180px;
+    color:rgba(169,132,86,.14);
+    line-height:.7;
 }
 
-.about-copy p{
-    margin-bottom:17px;
-    font-size:13px;
-}
-
-.stakeholders{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:13px;
-    margin-top:30px;
-}
-
-.stakeholder{
-    padding:19px;
-    border:1px solid var(--border);
-    border-radius:16px;
-    background:rgba(255,255,255,.5);
-}
-
-.stakeholder strong{
-    display:block;
-    color:var(--brown);
-    font-size:13px;
-}
-
-.stakeholder span{
+.about-text{
     color:var(--muted);
-    font-size:10px;
+    font-size:16px;
+    margin-bottom:28px;
 }
 
-/* =========================================================
+.stakeholder-row{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+}
+
+.pill{
+    border:1px solid var(--line);
+    border-radius:30px;
+    padding:9px 15px;
+    font-size:11px;
+}
+
+/* =========================
    WHY
-========================================================= */
+   ========================= */
 
-.dark-section{
-    background:var(--brown2);
-}
-
-.dark-section h2,
-.dark-section h3{
-    color:#fff;
-}
-
-.dark-section p{
-    color:rgba(255,255,255,.64);
-}
-
-.dark-section .eyebrow{
-    color:var(--gold2);
+.why{
+    background:var(--bg2);
 }
 
 .why-grid{
     display:grid;
     grid-template-columns:repeat(3,1fr);
-    gap:17px;
+    gap:18px;
+    margin-top:50px;
 }
 
-.why-card{
+.card{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
     padding:30px;
-    border:1px solid rgba(255,255,255,.11);
-    border-radius:22px;
-    background:rgba(255,255,255,.045);
-    transition:var(--transition);
+    transition:.3s;
 }
 
-.why-card:hover{
-    transform:translateY(-7px);
-    border-color:rgba(180,147,99,.4);
-    background:rgba(255,255,255,.07);
-}
-
-.num{
-    font-family:'Cormorant Garamond',serif;
-    color:var(--gold2);
-    font-size:46px;
-    line-height:1;
-    margin-bottom:25px;
-}
-
-.why-card h3{
-    font-size:27px;
-    margin-bottom:11px;
-}
-
-.why-card p{
-    font-size:12px;
-}
-
-/* =========================================================
-   PATHWAYS
-========================================================= */
-
-.pathways{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:15px;
-}
-
-.path{
-    min-height:290px;
-    padding:29px;
-    position:relative;
-    overflow:hidden;
-    border:1px solid var(--border);
-    border-radius:23px;
-    background:linear-gradient(145deg,#fff,#f3eadf);
-    transition:var(--transition);
-}
-
-.path:hover{
-    transform:translateY(-8px);
+.card:hover{
+    transform:translateY(-6px);
     box-shadow:var(--shadow);
 }
 
-.path:after{
-    content:"";
-    position:absolute;
-    width:180px;
-    height:180px;
-    right:-80px;
-    bottom:-80px;
-    border:1px solid rgba(180,147,99,.25);
-    border-radius:50%;
+.card-number{
+    color:var(--gold);
+    font-size:11px;
+    letter-spacing:2px;
+    margin-bottom:28px;
 }
 
-.path-number{
+.card h3{
+    font-size:29px;
+    margin-bottom:12px;
+}
+
+.card p{
+    color:var(--muted);
+    font-size:13px;
+}
+
+/* =========================
+   PATHWAYS
+   ========================= */
+
+.path-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+    margin-top:50px;
+}
+
+.path{
+    min-height:260px;
+    border:1px solid var(--line);
+    border-radius:28px;
+    padding:28px;
+    position:relative;
+    overflow:hidden;
+    transition:.3s;
+}
+
+.path:hover{
+    background:var(--card);
+    transform:translateY(-5px);
+}
+
+.path-symbol{
+    width:55px;
+    height:55px;
+    border:1px solid var(--gold);
+    border-radius:50%;
+    display:grid;
+    place-items:center;
     color:var(--gold);
-    font-size:10px;
-    letter-spacing:2px;
-    font-weight:700;
+    font-family:"Cormorant Garamond",serif;
+    font-size:24px;
+    margin-bottom:40px;
 }
 
 .path h3{
-    margin:55px 0 12px;
+    font-size:27px;
 }
 
 .path p{
-    font-size:11px;
+    color:var(--muted);
+    font-size:12px;
+    margin-top:8px;
 }
 
-.path a{
-    display:inline-block;
-    margin-top:20px;
-    color:var(--brown);
-    font-size:10px;
-    font-weight:700;
-    text-transform:uppercase;
-    letter-spacing:1.3px;
-}
-
-/* =========================================================
+/* =========================
    PROCESS
-========================================================= */
+   ========================= */
 
 .process{
-    background:#eee4d6;
+    background:var(--card);
 }
 
 .process-grid{
     display:grid;
     grid-template-columns:repeat(4,1fr);
-    gap:15px;
+    margin-top:55px;
+    border-top:1px solid var(--line);
 }
 
-.process-card{
-    padding:28px;
-    border:1px solid var(--border);
-    border-radius:21px;
-    background:rgba(255,255,255,.48);
+.process-item{
+    padding:35px 24px;
+    border-right:1px solid var(--line);
+}
+
+.process-item:last-child{
+    border-right:0;
 }
 
 .process-no{
     color:var(--gold);
-    font-size:10px;
+    font-size:12px;
     letter-spacing:2px;
-    font-weight:700;
+    margin-bottom:35px;
 }
 
-.process-card h3{
-    margin:35px 0 12px;
-    font-size:25px;
+.process-item h3{
+    font-size:30px;
+    margin-bottom:12px;
 }
 
-.process-card p{
-    font-size:11px;
-}
-
-/* =========================================================
-   NETWORK
-========================================================= */
-
-.network-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:20px;
-}
-
-.network-card{
-    min-height:310px;
-    padding:38px;
-    position:relative;
-    overflow:hidden;
-    border:1px solid var(--border);
-    border-radius:27px;
-    background:linear-gradient(145deg,#fff,#f7f1e8);
-}
-
-.network-card:after{
-    content:"";
-    position:absolute;
-    width:220px;
-    height:220px;
-    right:-90px;
-    top:-90px;
-    border:1px solid rgba(180,147,99,.2);
-    border-radius:50%;
-}
-
-.network-card h3{
-    margin-bottom:14px;
-}
-
-.network-card p{
+.process-item p{
+    color:var(--muted);
     font-size:12px;
 }
 
-.network-list{
-    list-style:none;
+/* =========================
+   NETWORK
+   ========================= */
+
+.network-grid{
     display:grid;
-    gap:9px;
-    margin-top:22px;
+    grid-template-columns:repeat(2,1fr);
+    gap:18px;
+    margin-top:50px;
 }
 
-.network-list li{
-    color:var(--muted);
-    font-size:11px;
+.network-card{
+    border:1px solid var(--line);
+    padding:35px;
+    border-radius:30px;
+    background:
+        linear-gradient(135deg,transparent 65%,rgba(169,132,86,.08)),
+        var(--card);
 }
 
-.network-list li:before{
-    content:"✓";
-    color:var(--gold);
-    margin-right:8px;
+.network-card-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:50px;
 }
 
-/* =========================================================
-   SERVICES
-========================================================= */
-
-.services{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:16px;
-}
-
-.service{
-    padding:30px;
-    border:1px solid var(--border);
-    border-radius:22px;
-    background:#fff;
-    transition:var(--transition);
-}
-
-.service:hover{
-    transform:translateY(-6px);
-    box-shadow:var(--shadow2);
-}
-
-.service-icon{
-    width:46px;
-    height:46px;
+.network-icon{
+    width:52px;
+    height:52px;
+    border-radius:50%;
+    border:1px solid var(--gold);
     display:grid;
     place-items:center;
-    border-radius:50%;
-    background:#eee4d7;
-    color:var(--brown);
-    margin-bottom:22px;
-    font-size:17px;
+    color:var(--gold);
+    font-family:"Cormorant Garamond",serif;
+    font-size:22px;
 }
 
-.service h3{
-    font-size:25px;
+.network-card small{
+    color:var(--gold);
+    text-transform:uppercase;
+    letter-spacing:2px;
+}
+
+.network-card h3{
+    font-size:34px;
     margin-bottom:10px;
 }
 
-.service p{
-    font-size:11px;
+.network-card p{
+    color:var(--muted);
+    font-size:13px;
 }
 
-/* =========================================================
-   INTELLIGENCE
-========================================================= */
+/* =========================
+   SERVICES
+   ========================= */
+
+.services{
+    background:var(--bg2);
+}
+
+.services-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:16px;
+    margin-top:50px;
+}
+
+.service{
+    border-bottom:1px solid var(--line);
+    padding:25px 5px;
+    display:flex;
+    gap:20px;
+}
+
+.service span{
+    color:var(--gold);
+    font-size:11px;
+    min-width:28px;
+}
+
+.service h3{
+    font-size:24px;
+    margin-bottom:6px;
+}
+
+.service p{
+    color:var(--muted);
+    font-size:12px;
+}
+
+/* =========================
+   MATCHING INTELLIGENCE
+   ========================= */
 
 .intelligence{
     background:var(--brown);
-}
-
-.intelligence h2,
-.intelligence h3{
     color:#fff;
 }
 
-.intelligence p{
-    color:rgba(255,255,255,.65);
+.intelligence .section-label{
+    color:#d8b887;
 }
 
-.intelligence .eyebrow{
-    color:var(--gold2);
+.intelligence .section-intro{
+    color:rgba(255,255,255,.68);
 }
 
-.intel-grid{
+.intelligence-grid{
     display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:14px;
+    grid-template-columns:1fr 1fr;
+    gap:70px;
+    align-items:center;
 }
 
-.intel{
-    padding:27px;
-    border:1px solid rgba(255,255,255,.12);
-    border-radius:20px;
-    background:rgba(255,255,255,.045);
+.intel-list{
+    margin-top:30px;
 }
 
-.intel span{
-    color:var(--gold2);
-    font-size:9px;
-    letter-spacing:2px;
-    font-weight:700;
+.intel-row{
+    display:flex;
+    gap:18px;
+    padding:18px 0;
+    border-bottom:1px solid rgba(255,255,255,.14);
 }
 
-.intel h3{
-    margin:28px 0 10px;
-    font-size:24px;
+.intel-row b{
+    color:#d8b887;
+    font-size:12px;
 }
 
-.intel p{
+.intel-row strong{
+    display:block;
+    font-size:14px;
+}
+
+.intel-row span{
+    color:rgba(255,255,255,.65);
     font-size:11px;
 }
 
-/* =========================================================
-   SMART MATCH
-========================================================= */
-
-.match{
-    background:var(--cream);
+.intel-box{
+    border:1px solid rgba(255,255,255,.18);
+    border-radius:30px;
+    padding:35px;
+    background:rgba(255,255,255,.05);
 }
 
-.match-layout{
+.intel-circle{
+    width:180px;
+    height:180px;
+    margin:auto;
+    border-radius:50%;
+    border:1px solid rgba(255,255,255,.25);
     display:grid;
-    grid-template-columns:.72fr 1.28fr;
-    gap:55px;
+    place-items:center;
+    text-align:center;
+    position:relative;
+}
+
+.intel-circle:before,
+.intel-circle:after{
+    content:"";
+    position:absolute;
+    border:1px solid rgba(216,184,135,.35);
+    border-radius:50%;
+}
+
+.intel-circle:before{
+    inset:20px;
+}
+
+.intel-circle:after{
+    inset:40px;
+}
+
+.intel-circle strong{
+    font-family:"Cormorant Garamond",serif;
+    font-size:30px;
+    position:relative;
+    z-index:2;
+}
+
+/* =========================
+   SMART MATCH
+   ========================= */
+
+.match-grid{
+    display:grid;
+    grid-template-columns:.8fr 1.2fr;
+    gap:70px;
+    align-items:start;
 }
 
 .match-info{
@@ -904,27 +855,11 @@ header.scrolled{
     top:110px;
 }
 
-.match-info h2{
-    margin-bottom:18px;
-}
-
-.match-info > p{
-    font-size:13px;
-}
-
-.match-note{
-    margin-top:28px;
-    padding:19px;
-    border-left:2px solid var(--gold);
-    background:rgba(255,255,255,.5);
-    font-size:10px;
-}
-
-.form-card{
-    padding:37px;
-    background:#fff;
-    border:1px solid var(--border);
-    border-radius:27px;
+.match-form{
+    background:var(--card);
+    border:1px solid var(--line);
+    padding:35px;
+    border-radius:30px;
     box-shadow:var(--shadow);
 }
 
@@ -937,7 +872,7 @@ header.scrolled{
 .field{
     display:flex;
     flex-direction:column;
-    gap:6px;
+    gap:7px;
 }
 
 .field.full{
@@ -945,21 +880,27 @@ header.scrolled{
 }
 
 .field label{
-    font-size:10px;
-    font-weight:700;
-    color:var(--brown);
+    font-size:11px;
+    color:var(--muted);
+    font-weight:600;
 }
 
 .field input,
 .field select,
 .field textarea{
     width:100%;
-    padding:12px 14px;
-    border:1px solid var(--border);
-    border-radius:11px;
-    outline:none;
-    background:#fbf8f3;
+    border:1px solid var(--line);
+    background:var(--bg);
     color:var(--text);
+    border-radius:12px;
+    padding:13px 14px;
+    outline:none;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus{
+    border-color:var(--gold);
 }
 
 .field textarea{
@@ -967,548 +908,410 @@ header.scrolled{
     resize:vertical;
 }
 
-.field input:focus,
-.field select:focus,
-.field textarea:focus{
-    border-color:var(--gold);
-    box-shadow:0 0 0 4px rgba(180,147,99,.1);
-}
-
-.consent{
+.form-actions{
     display:flex;
-    align-items:flex-start;
-    gap:8px;
-    margin-top:18px;
+    flex-wrap:wrap;
+    gap:10px;
+    margin-top:20px;
+}
+
+.form-note{
     color:var(--muted);
-    font-size:9px;
-}
-
-.form-submit{
-    margin-top:18px;
-}
-
-.form-submit .btn{
-    width:100%;
+    font-size:10px;
+    margin-top:15px;
 }
 
 .match-result{
     display:none;
-    margin-top:22px;
-    padding:22px;
-    border-radius:18px;
-    background:#f6eee2;
-    border:1px solid rgba(180,147,99,.35);
+    margin-top:20px;
+    padding:18px;
+    border:1px solid rgba(85,113,90,.35);
+    background:rgba(85,113,90,.08);
+    border-radius:15px;
+    color:var(--text);
 }
 
 .match-result.show{
     display:block;
-    animation:up .4s ease;
 }
 
-.result-top{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-}
-
-.result-top strong{
-    font-family:'Cormorant Garamond',serif;
-    font-size:34px;
-    color:var(--brown);
-}
-
-.bar{
-    height:8px;
-    margin-top:10px;
-    border-radius:99px;
-    background:#ded3c5;
-    overflow:hidden;
-}
-
-.bar-fill{
-    height:100%;
-    width:0;
-    background:linear-gradient(90deg,var(--gold),var(--brown));
-    transition:1s ease;
-}
-
-.match-result p{
-    margin-top:12px;
-    font-size:10px;
-}
-
-/* =========================================================
+/* =========================
    AI
-========================================================= */
+   ========================= */
 
-.ai{
-    background:#efe6da;
+.ai-section{
+    background:var(--bg2);
 }
 
 .ai-grid{
     display:grid;
-    grid-template-columns:.85fr 1.15fr;
-    gap:50px;
+    grid-template-columns:1fr 1fr;
+    gap:70px;
     align-items:center;
 }
 
-.ai-copy h2{
-    margin-bottom:17px;
-}
-
-.ai-copy > p{
-    font-size:13px;
-}
-
-.ai-points{
-    display:grid;
-    gap:12px;
-    margin-top:28px;
-}
-
-.ai-point{
-    display:flex;
-    gap:11px;
-}
-
-.ai-point b{
-    width:27px;
-    height:27px;
-    flex:0 0 27px;
-    display:grid;
-    place-items:center;
-    border-radius:50%;
-    background:var(--brown);
-    color:#fff;
-    font-size:10px;
-}
-
-.ai-point p{
-    font-size:10px;
-}
-
-.chat{
+.ai-interface{
+    border:1px solid var(--line);
+    border-radius:30px;
+    background:var(--card);
     overflow:hidden;
-    background:#fff;
-    border:1px solid var(--border);
-    border-radius:27px;
     box-shadow:var(--shadow);
 }
 
-.chat-head{
-    padding:19px 22px;
+.ai-head{
+    padding:18px 22px;
+    border-bottom:1px solid var(--line);
     display:flex;
-    align-items:center;
     justify-content:space-between;
-    border-bottom:1px solid var(--border);
-}
-
-.chat-title{
-    display:flex;
-    gap:11px;
     align-items:center;
 }
 
-.orb{
-    width:37px;
-    height:37px;
-    border-radius:50%;
-    background:var(--brown);
-    position:relative;
-}
-
-.orb:before,
-.orb:after{
-    content:"";
-    position:absolute;
-    border:1px solid var(--gold2);
-    border-radius:50%;
-}
-
-.orb:before{
-    inset:7px;
-}
-
-.orb:after{
-    inset:13px;
-}
-
-.chat-title strong{
-    display:block;
-    color:var(--brown);
-    font-size:12px;
-}
-
-.chat-title span{
-    display:block;
-    color:#71836c;
-    font-size:9px;
-}
-
-.messages{
-    height:300px;
-    overflow:auto;
-    padding:20px;
-    background:#fcfaf6;
-}
-
-.msg{
-    max-width:82%;
-    padding:11px 14px;
-    border-radius:15px;
-    margin-bottom:11px;
-    font-size:10px;
-}
-
-.msg.bot{
-    background:#eee4d7;
-    color:var(--brown);
-    border-bottom-left-radius:4px;
-}
-
-.msg.user{
-    margin-left:auto;
-    background:var(--brown);
-    color:#fff;
-    border-bottom-right-radius:4px;
-}
-
-.chat-input{
+.ai-status{
     display:flex;
-    gap:7px;
-    padding:14px;
-    border-top:1px solid var(--border);
-}
-
-.chat-input input{
-    flex:1;
-    min-width:0;
-    padding:11px 14px;
-    border:1px solid var(--border);
-    border-radius:999px;
-    outline:none;
-    background:#fbf8f3;
-}
-
-.send{
-    width:43px;
-    height:43px;
-    border:0;
-    border-radius:50%;
-    background:var(--brown);
-    color:#fff;
-}
-
-.ai-note{
-    padding:0 20px 17px;
-    font-size:8px;
+    align-items:center;
+    gap:8px;
+    font-size:10px;
     color:var(--muted);
 }
 
-/* =========================================================
-   FOUNDER
-========================================================= */
+.ai-dot{
+    width:8px;
+    height:8px;
+    border-radius:50%;
+    background:#6c8a70;
+}
 
-.founder-card{
-    padding:50px;
-    border:1px solid var(--border);
-    border-radius:30px;
-    background:linear-gradient(135deg,#fbf8f3,#f0e6d8);
+.ai-messages{
+    height:300px;
+    overflow-y:auto;
+    padding:20px;
+}
+
+.message{
+    max-width:85%;
+    padding:12px 15px;
+    border-radius:15px;
+    margin-bottom:12px;
+    font-size:12px;
+}
+
+.message.bot{
+    background:var(--bg2);
+}
+
+.message.user{
+    margin-left:auto;
+    background:var(--brown);
+    color:#fff;
+}
+
+.ai-input{
+    display:flex;
+    border-top:1px solid var(--line);
+    padding:10px;
+    gap:8px;
+}
+
+.ai-input input{
+    flex:1;
+    border:0;
+    outline:0;
+    background:transparent;
+    color:var(--text);
+    padding:10px;
+}
+
+.ai-input button{
+    border:0;
+    background:var(--brown);
+    color:#fff;
+    border-radius:10px;
+    width:45px;
+}
+
+/* =========================
+   FOUNDER
+   ========================= */
+
+.founder{
+    background:var(--card);
+}
+
+.founder-box{
+    border:1px solid var(--line);
+    border-radius:35px;
+    padding:60px;
     position:relative;
     overflow:hidden;
 }
 
-.founder-card:after{
+.founder-box:after{
     content:"";
     position:absolute;
-    width:330px;
-    height:330px;
-    right:-150px;
-    top:-150px;
-    border:1px solid rgba(180,147,99,.2);
+    width:300px;
+    height:300px;
+    border:1px solid rgba(169,132,86,.2);
     border-radius:50%;
+    right:-120px;
+    top:-120px;
+}
+
+.founder-name{
+    font-size:60px;
+    margin-bottom:5px;
 }
 
 .founder-role{
     color:var(--gold);
-    font-size:9px;
-    font-weight:700;
-    letter-spacing:2px;
-    text-transform:uppercase;
-    margin-bottom:17px;
+    font-size:13px;
+    margin-bottom:25px;
 }
 
-.founder-card h2{
-    margin-bottom:18px;
+.founder-text{
+    color:var(--muted);
+    max-width:720px;
+    font-size:14px;
 }
 
-.founder-card p{
-    max-width:850px;
-    font-size:12px;
-}
-
-/* =========================================================
+/* =========================
    TRUST
-========================================================= */
+   ========================= */
 
-.trust-grid{
+.trust{
+    background:var(--bg2);
+}
+
+.trust-cards{
     display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:16px;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+    margin-top:45px;
 }
 
 .trust-card{
-    padding:30px;
-    border:1px solid var(--border);
-    border-radius:21px;
-    background:rgba(255,255,255,.55);
-}
-
-.trust-symbol{
-    width:45px;
-    height:45px;
-    display:grid;
-    place-items:center;
-    border-radius:50%;
-    background:#e9dfd1;
-    color:var(--brown);
-    margin-bottom:20px;
+    padding:28px;
+    border:1px solid var(--line);
+    border-radius:22px;
 }
 
 .trust-card h3{
-    font-size:25px;
-    margin-bottom:9px;
+    font-size:24px;
+    margin-bottom:8px;
 }
 
 .trust-card p{
-    font-size:10px;
+    color:var(--muted);
+    font-size:11px;
 }
 
-/* =========================================================
+/* =========================
    FAQ
-========================================================= */
+   ========================= */
+
+.faq-wrap{
+    max-width:850px;
+    margin:50px auto 0;
+}
 
 .faq{
-    max-width:900px;
+    border-bottom:1px solid var(--line);
 }
 
-.faq-item{
-    margin-bottom:9px;
-    border:1px solid var(--border);
-    border-radius:15px;
-    background:#fff;
-    overflow:hidden;
-}
-
-.faq-question{
+.faq button{
     width:100%;
+    background:none;
     border:0;
-    background:transparent;
-    padding:19px 22px;
+    color:var(--text);
+    padding:22px 0;
     display:flex;
     justify-content:space-between;
-    gap:20px;
-    color:var(--brown);
+    align-items:center;
     text-align:left;
-    font-size:11px;
     font-weight:600;
+    font-size:13px;
 }
 
-.faq-plus{
-    width:24px;
-    height:24px;
-    flex:0 0 24px;
-    display:grid;
-    place-items:center;
-    border:1px solid var(--border);
-    border-radius:50%;
-    transition:var(--transition);
+.faq button span{
+    color:var(--gold);
+    font-size:20px;
 }
 
 .faq-answer{
     max-height:0;
     overflow:hidden;
-    transition:max-height .35s ease;
+    transition:.4s;
 }
 
 .faq-answer p{
-    padding:0 22px 19px;
-    font-size:10px;
+    color:var(--muted);
+    font-size:12px;
+    padding:0 0 20px;
 }
 
-.faq-item.open .faq-plus{
-    transform:rotate(45deg);
+.faq.open .faq-answer{
+    max-height:300px;
+}
+
+/* =========================
+   CONTACT
+   ========================= */
+
+.contact{
     background:var(--brown);
     color:#fff;
 }
 
-/* =========================================================
-   CONTACT
-========================================================= */
-
-.contact{
-    background:var(--brown2);
-}
-
-.contact h2{
-    color:#fff;
-}
-
-.contact p{
-    color:rgba(255,255,255,.64);
+.contact .section-label{
+    color:#d8b887;
 }
 
 .contact-grid{
     display:grid;
     grid-template-columns:1fr 1fr;
-    gap:50px;
+    gap:70px;
 }
 
-.contact-info{
-    display:grid;
-    gap:13px;
-    margin-top:27px;
+.contact .section-intro{
+    color:rgba(255,255,255,.68);
+}
+
+.contact-list{
+    margin-top:35px;
 }
 
 .contact-item{
-    padding:18px;
-    border:1px solid rgba(255,255,255,.1);
-    border-radius:15px;
-    background:rgba(255,255,255,.035);
+    padding:18px 0;
+    border-bottom:1px solid rgba(255,255,255,.15);
 }
 
-.contact-item span{
-    display:block;
-    color:var(--gold2);
-    font-size:8px;
-    letter-spacing:2px;
+.contact-item small{
+    color:#d8b887;
     text-transform:uppercase;
-    margin-bottom:3px;
+    letter-spacing:2px;
+    font-size:9px;
 }
 
 .contact-item a,
 .contact-item strong{
-    color:#fff;
-    font-size:12px;
+    display:block;
+    font-size:17px;
+    margin-top:3px;
 }
 
-.contact-box{
-    padding:34px;
-    border:1px solid rgba(255,255,255,.1);
-    border-radius:24px;
-    background:rgba(255,255,255,.045);
+.contact-panel{
+    border:1px solid rgba(255,255,255,.18);
+    border-radius:30px;
+    padding:40px;
+    background:rgba(255,255,255,.05);
 }
 
-.contact-box h3{
-    color:#fff;
+.contact-panel h3{
+    font-size:38px;
     margin-bottom:12px;
 }
 
-.contact-box p{
-    font-size:11px;
-    margin-bottom:23px;
+.contact-panel p{
+    color:rgba(255,255,255,.65);
+    font-size:12px;
 }
 
-/* =========================================================
+/* =========================
    FOOTER
-========================================================= */
+   ========================= */
 
 footer{
-    background:#1b0f0b;
+    background:#241914;
     color:#fff;
-    padding:43px 0 23px;
+    padding:50px 0 25px;
 }
 
 .footer-top{
     display:flex;
     justify-content:space-between;
-    gap:35px;
-    padding-bottom:30px;
-    border-bottom:1px solid rgba(255,255,255,.09);
+    gap:30px;
+    align-items:flex-start;
 }
 
 .footer-brand{
-    font-family:'Cormorant Garamond',serif;
-    font-size:42px;
-    letter-spacing:5px;
+    font-family:"Cormorant Garamond",serif;
+    font-size:38px;
+    letter-spacing:4px;
 }
 
 .footer-tag{
-    margin-top:4px;
-    color:rgba(255,255,255,.45);
-    font-size:9px;
+    color:rgba(255,255,255,.55);
+    font-size:11px;
+    max-width:400px;
+    margin-top:10px;
 }
 
 .footer-links{
     display:flex;
     flex-wrap:wrap;
-    gap:17px;
-    align-items:flex-start;
+    gap:18px;
 }
 
 .footer-links button{
     border:0;
     background:none;
-    color:rgba(255,255,255,.55);
-    font-size:9px;
-}
-
-.footer-links button:hover{
-    color:#fff;
+    color:rgba(255,255,255,.65);
+    font-size:11px;
 }
 
 .footer-bottom{
+    margin-top:45px;
     padding-top:20px;
+    border-top:1px solid rgba(255,255,255,.12);
     display:flex;
     justify-content:space-between;
     gap:20px;
-    color:rgba(255,255,255,.35);
-    font-size:8px;
+    color:rgba(255,255,255,.42);
+    font-size:10px;
 }
 
-/* =========================================================
+/* =========================
    WHATSAPP
-========================================================= */
+   ========================= */
 
 .whatsapp{
     position:fixed;
-    right:23px;
-    bottom:23px;
-    z-index:900;
-    width:57px;
-    height:57px;
+    right:22px;
+    bottom:22px;
+    width:58px;
+    height:58px;
+    border-radius:50%;
+    background:#287b43;
+    color:#fff;
     display:grid;
     place-items:center;
-    border-radius:50%;
-    background:#25D366;
-    color:#fff;
-    box-shadow:0 15px 35px rgba(0,0,0,.2);
-    transition:var(--transition);
+    z-index:900;
+    box-shadow:0 12px 30px rgba(0,0,0,.22);
+    transition:.3s;
 }
 
 .whatsapp:hover{
-    transform:translateY(-5px) scale(1.05);
+    transform:scale(1.08);
 }
 
 .whatsapp svg{
     width:27px;
     height:27px;
+    fill:currentColor;
 }
 
-/* =========================================================
+/* =========================
    MODAL
-========================================================= */
+   ========================= */
 
 .modal{
     position:fixed;
     inset:0;
+    background:rgba(0,0,0,.62);
     z-index:3000;
     display:none;
     align-items:center;
     justify-content:center;
     padding:20px;
-    background:rgba(30,18,13,.68);
-    backdrop-filter:blur(10px);
 }
 
 .modal.show{
@@ -1516,275 +1319,138 @@ footer{
 }
 
 .modal-box{
-    width:min(780px,100%);
+    width:min(760px,100%);
     max-height:85vh;
     overflow:auto;
-    background:#fff;
-    border-radius:24px;
-    box-shadow:0 40px 100px rgba(0,0,0,.3);
+    background:var(--card);
+    color:var(--text);
+    border-radius:28px;
+    padding:35px;
+    position:relative;
 }
 
-.modal-head{
-    position:sticky;
-    top:0;
-    z-index:2;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:20px 24px;
-    border-bottom:1px solid var(--border);
-    background:#fff;
-}
-
-.modal-head h3{
-    font-size:28px;
-}
-
-.close{
-    width:37px;
-    height:37px;
-    border:1px solid var(--border);
+.modal-close{
+    position:absolute;
+    right:18px;
+    top:18px;
+    width:38px;
+    height:38px;
     border-radius:50%;
-    background:#fff;
-    color:var(--brown);
+    border:1px solid var(--line);
+    background:transparent;
+    color:var(--text);
 }
 
-.modal-content{
-    padding:28px;
+.modal-box h2{
+    font-size:42px;
+    margin-bottom:18px;
 }
 
-.modal-content h4{
+.modal-box h3{
     font-size:23px;
-    margin:23px 0 8px;
+    margin-top:25px;
+    margin-bottom:7px;
 }
 
-.modal-content h4:first-child{
-    margin-top:0;
+.modal-box p,
+.modal-box li{
+    color:var(--muted);
+    font-size:12px;
 }
 
-.modal-content p{
-    font-size:11px;
-    margin-bottom:12px;
+.modal-box ul{
+    padding-left:20px;
 }
 
-/* =========================================================
-   COOKIE
-========================================================= */
+/* =========================
+   COOKIE CONSENT
+   ========================= */
 
 .cookie{
     position:fixed;
     left:20px;
     right:20px;
     bottom:20px;
+    max-width:850px;
+    margin:auto;
+    background:var(--card);
+    border:1px solid var(--line);
+    box-shadow:var(--shadow);
+    border-radius:20px;
+    padding:18px 20px;
     z-index:2500;
     display:none;
-    width:min(900px,calc(100% - 40px));
-    margin:auto;
-    padding:19px 21px;
-    border:1px solid var(--border);
-    border-radius:19px;
-    background:rgba(255,255,255,.97);
-    box-shadow:0 25px 70px rgba(0,0,0,.16);
 }
 
 .cookie.show{
-    display:block;
-}
-
-.cookie-layout{
     display:flex;
-    justify-content:space-between;
     align-items:center;
-    gap:22px;
+    justify-content:space-between;
+    gap:20px;
 }
 
 .cookie p{
-    font-size:9px;
+    color:var(--muted);
+    font-size:10px;
 }
 
-.cookie-actions{
-    display:flex;
-    gap:7px;
-    flex-shrink:0;
+.cookie button{
+    border:0;
+    background:var(--brown);
+    color:#fff;
+    padding:10px 18px;
+    border-radius:25px;
+    font-size:11px;
+    white-space:nowrap;
 }
 
-/* =========================================================
-   ANIMATION
-========================================================= */
+/* =========================
+   TOAST
+   ========================= */
 
-.reveal{
+.toast{
+    position:fixed;
+    left:50%;
+    bottom:30px;
+    transform:translate(-50%,20px);
+    background:var(--brown);
+    color:#fff;
+    padding:13px 20px;
+    border-radius:30px;
+    font-size:11px;
     opacity:0;
-    transform:translateY(22px);
-    transition:.7s ease;
+    pointer-events:none;
+    transition:.3s;
+    z-index:5000;
 }
 
-.reveal.visible{
+.toast.show{
     opacity:1;
-    transform:none;
+    transform:translate(-50%,0);
 }
 
-@keyframes up{
-    from{
-        opacity:0;
-        transform:translateY(12px);
+/* =========================
+   MOBILE
+   ========================= */
+
+@media(max-width:1050px){
+
+    .nav-links{
+        gap:14px;
     }
-    to{
-        opacity:1;
-        transform:none;
-    }
-}
 
-/* =========================================================
-   DARK MODE
-========================================================= */
-
-body.dark{
-    --cream:#211711;
-    --cream2:#17100d;
-    --cream3:#2c1e16;
-
-    --brown:#eadac5;
-    --brown2:#f3e6d4;
-    --brown3:#cbb9a5;
-
-    --gold:#c4a26d;
-    --gold2:#d8c097;
-
-    --text:#eee2d5;
-    --muted:#b5a79b;
-
-    --border:rgba(255,255,255,.12);
-
-    --shadow:0 25px 70px rgba(0,0,0,.3);
-}
-
-body.dark .navbar{
-    background:rgba(35,24,18,.9);
-}
-
-body.dark .navlinks a{
-    color:#cbb9a5;
-}
-
-body.dark .path,
-body.dark .service,
-body.dark .network-card,
-body.dark .form-card,
-body.dark .chat,
-body.dark .trust-card,
-body.dark .faq-item{
-    background:#241914;
-}
-
-body.dark .process,
-body.dark .match,
-body.dark .ai{
-    background:#211711;
-}
-
-body.dark .field input,
-body.dark .field select,
-body.dark .field textarea,
-body.dark .chat-input input{
-    background:#1c120e;
-    color:#eee2d5;
-}
-
-body.dark .founder-card{
-    background:linear-gradient(135deg,#281b15,#1d120e);
-}
-
-body.dark .match-result{
-    background:#2b1d16;
-}
-
-body.dark .modal-box,
-body.dark .modal-head,
-body.dark .close,
-body.dark .cookie{
-    background:#241914;
-    color:#eee2d5;
-}
-
-/* =========================================================
-   RESPONSIVE
-========================================================= */
-
-@media(max-width:1100px){
-
-    .navlinks a{
-        padding:8px 7px;
+    .nav-links a{
         font-size:10px;
-    }
-
-    .hero-grid{
-        gap:40px;
-    }
-
-    .pathways{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .intel-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
-}
-
-@media(max-width:850px){
-
-    .section{
-        padding:80px 0;
-    }
-
-    header{
-        padding:10px 0;
-    }
-
-    .navbar{
-        border-radius:18px;
-    }
-
-    .navlinks{
-        position:absolute;
-        left:4%;
-        right:4%;
-        top:75px;
-        display:none;
-        flex-direction:column;
-        align-items:stretch;
-        padding:10px;
-        border:1px solid var(--border);
-        border-radius:20px;
-        background:rgba(251,248,243,.98);
-        box-shadow:var(--shadow);
-    }
-
-    body.dark .navlinks{
-        background:#231812;
-    }
-
-    .navlinks.open{
-        display:flex;
-    }
-
-    .navlinks a{
-        padding:12px 15px;
-    }
-
-    .mobile{
-        display:grid;
-    }
-
-    .desktop-connect{
-        display:none;
     }
 
     .hero-grid,
     .about-grid,
-    .match-layout,
+    .match-grid,
     .ai-grid,
+    .intelligence-grid,
     .contact-grid{
         grid-template-columns:1fr;
+        gap:45px;
     }
 
     .match-info{
@@ -1792,100 +1458,137 @@ body.dark .cookie{
     }
 
     .architecture{
-        min-height:430px;
+        min-height:420px;
     }
 
-    .strip-grid{
+    .path-grid{
         grid-template-columns:repeat(2,1fr);
     }
 
-    .strip-item:nth-child(2){
-        border-right:0;
+    .trust-cards{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:800px){
+
+    section{
+        padding:80px 0;
     }
 
-    .strip-item:nth-child(-n+2){
-        border-bottom:1px solid var(--border);
+    .nav-links{
+        position:fixed;
+        left:15px;
+        right:15px;
+        top:85px;
+        display:none;
+        flex-direction:column;
+        align-items:stretch;
+        padding:20px;
+        background:var(--card);
+        border:1px solid var(--line);
+        border-radius:20px;
+        box-shadow:var(--shadow);
     }
 
-    .why-grid,
-    .services,
+    .nav-links.open{
+        display:flex;
+    }
+
+    .nav-links a{
+        padding:8px;
+        font-size:12px;
+    }
+
+    .menu-btn{
+        display:grid;
+        place-items:center;
+    }
+
+    .connect-btn{
+        display:none;
+    }
+
+    .nav-brand{
+        font-size:24px;
+    }
+
     .trust-grid{
         grid-template-columns:repeat(2,1fr);
     }
 
+    .why-grid,
+    .services-grid{
+        grid-template-columns:1fr;
+    }
+
     .process-grid{
-        grid-template-columns:repeat(2,1fr);
+        grid-template-columns:1fr 1fr;
+    }
+
+    .process-item{
+        border-bottom:1px solid var(--line);
     }
 
     .network-grid{
         grid-template-columns:1fr;
     }
 
-    .contact-grid{
-        gap:30px;
+    .hero h1{
+        font-size:65px;
     }
 
-    .footer-top{
+    .founder-box{
+        padding:35px;
+    }
+
+    .founder-name{
+        font-size:48px;
+    }
+
+    .footer-top,
+    .footer-bottom{
         flex-direction:column;
-    }
-
-    .footer-links{
-        justify-content:flex-start;
     }
 }
 
-@media(max-width:600px){
+@media(max-width:560px){
 
     .container{
-        width:94%;
-    }
-
-    h1{
-        font-size:50px;
-    }
-
-    h2{
-        font-size:43px;
-    }
-
-    .brand-name{
-        font-size:59px;
-        letter-spacing:5px;
+        width:90%;
     }
 
     .hero{
-        padding-top:125px;
+        padding-top:105px;
     }
 
-    .hero-buttons{
-        flex-direction:column;
+    .hero h1{
+        font-size:54px;
+        letter-spacing:3px;
     }
 
-    .hero-buttons .btn{
-        width:100%;
+    .hero-subtitle{
+        font-size:25px;
     }
 
-    .arch{
-        min-height:350px;
+    .architecture{
+        min-height:330px;
         border-radius:25px;
     }
 
-    .arch-caption{
-        left:22px;
-        bottom:22px;
+    .arch-center strong{
+        font-size:30px;
     }
 
-    .arch-caption strong{
-        font-size:26px;
+    .path-grid,
+    .trust-cards{
+        grid-template-columns:1fr;
     }
 
-    .stakeholders,
-    .pathways,
-    .why-grid,
-    .process-grid,
-    .services,
-    .intel-grid,
-    .trust-grid,
+    .process-grid{
+        grid-template-columns:1fr;
+    }
+
     .form-grid{
         grid-template-columns:1fr;
     }
@@ -1894,48 +1597,26 @@ body.dark .cookie{
         grid-column:auto;
     }
 
-    .network-card,
-    .founder-card,
-    .form-card{
-        padding:25px;
+    .match-form{
+        padding:22px;
     }
 
-    .cookie-layout{
-        flex-direction:column;
-        align-items:stretch;
+    .section-title{
+        font-size:44px;
     }
 
-    .cookie-actions{
-        width:100%;
-    }
-
-    .cookie-actions .btn{
-        flex:1;
-    }
-
-    .footer-bottom{
-        flex-direction:column;
+    .about-number{
+        font-size:120px;
     }
 
     .whatsapp{
-        right:16px;
-        bottom:16px;
-        width:54px;
-        height:54px;
-    }
-}
-
-@media(prefers-reduced-motion:reduce){
-
-    *,
-    *:before,
-    *:after{
-        animation-duration:.01ms!important;
-        transition-duration:.01ms!important;
+        right:15px;
+        bottom:15px;
     }
 
-    html{
-        scroll-behavior:auto;
+    .cookie.show{
+        flex-direction:column;
+        align-items:flex-start;
     }
 }
 
@@ -1946,1450 +1627,1337 @@ body.dark .cookie{
 
 <a href="#main" class="skip">Skip to content</a>
 
-<!-- =========================================================
+<!-- =====================================================
      HEADER
-========================================================= -->
+     ===================================================== -->
 
-<header id="header">
+<header>
+<div class="container nav">
 
-<div class="container">
+    <a href="#home" class="nav-brand">PRANAURA</a>
 
-<div class="navbar">
+    <nav class="nav-links" id="navLinks">
 
-<nav class="navlinks" id="navlinks">
+        <a href="#about" data-nav="about">About</a>
+        <a href="#why" data-nav="why">Why Us</a>
+        <a href="#process" data-nav="process">Process</a>
+        <a href="#network" data-nav="network">Network</a>
+        <a href="#services" data-nav="services">Services</a>
+        <a href="#match" data-nav="match">Smart Match</a>
+        <a href="#ai" data-nav="ai">AI</a>
+        <a href="#trust" data-nav="trust">Trust</a>
+        <a href="#faq" data-nav="faq">FAQ</a>
+        <a href="#contact" data-nav="contact">Contact</a>
 
-<a href="#about" data-section="about" data-i18n="navAbout">About</a>
-<a href="#why" data-section="why" data-i18n="navWhy">Why Us</a>
-<a href="#process" data-section="process" data-i18n="navProcess">Process</a>
-<a href="#network" data-section="network" data-i18n="navNetwork">Network</a>
-<a href="#services" data-section="services" data-i18n="navServices">Services</a>
-<a href="#match" data-section="match" data-i18n="navMatch">Smart Match</a>
-<a href="#ai" data-section="ai" data-i18n="navAI">AI</a>
-<a href="#trust" data-section="trust" data-i18n="navTrust">Trust</a>
-<a href="#faq" data-section="faq" data-i18n="navFAQ">FAQ</a>
-<a href="#contact" data-section="contact" data-i18n="navContact">Contact</a>
+    </nav>
 
-</nav>
+    <div class="nav-actions">
 
-<div class="actions">
+        <button class="lang-btn" id="langBtn" title="Change language">
+            EN
+        </button>
 
-<button class="lang" id="langBtn">ಕನ್ನಡ</button>
+        <button class="icon-btn" id="themeBtn" title="Change theme">
+            ☾
+        </button>
 
-<button class="icon" id="themeBtn" aria-label="Toggle dark mode">
+        <a href="#contact" class="connect-btn">
+            Connect
+        </a>
 
-<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
-<circle cx="12" cy="12" r="4"></circle>
-<path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path>
-</svg>
+        <button class="menu-btn" id="menuBtn">
+            ☰
+        </button>
 
-</button>
-
-<a href="#contact" class="btn btn-primary desktop-connect" data-i18n="connect">
-Connect
-</a>
-
-<button class="icon mobile" id="mobileBtn" aria-label="Open menu">
-
-<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-<path d="M4 7h16M4 12h16M4 17h16"></path>
-</svg>
-
-</button>
+    </div>
 
 </div>
-
-</div>
-
-</div>
-
 </header>
 
 
 <main id="main">
 
-<!-- =========================================================
+<!-- =====================================================
      HERO
-========================================================= -->
+     ===================================================== -->
 
 <section class="hero" id="home">
 
-<div class="container">
+<div class="container hero-grid">
 
-<div class="hero-grid">
+    <div class="reveal">
 
-<div class="reveal">
+        <div class="hero-eyebrow" data-i18n="eyebrow">
+            Strategic Real Estate Network
+        </div>
 
-<div class="brand">
+        <h1>PRANAURA</h1>
 
-<div class="brand-name">PRANAURA</div>
+        <div class="hero-subtitle" data-i18n="heroTitle">
+            Strategic Builder & Investor Partnerships
+        </div>
 
-<div class="brand-line"></div>
+        <p class="hero-text" data-i18n="heroText">
+            Connecting builders, developers, landowners, investors and
+            property buyers through structured relationships,
+            requirement-focused introductions and technology-enabled guidance.
+        </p>
 
-<div class="brand-tag" data-i18n="tagline">
-Strategic Builder & Investor Partnerships
-</div>
+        <div class="hero-buttons">
 
-</div>
+            <a href="#match" class="btn btn-primary" data-i18n="findMatch">
+                Find Your Match
+            </a>
 
-<h1 data-i18n="heroTitle">
-Real estate relationships, structured for opportunity.
-</h1>
+            <a href="#network" class="btn btn-secondary" data-i18n="exploreNetwork">
+                Explore Network
+            </a>
 
-<p class="hero-copy" data-i18n="heroText">
-Connecting builders, developers, landowners, investors and property buyers through structured relationships, requirement-focused introductions and technology-enabled guidance.
-</p>
+            <a href="https://wa.me/919019746649?text=Hello%20PRANAURA%2C%20I%20would%20like%20to%20connect."
+               target="_blank"
+               class="btn btn-secondary">
+                WhatsApp
+            </a>
 
-<div class="hero-buttons">
+        </div>
 
-<a href="#match" class="btn btn-primary" data-i18n="findMatch">
-Find Your Match
-</a>
+        <p class="hero-note" data-i18n="launchNote">
+            Launching September 2026 · PRANAURA is a relationship-led
+            real estate advisory and networking platform.
+        </p>
 
-<a href="#network" class="btn btn-outline" data-i18n="explore">
-Explore Network
-</a>
-
-<a
-href="https://wa.me/919019746649?text=Hello%20PRANAURA%2C%20I%20would%20like%20to%20connect."
-target="_blank"
-rel="noopener"
-class="btn btn-gold"
-data-i18n="whatsapp">
-WhatsApp
-</a>
-
-</div>
-
-<div class="launch">
-
-<span class="dot"></span>
-
-<span data-i18n="launch">
-Launching September 2026
-</span>
-
-</div>
-
-</div>
+    </div>
 
 
-<div class="arch reveal">
+    <div class="architecture reveal">
 
-<div class="windows">
+        <div class="arch-lines"></div>
 
-<span></span>
-<span></span>
-<span></span>
-<span></span>
+        <div class="arch-center">
+            <small>BUILD · CONNECT · GROW</small>
+            <strong>PRANAURA</strong>
+        </div>
 
-</div>
-
-<div class="floor"></div>
-
-<div class="arch-caption">
-
-<small data-i18n="visualSmall">
-Structured Real Estate Network
-</small>
-
-<strong data-i18n="visualLarge">
-Relationships. Opportunity. Direction.
-</strong>
-
-</div>
-
-</div>
-
-</div>
+    </div>
 
 </div>
 
 </section>
 
 
-<!-- =========================================================
+<!-- =====================================================
      TRUST STRIP
-========================================================= -->
+     ===================================================== -->
 
-<section class="strip">
+<div class="trust-strip">
 
-<div class="container">
+<div class="container trust-grid">
 
-<div class="strip-grid">
+    <div class="trust-item">
+        <strong>5</strong>
+        <span data-i18n="stakeholders">Stakeholder Groups</span>
+    </div>
 
-<div class="strip-item">
-<strong data-i18n="strip1">Requirement Focused</strong>
-<span data-i18n="strip1s">Understand before introducing</span>
-</div>
+    <div class="trust-item">
+        <strong>1:1</strong>
+        <span data-i18n="requirement">Requirement Focus</span>
+    </div>
 
-<div class="strip-item">
-<strong data-i18n="strip2">Relationship Led</strong>
-<span data-i18n="strip2s">Relevant connections</span>
-</div>
+    <div class="trust-item">
+        <strong>AI</strong>
+        <span data-i18n="aiGuidance">Assisted Guidance</span>
+    </div>
 
-<div class="strip-item">
-<strong data-i18n="strip3">Technology Enabled</strong>
-<span data-i18n="strip3s">Smarter workflows</span>
-</div>
-
-<div class="strip-item">
-<strong data-i18n="strip4">Professional Approach</strong>
-<span data-i18n="strip4s">Structured communication</span>
-</div>
+    <div class="trust-item">
+        <strong>MYS</strong>
+        <span data-i18n="localFocus">Mysuru Local Focus</span>
+    </div>
 
 </div>
 
 </div>
 
-</section>
 
-
-<!-- =========================================================
+<!-- =====================================================
      ABOUT
-========================================================= -->
+     ===================================================== -->
 
-<section class="section" id="about">
+<section id="about">
 
-<div class="container">
+<div class="container about-grid">
 
-<div class="about-grid">
+    <div class="reveal">
+        <div class="section-label" data-i18n="aboutLabel">About PRANAURA</div>
+        <div class="about-number">01</div>
+    </div>
 
-<div class="section-head reveal">
+    <div class="reveal">
 
-<div class="eyebrow" data-i18n="aboutEyebrow">
-About PRANAURA
-</div>
+        <h2 class="section-title" data-i18n="aboutTitle">
+            Relationships,
+            <span>structured better.</span>
+        </h2>
 
-<h2 data-i18n="aboutTitle">
-A more structured way to connect real estate stakeholders.
-</h2>
+        <p class="about-text" data-i18n="aboutText">
+            PRANAURA is designed to create a more structured way
+            for participants in the real estate ecosystem to discover
+            relevant relationships and opportunities.
+        </p>
 
-</div>
+        <p class="about-text" data-i18n="aboutText2">
+            Rather than simply presenting properties, PRANAURA focuses
+            on understanding requirements, qualifying participants and
+            facilitating relevant introductions between the right people.
+        </p>
 
-<div class="about-copy reveal">
+        <div class="stakeholder-row">
 
-<p class="about-lead" data-i18n="aboutLead">
-PRANAURA is a real estate advisory and networking platform designed to bring the right people together at the right stage of a property opportunity.
-</p>
+            <span class="pill">Builders & Developers</span>
+            <span class="pill">Landowners</span>
+            <span class="pill">Investors</span>
+            <span class="pill">Property Buyers</span>
+            <span class="pill">Strategic Partners</span>
 
-<p data-i18n="aboutP1">
-We connect builders, developers, landowners, investors and property buyers based on requirements, location, project relevance and investment intent.
-</p>
+        </div>
 
-<p data-i18n="aboutP2">
-Rather than operating as a traditional property listing portal, PRANAURA focuses on structured introductions, requirement understanding, relationship development and transaction-oriented coordination.
-</p>
-
-<p data-i18n="aboutP3">
-The objective is simple: reduce irrelevant conversations and create more meaningful connections between people who can genuinely work together.
-</p>
-
-<div class="stakeholders">
-
-<div class="stakeholder">
-<strong data-i18n="builder">Builders & Developers</strong>
-<span data-i18n="builderText">Investor connections and buyer opportunities.</span>
-</div>
-
-<div class="stakeholder">
-<strong data-i18n="landowner">Landowners</strong>
-<span data-i18n="landownerText">Connections with suitable development partners.</span>
-</div>
-
-<div class="stakeholder">
-<strong data-i18n="investor">Investors</strong>
-<span data-i18n="investorText">Requirement-based property opportunities.</span>
-</div>
-
-<div class="stakeholder">
-<strong data-i18n="buyer">Property Buyers</strong>
-<span data-i18n="buyerText">Guidance aligned with requirements.</span>
-</div>
-
-</div>
-
-</div>
-
-</div>
+    </div>
 
 </div>
 
 </section>
 
 
-<!-- =========================================================
+<!-- =====================================================
      WHY PRANAURA
-========================================================= -->
+     ===================================================== -->
 
-<section class="section dark-section" id="why">
+<section class="why" id="why">
 
 <div class="container">
 
-<div class="section-head reveal">
+    <div class="reveal">
 
-<div class="eyebrow" data-i18n="whyEyebrow">
-Why PRANAURA
-</div>
+        <div class="section-label" data-i18n="whyLabel">
+            Why PRANAURA
+        </div>
 
-<h2 data-i18n="whyTitle">
-Not just a connection. A structured relationship.
-</h2>
+        <h2 class="section-title" data-i18n="whyTitle">
+            More than a
+            <span>property connection.</span>
+        </h2>
 
-<p data-i18n="whyIntro">
-PRANAURA combines local relationship building with a professional, technology-enabled process.
-</p>
+        <p class="section-intro" data-i18n="whyIntro">
+            A structured relationship model designed to make
+            real estate networking more focused, professional and transparent.
+        </p>
 
-</div>
+    </div>
 
-<div class="why-grid">
 
-<div class="why-card reveal">
-<div class="num">01</div>
-<h3 data-i18n="why1">Structured</h3>
-<p data-i18n="why1Text">
-Requirements, conversations and follow-ups are organised instead of being handled informally.
-</p>
-</div>
+    <div class="why-grid">
 
-<div class="why-card reveal">
-<div class="num">02</div>
-<h3 data-i18n="why2">Professional</h3>
-<p data-i18n="why2Text">
-Clear communication and a standardized approach create a more reliable experience.
-</p>
-</div>
+        <div class="card reveal">
+            <div class="card-number">01</div>
+            <h3>Structured</h3>
+            <p>Requirements are organized before introductions are made.</p>
+        </div>
 
-<div class="why-card reveal">
-<div class="num">03</div>
-<h3 data-i18n="why3">Technology-Enabled</h3>
-<p data-i18n="why3Text">
-Smart matching and AI-assisted workflows help identify relevant connections.
-</p>
-</div>
+        <div class="card reveal">
+            <div class="card-number">02</div>
+            <h3>Professional</h3>
+            <p>Communication and follow-through are treated as part of the service.</p>
+        </div>
 
-<div class="why-card reveal">
-<div class="num">04</div>
-<h3 data-i18n="why4">Relationship-Led</h3>
-<p data-i18n="why4Text">
-The focus remains on understanding people, requirements and long-term relationships.
-</p>
-</div>
+        <div class="card reveal">
+            <div class="card-number">03</div>
+            <h3>Technology-Enabled</h3>
+            <p>Digital workflows and AI-assisted tools support better decisions.</p>
+        </div>
 
-<div class="why-card reveal">
-<div class="num">05</div>
-<h3 data-i18n="why5">Local Expertise</h3>
-<p data-i18n="why5Text">
-A strong understanding of the local market helps create relevant introductions.
-</p>
-</div>
+        <div class="card reveal">
+            <div class="card-number">04</div>
+            <h3>Relationship-Led</h3>
+            <p>Long-term relationships matter more than one-time transactions.</p>
+        </div>
 
-<div class="why-card reveal">
-<div class="num">06</div>
-<h3 data-i18n="why6">Transparent</h3>
-<p data-i18n="why6Text">
-PRANAURA clearly communicates its role and avoids presenting unverified opportunities as confirmed listings.
-</p>
-</div>
+        <div class="card reveal">
+            <div class="card-number">05</div>
+            <h3>Requirement First</h3>
+            <p>We begin with what the participant actually needs.</p>
+        </div>
 
-</div>
+        <div class="card reveal">
+            <div class="card-number">06</div>
+            <h3>Local Expertise</h3>
+            <p>Initial operations are focused on Mysuru and Karnataka.</p>
+        </div>
+
+    </div>
 
 </div>
 
 </section>
 
 
-<!-- =========================================================
+<!-- =====================================================
      PATHWAYS
-========================================================= -->
+     ===================================================== -->
 
-<section class="section">
+<section id="pathways">
 
 <div class="container">
 
-<div class="section-head reveal">
+    <div class="reveal">
 
-<div class="eyebrow" data-i18n="pathEyebrow">
-Choose Your Path
-</div>
+        <div class="section-label">Choose Your Path</div>
 
-<h2 data-i18n="pathTitle">
-Tell us where you fit in the property ecosystem.
-</h2>
+        <h2 class="section-title">
+            One network.
+            <span>Different needs.</span>
+        </h2>
 
-<p data-i18n="pathIntro">
-Every stakeholder has a different objective. PRANAURA starts with that objective.
-</p>
+        <p class="section-intro">
+            PRANAURA is designed around the different objectives
+            of participants in the property ecosystem.
+        </p>
 
-</div>
-
-<div class="pathways">
-
-<div class="path reveal">
-
-<div class="path-number">01</div>
-
-<h3 data-i18n="path1">
-Builder / Developer
-</h3>
-
-<p data-i18n="path1Text">
-Looking for investors, buyers, land partnerships or strategic connections?
-</p>
-
-<a href="#match" data-role="Builder / Developer" data-i18n="start">
-Start a conversation →
-</a>
-
-</div>
+    </div>
 
 
-<div class="path reveal">
+    <div class="path-grid">
 
-<div class="path-number">02</div>
+        <div class="path reveal">
 
-<h3 data-i18n="path2">
-Landowner
-</h3>
+            <div class="path-symbol">B</div>
 
-<p data-i18n="path2Text">
-Looking for suitable developers or structured development possibilities?
-</p>
+            <h3>Builder / Developer</h3>
 
-<a href="#match" data-role="Landowner" data-i18n="start">
-Start a conversation →
-</a>
+            <p>
+                Connect with relevant investors, buyers,
+                landowners and strategic partners.
+            </p>
 
-</div>
+        </div>
 
 
-<div class="path reveal">
+        <div class="path reveal">
 
-<div class="path-number">03</div>
+            <div class="path-symbol">L</div>
 
-<h3 data-i18n="path3">
-Investor
-</h3>
+            <h3>Landowner</h3>
 
-<p data-i18n="path3Text">
-Looking for property or development opportunities aligned with your objectives?
-</p>
+            <p>
+                Explore structured introductions for development
+                partnerships and suitable property requirements.
+            </p>
 
-<a href="#match" data-role="Investor" data-i18n="start">
-Start a conversation →
-</a>
-
-</div>
+        </div>
 
 
-<div class="path reveal">
+        <div class="path reveal">
 
-<div class="path-number">04</div>
+            <div class="path-symbol">I</div>
 
-<h3 data-i18n="path4">
-Property Buyer
-</h3>
+            <h3>Investor</h3>
 
-<p data-i18n="path4Text">
-Looking for a property based on location, type, budget and timeline?
-</p>
+            <p>
+                Share your investment preferences and discover
+                potentially relevant opportunities.
+            </p>
 
-<a href="#match" data-role="Property Buyer" data-i18n="start">
-Start a conversation →
-</a>
+        </div>
 
-</div>
 
-</div>
+        <div class="path reveal">
+
+            <div class="path-symbol">P</div>
+
+            <h3>Property Buyer</h3>
+
+            <p>
+                Tell us what you are looking for and receive
+                requirement-focused guidance.
+            </p>
+
+        </div>
+
+    </div>
 
 </div>
 
 </section>
 
 
-<!-- =========================================================
+<!-- =====================================================
      PROCESS
-========================================================= -->
+     ===================================================== -->
 
-<section class="section process" id="process">
+<section class="process" id="process">
 
 <div class="container">
 
-<div class="section-head reveal">
+    <div class="reveal">
 
-<div class="eyebrow" data-i18n="processEyebrow">
-The PRANAURA Process
-</div>
+        <div class="section-label">How It Works</div>
 
-<h2 data-i18n="processTitle">
-From requirement to relevant connection.
-</h2>
+        <h2 class="section-title">
+            Simple process.
+            <span>Better introductions.</span>
+        </h2>
 
-</div>
+    </div>
 
-<div class="process-grid">
 
-<div class="process-card reveal">
-<div class="process-no">01</div>
-<h3 data-i18n="process1">Understand</h3>
-<p data-i18n="process1Text">
-We begin by understanding the stakeholder's requirement, objective and preferred parameters.
-</p>
-</div>
+    <div class="process-grid">
 
-<div class="process-card reveal">
-<div class="process-no">02</div>
-<h3 data-i18n="process2">Assess</h3>
-<p data-i18n="process2Text">
-Relevant information is structured so potential compatibility can be evaluated.
-</p>
-</div>
+        <div class="process-item reveal">
 
-<div class="process-card reveal">
-<div class="process-no">03</div>
-<h3 data-i18n="process3">Connect</h3>
-<p data-i18n="process3Text">
-Suitable parties can be introduced when there is meaningful alignment.
-</p>
-</div>
+            <div class="process-no">01</div>
 
-<div class="process-card reveal">
-<div class="process-no">04</div>
-<h3 data-i18n="process4">Coordinate</h3>
-<p data-i18n="process4Text">
-PRANAURA can support communication and follow-up around the relationship.
-</p>
-</div>
+            <h3>Understand</h3>
 
-</div>
+            <p>
+                We understand your role, requirement,
+                location, preferences and objective.
+            </p>
+
+        </div>
+
+
+        <div class="process-item reveal">
+
+            <div class="process-no">02</div>
+
+            <h3>Qualify</h3>
+
+            <p>
+                Information is organized so relevant
+                connections can be identified.
+            </p>
+
+        </div>
+
+
+        <div class="process-item reveal">
+
+            <div class="process-no">03</div>
+
+            <h3>Connect</h3>
+
+            <p>
+                Relevant participants can be introduced
+                based on the requirement.
+            </p>
+
+        </div>
+
+
+        <div class="process-item reveal">
+
+            <div class="process-no">04</div>
+
+            <h3>Follow Through</h3>
+
+            <p>
+                Communication and next steps can be
+                coordinated after the introduction.
+            </p>
+
+        </div>
+
+    </div>
 
 </div>
 
 </section>
 
 
-<!-- =========================================================
+<!-- =====================================================
      NETWORK
-========================================================= -->
+     ===================================================== -->
 
-<section class="section" id="network">
+<section id="network">
 
 <div class="container">
 
-<div class="section-head reveal">
+    <div class="reveal">
 
-<div class="eyebrow" data-i18n="networkEyebrow">
-Property Ecosystem
-</div>
+        <div class="section-label">Property Ecosystem</div>
 
-<h2 data-i18n="networkTitle">
-Different objectives. One connected network.
-</h2>
+        <h2 class="section-title">
+            Where the right
+            <span>relationships meet.</span>
+        </h2>
 
-</div>
+        <p class="section-intro">
+            PRANAURA creates structured connections across
+            multiple sides of the real estate ecosystem.
+        </p>
 
-<div class="network-grid">
-
-<div class="network-card reveal">
-
-<h3 data-i18n="network1">
-Development & Builder Network
-</h3>
-
-<p data-i18n="network1Text">
-Designed for builders and developers seeking stronger relationships with investors, buyers, landowners and strategic partners.
-</p>
-
-<ul class="network-list">
-<li data-i18n="network1a">Builder relationship development</li>
-<li data-i18n="network1b">Investor introductions</li>
-<li data-i18n="network1c">Buyer requirement connections</li>
-<li data-i18n="network1d">Land partnership opportunities</li>
-</ul>
-
-</div>
+    </div>
 
 
-<div class="network-card reveal">
+    <div class="network-grid">
 
-<h3 data-i18n="network2">
-Investor & Buyer Network
-</h3>
+        <div class="network-card reveal">
 
-<p data-i18n="network2Text">
-Designed around requirements rather than simply displaying large volumes of property information.
-</p>
+            <div class="network-card-top">
+                <div class="network-icon">B</div>
+                <small>01</small>
+            </div>
 
-<ul class="network-list">
-<li data-i18n="network2a">Investment preferences</li>
-<li data-i18n="network2b">Location requirements</li>
-<li data-i18n="network2c">Budget considerations</li>
-<li data-i18n="network2d">Property objectives</li>
-</ul>
+            <h3>Builders & Developers</h3>
 
-</div>
+            <p>
+                Development businesses seeking investors,
+                buyers, strategic partners and land opportunities.
+            </p>
 
-</div>
+        </div>
+
+
+        <div class="network-card reveal">
+
+            <div class="network-card-top">
+                <div class="network-icon">I</div>
+                <small>02</small>
+            </div>
+
+            <h3>Investors</h3>
+
+            <p>
+                Individuals and groups looking for property
+                and development-related investment possibilities.
+            </p>
+
+        </div>
+
+
+        <div class="network-card reveal">
+
+            <div class="network-card-top">
+                <div class="network-icon">L</div>
+                <small>03</small>
+            </div>
+
+            <h3>Landowners</h3>
+
+            <p>
+                Landowners interested in development,
+                partnership or suitable transaction opportunities.
+            </p>
+
+        </div>
+
+
+        <div class="network-card reveal">
+
+            <div class="network-card-top">
+                <div class="network-icon">P</div>
+                <small>04</small>
+            </div>
+
+            <h3>Property Buyers</h3>
+
+            <p>
+                Buyers who want a structured way to communicate
+                their property requirements.
+            </p>
+
+        </div>
+
+    </div>
 
 </div>
 
 </section>
 
 
-<!-- =========================================================
+<!-- =====================================================
      SERVICES
-========================================================= -->
+     ===================================================== -->
 
-<section class="section" id="services">
+<section class="services" id="services">
 
 <div class="container">
 
-<div class="section-head reveal">
+    <div class="reveal">
 
-<div class="eyebrow" data-i18n="servicesEyebrow">
-Services
-</div>
+        <div class="section-label">Services</div>
 
-<h2 data-i18n="servicesTitle">
-Professional support across the property relationship cycle.
-</h2>
+        <h2 class="section-title">
+            Built around
+            <span>connections.</span>
+        </h2>
 
-</div>
-
-<div class="services">
-
-<div class="service reveal">
-
-<div class="service-icon">◆</div>
-
-<h3 data-i18n="service1">
-Builder & Developer Advisory
-</h3>
-
-<p data-i18n="service1Text">
-Support in structuring requirements, identifying relevant stakeholders and developing strategic property relationships.
-</p>
-
-</div>
+    </div>
 
 
-<div class="service reveal">
+    <div class="services-grid">
 
-<div class="service-icon">◇</div>
+        <div class="service reveal">
+            <span>01</span>
+            <div>
+                <h3>Builder Connections</h3>
+                <p>Structured introductions with potentially relevant investors, buyers and partners.</p>
+            </div>
+        </div>
 
-<h3 data-i18n="service2">
-Investor Connections
-</h3>
+        <div class="service reveal">
+            <span>02</span>
+            <div>
+                <h3>Investor Connections</h3>
+                <p>Requirement-focused discovery of potentially suitable opportunities.</p>
+            </div>
+        </div>
 
-<p data-i18n="service2Text">
-Requirement-focused introductions between relevant development opportunities and potential investors.
-</p>
+        <div class="service reveal">
+            <span>03</span>
+            <div>
+                <h3>Property Requirement Matching</h3>
+                <p>Organizing buyer requirements around location, property type, budget and timeline.</p>
+            </div>
+        </div>
 
-</div>
+        <div class="service reveal">
+            <span>04</span>
+            <div>
+                <h3>Land Partnerships</h3>
+                <p>Facilitating relevant conversations between landowners and development participants.</p>
+            </div>
+        </div>
 
+        <div class="service reveal">
+            <span>05</span>
+            <div>
+                <h3>Strategic Introductions</h3>
+                <p>Connecting participants where their objectives appear commercially relevant.</p>
+            </div>
+        </div>
 
-<div class="service reveal">
+        <div class="service reveal">
+            <span>06</span>
+            <div>
+                <h3>AI-Assisted Guidance</h3>
+                <p>Technology-assisted workflows designed to improve information discovery and organization.</p>
+            </div>
+        </div>
 
-<div class="service-icon">○</div>
-
-<h3 data-i18n="service3">
-Land Partnership Networking
-</h3>
-
-<p data-i18n="service3Text">
-Connecting suitable landowners with developers and other relevant development stakeholders.
-</p>
-
-</div>
-
-
-<div class="service reveal">
-
-<div class="service-icon">✦</div>
-
-<h3 data-i18n="service4">
-Property Buyer Connections
-</h3>
-
-<p data-i18n="service4Text">
-Understanding buyer requirements and helping identify potentially relevant property conversations.
-</p>
-
-</div>
-
-
-<div class="service reveal">
-
-<div class="service-icon">↗</div>
-
-<h3 data-i18n="service5">
-Requirement Analysis
-</h3>
-
-<p data-i18n="service5Text">
-Structuring location, property type, budget, timeline and objective information for better matching.
-</p>
-
-</div>
-
-
-<div class="service reveal">
-
-<div class="service-icon">∞</div>
-
-<h3 data-i18n="service6">
-Relationship Coordination
-</h3>
-
-<p data-i18n="service6Text">
-Professional follow-up and coordination designed to keep relevant conversations moving.
-</p>
-
-</div>
-
-</div>
+    </div>
 
 </div>
 
 </section>
 
 
-<!-- =========================================================
+<!-- =====================================================
      MATCHING INTELLIGENCE
-========================================================= -->
+     ===================================================== -->
 
-<section class="section intelligence">
+<section class="intelligence">
 
-<div class="container">
+<div class="container intelligence-grid">
 
-<div class="section-head reveal">
+    <div class="reveal">
 
-<div class="eyebrow" data-i18n="intelEyebrow">
-Matching Intelligence
-</div>
+        <div class="section-label">Matching Intelligence</div>
 
-<h2 data-i18n="intelTitle">
-A smarter framework for relevant introductions.
-</h2>
+        <h2 class="section-title">
+            Match the
+            <span>requirement.</span>
+        </h2>
 
-<p data-i18n="intelIntro">
-PRANAURA is designed to move beyond simple contact collection by structuring requirements into meaningful matching signals.
-</p>
+        <p class="section-intro">
+            PRANAURA's matching approach considers multiple
+            requirement signals instead of relying on a single
+            property category.
+        </p>
 
-</div>
 
-<div class="intel-grid">
+        <div class="intel-list">
 
-<div class="intel reveal">
-<span>01</span>
-<h3 data-i18n="intel1">Normalize</h3>
-<p data-i18n="intel1Text">
-Turn different stakeholder requirements into structured information.
-</p>
-</div>
+            <div class="intel-row">
+                <b>01</b>
+                <div>
+                    <strong>Role</strong>
+                    <span>Builder, investor, landowner or buyer.</span>
+                </div>
+            </div>
 
-<div class="intel reveal">
-<span>02</span>
-<h3 data-i18n="intel2">Score</h3>
-<p data-i18n="intel2Text">
-Evaluate compatibility across role, location, property type, budget and timing.
-</p>
-</div>
+            <div class="intel-row">
+                <b>02</b>
+                <div>
+                    <strong>Location</strong>
+                    <span>Preferred geography and project location.</span>
+                </div>
+            </div>
 
-<div class="intel reveal">
-<span>03</span>
-<h3 data-i18n="intel3">Explain</h3>
-<p data-i18n="intel3Text">
-Show why a requirement may be relevant rather than producing an unexplained result.
-</p>
-</div>
+            <div class="intel-row">
+                <b>03</b>
+                <div>
+                    <strong>Property Type</strong>
+                    <span>Residential, land, commercial and other categories.</span>
+                </div>
+            </div>
 
-<div class="intel reveal">
-<span>04</span>
-<h3 data-i18n="intel4">Connect</h3>
-<p data-i18n="intel4Text">
-Move suitable matches toward a professional conversation.
-</p>
-</div>
+            <div class="intel-row">
+                <b>04</b>
+                <div>
+                    <strong>Budget & Timeline</strong>
+                    <span>Investment range and expected decision horizon.</span>
+                </div>
+            </div>
 
-</div>
+        </div>
+
+    </div>
+
+
+    <div class="intel-box reveal">
+
+        <div class="intel-circle">
+            <strong>SMART<br>MATCH</strong>
+        </div>
+
+        <p style="text-align:center;margin-top:30px;color:rgba(255,255,255,.62);font-size:12px;">
+            Requirement signals → structured profile → relevance assessment → introduction
+        </p>
+
+    </div>
 
 </div>
 
 </section>
 
 
-<!-- =========================================================
-     SMART MATCH
-========================================================= -->
+<!-- =====================================================
+     SMART MATCH FORM
+     ===================================================== -->
 
-<section class="section match" id="match">
+<section id="match">
 
-<div class="container">
+<div class="container match-grid">
 
-<div class="match-layout">
+    <div class="match-info reveal">
 
-<div class="match-info reveal">
+        <div class="section-label">Smart Match</div>
 
-<div class="eyebrow" data-i18n="matchEyebrow">
-Smart Match
-</div>
+        <h2 class="section-title">
+            Tell us what
+            <span>you need.</span>
+        </h2>
 
-<h2 data-i18n="matchTitle">
-Start with your requirement.
-</h2>
+        <p class="section-intro">
+            Submit your requirement and PRANAURA can organize
+            the information for a more focused conversation.
+        </p>
 
-<p data-i18n="matchText">
-Tell PRANAURA what you are looking for. Your information is used to understand potential relevance and prepare a structured connection.
-</p>
+        <div style="margin-top:30px">
 
-<div class="match-note" data-i18n="matchNote">
-Your submission does not represent a confirmed property, investment opportunity or transaction. PRANAURA will review the requirement and contact you where relevant.
-</div>
+            <p style="font-size:12px;color:var(--muted);margin-bottom:12px;">
+                ✓ Requirement-focused intake
+            </p>
 
-</div>
+            <p style="font-size:12px;color:var(--muted);margin-bottom:12px;">
+                ✓ Location and property preference
+            </p>
 
+            <p style="font-size:12px;color:var(--muted);margin-bottom:12px;">
+                ✓ Budget and timeline consideration
+            </p>
 
-<div class="form-card reveal">
+            <p style="font-size:12px;color:var(--muted);">
+                ✓ Human follow-through
+            </p>
 
-<form id="matchForm">
+        </div>
 
-<div class="form-grid">
+    </div>
 
-<div class="field">
 
-<label data-i18n="roleLabel">Your Role</label>
+    <form class="match-form reveal" id="matchForm">
 
-<select id="role" required>
+        <div class="form-grid">
 
-<option value="" data-i18n="choose">Choose</option>
-<option>Builder / Developer</option>
-<option>Landowner</option>
-<option>Investor</option>
-<option>Property Buyer</option>
+            <div class="field">
+                <label>Your Role</label>
 
-</select>
+                <select id="role" required>
+                    <option value="">Select</option>
+                    <option>Builder / Developer</option>
+                    <option>Landowner</option>
+                    <option>Investor</option>
+                    <option>Property Buyer</option>
+                    <option>Strategic Partner</option>
+                </select>
+            </div>
 
-</div>
 
+            <div class="field">
+                <label>Preferred Location</label>
 
-<div class="field">
+                <input
+                    id="location"
+                    type="text"
+                    placeholder="e.g. Mysuru"
+                    required>
+            </div>
 
-<label data-i18n="locationLabel">Preferred Location</label>
 
-<input id="location" required placeholder="e.g. Mysuru">
+            <div class="field">
+                <label>Property Type</label>
 
-</div>
+                <select id="propertyType" required>
+                    <option value="">Select</option>
+                    <option>Residential</option>
+                    <option>Plots / Land</option>
+                    <option>Commercial</option>
+                    <option>Development Land</option>
+                    <option>Investment Opportunity</option>
+                    <option>Other</option>
+                </select>
+            </div>
 
 
-<div class="field">
+            <div class="field">
+                <label>Budget / Investment Range</label>
 
-<label data-i18n="typeLabel">Property Type</label>
+                <input
+                    id="budget"
+                    type="text"
+                    placeholder="e.g. ₹50 Lakhs – ₹1 Crore"
+                    required>
+            </div>
 
-<select id="propertyType" required>
 
-<option value="">Choose</option>
-<option>Residential</option>
-<option>Commercial</option>
-<option>Plots / Land</option>
-<option>Development Project</option>
-<option>Joint Development</option>
-<option>Other</option>
+            <div class="field">
+                <label>Timeline</label>
 
-</select>
+                <select id="timeline" required>
+                    <option value="">Select</option>
+                    <option>Immediate</option>
+                    <option>Within 1 Month</option>
+                    <option>1–3 Months</option>
+                    <option>3–6 Months</option>
+                    <option>6+ Months</option>
+                    <option>Exploring</option>
+                </select>
+            </div>
 
-</div>
 
+            <div class="field">
+                <label>Phone / WhatsApp</label>
 
-<div class="field">
+                <input
+                    id="phone"
+                    type="tel"
+                    placeholder="+91"
+                    required>
+            </div>
 
-<label data-i18n="budgetLabel">Budget / Investment Range</label>
 
-<input id="budget" placeholder="e.g. ₹50 Lakh – ₹1 Crore">
+            <div class="field full">
 
-</div>
+                <label>Requirement Details</label>
 
+                <textarea
+                    id="requirement"
+                    placeholder="Tell us briefly what you are looking for..."
+                    required></textarea>
 
-<div class="field">
+            </div>
 
-<label data-i18n="timelineLabel">Timeline</label>
+        </div>
 
-<select id="timeline">
 
-<option>Immediate</option>
-<option>1–3 Months</option>
-<option>3–6 Months</option>
-<option>6–12 Months</option>
-<option>Exploring</option>
+        <div class="form-actions">
 
-</select>
+            <button type="submit" class="btn btn-primary">
+                Submit Requirement
+            </button>
 
-</div>
+            <button type="button" class="btn btn-secondary" id="whatsappMatch">
+                Send via WhatsApp
+            </button>
 
+        </div>
 
-<div class="field">
 
-<label data-i18n="phoneLabel">Phone / WhatsApp</label>
+        <div class="form-note">
+            Please do not submit passwords, financial credentials,
+            identity documents or other sensitive information through this form.
+        </div>
 
-<input id="phone" type="tel" required placeholder="+91">
 
-</div>
+        <div class="match-result" id="matchResult"></div>
 
-
-<div class="field full">
-
-<label data-i18n="requirementLabel">
-Requirement
-</label>
-
-<textarea
-id="requirement"
-placeholder="Tell us briefly what you are looking for..."
-required></textarea>
-
-</div>
-
-</div>
-
-
-<label class="consent">
-
-<input type="checkbox" id="formConsent" required>
-
-<span data-i18n="formConsent">
-I understand that PRANAURA will use the information provided to evaluate and respond to my enquiry.
-</span>
-
-</label>
-
-
-<div class="form-submit">
-
-<button class="btn btn-primary" type="submit" data-i18n="submitMatch">
-Analyse My Requirement
-</button>
-
-</div>
-
-</form>
-
-
-<div class="match-result" id="matchResult">
-
-<div class="result-top">
-
-<span data-i18n="compatibility">
-Initial Compatibility
-</span>
-
-<strong id="scoreText">0%</strong>
-
-</div>
-
-<div class="bar">
-<div class="bar-fill" id="scoreBar"></div>
-</div>
-
-<p id="scoreMessage"></p>
-
-<a
-id="matchWhatsapp"
-class="btn btn-gold"
-target="_blank"
-rel="noopener"
-style="margin-top:15px"
-data-i18n="continueWhatsapp">
-Continue on WhatsApp
-</a>
-
-</div>
-
-</div>
-
-</div>
+    </form>
 
 </div>
 
 </section>
 
 
-<!-- =========================================================
+<!-- =====================================================
      AI
-========================================================= -->
+     ===================================================== -->
 
-<section class="section ai" id="ai">
+<section class="ai-section" id="ai">
 
-<div class="container">
+<div class="container ai-grid">
 
-<div class="ai-grid">
+    <div class="reveal">
 
-<div class="ai-copy reveal">
+        <div class="section-label">PRANAURA AI</div>
 
-<div class="eyebrow" data-i18n="aiEyebrow">
-PRANAURA AI
-</div>
+        <h2 class="section-title">
+            Technology that
+            <span>supports relationships.</span>
+        </h2>
 
-<h2 data-i18n="aiTitle">
-Intelligent assistance for the property ecosystem.
-</h2>
+        <p class="section-intro">
+            PRANAURA is being designed with AI-assisted workflows
+            to help organize requirements, answer common questions
+            and support smarter information discovery.
+        </p>
 
-<p data-i18n="aiText">
-The PRANAURA AI layer is designed to assist with property requirements, stakeholder questions, matching workflows and structured information.
-</p>
+        <div style="margin-top:30px">
 
-<div class="ai-points">
+            <p style="font-size:12px;color:var(--muted);margin-bottom:12px;">
+                ✓ Requirement understanding
+            </p>
 
-<div class="ai-point">
-<b>01</b>
-<p data-i18n="ai1">Requirement understanding and categorization.</p>
-</div>
+            <p style="font-size:12px;color:var(--muted);margin-bottom:12px;">
+                ✓ Property and service guidance
+            </p>
 
-<div class="ai-point">
-<b>02</b>
-<p data-i18n="ai2">Property and stakeholder matching assistance.</p>
-</div>
+            <p style="font-size:12px;color:var(--muted);margin-bottom:12px;">
+                ✓ Structured information retrieval
+            </p>
 
-<div class="ai-point">
-<b>03</b>
-<p data-i18n="ai3">Natural-language responses to common questions.</p>
-</div>
+            <p style="font-size:12px;color:var(--muted);">
+                ✓ Future private AI knowledge system
+            </p>
 
-<div class="ai-point">
-<b>04</b>
-<p data-i18n="ai4">Designed to connect with a private AI backend such as Ollama and Qwen when deployed securely.</p>
-</div>
+        </div>
 
-</div>
-
-</div>
+    </div>
 
 
-<div class="chat reveal">
+    <div class="ai-interface reveal">
 
-<div class="chat-head">
+        <div class="ai-head">
 
-<div class="chat-title">
+            <strong>PRANAURA AI</strong>
 
-<div class="orb"></div>
+            <div class="ai-status">
+                <span class="ai-dot"></span>
+                Assistant
+            </div>
 
-<div>
-<strong>PRANAURA AI</strong>
-<span>Assistant</span>
-</div>
-
-</div>
-
-</div>
+        </div>
 
 
-<div class="messages" id="messages">
+        <div class="ai-messages" id="aiMessages">
 
-<div class="msg bot" data-i18n="aiWelcome">
-Hello. I am the PRANAURA AI assistant. I can help you understand our services, matching process and connection options.
-</div>
+            <div class="message bot">
+                Hello. I am the PRANAURA AI assistant.
+                Ask me about PRANAURA, services, Smart Match,
+                builders, investors, land partnerships or property requirements.
+            </div>
 
-</div>
+        </div>
 
 
-<div class="chat-input">
+        <form class="ai-input" id="aiForm">
 
-<input
-id="chatInput"
-placeholder="Ask PRANAURA..."
-aria-label="Ask PRANAURA AI">
+            <input
+                id="aiInput"
+                type="text"
+                placeholder="Ask PRANAURA AI..."
+                autocomplete="off">
 
-<button class="send" id="sendBtn">
+            <button type="submit">➤</button>
 
-➜
+        </form>
 
-</button>
-
-</div>
-
-<div class="ai-note" data-i18n="aiNote">
-AI responses shown here are a frontend demonstration. Production deployment should connect to a secure server-side AI service.
-</div>
-
-</div>
-
-</div>
+    </div>
 
 </div>
 
 </section>
 
 
-<!-- =========================================================
+<!-- =====================================================
      FOUNDER
-========================================================= -->
+     ===================================================== -->
 
-<section class="section">
+<section class="founder">
 
 <div class="container">
 
-<div class="founder-card reveal">
+    <div class="founder-box reveal">
 
-<div class="founder-role" data-i18n="founderRole">
-Founder & Networking Lead
-</div>
+        <div class="section-label">Founder</div>
 
-<h2>
-Pranathi H.S.
-</h2>
+        <div class="founder-name">
+            Pranathi H.S.
+        </div>
 
-<p data-i18n="founderText">
-PRANAURA was created with the vision of bringing a more organized, professional and technology-enabled approach to real estate networking. The focus is on meaningful relationships, structured requirements and creating opportunities for stakeholders who can genuinely benefit from working together.
-</p>
+        <div class="founder-role">
+            Founder & Networking Lead
+        </div>
 
-</div>
+        <p class="founder-text">
+            PRANAURA is built around a simple idea:
+            real estate relationships can be made more structured,
+            professional and technology-enabled without losing
+            the human connection that makes them valuable.
+        </p>
+
+        <p class="founder-text" style="margin-top:15px;">
+            The initial focus is on building a trusted network
+            across Mysuru and Karnataka and creating a platform
+            where relevant participants can discover one another
+            through clearer requirements and better communication.
+        </p>
+
+    </div>
 
 </div>
 
 </section>
 
 
-<!-- =========================================================
+<!-- =====================================================
      TRUST
-========================================================= -->
+     ===================================================== -->
 
-<section class="section" id="trust">
+<section class="trust" id="trust">
 
 <div class="container">
 
-<div class="section-head reveal">
+    <div class="reveal">
 
-<div class="eyebrow" data-i18n="trustEyebrow">
-Trust & Transparency
-</div>
+        <div class="section-label">Trust & Information</div>
 
-<h2 data-i18n="trustTitle">
-Built around clarity, not exaggerated promises.
-</h2>
+        <h2 class="section-title">
+            Built with
+            <span>clarity.</span>
+        </h2>
 
-</div>
+        <p class="section-intro">
+            Professional networking requires transparency.
+            PRANAURA aims to keep expectations clear from the beginning.
+        </p>
 
-<div class="trust-grid">
-
-<div class="trust-card reveal">
-
-<div class="trust-symbol">✓</div>
-
-<h3 data-i18n="trust1">
-Clear Role
-</h3>
-
-<p data-i18n="trust1Text">
-PRANAURA operates as an advisory and networking platform and does not claim ownership of properties simply because they are discussed through the network.
-</p>
-
-</div>
+    </div>
 
 
-<div class="trust-card reveal">
+    <div class="trust-cards">
 
-<div class="trust-symbol">◇</div>
+        <div class="trust-card reveal">
+            <h3>Requirement First</h3>
+            <p>
+                We start by understanding what each participant actually needs.
+            </p>
+        </div>
 
-<h3 data-i18n="trust2">
-Relevant Introductions
-</h3>
+        <div class="trust-card reveal">
+            <h3>Relevant Introductions</h3>
+            <p>
+                Introductions are intended to be based on apparent relevance,
+                not simply volume.
+            </p>
+        </div>
 
-<p data-i18n="trust2Text">
-The objective is to focus on potential relevance instead of presenting every enquiry as a guaranteed match.
-</p>
+        <div class="trust-card reveal">
+            <h3>Information Care</h3>
+            <p>
+                Avoid submitting passwords, financial credentials
+                or sensitive identity documents through public forms.
+            </p>
+        </div>
 
-</div>
+        <div class="trust-card reveal">
+            <h3>Clear Disclaimer</h3>
+            <p>
+                PRANAURA facilitates introductions and guidance.
+                Participants remain responsible for their own due diligence.
+            </p>
+        </div>
 
-
-<div class="trust-card reveal">
-
-<div class="trust-symbol">∞</div>
-
-<h3 data-i18n="trust3">
-Professional Relationships
-</h3>
-
-<p data-i18n="trust3Text">
-Communication, follow-up and transparency are central to the PRANAURA approach.
-</p>
-
-</div>
-
-</div>
+    </div>
 
 </div>
 
 </section>
 
 
-<!-- =========================================================
+<!-- =====================================================
      FAQ
-========================================================= -->
+     ===================================================== -->
 
-<section class="section" id="faq">
+<section id="faq">
 
 <div class="container">
 
-<div class="section-head reveal">
+    <div class="reveal">
 
-<div class="eyebrow" data-i18n="faqEyebrow">
-Frequently Asked Questions
-</div>
+        <div class="section-label">FAQ</div>
 
-<h2 data-i18n="faqTitle">
-Questions before you connect?
-</h2>
+        <h2 class="section-title">
+            Questions,
+            <span>answered.</span>
+        </h2>
 
-</div>
+    </div>
 
 
-<div class="faq">
+    <div class="faq-wrap">
 
-<div class="faq-item">
+        <div class="faq">
 
-<button class="faq-question">
+            <button>
+                What is PRANAURA?
+                <span>+</span>
+            </button>
 
-<span data-i18n="faq1">
-What exactly is PRANAURA?
-</span>
+            <div class="faq-answer">
+                <p>
+                    PRANAURA is a real estate advisory and networking
+                    platform designed to connect builders, developers,
+                    landowners, investors and property buyers through
+                    structured requirements and relevant introductions.
+                </p>
+            </div>
 
-<span class="faq-plus">+</span>
+        </div>
 
-</button>
 
-<div class="faq-answer">
+        <div class="faq">
 
-<p data-i18n="faq1a">
-PRANAURA is a real estate advisory and networking platform connecting builders, developers, landowners, investors and property buyers.
-</p>
+            <button>
+                Does PRANAURA own properties?
+                <span>+</span>
+            </button>
 
-</div>
+            <div class="faq-answer">
+                <p>
+                    No. PRANAURA does not own the properties it connects
+                    participants around. Its model focuses on advisory,
+                    networking, introductions and transaction-related
+                    arrangements where applicable.
+                </p>
+            </div>
 
-</div>
+        </div>
 
 
-<div class="faq-item">
+        <div class="faq">
 
-<button class="faq-question">
+            <button>
+                How does Smart Match work?
+                <span>+</span>
+            </button>
 
-<span data-i18n="faq2">
-Does PRANAURA own properties?
-</span>
+            <div class="faq-answer">
+                <p>
+                    Smart Match collects requirement information such as
+                    participant role, location, property type, budget and
+                    timeline. This information can be used to assess
+                    potentially relevant connections.
+                </p>
+            </div>
 
-<span class="faq-plus">+</span>
+        </div>
 
-</button>
 
-<div class="faq-answer">
+        <div class="faq">
 
-<p data-i18n="faq2a">
-No. PRANAURA does not represent itself as the owner of properties simply because opportunities or requirements are discussed through the network.
-</p>
+            <button>
+                Can builders work with PRANAURA?
+                <span>+</span>
+            </button>
 
-</div>
+            <div class="faq-answer">
+                <p>
+                    Yes. Builders and developers can connect with PRANAURA
+                    regarding investor connections, buyer requirements,
+                    land partnerships and strategic introductions.
+                </p>
+            </div>
 
-</div>
+        </div>
 
 
-<div class="faq-item">
+        <div class="faq">
 
-<button class="faq-question">
+            <button>
+                Can investors register their requirements?
+                <span>+</span>
+            </button>
 
-<span data-i18n="faq3">
-How does Smart Match work?
-</span>
+            <div class="faq-answer">
+                <p>
+                    Yes. Investors can submit their preferred locations,
+                    property categories, investment range and timeline
+                    through the Smart Match form.
+                </p>
+            </div>
 
-<span class="faq-plus">+</span>
+        </div>
 
-</button>
 
-<div class="faq-answer">
+        <div class="faq">
 
-<p data-i18n="faq3a">
-The form structures your role, location, property type, budget, timeline and requirement. A preliminary compatibility score is generated to help organize the enquiry. It is not a guarantee of a transaction or property availability.
-</p>
+            <button>
+                Is every opportunity verified?
+                <span>+</span>
+            </button>
 
-</div>
+            <div class="faq-answer">
+                <p>
+                    PRANAURA intends to introduce structured verification
+                    processes as its operational network develops.
+                    Participants should independently verify property,
+                    ownership, approvals, documentation and commercial terms
+                    before proceeding with any transaction.
+                </p>
+            </div>
 
-</div>
+        </div>
 
 
-<div class="faq-item">
+        <div class="faq">
 
-<button class="faq-question">
+            <button>
+                Does PRANAURA guarantee investment returns?
+                <span>+</span>
+            </button>
 
-<span data-i18n="faq4">
-Can I approach PRANAURA as a builder?
-</span>
+            <div class="faq-answer">
+                <p>
+                    No. PRANAURA does not guarantee investment returns,
+                    appreciation, profitability or transaction outcomes.
+                    Participants are responsible for their own decisions
+                    and due diligence.
+                </p>
+            </div>
 
-<span class="faq-plus">+</span>
+        </div>
 
-</button>
 
-<div class="faq-answer">
+        <div class="faq">
 
-<p data-i18n="faq4a">
-Yes. Builders and developers can use the Smart Match form or contact PRANAURA directly to discuss their requirements.
-</p>
+            <button>
+                Where does PRANAURA operate?
+                <span>+</span>
+            </button>
 
-</div>
+            <div class="faq-answer">
+                <p>
+                    PRANAURA's initial local focus is Mysuru and Karnataka,
+                    with the intention of developing a broader network over time.
+                </p>
+            </div>
 
-</div>
+        </div>
 
-
-<div class="faq-item">
-
-<button class="faq-question">
-
-<span data-i18n="faq5">
-Can investors and buyers submit requirements?
-</span>
-
-<span class="faq-plus">+</span>
-
-</button>
-
-<div class="faq-answer">
-
-<p data-i18n="faq5a">
-Yes. Investors and property buyers can submit their preferred locations, property types, budgets, timelines and objectives.
-</p>
-
-</div>
-
-</div>
-
-
-<div class="faq-item">
-
-<button class="faq-question">
-
-<span data-i18n="faq6">
-Is the AI connected to a real AI model?
-</span>
-
-<span class="faq-plus">+</span>
-
-</button>
-
-<div class="faq-answer">
-
-<p data-i18n="faq6a">
-The public frontend includes an AI assistant interface and intelligent fallback responses. A production deployment can connect it to a secure backend running a private AI stack such as Ollama and Qwen.
-</p>
-
-</div>
-
-</div>
-
-</div>
+    </div>
 
 </div>
 
 </section>
 
 
-<!-- =========================================================
+<!-- =====================================================
      CONTACT
-========================================================= -->
+     ===================================================== -->
 
-<section class="section contact" id="contact">
+<section class="contact" id="contact">
 
-<div class="container">
+<div class="container contact-grid">
 
-<div class="contact-grid">
+    <div class="reveal">
 
-<div class="reveal">
+        <div class="section-label">Contact PRANAURA</div>
 
-<div class="eyebrow" data-i18n="contactEyebrow">
-Contact PRANAURA
-</div>
+        <h2 class="section-title">
+            Start a
+            <span>conversation.</span>
+        </h2>
 
-<h2 data-i18n="contactTitle">
-Let's build the right connection.
-</h2>
-
-<p style="margin-top:20px;font-size:12px" data-i18n="contactText">
-Whether you are a builder, landowner, investor or property buyer, start with your requirement and let us understand where PRANAURA can help.
-</p>
-
-<div class="contact-info">
-
-<div class="contact-item">
-
-<span data-i18n="phone">
-Phone / WhatsApp
-</span>
-
-<a href="tel:+919019746649">
-+91 90197 46649
-</a>
-
-</div>
+        <p class="section-intro">
+            Whether you are a builder, landowner, investor,
+            property buyer or strategic partner, tell us what
+            you are looking to achieve.
+        </p>
 
 
-<div class="contact-item">
+        <div class="contact-list">
 
-<span>Email</span>
+            <div class="contact-item">
+                <small>Phone</small>
+                <a href="tel:+919019746649">
+                    +91 90197 46649
+                </a>
+            </div>
 
-<a href="mailto:pranauraconnect@gmail.com">
-pranauraconnect@gmail.com
-</a>
+            <div class="contact-item">
+                <small>Email</small>
+                <a href="mailto:pranauraconnect@gmail.com">
+                    pranauraconnect@gmail.com
+                </a>
+            </div>
 
-</div>
+            <div class="contact-item">
+                <small>Location</small>
+                <strong>
+                    Vijayanagar, Mysuru, Karnataka, India
+                </strong>
+            </div>
 
+            <div class="contact-item">
+                <small>Instagram</small>
+                <a href="https://instagram.com/Pranaura_"
+                   target="_blank">
+                    @Pranaura_
+                </a>
+            </div>
 
-<div class="contact-item">
+        </div>
 
-<span data-i18n="location">
-Location
-</span>
-
-<strong>
-Vijayanagar, Mysuru, Karnataka, India
-</strong>
-
-</div>
-
-
-<div class="contact-item">
-
-<span>Instagram</span>
-
-<a
-href="https://instagram.com/Pranaura_"
-target="_blank"
-rel="noopener">
-@Pranaura_
-</a>
-
-</div>
-
-</div>
-
-</div>
+    </div>
 
 
-<div class="contact-box reveal">
+    <div class="contact-panel reveal">
 
-<h3 data-i18n="contactBoxTitle">
-Prefer a direct conversation?
-</h3>
+        <h3>Have a requirement?</h3>
 
-<p data-i18n="contactBoxText">
-Connect with PRANAURA on WhatsApp and briefly tell us whether you are a builder, landowner, investor or buyer.
-</p>
+        <p>
+            Use Smart Match to provide the basic details,
+            or contact PRANAURA directly through WhatsApp.
+        </p>
 
-<a
-class="btn btn-gold"
-href="https://wa.me/919019746649?text=Hello%20PRANAURA%2C%20I%20would%20like%20to%20discuss%20a%20real%20estate%20requirement."
-target="_blank"
-rel="noopener"
-data-i18n="openWhatsapp">
-Open WhatsApp
-</a>
+        <div style="margin-top:25px;display:flex;flex-wrap:wrap;gap:10px;">
 
-</div>
+            <a href="#match"
+               class="btn btn-primary"
+               style="background:#fff;color:#5a392b;border-color:#fff;">
+                Submit Requirement
+            </a>
 
-</div>
+            <a href="https://wa.me/919019746649?text=Hello%20PRANAURA%2C%20I%20would%20like%20to%20discuss%20a%20requirement."
+               target="_blank"
+               class="btn"
+               style="border-color:rgba(255,255,255,.4);color:#fff;">
+                WhatsApp PRANAURA
+            </a>
+
+        </div>
+
+    </div>
 
 </div>
 
@@ -3398,139 +2966,171 @@ Open WhatsApp
 </main>
 
 
-<!-- =========================================================
+<!-- =====================================================
      FOOTER
-========================================================= -->
+     ===================================================== -->
 
 <footer>
 
 <div class="container">
 
-<div class="footer-top">
+    <div class="footer-top">
 
-<div>
+        <div>
 
-<div class="footer-brand">
-PRANAURA
-</div>
+            <div class="footer-brand">
+                PRANAURA
+            </div>
 
-<div class="footer-tag" data-i18n="footerTag">
-Strategic Builder & Investor Partnerships
-</div>
+            <p class="footer-tag">
+                Strategic Builder & Investor Partnerships.
+                Structured relationships across the real estate ecosystem.
+            </p>
 
-</div>
-
-
-<div class="footer-links">
-
-<button onclick="openModal('privacy')">Privacy Policy</button>
-
-<button onclick="openModal('terms')">Terms of Use</button>
-
-<button onclick="openModal('disclaimer')">Disclaimer</button>
-
-<button onclick="openModal('cookies')">Cookie Information</button>
-
-</div>
-
-</div>
+        </div>
 
 
-<div class="footer-bottom">
+        <div class="footer-links">
 
-<span>
-© <span id="year"></span> PRANAURA. All rights reserved.
-</span>
+            <button onclick="openModal('privacy')">
+                Privacy
+            </button>
 
-<span data-i18n="footerNote">
-Real estate advisory & networking platform.
-</span>
+            <button onclick="openModal('terms')">
+                Terms
+            </button>
 
-</div>
+            <button onclick="openModal('disclaimer')">
+                Disclaimer
+            </button>
+
+            <button onclick="openModal('cookies')">
+                Cookie Information
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <span>
+            © <span id="year"></span> PRANAURA. All rights reserved.
+        </span>
+
+        <span>
+            Mysuru · Karnataka · India
+        </span>
+
+    </div>
 
 </div>
 
 </footer>
 
 
-<!-- =========================================================
+<!-- =====================================================
      WHATSAPP
-========================================================= -->
+     ===================================================== -->
 
-<a
-class="whatsapp"
-href="https://wa.me/919019746649?text=Hello%20PRANAURA%2C%20I%20would%20like%20to%20connect."
-target="_blank"
-rel="noopener"
-aria-label="Contact PRANAURA on WhatsApp">
+<a class="whatsapp"
+   href="https://wa.me/919019746649?text=Hello%20PRANAURA%2C%20I%20would%20like%20to%20connect."
+   target="_blank"
+   aria-label="Contact PRANAURA on WhatsApp">
 
-<svg viewBox="0 0 24 24" fill="none">
-
-<path
-fill="currentColor"
-d="M12 2.2a9.7 9.7 0 0 0-8.38 14.58L2.2 21.8l5.2-1.36A9.7 9.7 0 1 0 12 2.2Zm0 17.7a8 8 0 0 1-4.08-1.12l-.29-.17-3.09.81.83-3.01-.19-.31A8 8 0 1 1 12 19.9Zm4.38-5.97c-.24-.12-1.41-.7-1.63-.78-.22-.08-.38-.12-.54.12-.16.24-.62.78-.76.94-.14.16-.28.18-.52.06-.24-.12-1.02-.38-1.95-1.2-.72-.64-1.2-1.43-1.34-1.67-.14-.24-.02-.37.1-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.3-.74-1.78-.2-.47-.4-.41-.54-.42h-.46c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.31.98 2.47c.12.16 1.69 2.58 4.1 3.62.57.25 1.02.4 1.37.51.58.18 1.1.15 1.51.09.46-.07 1.41-.58 1.61-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28Z"/>
-
+<svg viewBox="0 0 24 24">
+    <path d="M20.52 3.48A11.78 11.78 0 0012.06 0C5.55 0 .25 5.3.25 11.81c0 2.08.54 4.11 1.57 5.9L.16 24l6.43-1.64a11.8 11.8 0 005.47 1.35h.01c6.51 0 11.81-5.3 11.81-11.81 0-3.15-1.23-6.11-3.36-8.42zM12.07 21.7h-.01a9.85 9.85 0 01-5.02-1.38l-.36-.21-3.82.98 1.02-3.72-.23-.38a9.84 9.84 0 01-1.51-5.18c0-5.43 4.42-9.85 9.86-9.85a9.8 9.8 0 016.97 2.89 9.8 9.8 0 012.88 6.97c0 5.44-4.42 9.86-9.78 9.86zm5.41-7.39c-.3-.15-1.77-.87-2.05-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.27-.47-2.42-1.5-.9-.8-1.5-1.78-1.67-2.08-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.87 1.22 3.07.15.2 2.1 3.2 5.09 4.49.71.31 1.26.5 1.69.64.71.23 1.35.2 1.86.12.57-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35z"/>
 </svg>
 
 </a>
 
 
-<!-- =========================================================
-     MODALS
-========================================================= -->
+<!-- =====================================================
+     COOKIE
+     ===================================================== -->
+
+<div class="cookie" id="cookieBanner">
+
+    <p>
+        PRANAURA uses essential website functionality.
+        By continuing to use this website, you acknowledge our
+        Privacy Policy and Cookie Information.
+    </p>
+
+    <button id="cookieAccept">
+        Accept
+    </button>
+
+</div>
+
+
+<!-- =====================================================
+     TOAST
+     ===================================================== -->
+
+<div class="toast" id="toast"></div>
+
+
+<!-- =====================================================
+     LEGAL MODALS
+     ===================================================== -->
 
 <div class="modal" id="privacy">
 
 <div class="modal-box">
 
-<div class="modal-head">
+<button class="modal-close" onclick="closeModal('privacy')">×</button>
 
-<h3>Privacy Policy</h3>
+<h2>Privacy Policy</h2>
 
-<button class="close" onclick="closeModal('privacy')">×</button>
+<p>
+PRANAURA respects the privacy of visitors and people who
+contact the business through this website.
+</p>
+
+<h3>Information We May Receive</h3>
+
+<p>
+If you voluntarily contact PRANAURA or submit the Smart Match form,
+information such as your name, phone number, email address,
+requirement details, preferred location and other information
+you choose to provide may be received.
+</p>
+
+<h3>Use of Information</h3>
+
+<p>
+Information may be used to understand your requirement,
+respond to enquiries, facilitate relevant introductions,
+communicate about services and improve PRANAURA's operations.
+</p>
+
+<h3>Information Sharing</h3>
+
+<p>
+PRANAURA does not intend to sell personal information.
+Information may be shared with relevant participants only
+where appropriate to facilitate a requested introduction,
+subject to applicable law and business practices.
+</p>
+
+<h3>Security</h3>
+
+<p>
+Reasonable measures should be used to protect information.
+However, no internet transmission or storage system can be
+guaranteed to be completely secure.
+</p>
+
+<h3>Contact</h3>
+
+<p>
+For privacy-related questions, contact
+pranauraconnect@gmail.com.
+</p>
 
 </div>
-
-<div class="modal-content">
-
-<h4>Information We May Receive</h4>
-
-<p>
-When you voluntarily submit an enquiry, PRANAURA may receive information such as your name, phone number, email address, role, location preferences, property requirements and other information you choose to provide.
-</p>
-
-<h4>Purpose</h4>
-
-<p>
-Information may be used to understand your enquiry, respond to you, evaluate potential relevance and facilitate communication connected with your request.
-</p>
-
-<h4>Data Responsibility</h4>
-
-<p>
-PRANAURA should use reasonable organizational and technical measures to protect information. Production systems collecting sensitive information should be deployed with appropriate security controls.
-</p>
-
-<h4>Third Parties</h4>
-
-<p>
-Information should not be represented as being shared with third parties except where necessary for the requested service, legally required, or otherwise appropriately disclosed.
-</p>
-
-<h4>Your Choice</h4>
-
-<p>
-You may contact PRANAURA regarding questions about information you have voluntarily submitted.
-</p>
-
-<p>
-This website privacy text is a general business template and should be reviewed and adapted with qualified legal advice before commercial launch.
-</p>
-
-</div>
-
-</div>
-
 </div>
 
 
@@ -3538,50 +3138,49 @@ This website privacy text is a general business template and should be reviewed 
 
 <div class="modal-box">
 
-<div class="modal-head">
+<button class="modal-close" onclick="closeModal('terms')">×</button>
 
-<h3>Terms of Use</h3>
+<h2>Terms of Use</h2>
 
-<button class="close" onclick="closeModal('terms')">×</button>
+<h3>Website Purpose</h3>
+
+<p>
+This website provides information about PRANAURA's real estate
+advisory and networking activities.
+</p>
+
+<h3>Introductions</h3>
+
+<p>
+PRANAURA may facilitate introductions between participants.
+An introduction does not constitute a guarantee that a transaction
+will occur or that a participant or opportunity is suitable.
+</p>
+
+<h3>User Responsibility</h3>
+
+<p>
+Users are responsible for the accuracy of information they provide
+and for conducting appropriate independent due diligence before
+entering into any transaction.
+</p>
+
+<h3>No Guarantee</h3>
+
+<p>
+PRANAURA does not guarantee property appreciation, investment returns,
+profitability, approvals, ownership status, transaction completion
+or any particular commercial outcome.
+</p>
+
+<h3>Changes</h3>
+
+<p>
+PRANAURA may modify website content, services or these terms
+as its business develops.
+</p>
 
 </div>
-
-<div class="modal-content">
-
-<h4>Platform Role</h4>
-
-<p>
-PRANAURA provides real estate advisory, networking and introduction-oriented services. PRANAURA does not automatically become the owner, seller, developer or legal representative of any property or stakeholder mentioned through the platform.
-</p>
-
-<h4>No Guaranteed Transaction</h4>
-
-<p>
-Submitting a requirement, receiving a compatibility score or communicating with PRANAURA does not guarantee a property, investment, partnership, booking, sale, purchase or transaction.
-</p>
-
-<h4>Information Accuracy</h4>
-
-<p>
-Users are responsible for providing accurate information. Property-related information should be independently verified before financial or contractual decisions are made.
-</p>
-
-<h4>Professional Advice</h4>
-
-<p>
-The website should not be treated as a substitute for legal, financial, tax, valuation, architectural or other professional advice.
-</p>
-
-<h4>Commercial Arrangements</h4>
-
-<p>
-Any advisory, referral, commission or other commercial arrangement should be separately documented and agreed by the relevant parties.
-</p>
-
-</div>
-
-</div>
-
 </div>
 
 
@@ -3589,44 +3188,43 @@ Any advisory, referral, commission or other commercial arrangement should be sep
 
 <div class="modal-box">
 
-<div class="modal-head">
+<button class="modal-close" onclick="closeModal('disclaimer')">×</button>
 
-<h3>Disclaimer</h3>
+<h2>Disclaimer</h2>
 
-<button class="close" onclick="closeModal('disclaimer')">×</button>
+<p>
+PRANAURA operates as a real estate advisory and networking platform.
+It does not represent that every property, participant,
+document or opportunity connected through the network has been
+independently verified unless explicitly stated.
+</p>
+
+<h3>Independent Due Diligence</h3>
+
+<p>
+Before making any financial or property decision, users should
+independently verify ownership, title, approvals, permits,
+encumbrances, documentation, pricing, legal status and other
+relevant matters through qualified professionals.
+</p>
+
+<h3>Investment Risk</h3>
+
+<p>
+Real estate and investment decisions involve risks.
+PRANAURA does not guarantee returns, appreciation, liquidity
+or profitability.
+</p>
+
+<h3>Professional Advice</h3>
+
+<p>
+Information on this website should not be treated as legal,
+tax, financial or investment advice.
+Consult appropriately qualified professionals when necessary.
+</p>
 
 </div>
-
-<div class="modal-content">
-
-<h4>General Information</h4>
-
-<p>
-Information on this website is provided for general informational and networking purposes.
-</p>
-
-<h4>Property Verification</h4>
-
-<p>
-A property, project, land parcel, developer or opportunity should not be considered verified merely because it is discussed through PRANAURA.
-</p>
-
-<h4>Independent Due Diligence</h4>
-
-<p>
-Users should independently verify title, approvals, ownership, development permissions, financial information, contractual terms and other relevant matters before entering into any transaction.
-</p>
-
-<h4>AI</h4>
-
-<p>
-AI-generated responses may be incomplete or inaccurate and should not be treated as professional advice or as confirmation of property facts.
-</p>
-
-</div>
-
-</div>
-
 </div>
 
 
@@ -3634,67 +3232,33 @@ AI-generated responses may be incomplete or inaccurate and should not be treated
 
 <div class="modal-box">
 
-<div class="modal-head">
+<button class="modal-close" onclick="closeModal('cookies')">×</button>
 
-<h3>Cookie Information</h3>
+<h2>Cookie Information</h2>
 
-<button class="close" onclick="closeModal('cookies')">×</button>
-
-</div>
-
-<div class="modal-content">
-
-<h4>Basic Website Storage</h4>
+<h3>What Are Cookies?</h3>
 
 <p>
-This website may use limited browser storage for preferences such as language, theme and consent status.
+Cookies are small pieces of information stored by a website
+in a visitor's browser.
 </p>
 
-<h4>Analytics</h4>
+<h3>PRANAURA Website</h3>
 
 <p>
-If analytics services are added in the future, the website's privacy and cookie information should be updated accordingly.
+This website may use browser storage for preferences such as
+theme settings, language selection and consent status.
 </p>
 
-<h4>Your Choice</h4>
+<h3>Third-Party Services</h3>
 
 <p>
-You can clear browser storage through your browser settings. Additional consent mechanisms may be required depending on the services deployed on the production website.
+If analytics, embedded services or other third-party tools
+are introduced in the future, their respective privacy and
+cookie practices may also apply.
 </p>
 
 </div>
-
-</div>
-
-</div>
-
-
-<!-- =========================================================
-     COOKIE BANNER
-========================================================= -->
-
-<div class="cookie" id="cookie">
-
-<div class="cookie-layout">
-
-<p data-i18n="cookieText">
-PRANAURA may use limited browser storage for preferences such as language, theme and consent status.
-</p>
-
-<div class="cookie-actions">
-
-<button class="btn btn-outline" onclick="openModal('cookies')" data-i18n="learn">
-Learn More
-</button>
-
-<button class="btn btn-primary" id="acceptCookie" data-i18n="accept">
-Accept
-</button>
-
-</div>
-
-</div>
-
 </div>
 
 
@@ -3702,335 +3266,522 @@ Accept
 
 /* =========================================================
    PRANAURA JAVASCRIPT
-========================================================= */
+   ========================================================= */
 
-const AI_BACKEND_URL = "";
-
-/* =========================================================
+/* -------------------------
    YEAR
-========================================================= */
+   ------------------------- */
 
-document.getElementById("year").textContent = new Date().getFullYear();
-
-
-/* =========================================================
-   HEADER SCROLL
-========================================================= */
-
-const header = document.getElementById("header");
-
-window.addEventListener("scroll",()=>{
-
-    if(window.scrollY > 40){
-        header.classList.add("scrolled");
-    }else{
-        header.classList.remove("scrolled");
-    }
-
-});
+document.getElementById("year").textContent =
+    new Date().getFullYear();
 
 
-/* =========================================================
+/* -------------------------
    MOBILE MENU
-========================================================= */
+   ------------------------- */
 
-const mobileBtn = document.getElementById("mobileBtn");
-const navlinks = document.getElementById("navlinks");
+const menuBtn = document.getElementById("menuBtn");
+const navLinks = document.getElementById("navLinks");
 
-mobileBtn.addEventListener("click",()=>{
-
-    navlinks.classList.toggle("open");
-
+menuBtn.addEventListener("click", () => {
+    navLinks.classList.toggle("open");
 });
 
-document.querySelectorAll(".navlinks a").forEach(link=>{
+document.querySelectorAll(".nav-links a").forEach(link => {
 
-    link.addEventListener("click",()=>{
-        navlinks.classList.remove("open");
+    link.addEventListener("click", () => {
+        navLinks.classList.remove("open");
     });
 
 });
 
 
-/* =========================================================
+/* -------------------------
    DARK MODE
-========================================================= */
+   ------------------------- */
 
 const themeBtn = document.getElementById("themeBtn");
 
-if(localStorage.getItem("pranauraTheme")==="dark"){
+const savedTheme =
+    localStorage.getItem("pranauraTheme");
+
+if(savedTheme === "dark"){
     document.body.classList.add("dark");
+    themeBtn.textContent = "☀";
 }
 
-themeBtn.addEventListener("click",()=>{
+themeBtn.addEventListener("click", () => {
 
     document.body.classList.toggle("dark");
 
+    const dark =
+        document.body.classList.contains("dark");
+
     localStorage.setItem(
         "pranauraTheme",
-        document.body.classList.contains("dark") ? "dark" : "light"
+        dark ? "dark" : "light"
     );
 
+    themeBtn.textContent =
+        dark ? "☀" : "☾";
+
 });
 
 
-/* =========================================================
+/* -------------------------
    SCROLL REVEAL
-========================================================= */
+   ------------------------- */
 
-const revealObserver = new IntersectionObserver(
+const observer =
+    new IntersectionObserver(
+        entries => {
 
-entries=>{
+            entries.forEach(entry => {
 
-    entries.forEach(entry=>{
+                if(entry.isIntersecting){
 
-        if(entry.isIntersecting){
+                    entry.target.classList.add("visible");
 
-            entry.target.classList.add("visible");
+                    observer.unobserve(entry.target);
 
-            revealObserver.unobserve(entry.target);
-
-        }
-
-    });
-
-},
-{
-    threshold:.12
-});
-
-document.querySelectorAll(".reveal").forEach(el=>{
-    revealObserver.observe(el);
-});
-
-
-/* =========================================================
-   ACTIVE NAVIGATION
-========================================================= */
-
-const sections = document.querySelectorAll("main section[id]");
-const navItems = document.querySelectorAll(".navlinks a[data-section]");
-
-const navObserver = new IntersectionObserver(
-
-entries=>{
-
-    entries.forEach(entry=>{
-
-        if(entry.isIntersecting){
-
-            navItems.forEach(item=>{
-                item.classList.remove("active");
-
-                if(item.dataset.section === entry.target.id){
-                    item.classList.add("active");
                 }
+
             });
 
+        },
+        {
+            threshold:.12
         }
+    );
 
-    });
+document.querySelectorAll(".reveal")
+    .forEach(el => observer.observe(el));
 
-},
-{
-    rootMargin:"-35% 0px -55% 0px"
-});
 
-sections.forEach(section=>{
-    navObserver.observe(section);
-});
+/* -------------------------
+   ACTIVE NAVIGATION
+   ------------------------- */
+
+const navItems =
+    document.querySelectorAll(".nav-links a");
+
+const sections =
+    document.querySelectorAll("main section[id]");
+
+const navObserver =
+    new IntersectionObserver(
+        entries => {
+
+            entries.forEach(entry => {
+
+                if(entry.isIntersecting){
+
+                    navItems.forEach(item => {
+
+                        item.classList.remove("active");
+
+                        if(
+                            item.getAttribute("href") ===
+                            "#" + entry.target.id
+                        ){
+                            item.classList.add("active");
+                        }
+
+                    });
+
+                }
+
+            });
+
+        },
+        {
+            rootMargin:"-35% 0px -55% 0px"
+        }
+    );
+
+sections.forEach(section =>
+    navObserver.observe(section)
+);
 
 
 /* =========================================================
-   PATHWAY BUTTONS
-========================================================= */
+   LANGUAGE SYSTEM
+   ========================================================= */
 
-document.querySelectorAll("[data-role]").forEach(button=>{
+const translations = {
 
-    button.addEventListener("click",()=>{
+    en: {
 
-        setTimeout(()=>{
+        eyebrow:"Strategic Real Estate Network",
 
-            const role = document.getElementById("role");
+        heroTitle:
+        "Strategic Builder & Investor Partnerships",
 
-            if(role){
-                role.value = button.dataset.role;
+        heroText:
+        "Connecting builders, developers, landowners, investors and property buyers through structured relationships, requirement-focused introductions and technology-enabled guidance.",
+
+        findMatch:"Find Your Match",
+
+        exploreNetwork:"Explore Network",
+
+        launchNote:
+        "Launching September 2026 · PRANAURA is a relationship-led real estate advisory and networking platform.",
+
+        stakeholders:"Stakeholder Groups",
+
+        requirement:"Requirement Focus",
+
+        aiGuidance:"Assisted Guidance",
+
+        localFocus:"Mysuru Local Focus",
+
+        aboutLabel:"About PRANAURA",
+
+        aboutTitle:
+        "Relationships, structured better.",
+
+        aboutText:
+        "PRANAURA is designed to create a more structured way for participants in the real estate ecosystem to discover relevant relationships and opportunities.",
+
+        aboutText2:
+        "Rather than simply presenting properties, PRANAURA focuses on understanding requirements, qualifying participants and facilitating relevant introductions between the right people.",
+
+        whyLabel:"Why PRANAURA",
+
+        whyTitle:
+        "More than a property connection.",
+
+        whyIntro:
+        "A structured relationship model designed to make real estate networking more focused, professional and transparent."
+
+    },
+
+    kn: {
+
+        eyebrow:"ಸಂಘಟಿತ ರಿಯಲ್ ಎಸ್ಟೇಟ್ ನೆಟ್‌ವರ್ಕ್",
+
+        heroTitle:
+        "ಬಿಲ್ಡರ್ ಮತ್ತು ಹೂಡಿಕೆದಾರರ ತಂತ್ರಾತ್ಮಕ ಪಾಲುದಾರಿಕೆ",
+
+        heroText:
+        "ಬಿಲ್ಡರ್‌ಗಳು, ಡೆವಲಪರ್‌ಗಳು, ಭೂ ಮಾಲೀಕರು, ಹೂಡಿಕೆದಾರರು ಮತ್ತು ಆಸ್ತಿ ಖರೀದಿದಾರರನ್ನು ಸಂಘಟಿತ ಸಂಬಂಧಗಳು, ಅಗತ್ಯ ಆಧಾರಿತ ಪರಿಚಯಗಳು ಮತ್ತು ತಂತ್ರಜ್ಞಾನ ಆಧಾರಿತ ಮಾರ್ಗದರ್ಶನದ ಮೂಲಕ ಸಂಪರ್ಕಿಸುವ ವೇದಿಕೆ.",
+
+        findMatch:"ನಿಮ್ಮ ಹೊಂದಾಣಿಕೆಯನ್ನು ಹುಡುಕಿ",
+
+        exploreNetwork:"ನೆಟ್‌ವರ್ಕ್ ನೋಡಿ",
+
+        launchNote:
+        "ಸೆಪ್ಟೆಂಬರ್ 2026ರಲ್ಲಿ ಆರಂಭ · PRANAURA ಸಂಬಂಧ ಆಧಾರಿತ ರಿಯಲ್ ಎಸ್ಟೇಟ್ ಸಲಹಾ ಮತ್ತು ನೆಟ್‌ವರ್ಕಿಂಗ್ ವೇದಿಕೆಯಾಗಿದೆ.",
+
+        stakeholders:"ಭಾಗವಹಿಸುವವರ ಗುಂಪುಗಳು",
+
+        requirement:"ಅಗತ್ಯ ಆಧಾರಿತ ಸೇವೆ",
+
+        aiGuidance:"AI ಸಹಾಯಕ ಮಾರ್ಗದರ್ಶನ",
+
+        localFocus:"ಮೈಸೂರು ಸ್ಥಳೀಯ ಗಮನ",
+
+        aboutLabel:"PRANAURA ಕುರಿತು",
+
+        aboutTitle:
+        "ಸಂಬಂಧಗಳನ್ನು ಹೆಚ್ಚು ಸಂಘಟಿತಗೊಳಿಸುವುದು.",
+
+        aboutText:
+        "ರಿಯಲ್ ಎಸ್ಟೇಟ್ ಕ್ಷೇತ್ರದಲ್ಲಿರುವ ವಿವಿಧ ಭಾಗವಹಿಸುವವರು ಸೂಕ್ತ ಸಂಬಂಧಗಳು ಮತ್ತು ಅವಕಾಶಗಳನ್ನು ಹೆಚ್ಚು ಸಂಘಟಿತ ರೀತಿಯಲ್ಲಿ ಕಂಡುಕೊಳ್ಳಲು PRANAURA ಅನ್ನು ವಿನ್ಯಾಸಗೊಳಿಸಲಾಗಿದೆ.",
+
+        aboutText2:
+        "ಕೇವಲ ಆಸ್ತಿಗಳನ್ನು ಪ್ರದರ್ಶಿಸುವ ಬದಲು, PRANAURA ಅಗತ್ಯಗಳನ್ನು ಅರ್ಥಮಾಡಿಕೊಳ್ಳುವುದು, ಭಾಗವಹಿಸುವವರನ್ನು ಅರ್ಹಗೊಳಿಸುವುದು ಮತ್ತು ಸೂಕ್ತ ವ್ಯಕ್ತಿಗಳ ನಡುವೆ ಸಂಬಂಧಿತ ಪರಿಚಯಗಳನ್ನು ಮಾಡುವುದು ಎಂಬುದರ ಮೇಲೆ ಗಮನ ಹರಿಸುತ್ತದೆ.",
+
+        whyLabel:"PRANAURA ಏಕೆ?",
+
+        whyTitle:
+        "ಕೇವಲ ಆಸ್ತಿ ಸಂಪರ್ಕಕ್ಕಿಂತ ಹೆಚ್ಚಿನದು.",
+
+        whyIntro:
+        "ರಿಯಲ್ ಎಸ್ಟೇಟ್ ನೆಟ್‌ವರ್ಕಿಂಗ್ ಅನ್ನು ಹೆಚ್ಚು ಕೇಂದ್ರೀಕೃತ, ವೃತ್ತಿಪರ ಮತ್ತು ಪಾರದರ್ಶಕವಾಗಿಸಲು ವಿನ್ಯಾಸಗೊಳಿಸಿದ ಸಂಘಟಿತ ಸಂಬಂಧ ಮಾದರಿ."
+
+    }
+
+};
+
+
+function applyLanguage(lang){
+
+    document.documentElement.lang =
+        lang === "kn" ? "kn" : "en";
+
+    document.body.classList.toggle(
+        "kn",
+        lang === "kn"
+    );
+
+    document.querySelectorAll("[data-i18n]")
+        .forEach(el => {
+
+            const key =
+                el.getAttribute("data-i18n");
+
+            if(
+                translations[lang] &&
+                translations[lang][key]
+            ){
+                el.textContent =
+                    translations[lang][key];
             }
 
-        },300);
+        });
 
-    });
+    document.getElementById("langBtn").textContent =
+        lang === "en" ? "ಕನ್ನಡ" : "EN";
+
+    localStorage.setItem(
+        "pranauraLanguage",
+        lang
+    );
+
+}
+
+
+let currentLanguage =
+    localStorage.getItem("pranauraLanguage") || "en";
+
+applyLanguage(currentLanguage);
+
+
+document.getElementById("langBtn")
+.addEventListener("click", () => {
+
+    currentLanguage =
+        currentLanguage === "en" ? "kn" : "en";
+
+    applyLanguage(currentLanguage);
 
 });
 
 
 /* =========================================================
-   SMART MATCH
-========================================================= */
+   SMART MATCH ENGINE
+   ========================================================= */
 
-const matchForm = document.getElementById("matchForm");
+const matchForm =
+    document.getElementById("matchForm");
 
-matchForm.addEventListener("submit",function(e){
+const matchResult =
+    document.getElementById("matchResult");
 
-    e.preventDefault();
+
+function calculateMatchScore(){
 
     const role =
-        document.getElementById("role").value.trim();
+        document.getElementById("role").value;
 
     const location =
         document.getElementById("location").value.trim();
 
     const propertyType =
-        document.getElementById("propertyType").value.trim();
+        document.getElementById("propertyType").value;
 
     const budget =
         document.getElementById("budget").value.trim();
 
     const timeline =
-        document.getElementById("timeline").value.trim();
-
-    const phone =
-        document.getElementById("phone").value.trim();
+        document.getElementById("timeline").value;
 
     const requirement =
         document.getElementById("requirement").value.trim();
 
-
     let score = 0;
 
-    /* ROLE */
+    if(role) score += 20;
 
-    if(role){
-        score += 20;
-    }
+    if(location.length >= 2) score += 20;
 
-    /* LOCATION */
+    if(propertyType) score += 15;
 
-    if(location.length >= 3){
-        score += 20;
-    }
+    if(budget.length >= 2) score += 15;
 
-    /* PROPERTY TYPE */
+    if(timeline) score += 10;
 
-    if(propertyType){
-        score += 15;
-    }
+    if(requirement.length >= 20) score += 20;
 
-    /* REQUIREMENT DETAIL */
+    return score;
 
-    if(requirement.length >= 20){
-        score += 20;
-    }else if(requirement.length >= 8){
-        score += 10;
-    }
-
-    /* BUDGET */
-
-    if(budget.length >= 3){
-        score += 10;
-    }
-
-    /* TIMELINE */
-
-    if(timeline){
-        score += 10;
-    }
-
-    /* PHONE */
-
-    if(phone.length >= 8){
-        score += 5;
-    }
+}
 
 
-    const result =
-        document.getElementById("matchResult");
+matchForm.addEventListener("submit", event => {
 
-    const scoreText =
-        document.getElementById("scoreText");
+    event.preventDefault();
 
-    const scoreBar =
-        document.getElementById("scoreBar");
+    const score =
+        calculateMatchScore();
 
-    const scoreMessage =
-        document.getElementById("scoreMessage");
+    const role =
+        document.getElementById("role").value;
 
-    const whatsapp =
-        document.getElementById("matchWhatsapp");
+    let message = "";
 
+    if(score >= 85){
 
-    result.classList.add("show");
-
-    scoreText.textContent = score + "%";
-
-    setTimeout(()=>{
-        scoreBar.style.width = score + "%";
-    },100);
-
-
-    if(score >= 80){
-
-        scoreMessage.textContent =
-        "Your requirement contains strong matching information. PRANAURA can review it for potentially relevant connections.";
+        message =
+        "Requirement profile completed strongly. PRANAURA can use these details for a focused follow-up conversation.";
 
     }else if(score >= 60){
 
-        scoreMessage.textContent =
-        "Your requirement has a useful level of detail. Additional review may help identify relevant connections.";
+        message =
+        "Your requirement has been captured with useful matching information. A few additional details may improve relevance.";
 
     }else{
 
-        scoreMessage.textContent =
-        "Your requirement has been received as an initial enquiry. More information may be useful before identifying a potential connection.";
+        message =
+        "Your requirement has been started. Adding more specific information can improve the matching assessment.";
 
     }
 
+    matchResult.innerHTML =
+        "<strong>Requirement received.</strong><br>" +
+        message +
+        "<br><br>" +
+        "<small>Profile completeness: " +
+        score +
+        "% · Role: " +
+        role +
+        "</small>";
 
-    const message =
-`Hello PRANAURA,
+    matchResult.classList.add("show");
 
-I would like to submit a real estate requirement.
+    showToast("Requirement prepared successfully.");
+
+});
+
+
+/* -------------------------
+   WHATSAPP MATCH
+   ------------------------- */
+
+function buildWhatsAppMessage(){
+
+    const role =
+        document.getElementById("role").value;
+
+    const location =
+        document.getElementById("location").value;
+
+    const propertyType =
+        document.getElementById("propertyType").value;
+
+    const budget =
+        document.getElementById("budget").value;
+
+    const timeline =
+        document.getElementById("timeline").value;
+
+    const phone =
+        document.getElementById("phone").value;
+
+    const requirement =
+        document.getElementById("requirement").value;
+
+
+    return `Hello PRANAURA,
+
+I would like to submit a requirement.
 
 Role: ${role}
 Preferred Location: ${location}
 Property Type: ${propertyType}
-Budget / Investment Range: ${budget || "Not specified"}
+Budget / Investment Range: ${budget}
 Timeline: ${timeline}
 Phone / WhatsApp: ${phone}
 
 Requirement:
 ${requirement}
 
-Initial website compatibility score: ${score}%
+I would like to discuss this requirement with PRANAURA.`;
 
-I understand this is an initial enquiry and not a confirmation of property availability or transaction.`;
-
-
-    whatsapp.href =
-        "https://wa.me/919019746649?text=" +
-        encodeURIComponent(message);
+}
 
 
-    result.scrollIntoView({
-        behavior:"smooth",
-        block:"nearest"
+document.getElementById("whatsappMatch")
+.addEventListener("click", () => {
+
+    const required =
+        matchForm.querySelectorAll("[required]");
+
+    let valid = true;
+
+    required.forEach(field => {
+
+        if(!field.value.trim()){
+            valid = false;
+            field.style.borderColor = "#b36b55";
+        }else{
+            field.style.borderColor = "";
+        }
+
     });
+
+    if(!valid){
+
+        showToast(
+            "Please complete the required fields first."
+        );
+
+        return;
+    }
+
+
+    const message =
+        encodeURIComponent(
+            buildWhatsAppMessage()
+        );
+
+
+    window.open(
+        "https://wa.me/919019746649?text=" + message,
+        "_blank"
+    );
 
 });
 
 
 /* =========================================================
    AI ASSISTANT
-========================================================= */
+   ========================================================= */
 
-const messages =
-    document.getElementById("messages");
+/*
+   IMPORTANT:
 
-const chatInput =
-    document.getElementById("chatInput");
+   AI_BACKEND_URL can later be replaced with your secure
+   HTTPS backend endpoint.
 
-const sendBtn =
-    document.getElementById("sendBtn");
+   Do NOT expose Ollama API credentials or private
+   database credentials directly in this frontend.
+
+   Example future architecture:
+
+   Website
+      ↓
+   Secure Backend
+      ↓
+   Ollama / Qwen
+      ↓
+   PRANAURA Knowledge Base
+      ↓
+   Response
+*/
+
+const AI_BACKEND_URL = "";
+
+
+const aiForm =
+    document.getElementById("aiForm");
+
+const aiInput =
+    document.getElementById("aiInput");
+
+const aiMessages =
+    document.getElementById("aiMessages");
 
 
 function addMessage(text,type){
@@ -4039,21 +3790,33 @@ function addMessage(text,type){
         document.createElement("div");
 
     div.className =
-        "msg " + type;
+        "message " + type;
 
-    div.textContent = text;
+    div.textContent =
+        text;
 
-    messages.appendChild(div);
+    aiMessages.appendChild(div);
 
-    messages.scrollTop =
-        messages.scrollHeight;
+    aiMessages.scrollTop =
+        aiMessages.scrollHeight;
+
 }
 
 
-function aiFallback(question){
+function getAIResponse(question){
 
     const q =
         question.toLowerCase();
+
+
+    if(
+        q.includes("what is pranaura") ||
+        q.includes("pranaura")
+    ){
+
+        return "PRANAURA is a real estate advisory and networking platform focused on structured connections between builders, developers, landowners, investors and property buyers.";
+
+    }
 
 
     if(
@@ -4061,7 +3824,7 @@ function aiFallback(question){
         q.includes("developer")
     ){
 
-        return "PRANAURA helps builders and developers connect with investors, buyers, landowners and strategic stakeholders based on relevant requirements.";
+        return "Builders and developers can connect with PRANAURA for investor connections, buyer requirements, land partnerships and strategic introductions.";
 
     }
 
@@ -4071,7 +3834,7 @@ function aiFallback(question){
         q.includes("investment")
     ){
 
-        return "Investors can submit their preferred location, property type, investment range, timeline and objectives through Smart Match.";
+        return "Investors can share their preferred location, property category, investment range and timeline through the Smart Match form.";
 
     }
 
@@ -4081,7 +3844,7 @@ function aiFallback(question){
         q.includes("landowner")
     ){
 
-        return "Landowners can use PRANAURA to explore structured connections with potentially suitable development partners.";
+        return "Landowners can explore development partnerships and relevant introductions by submitting their requirement through Smart Match.";
 
     }
 
@@ -4091,90 +3854,113 @@ function aiFallback(question){
         q.includes("property")
     ){
 
-        return "Property buyers can submit their preferred location, property type, budget, timeline and requirement through Smart Match.";
+        return "Property buyers can submit their location, property type, budget, timeline and requirements through the Smart Match section.";
 
     }
 
 
     if(
+        q.includes("smart match") ||
         q.includes("match")
     ){
 
-        return "Smart Match structures your role, location, property type, budget, timeline and requirement to generate an initial compatibility indication.";
-
-    }
-
-
-    if(
-        q.includes("commission")
-    ){
-
-        return "Commercial arrangements such as advisory or commission structures should be separately discussed and documented with the relevant parties.";
+        return "Smart Match organizes role, location, property type, budget, timeline and requirement details to support a more focused relevance assessment.";
 
     }
 
 
     if(
         q.includes("contact") ||
+        q.includes("phone") ||
         q.includes("whatsapp")
     ){
 
-        return "You can contact PRANAURA on WhatsApp at +91 90197 46649 or use the Contact section.";
+        return "You can contact PRANAURA at +91 90197 46649 or use the WhatsApp button on the website.";
 
     }
 
 
     if(
-        q.includes("ai")
+        q.includes("email")
     ){
 
-        return "PRANAURA AI is designed to assist with requirements, stakeholder questions and matching workflows. A secure production backend can connect the interface to a private AI system such as Ollama and Qwen.";
+        return "PRANAURA can be contacted at pranauraconnect@gmail.com.";
 
     }
 
 
-    return "I can help explain PRANAURA's services, Smart Match, stakeholder pathways, AI assistant, contact options and general networking process. What would you like to know?";
+    if(
+        q.includes("mysuru") ||
+        q.includes("mysore")
+    ){
+
+        return "PRANAURA's initial local focus is Mysuru and Karnataka.";
+
+    }
+
+
+    if(
+        q.includes("commission") ||
+        q.includes("fee")
+    ){
+
+        return "Commercial terms can depend on the specific service, introduction or transaction arrangement. Please contact PRANAURA directly for applicable terms.";
+
+    }
+
+
+    return "I can help with PRANAURA's services, Smart Match, builders, investors, land partnerships, property buyers and general platform information. For a specific requirement, please use Smart Match or contact PRANAURA directly.";
 
 }
 
 
-async function sendAI(){
+aiForm.addEventListener("submit", async event => {
+
+    event.preventDefault();
 
     const question =
-        chatInput.value.trim();
+        aiInput.value.trim();
 
-    if(!question){
-        return;
-    }
-
-    addMessage(question,"user");
-
-    chatInput.value = "";
+    if(!question) return;
 
 
-    /* Future secure backend connection */
+    addMessage(
+        question,
+        "user"
+    );
+
+    aiInput.value = "";
+
+
+    /*
+       Future secure backend connection.
+    */
 
     if(AI_BACKEND_URL){
 
         try{
 
             const response =
-                await fetch(AI_BACKEND_URL,{
-                    method:"POST",
-                    headers:{
-                        "Content-Type":"application/json"
-                    },
-                    body:JSON.stringify({
-                        message:question
-                    })
-                });
-
+                await fetch(
+                    AI_BACKEND_URL,
+                    {
+                        method:"POST",
+                        headers:{
+                            "Content-Type":
+                            "application/json"
+                        },
+                        body:JSON.stringify({
+                            message:question
+                        })
+                    }
+                );
 
             const data =
                 await response.json();
 
             addMessage(
-                data.reply || aiFallback(question),
+                data.reply ||
+                "I could not generate a response.",
                 "bot"
             );
 
@@ -4189,70 +3975,61 @@ async function sendAI(){
     }
 
 
-    setTimeout(()=>{
+    setTimeout(() => {
 
         addMessage(
-            aiFallback(question),
+            getAIResponse(question),
             "bot"
         );
 
-    },500);
-
-}
-
-
-sendBtn.addEventListener("click",sendAI);
-
-chatInput.addEventListener("keydown",e=>{
-
-    if(e.key==="Enter"){
-        sendAI();
-    }
+    },450);
 
 });
 
 
 /* =========================================================
    FAQ
-========================================================= */
+   ========================================================= */
 
-document.querySelectorAll(".faq-question").forEach(button=>{
+document.querySelectorAll(".faq button")
+.forEach(button => {
 
-    button.addEventListener("click",()=>{
+    button.addEventListener("click", () => {
 
-        const item =
+        const faq =
             button.parentElement;
 
-        const answer =
-            item.querySelector(".faq-answer");
+        const wasOpen =
+            faq.classList.contains("open");
 
 
-        document.querySelectorAll(".faq-item").forEach(other=>{
-
-            if(other !== item){
-
-                other.classList.remove("open");
-
-                other.querySelector(".faq-answer").style.maxHeight = null;
-
-            }
-
-        });
+        document.querySelectorAll(".faq")
+            .forEach(item =>
+                item.classList.remove("open")
+            );
 
 
-        item.classList.toggle("open");
+        if(!wasOpen){
 
+            faq.classList.add("open");
 
-        if(item.classList.contains("open")){
-
-            answer.style.maxHeight =
-                answer.scrollHeight + "px";
-
-        }else{
-
-            answer.style.maxHeight = null;
+            button.querySelector("span")
+                .textContent = "−";
 
         }
+
+
+        document.querySelectorAll(".faq button")
+            .forEach(btn => {
+
+                if(
+                    btn.parentElement !== faq
+                ){
+                    btn.querySelector("span")
+                        .textContent = "+";
+                }
+
+            });
 
     });
 
@@ -4261,37 +4038,43 @@ document.querySelectorAll(".faq-question").forEach(button=>{
 
 /* =========================================================
    MODALS
-========================================================= */
+   ========================================================= */
 
 function openModal(id){
 
-    document.getElementById(id)
+    document
+        .getElementById(id)
         .classList.add("show");
 
-    document.body.style.overflow="hidden";
+    document.body.style.overflow =
+        "hidden";
 
 }
 
 
 function closeModal(id){
 
-    document.getElementById(id)
+    document
+        .getElementById(id)
         .classList.remove("show");
 
-    document.body.style.overflow="";
+    document.body.style.overflow =
+        "";
 
 }
 
 
-document.querySelectorAll(".modal").forEach(modal=>{
+document.querySelectorAll(".modal")
+.forEach(modal => {
 
-    modal.addEventListener("click",e=>{
+    modal.addEventListener("click", event => {
 
-        if(e.target === modal){
+        if(event.target === modal){
 
             modal.classList.remove("show");
 
-            document.body.style.overflow="";
+            document.body.style.overflow =
+                "";
 
         }
 
@@ -4300,14 +4083,16 @@ document.querySelectorAll(".modal").forEach(modal=>{
 });
 
 
-document.addEventListener("keydown",e=>{
+document.addEventListener("keydown", event => {
 
-    if(e.key==="Escape"){
+    if(event.key === "Escape"){
 
         document.querySelectorAll(".modal.show")
-            .forEach(modal=>modal.classList.remove("show"));
+            .forEach(modal =>
+                modal.classList.remove("show")
+            );
 
-        document.body.style.overflow="";
+        document.body.style.overflow = "";
 
     }
 
@@ -4316,631 +4101,101 @@ document.addEventListener("keydown",e=>{
 
 /* =========================================================
    COOKIE CONSENT
-========================================================= */
+   ========================================================= */
 
-const cookie =
-    document.getElementById("cookie");
+const cookieBanner =
+    document.getElementById("cookieBanner");
 
-if(!localStorage.getItem("pranauraConsent")){
+if(
+    !localStorage.getItem("pranauraCookieConsent")
+){
 
-    setTimeout(()=>{
+    setTimeout(() => {
 
-        cookie.classList.add("show");
+        cookieBanner.classList.add("show");
 
     },1200);
 
 }
 
 
-document.getElementById("acceptCookie")
-    .addEventListener("click",()=>{
-
-        localStorage.setItem(
-            "pranauraConsent",
-            "accepted"
-        );
-
-        cookie.classList.remove("show");
-
-    });
-
-
-/* =========================================================
-   LANGUAGE SYSTEM
-========================================================= */
-
-const translations = {
-
-en:{
-
-navAbout:"About",
-navWhy:"Why Us",
-navProcess:"Process",
-navNetwork:"Network",
-navServices:"Services",
-navMatch:"Smart Match",
-navAI:"AI",
-navTrust:"Trust",
-navFAQ:"FAQ",
-navContact:"Contact",
-connect:"Connect",
-
-tagline:"Strategic Builder & Investor Partnerships",
-
-heroTitle:"Real estate relationships, structured for opportunity.",
-
-heroText:"Connecting builders, developers, landowners, investors and property buyers through structured relationships, requirement-focused introductions and technology-enabled guidance.",
-
-findMatch:"Find Your Match",
-explore:"Explore Network",
-whatsapp:"WhatsApp",
-launch:"Launching September 2026",
-
-visualSmall:"Structured Real Estate Network",
-visualLarge:"Relationships. Opportunity. Direction.",
-
-strip1:"Requirement Focused",
-strip1s:"Understand before introducing",
-strip2:"Relationship Led",
-strip2s:"Relevant connections",
-strip3:"Technology Enabled",
-strip3s:"Smarter workflows",
-strip4:"Professional Approach",
-strip4s:"Structured communication",
-
-aboutEyebrow:"About PRANAURA",
-aboutTitle:"A more structured way to connect real estate stakeholders.",
-
-aboutLead:"PRANAURA is a real estate advisory and networking platform designed to bring the right people together at the right stage of a property opportunity.",
-
-aboutP1:"We connect builders, developers, landowners, investors and property buyers based on requirements, location, project relevance and investment intent.",
-
-aboutP2:"Rather than operating as a traditional property listing portal, PRANAURA focuses on structured introductions, requirement understanding, relationship development and transaction-oriented coordination.",
-
-aboutP3:"The objective is simple: reduce irrelevant conversations and create more meaningful connections between people who can genuinely work together.",
-
-builder:"Builders & Developers",
-builderText:"Investor connections and buyer opportunities.",
-
-landowner:"Landowners",
-landownerText:"Connections with suitable development partners.",
-
-investor:"Investors",
-investorText:"Requirement-based property opportunities.",
-
-buyer:"Property Buyers",
-buyerText:"Guidance aligned with requirements.",
-
-whyEyebrow:"Why PRANAURA",
-whyTitle:"Not just a connection. A structured relationship.",
-whyIntro:"PRANAURA combines local relationship building with a professional, technology-enabled process.",
-
-why1:"Structured",
-why1Text:"Requirements, conversations and follow-ups are organised instead of being handled informally.",
-
-why2:"Professional",
-why2Text:"Clear communication and a standardized approach create a more reliable experience.",
-
-why3:"Technology-Enabled",
-why3Text:"Smart matching and AI-assisted workflows help identify relevant connections.",
-
-why4:"Relationship-Led",
-why4Text:"The focus remains on understanding people, requirements and long-term relationships.",
-
-why5:"Local Expertise",
-why5Text:"A strong understanding of the local market helps create relevant introductions.",
-
-why6:"Transparent",
-why6Text:"PRANAURA clearly communicates its role and avoids presenting unverified opportunities as confirmed listings.",
-
-pathEyebrow:"Choose Your Path",
-pathTitle:"Tell us where you fit in the property ecosystem.",
-pathIntro:"Every stakeholder has a different objective. PRANAURA starts with that objective.",
-
-path1:"Builder / Developer",
-path1Text:"Looking for investors, buyers, land partnerships or strategic connections.",
-
-path2:"Landowner",
-path2Text:"Looking for suitable developers or structured development possibilities.",
-
-path3:"Investor",
-path3Text:"Looking for property or development opportunities aligned with your objectives.",
-
-path4:"Property Buyer",
-path4Text:"Looking for a property based on location, type, budget and timeline.",
-
-start:"Start a conversation →",
-
-processEyebrow:"The PRANAURA Process",
-processTitle:"From requirement to relevant connection.",
-
-process1:"Understand",
-process1Text:"We begin by understanding the stakeholder's requirement, objective and preferred parameters.",
-
-process2:"Assess",
-process2Text:"Relevant information is structured so potential compatibility can be evaluated.",
-
-process3:"Connect",
-process3Text:"Suitable parties can be introduced when there is meaningful alignment.",
-
-process4:"Coordinate",
-process4Text:"PRANAURA can support communication and follow-up around the relationship.",
-
-networkEyebrow:"Property Ecosystem",
-networkTitle:"Different objectives. One connected network.",
-
-network1:"Development & Builder Network",
-network1Text:"Designed for builders and developers seeking stronger relationships with investors, buyers, landowners and strategic partners.",
-network1a:"Builder relationship development",
-network1b:"Investor introductions",
-network1c:"Buyer requirement connections",
-network1d:"Land partnership opportunities",
-
-network2:"Investor & Buyer Network",
-network2Text:"Designed around requirements rather than simply displaying large volumes of property information.",
-network2a:"Investment preferences",
-network2b:"Location requirements",
-network2c:"Budget considerations",
-network2d:"Property objectives",
-
-servicesEyebrow:"Services",
-servicesTitle:"Professional support across the property relationship cycle.",
-
-service1:"Builder & Developer Advisory",
-service1Text:"Support in structuring requirements, identifying relevant stakeholders and developing strategic property relationships.",
-
-service2:"Investor Connections",
-service2Text:"Requirement-focused introductions between relevant development opportunities and potential investors.",
-
-service3:"Land Partnership Networking",
-service3Text:"Connecting suitable landowners with developers and other relevant development stakeholders.",
-
-service4:"Property Buyer Connections",
-service4Text:"Understanding buyer requirements and helping identify potentially relevant property conversations.",
-
-service5:"Requirement Analysis",
-service5Text:"Structuring location, property type, budget, timeline and objective information for better matching.",
-
-service6:"Relationship Coordination",
-service6Text:"Professional follow-up and coordination designed to keep relevant conversations moving.",
-
-intelEyebrow:"Matching Intelligence",
-intelTitle:"A smarter framework for relevant introductions.",
-intelIntro:"PRANAURA is designed to move beyond simple contact collection by structuring requirements into meaningful matching signals.",
-
-intel1:"Normalize",
-intel1Text:"Turn different stakeholder requirements into structured information.",
-intel2:"Score",
-intel2Text:"Evaluate compatibility across role, location, property type, budget and timing.",
-intel3:"Explain",
-intel3Text:"Show why a requirement may be relevant rather than producing an unexplained result.",
-intel4:"Connect",
-intel4Text:"Move suitable matches toward a professional conversation.",
-
-matchEyebrow:"Smart Match",
-matchTitle:"Start with your requirement.",
-matchText:"Tell PRANAURA what you are looking for. Your information is used to understand potential relevance and prepare a structured connection.",
-matchNote:"Your submission does not represent a confirmed property, investment opportunity or transaction. PRANAURA will review the requirement and contact you where relevant.",
-
-roleLabel:"Your Role",
-choose:"Choose",
-locationLabel:"Preferred Location",
-typeLabel:"Property Type",
-budgetLabel:"Budget / Investment Range",
-timelineLabel:"Timeline",
-phoneLabel:"Phone / WhatsApp",
-requirementLabel:"Requirement",
-
-formConsent:"I understand that PRANAURA will use the information provided to evaluate and respond to my enquiry.",
-submitMatch:"Analyse My Requirement",
-compatibility:"Initial Compatibility",
-continueWhatsapp:"Continue on WhatsApp",
-
-aiEyebrow:"PRANAURA AI",
-aiTitle:"Intelligent assistance for the property ecosystem.",
-aiText:"The PRANAURA AI layer is designed to assist with property requirements, stakeholder questions, matching workflows and structured information.",
-
-ai1:"Requirement understanding and categorization.",
-ai2:"Property and stakeholder matching assistance.",
-ai3:"Natural-language responses to common questions.",
-ai4:"Designed to connect with a private AI backend such as Ollama and Qwen when deployed securely.",
-
-aiWelcome:"Hello. I am the PRANAURA AI assistant. I can help you understand our services, matching process and connection options.",
-
-aiNote:"AI responses shown here are a frontend demonstration. Production deployment should connect to a secure server-side AI service.",
-
-founderRole:"Founder & Networking Lead",
-
-founderText:"PRANAURA was created with the vision of bringing a more organized, professional and technology-enabled approach to real estate networking. The focus is on meaningful relationships, structured requirements and creating opportunities for stakeholders who can genuinely benefit from working together.",
-
-trustEyebrow:"Trust & Transparency",
-trustTitle:"Built around clarity, not exaggerated promises.",
-
-trust1:"Clear Role",
-trust1Text:"PRANAURA operates as an advisory and networking platform and does not claim ownership of properties simply because they are discussed through the network.",
-
-trust2:"Relevant Introductions",
-trust2Text:"The objective is to focus on potential relevance instead of presenting every enquiry as a guaranteed match.",
-
-trust3:"Professional Relationships",
-trust3Text:"Communication, follow-up and transparency are central to the PRANAURA approach.",
-
-faqEyebrow:"Frequently Asked Questions",
-faqTitle:"Questions before you connect?",
-
-faq1:"What exactly is PRANAURA?",
-faq1a:"PRANAURA is a real estate advisory and networking platform connecting builders, developers, landowners, investors and property buyers.",
-
-faq2:"Does PRANAURA own properties?",
-faq2a:"No. PRANAURA does not represent itself as the owner of properties simply because opportunities or requirements are discussed through the network.",
-
-faq3:"How does Smart Match work?",
-faq3a:"The form structures your role, location, property type, budget, timeline and requirement. A preliminary compatibility score is generated to help organize the enquiry. It is not a guarantee of a transaction or property availability.",
-
-faq4:"Can I approach PRANAURA as a builder?",
-faq4a:"Yes. Builders and developers can use the Smart Match form or contact PRANAURA directly to discuss their requirements.",
-
-faq5:"Can investors and buyers submit requirements?",
-faq5a:"Yes. Investors and property buyers can submit their preferred locations, property types, budgets, timelines and objectives.",
-
-faq6:"Is the AI connected to a real AI model?",
-faq6a:"The public frontend includes an AI assistant interface and intelligent fallback responses. A production deployment can connect it to a secure backend running a private AI stack such as Ollama and Qwen.",
-
-contactEyebrow:"Contact PRANAURA",
-contactTitle:"Let's build the right connection.",
-contactText:"Whether you are a builder, landowner, investor or property buyer, start with your requirement and let us understand where PRANAURA can help.",
-
-phone:"Phone / WhatsApp",
-location:"Location",
-
-contactBoxTitle:"Prefer a direct conversation?",
-contactBoxText:"Connect with PRANAURA on WhatsApp and briefly tell us whether you are a builder, landowner, investor or buyer.",
-openWhatsapp:"Open WhatsApp",
-
-footerTag:"Strategic Builder & Investor Partnerships",
-footerNote:"Real estate advisory & networking platform.",
-
-cookieText:"PRANAURA may use limited browser storage for preferences such as language, theme and consent status.",
-learn:"Learn More",
-accept:"Accept"
-
-},
-
-
-kn:{
-
-navAbout:"ನಮ್ಮ ಬಗ್ಗೆ",
-navWhy:"ಏಕೆ PRANAURA",
-navProcess:"ಪ್ರಕ್ರಿಯೆ",
-navNetwork:"ನೆಟ್‌ವರ್ಕ್",
-navServices:"ಸೇವೆಗಳು",
-navMatch:"ಸ್ಮಾರ್ಟ್ ಮ್ಯಾಚ್",
-navAI:"AI",
-navTrust:"ವಿಶ್ವಾಸ",
-navFAQ:"FAQ",
-navContact:"ಸಂಪರ್ಕ",
-connect:"ಸಂಪರ್ಕಿಸಿ",
-
-tagline:"ಬಿಲ್ಡರ್ ಮತ್ತು ಹೂಡಿಕೆದಾರರ ಕಾರ್ಯತಂತ್ರದ ಪಾಲುದಾರಿಕೆ",
-
-heroTitle:"ಅವಕಾಶಗಳಿಗಾಗಿ ರಚಿಸಲಾದ ರಿಯಲ್ ಎಸ್ಟೇಟ್ ಸಂಬಂಧಗಳು.",
-
-heroText:"ಬಿಲ್ಡರ್‌ಗಳು, ಡೆವಲಪರ್‌ಗಳು, ಭೂಮಾಲೀಕರು, ಹೂಡಿಕೆದಾರರು ಮತ್ತು ಆಸ್ತಿ ಖರೀದಿದಾರರನ್ನು ರಚನಾತ್ಮಕ ಸಂಬಂಧಗಳು ಮತ್ತು ತಂತ್ರಜ್ಞಾನ ಆಧಾರಿತ ಮಾರ್ಗದರ್ಶನದ ಮೂಲಕ ಸಂಪರ್ಕಿಸುವುದು.",
-
-findMatch:"ನಿಮ್ಮ ಮ್ಯಾಚ್ ಹುಡುಕಿ",
-explore:"ನೆಟ್‌ವರ್ಕ್ ನೋಡಿ",
-whatsapp:"WhatsApp",
-launch:"ಸೆಪ್ಟೆಂಬರ್ 2026ರಲ್ಲಿ ಪ್ರಾರಂಭ",
-
-visualSmall:"ರಚನಾತ್ಮಕ ರಿಯಲ್ ಎಸ್ಟೇಟ್ ನೆಟ್‌ವರ್ಕ್",
-visualLarge:"ಸಂಬಂಧಗಳು. ಅವಕಾಶ. ದಿಕ್ಕು.",
-
-strip1:"ಅವಶ್ಯಕತೆ ಕೇಂದ್ರೀಕೃತ",
-strip1s:"ಪರಿಚಯಕ್ಕೂ ಮೊದಲು ಅರ್ಥಮಾಡಿಕೊಳ್ಳುವುದು",
-strip2:"ಸಂಬಂಧ ಆಧಾರಿತ",
-strip2s:"ಸಂಬಂಧಿತ ಸಂಪರ್ಕಗಳು",
-strip3:"ತಂತ್ರಜ್ಞಾನ ಆಧಾರಿತ",
-strip3s:"ಸ್ಮಾರ್ಟ್ ಕಾರ್ಯವಿಧಾನಗಳು",
-strip4:"ವೃತ್ತಿಪರ ವಿಧಾನ",
-strip4s:"ರಚನಾತ್ಮಕ ಸಂವಹನ",
-
-aboutEyebrow:"PRANAURA ಬಗ್ಗೆ",
-aboutTitle:"ರಿಯಲ್ ಎಸ್ಟೇಟ್ ಪಾಲುದಾರರನ್ನು ಸಂಪರ್ಕಿಸುವ ಹೆಚ್ಚು ರಚನಾತ್ಮಕ ವಿಧಾನ.",
-
-aboutLead:"PRANAURA ಒಂದು ರಿಯಲ್ ಎಸ್ಟೇಟ್ ಸಲಹಾ ಮತ್ತು ನೆಟ್‌ವರ್ಕಿಂಗ್ ವೇದಿಕೆಯಾಗಿದ್ದು, ಆಸ್ತಿ ಅವಕಾಶದ ಸರಿಯಾದ ಹಂತದಲ್ಲಿ ಸರಿಯಾದ ಜನರನ್ನು ಸಂಪರ್ಕಿಸುವ ಉದ್ದೇಶ ಹೊಂದಿದೆ.",
-
-aboutP1:"ಅವಶ್ಯಕತೆ, ಸ್ಥಳ, ಯೋಜನೆಯ ಸಂಬಂಧಿತತೆ ಮತ್ತು ಹೂಡಿಕೆ ಉದ್ದೇಶದ ಆಧಾರದ ಮೇಲೆ ಬಿಲ್ಡರ್‌ಗಳು, ಡೆವಲಪರ್‌ಗಳು, ಭೂಮಾಲೀಕರು, ಹೂಡಿಕೆದಾರರು ಮತ್ತು ಆಸ್ತಿ ಖರೀದಿದಾರರನ್ನು ನಾವು ಸಂಪರ್ಕಿಸುತ್ತೇವೆ.",
-
-aboutP2:"ಸಾಮಾನ್ಯ ಆಸ್ತಿ ಲಿಸ್ಟಿಂಗ್ ಪೋರ್ಟಲ್‌ನಂತೆ ಕಾರ್ಯನಿರ್ವಹಿಸುವ ಬದಲು, PRANAURA ರಚನಾತ್ಮಕ ಪರಿಚಯಗಳು, ಅವಶ್ಯಕತೆ ತಿಳುವಳಿಕೆ, ಸಂಬಂಧ ಅಭಿವೃದ್ಧಿ ಮತ್ತು ವ್ಯವಹಾರ ಕೇಂದ್ರೀಕೃತ ಸಮನ್ವಯದ ಮೇಲೆ ಗಮನಹರಿಸುತ್ತದೆ.",
-
-aboutP3:"ಉದ್ದೇಶ ಸರಳವಾಗಿದೆ: ಅನಗತ್ಯ ಸಂಭಾಷಣೆಗಳನ್ನು ಕಡಿಮೆ ಮಾಡಿ, ನಿಜವಾಗಿಯೂ ಒಟ್ಟಿಗೆ ಕೆಲಸ ಮಾಡಬಹುದಾದ ಜನರ ನಡುವೆ ಹೆಚ್ಚು ಅರ್ಥಪೂರ್ಣ ಸಂಪರ್ಕಗಳನ್ನು ಸೃಷ್ಟಿಸುವುದು.",
-
-builder:"ಬಿಲ್ಡರ್‌ಗಳು ಮತ್ತು ಡೆವಲಪರ್‌ಗಳು",
-builderText:"ಹೂಡಿಕೆದಾರರ ಸಂಪರ್ಕಗಳು ಮತ್ತು ಖರೀದಿದಾರರ ಅವಕಾಶಗಳು.",
-
-landowner:"ಭೂಮಾಲೀಕರು",
-landownerText:"ಸೂಕ್ತ ಡೆವಲಪ್‌ಮೆಂಟ್ ಪಾಲುದಾರರೊಂದಿಗೆ ಸಂಪರ್ಕ.",
-
-investor:"ಹೂಡಿಕೆದಾರರು",
-investorText:"ಅವಶ್ಯಕತೆ ಆಧಾರಿತ ಆಸ್ತಿ ಅವಕಾಶಗಳು.",
-
-buyer:"ಆಸ್ತಿ ಖರೀದಿದಾರರು",
-buyerText:"ಅವಶ್ಯಕತೆಗೆ ಅನುಗುಣವಾದ ಮಾರ್ಗದರ್ಶನ.",
-
-whyEyebrow:"ಏಕೆ PRANAURA",
-whyTitle:"ಕೇವಲ ಸಂಪರ್ಕವಲ್ಲ. ರಚನಾತ್ಮಕ ಸಂಬಂಧ.",
-whyIntro:"PRANAURA ಸ್ಥಳೀಯ ಸಂಬಂಧ ನಿರ್ಮಾಣವನ್ನು ವೃತ್ತಿಪರ ಮತ್ತು ತಂತ್ರಜ್ಞಾನ ಆಧಾರಿತ ಪ್ರಕ್ರಿಯೆಯೊಂದಿಗೆ ಸಂಯೋಜಿಸುತ್ತದೆ.",
-
-why1:"ರಚನಾತ್ಮಕ",
-why1Text:"ಅವಶ್ಯಕತೆಗಳು, ಸಂಭಾಷಣೆಗಳು ಮತ್ತು ಫಾಲೋ-ಅಪ್‌ಗಳನ್ನು ಕ್ರಮಬದ್ಧವಾಗಿ ನಿರ್ವಹಿಸಲಾಗುತ್ತದೆ.",
-
-why2:"ವೃತ್ತಿಪರ",
-why2Text:"ಸ್ಪಷ್ಟ ಸಂವಹನ ಮತ್ತು ಪ್ರಮಾಣೀಕೃತ ವಿಧಾನ ಹೆಚ್ಚು ವಿಶ್ವಾಸಾರ್ಹ ಅನುಭವವನ್ನು ಸೃಷ್ಟಿಸುತ್ತದೆ.",
-
-why3:"ತಂತ್ರಜ್ಞಾನ ಆಧಾರಿತ",
-why3Text:"ಸ್ಮಾರ್ಟ್ ಮ್ಯಾಚಿಂಗ್ ಮತ್ತು AI ಸಹಾಯಕ ಕಾರ್ಯವಿಧಾನಗಳು ಸಂಬಂಧಿತ ಸಂಪರ್ಕಗಳನ್ನು ಗುರುತಿಸಲು ಸಹಾಯ ಮಾಡುತ್ತವೆ.",
-
-why4:"ಸಂಬಂಧ ಆಧಾರಿತ",
-why4Text:"ಜನರು, ಅವಶ್ಯಕತೆಗಳು ಮತ್ತು ದೀರ್ಘಕಾಲೀನ ಸಂಬಂಧಗಳನ್ನು ಅರ್ಥಮಾಡಿಕೊಳ್ಳುವುದಕ್ಕೆ ಗಮನ ನೀಡಲಾಗುತ್ತದೆ.",
-
-why5:"ಸ್ಥಳೀಯ ಪರಿಣತಿ",
-why5Text:"ಸ್ಥಳೀಯ ಮಾರುಕಟ್ಟೆಯ ಉತ್ತಮ ತಿಳುವಳಿಕೆ ಹೆಚ್ಚು ಸಂಬಂಧಿತ ಪರಿಚಯಗಳನ್ನು ಸೃಷ್ಟಿಸಲು ಸಹಾಯ ಮಾಡುತ್ತದೆ.",
-
-why6:"ಪಾರದರ್ಶಕ",
-why6Text:"PRANAURA ತನ್ನ ಪಾತ್ರವನ್ನು ಸ್ಪಷ್ಟವಾಗಿ ತಿಳಿಸುತ್ತದೆ ಮತ್ತು ಪರಿಶೀಲಿಸದ ಅವಕಾಶಗಳನ್ನು ಖಚಿತ ಲಿಸ್ಟಿಂಗ್‌ಗಳಂತೆ ತೋರಿಸುವುದಿಲ್ಲ.",
-
-pathEyebrow:"ನಿಮ್ಮ ಮಾರ್ಗ ಆಯ್ಕೆಮಾಡಿ",
-pathTitle:"ಆಸ್ತಿ ಪರಿಸರ ವ್ಯವಸ್ಥೆಯಲ್ಲಿ ನಿಮ್ಮ ಪಾತ್ರವನ್ನು ತಿಳಿಸಿ.",
-pathIntro:"ಪ್ರತಿಯೊಬ್ಬ ಪಾಲುದಾರರ ಉದ್ದೇಶ ವಿಭಿನ್ನವಾಗಿರುತ್ತದೆ. PRANAURA ಆ ಉದ್ದೇಶದಿಂದ ಪ್ರಾರಂಭಿಸುತ್ತದೆ.",
-
-path1:"ಬಿಲ್ಡರ್ / ಡೆವಲಪರ್",
-path1Text:"ಹೂಡಿಕೆದಾರರು, ಖರೀದಿದಾರರು, ಭೂ ಪಾಲುದಾರರು ಅಥವಾ ಕಾರ್ಯತಂತ್ರದ ಸಂಪರ್ಕಗಳನ್ನು ಹುಡುಕುತ್ತಿದ್ದೀರಾ?",
-
-path2:"ಭೂಮಾಲೀಕರು",
-path2Text:"ಸೂಕ್ತ ಡೆವಲಪರ್‌ಗಳು ಅಥವಾ ರಚನಾತ್ಮಕ ಅಭಿವೃದ್ಧಿ ಸಾಧ್ಯತೆಗಳನ್ನು ಹುಡುಕುತ್ತಿದ್ದೀರಾ?",
-
-path3:"ಹೂಡಿಕೆದಾರರು",
-path3Text:"ನಿಮ್ಮ ಹೂಡಿಕೆ ಉದ್ದೇಶಗಳಿಗೆ ಹೊಂದಿಕೊಳ್ಳುವ ಆಸ್ತಿ ಅಥವಾ ಅಭಿವೃದ್ಧಿ ಅವಕಾಶಗಳನ್ನು ಹುಡುಕುತ್ತಿದ್ದೀರಾ?",
-
-path4:"ಆಸ್ತಿ ಖರೀದಿದಾರರು",
-path4Text:"ಸ್ಥಳ, ಪ್ರಕಾರ, ಬಜೆಟ್ ಮತ್ತು ಸಮಯದ ಆಧಾರದ ಮೇಲೆ ಆಸ್ತಿಯನ್ನು ಹುಡುಕುತ್ತಿದ್ದೀರಾ?",
-
-start:"ಸಂಭಾಷಣೆ ಪ್ರಾರಂಭಿಸಿ →",
-
-processEyebrow:"PRANAURA ಪ್ರಕ್ರಿಯೆ",
-processTitle:"ಅವಶ್ಯಕತೆಯಿಂದ ಸಂಬಂಧಿತ ಸಂಪರ್ಕದವರೆಗೆ.",
-
-process1:"ಅರ್ಥಮಾಡಿಕೊಳ್ಳಿ",
-process1Text:"ಪಾಲುದಾರರ ಅವಶ್ಯಕತೆ, ಉದ್ದೇಶ ಮತ್ತು ಆದ್ಯತೆಗಳನ್ನು ಮೊದಲು ಅರ್ಥಮಾಡಿಕೊಳ್ಳಲಾಗುತ್ತದೆ.",
-
-process2:"ಮೌಲ್ಯಮಾಪನ",
-process2Text:"ಸಂಭಾವ್ಯ ಹೊಂದಾಣಿಕೆಯನ್ನು ಪರಿಶೀಲಿಸಲು ಮಾಹಿತಿಯನ್ನು ರಚನಾತ್ಮಕವಾಗಿ ಸಿದ್ಧಪಡಿಸಲಾಗುತ್ತದೆ.",
-
-process3:"ಸಂಪರ್ಕಿಸಿ",
-process3Text:"ಅರ್ಥಪೂರ್ಣ ಹೊಂದಾಣಿಕೆ ಇದ್ದಾಗ ಸೂಕ್ತ ವ್ಯಕ್ತಿಗಳನ್ನು ಪರಿಚಯಿಸಬಹುದು.",
-
-process4:"ಸಮನ್ವಯ",
-process4Text:"ಸಂಬಂಧದ ಸಂವಹನ ಮತ್ತು ಫಾಲೋ-ಅಪ್‌ಗೆ PRANAURA ಸಹಾಯ ಮಾಡಬಹುದು.",
-
-networkEyebrow:"ಆಸ್ತಿ ಪರಿಸರ ವ್ಯವಸ್ಥೆ",
-networkTitle:"ವಿಭಿನ್ನ ಉದ್ದೇಶಗಳು. ಒಂದು ಸಂಪರ್ಕಿತ ನೆಟ್‌ವರ್ಕ್.",
-
-network1:"ಡೆವಲಪ್‌ಮೆಂಟ್ ಮತ್ತು ಬಿಲ್ಡರ್ ನೆಟ್‌ವರ್ಕ್",
-network1Text:"ಹೂಡಿಕೆದಾರರು, ಖರೀದಿದಾರರು, ಭೂಮಾಲೀಕರು ಮತ್ತು ಕಾರ್ಯತಂತ್ರದ ಪಾಲುದಾರರೊಂದಿಗೆ ಬಲವಾದ ಸಂಬಂಧಗಳನ್ನು ಹುಡುಕುವ ಬಿಲ್ಡರ್‌ಗಳು ಮತ್ತು ಡೆವಲಪರ್‌ಗಳಿಗಾಗಿ.",
-network1a:"ಬಿಲ್ಡರ್ ಸಂಬಂಧ ಅಭಿವೃದ್ಧಿ",
-network1b:"ಹೂಡಿಕೆದಾರರ ಪರಿಚಯ",
-network1c:"ಖರೀದಿದಾರರ ಅವಶ್ಯಕತೆ ಸಂಪರ್ಕ",
-network1d:"ಭೂ ಪಾಲುದಾರಿಕೆ ಅವಕಾಶಗಳು",
-
-network2:"ಹೂಡಿಕೆದಾರ ಮತ್ತು ಖರೀದಿದಾರರ ನೆಟ್‌ವರ್ಕ್",
-network2Text:"ದೊಡ್ಡ ಪ್ರಮಾಣದ ಆಸ್ತಿ ಮಾಹಿತಿಯನ್ನು ಮಾತ್ರ ತೋರಿಸುವ ಬದಲು ಅವಶ್ಯಕತೆಗಳ ಸುತ್ತ ರೂಪಿಸಲಾಗಿದೆ.",
-network2a:"ಹೂಡಿಕೆ ಆದ್ಯತೆಗಳು",
-network2b:"ಸ್ಥಳದ ಅವಶ್ಯಕತೆಗಳು",
-network2c:"ಬಜೆಟ್ ಪರಿಗಣನೆಗಳು",
-network2d:"ಆಸ್ತಿ ಉದ್ದೇಶಗಳು",
-
-servicesEyebrow:"ಸೇವೆಗಳು",
-servicesTitle:"ಆಸ್ತಿ ಸಂಬಂಧದ ವಿವಿಧ ಹಂತಗಳಲ್ಲಿ ವೃತ್ತಿಪರ ಬೆಂಬಲ.",
-
-service1:"ಬಿಲ್ಡರ್ ಮತ್ತು ಡೆವಲಪರ್ ಸಲಹೆ",
-service1Text:"ಅವಶ್ಯಕತೆಗಳನ್ನು ರೂಪಿಸುವುದು, ಸಂಬಂಧಿತ ಪಾಲುದಾರರನ್ನು ಗುರುತಿಸುವುದು ಮತ್ತು ಕಾರ್ಯತಂತ್ರದ ಆಸ್ತಿ ಸಂಬಂಧಗಳನ್ನು ಅಭಿವೃದ್ಧಿಪಡಿಸಲು ಬೆಂಬಲ.",
-
-service2:"ಹೂಡಿಕೆದಾರರ ಸಂಪರ್ಕ",
-service2Text:"ಅಭಿವೃದ್ಧಿ ಅವಕಾಶಗಳು ಮತ್ತು ಸಂಭಾವ್ಯ ಹೂಡಿಕೆದಾರರ ನಡುವೆ ಅವಶ್ಯಕತೆ ಆಧಾರಿತ ಪರಿಚಯಗಳು.",
-
-service3:"ಭೂ ಪಾಲುದಾರಿಕೆ ನೆಟ್‌ವರ್ಕಿಂಗ್",
-service3Text:"ಸೂಕ್ತ ಭೂಮಾಲೀಕರನ್ನು ಡೆವಲಪರ್‌ಗಳು ಮತ್ತು ಇತರ ಅಭಿವೃದ್ಧಿ ಪಾಲುದಾರರೊಂದಿಗೆ ಸಂಪರ್ಕಿಸುವುದು.",
-
-service4:"ಆಸ್ತಿ ಖರೀದಿದಾರರ ಸಂಪರ್ಕ",
-service4Text:"ಖರೀದಿದಾರರ ಅವಶ್ಯಕತೆಗಳನ್ನು ಅರ್ಥಮಾಡಿಕೊಂಡು ಸಂಬಂಧಿತ ಆಸ್ತಿ ಸಂಭಾಷಣೆಗಳನ್ನು ಗುರುತಿಸಲು ಸಹಾಯ.",
-
-service5:"ಅವಶ್ಯಕತೆ ವಿಶ್ಲೇಷಣೆ",
-service5Text:"ಉತ್ತಮ ಮ್ಯಾಚಿಂಗ್‌ಗಾಗಿ ಸ್ಥಳ, ಆಸ್ತಿ ಪ್ರಕಾರ, ಬಜೆಟ್, ಸಮಯ ಮತ್ತು ಉದ್ದೇಶದ ಮಾಹಿತಿಯನ್ನು ರಚಿಸುವುದು.",
-
-service6:"ಸಂಬಂಧ ಸಮನ್ವಯ",
-service6Text:"ಸಂಬಂಧಿತ ಸಂಭಾಷಣೆಗಳನ್ನು ಮುಂದುವರಿಸಲು ವೃತ್ತಿಪರ ಫಾಲೋ-ಅಪ್ ಮತ್ತು ಸಮನ್ವಯ.",
-
-intelEyebrow:"ಮ್ಯಾಚಿಂಗ್ ಇಂಟೆಲಿಜೆನ್ಸ್",
-intelTitle:"ಸಂಬಂಧಿತ ಪರಿಚಯಗಳಿಗಾಗಿ ಸ್ಮಾರ್ಟ್ ಚೌಕಟ್ಟು.",
-intelIntro:"ಅವಶ್ಯಕತೆಗಳನ್ನು ಅರ್ಥಪೂರ್ಣ ಮ್ಯಾಚಿಂಗ್ ಸೂಚಕಗಳಾಗಿ ರೂಪಿಸುವ ಮೂಲಕ ಸರಳ ಸಂಪರ್ಕ ಸಂಗ್ರಹಣೆಯನ್ನು ಮೀರಿ ಹೋಗಲು PRANAURA ವಿನ್ಯಾಸಗೊಳಿಸಲಾಗಿದೆ.",
-
-intel1:"ರಚಿಸಿ",
-intel1Text:"ವಿಭಿನ್ನ ಪಾಲುದಾರರ ಅವಶ್ಯಕತೆಗಳನ್ನು ರಚನಾತ್ಮಕ ಮಾಹಿತಿಯಾಗಿ ಪರಿವರ್ತಿಸಿ.",
-intel2:"ಸ್ಕೋರ್",
-intel2Text:"ಪಾತ್ರ, ಸ್ಥಳ, ಆಸ್ತಿ ಪ್ರಕಾರ, ಬಜೆಟ್ ಮತ್ತು ಸಮಯದ ಆಧಾರದ ಮೇಲೆ ಹೊಂದಾಣಿಕೆಯನ್ನು ಮೌಲ್ಯಮಾಪನ ಮಾಡಿ.",
-intel3:"ವಿವರಿಸಿ",
-intel3Text:"ಹೊಂದಾಣಿಕೆ ಏಕೆ ಸಂಬಂಧಿತವಾಗಿರಬಹುದು ಎಂಬುದನ್ನು ವಿವರಿಸಿ.",
-intel4:"ಸಂಪರ್ಕಿಸಿ",
-intel4Text:"ಸೂಕ್ತ ಮ್ಯಾಚ್‌ಗಳನ್ನು ವೃತ್ತಿಪರ ಸಂಭಾಷಣೆಯತ್ತ ಕೊಂಡೊಯ್ಯಿರಿ.",
-
-matchEyebrow:"ಸ್ಮಾರ್ಟ್ ಮ್ಯಾಚ್",
-matchTitle:"ನಿಮ್ಮ ಅವಶ್ಯಕತೆಯಿಂದ ಪ್ರಾರಂಭಿಸಿ.",
-matchText:"ನೀವು ಏನು ಹುಡುಕುತ್ತಿದ್ದೀರಿ ಎಂದು PRANAURAಗೆ ತಿಳಿಸಿ. ನಿಮ್ಮ ಮಾಹಿತಿಯನ್ನು ಸಂಭಾವ್ಯ ಸಂಬಂಧಿತತೆ ಅರ್ಥಮಾಡಿಕೊಳ್ಳಲು ಬಳಸಲಾಗುತ್ತದೆ.",
-matchNote:"ನಿಮ್ಮ ಸಲ್ಲಿಕೆ ಖಚಿತ ಆಸ್ತಿ, ಹೂಡಿಕೆ ಅವಕಾಶ ಅಥವಾ ವ್ಯವಹಾರವನ್ನು ಪ್ರತಿನಿಧಿಸುವುದಿಲ್ಲ. ಸಂಬಂಧಿತವಾಗಿದ್ದರೆ PRANAURA ನಿಮ್ಮನ್ನು ಸಂಪರ್ಕಿಸುತ್ತದೆ.",
-
-roleLabel:"ನಿಮ್ಮ ಪಾತ್ರ",
-choose:"ಆಯ್ಕೆಮಾಡಿ",
-locationLabel:"ಆದ್ಯತೆಯ ಸ್ಥಳ",
-typeLabel:"ಆಸ್ತಿ ಪ್ರಕಾರ",
-budgetLabel:"ಬಜೆಟ್ / ಹೂಡಿಕೆ ವ್ಯಾಪ್ತಿ",
-timelineLabel:"ಸಮಯ",
-phoneLabel:"ಫೋನ್ / WhatsApp",
-requirementLabel:"ಅವಶ್ಯಕತೆ",
-
-formConsent:"ನಾನು ನೀಡಿದ ಮಾಹಿತಿಯನ್ನು PRANAURA ನನ್ನ ವಿಚಾರಣೆಯನ್ನು ಮೌಲ್ಯಮಾಪನ ಮಾಡಲು ಮತ್ತು ಪ್ರತಿಕ್ರಿಯಿಸಲು ಬಳಸಬಹುದು ಎಂದು ಅರ್ಥಮಾಡಿಕೊಂಡಿದ್ದೇನೆ.",
-
-submitMatch:"ನನ್ನ ಅವಶ್ಯಕತೆಯನ್ನು ವಿಶ್ಲೇಷಿಸಿ",
-compatibility:"ಆರಂಭಿಕ ಹೊಂದಾಣಿಕೆ",
-continueWhatsapp:"WhatsApp ನಲ್ಲಿ ಮುಂದುವರಿಸಿ",
-
-aiEyebrow:"PRANAURA AI",
-aiTitle:"ಆಸ್ತಿ ಪರಿಸರ ವ್ಯವಸ್ಥೆಗೆ ಬುದ್ಧಿವಂತ ಸಹಾಯ.",
-aiText:"PRANAURA AI ಪದರವು ಆಸ್ತಿ ಅವಶ್ಯಕತೆಗಳು, ಪಾಲುದಾರರ ಪ್ರಶ್ನೆಗಳು, ಮ್ಯಾಚಿಂಗ್ ಕಾರ್ಯವಿಧಾನಗಳು ಮತ್ತು ರಚನಾತ್ಮಕ ಮಾಹಿತಿಗೆ ಸಹಾಯ ಮಾಡಲು ವಿನ್ಯಾಸಗೊಳಿಸಲಾಗಿದೆ.",
-
-ai1:"ಅವಶ್ಯಕತೆ ಅರ್ಥಮಾಡಿಕೊಳ್ಳುವುದು ಮತ್ತು ವರ್ಗೀಕರಣ.",
-ai2:"ಆಸ್ತಿ ಮತ್ತು ಪಾಲುದಾರ ಮ್ಯಾಚಿಂಗ್ ಸಹಾಯ.",
-ai3:"ಸಾಮಾನ್ಯ ಪ್ರಶ್ನೆಗಳಿಗೆ ನೈಸರ್ಗಿಕ ಭಾಷೆಯ ಪ್ರತಿಕ್ರಿಯೆಗಳು.",
-ai4:"ಸುರಕ್ಷಿತವಾಗಿ ನಿಯೋಜಿಸಿದಾಗ Ollama ಮತ್ತು Qwen ನಂತಹ ಖಾಸಗಿ AI ಬ್ಯಾಕ್‌ಎಂಡ್‌ಗೆ ಸಂಪರ್ಕಿಸಲು ವಿನ್ಯಾಸಗೊಳಿಸಲಾಗಿದೆ.",
-
-aiWelcome:"ನಮಸ್ಕಾರ. ನಾನು PRANAURA AI ಸಹಾಯಕ. ನಮ್ಮ ಸೇವೆಗಳು, ಮ್ಯಾಚಿಂಗ್ ಪ್ರಕ್ರಿಯೆ ಮತ್ತು ಸಂಪರ್ಕ ಆಯ್ಕೆಗಳ ಬಗ್ಗೆ ಸಹಾಯ ಮಾಡಬಹುದು.",
-
-aiNote:"ಇಲ್ಲಿ ತೋರಿಸಲಾದ AI ಪ್ರತಿಕ್ರಿಯೆಗಳು ಫ್ರಂಟ್‌ಎಂಡ್ ಪ್ರದರ್ಶನವಾಗಿವೆ. ಉತ್ಪಾದನಾ ವ್ಯವಸ್ಥೆಗೆ ಸುರಕ್ಷಿತ ಸರ್ವರ್-ಸೈಡ್ AI ಸೇವೆಯನ್ನು ಸಂಪರ್ಕಿಸಬೇಕು.",
-
-founderRole:"ಸ್ಥಾಪಕಿ ಮತ್ತು ನೆಟ್‌ವರ್ಕಿಂಗ್ ಲೀಡ್",
-
-founderText:"ರಿಯಲ್ ಎಸ್ಟೇಟ್ ನೆಟ್‌ವರ್ಕಿಂಗ್‌ಗೆ ಹೆಚ್ಚು ಸಂಘಟಿತ, ವೃತ್ತಿಪರ ಮತ್ತು ತಂತ್ರಜ್ಞಾನ ಆಧಾರಿತ ವಿಧಾನವನ್ನು ತರಬೇಕೆಂಬ ದೃಷ್ಟಿಯಿಂದ PRANAURA ರಚಿಸಲಾಗಿದೆ. ಅರ್ಥಪೂರ್ಣ ಸಂಬಂಧಗಳು, ರಚನಾತ್ಮಕ ಅವಶ್ಯಕತೆಗಳು ಮತ್ತು ಒಟ್ಟಿಗೆ ಕೆಲಸ ಮಾಡುವುದರಿಂದ ಪ್ರಯೋಜನ ಪಡೆಯಬಹುದಾದ ಪಾಲುದಾರರಿಗಾಗಿ ಅವಕಾಶಗಳನ್ನು ಸೃಷ್ಟಿಸುವುದರ ಮೇಲೆ ಗಮನವಿದೆ.",
-
-trustEyebrow:"ವಿಶ್ವಾಸ ಮತ್ತು ಪಾರದರ್ಶಕತೆ",
-trustTitle:"ಅತಿಯಾದ ಭರವಸೆಗಳಿಗಿಂತ ಸ್ಪಷ್ಟತೆಯ ಮೇಲೆ ನಿರ್ಮಿಸಲಾಗಿದೆ.",
-
-trust1:"ಸ್ಪಷ್ಟ ಪಾತ್ರ",
-trust1Text:"PRANAURA ಸಲಹಾ ಮತ್ತು ನೆಟ್‌ವರ್ಕಿಂಗ್ ವೇದಿಕೆಯಾಗಿ ಕಾರ್ಯನಿರ್ವಹಿಸುತ್ತದೆ ಮತ್ತು ನೆಟ್‌ವರ್ಕ್‌ನಲ್ಲಿ ಚರ್ಚಿಸಲಾದ ಆಸ್ತಿಗಳ ಮಾಲೀಕತ್ವವನ್ನು ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಹೇಳಿಕೊಳ್ಳುವುದಿಲ್ಲ.",
-
-trust2:"ಸಂಬಂಧಿತ ಪರಿಚಯಗಳು",
-trust2Text:"ಪ್ರತಿ ವಿಚಾರಣೆಯನ್ನು ಖಚಿತ ಮ್ಯಾಚ್ ಎಂದು ತೋರಿಸುವ ಬದಲು ಸಂಭಾವ್ಯ ಸಂಬಂಧಿತತೆಯ ಮೇಲೆ ಗಮನ ನೀಡುವುದು ಉದ್ದೇಶ.",
-
-trust3:"ವೃತ್ತಿಪರ ಸಂಬಂಧಗಳು",
-trust3Text:"ಸಂವಹನ, ಫಾಲೋ-ಅಪ್ ಮತ್ತು ಪಾರದರ್ಶಕತೆ PRANAURA ವಿಧಾನಕ್ಕೆ ಮುಖ್ಯವಾಗಿವೆ.",
-
-faqEyebrow:"ಪದೇಪದೇ ಕೇಳಲಾಗುವ ಪ್ರಶ್ನೆಗಳು",
-faqTitle:"ಸಂಪರ್ಕಿಸುವ ಮೊದಲು ಪ್ರಶ್ನೆಗಳಿವೆಯೇ?",
-
-faq1:"PRANAURA ಎಂದರೇನು?",
-faq1a:"PRANAURA ಬಿಲ್ಡರ್‌ಗಳು, ಡೆವಲಪರ್‌ಗಳು, ಭೂಮಾಲೀಕರು, ಹೂಡಿಕೆದಾರರು ಮತ್ತು ಆಸ್ತಿ ಖರೀದಿದಾರರನ್ನು ಸಂಪರ್ಕಿಸುವ ರಿಯಲ್ ಎಸ್ಟೇಟ್ ಸಲಹಾ ಮತ್ತು ನೆಟ್‌ವರ್ಕಿಂಗ್ ವೇದಿಕೆ.",
-
-faq2:"PRANAURA ಆಸ್ತಿಗಳನ್ನು ಹೊಂದಿದೆಯೇ?",
-faq2a:"ಇಲ್ಲ. PRANAURA ಮೂಲಕ ಅವಕಾಶಗಳು ಅಥವಾ ಅವಶ್ಯಕತೆಗಳನ್ನು ಚರ್ಚಿಸಲಾಗಿದೆ ಎಂಬ ಕಾರಣಕ್ಕೆ PRANAURA ಆಸ್ತಿಯ ಮಾಲೀಕತ್ವವನ್ನು ಹೇಳಿಕೊಳ್ಳುವುದಿಲ್ಲ.",
-
-faq3:"Smart Match ಹೇಗೆ ಕೆಲಸ ಮಾಡುತ್ತದೆ?",
-faq3a:"ಫಾರ್ಮ್ ನಿಮ್ಮ ಪಾತ್ರ, ಸ್ಥಳ, ಆಸ್ತಿ ಪ್ರಕಾರ, ಬಜೆಟ್, ಸಮಯ ಮತ್ತು ಅವಶ್ಯಕತೆಯನ್ನು ರಚಿಸುತ್ತದೆ. ಆರಂಭಿಕ ಹೊಂದಾಣಿಕೆ ಸ್ಕೋರ್ ಅನ್ನು ವಿಚಾರಣೆಯನ್ನು ಸಂಘಟಿಸಲು ಬಳಸಲಾಗುತ್ತದೆ. ಇದು ವ್ಯವಹಾರ ಅಥವಾ ಆಸ್ತಿ ಲಭ್ಯತೆಯ ಖಾತರಿಯಲ್ಲ.",
-
-faq4:"ನಾನು ಬಿಲ್ಡರ್ ಆಗಿ PRANAURA ಅನ್ನು ಸಂಪರ್ಕಿಸಬಹುದೇ?",
-faq4a:"ಹೌದು. ಬಿಲ್ಡರ್‌ಗಳು ಮತ್ತು ಡೆವಲಪರ್‌ಗಳು Smart Match ಫಾರ್ಮ್ ಅಥವಾ ನೇರ ಸಂಪರ್ಕದ ಮೂಲಕ ತಮ್ಮ ಅವಶ್ಯಕತೆಗಳನ್ನು ಚರ್ಚಿಸಬಹುದು.",
-
-faq5:"ಹೂಡಿಕೆದಾರರು ಮತ್ತು ಖರೀದಿದಾರರು ಅವಶ್ಯಕತೆ ಸಲ್ಲಿಸಬಹುದೇ?",
-faq5a:"ಹೌದು. ಹೂಡಿಕೆದಾರರು ಮತ್ತು ಖರೀದಿದಾರರು ತಮ್ಮ ಆದ್ಯತೆಯ ಸ್ಥಳ, ಆಸ್ತಿ ಪ್ರಕಾರ, ಬಜೆಟ್, ಸಮಯ ಮತ್ತು ಉದ್ದೇಶಗಳನ್ನು ಸಲ್ಲಿಸಬಹುದು.",
-
-faq6:"AI ನಿಜವಾದ AI ಮಾದರಿಗೆ ಸಂಪರ್ಕಿತವಾಗಿದೆಯೇ?",
-faq6a:"ಸಾರ್ವಜನಿಕ ಫ್ರಂಟ್‌ಎಂಡ್ AI ಸಹಾಯಕ ಇಂಟರ್‌ಫೇಸ್ ಮತ್ತು ಫಾಲ್‌ಬ್ಯಾಕ್ ಪ್ರತಿಕ್ರಿಯೆಗಳನ್ನು ಹೊಂದಿದೆ. ಉತ್ಪಾದನಾ ವ್ಯವಸ್ಥೆಯನ್ನು Ollama ಮತ್ತು Qwen ನಂತಹ ಖಾಸಗಿ AI ವ್ಯವಸ್ಥೆಯನ್ನು ನಡೆಸುವ ಸುರಕ್ಷಿತ ಬ್ಯಾಕ್‌ಎಂಡ್‌ಗೆ ಸಂಪರ್ಕಿಸಬಹುದು.",
-
-contactEyebrow:"PRANAURA ಸಂಪರ್ಕಿಸಿ",
-contactTitle:"ಸರಿಯಾದ ಸಂಪರ್ಕವನ್ನು ನಿರ್ಮಿಸೋಣ.",
-contactText:"ನೀವು ಬಿಲ್ಡರ್, ಭೂಮಾಲೀಕ, ಹೂಡಿಕೆದಾರ ಅಥವಾ ಆಸ್ತಿ ಖರೀದಿದಾರರಾಗಿದ್ದರೂ, ನಿಮ್ಮ ಅವಶ್ಯಕತೆಯಿಂದ ಪ್ರಾರಂಭಿಸಿ.",
-
-phone:"ಫೋನ್ / WhatsApp",
-location:"ಸ್ಥಳ",
-
-contactBoxTitle:"ನೇರ ಸಂಭಾಷಣೆ ಬೇಕೇ?",
-contactBoxText:"WhatsApp ಮೂಲಕ PRANAURA ಅನ್ನು ಸಂಪರ್ಕಿಸಿ ಮತ್ತು ನೀವು ಬಿಲ್ಡರ್, ಭೂಮಾಲೀಕ, ಹೂಡಿಕೆದಾರ ಅಥವಾ ಖರೀದಿದಾರರೇ ಎಂದು ತಿಳಿಸಿ.",
-
-openWhatsapp:"WhatsApp ತೆರೆಯಿರಿ",
-
-footerTag:"ಬಿಲ್ಡರ್ ಮತ್ತು ಹೂಡಿಕೆದಾರರ ಕಾರ್ಯತಂತ್ರದ ಪಾಲುದಾರಿಕೆ",
-footerNote:"ರಿಯಲ್ ಎಸ್ಟೇಟ್ ಸಲಹಾ ಮತ್ತು ನೆಟ್‌ವರ್ಕಿಂಗ್ ವೇದಿಕೆ.",
-
-cookieText:"ಭಾಷೆ, ಥೀಮ್ ಮತ್ತು ಒಪ್ಪಿಗೆ ಸ್ಥಿತಿಯಂತಹ ಆದ್ಯತೆಗಳಿಗಾಗಿ PRANAURA ಸೀಮಿತ ಬ್ರೌಸರ್ ಸಂಗ್ರಹಣೆಯನ್ನು ಬಳಸಬಹುದು.",
-
-learn:"ಇನ್ನಷ್ಟು ತಿಳಿಯಿರಿ",
-accept:"ಸ್ವೀಕರಿಸಿ"
-
-}
-
-};
-
-
-/* =========================================================
-   LANGUAGE APPLY
-========================================================= */
-
-let currentLanguage =
-    localStorage.getItem("pranauraLanguage") || "en";
-
-
-function applyLanguage(){
-
-    const data =
-        translations[currentLanguage];
-
-    document.documentElement.lang =
-        currentLanguage === "kn" ? "kn" : "en";
-
-    document.body.classList.toggle(
-        "kn",
-        currentLanguage === "kn"
-    );
-
-
-    document.querySelectorAll("[data-i18n]")
-        .forEach(element=>{
-
-            const key =
-                element.dataset.i18n;
-
-            if(data[key]){
-                element.textContent = data[key];
-            }
-
-        });
-
-
-    document.getElementById("langBtn")
-        .textContent =
-        currentLanguage === "en"
-        ? "ಕನ್ನಡ"
-        : "EN";
+document.getElementById("cookieAccept")
+.addEventListener("click", () => {
 
     localStorage.setItem(
-        "pranauraLanguage",
-        currentLanguage
+        "pranauraCookieConsent",
+        "accepted"
     );
 
-}
+    cookieBanner.classList.remove("show");
 
-
-applyLanguage();
-
-
-document.getElementById("langBtn")
-    .addEventListener("click",()=>{
-
-        currentLanguage =
-            currentLanguage === "en"
-            ? "kn"
-            : "en";
-
-        applyLanguage();
-
-    });
+});
 
 
 /* =========================================================
-   CLOSE COOKIE IF ACCEPTED
-========================================================= */
+   TOAST
+   ========================================================= */
 
-if(localStorage.getItem("pranauraConsent")){
-    document.getElementById("cookie")
-        .classList.remove("show");
+let toastTimer;
+
+function showToast(message){
+
+    const toast =
+        document.getElementById("toast");
+
+    toast.textContent =
+        message;
+
+    toast.classList.add("show");
+
+    clearTimeout(toastTimer);
+
+    toastTimer =
+        setTimeout(() => {
+
+            toast.classList.remove("show");
+
+        },3000);
+
 }
+
+
+/* =========================================================
+   PHONE VALIDATION
+   ========================================================= */
+
+document.getElementById("phone")
+.addEventListener("input", function(){
+
+    this.value =
+        this.value.replace(
+            /[^0-9+\-\s()]/g,
+            ""
+        );
+
+});
+
+
+/* =========================================================
+   PREVENT EMPTY AI SUBMISSION
+   ========================================================= */
+
+aiInput.addEventListener("keydown", event => {
+
+    if(
+        event.key === "Enter" &&
+        !event.shiftKey
+    ){
+
+        event.preventDefault();
+
+        aiForm.dispatchEvent(
+            new Event("submit")
+        );
+
+    }
+
+});
 
 </script>
 
