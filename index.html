@@ -1,34 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 
 <title>PRANAURA | Strategic Builder & Investor Partnerships</title>
 
-<meta name="description" content="PRANAURA is a professional real estate advisory and connection platform connecting builders, developers, landowners, investors and property buyers.">
+<meta name="description"
+      content="PRANAURA is a professional real estate advisory and connection platform connecting builders, developers, landowners, investors and property buyers.">
 
-<meta name="keywords" content="PRANAURA, real estate advisory, builders, investors, landowners, property buyers, real estate partnerships">
+<meta name="keywords"
+      content="PRANAURA, real estate advisory, builders, investors, landowners, property buyers, real estate partnerships">
 
 <meta name="author" content="PRANAURA">
 
-<meta property="og:title" content="PRANAURA | Strategic Builder & Investor Partnerships">
-<meta property="og:description" content="Real estate relationships, structured for opportunity.">
-<meta property="og:type" content="website">
+<meta property="og:title"
+      content="PRANAURA | Strategic Builder & Investor Partnerships">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<meta property="og:description"
+      content="Real estate relationships, structured for opportunity.">
 
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Noto+Sans+Kannada:wght@400;500;600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<meta property="og:type"
+      content="website">
+
+<link rel="preconnect"
+      href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Noto+Sans+Kannada:wght@400;500;600&family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet">
+
 
 <style>
 
 /* =========================================================
-   PRANAURA — LUXURY DESIGN SYSTEM
+   PRANAURA
+   LUXURY REAL ESTATE WEBSITE
 ========================================================= */
 
 :root{
+
     --cream:#f7f0e5;
     --cream-light:#fbf8f2;
     --cream-dark:#eee2cf;
@@ -46,10 +64,13 @@
 
     --white:#fffdf9;
 
-    --shadow:0 20px 60px rgba(40,27,20,.08);
+    --shadow:
+        0 20px 60px rgba(40,27,20,.08);
 
     --max-width:1280px;
+
 }
+
 
 /* =========================================================
    RESET
@@ -63,23 +84,39 @@
 
 html{
     scroll-behavior:smooth;
-}
-
-body{
-    font-family:"Poppins",sans-serif;
-    background:var(--cream);
-    color:var(--text);
-    line-height:1.7;
+    width:100%;
     overflow-x:hidden;
 }
 
-img{
+body{
+
+    width:100%;
     max-width:100%;
+
+    font-family:"Poppins",sans-serif;
+
+    background:var(--cream);
+
+    color:var(--text);
+
+    line-height:1.7;
+
+    overflow-x:hidden;
+
+    -webkit-text-size-adjust:100%;
+}
+
+img{
+
+    max-width:100%;
+
     display:block;
 }
 
 a{
+
     text-decoration:none;
+
     color:inherit;
 }
 
@@ -87,48 +124,68 @@ button,
 input,
 select,
 textarea{
+
     font:inherit;
 }
 
 button{
+
     cursor:pointer;
 }
 
 .container{
+
     width:min(92%,var(--max-width));
+
     margin:auto;
 }
+
 
 /* =========================================================
    HEADER
 ========================================================= */
 
 header{
+
     position:sticky;
+
     top:0;
+
     z-index:1000;
+
+    width:100%;
 
     background:rgba(247,240,229,.96);
 
     border-bottom:1px solid var(--border);
 
     backdrop-filter:blur(15px);
+
+    -webkit-backdrop-filter:blur(15px);
 }
 
 .nav{
+
     min-height:86px;
 
     display:flex;
+
     align-items:center;
+
     justify-content:space-between;
 
     gap:30px;
 }
 
+
+/* TEXT ONLY — NO LOGO IN HEADER */
+
 .brand{
+
     font-family:"Cormorant Garamond",serif;
 
     font-size:29px;
+
     font-weight:600;
 
     letter-spacing:7px;
@@ -136,39 +193,59 @@ header{
     white-space:nowrap;
 
     color:var(--brown);
+
+    flex-shrink:0;
 }
 
+
 .nav-links{
+
     display:flex;
+
     align-items:center;
+
     justify-content:center;
 
     gap:25px;
 
     flex:1;
+
+    min-width:0;
 }
 
 .nav-links a{
+
     font-size:12px;
+
     font-weight:400;
 
     color:#665a51;
 
     transition:.25s ease;
+
+    white-space:nowrap;
 }
 
 .nav-links a:hover{
+
     color:var(--gold);
 }
 
+
 .nav-actions{
+
     display:flex;
+
     align-items:center;
 
     gap:10px;
+
+    flex-shrink:0;
 }
 
+
 .nav-button{
+
     background:transparent;
 
     border:1px solid rgba(40,27,20,.18);
@@ -176,6 +253,7 @@ header{
     color:var(--brown);
 
     min-width:46px;
+
     height:42px;
 
     padding:0 14px;
@@ -188,12 +266,17 @@ header{
 }
 
 .nav-button:hover{
+
     border-color:var(--gold);
+
     color:var(--gold);
 }
 
+
 .connect{
+
     background:var(--brown);
+
     color:#fff;
 
     padding:13px 25px;
@@ -201,80 +284,250 @@ header{
     border-radius:30px;
 
     font-size:12px;
+
     font-weight:500;
 
     transition:.25s ease;
+
+    white-space:nowrap;
 }
 
 .connect:hover{
+
     background:var(--gold);
 }
 
+
 .menu{
+
     display:none;
 }
+
 
 /* =========================================================
    HERO
 ========================================================= */
 
 .hero{
+
+    width:100%;
+
     min-height:calc(100vh - 86px);
 
     display:flex;
+
     align-items:center;
+
     justify-content:center;
 
     text-align:center;
 
-    padding:80px 20px 100px;
+    padding:75px 20px 95px;
+
+    overflow:hidden;
 
     background:
+
         radial-gradient(
             circle at center,
-            rgba(255,255,255,.72) 0%,
-            rgba(247,240,229,0) 58%
+            rgba(255,255,255,.76) 0%,
+            rgba(247,240,229,0) 60%
         );
 }
 
+
 .hero-inner{
+
     width:100%;
+
     max-width:1100px;
 
     margin:auto;
+
+    min-width:0;
 }
 
-/* ONLY IMAGE ON WEBSITE */
+
+/* =========================================================
+   PRANAURA LOGO
+   LARGE + FADE → BRIGHT TRANSITION
+========================================================= */
 
 .hero-logo{
-    width:250px;
+
+    width:285px;
+
+    max-width:72vw;
+
     height:auto;
 
     margin:0 auto 42px;
 
     object-fit:contain;
 
-    filter:drop-shadow(0 15px 22px rgba(40,27,20,.13));
+    display:block;
+
+    opacity:0;
+
+    transform:scale(.88);
+
+    filter:
+
+        brightness(.45)
+
+        blur(1.5px)
+
+        drop-shadow(
+            0 8px 15px
+            rgba(40,27,20,.05)
+        );
+
+    animation:
+
+        logoReveal
+        2.5s
+        cubic-bezier(.22,.61,.36,1)
+        forwards;
+
+    will-change:
+        opacity,
+        transform,
+        filter;
 }
 
-/* No circle/ring/container around logo */
+
+/* =========================================================
+   LOGO ANIMATION
+========================================================= */
+
+@keyframes logoReveal{
+
+    0%{
+
+        opacity:0;
+
+        transform:scale(.88);
+
+        filter:
+
+            brightness(.45)
+
+            blur(1.5px)
+
+            drop-shadow(
+                0 8px 15px
+                rgba(40,27,20,.05)
+            );
+    }
+
+
+    30%{
+
+        opacity:.20;
+
+        transform:scale(.92);
+
+        filter:
+
+            brightness(.62)
+
+            blur(1px)
+
+            drop-shadow(
+                0 10px 18px
+                rgba(40,27,20,.07)
+            );
+    }
+
+
+    60%{
+
+        opacity:.58;
+
+        transform:scale(.97);
+
+        filter:
+
+            brightness(.82)
+
+            blur(.45px)
+
+            drop-shadow(
+                0 14px 22px
+                rgba(40,27,20,.10)
+            );
+    }
+
+
+    82%{
+
+        opacity:.85;
+
+        transform:scale(.995);
+
+        filter:
+
+            brightness(.94)
+
+            blur(.1px)
+
+            drop-shadow(
+                0 17px 26px
+                rgba(40,27,20,.13)
+            );
+    }
+
+
+    100%{
+
+        opacity:1;
+
+        transform:scale(1);
+
+        filter:
+
+            brightness(1)
+
+            blur(0)
+
+            drop-shadow(
+                0 18px 28px
+                rgba(40,27,20,.16)
+            );
+    }
+
+}
+
+
+/* =========================================================
+   HERO TEXT
+========================================================= */
 
 .hero-kicker{
+
     color:var(--gold);
 
     font-size:12px;
+
     font-weight:500;
 
     letter-spacing:5px;
+
     text-transform:uppercase;
 
     margin-bottom:20px;
 }
 
+
 .hero-title{
+
     font-family:"Cormorant Garamond",serif;
 
-    font-size:clamp(3rem,5.5vw,5.7rem);
+    font-size:clamp(
+        3rem,
+        5.5vw,
+        5.7rem
+    );
 
     line-height:.98;
 
@@ -290,6 +543,7 @@ header{
 }
 
 .hero-title em{
+
     display:block;
 
     color:var(--gold);
@@ -299,7 +553,9 @@ header{
     font-weight:400;
 }
 
+
 .hero-text{
+
     max-width:700px;
 
     margin:0 auto 34px;
@@ -311,7 +567,9 @@ header{
     line-height:1.9;
 }
 
+
 .hero-buttons{
+
     display:flex;
 
     justify-content:center;
@@ -323,10 +581,13 @@ header{
     flex-wrap:wrap;
 }
 
+
 .btn-primary{
+
     display:inline-flex;
 
     align-items:center;
+
     justify-content:center;
 
     min-width:205px;
@@ -340,26 +601,34 @@ header{
     border-radius:30px;
 
     font-size:12px;
+
     font-weight:500;
 
     border:1px solid var(--brown);
 
     transition:.3s ease;
 
-    box-shadow:0 10px 25px rgba(40,27,20,.12);
+    box-shadow:
+        0 10px 25px
+        rgba(40,27,20,.12);
 }
 
 .btn-primary:hover{
+
     background:var(--gold);
+
     border-color:var(--gold);
 
     transform:translateY(-2px);
 }
 
+
 .btn-secondary{
+
     display:inline-flex;
 
     align-items:center;
+
     justify-content:center;
 
     min-width:205px;
@@ -375,12 +644,14 @@ header{
     border-radius:30px;
 
     font-size:12px;
+
     font-weight:500;
 
     transition:.3s ease;
 }
 
 .btn-secondary:hover{
+
     border-color:var(--gold);
 
     color:var(--gold);
@@ -388,7 +659,9 @@ header{
     transform:translateY(-2px);
 }
 
+
 .launch{
+
     margin-top:27px;
 
     font-size:11px;
@@ -400,11 +673,13 @@ header{
     text-transform:uppercase;
 }
 
+
 /* =========================================================
-   INTRO STRIP
+   INTRO
 ========================================================= */
 
 .intro{
+
     background:var(--cream-light);
 
     padding:100px 20px 90px;
@@ -412,7 +687,9 @@ header{
     border-top:1px solid rgba(40,27,20,.05);
 }
 
+
 .section-kicker{
+
     text-align:center;
 
     color:var(--gold);
@@ -426,10 +703,16 @@ header{
     margin-bottom:14px;
 }
 
+
 .section-title{
+
     font-family:"Cormorant Garamond",serif;
 
-    font-size:clamp(2.5rem,4vw,4rem);
+    font-size:clamp(
+        2.5rem,
+        4vw,
+        4rem
+    );
 
     line-height:1;
 
@@ -442,36 +725,50 @@ header{
     margin-bottom:55px;
 }
 
+
 .intro-grid{
+
     display:grid;
 
-    grid-template-columns:repeat(4,1fr);
+    grid-template-columns:
+        repeat(4,1fr);
 
     max-width:1150px;
 
     margin:auto;
 }
 
+
 .intro-card{
+
     padding:15px 35px;
 
     text-align:center;
 
-    border-right:1px solid rgba(185,129,63,.25);
+    border-right:
+        1px solid
+        rgba(185,129,63,.25);
 }
 
+
 .intro-card:last-child{
+
     border-right:none;
 }
 
+
 .intro-icon{
+
     width:48px;
+
     height:48px;
 
     margin:0 auto 18px;
 
     display:flex;
+
     align-items:center;
+
     justify-content:center;
 
     color:var(--gold);
@@ -479,7 +776,9 @@ header{
     font-size:26px;
 }
 
+
 .intro-card h3{
+
     font-family:"Cormorant Garamond",serif;
 
     font-size:24px;
@@ -491,7 +790,9 @@ header{
     margin-bottom:8px;
 }
 
+
 .intro-card p{
+
     color:var(--muted);
 
     font-size:12px;
@@ -499,15 +800,19 @@ header{
     line-height:1.8;
 }
 
+
 /* =========================================================
-   GENERAL SECTIONS
+   GENERAL
 ========================================================= */
 
 section:not(.hero):not(.intro){
+
     padding:110px 0;
 }
 
+
 .section-head{
+
     max-width:750px;
 
     margin:0 auto 60px;
@@ -515,7 +820,9 @@ section:not(.hero):not(.intro){
     text-align:center;
 }
 
+
 .section-head p{
+
     color:var(--muted);
 
     font-size:14px;
@@ -523,15 +830,19 @@ section:not(.hero):not(.intro){
     line-height:1.9;
 }
 
+
 /* =========================================================
    ABOUT
 ========================================================= */
 
 .about{
+
     background:var(--cream);
 }
 
+
 .about-grid{
+
     display:grid;
 
     grid-template-columns:1fr 1fr;
@@ -541,7 +852,9 @@ section:not(.hero):not(.intro){
     align-items:center;
 }
 
+
 .about-label{
+
     color:var(--gold);
 
     font-size:11px;
@@ -553,10 +866,16 @@ section:not(.hero):not(.intro){
     margin-bottom:15px;
 }
 
+
 .about-title{
+
     font-family:"Cormorant Garamond",serif;
 
-    font-size:clamp(2.7rem,4vw,4.5rem);
+    font-size:clamp(
+        2.7rem,
+        4vw,
+        4.5rem
+    );
 
     line-height:1.02;
 
@@ -567,7 +886,9 @@ section:not(.hero):not(.intro){
     margin-bottom:25px;
 }
 
+
 .about-text{
+
     color:var(--muted);
 
     font-size:14px;
@@ -575,11 +896,15 @@ section:not(.hero):not(.intro){
     line-height:2;
 }
 
+
 .about-text + .about-text{
+
     margin-top:15px;
 }
 
+
 .about-panel{
+
     background:var(--brown);
 
     color:white;
@@ -589,7 +914,9 @@ section:not(.hero):not(.intro){
     box-shadow:var(--shadow);
 }
 
+
 .about-panel small{
+
     color:#d4a567;
 
     text-transform:uppercase;
@@ -599,7 +926,9 @@ section:not(.hero):not(.intro){
     font-size:10px;
 }
 
+
 .about-panel h3{
+
     font-family:"Cormorant Garamond",serif;
 
     font-size:36px;
@@ -611,7 +940,9 @@ section:not(.hero):not(.intro){
     margin:18px 0;
 }
 
+
 .about-panel p{
+
     color:rgba(255,255,255,.72);
 
     font-size:13px;
@@ -619,26 +950,35 @@ section:not(.hero):not(.intro){
     line-height:1.9;
 }
 
+
 /* =========================================================
-   WHY PRANAURA
+   WHY
 ========================================================= */
 
 .why{
+
     background:var(--cream-light);
 }
 
+
 .cards{
+
     display:grid;
 
-    grid-template-columns:repeat(3,1fr);
+    grid-template-columns:
+        repeat(3,1fr);
 
     gap:18px;
 }
 
+
 .card{
+
     background:rgba(255,255,255,.55);
 
-    border:1px solid rgba(40,27,20,.1);
+    border:
+        1px solid
+        rgba(40,27,20,.1);
 
     padding:38px;
 
@@ -647,15 +987,20 @@ section:not(.hero):not(.intro){
     transition:.3s ease;
 }
 
+
 .card:hover{
+
     transform:translateY(-5px);
 
     box-shadow:var(--shadow);
 
-    border-color:rgba(185,129,63,.35);
+    border-color:
+        rgba(185,129,63,.35);
 }
 
+
 .card-number{
+
     color:var(--gold);
 
     font-size:11px;
@@ -665,7 +1010,9 @@ section:not(.hero):not(.intro){
     margin-bottom:25px;
 }
 
+
 .card h3{
+
     font-family:"Cormorant Garamond",serif;
 
     font-size:29px;
@@ -677,7 +1024,9 @@ section:not(.hero):not(.intro){
     margin-bottom:12px;
 }
 
+
 .card p{
+
     color:var(--muted);
 
     font-size:13px;
@@ -685,23 +1034,30 @@ section:not(.hero):not(.intro){
     line-height:1.8;
 }
 
+
 /* =========================================================
    YOUR PATH
 ========================================================= */
 
 .path{
+
     background:var(--cream);
 }
 
+
 .path-grid{
+
     display:grid;
 
-    grid-template-columns:repeat(4,1fr);
+    grid-template-columns:
+        repeat(4,1fr);
 
     gap:15px;
 }
 
+
 .path-card{
+
     padding:40px 30px;
 
     border:1px solid var(--border);
@@ -711,13 +1067,17 @@ section:not(.hero):not(.intro){
     transition:.3s ease;
 }
 
+
 .path-card:hover{
+
     background:var(--cream-light);
 
     transform:translateY(-4px);
 }
 
+
 .path-card h3{
+
     font-family:"Cormorant Garamond",serif;
 
     font-size:27px;
@@ -729,7 +1089,9 @@ section:not(.hero):not(.intro){
     color:var(--brown);
 }
 
+
 .path-card p{
+
     font-size:12px;
 
     color:var(--muted);
@@ -737,35 +1099,46 @@ section:not(.hero):not(.intro){
     line-height:1.8;
 }
 
+
 /* =========================================================
    PROCESS
 ========================================================= */
 
 .process{
+
     background:var(--cream-light);
 }
 
+
 .process-grid{
+
     display:grid;
 
-    grid-template-columns:repeat(4,1fr);
+    grid-template-columns:
+        repeat(4,1fr);
 
     border-top:1px solid var(--border);
 
     border-bottom:1px solid var(--border);
 }
 
+
 .process-step{
+
     padding:45px 30px;
 
     border-right:1px solid var(--border);
 }
 
+
 .process-step:last-child{
+
     border-right:none;
 }
 
+
 .step-number{
+
     color:var(--gold);
 
     font-family:"Cormorant Garamond",serif;
@@ -775,7 +1148,9 @@ section:not(.hero):not(.intro){
     margin-bottom:18px;
 }
 
+
 .process-step h3{
+
     font-family:"Cormorant Garamond",serif;
 
     font-size:28px;
@@ -785,7 +1160,9 @@ section:not(.hero):not(.intro){
     margin-bottom:10px;
 }
 
+
 .process-step p{
+
     font-size:12px;
 
     color:var(--muted);
@@ -793,15 +1170,19 @@ section:not(.hero):not(.intro){
     line-height:1.8;
 }
 
+
 /* =========================================================
    NETWORK
 ========================================================= */
 
 .network{
+
     background:var(--cream);
 }
 
+
 .network-box{
+
     background:var(--brown);
 
     padding:75px;
@@ -813,14 +1194,22 @@ section:not(.hero):not(.intro){
     box-shadow:var(--shadow);
 }
 
+
 .network-box .section-kicker{
+
     color:#d1a05f;
 }
 
+
 .network-box h2{
+
     font-family:"Cormorant Garamond",serif;
 
-    font-size:clamp(2.8rem,5vw,5rem);
+    font-size:clamp(
+        2.8rem,
+        5vw,
+        5rem
+    );
 
     font-weight:500;
 
@@ -829,7 +1218,9 @@ section:not(.hero):not(.intro){
     margin-bottom:25px;
 }
 
+
 .network-box p{
+
     max-width:700px;
 
     margin:0 auto 30px;
@@ -841,7 +1232,9 @@ section:not(.hero):not(.intro){
     line-height:1.9;
 }
 
+
 .network-list{
+
     display:flex;
 
     justify-content:center;
@@ -853,8 +1246,12 @@ section:not(.hero):not(.intro){
     margin-top:25px;
 }
 
+
 .network-pill{
-    border:1px solid rgba(255,255,255,.22);
+
+    border:
+        1px solid
+        rgba(255,255,255,.22);
 
     padding:9px 17px;
 
@@ -865,23 +1262,30 @@ section:not(.hero):not(.intro){
     font-size:11px;
 }
 
+
 /* =========================================================
    SERVICES
 ========================================================= */
 
 .services{
+
     background:var(--cream-light);
 }
 
+
 .services-grid{
+
     display:grid;
 
-    grid-template-columns:repeat(2,1fr);
+    grid-template-columns:
+        repeat(2,1fr);
 
     gap:18px;
 }
 
+
 .service{
+
     display:grid;
 
     grid-template-columns:75px 1fr;
@@ -895,7 +1299,9 @@ section:not(.hero):not(.intro){
     background:rgba(255,255,255,.3);
 }
 
+
 .service-number{
+
     font-family:"Cormorant Garamond",serif;
 
     color:var(--gold);
@@ -903,7 +1309,9 @@ section:not(.hero):not(.intro){
     font-size:35px;
 }
 
+
 .service h3{
+
     font-family:"Cormorant Garamond",serif;
 
     font-size:28px;
@@ -913,7 +1321,9 @@ section:not(.hero):not(.intro){
     margin-bottom:8px;
 }
 
+
 .service p{
+
     font-size:12px;
 
     color:var(--muted);
@@ -921,15 +1331,19 @@ section:not(.hero):not(.intro){
     line-height:1.8;
 }
 
+
 /* =========================================================
    SMART MATCH
 ========================================================= */
 
 .match{
+
     background:var(--cream);
 }
 
+
 .match-box{
+
     display:grid;
 
     grid-template-columns:.8fr 1.2fr;
@@ -939,10 +1353,16 @@ section:not(.hero):not(.intro){
     align-items:start;
 }
 
+
 .match-copy h2{
+
     font-family:"Cormorant Garamond",serif;
 
-    font-size:clamp(3rem,4.5vw,4.8rem);
+    font-size:clamp(
+        3rem,
+        4.5vw,
+        4.8rem
+    );
 
     line-height:1;
 
@@ -953,7 +1373,9 @@ section:not(.hero):not(.intro){
     margin-bottom:20px;
 }
 
+
 .match-copy p{
+
     color:var(--muted);
 
     font-size:14px;
@@ -961,7 +1383,9 @@ section:not(.hero):not(.intro){
     line-height:1.9;
 }
 
+
 .match-form{
+
     background:var(--cream-light);
 
     padding:40px;
@@ -971,7 +1395,9 @@ section:not(.hero):not(.intro){
     box-shadow:var(--shadow);
 }
 
+
 .form-grid{
+
     display:grid;
 
     grid-template-columns:1fr 1fr;
@@ -979,7 +1405,9 @@ section:not(.hero):not(.intro){
     gap:16px;
 }
 
+
 .field{
+
     display:flex;
 
     flex-direction:column;
@@ -987,11 +1415,15 @@ section:not(.hero):not(.intro){
     gap:7px;
 }
 
+
 .field.full{
+
     grid-column:1/-1;
 }
 
+
 .field label{
+
     font-size:10px;
 
     text-transform:uppercase;
@@ -1001,12 +1433,16 @@ section:not(.hero):not(.intro){
     color:#76685e;
 }
 
+
 .field input,
 .field select,
 .field textarea{
+
     width:100%;
 
-    border:1px solid rgba(40,27,20,.16);
+    border:
+        1px solid
+        rgba(40,27,20,.16);
 
     background:white;
 
@@ -1017,21 +1453,29 @@ section:not(.hero):not(.intro){
     outline:none;
 
     border-radius:2px;
+
+    min-width:0;
 }
+
 
 .field input:focus,
 .field select:focus,
 .field textarea:focus{
+
     border-color:var(--gold);
 }
 
+
 .field textarea{
+
     min-height:100px;
 
     resize:vertical;
 }
 
+
 .checkbox{
+
     display:flex;
 
     gap:10px;
@@ -1047,11 +1491,17 @@ section:not(.hero):not(.intro){
     line-height:1.6;
 }
 
+
 .checkbox input{
+
     margin-top:5px;
+
+    flex-shrink:0;
 }
 
+
 .form-submit{
+
     width:100%;
 
     margin-top:22px;
@@ -1071,11 +1521,15 @@ section:not(.hero):not(.intro){
     transition:.3s ease;
 }
 
+
 .form-submit:hover{
+
     background:var(--gold);
 }
 
+
 .match-result{
+
     margin-top:18px;
 
     padding:15px;
@@ -1091,25 +1545,33 @@ section:not(.hero):not(.intro){
     display:none;
 }
 
+
 /* =========================================================
    AI
 ========================================================= */
 
 .ai{
+
     background:var(--brown);
 
     color:white;
 }
 
+
 .ai .section-title{
+
     color:white;
 }
 
+
 .ai .section-kicker{
+
     color:#d2a15f;
 }
 
+
 .ai-grid{
+
     display:grid;
 
     grid-template-columns:1fr 1fr;
@@ -1117,15 +1579,21 @@ section:not(.hero):not(.intro){
     gap:25px;
 }
 
+
 .ai-card{
-    border:1px solid rgba(255,255,255,.16);
+
+    border:
+        1px solid
+        rgba(255,255,255,.16);
 
     padding:40px;
 
     background:rgba(255,255,255,.035);
 }
 
+
 .ai-card h3{
+
     font-family:"Cormorant Garamond",serif;
 
     font-size:31px;
@@ -1135,7 +1603,9 @@ section:not(.hero):not(.intro){
     margin-bottom:15px;
 }
 
+
 .ai-card p{
+
     color:rgba(255,255,255,.68);
 
     font-size:13px;
@@ -1143,7 +1613,9 @@ section:not(.hero):not(.intro){
     line-height:1.9;
 }
 
+
 .ai-list{
+
     margin-top:22px;
 
     display:grid;
@@ -1151,17 +1623,23 @@ section:not(.hero):not(.intro){
     gap:12px;
 }
 
+
 .ai-item{
+
     padding-bottom:12px;
 
-    border-bottom:1px solid rgba(255,255,255,.1);
+    border-bottom:
+        1px solid
+        rgba(255,255,255,.1);
 
     color:rgba(255,255,255,.78);
 
     font-size:12px;
 }
 
+
 .ai-note{
+
     margin-top:25px;
 
     color:rgba(255,255,255,.42);
@@ -1169,15 +1647,19 @@ section:not(.hero):not(.intro){
     font-size:10px;
 }
 
+
 /* =========================================================
    FOUNDER
 ========================================================= */
 
 .founder{
+
     background:var(--cream-light);
 }
 
+
 .founder-box{
+
     max-width:900px;
 
     margin:auto;
@@ -1185,10 +1667,16 @@ section:not(.hero):not(.intro){
     text-align:center;
 }
 
+
 .founder-name{
+
     font-family:"Cormorant Garamond",serif;
 
-    font-size:clamp(3rem,5vw,5rem);
+    font-size:clamp(
+        3rem,
+        5vw,
+        5rem
+    );
 
     color:var(--brown);
 
@@ -1197,7 +1685,9 @@ section:not(.hero):not(.intro){
     margin-bottom:5px;
 }
 
+
 .founder-role{
+
     color:var(--gold);
 
     font-size:11px;
@@ -1209,7 +1699,9 @@ section:not(.hero):not(.intro){
     margin-bottom:25px;
 }
 
+
 .founder-box p{
+
     color:var(--muted);
 
     max-width:720px;
@@ -1221,23 +1713,30 @@ section:not(.hero):not(.intro){
     line-height:2;
 }
 
+
 /* =========================================================
    TRUST
 ========================================================= */
 
 .trust{
+
     background:var(--cream);
 }
 
+
 .trust-grid{
+
     display:grid;
 
-    grid-template-columns:repeat(3,1fr);
+    grid-template-columns:
+        repeat(3,1fr);
 
     gap:18px;
 }
 
+
 .trust-card{
+
     padding:35px;
 
     border-top:2px solid var(--gold);
@@ -1245,7 +1744,9 @@ section:not(.hero):not(.intro){
     background:rgba(255,255,255,.32);
 }
 
+
 .trust-card h3{
+
     font-family:"Cormorant Garamond",serif;
 
     font-size:27px;
@@ -1255,7 +1756,9 @@ section:not(.hero):not(.intro){
     margin-bottom:10px;
 }
 
+
 .trust-card p{
+
     color:var(--muted);
 
     font-size:12px;
@@ -1263,25 +1766,33 @@ section:not(.hero):not(.intro){
     line-height:1.8;
 }
 
+
 /* =========================================================
    FAQ
 ========================================================= */
 
 .faq{
+
     background:var(--cream-light);
 }
 
+
 .faq-list{
+
     max-width:900px;
 
     margin:auto;
 }
 
+
 .faq-item{
+
     border-bottom:1px solid var(--border);
 }
 
+
 .faq-question{
+
     width:100%;
 
     background:none;
@@ -1303,9 +1814,23 @@ section:not(.hero):not(.intro){
     justify-content:space-between;
 
     align-items:center;
+
+    gap:20px;
 }
 
+
+.faq-question span{
+
+    flex-shrink:0;
+
+    font-family:Poppins,sans-serif;
+
+    font-size:20px;
+}
+
+
 .faq-answer{
+
     max-height:0;
 
     overflow:hidden;
@@ -1319,23 +1844,31 @@ section:not(.hero):not(.intro){
     line-height:1.9;
 }
 
+
 .faq-answer p{
+
     padding-bottom:22px;
 }
 
+
 .faq-item.active .faq-answer{
+
     max-height:300px;
 }
+
 
 /* =========================================================
    CONTACT
 ========================================================= */
 
 .contact{
+
     background:var(--cream);
 }
 
+
 .contact-box{
+
     background:var(--cream-light);
 
     border:1px solid var(--border);
@@ -1349,10 +1882,16 @@ section:not(.hero):not(.intro){
     gap:60px;
 }
 
+
 .contact-title{
+
     font-family:"Cormorant Garamond",serif;
 
-    font-size:clamp(3rem,4.5vw,4.8rem);
+    font-size:clamp(
+        3rem,
+        4.5vw,
+        4.8rem
+    );
 
     line-height:1;
 
@@ -1363,7 +1902,9 @@ section:not(.hero):not(.intro){
     margin-bottom:20px;
 }
 
+
 .contact-copy{
+
     color:var(--muted);
 
     font-size:13px;
@@ -1371,13 +1912,17 @@ section:not(.hero):not(.intro){
     line-height:1.9;
 }
 
+
 .contact-details{
+
     display:grid;
 
     gap:22px;
 }
 
+
 .contact-item small{
+
     display:block;
 
     color:var(--gold);
@@ -1391,22 +1936,30 @@ section:not(.hero):not(.intro){
     margin-bottom:4px;
 }
 
+
 .contact-item a,
 .contact-item span{
+
     color:var(--brown);
 
     font-size:14px;
+
+    word-break:break-word;
 }
 
+
 .contact-item a:hover{
+
     color:var(--gold);
 }
+
 
 /* =========================================================
    FOOTER
 ========================================================= */
 
 footer{
+
     background:var(--brown);
 
     color:white;
@@ -1414,7 +1967,9 @@ footer{
     padding:55px 0 25px;
 }
 
+
 .footer-top{
+
     display:flex;
 
     justify-content:space-between;
@@ -1425,10 +1980,14 @@ footer{
 
     padding-bottom:40px;
 
-    border-bottom:1px solid rgba(255,255,255,.12);
+    border-bottom:
+        1px solid
+        rgba(255,255,255,.12);
 }
 
+
 .footer-brand{
+
     font-family:"Cormorant Garamond",serif;
 
     font-size:31px;
@@ -1436,7 +1995,9 @@ footer{
     letter-spacing:6px;
 }
 
+
 .footer-tag{
+
     margin-top:8px;
 
     color:rgba(255,255,255,.5);
@@ -1444,7 +2005,9 @@ footer{
     font-size:11px;
 }
 
+
 .footer-links{
+
     display:flex;
 
     gap:22px;
@@ -1454,17 +2017,23 @@ footer{
     justify-content:flex-end;
 }
 
+
 .footer-links a{
+
     color:rgba(255,255,255,.62);
 
     font-size:11px;
 }
 
+
 .footer-links a:hover{
+
     color:#d09d59;
 }
 
+
 .footer-bottom{
+
     padding-top:22px;
 
     display:flex;
@@ -1478,17 +2047,21 @@ footer{
     font-size:10px;
 }
 
+
 /* =========================================================
    WHATSAPP
 ========================================================= */
 
 .whatsapp{
+
     position:fixed;
 
     right:25px;
+
     bottom:25px;
 
     width:60px;
+
     height:60px;
 
     background:#20c96b;
@@ -1498,257 +2071,1211 @@ footer{
     display:flex;
 
     align-items:center;
+
     justify-content:center;
 
-    box-shadow:0 12px 30px rgba(0,0,0,.2);
+    box-shadow:
+        0 12px 30px
+        rgba(0,0,0,.2);
 
     z-index:2000;
 
     transition:.3s ease;
 }
 
+
 .whatsapp:hover{
+
     transform:scale(1.07);
 }
 
+
 .whatsapp svg{
+
     width:31px;
+
     height:31px;
 
     fill:white;
 }
 
+
 /* =========================================================
-   MOBILE
+   LEGAL MODAL
+========================================================= */
+
+#legalModal{
+
+    display:none;
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(20,12,8,.72);
+
+    z-index:5000;
+
+    padding:30px;
+
+    overflow:auto;
+}
+
+
+.legal-inner{
+
+    max-width:750px;
+
+    margin:70px auto;
+
+    background:#fbf8f2;
+
+    padding:45px;
+
+    position:relative;
+}
+
+
+.legal-close{
+
+    position:absolute;
+
+    top:15px;
+
+    right:20px;
+
+    border:none;
+
+    background:none;
+
+    font-size:25px;
+
+    color:#281b14;
+}
+
+
+#legalTitle{
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:40px;
+
+    color:#281b14;
+
+    margin-bottom:20px;
+}
+
+
+#legalContent{
+
+    color:#74685f;
+
+    font-size:13px;
+
+    line-height:1.9;
+}
+
+
+/* =========================================================
+   TABLET
 ========================================================= */
 
 @media(max-width:1100px){
 
-    .nav-links{
-        gap:15px;
+    .container{
+
+        width:min(94%,1000px);
     }
+
+
+    .nav{
+
+        gap:18px;
+    }
+
+
+    .nav-links{
+
+        gap:14px;
+    }
+
 
     .nav-links a{
-        font-size:11px;
+
+        font-size:10px;
     }
 
-    .intro-grid,
-    .path-grid,
-    .process-grid{
+
+    .intro-grid{
+
         grid-template-columns:repeat(2,1fr);
     }
 
+
+    .intro-card{
+
+        border-bottom:
+            1px solid
+            rgba(185,129,63,.25);
+
+        padding:30px;
+    }
+
+
     .intro-card:nth-child(2){
+
         border-right:none;
     }
 
-    .intro-card{
-        border-bottom:1px solid rgba(185,129,63,.25);
+
+    .path-grid{
+
+        grid-template-columns:repeat(2,1fr);
     }
 
-    .intro-card:nth-child(3),
-    .intro-card:nth-child(4){
-        padding-top:35px;
+
+    .process-grid{
+
+        grid-template-columns:repeat(2,1fr);
     }
+
+
+    .process-step:nth-child(2){
+
+        border-right:none;
+    }
+
+
+    .process-step:nth-child(1),
+    .process-step:nth-child(2){
+
+        border-bottom:
+            1px solid
+            var(--border);
+    }
+
 
     .cards{
-        grid-template-columns:1fr 1fr;
+
+        grid-template-columns:repeat(2,1fr);
     }
+
 }
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
 
 @media(max-width:850px){
 
-    .nav{
-        min-height:74px;
+    html,
+    body{
+
+        width:100%;
+
+        max-width:100%;
+
+        overflow-x:hidden;
     }
+
+
+    body{
+
+        font-size:14px;
+    }
+
+
+    .container{
+
+        width:100%;
+
+        max-width:100%;
+
+        padding-left:20px;
+
+        padding-right:20px;
+    }
+
+
+    /* HEADER */
+
+    header{
+
+        width:100%;
+
+        max-width:100vw;
+    }
+
+
+    .nav{
+
+        width:100%;
+
+        min-height:72px;
+
+        padding-left:18px;
+
+        padding-right:18px;
+
+        gap:10px;
+    }
+
 
     .brand{
-        font-size:25px;
 
-        letter-spacing:5px;
+        font-size:23px;
+
+        letter-spacing:4px;
+
+        flex:1;
+
+        min-width:0;
     }
 
+
     .nav-links{
+
         display:none;
 
         position:absolute;
 
-        top:74px;
+        top:72px;
+
         left:0;
+
         right:0;
+
+        width:100%;
+
+        padding:22px 20px 25px;
 
         background:var(--cream);
 
-        border-bottom:1px solid var(--border);
-
-        padding:20px;
+        border-bottom:
+            1px solid
+            var(--border);
 
         flex-direction:column;
 
         align-items:flex-start;
 
-        gap:18px;
+        gap:16px;
+
+        z-index:999;
     }
 
+
     .nav-links.open{
+
         display:flex;
     }
 
-    .menu{
-        display:block;
+
+    .nav-links a{
+
+        width:100%;
+
+        font-size:13px;
+
+        padding:5px 0;
     }
+
+
+    .nav-actions{
+
+        flex-shrink:0;
+
+        gap:7px;
+    }
+
+
+    .nav-button{
+
+        width:40px;
+
+        min-width:40px;
+
+        height:38px;
+
+        padding:0;
+
+        font-size:11px;
+    }
+
+
+    .connect{
+
+        padding:11px 17px;
+
+        font-size:11px;
+    }
+
+
+    .menu{
+
+        display:flex;
+
+        align-items:center;
+
+        justify-content:center;
+    }
+
+
+    /* HERO */
 
     .hero{
+
+        width:100%;
+
         min-height:auto;
 
-        padding-top:65px;
-        padding-bottom:80px;
+        padding:
+            62px
+            18px
+            75px;
+
+        overflow:hidden;
     }
+
+
+    .hero-inner{
+
+        width:100%;
+
+        max-width:100%;
+
+        min-width:0;
+    }
+
 
     .hero-logo{
-        width:210px;
 
-        margin-bottom:32px;
+        width:225px;
+
+        max-width:72vw;
+
+        margin:
+            0 auto 34px;
     }
+
 
     .hero-kicker{
-        letter-spacing:3px;
 
-        font-size:10px;
+        max-width:100%;
+
+        font-size:9px;
+
+        line-height:1.7;
+
+        letter-spacing:2.5px;
+
+        margin-bottom:17px;
     }
+
 
     .hero-title{
-        font-size:clamp(2.7rem,9vw,4.5rem);
+
+        width:100%;
+
+        max-width:100%;
+
+        font-size:
+            clamp(
+                2.55rem,
+                10vw,
+                4rem
+            );
+
+        line-height:1.02;
+
+        letter-spacing:-.7px;
+
+        margin-bottom:22px;
     }
 
-    .about-grid,
-    .match-box,
-    .ai-grid,
-    .contact-box{
-        grid-template-columns:1fr;
 
-        gap:40px;
+    .hero-title em{
+
+        margin-top:4px;
     }
 
-    .network-box{
-        padding:50px 25px;
-    }
-
-    .services-grid,
-    .trust-grid{
-        grid-template-columns:1fr;
-    }
-
-    .contact-box{
-        padding:40px 25px;
-    }
-
-    .footer-top,
-    .footer-bottom{
-        flex-direction:column;
-    }
-
-    .footer-links{
-        justify-content:flex-start;
-    }
-}
-
-@media(max-width:600px){
-
-    section:not(.hero):not(.intro){
-        padding:80px 0;
-    }
-
-    .intro{
-        padding:75px 20px;
-    }
-
-    .intro-grid,
-    .path-grid,
-    .process-grid,
-    .cards{
-        grid-template-columns:1fr;
-    }
-
-    .intro-card{
-        border-right:none !important;
-
-        border-bottom:1px solid rgba(185,129,63,.22);
-
-        padding:30px 20px !important;
-    }
-
-    .intro-card:last-child{
-        border-bottom:none;
-    }
-
-    .process-step{
-        border-right:none;
-
-        border-bottom:1px solid var(--border);
-    }
-
-    .process-step:last-child{
-        border-bottom:none;
-    }
-
-    .hero-logo{
-        width:190px;
-    }
-
-    .hero-title{
-        font-size:clamp(2.5rem,11vw,3.7rem);
-
-        letter-spacing:-.5px;
-    }
 
     .hero-text{
+
+        width:100%;
+
+        max-width:650px;
+
         font-size:13px;
+
+        line-height:1.85;
+
+        margin-bottom:28px;
     }
 
+
     .hero-buttons{
+
+        width:100%;
+
         flex-direction:column;
+
+        gap:11px;
     }
+
 
     .btn-primary,
     .btn-secondary{
+
         width:100%;
 
-        max-width:280px;
+        max-width:300px;
+
+        min-width:0;
+
+        padding:14px 20px;
     }
 
-    .match-form{
-        padding:25px 20px;
+
+    .launch{
+
+        font-size:9px;
+
+        letter-spacing:1.5px;
+
+        margin-top:22px;
     }
 
-    .form-grid{
+
+    /* SECTIONS */
+
+    section:not(.hero):not(.intro){
+
+        width:100%;
+
+        padding:78px 0;
+
+        overflow:hidden;
+    }
+
+
+    .section-head{
+
+        width:100%;
+
+        margin-bottom:42px;
+    }
+
+
+    .section-kicker{
+
+        font-size:9px;
+
+        letter-spacing:2.5px;
+    }
+
+
+    .section-title{
+
+        width:100%;
+
+        font-size:
+            clamp(
+                2.4rem,
+                9vw,
+                3.5rem
+            );
+
+        line-height:1.05;
+
+        margin-bottom:35px;
+    }
+
+
+    /* INTRO */
+
+    .intro{
+
+        width:100%;
+
+        padding:75px 20px;
+
+        overflow:hidden;
+    }
+
+
+    .intro-grid{
+
+        width:100%;
+
+        grid-template-columns:1fr;
+
+        max-width:100%;
+    }
+
+
+    .intro-card{
+
+        width:100%;
+
+        border-right:none !important;
+
+        border-bottom:
+            1px solid
+            rgba(185,129,63,.22);
+
+        padding:32px 15px !important;
+    }
+
+
+    .intro-card:last-child{
+
+        border-bottom:none;
+    }
+
+
+    /* ABOUT */
+
+    .about-grid{
+
+        grid-template-columns:1fr;
+
+        gap:35px;
+    }
+
+
+    .about-title{
+
+        font-size:
+            clamp(
+                2.7rem,
+                10vw,
+                4rem
+            );
+    }
+
+
+    .about-text{
+
+        font-size:13px;
+
+        line-height:1.9;
+    }
+
+
+    .about-panel{
+
+        width:100%;
+
+        padding:38px 28px;
+    }
+
+
+    .about-panel h3{
+
+        font-size:32px;
+    }
+
+
+    /* WHY */
+
+    .cards{
+
+        grid-template-columns:1fr;
+
+        gap:14px;
+    }
+
+
+    .card{
+
+        min-height:auto;
+
+        padding:30px;
+    }
+
+
+    /* YOUR PATH */
+
+    .path-grid{
+
+        grid-template-columns:1fr;
+
+        gap:12px;
+    }
+
+
+    .path-card{
+
+        padding:32px 26px;
+    }
+
+
+    /* PROCESS */
+
+    .process-grid{
+
         grid-template-columns:1fr;
     }
 
+
+    .process-step{
+
+        border-right:none !important;
+
+        border-bottom:
+            1px solid
+            var(--border);
+
+        padding:35px 20px;
+    }
+
+
+    .process-step:last-child{
+
+        border-bottom:none;
+    }
+
+
+    /* NETWORK */
+
+    .network-box{
+
+        width:100%;
+
+        padding:52px 24px;
+    }
+
+
+    .network-box h2{
+
+        font-size:
+            clamp(
+                2.7rem,
+                10vw,
+                4rem
+            );
+    }
+
+
+    .network-box p{
+
+        font-size:13px;
+    }
+
+
+    .network-list{
+
+        gap:8px;
+    }
+
+
+    .network-pill{
+
+        font-size:10px;
+
+        padding:8px 13px;
+    }
+
+
+    /* SERVICES */
+
+    .services-grid{
+
+        grid-template-columns:1fr;
+
+        gap:14px;
+    }
+
+
+    .service{
+
+        grid-template-columns:1fr;
+
+        gap:5px;
+
+        padding:30px 25px;
+    }
+
+
+    .service-number{
+
+        font-size:30px;
+    }
+
+
+    /* SMART MATCH */
+
+    .match-box{
+
+        grid-template-columns:1fr;
+
+        gap:35px;
+    }
+
+
+    .match-copy h2{
+
+        font-size:
+            clamp(
+                2.8rem,
+                10vw,
+                4rem
+            );
+    }
+
+
+    .match-form{
+
+        width:100%;
+
+        padding:27px 20px;
+    }
+
+
+    .form-grid{
+
+        grid-template-columns:1fr;
+    }
+
+
     .field.full{
+
         grid-column:auto;
     }
 
-    .service{
+
+    .field input,
+    .field select,
+    .field textarea{
+
+        width:100%;
+
+        max-width:100%;
+
+        /*
+          16px prevents iPhone/Android browsers
+          from automatically zooming into inputs.
+        */
+
+        font-size:16px;
+    }
+
+
+    /* AI */
+
+    .ai-grid{
+
         grid-template-columns:1fr;
+
+        gap:15px;
+    }
+
+
+    .ai-card{
+
+        padding:30px 25px;
+    }
+
+
+    /* TRUST */
+
+    .trust-grid{
+
+        grid-template-columns:1fr;
+
+        gap:14px;
+    }
+
+
+    /* CONTACT */
+
+    .contact-box{
+
+        grid-template-columns:1fr;
+
+        gap:40px;
+
+        padding:40px 25px;
+    }
+
+
+    .contact-title{
+
+        font-size:
+            clamp(
+                2.8rem,
+                10vw,
+                4rem
+            );
+    }
+
+
+    /* FOOTER */
+
+    .footer-top{
+
+        flex-direction:column;
+
+        gap:30px;
+    }
+
+
+    .footer-links{
+
+        justify-content:flex-start;
+
+        gap:15px;
+    }
+
+
+    .footer-bottom{
+
+        flex-direction:column;
+
+        gap:8px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL PHONES
+========================================================= */
+
+@media(max-width:600px){
+
+    .container{
+
+        padding-left:17px;
+
+        padding-right:17px;
+    }
+
+
+    /* HEADER */
+
+    .nav{
+
+        padding-left:14px;
+
+        padding-right:14px;
+
+        min-height:68px;
+    }
+
+
+    .brand{
+
+        font-size:21px;
+
+        letter-spacing:3px;
+    }
+
+
+    .nav-actions{
 
         gap:5px;
     }
 
-    .whatsapp{
-        width:56px;
-        height:56px;
 
-        right:18px;
-        bottom:18px;
+    .nav-button{
+
+        width:36px;
+
+        min-width:36px;
+
+        height:36px;
+
+        border-radius:18px;
     }
+
+
+    /*
+       On narrow phones the Connect button is removed
+       from the header so nothing gets squeezed.
+    */
+
+    .connect{
+
+        display:none;
+    }
+
+
+    .menu{
+
+        display:flex;
+    }
+
+
+    .nav-links{
+
+        top:68px;
+    }
+
+
+    /* HERO */
+
+    .hero{
+
+        padding:
+            52px
+            15px
+            65px;
+    }
+
+
+    /*
+       Larger mobile logo.
+       It remains responsive because of max-width.
+    */
+
+    .hero-logo{
+
+        width:230px;
+
+        max-width:76vw;
+
+        margin-bottom:29px;
+    }
+
+
+    .hero-kicker{
+
+        font-size:8px;
+
+        letter-spacing:2px;
+
+        line-height:1.7;
+    }
+
+
+    .hero-title{
+
+        font-size:
+            clamp(
+                2.45rem,
+                11vw,
+                3.4rem
+            );
+
+        line-height:1.02;
+    }
+
+
+    .hero-text{
+
+        font-size:12.5px;
+
+        line-height:1.85;
+
+        padding:0 5px;
+    }
+
+
+    /* BUTTONS */
+
+    .btn-primary,
+    .btn-secondary{
+
+        max-width:285px;
+
+        width:100%;
+    }
+
+
+    /* SECTIONS */
+
+    section:not(.hero):not(.intro){
+
+        padding:70px 0;
+    }
+
+
+    /* TYPOGRAPHY */
+
+    .section-title{
+
+        font-size:
+            clamp(
+                2.3rem,
+                10vw,
+                3.2rem
+            );
+    }
+
+
+    .about-title,
+    .match-copy h2,
+    .contact-title{
+
+        font-size:
+            clamp(
+                2.55rem,
+                11vw,
+                3.5rem
+            );
+    }
+
+
+    /* FORM */
+
+    .match-form{
+
+        padding:24px 17px;
+    }
+
+
+    .field input,
+    .field select,
+    .field textarea{
+
+        padding:13px;
+
+        font-size:16px;
+    }
+
+
+    /* LEGAL */
+
+    #legalModal{
+
+        padding:15px;
+    }
+
+
+    .legal-inner{
+
+        margin:35px auto;
+
+        padding:35px 22px;
+    }
+
+
+    #legalTitle{
+
+        font-size:34px;
+
+        padding-right:25px;
+    }
+
+
+    /* WHATSAPP */
+
+    .whatsapp{
+
+        width:54px;
+
+        height:54px;
+
+        right:16px;
+
+        bottom:16px;
+    }
+
+
+    .whatsapp svg{
+
+        width:28px;
+
+        height:28px;
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
+
+@media(max-width:380px){
+
+    .brand{
+
+        font-size:19px;
+
+        letter-spacing:2.5px;
+    }
+
+
+    .nav-button{
+
+        width:34px;
+
+        min-width:34px;
+
+        height:34px;
+    }
+
+
+    .hero-logo{
+
+        width:210px;
+
+        max-width:75vw;
+    }
+
+
+    .hero-title{
+
+        font-size:2.3rem;
+    }
+
+
+    .hero-kicker{
+
+        font-size:7.5px;
+
+        letter-spacing:1.6px;
+    }
+
+}
+
+
+/* =========================================================
+   REDUCE MOTION ACCESSIBILITY
+========================================================= */
+
+@media(prefers-reduced-motion:reduce){
+
+    html{
+
+        scroll-behavior:auto;
+    }
+
+
+    .hero-logo{
+
+        animation:none;
+
+        opacity:1;
+
+        transform:none;
+
+        filter:
+            brightness(1)
+            drop-shadow(
+                0 18px 28px
+                rgba(40,27,20,.16)
+            );
+    }
+
+
+    *{
+
+        transition:none !important;
+    }
+
 }
 
 </style>
+
 </head>
 
 
 <body>
+
 
 <!-- ======================================================
      HEADER
@@ -1758,39 +3285,86 @@ footer{
 
 <div class="container nav">
 
-    <!-- TEXT ONLY IN HEADER -->
-    <a href="#home" class="brand">
+
+    <!-- TEXT WORDMARK ONLY -->
+
+    <a
+        href="#home"
+        class="brand"
+    >
         PRANAURA
     </a>
 
-    <nav class="nav-links" id="navLinks">
 
-        <a href="#about">About</a>
-        <a href="#why">Why Us</a>
-        <a href="#path">Your Path</a>
-        <a href="#process">Process</a>
-        <a href="#network">Network</a>
-        <a href="#services">Services</a>
-        <a href="#match">Smart Match</a>
-        <a href="#ai">AI</a>
-        <a href="#trust">Trust</a>
-        <a href="#faq">FAQ</a>
-        <a href="#contact">Contact</a>
+    <nav
+        class="nav-links"
+        id="navLinks"
+    >
+
+        <a href="#about">
+            About
+        </a>
+
+        <a href="#why">
+            Why Us
+        </a>
+
+        <a href="#path">
+            Your Path
+        </a>
+
+        <a href="#process">
+            Process
+        </a>
+
+        <a href="#network">
+            Network
+        </a>
+
+        <a href="#services">
+            Services
+        </a>
+
+        <a href="#match">
+            Smart Match
+        </a>
+
+        <a href="#ai">
+            AI
+        </a>
+
+        <a href="#trust">
+            Trust
+        </a>
+
+        <a href="#faq">
+            FAQ
+        </a>
+
+        <a href="#contact">
+            Contact
+        </a>
 
     </nav>
 
+
     <div class="nav-actions">
 
+
         <!-- KANNADA -->
+
         <button
             class="nav-button"
             id="languageButton"
             type="button"
+            aria-label="Kannada language"
         >
             KN
         </button>
 
+
         <!-- THEME -->
+
         <button
             class="nav-button"
             id="themeButton"
@@ -1800,6 +3374,7 @@ footer{
             ◐
         </button>
 
+
         <a
             href="#match"
             class="connect"
@@ -1807,13 +3382,18 @@ footer{
             Connect
         </a>
 
+
+        <!-- MOBILE MENU -->
+
         <button
             class="nav-button menu"
             id="menuButton"
             type="button"
+            aria-label="Open menu"
         >
             ☰
         </button>
+
 
     </div>
 
@@ -1822,24 +3402,34 @@ footer{
 </header>
 
 
+
 <!-- ======================================================
      HERO
 ====================================================== -->
 
-<section class="hero" id="home">
+<section
+    class="hero"
+    id="home"
+>
 
 <div class="hero-inner">
 
+
     <!-- YOUR ACTUAL LOGO -->
+
     <img
         src="logo.png"
-        alt="PRANAURA Logo"
+        alt="PRANAURA"
         class="hero-logo"
     >
 
+
     <div class="hero-kicker">
+
         Strategic Builder & Investor Partnerships
+
     </div>
+
 
     <h1 class="hero-title">
 
@@ -1851,15 +3441,19 @@ footer{
 
     </h1>
 
+
     <p class="hero-text">
 
-        A professional advisory and connection platform designed
-        to bring builders, developers, landowners, investors and
-        property buyers together through structured relationships.
+        A professional advisory and connection platform
+        designed to bring builders, developers, landowners,
+        investors and property buyers together through
+        structured relationships.
 
     </p>
 
+
     <div class="hero-buttons">
+
 
         <a
             href="#match"
@@ -1868,6 +3462,7 @@ footer{
             Start Smart Match
         </a>
 
+
         <a
             href="#network"
             class="btn-secondary"
@@ -1875,15 +3470,21 @@ footer{
             Explore Our Network
         </a>
 
+
     </div>
 
+
     <div class="launch">
+
         Launching September 2026
+
     </div>
+
 
 </div>
 
 </section>
+
 
 
 <!-- ======================================================
@@ -1894,15 +3495,23 @@ footer{
 
 <div class="container">
 
+
     <div class="section-kicker">
+
         A More Connected Real Estate Ecosystem
+
     </div>
 
+
     <h2 class="section-title">
+
         People. Property. Progress.
+
     </h2>
 
+
     <div class="intro-grid">
+
 
         <div class="intro-card">
 
@@ -1975,6 +3584,7 @@ footer{
 
         </div>
 
+
     </div>
 
 </div>
@@ -1982,27 +3592,39 @@ footer{
 </section>
 
 
+
 <!-- ======================================================
      ABOUT
 ====================================================== -->
 
-<section class="about" id="about">
+<section
+    class="about"
+    id="about"
+>
 
 <div class="container">
 
+
     <div class="about-grid">
+
 
         <div>
 
             <div class="about-label">
+
                 About PRANAURA
+
             </div>
 
+
             <h2 class="about-title">
+
                 Where real estate
                 relationships become
                 structured opportunities.
+
             </h2>
+
 
             <p class="about-text">
 
@@ -2014,11 +3636,12 @@ footer{
 
             </p>
 
+
             <p class="about-text">
 
-                Rather than owning property, PRANAURA focuses on
-                creating meaningful connections between the right
-                people and the right opportunities.
+                Rather than owning property, PRANAURA focuses
+                on creating meaningful connections between the
+                right people and the right opportunities.
 
             </p>
 
@@ -2031,21 +3654,26 @@ footer{
                 Our Approach
             </small>
 
+
             <h3>
+
                 Structured.
                 Professional.
                 Relationship-led.
+
             </h3>
+
 
             <p>
 
-                Every interaction begins with understanding the
-                requirement, evaluating suitability and facilitating
-                a relevant introduction.
+                Every interaction begins with understanding
+                the requirement, evaluating suitability and
+                facilitating a relevant introduction.
 
             </p>
 
         </div>
+
 
     </div>
 
@@ -2054,23 +3682,36 @@ footer{
 </section>
 
 
+
 <!-- ======================================================
      WHY PRANAURA
 ====================================================== -->
 
-<section class="why" id="why">
+<section
+    class="why"
+    id="why"
+>
 
 <div class="container">
 
+
     <div class="section-head">
 
+
         <div class="section-kicker">
+
             Why PRANAURA
+
         </div>
 
+
         <h2 class="section-title">
-            More than a conventional property connection.
+
+            More than a conventional
+            property connection.
+
         </h2>
+
 
         <p>
 
@@ -2080,10 +3721,12 @@ footer{
 
         </p>
 
+
     </div>
 
 
     <div class="cards">
+
 
         <div class="card">
 
@@ -2192,6 +3835,7 @@ footer{
 
         </div>
 
+
     </div>
 
 </div>
@@ -2199,29 +3843,40 @@ footer{
 </section>
 
 
+
 <!-- ======================================================
      YOUR PATH
 ====================================================== -->
 
-<section class="path" id="path">
+<section
+    class="path"
+    id="path"
+>
 
 <div class="container">
 
+
     <div class="section-head">
+
 
         <div class="section-kicker">
             Your Path
         </div>
 
+
         <h2 class="section-title">
+
             One ecosystem.
             Different objectives.
+
         </h2>
+
 
     </div>
 
 
     <div class="path-grid">
+
 
         <div class="path-card">
 
@@ -2278,6 +3933,7 @@ footer{
 
         </div>
 
+
     </div>
 
 </div>
@@ -2285,28 +3941,41 @@ footer{
 </section>
 
 
+
 <!-- ======================================================
      PROCESS
 ====================================================== -->
 
-<section class="process" id="process">
+<section
+    class="process"
+    id="process"
+>
 
 <div class="container">
 
+
     <div class="section-head">
 
+
         <div class="section-kicker">
+
             The PRANAURA Process
+
         </div>
 
+
         <h2 class="section-title">
+
             From requirement to relationship.
+
         </h2>
+
 
     </div>
 
 
     <div class="process-grid">
+
 
         <div class="process-step">
 
@@ -2379,6 +4048,7 @@ footer{
 
         </div>
 
+
     </div>
 
 </div>
@@ -2386,23 +4056,35 @@ footer{
 </section>
 
 
+
 <!-- ======================================================
      NETWORK
 ====================================================== -->
 
-<section class="network" id="network">
+<section
+    class="network"
+    id="network"
+>
 
 <div class="container">
 
+
     <div class="network-box">
 
+
         <div class="section-kicker">
+
             Property Ecosystem
+
         </div>
 
+
         <h2>
+
             One connected network.
+
         </h2>
+
 
         <p>
 
@@ -2412,33 +4094,42 @@ footer{
 
         </p>
 
+
         <div class="network-list">
+
 
             <span class="network-pill">
                 Builders
             </span>
 
+
             <span class="network-pill">
                 Developers
             </span>
+
 
             <span class="network-pill">
                 Landowners
             </span>
 
+
             <span class="network-pill">
                 Investors
             </span>
+
 
             <span class="network-pill">
                 Property Buyers
             </span>
 
+
             <span class="network-pill">
                 Strategic Partners
             </span>
 
+
         </div>
+
 
     </div>
 
@@ -2447,34 +4138,46 @@ footer{
 </section>
 
 
+
 <!-- ======================================================
      SERVICES
 ====================================================== -->
 
-<section class="services" id="services">
+<section
+    class="services"
+    id="services"
+>
 
 <div class="container">
 
+
     <div class="section-head">
+
 
         <div class="section-kicker">
             Services
         </div>
 
+
         <h2 class="section-title">
+
             Built around meaningful connections.
+
         </h2>
+
 
     </div>
 
 
     <div class="services-grid">
 
+
         <div class="service">
 
             <div class="service-number">
                 01
             </div>
+
 
             <div>
 
@@ -2499,6 +4202,7 @@ footer{
                 02
             </div>
 
+
             <div>
 
                 <h3>
@@ -2520,6 +4224,7 @@ footer{
             <div class="service-number">
                 03
             </div>
+
 
             <div>
 
@@ -2543,6 +4248,7 @@ footer{
                 04
             </div>
 
+
             <div>
 
                 <h3>
@@ -2558,6 +4264,7 @@ footer{
 
         </div>
 
+
     </div>
 
 </div>
@@ -2565,36 +4272,54 @@ footer{
 </section>
 
 
+
 <!-- ======================================================
      SMART MATCH
 ====================================================== -->
 
-<section class="match" id="match">
+<section
+    class="match"
+    id="match"
+>
 
 <div class="container">
 
+
     <div class="match-box">
+
 
         <div class="match-copy">
 
-            <div class="section-kicker" style="text-align:left;">
+
+            <div
+                class="section-kicker"
+                style="text-align:left;"
+            >
+
                 Smart Match
+
             </div>
 
+
             <h2>
+
                 Tell us what
                 you're looking for.
+
             </h2>
+
 
             <p>
 
-                Share your requirement and PRANAURA will organize
-                the information into a structured profile for
-                potential matching and follow-up.
+                Share your requirement and PRANAURA will
+                organize the information into a structured
+                profile for potential matching and follow-up.
 
             </p>
 
+
             <br>
+
 
             <p>
 
@@ -2604,7 +4329,9 @@ footer{
 
             </p>
 
+
         </div>
+
 
 
         <form
@@ -2612,7 +4339,9 @@ footer{
             id="matchForm"
         >
 
+
             <div class="form-grid">
+
 
                 <div class="field">
 
@@ -2620,7 +4349,10 @@ footer{
                         I am a
                     </label>
 
-                    <select id="role" required>
+                    <select
+                        id="role"
+                        required
+                    >
 
                         <option value="">
                             Select
@@ -2647,6 +4379,7 @@ footer{
                 </div>
 
 
+
                 <div class="field">
 
                     <label>
@@ -2661,6 +4394,7 @@ footer{
                     >
 
                 </div>
+
 
 
                 <div class="field">
@@ -2704,6 +4438,7 @@ footer{
                 </div>
 
 
+
                 <div class="field">
 
                     <label>
@@ -2717,6 +4452,7 @@ footer{
                     >
 
                 </div>
+
 
 
                 <div class="field">
@@ -2756,6 +4492,7 @@ footer{
                 </div>
 
 
+
                 <div class="field">
 
                     <label>
@@ -2772,6 +4509,7 @@ footer{
                 </div>
 
 
+
                 <div class="field full">
 
                     <label>
@@ -2786,7 +4524,9 @@ footer{
 
                 </div>
 
+
             </div>
+
 
 
             <label class="checkbox">
@@ -2798,19 +4538,25 @@ footer{
                 >
 
                 <span>
-                    I agree to be contacted by PRANAURA regarding
-                    my submitted requirement.
+
+                    I agree to be contacted by PRANAURA
+                    regarding my submitted requirement.
+
                 </span>
 
             </label>
+
 
 
             <button
                 type="submit"
                 class="form-submit"
             >
+
                 Analyse My Requirement
+
             </button>
+
 
 
             <div
@@ -2818,7 +4564,9 @@ footer{
                 id="matchResult"
             ></div>
 
+
         </form>
+
 
     </div>
 
@@ -2827,24 +4575,36 @@ footer{
 </section>
 
 
+
 <!-- ======================================================
      AI
 ====================================================== -->
 
-<section class="ai" id="ai">
+<section
+    class="ai"
+    id="ai"
+>
 
 <div class="container">
 
+
     <div class="section-head">
 
+
         <div class="section-kicker">
+
             PRANAURA AI
+
         </div>
 
+
         <h2 class="section-title">
+
             Intelligence behind
             better connections.
+
         </h2>
+
 
         <p style="color:rgba(255,255,255,.65);">
 
@@ -2854,49 +4614,68 @@ footer{
 
         </p>
 
+
     </div>
+
 
 
     <div class="ai-grid">
 
+
         <div class="ai-card">
 
+
             <h3>
+
                 What PRANAURA AI can understand
+
             </h3>
 
+
             <div class="ai-list">
+
 
                 <div class="ai-item">
                     Property requirements
                 </div>
 
+
                 <div class="ai-item">
                     Investment preferences
                 </div>
+
 
                 <div class="ai-item">
                     Location preferences
                 </div>
 
+
                 <div class="ai-item">
                     Budget and timelines
                 </div>
+
 
                 <div class="ai-item">
                     Builder and developer requirements
                 </div>
 
+
             </div>
+
 
         </div>
 
 
+
         <div class="ai-card">
 
+
             <h3>
+
                 Designed for smarter matching
+
             </h3>
+
 
             <p>
 
@@ -2907,6 +4686,7 @@ footer{
 
             </p>
 
+
             <p class="ai-note">
 
                 AI backend integration with Ollama/Qwen and the
@@ -2915,13 +4695,16 @@ footer{
 
             </p>
 
+
         </div>
+
 
     </div>
 
 </div>
 
 </section>
+
 
 
 <!-- ======================================================
@@ -2932,19 +4715,24 @@ footer{
 
 <div class="container">
 
+
     <div class="founder-box">
+
 
         <div class="section-kicker">
             Founder
         </div>
 
+
         <div class="founder-name">
             Pranathi H.S.
         </div>
 
+
         <div class="founder-role">
             Founder — PRANAURA
         </div>
+
 
         <p>
 
@@ -2955,6 +4743,7 @@ footer{
 
         </p>
 
+
     </div>
 
 </div>
@@ -2962,29 +4751,43 @@ footer{
 </section>
 
 
+
 <!-- ======================================================
      TRUST
 ====================================================== -->
 
-<section class="trust" id="trust">
+<section
+    class="trust"
+    id="trust"
+>
 
 <div class="container">
 
+
     <div class="section-head">
 
+
         <div class="section-kicker">
+
             Trust & Transparency
+
         </div>
 
+
         <h2 class="section-title">
+
             Professional relationships
             begin with clarity.
+
         </h2>
+
 
     </div>
 
 
+
     <div class="trust-grid">
+
 
         <div class="trust-card">
 
@@ -2993,11 +4796,14 @@ footer{
             </h3>
 
             <p>
-                We aim to communicate requirements, introductions
-                and expectations clearly.
+
+                We aim to communicate requirements,
+                introductions and expectations clearly.
+
             </p>
 
         </div>
+
 
 
         <div class="trust-card">
@@ -3007,11 +4813,14 @@ footer{
             </h3>
 
             <p>
-                Introductions are intended to be based on
-                relevance and mutual interest.
+
+                Introductions are intended to be based
+                on relevance and mutual interest.
+
             </p>
 
         </div>
+
 
 
         <div class="trust-card">
@@ -3021,11 +4830,14 @@ footer{
             </h3>
 
             <p>
+
                 PRANAURA operates as an advisory and connection
                 platform and does not own the properties it connects.
+
             </p>
 
         </div>
+
 
     </div>
 
@@ -3034,41 +4846,61 @@ footer{
 </section>
 
 
+
 <!-- ======================================================
      FAQ
 ====================================================== -->
 
-<section class="faq" id="faq">
+<section
+    class="faq"
+    id="faq"
+>
 
 <div class="container">
 
+
     <div class="section-head">
 
+
         <div class="section-kicker">
+
             Frequently Asked Questions
+
         </div>
 
+
         <h2 class="section-title">
+
             A few things you may want to know.
+
         </h2>
+
 
     </div>
 
 
+
     <div class="faq-list">
 
+
         <div class="faq-item">
+
 
             <button
                 class="faq-question"
                 type="button"
             >
 
-                What is PRANAURA?
+                <span>
+                    What is PRANAURA?
+                </span>
 
-                <span>+</span>
+                <span>
+                    +
+                </span>
 
             </button>
+
 
             <div class="faq-answer">
 
@@ -3083,21 +4915,29 @@ footer{
 
             </div>
 
+
         </div>
 
 
+
         <div class="faq-item">
+
 
             <button
                 class="faq-question"
                 type="button"
             >
 
-                Does PRANAURA own properties?
+                <span>
+                    Does PRANAURA own properties?
+                </span>
 
-                <span>+</span>
+                <span>
+                    +
+                </span>
 
             </button>
+
 
             <div class="faq-answer">
 
@@ -3112,21 +4952,29 @@ footer{
 
             </div>
 
+
         </div>
 
 
+
         <div class="faq-item">
+
 
             <button
                 class="faq-question"
                 type="button"
             >
 
-                Who can connect with PRANAURA?
+                <span>
+                    Who can connect with PRANAURA?
+                </span>
 
-                <span>+</span>
+                <span>
+                    +
+                </span>
 
             </button>
+
 
             <div class="faq-answer">
 
@@ -3140,21 +4988,29 @@ footer{
 
             </div>
 
+
         </div>
 
 
+
         <div class="faq-item">
+
 
             <button
                 class="faq-question"
                 type="button"
             >
 
-                Is Smart Match already fully automated?
+                <span>
+                    Is Smart Match already fully automated?
+                </span>
 
-                <span>+</span>
+                <span>
+                    +
+                </span>
 
             </button>
+
 
             <div class="faq-answer">
 
@@ -3169,21 +5025,29 @@ footer{
 
             </div>
 
+
         </div>
 
 
+
         <div class="faq-item">
+
 
             <button
                 class="faq-question"
                 type="button"
             >
 
-                Can I contact PRANAURA directly?
+                <span>
+                    Can I contact PRANAURA directly?
+                </span>
 
-                <span>+</span>
+                <span>
+                    +
+                </span>
 
             </button>
+
 
             <div class="faq-answer">
 
@@ -3197,7 +5061,9 @@ footer{
 
             </div>
 
+
         </div>
+
 
     </div>
 
@@ -3206,26 +5072,42 @@ footer{
 </section>
 
 
+
 <!-- ======================================================
      CONTACT
 ====================================================== -->
 
-<section class="contact" id="contact">
+<section
+    class="contact"
+    id="contact"
+>
 
 <div class="container">
 
+
     <div class="contact-box">
+
 
         <div>
 
-            <div class="section-kicker" style="text-align:left;">
+
+            <div
+                class="section-kicker"
+                style="text-align:left;"
+            >
+
                 Contact
+
             </div>
 
+
             <h2 class="contact-title">
+
                 Let's build
                 better connections.
+
             </h2>
+
 
             <p class="contact-copy">
 
@@ -3235,19 +5117,26 @@ footer{
 
             </p>
 
+
             <br>
+
 
             <a
                 href="#match"
                 class="btn-primary"
             >
+
                 Start a Conversation
+
             </a>
+
 
         </div>
 
 
+
         <div class="contact-details">
+
 
             <div class="contact-item">
 
@@ -3262,6 +5151,7 @@ footer{
             </div>
 
 
+
             <div class="contact-item">
 
                 <small>
@@ -3273,10 +5163,13 @@ footer{
                     target="_blank"
                     rel="noopener"
                 >
+
                     Chat on WhatsApp
+
                 </a>
 
             </div>
+
 
 
             <div class="contact-item">
@@ -3286,10 +5179,13 @@ footer{
                 </small>
 
                 <a href="mailto:pranauraconnect@gmail.com">
+
                     pranauraconnect@gmail.com
+
                 </a>
 
             </div>
+
 
 
             <div class="contact-item">
@@ -3305,6 +5201,7 @@ footer{
             </div>
 
 
+
             <div class="contact-item">
 
                 <small>
@@ -3316,18 +5213,23 @@ footer{
                     target="_blank"
                     rel="noopener"
                 >
+
                     @Pranaura_
+
                 </a>
 
             </div>
 
+
         </div>
+
 
     </div>
 
 </div>
 
 </section>
+
 
 
 <!-- ======================================================
@@ -3338,75 +5240,115 @@ footer{
 
 <div class="container">
 
+
     <div class="footer-top">
 
+
         <div>
+
 
             <div class="footer-brand">
                 PRANAURA
             </div>
 
+
             <div class="footer-tag">
+
                 Strategic Builder & Investor Partnerships
+
             </div>
+
 
         </div>
 
 
+
         <div class="footer-links">
+
 
             <a href="#about">
                 About
             </a>
 
+
             <a href="#services">
                 Services
             </a>
+
 
             <a href="#match">
                 Smart Match
             </a>
 
+
             <a href="#ai">
                 AI
             </a>
+
 
             <a href="#contact">
                 Contact
             </a>
 
-            <a href="#" onclick="showLegal('privacy');return false;">
+
+            <a
+                href="#"
+                onclick="showLegal('privacy');return false;"
+            >
                 Privacy
             </a>
 
-            <a href="#" onclick="showLegal('terms');return false;">
+
+            <a
+                href="#"
+                onclick="showLegal('terms');return false;"
+            >
                 Terms
             </a>
 
-            <a href="#" onclick="showLegal('disclaimer');return false;">
+
+            <a
+                href="#"
+                onclick="showLegal('disclaimer');return false;"
+            >
                 Disclaimer
             </a>
 
+
         </div>
 
+
     </div>
+
 
 
     <div class="footer-bottom">
 
-        <span>
-            © <span id="year"></span> PRANAURA. All rights reserved.
-        </span>
 
         <span>
-            Real estate relationships, structured for opportunity.
+
+            ©
+            <span id="year"></span>
+            PRANAURA. All rights reserved.
+
         </span>
+
+
+        <span>
+
+            Real estate relationships,
+            structured for opportunity.
+
+        </span>
+
 
     </div>
+
 
 </div>
 
 </footer>
+
 
 
 <!-- ======================================================
@@ -3421,6 +5363,7 @@ footer{
     aria-label="Chat with PRANAURA on WhatsApp"
 >
 
+
 <svg
     viewBox="0 0 32 32"
     xmlns="http://www.w3.org/2000/svg"
@@ -3433,72 +5376,38 @@ footer{
 </a>
 
 
+
 <!-- ======================================================
      LEGAL MODAL
 ====================================================== -->
 
-<div
-    id="legalModal"
-    style="
-        display:none;
-        position:fixed;
-        inset:0;
-        background:rgba(20,12,8,.72);
-        z-index:5000;
-        padding:30px;
-        overflow:auto;
-    "
->
+<div id="legalModal">
 
-<div
-    style="
-        max-width:750px;
-        margin:70px auto;
-        background:#fbf8f2;
-        padding:45px;
-        position:relative;
-    "
->
 
-<button
-    onclick="closeLegal()"
-    style="
-        position:absolute;
-        top:15px;
-        right:20px;
-        border:none;
-        background:none;
-        font-size:25px;
-        color:#281b14;
-    "
->
-    ×
-</button>
+    <div class="legal-inner">
 
-<h2
-    id="legalTitle"
-    style="
-        font-family:'Cormorant Garamond',serif;
-        font-size:40px;
-        color:#281b14;
-        margin-bottom:20px;
-    "
->
-    Privacy Policy
-</h2>
 
-<div
-    id="legalContent"
-    style="
-        color:#74685f;
-        font-size:13px;
-        line-height:1.9;
-    "
-></div>
+        <button
+            class="legal-close"
+            onclick="closeLegal()"
+            aria-label="Close"
+        >
+            ×
+        </button>
+
+
+        <h2 id="legalTitle">
+            Privacy Policy
+        </h2>
+
+
+        <div id="legalContent"></div>
+
+
+    </div>
 
 </div>
 
-</div>
 
 
 <script>
@@ -3511,6 +5420,7 @@ document.getElementById("year").textContent =
     new Date().getFullYear();
 
 
+
 /* =========================================================
    MOBILE MENU
 ========================================================= */
@@ -3521,22 +5431,32 @@ const menuButton =
 const navLinks =
     document.getElementById("navLinks");
 
-menuButton.addEventListener("click",function(){
 
-    navLinks.classList.toggle("open");
+menuButton.addEventListener(
+    "click",
+    function(){
 
-});
+        navLinks.classList.toggle("open");
+
+    }
+);
 
 
-document.querySelectorAll(".nav-links a").forEach(link=>{
+document
+    .querySelectorAll(".nav-links a")
+    .forEach(function(link){
 
-    link.addEventListener("click",()=>{
+        link.addEventListener(
+            "click",
+            function(){
 
-        navLinks.classList.remove("open");
+                navLinks.classList.remove("open");
+
+            }
+        );
 
     });
 
-});
 
 
 /* =========================================================
@@ -3545,6 +5465,7 @@ document.querySelectorAll(".nav-links a").forEach(link=>{
 
 const themeButton =
     document.getElementById("themeButton");
+
 
 let darkMode =
     localStorage.getItem("pranaura-theme") === "dark";
@@ -3594,7 +5515,8 @@ function applyTheme(){
             "rgba(255,255,255,.14)"
         );
 
-    }else{
+    }
+    else{
 
         document.documentElement.style.setProperty(
             "--cream",
@@ -3644,48 +5566,60 @@ function applyTheme(){
 applyTheme();
 
 
-themeButton.addEventListener("click",function(){
+themeButton.addEventListener(
+    "click",
+    function(){
 
-    darkMode=!darkMode;
+        darkMode = !darkMode;
 
-    localStorage.setItem(
-        "pranaura-theme",
-        darkMode ? "dark" : "light"
-    );
+        localStorage.setItem(
+            "pranaura-theme",
+            darkMode ? "dark" : "light"
+        );
 
-    applyTheme();
+        applyTheme();
 
-});
+    }
+);
+
 
 
 /* =========================================================
-   KANNADA BUTTON
+   LANGUAGE BUTTON
 ========================================================= */
 
 const languageButton =
     document.getElementById("languageButton");
 
-let kannadaMode=false;
 
-languageButton.addEventListener("click",function(){
+let kannadaMode = false;
 
-    kannadaMode=!kannadaMode;
 
-    if(kannadaMode){
+languageButton.addEventListener(
+    "click",
+    function(){
 
-        languageButton.textContent="EN";
+        kannadaMode = !kannadaMode;
 
-        alert(
-            "Kannada customer interface can be connected in the next language phase."
-        );
 
-    }else{
+        if(kannadaMode){
 
-        languageButton.textContent="KN";
+            languageButton.textContent = "EN";
+
+            alert(
+                "Kannada customer interface can be connected in the next language phase."
+            );
+
+        }
+        else{
+
+            languageButton.textContent = "KN";
+
+        }
 
     }
+);
 
-});
 
 
 /* =========================================================
@@ -3699,299 +5633,388 @@ const matchResult =
     document.getElementById("matchResult");
 
 
-matchForm.addEventListener("submit",function(event){
+matchForm.addEventListener(
+    "submit",
+    function(event){
 
-    event.preventDefault();
-
-    const role =
-        document.getElementById("role").value;
-
-    const location =
-        document.getElementById("location").value;
-
-    const propertyType =
-        document.getElementById("propertyType").value;
-
-    const budget =
-        document.getElementById("budget").value;
-
-    const timeline =
-        document.getElementById("timeline").value;
-
-    const phone =
-        document.getElementById("phone").value;
-
-    const requirement =
-        document.getElementById("requirement").value;
+        event.preventDefault();
 
 
-    const reference =
-        "PRA-" +
-        Date.now().toString().slice(-7);
+        const role =
+            document.getElementById("role").value;
+
+        const location =
+            document.getElementById("location").value;
+
+        const propertyType =
+            document.getElementById("propertyType").value;
+
+        const budget =
+            document.getElementById("budget").value;
+
+        const timeline =
+            document.getElementById("timeline").value;
+
+        const phone =
+            document.getElementById("phone").value;
+
+        const requirement =
+            document.getElementById("requirement").value;
 
 
-    matchResult.style.display="block";
-
-    matchResult.innerHTML =
-
-        "<strong>Requirement received.</strong><br><br>" +
-
-        "Reference: " + reference + "<br>" +
-
-        "We have structured your requirement for " +
-        role + " in " +
-        location +
-        (propertyType ? " for " + propertyType : "") +
-        ".";
+        const reference =
+            "PRA-" +
+            Date.now()
+            .toString()
+            .slice(-7);
 
 
-    const message =
-
-        "Hello PRANAURA,%0A%0A" +
-
-        "I would like to submit a Smart Match requirement.%0A%0A" +
-
-        "Reference: " + reference + "%0A" +
-
-        "Role: " + role + "%0A" +
-
-        "Location: " + location + "%0A" +
-
-        "Property Type: " + propertyType + "%0A" +
-
-        "Budget: " + budget + "%0A" +
-
-        "Timeline: " + timeline + "%0A" +
-
-        "Phone: " + phone + "%0A" +
-
-        "Requirement: " + requirement;
+        matchResult.style.display = "block";
 
 
-    setTimeout(function(){
+        matchResult.innerHTML =
 
-        window.open(
-            "https://wa.me/919019746649?text=" +
-            message,
-            "_blank"
+            "<strong>Requirement received.</strong><br><br>" +
+
+            "Reference: " +
+            reference +
+            "<br>" +
+
+            "We have structured your requirement for " +
+
+            role +
+
+            " in " +
+
+            location +
+
+            (
+                propertyType
+                ? " for " + propertyType
+                : ""
+            ) +
+
+            ".";
+
+
+        const message =
+
+            "Hello PRANAURA,%0A%0A" +
+
+            "I would like to submit a Smart Match requirement.%0A%0A" +
+
+            "Reference: " +
+            reference +
+            "%0A" +
+
+            "Role: " +
+            role +
+            "%0A" +
+
+            "Location: " +
+            location +
+            "%0A" +
+
+            "Property Type: " +
+            propertyType +
+            "%0A" +
+
+            "Budget: " +
+            budget +
+            "%0A" +
+
+            "Timeline: " +
+            timeline +
+            "%0A" +
+
+            "Phone: " +
+            phone +
+            "%0A" +
+
+            "Requirement: " +
+            requirement;
+
+
+        setTimeout(
+            function(){
+
+                window.open(
+                    "https://wa.me/919019746649?text=" +
+                    message,
+                    "_blank"
+                );
+
+            },
+            700
         );
 
-    },700);
+    }
+);
 
-});
 
 
 /* =========================================================
    FAQ
 ========================================================= */
 
-document.querySelectorAll(".faq-question").forEach(button=>{
+document
+    .querySelectorAll(".faq-question")
+    .forEach(function(button){
 
-    button.addEventListener("click",function(){
+        button.addEventListener(
+            "click",
+            function(){
 
-        const item =
-            this.parentElement;
-
-        document.querySelectorAll(".faq-item")
-            .forEach(other=>{
-
-                if(other!==item){
-
-                    other.classList.remove("active");
-
-                }
-
-            });
+                const item =
+                    this.parentElement;
 
 
-        item.classList.toggle("active");
+                document
+                    .querySelectorAll(".faq-item")
+                    .forEach(function(other){
+
+                        if(other !== item){
+
+                            other.classList.remove(
+                                "active"
+                            );
+
+                            const otherSymbol =
+                                other.querySelector(
+                                    ".faq-question span:last-child"
+                                );
+
+                            if(otherSymbol){
+
+                                otherSymbol.textContent =
+                                    "+";
+
+                            }
+
+                        }
+
+                    });
 
 
-        const symbol =
-            this.querySelector("span");
+                item.classList.toggle("active");
 
-        symbol.textContent =
-            item.classList.contains("active")
-            ? "−"
-            : "+";
+
+                const symbol =
+                    this.querySelector(
+                        "span:last-child"
+                    );
+
+
+                symbol.textContent =
+                    item.classList.contains("active")
+                    ? "−"
+                    : "+";
+
+            }
+        );
 
     });
 
-});
 
 
 /* =========================================================
    LEGAL CONTENT
 ========================================================= */
 
-const legalData={
+const legalData = {
 
-privacy:{
+    privacy:{
 
-title:"Privacy Policy",
+        title:"Privacy Policy",
 
-content:`
+        content:`
 
-<p>
-PRANAURA respects the privacy of visitors and individuals
-who submit their requirements through this website.
-</p>
+        <p>
+        PRANAURA respects the privacy of visitors and
+        individuals who submit their requirements through
+        this website.
+        </p>
 
-<br>
+        <br>
 
-<p>
-Information submitted through forms may include name,
-contact information, property requirements and other
-details voluntarily provided by the user.
-</p>
+        <p>
+        Information submitted through forms may include
+        contact information, property requirements and
+        other details voluntarily provided by the user.
+        </p>
 
-<br>
+        <br>
 
-<p>
-Such information is intended to support communication,
-requirement understanding and potential real estate
-connections.
-</p>
+        <p>
+        Such information is intended to support communication,
+        requirement understanding and potential real estate
+        connections.
+        </p>
 
-<br>
+        <br>
 
-<p>
-PRANAURA will take reasonable steps to protect submitted
-information. Further details regarding data handling,
-retention and third-party services should be finalized
-before production launch.
-</p>
+        <p>
+        PRANAURA will take reasonable steps to protect
+        submitted information. Further details regarding
+        data handling, retention and third-party services
+        should be finalized before production launch.
+        </p>
 
-`
-
-},
-
-
-terms:{
-
-title:"Terms & Conditions",
-
-content:`
-
-<p>
-The PRANAURA website provides information about an
-advisory and real estate connection service.
-</p>
-
-<br>
-
-<p>
-Information submitted through the website does not
-automatically constitute a transaction, agreement,
-booking or guarantee of an opportunity.
-</p>
-
-<br>
-
-<p>
-Any property transaction, investment decision,
-commercial agreement or relationship remains subject
-to independent verification and agreement between
-the relevant parties.
-</p>
-
-`
-
-},
+        `
+    },
 
 
-disclaimer:{
+    terms:{
 
-title:"Disclaimer",
+        title:"Terms & Conditions",
 
-content:`
+        content:`
 
-<p>
-PRANAURA operates as a real estate advisory and
-connection platform and does not represent ownership
-of properties presented or discussed through its network.
-</p>
+        <p>
+        The PRANAURA website provides information about
+        an advisory and real estate connection service.
+        </p>
 
-<br>
+        <br>
 
-<p>
-Property information, availability, pricing,
-documentation and legal status should be independently
-verified by the relevant parties before making any
-decision.
-</p>
+        <p>
+        Information submitted through the website does
+        not automatically constitute a transaction,
+        agreement, booking or guarantee of an opportunity.
+        </p>
 
-<br>
+        <br>
 
-<p>
-PRANAURA does not guarantee the outcome of any
-introduction, negotiation, investment or transaction.
-</p>
+        <p>
+        Any property transaction, investment decision,
+        commercial agreement or relationship remains
+        subject to independent verification and agreement
+        between the relevant parties.
+        </p>
 
-`
+        `
+    },
 
-}
+
+    disclaimer:{
+
+        title:"Disclaimer",
+
+        content:`
+
+        <p>
+        PRANAURA operates as a real estate advisory and
+        connection platform and does not represent ownership
+        of properties presented or discussed through its network.
+        </p>
+
+        <br>
+
+        <p>
+        Property information, availability, pricing,
+        documentation and legal status should be independently
+        verified by the relevant parties before making any decision.
+        </p>
+
+        <br>
+
+        <p>
+        PRANAURA does not guarantee the outcome of any
+        introduction, negotiation, investment or transaction.
+        </p>
+
+        `
+    }
 
 };
 
+
+
+/* =========================================================
+   LEGAL MODAL
+========================================================= */
 
 function showLegal(type){
 
     const modal =
         document.getElementById("legalModal");
 
-    document.getElementById("legalTitle")
-        .textContent =
+
+    document.getElementById(
+        "legalTitle"
+    ).textContent =
         legalData[type].title;
 
-    document.getElementById("legalContent")
-        .innerHTML =
+
+    document.getElementById(
+        "legalContent"
+    ).innerHTML =
         legalData[type].content;
 
-    modal.style.display="block";
 
-    document.body.style.overflow="hidden";
+    modal.style.display =
+        "block";
+
+
+    document.body.style.overflow =
+        "hidden";
 
 }
+
 
 
 function closeLegal(){
 
-    document.getElementById("legalModal")
-        .style.display="none";
+    document.getElementById(
+        "legalModal"
+    ).style.display =
+        "none";
 
-    document.body.style.overflow="";
+
+    document.body.style.overflow =
+        "";
 
 }
 
 
-document.getElementById("legalModal")
-    .addEventListener("click",function(event){
 
-        if(event.target===this){
+document
+    .getElementById("legalModal")
+    .addEventListener(
+        "click",
+        function(event){
 
-            closeLegal();
+            if(event.target === this){
+
+                closeLegal();
+
+            }
 
         }
+    );
 
-    });
 
 
 /* =========================================================
    ESCAPE KEY
 ========================================================= */
 
-document.addEventListener("keydown",function(event){
+document.addEventListener(
+    "keydown",
+    function(event){
 
-    if(event.key==="Escape"){
+        if(event.key === "Escape"){
 
-        closeLegal();
+            closeLegal();
+
+        }
 
     }
-
-});
+);
 
 </script>
 
+
 </body>
+
 </html>
