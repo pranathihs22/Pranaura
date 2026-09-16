@@ -2,57 +2,123 @@
 <html lang="en">
 
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>PRANAURA | Strategic Builder & Investor Partnerships</title>
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+>
 
-<meta name="description"
-content="PRANAURA connects builders, developers, landowners, investors and buyers through structured real estate networking and strategic partnerships.">
+<title>
+PRANAURA | Strategic Builder & Investor Partnerships
+</title>
 
-<meta name="keywords"
-content="PRANAURA, real estate advisory, builders, investors, landowners, Mysore real estate, property networking">
+<meta
+name="description"
+content="PRANAURA connects builders, developers, landowners, investors and property buyers through structured professional networking and AI-assisted property workflows."
+>
+
+<meta
+name="keywords"
+content="PRANAURA, real estate advisory, builders, developers, landowners, investors, property buyers, real estate networking"
+>
 
 <meta name="author" content="Pranathi H.S.">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<meta
+name="theme-color"
+content="#5b3a20"
+>
 
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Noto+Sans+Kannada:wght@400;500;600&family=Poppins:wght@300;400;500;600&display=swap"
-rel="stylesheet">
+<meta
+name="color-scheme"
+content="light dark"
+>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link
+rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin
+>
+
+<link
+href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Noto+Sans+Kannada:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+rel="stylesheet"
+>
 
 <style>
 
 /* =========================================================
-   PRANAURA — GLOBAL
-========================================================= */
+   PRANAURA
+   PREMIUM RESPONSIVE SINGLE PAGE WEBSITE
+   ========================================================= */
 
 :root{
-    --cream:#f7f1e7;
-    --cream-2:#fbf8f2;
-    --cream-3:#efe5d6;
 
-    --brown:#2b1b14;
-    --brown-2:#4b3328;
-    --brown-3:#705447;
+    --cream:#f7f0e6;
+    --cream2:#fffaf2;
+    --cream3:#eee1d0;
 
-    --gold:#b87b36;
-    --gold-2:#d39a57;
+    --brown:#5b3a20;
+    --brown2:#7a5230;
+    --brown3:#382216;
 
-    --text:#30231d;
-    --muted:#786a61;
+    --gold:#a87b42;
 
-    --line:#dfd1c0;
-    --white:#fffdf9;
+    --text:#342418;
+    --muted:#756657;
+
+    --border:#d7c3ac;
+
+    --white:#ffffff;
 
     --green:#25D366;
 
-    --shadow:0 20px 60px rgba(47,31,21,.08);
+    --success:#47744c;
 
-    --serif:"Cormorant Garamond",serif;
-    --sans:"Poppins",sans-serif;
-    --kannada:"Noto Sans Kannada",sans-serif;
+    --red:#a84d42;
+
+    --shadow:
+        0 15px 45px rgba(70,42,22,.12);
+
+    --radius:17px;
+
+    --container:1200px;
 }
+
+
+/* =========================================================
+   DARK MODE
+   ========================================================= */
+
+body.dark{
+
+    --cream:#15100c;
+    --cream2:#211811;
+    --cream3:#2a1e15;
+
+    --brown:#c59b6b;
+    --brown2:#dfba89;
+    --brown3:#f2dcc0;
+
+    --text:#f6eadb;
+    --muted:#c6b6a4;
+
+    --border:#554233;
+
+    --white:#211811;
+
+    --shadow:
+        0 15px 45px rgba(0,0,0,.35);
+}
+
+
+/* =========================================================
+   RESET
+   ========================================================= */
 
 *{
     margin:0;
@@ -62,42 +128,49 @@ rel="stylesheet">
 
 html{
     scroll-behavior:smooth;
+    scroll-padding-top:90px;
 }
 
 body{
-    font-family:var(--sans);
-    background:var(--cream-2);
+
+    font-family:"Poppins",sans-serif;
+
+    background:var(--cream);
+
     color:var(--text);
+
+    line-height:1.6;
+
     overflow-x:hidden;
-    transition:.3s ease;
+
+    min-width:320px;
 }
 
-body.dark{
-    --cream:#211812;
-    --cream-2:#17110e;
-    --cream-3:#2b2019;
+body,
+button,
+input,
+select,
+textarea{
 
-    --brown:#f7eee3;
-    --brown-2:#e5d2bf;
-    --brown-3:#cbb6a1;
-
-    --text:#f7eee3;
-    --muted:#c5b4a4;
-
-    --line:#49372d;
-    --white:#211812;
+    transition:
+        background-color .25s ease,
+        color .25s ease,
+        border-color .25s ease;
 }
 
 a{
-    color:inherit;
+
     text-decoration:none;
+
+    color:inherit;
 }
 
 button,
 input,
 select,
 textarea{
-    font-family:inherit;
+
+    font:inherit;
 }
 
 button{
@@ -105,264 +178,520 @@ button{
 }
 
 img{
+
     max-width:100%;
+
     display:block;
 }
 
-section{
-    scroll-margin-top:100px;
+::selection{
+
+    background:var(--brown);
+
+    color:#fff;
 }
+
+
+/* =========================================================
+   ACCESSIBILITY
+   ========================================================= */
+
+.skip-link{
+
+    position:fixed;
+
+    top:-100px;
+
+    left:20px;
+
+    z-index:100000;
+
+    background:var(--brown);
+
+    color:#fff;
+
+    padding:12px 18px;
+
+    border-radius:8px;
+}
+
+.skip-link:focus{
+
+    top:20px;
+}
+
+:focus-visible{
+
+    outline:3px solid var(--gold);
+
+    outline-offset:4px;
+}
+
 
 /* =========================================================
    LOADER
-========================================================= */
+   ========================================================= */
 
 .loader{
+
     position:fixed;
+
     inset:0;
+
+    z-index:100000;
+
     background:var(--cream);
+
     display:flex;
-    justify-content:center;
+
     align-items:center;
-    z-index:99999;
-    animation:loaderOut 1.2s ease 1.7s forwards;
+
+    justify-content:center;
+
+    transition:
+        opacity .7s ease,
+        visibility .7s ease;
+}
+
+.loader.hide{
+
+    opacity:0;
+
+    visibility:hidden;
+
+    pointer-events:none;
 }
 
 .loader-inner{
+
     text-align:center;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
 }
 
 .loader-logo{
-    width:82px;
-    margin:0 auto 18px;
-    animation:logoFade 1.5s ease forwards;
+
+    width:105px;
+
+    height:105px;
+
+    object-fit:contain;
+
+    opacity:0;
+
+    animation:logoFade 1.8s ease forwards;
 }
 
 .loader-brand{
-    font-family:var(--serif);
-    font-size:35px;
-    letter-spacing:12px;
+
+    margin-top:18px;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:48px;
+
+    letter-spacing:7px;
+
+    color:var(--brown);
+
     opacity:0;
-    animation:brandFade 1s ease .4s forwards;
+
+    animation:
+        brandFade 1.8s ease .5s forwards;
+}
+
+.loader-line{
+
+    width:0;
+
+    height:1px;
+
+    margin-top:20px;
+
+    background:var(--gold);
+
+    animation:
+        loaderLine 1.5s ease 1s forwards;
 }
 
 @keyframes logoFade{
-    from{
+
+    0%{
         opacity:0;
-        transform:scale(.75);
+        transform:scale(.88);
     }
-    to{
+
+    100%{
         opacity:1;
         transform:scale(1);
     }
 }
 
 @keyframes brandFade{
-    to{
+
+    0%{
+        opacity:0;
+        letter-spacing:12px;
+    }
+
+    100%{
         opacity:1;
+        letter-spacing:7px;
     }
 }
 
-@keyframes loaderOut{
+@keyframes loaderLine{
+
     to{
-        opacity:0;
-        visibility:hidden;
-        pointer-events:none;
+        width:150px;
     }
 }
+
+
+/* =========================================================
+   SCROLL PROGRESS
+   ========================================================= */
+
+.scroll-progress{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:0;
+
+    height:3px;
+
+    background:var(--gold);
+
+    z-index:100001;
+}
+
 
 /* =========================================================
    HEADER
-========================================================= */
+   ========================================================= */
 
 header{
+
     position:fixed;
+
     top:0;
+
     left:0;
+
     width:100%;
-    height:78px;
-    z-index:9000;
 
-    background:rgba(247,241,231,.93);
+    z-index:9999;
+
+    background:
+        color-mix(
+            in srgb,
+            var(--cream) 92%,
+            transparent
+        );
+
     backdrop-filter:blur(18px);
-    border-bottom:1px solid rgba(120,84,60,.12);
-}
 
-body.dark header{
-    background:rgba(23,17,14,.93);
+    -webkit-backdrop-filter:blur(18px);
+
+    border-bottom:1px solid var(--border);
 }
 
 .nav{
-    width:min(1400px,92%);
-    height:100%;
+
+    width:min(
+        calc(100% - 40px),
+        var(--container)
+    );
+
     margin:auto;
 
+    min-height:76px;
+
     display:flex;
+
     align-items:center;
-    justify-content:center;
-    gap:28px;
+
+    justify-content:flex-end;
+
+    gap:20px;
 }
 
-.nav-links{
+
+/* NO LOGO IN HEADER */
+
+.navlinks{
+
     display:flex;
+
     align-items:center;
+
     justify-content:center;
-    gap:25px;
+
+    gap:22px;
+
+    flex-wrap:wrap;
 }
 
-.nav-links a{
-    font-size:12px;
+.navlinks a{
+
+    position:relative;
+
+    font-size:13px;
+
     color:var(--muted);
+
     transition:.25s ease;
+
     white-space:nowrap;
 }
 
-.nav-links a:hover,
-.nav-links a.active{
+.navlinks a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-7px;
+
+    width:0;
+
+    height:1px;
+
+    background:var(--gold);
+
+    transition:.25s ease;
+}
+
+.navlinks a:hover{
+
     color:var(--brown);
 }
 
-.nav-actions{
+.navlinks a:hover::after,
+.navlinks a.active::after{
+
+    width:100%;
+}
+
+.navlinks a.active{
+
+    color:var(--brown);
+}
+
+
+/* =========================================================
+   NAV TOOLS
+   ========================================================= */
+
+.navtools{
+
     display:flex;
+
     align-items:center;
-    gap:10px;
-    margin-left:18px;
+
+    gap:8px;
+
+    flex-shrink:0;
 }
 
 .nav-btn{
-    border:1px solid var(--line);
+
+    width:40px;
+
+    height:40px;
+
+    border:1px solid var(--border);
+
     background:transparent;
+
     color:var(--brown);
-    width:46px;
-    height:46px;
+
     border-radius:50%;
 
-    display:flex;
-    justify-content:center;
-    align-items:center;
+    display:grid;
+
+    place-items:center;
+
+    font-size:12px;
 
     transition:.25s ease;
 }
 
 .nav-btn:hover{
-    background:var(--brown);
-    color:var(--cream);
+
+    background:var(--cream3);
+
+    transform:translateY(-1px);
 }
 
-.connect-btn{
-    border:none;
-    background:var(--brown);
-    color:var(--cream);
+.nav-cta{
 
-    padding:15px 25px;
+    border:0;
+
+    background:var(--brown);
+
+    color:#fff;
+
+    padding:11px 20px;
+
     border-radius:30px;
 
     font-size:12px;
-    font-weight:500;
+
+    letter-spacing:.4px;
 
     transition:.25s ease;
 }
 
-.connect-btn:hover{
+.nav-cta:hover{
+
+    background:var(--brown2);
+
     transform:translateY(-2px);
-    box-shadow:0 12px 30px rgba(43,27,20,.18);
 }
 
 .menu-btn{
+
     display:none;
 }
 
-/* =========================================================
-   STANDARD ICON SYSTEM
-========================================================= */
-
-/*
-   IMPORTANT:
-   All PRANAURA interface icons use this same visual language.
-   No mixed emojis.
-*/
-
-.icon{
-    width:24px;
-    height:24px;
-
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-
-    color:var(--gold);
-    flex:none;
-}
-
-.icon svg{
-    width:100%;
-    height:100%;
-    stroke:currentColor;
-    fill:none;
-    stroke-width:1.6;
-    stroke-linecap:round;
-    stroke-linejoin:round;
-}
-
-/* Feature icon — SAME icon everywhere */
-
-.feature-icon{
-    width:38px;
-    height:38px;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    color:var(--gold);
-
-    margin:0 auto 28px;
-}
-
-.feature-icon svg{
-    width:27px;
-    height:27px;
-
-    fill:none;
-    stroke:currentColor;
-    stroke-width:1.5;
-    stroke-linecap:round;
-    stroke-linejoin:round;
-}
 
 /* =========================================================
    HERO
-========================================================= */
+   ========================================================= */
 
 .hero{
-    min-height:100vh;
+
+    min-height:100svh;
+
+    padding:
+        150px 24px
+        100px;
 
     display:flex;
+
     align-items:center;
+
     justify-content:center;
 
     text-align:center;
 
-    padding:150px 20px 100px;
+    position:relative;
 
-    background:var(--cream-2);
+    background:
+        linear-gradient(
+            135deg,
+            var(--cream2),
+            var(--cream)
+        );
 }
 
-.hero-content{
-    width:min(1100px,92%);
+/* IMPORTANT:
+   NO GIANT CIRCLES
+*/
+
+.hero::before,
+.hero::after{
+
+    display:none !important;
+
+    content:none !important;
+}
+
+.hero-inner{
+
+    width:min(
+        100%,
+        900px
+    );
+
+    margin:auto;
+
+    position:relative;
+
+    z-index:2;
+}
+
+.launch{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:9px;
+
+    padding:8px 15px;
+
+    border:1px solid var(--border);
+
+    border-radius:30px;
+
+    color:var(--muted);
+
+    font-size:11px;
+
+    letter-spacing:.8px;
+
+    text-transform:uppercase;
+
+    margin-bottom:28px;
+}
+
+.launch-dot{
+
+    width:7px;
+
+    height:7px;
+
+    border-radius:50%;
+
+    background:var(--gold);
+
+    animation:pulse 2s infinite;
+}
+
+@keyframes pulse{
+
+    0%,100%{
+        opacity:1;
+    }
+
+    50%{
+        opacity:.35;
+    }
 }
 
 .hero-logo{
-    width:105px;
-    margin:0 auto 22px;
 
-    animation:heroLogo 1.4s ease forwards;
+    width:125px;
+
+    height:125px;
+
+    object-fit:contain;
+
+    margin:0 auto 20px;
+
+    animation:
+        heroLogoFade 1.8s ease both;
 }
 
-@keyframes heroLogo{
+@keyframes heroLogoFade{
+
     from{
         opacity:0;
-        transform:translateY(18px);
+        transform:translateY(15px);
     }
 
     to{
@@ -372,2292 +701,2972 @@ body.dark header{
 }
 
 .hero-brand{
-    font-family:var(--serif);
-    font-size:76px;
-    letter-spacing:16px;
-    margin-bottom:25px;
-    line-height:1;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+        clamp(58px,9vw,105px);
+
+    line-height:.9;
+
+    letter-spacing:
+        clamp(5px,1.2vw,12px);
+
+    color:var(--brown);
+
+    font-weight:600;
+
+    margin-bottom:18px;
 }
 
-.hero-label{
-    font-size:11px;
-    letter-spacing:6px;
-    color:var(--gold);
-    margin-bottom:25px;
-}
+.hero-tagline{
 
-.hero-title{
-    font-family:var(--serif);
-    font-size:clamp(60px,8vw,105px);
-    font-weight:500;
-    line-height:.92;
-    margin-bottom:30px;
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+        clamp(23px,3vw,35px);
+
+    color:var(--brown2);
+
+    margin-bottom:20px;
 }
 
 .hero-description{
-    max-width:720px;
+
+    max-width:690px;
+
     margin:auto;
 
     color:var(--muted);
+
     font-size:15px;
+
     line-height:1.9;
 }
 
 .hero-actions{
+
+    margin-top:34px;
+
     display:flex;
+
     justify-content:center;
-    gap:12px;
+
     flex-wrap:wrap;
 
-    margin-top:35px;
+    gap:12px;
 }
 
-.primary-btn,
-.secondary-btn{
-    padding:16px 27px;
-    border-radius:30px;
-    font-size:12px;
-    border:1px solid var(--brown);
-
-    transition:.25s ease;
-}
-
-.primary-btn{
-    background:var(--brown);
-    color:var(--cream);
-}
-
-.secondary-btn{
-    background:transparent;
-    color:var(--brown);
-}
-
-.primary-btn:hover,
-.secondary-btn:hover{
-    transform:translateY(-3px);
-}
-
-.launch{
-    margin-top:32px;
+.btn{
 
     display:inline-flex;
+
     align-items:center;
-    gap:10px;
 
-    font-size:10px;
-    letter-spacing:3px;
-    color:var(--gold);
-    text-transform:uppercase;
-}
+    justify-content:center;
 
-.launch-dot{
-    width:7px;
-    height:7px;
-    border-radius:50%;
-    background:var(--gold);
-}
+    min-height:48px;
 
-/* =========================================================
-   STATS
-========================================================= */
+    padding:0 23px;
 
-.stats{
-    border-top:1px solid var(--line);
-    border-bottom:1px solid var(--line);
+    border-radius:30px;
 
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-}
-
-.stat{
-    padding:40px 20px;
-    text-align:center;
-    border-right:1px solid var(--line);
-}
-
-.stat:last-child{
-    border-right:none;
-}
-
-.stat-number{
-    font-family:var(--serif);
-    font-size:43px;
-}
-
-.stat-label{
-    margin-top:7px;
-    color:var(--muted);
-    font-size:11px;
-    letter-spacing:1px;
-}
-
-/* =========================================================
-   COMMON SECTION
-========================================================= */
-
-.section{
-    padding:120px 6%;
-}
-
-.section.alt{
-    background:var(--cream);
-}
-
-.section-head{
-    max-width:900px;
-    margin:0 auto 70px;
-    text-align:center;
-}
-
-.eyebrow{
-    font-size:10px;
-    letter-spacing:5px;
-    color:var(--gold);
-    margin-bottom:18px;
-}
-
-.section-title{
-    font-family:var(--serif);
-    font-size:clamp(45px,5vw,70px);
-    font-weight:500;
-    line-height:1;
-    margin-bottom:20px;
-}
-
-.section-text{
-    color:var(--muted);
-    line-height:1.9;
-    font-size:14px;
-}
-
-/* =========================================================
-   PEOPLE PROPERTY PROGRESS
-========================================================= */
-
-.values{
-    padding:130px 6%;
-    text-align:center;
-}
-
-.values-title{
-    font-family:var(--serif);
-    font-size:clamp(55px,6vw,82px);
-    font-weight:500;
-    margin-bottom:70px;
-}
-
-.values-grid{
-    max-width:1200px;
-    margin:auto;
-
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-}
-
-.value{
-    padding:15px 38px 25px;
-    border-right:1px solid var(--line);
-}
-
-.value:last-child{
-    border-right:none;
-}
-
-.value h3{
-    font-family:var(--serif);
-    font-size:27px;
-    font-weight:500;
-    margin-bottom:13px;
-}
-
-.value p{
-    color:var(--muted);
-    font-size:13px;
-    line-height:1.8;
-}
-
-/* =========================================================
-   ABOUT
-========================================================= */
-
-.about-grid{
-    max-width:1200px;
-    margin:auto;
-
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:70px;
-    align-items:center;
-}
-
-.about-large{
-    font-family:var(--serif);
-    font-size:clamp(42px,5vw,68px);
-    line-height:1.05;
-}
-
-.about-copy{
-    color:var(--muted);
-    line-height:2;
-    font-size:14px;
-}
-
-.about-copy p{
-    margin-bottom:20px;
-}
-
-/* =========================================================
-   PROCESS
-========================================================= */
-
-.process-grid{
-    max-width:1200px;
-    margin:auto;
-
-    display:grid;
-    grid-template-columns:repeat(5,1fr);
-}
-
-.process{
-    padding:35px 22px;
-    border-top:1px solid var(--line);
-    border-right:1px solid var(--line);
-}
-
-.process:last-child{
-    border-right:none;
-}
-
-.process-number{
-    font-family:var(--serif);
-    font-size:40px;
-    color:var(--gold);
-    margin-bottom:20px;
-}
-
-.process h3{
-    font-family:var(--serif);
-    font-size:25px;
-    margin-bottom:12px;
-}
-
-.process p{
-    color:var(--muted);
     font-size:12px;
-    line-height:1.8;
-}
 
-/* =========================================================
-   NETWORK
-========================================================= */
-
-.network-grid{
-    max-width:1200px;
-    margin:auto;
-
-    display:grid;
-    grid-template-columns:repeat(5,1fr);
-    gap:15px;
-}
-
-.network-card{
-    background:var(--cream-2);
-    border:1px solid var(--line);
-
-    padding:35px 25px;
-    text-align:center;
+    border:1px solid var(--brown);
 
     transition:.3s ease;
 }
 
-.network-card:hover{
-    transform:translateY(-6px);
-    box-shadow:var(--shadow);
+.btn-primary{
+
+    background:var(--brown);
+
+    color:#fff;
 }
 
-.network-card h3{
-    font-family:var(--serif);
-    font-size:27px;
-    margin:20px 0 10px;
+.btn-primary:hover{
+
+    background:var(--brown2);
+
+    transform:translateY(-2px);
 }
 
-.network-card p{
+.btn-secondary{
+
+    color:var(--brown);
+
+    background:transparent;
+}
+
+.btn-secondary:hover{
+
+    background:var(--cream3);
+
+    transform:translateY(-2px);
+}
+
+.hero-note{
+
+    margin-top:30px;
+
+    font-size:11px;
+
     color:var(--muted);
-    font-size:12px;
-    line-height:1.8;
+
+    letter-spacing:.7px;
 }
+
 
 /* =========================================================
-   SERVICES
-========================================================= */
+   GENERAL
+   ========================================================= */
 
-.services-grid{
-    max-width:1200px;
+.container{
+
+    width:min(
+        calc(100% - 48px),
+        var(--container)
+    );
+
     margin:auto;
-
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:18px;
 }
 
-.service{
-    border:1px solid var(--line);
-    padding:42px 32px;
-    background:var(--cream-2);
+section{
+
+    position:relative;
 }
 
-.service h3{
-    font-family:var(--serif);
-    font-size:30px;
-    margin-bottom:14px;
+.section{
+
+    padding:110px 0;
 }
 
-.service p{
+.section-alt{
+
+    background:var(--cream2);
+}
+
+.eyebrow{
+
+    color:var(--gold);
+
+    font-size:11px;
+
+    text-transform:uppercase;
+
+    letter-spacing:2px;
+
+    margin-bottom:12px;
+
+    font-weight:600;
+}
+
+.title{
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+        clamp(42px,5vw,68px);
+
+    line-height:1;
+
+    color:var(--brown);
+
+    font-weight:600;
+
+    margin-bottom:20px;
+}
+
+.subtitle{
+
+    max-width:720px;
+
     color:var(--muted);
-    font-size:13px;
-    line-height:1.8;
+
+    font-size:14px;
+
+    line-height:1.9;
 }
+
+.center{
+
+    text-align:center;
+}
+
+.center .subtitle{
+
+    margin:auto;
+}
+
 
 /* =========================================================
-   PLATFORM
-========================================================= */
+   CARDS
+   ========================================================= */
 
-.platform{
-    max-width:1200px;
-    margin:auto;
+.grid{
 
     display:grid;
-    grid-template-columns:1fr 1fr;
+
     gap:20px;
 }
 
-.platform-card{
-    border:1px solid var(--line);
-    padding:45px;
-    background:var(--cream-2);
+.g2{
+
+    grid-template-columns:
+        repeat(2,minmax(0,1fr));
 }
 
-.platform-card h3{
-    font-family:var(--serif);
-    font-size:34px;
-    margin-bottom:15px;
+.g3{
+
+    grid-template-columns:
+        repeat(3,minmax(0,1fr));
 }
 
-.platform-card p{
+.g4{
+
+    grid-template-columns:
+        repeat(4,minmax(0,1fr));
+}
+
+.card{
+
+    background:var(--cream2);
+
+    border:1px solid var(--border);
+
+    border-radius:var(--radius);
+
+    padding:30px;
+
+    transition:
+        transform .3s ease,
+        border-color .3s ease,
+        box-shadow .3s ease;
+}
+
+.card:hover{
+
+    transform:translateY(-5px);
+
+    border-color:var(--gold);
+
+    box-shadow:var(--shadow);
+}
+
+
+/* =========================================================
+   UNIFORM ICONS
+   ========================================================= */
+
+.card-icon{
+
+    width:52px;
+
+    height:52px;
+
+    border:1px solid var(--gold);
+
+    display:grid;
+
+    place-items:center;
+
+    position:relative;
+
+    transform:rotate(45deg);
+
+    margin-bottom:24px;
+
+    background:transparent;
+
+    font-size:0;
+}
+
+.card-icon::before{
+
+    content:"";
+
+    width:19px;
+
+    height:19px;
+
+    border:1px solid var(--brown);
+
+    position:absolute;
+}
+
+.card-icon::after{
+
+    content:"";
+
+    width:8px;
+
+    height:8px;
+
+    background:var(--gold);
+
+    position:absolute;
+}
+
+.card-icon,
+.card-icon::before,
+.card-icon::after{
+
+    border-radius:3px;
+}
+
+.card h3{
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:27px;
+
+    color:var(--brown);
+
+    margin-bottom:9px;
+}
+
+.card p{
+
     color:var(--muted);
+
+    font-size:13px;
+
     line-height:1.8;
+}
+
+
+/* =========================================================
+   ABOUT
+   ========================================================= */
+
+.about-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        1.1fr .9fr;
+
+    gap:60px;
+
+    align-items:center;
+}
+
+.about-panel{
+
+    padding:35px;
+
+    border:1px solid var(--border);
+
+    background:var(--cream2);
+
+    border-radius:var(--radius);
+}
+
+.about-list{
+
+    margin-top:25px;
+
+    display:grid;
+
+    gap:13px;
+}
+
+.about-list div{
+
+    display:flex;
+
+    gap:12px;
+
+    align-items:flex-start;
+
+    color:var(--muted);
+
     font-size:13px;
 }
 
+.about-list span{
+
+    width:7px;
+
+    height:7px;
+
+    background:var(--gold);
+
+    border-radius:50%;
+
+    margin-top:8px;
+
+    flex-shrink:0;
+}
+
+
 /* =========================================================
-   OPPORTUNITIES
-========================================================= */
+   WHY US
+   ========================================================= */
 
-.opportunity-grid{
-    max-width:1200px;
-    margin:auto;
+.feature-card{
 
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:18px;
+    min-height:240px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:flex-start;
 }
 
-.opportunity{
-    border:1px solid var(--line);
-    background:var(--cream-2);
-    padding:35px;
+
+/* =========================================================
+   PATH
+   ========================================================= */
+
+.path-card{
+
+    min-height:280px;
+
+    position:relative;
+
+    overflow:hidden;
 }
 
-.opportunity-status{
-    font-size:9px;
-    letter-spacing:2px;
-    color:var(--gold);
-    text-transform:uppercase;
-    margin-bottom:25px;
-}
+.path-number{
 
-.opportunity h3{
-    font-family:var(--serif);
-    font-size:30px;
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:65px;
+
+    color:var(--cream3);
+
+    line-height:1;
+
     margin-bottom:10px;
 }
 
-.opportunity p{
-    color:var(--muted);
-    font-size:12px;
-    line-height:1.8;
+body.dark .path-number{
+
+    color:#3b2b20;
 }
+
+
+/* =========================================================
+   PROCESS
+   ========================================================= */
+
+.process{
+
+    position:relative;
+}
+
+.process-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(4,minmax(0,1fr));
+
+    gap:0;
+
+    margin-top:50px;
+}
+
+.process-step{
+
+    padding:30px;
+
+    border-top:1px solid var(--border);
+
+    border-bottom:1px solid var(--border);
+
+    border-left:1px solid var(--border);
+}
+
+.process-step:last-child{
+
+    border-right:1px solid var(--border);
+}
+
+.process-number{
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    color:var(--gold);
+
+    font-size:36px;
+
+    margin-bottom:14px;
+}
+
+
+/* =========================================================
+   NETWORK
+   ========================================================= */
+
+.network-intro{
+
+    display:grid;
+
+    grid-template-columns:
+        .8fr 1.2fr;
+
+    gap:60px;
+
+    align-items:start;
+
+    margin-bottom:45px;
+}
+
+.network-points{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(2,1fr);
+
+    gap:15px;
+}
+
+.network-point{
+
+    padding:22px;
+
+    border:1px solid var(--border);
+
+    border-radius:14px;
+
+    background:var(--cream2);
+
+    color:var(--muted);
+
+    font-size:13px;
+}
+
+
+/* =========================================================
+   SERVICES
+   ========================================================= */
+
+.service-card{
+
+    min-height:230px;
+}
+
 
 /* =========================================================
    SMART MATCH
-========================================================= */
+   ========================================================= */
 
-.match-box{
-    max-width:1050px;
-    margin:auto;
+.smartmatch{
 
-    border:1px solid var(--line);
-    background:var(--cream-2);
+    background:
+        linear-gradient(
+            135deg,
+            var(--cream3),
+            var(--cream2)
+        );
+}
 
-    padding:50px;
+.match-layout{
+
+    display:grid;
+
+    grid-template-columns:
+        .8fr 1.2fr;
+
+    gap:50px;
+
+    align-items:start;
+}
+
+.match-form{
+
+    background:var(--cream2);
+
+    border:1px solid var(--border);
+
+    padding:35px;
+
+    border-radius:var(--radius);
+
+    box-shadow:var(--shadow);
 }
 
 .form-grid{
+
     display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:18px;
+
+    grid-template-columns:
+        repeat(2,minmax(0,1fr));
+
+    gap:16px;
 }
 
 .field{
+
     display:flex;
+
     flex-direction:column;
-    gap:8px;
+
+    gap:7px;
 }
 
 .field.full{
-    grid-column:1/-1;
+
+    grid-column:1 / -1;
 }
 
 .field label{
-    font-size:10px;
-    letter-spacing:1px;
+
+    font-size:11px;
+
     color:var(--muted);
+
+    letter-spacing:.3px;
 }
 
 .field input,
 .field select,
 .field textarea{
+
     width:100%;
 
-    border:1px solid var(--line);
-    background:transparent;
+    min-height:46px;
 
-    padding:14px 15px;
+    border:1px solid var(--border);
 
-    outline:none;
+    background:var(--cream);
+
     color:var(--text);
 
-    font-size:13px;
+    border-radius:10px;
+
+    padding:10px 13px;
+
+    outline:none;
 }
 
 .field textarea{
+
     min-height:110px;
+
     resize:vertical;
 }
 
 .field input:focus,
 .field select:focus,
 .field textarea:focus{
-    border-color:var(--gold);
-}
 
-.form-submit{
-    margin-top:25px;
+    border-color:var(--gold);
+
+    box-shadow:
+        0 0 0 3px
+        rgba(168,123,66,.12);
 }
 
 .match-result{
+
     display:none;
-    margin-top:30px;
-    border-top:1px solid var(--line);
-    padding-top:30px;
+
+    margin-top:20px;
+
+    padding:22px;
+
+    border:1px solid var(--border);
+
+    border-radius:14px;
+
+    background:var(--cream3);
 }
 
 .match-result.show{
+
     display:block;
 }
 
-.match-id{
-    font-family:var(--serif);
-    font-size:35px;
+.score{
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:60px;
+
+    color:var(--brown);
+
+    line-height:1;
 }
+
+.reference{
+
+    font-size:11px;
+
+    color:var(--muted);
+
+    margin-top:10px;
+}
+
 
 /* =========================================================
    AI
-========================================================= */
+   ========================================================= */
 
-.ai-box{
-    max-width:1050px;
-    margin:auto;
-
-    border:1px solid var(--line);
-    padding:55px;
-
-    background:var(--cream-2);
-}
-
-.ai-title{
-    font-family:var(--serif);
-    font-size:48px;
-    margin-bottom:15px;
-}
-
-.ai-text{
-    color:var(--muted);
-    line-height:1.9;
-    font-size:13px;
-}
-
-/* =========================================================
-   CRM
-========================================================= */
-
-.crm-grid{
-    max-width:1200px;
-    margin:auto;
+.ai-layout{
 
     display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:18px;
-}
 
-.crm-card{
-    border:1px solid var(--line);
-    padding:35px;
-}
+    grid-template-columns:
+        .8fr 1.2fr;
 
-.crm-card h3{
-    font-family:var(--serif);
-    font-size:29px;
-    margin-bottom:12px;
-}
-
-.crm-card p{
-    color:var(--muted);
-    font-size:12px;
-    line-height:1.8;
-}
-
-/* =========================================================
-   APPOINTMENTS
-========================================================= */
-
-.appointment-box{
-    max-width:850px;
-    margin:auto;
-    border:1px solid var(--line);
-    padding:50px;
-}
-
-/* =========================================================
-   TRUST
-========================================================= */
-
-.trust-grid{
-    max-width:1000px;
-    margin:auto;
-
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:18px;
-}
-
-.trust-card{
-    border:1px solid var(--line);
-    padding:35px;
-    text-align:center;
-}
-
-.trust-card h3{
-    font-family:var(--serif);
-    font-size:28px;
-    margin:20px 0 10px;
-}
-
-.trust-card p{
-    color:var(--muted);
-    font-size:12px;
-    line-height:1.8;
-}
-
-/* =========================================================
-   DOCUMENTS / REFERRAL / COMMISSION
-========================================================= */
-
-.utility-grid{
-    max-width:1200px;
-    margin:auto;
-
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:18px;
-}
-
-.utility-card{
-    border:1px solid var(--line);
-    padding:40px;
-}
-
-.utility-card h3{
-    font-family:var(--serif);
-    font-size:31px;
-    margin-bottom:12px;
-}
-
-.utility-card p{
-    color:var(--muted);
-    font-size:12px;
-    line-height:1.8;
-    margin-bottom:20px;
-}
-
-/* =========================================================
-   FOUNDER
-========================================================= */
-
-/*
-   ONLY ONE FOUNDER SECTION.
-*/
-
-.founder{
-    padding:130px 6%;
-    text-align:center;
-    background:var(--cream-2);
-}
-
-.founder-inner{
-    max-width:900px;
-    margin:auto;
-}
-
-.founder-name{
-    font-family:var(--serif);
-    font-size:clamp(55px,7vw,82px);
-    font-weight:500;
-    margin:15px 0 20px;
-}
-
-.founder-role{
-    color:var(--gold);
-    letter-spacing:5px;
-    font-size:10px;
-    margin-bottom:35px;
-}
-
-.founder-text{
-    color:var(--muted);
-    font-size:14px;
-    line-height:2;
-}
-
-/* =========================================================
-   FAQ
-========================================================= */
-
-.faq{
-    max-width:900px;
-    margin:auto;
-}
-
-.faq-item{
-    border-bottom:1px solid var(--line);
-}
-
-.faq-question{
-    width:100%;
-
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-
-    padding:25px 0;
-
-    border:none;
-    background:none;
-
-    color:var(--text);
-
-    font-family:var(--serif);
-    font-size:25px;
-    text-align:left;
-}
-
-.faq-answer{
-    max-height:0;
-    overflow:hidden;
-    transition:.35s ease;
-
-    color:var(--muted);
-    font-size:13px;
-    line-height:1.8;
-}
-
-.faq-item.open .faq-answer{
-    max-height:300px;
-    padding-bottom:25px;
-}
-
-.faq-symbol{
-    font-family:var(--sans);
-    font-size:20px;
-}
-
-/* =========================================================
-   CONTACT
-========================================================= */
-
-.contact-grid{
-    max-width:1100px;
-    margin:auto;
-
-    display:grid;
-    grid-template-columns:1fr 1fr;
     gap:50px;
+
+    align-items:start;
 }
 
-.contact-info h3{
-    font-family:var(--serif);
-    font-size:45px;
-    margin-bottom:20px;
+.ai-panel{
+
+    background:var(--cream2);
+
+    border:1px solid var(--border);
+
+    border-radius:var(--radius);
+
+    overflow:hidden;
+
+    box-shadow:var(--shadow);
 }
 
-.contact-info p{
-    color:var(--muted);
-    line-height:1.9;
-    font-size:13px;
-}
+.ai-header{
 
-.contact-list{
-    margin-top:30px;
-}
+    padding:20px 22px;
 
-.contact-item{
-    padding:17px 0;
-    border-bottom:1px solid var(--line);
+    border-bottom:1px solid var(--border);
 
     display:flex;
-    gap:15px;
-    align-items:center;
-}
 
-.contact-item-text{
-    color:var(--muted);
-    font-size:13px;
-}
-
-/* =========================================================
-   LEGAL
-========================================================= */
-
-.legal-grid{
-    max-width:1100px;
-    margin:auto;
-
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:18px;
-}
-
-.legal-card{
-    border:1px solid var(--line);
-    padding:35px;
-}
-
-.legal-card h3{
-    font-family:var(--serif);
-    font-size:28px;
-    margin-bottom:12px;
-}
-
-.legal-card p{
-    color:var(--muted);
-    font-size:11px;
-    line-height:1.9;
-}
-
-/* =========================================================
-   FOOTER
-========================================================= */
-
-footer{
-    padding:70px 6% 35px;
-    background:var(--brown);
-    color:var(--cream);
-}
-
-.footer-grid{
-    max-width:1200px;
-    margin:auto;
-
-    display:grid;
-    grid-template-columns:2fr 1fr 1fr 1fr;
-    gap:40px;
-}
-
-.footer-brand{
-    font-family:var(--serif);
-    font-size:38px;
-    letter-spacing:8px;
-    margin-bottom:15px;
-}
-
-.footer-description{
-    color:#cdbdaf;
-    font-size:12px;
-    line-height:1.8;
-    max-width:350px;
-}
-
-footer h4{
-    font-size:11px;
-    letter-spacing:2px;
-    margin-bottom:20px;
-}
-
-footer a{
-    display:block;
-    color:#cdbdaf;
-    font-size:11px;
-    margin-bottom:10px;
-}
-
-.footer-bottom{
-    max-width:1200px;
-    margin:50px auto 0;
-
-    padding-top:25px;
-
-    border-top:1px solid rgba(255,255,255,.14);
-
-    color:#bca99a;
-    font-size:10px;
-
-    display:flex;
     justify-content:space-between;
-}
 
-/* =========================================================
-   MODALS
-========================================================= */
-
-.modal{
-    position:fixed;
-    inset:0;
-
-    background:rgba(30,20,15,.55);
-    backdrop-filter:blur(8px);
-
-    display:none;
     align-items:center;
-    justify-content:center;
-
-    z-index:15000;
-
-    padding:20px;
 }
 
-.modal.show{
+.ai-status{
+
     display:flex;
+
+    align-items:center;
+
+    gap:7px;
+
+    color:var(--success);
+
+    font-size:11px;
 }
 
-.modal-box{
-    width:min(650px,100%);
-    max-height:90vh;
-    overflow:auto;
+.ai-status span{
 
-    background:var(--cream-2);
-    border:1px solid var(--line);
+    width:7px;
 
-    padding:40px;
+    height:7px;
 
-    position:relative;
-
-    box-shadow:0 30px 80px rgba(0,0,0,.2);
-}
-
-.modal-close{
-    position:absolute;
-    top:18px;
-    right:18px;
-
-    border:1px solid var(--line);
-    background:none;
-    color:var(--brown);
-
-    width:36px;
-    height:36px;
+    background:var(--success);
 
     border-radius:50%;
-}
-
-.modal-title{
-    font-family:var(--serif);
-    font-size:40px;
-    margin-bottom:10px;
-}
-
-.modal-text{
-    color:var(--muted);
-    font-size:12px;
-    line-height:1.8;
-    margin-bottom:25px;
-}
-
-/* =========================================================
-   TOAST
-========================================================= */
-
-.toast{
-    position:fixed;
-
-    right:25px;
-    bottom:95px;
-
-    background:var(--brown);
-    color:var(--cream);
-
-    padding:15px 20px;
-
-    font-size:11px;
-
-    z-index:20000;
-
-    transform:translateY(30px);
-    opacity:0;
-    pointer-events:none;
-
-    transition:.3s ease;
-}
-
-.toast.show{
-    transform:translateY(0);
-    opacity:1;
-}
-
-/* =========================================================
-   AI CHAT
-========================================================= */
-
-.ai-floating{
-    position:fixed;
-
-    right:28px;
-    bottom:105px;
-
-    width:58px;
-    height:58px;
-
-    border:none;
-    border-radius:50%;
-
-    background:var(--brown);
-    color:var(--cream);
-
-    z-index:8000;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    box-shadow:0 15px 40px rgba(43,27,20,.2);
-}
-
-.ai-floating svg{
-    width:25px;
-    height:25px;
-    stroke:currentColor;
-    fill:none;
-    stroke-width:1.5;
-}
-
-.ai-chat{
-    position:fixed;
-
-    right:25px;
-    bottom:175px;
-
-    width:350px;
-    max-width:calc(100vw - 40px);
-
-    background:var(--cream-2);
-    border:1px solid var(--line);
-
-    z-index:8100;
-
-    display:none;
-
-    box-shadow:0 30px 70px rgba(0,0,0,.18);
-}
-
-.ai-chat.show{
-    display:block;
-}
-
-.ai-chat-head{
-    padding:18px 20px;
-
-    background:var(--brown);
-    color:var(--cream);
-
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-}
-
-.ai-chat-title{
-    font-family:var(--serif);
-    font-size:23px;
-}
-
-.ai-chat-close{
-    border:none;
-    background:none;
-    color:inherit;
-    font-size:18px;
 }
 
 .ai-messages{
-    height:300px;
-    overflow:auto;
-    padding:18px;
-}
 
-.message{
-    max-width:85%;
-    padding:11px 13px;
-    margin-bottom:10px;
+    height:390px;
 
-    font-size:11px;
-    line-height:1.6;
-}
+    overflow-y:auto;
 
-.message.bot{
-    background:var(--cream);
-}
-
-.message.user{
-    margin-left:auto;
-    background:var(--brown);
-    color:var(--cream);
-}
-
-.ai-input{
-    border-top:1px solid var(--line);
-    padding:12px;
+    padding:22px;
 
     display:flex;
-    gap:8px;
+
+    flex-direction:column;
+
+    gap:12px;
 }
 
-.ai-input input{
-    flex:1;
+.ai-message{
 
-    border:1px solid var(--line);
-    background:transparent;
+    max-width:85%;
 
-    padding:11px;
+    padding:12px 15px;
+
+    border-radius:13px;
+
+    font-size:12px;
+
+    line-height:1.7;
+}
+
+.ai-message.bot{
+
+    align-self:flex-start;
+
+    background:var(--cream3);
 
     color:var(--text);
+}
+
+.ai-message.user{
+
+    align-self:flex-end;
+
+    background:var(--brown);
+
+    color:#fff;
+}
+
+.ai-input-area{
+
+    display:flex;
+
+    gap:8px;
+
+    padding:15px;
+
+    border-top:1px solid var(--border);
+}
+
+.ai-input-area input{
+
+    flex:1;
+
+    min-width:0;
+
+    border:1px solid var(--border);
+
+    background:var(--cream);
+
+    color:var(--text);
+
+    border-radius:25px;
+
+    padding:11px 15px;
+
     outline:none;
 }
 
-.ai-input button{
-    width:42px;
+.ai-send{
 
-    border:none;
-    background:var(--brown);
-    color:var(--cream);
-}
+    width:44px;
 
-/* =========================================================
-   WHATSAPP
-========================================================= */
+    height:44px;
 
-.whatsapp{
-    position:fixed;
-
-    right:25px;
-    bottom:25px;
-
-    width:64px;
-    height:64px;
+    border:0;
 
     border-radius:50%;
 
-    background:var(--green);
+    background:var(--brown);
+
+    color:#fff;
+}
+
+
+/* =========================================================
+   FOUNDER
+   ========================================================= */
+
+.founder{
+
+    display:grid;
+
+    grid-template-columns:
+        .8fr 1.2fr;
+
+    gap:55px;
+
+    align-items:center;
+}
+
+.founder-box{
+
+    border:1px solid var(--border);
+
+    background:var(--cream2);
+
+    border-radius:var(--radius);
+
+    padding:45px;
+
+    text-align:center;
+}
+
+.founder-initial{
+
+    width:115px;
+
+    height:115px;
+
+    border:1px solid var(--gold);
+
+    border-radius:50%;
+
+    margin:0 auto 25px;
+
+    display:grid;
+
+    place-items:center;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:48px;
+
+    color:var(--brown);
+}
+
+
+/* =========================================================
+   TRUST
+   ========================================================= */
+
+.trust-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap:18px;
+}
+
+.trust-item{
+
+    border:1px solid var(--border);
+
+    padding:28px;
+
+    background:var(--cream2);
+
+    border-radius:var(--radius);
+}
+
+.trust-item strong{
+
+    display:block;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:25px;
+
+    color:var(--brown);
+
+    margin-bottom:8px;
+}
+
+.trust-item p{
+
+    color:var(--muted);
+
+    font-size:12px;
+
+    line-height:1.8;
+}
+
+
+/* =========================================================
+   FAQ
+   ========================================================= */
+
+.faq{
+
+    max-width:900px;
+
+    margin:45px auto 0;
+}
+
+.faq-item{
+
+    border-bottom:1px solid var(--border);
+}
+
+.faq-question{
+
+    width:100%;
+
+    padding:22px 0;
+
+    border:0;
+
+    background:none;
+
+    color:var(--text);
+
+    text-align:left;
 
     display:flex;
-    justify-content:center;
-    align-items:center;
 
-    z-index:8000;
+    justify-content:space-between;
 
-    box-shadow:0 15px 40px rgba(0,0,0,.18);
+    gap:20px;
+
+    font-size:14px;
+
+    font-weight:500;
+}
+
+.faq-answer{
+
+    display:none;
+
+    padding:0 0 22px;
+
+    color:var(--muted);
+
+    font-size:13px;
+
+    line-height:1.9;
+}
+
+.faq-item.open .faq-answer{
+
+    display:block;
+}
+
+.faq-icon{
+
+    color:var(--gold);
+
+    font-size:20px;
+}
+
+
+/* =========================================================
+   CONTACT
+   ========================================================= */
+
+.contact-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        .8fr 1.2fr;
+
+    gap:50px;
+}
+
+.contact-details{
+
+    display:grid;
+
+    gap:15px;
+}
+
+.contact-item{
+
+    padding:22px;
+
+    border:1px solid var(--border);
+
+    background:var(--cream2);
+
+    border-radius:14px;
+}
+
+.contact-item small{
+
+    display:block;
+
+    color:var(--gold);
+
+    text-transform:uppercase;
+
+    letter-spacing:1.5px;
+
+    font-size:9px;
+
+    margin-bottom:5px;
+}
+
+.contact-item a,
+.contact-item span{
+
+    font-size:13px;
+
+    color:var(--text);
+
+    word-break:break-word;
+}
+
+.contact-form{
+
+    background:var(--cream2);
+
+    border:1px solid var(--border);
+
+    border-radius:var(--radius);
+
+    padding:35px;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+footer{
+
+    padding:50px 0 30px;
+
+    border-top:1px solid var(--border);
+
+    background:var(--cream3);
+}
+
+.footer-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        1.4fr 1fr 1fr;
+
+    gap:40px;
+
+    padding-bottom:40px;
+}
+
+.footer-brand{
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    color:var(--brown);
+
+    font-size:35px;
+
+    letter-spacing:4px;
+
+    margin-bottom:10px;
+}
+
+.footer-text{
+
+    color:var(--muted);
+
+    font-size:12px;
+
+    max-width:380px;
+
+    line-height:1.8;
+}
+
+.footer-links{
+
+    display:grid;
+
+    gap:8px;
+}
+
+.footer-links a{
+
+    font-size:12px;
+
+    color:var(--muted);
+}
+
+.footer-links a:hover{
+
+    color:var(--brown);
+}
+
+.footer-bottom{
+
+    border-top:1px solid var(--border);
+
+    padding-top:22px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+    color:var(--muted);
+
+    font-size:10px;
+}
+
+
+/* =========================================================
+   WHATSAPP
+   ========================================================= */
+
+.whatsapp{
+
+    position:fixed;
+
+    right:22px;
+
+    bottom:22px;
+
+    width:56px;
+
+    height:56px;
+
+    border-radius:50%;
+
+    background:#25D366;
+
+    color:#fff;
+
+    display:grid;
+
+    place-items:center;
+
+    z-index:9000;
+
+    box-shadow:
+        0 10px 30px
+        rgba(37,211,102,.28);
 
     transition:.25s ease;
 }
 
 .whatsapp:hover{
+
     transform:translateY(-4px) scale(1.03);
 }
 
 .whatsapp svg{
-    width:34px;
-    height:34px;
+
+    width:29px;
+
+    height:29px;
+
     fill:white;
 }
 
-/* =========================================================
-   BACK TO TOP
-========================================================= */
 
-.back-top{
+/* =========================================================
+   AI FLOAT
+   ========================================================= */
+
+.ai-float{
+
     position:fixed;
 
-    right:28px;
-    bottom:185px;
+    right:22px;
 
-    width:45px;
-    height:45px;
+    bottom:92px;
 
-    border:1px solid var(--line);
-    background:var(--cream-2);
-    color:var(--brown);
+    width:52px;
+
+    height:52px;
 
     border-radius:50%;
 
-    display:none;
+    border:1px solid var(--gold);
 
-    z-index:7000;
+    background:var(--cream2);
+
+    color:var(--brown);
+
+    z-index:8999;
+
+    display:grid;
+
+    place-items:center;
+
+    font-size:19px;
+
+    box-shadow:var(--shadow);
+}
+
+
+/* =========================================================
+   BACK TOP
+   ========================================================= */
+
+.back-top{
+
+    position:fixed;
+
+    left:22px;
+
+    bottom:22px;
+
+    width:45px;
+
+    height:45px;
+
+    border-radius:50%;
+
+    border:1px solid var(--border);
+
+    background:var(--cream2);
+
+    color:var(--brown);
+
+    display:grid;
+
+    place-items:center;
+
+    opacity:0;
+
+    visibility:hidden;
+
+    z-index:8999;
+
+    transition:.25s ease;
 }
 
 .back-top.show{
-    display:block;
+
+    opacity:1;
+
+    visibility:visible;
 }
 
+
 /* =========================================================
-   COOKIE / CONSENT
-========================================================= */
+   TOAST
+   ========================================================= */
 
-.consent{
+.toast{
+
     position:fixed;
-    left:20px;
-    bottom:20px;
 
-    max-width:450px;
+    left:50%;
+
+    bottom:30px;
+
+    transform:
+        translate(-50%,20px);
+
+    opacity:0;
+
+    visibility:hidden;
+
+    z-index:99999;
 
     background:var(--brown);
-    color:var(--cream);
 
-    padding:20px;
+    color:#fff;
 
-    z-index:19000;
+    padding:13px 20px;
 
-    box-shadow:0 20px 50px rgba(0,0,0,.2);
+    border-radius:30px;
+
+    font-size:12px;
+
+    box-shadow:var(--shadow);
+
+    transition:.3s ease;
 }
 
-.consent p{
-    font-size:10px;
-    line-height:1.7;
-    margin-bottom:15px;
+.toast.show{
+
+    opacity:1;
+
+    visibility:visible;
+
+    transform:
+        translate(-50%,0);
 }
 
-.consent button{
-    border:1px solid rgba(255,255,255,.4);
-    background:transparent;
-    color:var(--cream);
-
-    padding:8px 15px;
-    font-size:10px;
-}
 
 /* =========================================================
-   RESPONSIVE
-========================================================= */
+   RESPONSIVE — TABLET
+   ========================================================= */
 
-@media(max-width:1100px){
+@media(max-width:1050px){
 
     .nav{
-        justify-content:flex-end;
+
+        width:
+            calc(100% - 30px);
     }
 
-    .nav-links{
+    .navlinks{
+
         gap:15px;
     }
 
-    .nav-actions{
-        margin-left:8px;
-    }
+    .navlinks a{
 
-    .values-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .value:nth-child(2){
-        border-right:none;
-    }
-
-    .value:nth-child(-n+2){
-        border-bottom:1px solid var(--line);
-        padding-bottom:40px;
-    }
-
-    .value:nth-child(n+3){
-        padding-top:40px;
-    }
-
-    .network-grid{
-        grid-template-columns:repeat(3,1fr);
-    }
-
-    .process-grid{
-        grid-template-columns:repeat(3,1fr);
-    }
-
-    .process{
-        border-bottom:1px solid var(--line);
-    }
-
-}
-
-@media(max-width:850px){
-
-    header{
-        height:70px;
-    }
-
-    .nav{
-        width:90%;
-    }
-
-    .nav-links{
-        position:absolute;
-        top:70px;
-        left:0;
-        width:100%;
-
-        background:var(--cream);
-
-        display:none;
-        flex-direction:column;
-
-        padding:25px;
-
-        border-bottom:1px solid var(--line);
-    }
-
-    body.dark .nav-links{
-        background:var(--cream);
-    }
-
-    .nav-links.show{
-        display:flex;
-    }
-
-    .nav-links a{
-        padding:10px;
-    }
-
-    .nav-actions{
-        margin-left:auto;
-    }
-
-    .menu-btn{
-        display:flex;
-    }
-
-    .connect-btn{
-        display:none;
-    }
-
-    .hero-brand{
-        font-size:55px;
-        letter-spacing:10px;
-    }
-
-    .hero-title{
-        font-size:60px;
-    }
-
-    .stats{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .stat:nth-child(2){
-        border-right:none;
-    }
-
-    .stat:nth-child(-n+2){
-        border-bottom:1px solid var(--line);
+        font-size:11px;
     }
 
     .about-grid,
-    .platform,
+    .match-layout,
+    .ai-layout,
+    .founder,
     .contact-grid{
+
         grid-template-columns:1fr;
     }
 
-    .services-grid,
-    .opportunity-grid,
-    .crm-grid,
-    .utility-grid,
-    .legal-grid{
-        grid-template-columns:1fr 1fr;
+    .g4{
+
+        grid-template-columns:
+            repeat(2,1fr);
     }
 
-    .network-grid{
-        grid-template-columns:1fr 1fr;
+    .process-grid{
+
+        grid-template-columns:
+            repeat(2,1fr);
     }
 
-    .trust-grid{
+    .process-step{
+
+        border-right:1px solid var(--border);
+    }
+
+    .network-intro{
+
         grid-template-columns:1fr;
     }
-
-    .footer-grid{
-        grid-template-columns:1fr 1fr;
-    }
-
 }
 
-@media(max-width:600px){
 
-    .section,
-    .values,
-    .founder{
-        padding:85px 6%;
+/* =========================================================
+   RESPONSIVE — MOBILE
+   ========================================================= */
+
+@media(max-width:760px){
+
+    html{
+
+        scroll-padding-top:72px;
+    }
+
+    .container{
+
+        width:
+            calc(100% - 30px);
+    }
+
+    .section{
+
+        padding:78px 0;
+    }
+
+    .nav{
+
+        min-height:68px;
+
+        width:
+            calc(100% - 20px);
+    }
+
+    .navlinks{
+
+        position:absolute;
+
+        top:68px;
+
+        left:10px;
+
+        right:10px;
+
+        max-height:
+            calc(100svh - 82px);
+
+        overflow-y:auto;
+
+        padding:14px;
+
+        display:flex;
+
+        flex-direction:column;
+
+        align-items:stretch;
+
+        gap:0;
+
+        background:var(--cream2);
+
+        border:1px solid var(--border);
+
+        border-radius:14px;
+
+        box-shadow:var(--shadow);
+
+        opacity:0;
+
+        visibility:hidden;
+
+        transform:
+            translateY(-8px);
+
+        transition:.25s ease;
+    }
+
+    .navlinks.open{
+
+        opacity:1;
+
+        visibility:visible;
+
+        transform:
+            translateY(0);
+    }
+
+    .navlinks a{
+
+        padding:12px;
+
+        font-size:13px;
+
+        border-bottom:1px solid var(--border);
+    }
+
+    .navlinks a:last-child{
+
+        border-bottom:0;
+    }
+
+    .navlinks a::after{
+
+        display:none;
+    }
+
+    .menu-btn{
+
+        display:grid;
+    }
+
+    .nav-cta{
+
+        padding:
+            9px 14px;
+
+        font-size:11px;
     }
 
     .hero{
-        padding-top:125px;
+
+        min-height:100svh;
+
+        padding:
+            120px 18px
+            80px;
     }
 
     .hero-logo{
-        width:80px;
+
+        width:100px;
+
+        height:100px;
     }
 
     .hero-brand{
-        font-size:42px;
-        letter-spacing:7px;
-    }
 
-    .hero-title{
-        font-size:48px;
+        font-size:
+            clamp(48px,16vw,75px);
+
+        letter-spacing:
+            clamp(3px,1.5vw,7px);
     }
 
     .hero-description{
+
         font-size:13px;
     }
 
-    .values-title{
-        font-size:48px;
+    .hero-actions{
+
+        flex-direction:column;
+
+        align-items:stretch;
+
+        max-width:350px;
+
+        margin-left:auto;
+
+        margin-right:auto;
     }
 
-    .values-grid{
+    .btn{
+
+        width:100%;
+    }
+
+    .g2,
+    .g3,
+    .g4,
+    .trust-grid,
+    .form-grid,
+    .network-points{
+
         grid-template-columns:1fr;
     }
 
-    .value{
-        border-right:none!important;
-        border-bottom:1px solid var(--line)!important;
-        padding:35px 15px!important;
-    }
+    .process-grid{
 
-    .value:last-child{
-        border-bottom:none!important;
-    }
-
-    .process-grid,
-    .services-grid,
-    .opportunity-grid,
-    .crm-grid,
-    .utility-grid,
-    .legal-grid,
-    .network-grid{
         grid-template-columns:1fr;
     }
 
-    .process{
-        border-right:none;
+    .process-step{
+
+        border-right:1px solid var(--border);
+
+        border-bottom:0;
     }
 
-    .form-grid{
-        grid-template-columns:1fr;
+    .process-step:last-child{
+
+        border-bottom:1px solid var(--border);
+    }
+
+    .card{
+
+        padding:24px;
+    }
+
+    .title{
+
+        font-size:
+            clamp(38px,12vw,54px);
+    }
+
+    .subtitle{
+
+        font-size:13px;
+    }
+
+    .match-form,
+    .contact-form{
+
+        padding:22px;
     }
 
     .field.full{
+
         grid-column:auto;
     }
 
-    .match-box,
-    .ai-box,
-    .appointment-box{
-        padding:30px 20px;
+    .ai-messages{
+
+        height:52svh;
+
+        min-height:300px;
+
+        max-height:470px;
+    }
+
+    .ai-float{
+
+        right:15px;
+
+        bottom:84px;
+    }
+
+    .whatsapp{
+
+        right:15px;
+
+        bottom:15px;
+    }
+
+    .back-top{
+
+        left:15px;
+
+        bottom:15px;
     }
 
     .footer-grid{
+
         grid-template-columns:1fr;
     }
 
     .footer-bottom{
+
         flex-direction:column;
-        gap:10px;
     }
-
-    .ai-floating{
-        right:18px;
-        bottom:100px;
-    }
-
-    .whatsapp{
-        right:18px;
-        bottom:20px;
-    }
-
-    .back-top{
-        right:18px;
-        bottom:170px;
-    }
-
-    .ai-chat{
-        right:15px;
-        bottom:170px;
-    }
-
-    .consent{
-        left:12px;
-        right:12px;
-        bottom:12px;
-    }
-
 }
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media(max-width:430px){
+
+    .navtools{
+
+        gap:5px;
+    }
+
+    .nav-btn{
+
+        width:36px;
+
+        height:36px;
+    }
+
+    .nav-cta{
+
+        display:none;
+    }
+
+    .hero{
+
+        padding-left:14px;
+
+        padding-right:14px;
+    }
+
+    .hero-logo{
+
+        width:88px;
+
+        height:88px;
+    }
+
+    .hero-brand{
+
+        font-size:46px;
+
+        letter-spacing:3px;
+    }
+
+    .hero-tagline{
+
+        font-size:22px;
+    }
+
+    .launch{
+
+        font-size:9px;
+
+        padding:7px 11px;
+    }
+
+    .card{
+
+        padding:21px;
+    }
+
+    .card-icon{
+
+        width:46px;
+
+        height:46px;
+    }
+
+    .ai-input-area{
+
+        padding:10px;
+    }
+}
+
+
+/* =========================================================
+   SAFETY / PERFORMANCE
+   ========================================================= */
 
 @media(prefers-reduced-motion:reduce){
 
     *,
     *::before,
     *::after{
-        scroll-behavior:auto!important;
-        animation:none!important;
-        transition:none!important;
+
+        scroll-behavior:auto !important;
+
+        animation-duration:.01ms !important;
+
+        animation-iteration-count:1 !important;
+
+        transition-duration:.01ms !important;
+    }
+}
+
+@media(pointer:coarse){
+
+    button,
+    a{
+
+        -webkit-tap-highlight-color:transparent;
     }
 
+    .nav-btn{
+
+        min-width:42px;
+
+        min-height:42px;
+    }
+}
+
+input,
+select,
+textarea{
+
+    font-size:16px;
+}
+
+@media(min-width:761px){
+
+    input,
+    select,
+    textarea{
+
+        font-size:13px;
+    }
+}
+
+section,
+.card,
+.field,
+.contact-item{
+
+    min-width:0;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+a,
+span{
+
+    overflow-wrap:anywhere;
+}
+
+
+/* =========================================================
+   KANNADA
+   ========================================================= */
+
+body.kn{
+
+    font-family:
+        "Noto Sans Kannada",
+        "Poppins",
+        sans-serif;
+}
+
+body.kn .title,
+body.kn .hero-brand,
+body.kn .hero-tagline,
+body.kn .card h3,
+body.kn .founder-initial,
+body.kn .footer-brand,
+body.kn .path-number,
+body.kn .process-number{
+
+    font-family:
+        "Noto Sans Kannada",
+        sans-serif;
+}
+
+
+/* =========================================================
+   OFFLINE STATUS
+   ========================================================= */
+
+.offline-bar{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    padding:8px;
+
+    background:var(--red);
+
+    color:#fff;
+
+    text-align:center;
+
+    font-size:11px;
+
+    z-index:100002;
+
+    display:none;
+}
+
+body.offline .offline-bar{
+
+    display:block;
+}
+
+
+/* =========================================================
+   COOKIE / DISCLAIMER
+   ========================================================= */
+
+.cookie-bar{
+
+    position:fixed;
+
+    left:15px;
+
+    right:15px;
+
+    bottom:15px;
+
+    z-index:9998;
+
+    background:var(--cream2);
+
+    border:1px solid var(--border);
+
+    border-radius:15px;
+
+    padding:17px 20px;
+
+    box-shadow:var(--shadow);
+
+    display:none;
+}
+
+.cookie-bar.show{
+
+    display:block;
+}
+
+.cookie-inner{
+
+    max-width:1200px;
+
+    margin:auto;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:20px;
+}
+
+.cookie-inner p{
+
+    color:var(--muted);
+
+    font-size:10px;
+
+    line-height:1.7;
+}
+
+.cookie-btn{
+
+    flex-shrink:0;
+
+    border:0;
+
+    background:var(--brown);
+
+    color:#fff;
+
+    border-radius:25px;
+
+    padding:9px 17px;
+
+    font-size:11px;
+}
+
+@media(max-width:760px){
+
+    .cookie-inner{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+    }
 }
 
 </style>
+
 </head>
+
 
 <body>
 
-<!-- =====================================================
-     LOADER
-===================================================== -->
+<a
+href="#main-content"
+class="skip-link"
+>
+Skip to content
+</a>
 
-<div class="loader" id="loader">
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<div class="offline-bar">
+You appear to be offline. Some external services may be unavailable.
+</div>
+
+
+<!-- ======================================================
+     LOADER
+====================================================== -->
+
+<div
+class="loader"
+id="loader"
+aria-hidden="true"
+>
 
     <div class="loader-inner">
 
-        <img src="logo.png"
-             class="loader-logo"
-             alt="PRANAURA Logo">
+        <img
+        src="logo.png"
+        class="loader-logo"
+        alt="PRANAURA logo"
+        >
 
         <div class="loader-brand">
             PRANAURA
         </div>
+
+        <div class="loader-line"></div>
 
     </div>
 
 </div>
 
 
-<!-- =====================================================
+<!-- ======================================================
      HEADER
-===================================================== -->
+====================================================== -->
 
 <header>
 
-    <nav class="nav">
+<nav class="nav">
 
-        <!-- NO LOGO HERE -->
-        <!-- NO PRANAURA HERE -->
+    <!-- NO PRANAURA LOGO HERE -->
 
-        <div class="nav-links" id="navLinks">
+    <div
+    class="navlinks"
+    id="navlinks"
+    aria-label="Primary navigation"
+    >
 
-            <a href="#about">About</a>
-            <a href="#why">Why Us</a>
-            <a href="#path">Your Path</a>
-            <a href="#process">Process</a>
-            <a href="#network">Network</a>
-            <a href="#services">Services</a>
-            <a href="#match">Smart Match</a>
-            <a href="#ai">AI</a>
-            <a href="#trust">Trust</a>
-            <a href="#faq">FAQ</a>
-            <a href="#contact">Contact</a>
+        <a href="#about">About</a>
 
-        </div>
+        <a href="#why">Why Us</a>
 
-        <div class="nav-actions">
+        <a href="#path">Your Path</a>
 
-            <button class="nav-btn"
-                    id="languageBtn"
-                    aria-label="Change language">
-                KN
-            </button>
+        <a href="#process">Process</a>
 
-            <button class="nav-btn"
-                    id="themeBtn"
-                    aria-label="Toggle theme">
+        <a href="#network">Network</a>
 
-                <span class="icon">
-                    <svg viewBox="0 0 24 24">
-                        <circle cx="12" cy="12" r="4"/>
-                        <path d="M12 2v2"/>
-                        <path d="M12 20v2"/>
-                        <path d="M4.93 4.93l1.42 1.42"/>
-                        <path d="M17.65 17.65l1.42 1.42"/>
-                        <path d="M2 12h2"/>
-                        <path d="M20 12h2"/>
-                    </svg>
-                </span>
+        <a href="#services">Services</a>
 
-            </button>
+        <a href="#smartmatch">Smart Match</a>
 
-            <button class="connect-btn"
-                    onclick="openModal('contactModal')">
-                Connect
-            </button>
+        <a href="#ai">AI</a>
 
-            <button class="nav-btn menu-btn"
-                    id="menuBtn"
-                    aria-label="Open menu">
+        <a href="#trust">Trust</a>
 
-                <span class="icon">
-                    <svg viewBox="0 0 24 24">
-                        <path d="M4 7h16"/>
-                        <path d="M4 12h16"/>
-                        <path d="M4 17h16"/>
-                    </svg>
-                </span>
+        <a href="#faq">FAQ</a>
 
-            </button>
+        <a href="#contact">Contact</a>
 
-        </div>
+    </div>
 
-    </nav>
+
+    <div class="navtools">
+
+        <button
+        class="nav-btn"
+        id="languageBtn"
+        type="button"
+        aria-label="Switch language"
+        >
+        EN
+        </button>
+
+
+        <button
+        class="nav-btn"
+        id="themeBtn"
+        type="button"
+        aria-label="Toggle dark mode"
+        >
+        ◐
+        </button>
+
+
+        <a
+        href="#contact"
+        class="nav-cta"
+        >
+        Connect
+        </a>
+
+
+        <button
+        class="nav-btn menu-btn"
+        id="menuBtn"
+        type="button"
+        aria-label="Open navigation"
+        aria-expanded="false"
+        aria-controls="navlinks"
+        >
+        ☰
+        </button>
+
+    </div>
+
+</nav>
 
 </header>
 
 
-<main>
+<main id="main-content">
 
 
-<!-- =====================================================
+<!-- ======================================================
      HERO
-===================================================== -->
+====================================================== -->
 
-<section class="hero" id="home">
+<section
+class="hero"
+id="home"
+>
 
-    <div class="hero-content">
+<div class="hero-inner">
 
-        <div class="hero-label">
-            A MORE CONNECTED REAL ESTATE ECOSYSTEM
-        </div>
 
-        <img src="logo.png"
-             class="hero-logo"
-             alt="PRANAURA Logo">
+    <div class="launch">
 
-        <div class="hero-brand">
-            PRANAURA
-        </div>
+        <span class="launch-dot"></span>
 
-        <h1 class="hero-title">
-            Strategic Builder &<br>
-            Investor Partnerships.
-        </h1>
-
-        <p class="hero-description">
-            A structured real estate networking platform designed
-            to connect builders, developers, landowners, investors
-            and buyers through meaningful, professional relationships.
-        </p>
-
-        <div class="hero-actions">
-
-            <button class="primary-btn"
-                    onclick="document.getElementById('match').scrollIntoView()">
-                Explore Smart Match
-            </button>
-
-            <button class="secondary-btn"
-                    onclick="openModal('contactModal')">
-                Start a Conversation
-            </button>
-
-        </div>
-
-        <div class="launch">
-            <span class="launch-dot"></span>
-            Launching September 2026
-        </div>
+        Launching September 2026
 
     </div>
+
+
+    <img
+    src="logo.png"
+    class="hero-logo"
+    alt="PRANAURA"
+    >
+
+
+    <div class="hero-brand">
+        PRANAURA
+    </div>
+
+
+    <div class="hero-tagline">
+        Strategic Builder & Investor Partnerships
+    </div>
+
+
+    <p class="hero-description">
+
+        Real estate relationships, structured for opportunity.
+        PRANAURA connects builders, developers, landowners,
+        investors and property buyers through professional
+        networking, structured workflows and AI-assisted
+        property intelligence.
+
+    </p>
+
+
+    <div class="hero-actions">
+
+        <a
+        href="#smartmatch"
+        class="btn btn-primary"
+        >
+        Find Your Match
+        </a>
+
+        <a
+        href="#network"
+        class="btn btn-secondary"
+        >
+        Explore Network
+        </a>
+
+        <a
+        href="https://wa.me/919019746649"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="btn btn-secondary"
+        >
+        WhatsApp PRANAURA
+        </a>
+
+    </div>
+
+
+    <div class="hero-note">
+
+        PEOPLE · PROPERTY · PROGRESS
+
+    </div>
+
+</div>
 
 </section>
 
 
-<!-- =====================================================
-     STATS
-===================================================== -->
-
-<section class="stats">
-
-    <div class="stat">
-        <div class="stat-number">01</div>
-        <div class="stat-label">Structured Network</div>
-    </div>
-
-    <div class="stat">
-        <div class="stat-number">02</div>
-        <div class="stat-label">Need-Based Matching</div>
-    </div>
-
-    <div class="stat">
-        <div class="stat-number">03</div>
-        <div class="stat-label">Professional Introductions</div>
-    </div>
-
-    <div class="stat">
-        <div class="stat-number">04</div>
-        <div class="stat-label">Long-Term Relationships</div>
-    </div>
-
-</section>
-
-
-<!-- =====================================================
-     PEOPLE PROPERTY PROGRESS
-===================================================== -->
-
-<section class="values" id="why">
-
-    <div class="eyebrow">
-        THE PRANAURA APPROACH
-    </div>
-
-    <h2 class="values-title">
-        People. Property. Progress.
-    </h2>
-
-    <div class="values-grid">
-
-        <!-- SAME ICON -->
-        <div class="value">
-
-            <div class="feature-icon">
-                <svg viewBox="0 0 24 24">
-                    <path d="M12 3l9 9-9 9-9-9 9-9z"/>
-                    <path d="M12 8l4 4-4 4-4-4 4-4z"/>
-                </svg>
-            </div>
-
-            <h3>
-                Trusted Network
-            </h3>
-
-            <p>
-                Professional and value-aligned relationships
-                across the real estate ecosystem.
-            </p>
-
-        </div>
-
-
-        <!-- SAME ICON -->
-        <div class="value">
-
-            <div class="feature-icon">
-                <svg viewBox="0 0 24 24">
-                    <path d="M12 3l9 9-9 9-9-9 9-9z"/>
-                    <path d="M12 8l4 4-4 4-4-4 4-4z"/>
-                </svg>
-            </div>
-
-            <h3>
-                Smarter Matches
-            </h3>
-
-            <p>
-                Need-based connections designed around
-                requirements and objectives.
-            </p>
-
-        </div>
-
-
-        <!-- SAME ICON -->
-        <div class="value">
-
-            <div class="feature-icon">
-                <svg viewBox="0 0 24 24">
-                    <path d="M12 3l9 9-9 9-9-9 9-9z"/>
-                    <path d="M12 8l4 4-4 4-4-4 4-4z"/>
-                </svg>
-            </div>
-
-            <h3>
-                End-to-End Support
-            </h3>
-
-            <p>
-                From understanding requirements to facilitating
-                meaningful introductions.
-            </p>
-
-        </div>
-
-
-        <!-- SAME ICON -->
-        <div class="value">
-
-            <div class="feature-icon">
-                <svg viewBox="0 0 24 24">
-                    <path d="M12 3l9 9-9 9-9-9 9-9z"/>
-                    <path d="M12 8l4 4-4 4-4-4 4-4z"/>
-                </svg>
-            </div>
-
-            <h3>
-                Long-Term Value
-            </h3>
-
-            <p>
-                Relationships built for sustainable growth
-                and future opportunities.
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =====================================================
+<!-- ======================================================
      ABOUT
-===================================================== -->
+====================================================== -->
 
-<section class="section alt" id="about">
+<section
+class="section"
+id="about"
+>
 
-    <div class="section-head">
-
-        <div class="eyebrow">
-            ABOUT PRANAURA
-        </div>
-
-        <h2 class="section-title">
-            Real estate, connected with purpose.
-        </h2>
-
-        <p class="section-text">
-            PRANAURA is designed to bring greater structure,
-            professionalism and technology into real estate
-            relationships.
-        </p>
-
-    </div>
+<div class="container">
 
     <div class="about-grid">
 
-        <div class="about-large">
-            Better connections can create better opportunities.
+
+        <div>
+
+            <div class="eyebrow">
+                About PRANAURA
+            </div>
+
+            <h2 class="title">
+                Relationships built around opportunity.
+            </h2>
+
+            <p class="subtitle">
+
+                PRANAURA is a real estate advisory and networking
+                platform designed to bring the right people,
+                property opportunities and requirements together
+                through a more structured professional process.
+
+            </p>
+
+
+            <div class="about-list">
+
+                <div>
+                    <span></span>
+                    Structured builder and developer relationships
+                </div>
+
+                <div>
+                    <span></span>
+                    Professional investor and buyer connections
+                </div>
+
+                <div>
+                    <span></span>
+                    Landowner-development opportunities
+                </div>
+
+                <div>
+                    <span></span>
+                    Technology-assisted property workflows
+                </div>
+
+            </div>
+
         </div>
 
-        <div class="about-copy">
+
+        <div class="about-panel">
+
+            <div class="eyebrow">
+                Our Model
+            </div>
+
+            <h3 class="card h3">
+                Connect. Coordinate. Create opportunity.
+            </h3>
 
             <p>
-                PRANAURA works as a professional intermediary
-                and networking platform connecting builders,
-                developers, landowners, prospective investors
-                and buyers.
+
+                PRANAURA does not own the properties listed or
+                discussed through its networking model. The platform
+                focuses on connecting relevant participants and
+                supporting structured communication.
+
             </p>
 
-            <p>
-                The platform focuses on understanding requirements,
-                organizing information and facilitating relevant
-                introductions.
-            </p>
+            <br>
 
             <p>
-                PRANAURA does not own properties and does not
-                guarantee investment returns or project outcomes.
+
+                Commercial terms, commissions and transaction
+                outcomes depend on the specific relationship,
+                agreement and completed transaction.
+
             </p>
 
         </div>
 
     </div>
 
+</div>
+
 </section>
 
 
-<!-- =====================================================
-     YOUR PATH
-===================================================== -->
+<!-- ======================================================
+     WHY PRANAURA
+====================================================== -->
 
-<section class="section" id="path">
+<section
+class="section section-alt"
+id="why"
+>
 
-    <div class="section-head">
+<div class="container">
+
+    <div class="center">
 
         <div class="eyebrow">
-            YOUR PATH
+            Why PRANAURA
         </div>
 
-        <h2 class="section-title">
-            A clearer way forward.
+        <h2 class="title">
+            A structured way to build connections.
         </h2>
 
-        <p class="section-text">
-            Whether you are building, investing, owning land
-            or looking for the right opportunity, PRANAURA
-            organizes the journey around your requirement.
+        <p class="subtitle">
+
+            From first requirement to professional coordination,
+            PRANAURA is designed around clarity, relationships
+            and responsible communication.
+
         </p>
 
     </div>
 
-    <div class="network-grid">
 
-        <div class="network-card">
+    <div class="grid g3" style="margin-top:50px;">
 
-            <div class="feature-icon">
-                <svg viewBox="0 0 24 24">
-                    <path d="M12 3l9 9-9 9-9-9 9-9z"/>
-                    <path d="M12 8l4 4-4 4-4-4 4-4z"/>
-                </svg>
-            </div>
 
-            <h3>Builder</h3>
+        <div class="card feature-card">
+
+            <div class="card-icon">01</div>
+
+            <h3>
+                Structured
+            </h3>
 
             <p>
-                Connect with relevant investors,
-                buyers and strategic partners.
+                Organize requirements, opportunities and
+                relationships through clear workflows.
             </p>
 
         </div>
 
-        <div class="network-card">
 
-            <div class="feature-icon">
-                <svg viewBox="0 0 24 24">
-                    <path d="M12 3l9 9-9 9-9-9 9-9z"/>
-                    <path d="M12 8l4 4-4 4-4-4 4-4z"/>
-                </svg>
-            </div>
+        <div class="card feature-card">
 
-            <h3>Investor</h3>
+            <div class="card-icon">02</div>
+
+            <h3>
+                Professional
+            </h3>
 
             <p>
-                Share your investment preferences
-                and explore relevant opportunities.
+                Build communication around clear expectations,
+                relevant information and follow-up.
             </p>
 
         </div>
 
-        <div class="network-card">
 
-            <div class="feature-icon">
-                <svg viewBox="0 0 24 24">
-                    <path d="M12 3l9 9-9 9-9-9 9-9z"/>
-                    <path d="M12 8l4 4-4 4-4-4 4-4z"/>
-                </svg>
-            </div>
+        <div class="card feature-card">
 
-            <h3>Landowner</h3>
+            <div class="card-icon">03</div>
+
+            <h3>
+                Technology-Enabled
+            </h3>
 
             <p>
-                Explore structured development
-                and partnership conversations.
+                Use digital tools and AI-assisted workflows
+                to organize property requirements.
             </p>
 
         </div>
 
-        <div class="network-card">
 
-            <div class="feature-icon">
-                <svg viewBox="0 0 24 24">
-                    <path d="M12 3l9 9-9 9-9-9 9-9z"/>
-                    <path d="M12 8l4 4-4 4-4-4 4-4z"/>
-                </svg>
-            </div>
+        <div class="card feature-card">
 
-            <h3>Buyer</h3>
+            <div class="card-icon">04</div>
+
+            <h3>
+                Relationship-Led
+            </h3>
 
             <p>
-                Communicate your requirements and
-                receive structured introductions.
+                Focus on meaningful connections between
+                participants across the property ecosystem.
+            </p>
+
+        </div>
+
+
+        <div class="card feature-card">
+
+            <div class="card-icon">05</div>
+
+            <h3>
+                Local Expertise
+            </h3>
+
+            <p>
+                Develop relationships with people who understand
+                local property markets and requirements.
+            </p>
+
+        </div>
+
+
+        <div class="card feature-card">
+
+            <div class="card-icon">06</div>
+
+            <h3>
+                Transparent
+            </h3>
+
+            <p>
+                Keep responsibilities, commercial terms and
+                limitations clearly communicated.
             </p>
 
         </div>
 
     </div>
 
+</div>
+
 </section>
 
 
-<!-- =====================================================
-     PROCESS
-===================================================== -->
+<!-- ======================================================
+     CHOOSE YOUR PATH
+====================================================== -->
 
-<section class="section alt" id="process">
+<section
+class="section"
+id="path"
+>
 
-    <div class="section-head">
+<div class="container">
+
+    <div class="center">
 
         <div class="eyebrow">
-            HOW PRANAURA WORKS
+            Choose Your Path
         </div>
 
-        <h2 class="section-title">
+        <h2 class="title">
+            Where do you fit into the ecosystem?
+        </h2>
+
+    </div>
+
+
+    <div class="grid g4" style="margin-top:50px;">
+
+
+        <div class="card path-card">
+
+            <div class="path-number">
+                01
+            </div>
+
+            <div class="card-icon">01</div>
+
+            <h3>
+                Builder / Developer
+            </h3>
+
+            <p>
+                Connect with investors, buyers, landowners
+                and relevant property requirements.
+            </p>
+
+        </div>
+
+
+        <div class="card path-card">
+
+            <div class="path-number">
+                02
+            </div>
+
+            <div class="card-icon">02</div>
+
+            <h3>
+                Landowner
+            </h3>
+
+            <p>
+                Explore structured development and partnership
+                conversations around suitable land opportunities.
+            </p>
+
+        </div>
+
+
+        <div class="card path-card">
+
+            <div class="path-number">
+                03
+            </div>
+
+            <div class="card-icon">03</div>
+
+            <h3>
+                Investor
+            </h3>
+
+            <p>
+                Share investment preferences and discover
+                relevant property opportunities.
+            </p>
+
+        </div>
+
+
+        <div class="card path-card">
+
+            <div class="path-number">
+                04
+            </div>
+
+            <div class="card-icon">04</div>
+
+            <h3>
+                Property Buyer
+            </h3>
+
+            <p>
+                Organize your location, property, budget
+                and timeline requirements.
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- ======================================================
+     PROCESS
+====================================================== -->
+
+<section
+class="section section-alt"
+id="process"
+>
+
+<div class="container">
+
+    <div class="center">
+
+        <div class="eyebrow">
+            Our Process
+        </div>
+
+        <h2 class="title">
             From requirement to relationship.
         </h2>
 
+        <p class="subtitle">
+
+            A straightforward workflow designed to make
+            property networking more organized.
+
+        </p>
+
     </div>
+
 
     <div class="process-grid">
 
-        <div class="process">
-            <div class="process-number">01</div>
-            <h3>Requirement</h3>
+
+        <div class="process-step">
+
+            <div class="process-number">
+                01
+            </div>
+
+            <h3>
+                Understand
+            </h3>
+
             <p>
-                Understand the objective, budget,
-                location and preferred timeline.
+                Understand your role, requirement,
+                location and objective.
             </p>
+
         </div>
 
-        <div class="process">
-            <div class="process-number">02</div>
-            <h3>Review</h3>
+
+        <div class="process-step">
+
+            <div class="process-number">
+                02
+            </div>
+
+            <h3>
+                Assess
+            </h3>
+
             <p>
-                Organize and review relevant
-                information before introduction.
+                Organize the available information and
+                identify relevant relationship criteria.
             </p>
+
         </div>
 
-        <div class="process">
-            <div class="process-number">03</div>
-            <h3>Matching</h3>
+
+        <div class="process-step">
+
+            <div class="process-number">
+                03
+            </div>
+
+            <h3>
+                Connect
+            </h3>
+
             <p>
-                Identify relevant connections based
-                on available requirements.
+                Introduce relevant participants where
+                there is a suitable opportunity.
             </p>
+
         </div>
 
-        <div class="process">
-            <div class="process-number">04</div>
-            <h3>Introduction</h3>
-            <p>
-                Facilitate a professional introduction
-                between relevant parties.
-            </p>
-        </div>
 
-        <div class="process">
-            <div class="process-number">05</div>
-            <h3>Follow-up</h3>
+        <div class="process-step">
+
+            <div class="process-number">
+                04
+            </div>
+
+            <h3>
+                Coordinate
+            </h3>
+
             <p>
-                Support communication and relationship
-                continuity where appropriate.
+                Support professional communication and
+                follow-up around the relationship.
             </p>
+
         </div>
 
     </div>
 
+</div>
+
 </section>
 
 
-<!-- =====================================================
+<!-- ======================================================
      NETWORK
-===================================================== -->
+====================================================== -->
 
-<section class="section" id="network">
+<section
+class="section"
+id="network"
+>
 
-    <div class="section-head">
+<div class="container">
 
-        <div class="eyebrow">
-            THE NETWORK
+    <div class="network-intro">
+
+        <div>
+
+            <div class="eyebrow">
+                Property Ecosystem
+            </div>
+
+            <h2 class="title">
+                One network. Multiple possibilities.
+            </h2>
+
         </div>
 
-        <h2 class="section-title">
-            One ecosystem. Multiple possibilities.
-        </h2>
+        <p class="subtitle">
+
+            PRANAURA is designed to create a structured
+            connection layer between people involved in
+            property development, investment and buying.
+
+        </p>
 
     </div>
 
-    <div class="network-grid">
 
-        <div class="network-card">
-            <h3>Builders</h3>
-            <p>
-                Project relationships, investor connections
-                and strategic introductions.
-            </p>
+    <div class="network-points">
+
+        <div class="network-point">
+            Builders & Developers
         </div>
 
-        <div class="network-card">
-            <h3>Developers</h3>
-            <p>
-                Structured networking around development
-                opportunities.
-            </p>
+        <div class="network-point">
+            Landowners
         </div>
 
-        <div class="network-card">
-            <h3>Landowners</h3>
-            <p>
-                Partnership conversations and development
-                possibilities.
-            </p>
+        <div class="network-point">
+            Investors
         </div>
 
-        <div class="network-card">
-            <h3>Investors</h3>
-            <p>
-                Requirement-driven access to relevant
-                opportunities.
-            </p>
+        <div class="network-point">
+            Property Buyers
         </div>
 
-        <div class="network-card">
-            <h3>Buyers</h3>
-            <p>
-                Organized communication around property
-                requirements.
-            </p>
+        <div class="network-point">
+            Development Opportunities
+        </div>
+
+        <div class="network-point">
+            Investment Requirements
         </div>
 
     </div>
+
+</div>
 
 </section>
 
 
-<!-- =====================================================
+<!-- ======================================================
      SERVICES
-===================================================== -->
+====================================================== -->
 
-<section class="section alt" id="services">
+<section
+class="section section-alt"
+id="services"
+>
 
-    <div class="section-head">
+<div class="container">
+
+    <div class="center">
 
         <div class="eyebrow">
-            SERVICES
+            Services
         </div>
 
-        <h2 class="section-title">
-            Built around relationships.
+        <h2 class="title">
+            Designed around real estate relationships.
         </h2>
 
     </div>
 
-    <div class="services-grid">
 
-        <div class="service">
+    <div
+    class="grid g3"
+    style="margin-top:50px;"
+    >
 
-            <div class="feature-icon">
-                <svg viewBox="0 0 24 24">
-                    <path d="M12 3l9 9-9 9-9-9 9-9z"/>
-                    <path d="M12 8l4 4-4 4-4-4 4-4z"/>
-                </svg>
-            </div>
 
-            <h3>Builder Partnerships</h3>
+        <div class="card service-card">
+
+            <div class="card-icon">01</div>
+
+            <h3>
+                Builder Networking
+            </h3>
 
             <p>
-                Professional networking and requirement-based
-                introductions for builders and developers.
+                Professional relationship development
+                with builders and developers.
             </p>
 
         </div>
 
-        <div class="service">
 
-            <div class="feature-icon">
-                <svg viewBox="0 0 24 24">
-                    <path d="M12 3l9 9-9 9-9-9 9-9z"/>
-                    <path d="M12 8l4 4-4 4-4-4 4-4z"/>
-                </svg>
-            </div>
+        <div class="card service-card">
 
-            <h3>Investor Connections</h3>
+            <div class="card-icon">02</div>
+
+            <h3>
+                Investor Connections
+            </h3>
 
             <p>
-                Organize investment requirements and identify
-                suitable networking opportunities.
+                Organize investment preferences and
+                relevant opportunity conversations.
             </p>
 
         </div>
 
-        <div class="service">
 
-            <div class="feature-icon">
-                <svg viewBox="0 0 24 24">
-                    <path d="M12 3l9 9-9 9-9-9 9-9z"/>
-                    <path d="M12 8l4 4-4 4-4-4 4-4z"/>
-                </svg>
-            </div>
+        <div class="card service-card">
 
-            <h3>Land Partnerships</h3>
+            <div class="card-icon">03</div>
+
+            <h3>
+                Landowner Partnerships
+            </h3>
 
             <p>
-                Facilitate conversations between landowners
-                and relevant development partners.
+                Structure initial conversations around
+                suitable land and development possibilities.
+            </p>
+
+        </div>
+
+
+        <div class="card service-card">
+
+            <div class="card-icon">04</div>
+
+            <h3>
+                Buyer Requirements
+            </h3>
+
+            <p>
+                Capture location, property type, budget
+                and timeline requirements.
+            </p>
+
+        </div>
+
+
+        <div class="card service-card">
+
+            <div class="card-icon">05</div>
+
+            <h3>
+                Opportunity Coordination
+            </h3>
+
+            <p>
+                Support communication between relevant
+                participants throughout the process.
+            </p>
+
+        </div>
+
+
+        <div class="card service-card">
+
+            <div class="card-icon">06</div>
+
+            <h3>
+                AI-Assisted Workflows
+            </h3>
+
+            <p>
+                Use technology to organize information,
+                classify requirements and assist matching.
             </p>
 
         </div>
 
     </div>
+
+</div>
 
 </section>
 
 
-<!-- =====================================================
-     OPPORTUNITIES
-===================================================== -->
-
-<section class="section" id="opportunities">
-
-    <div class="section-head">
-
-        <div class="eyebrow">
-            OPPORTUNITIES
-        </div>
-
-        <h2 class="section-title">
-            Structured opportunity discovery.
-        </h2>
-
-        <p class="section-text">
-            The examples below represent the type of information
-            PRANAURA can organize. They are not live property listings.
-        </p>
-
-    </div>
-
-    <div class="opportunity-grid">
-
-        <div class="opportunity">
-
-            <div class="opportunity-status">
-                Information Received
-            </div>
-
-            <h3>Plotted Development</h3>
-
-            <p>
-                Mysore region · Development opportunity
-            </p>
-
-        </div>
-
-        <div class="opportunity">
-
-            <div class="opportunity-status">
-                Preliminary Review
-            </div>
-
-            <h3>Residential Development</h3>
-
-            <p>
-                Karnataka · Residential opportunity
-            </p>
-
-        </div>
-
-        <div class="opportunity">
-
-            <div class="opportunity-status">
-                Partner Discussion
-            </div>
-
-            <h3>Land Partnership</h3>
-
-            <p>
-                Mysore region · Partnership discussion
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =====================================================
+<!-- ======================================================
      SMART MATCH
-===================================================== -->
+====================================================== -->
 
-<section class="section alt" id="match">
+<section
+class="section smartmatch"
+id="smartmatch"
+>
 
-    <div class="section-head">
+<div class="container">
 
-        <div class="eyebrow">
-            PRANAURA SMART MATCH
+    <div class="match-layout">
+
+
+        <div>
+
+            <div class="eyebrow">
+                Smart Match
+            </div>
+
+            <h2 class="title">
+                Tell us what you're looking for.
+            </h2>
+
+            <p class="subtitle">
+
+                Enter your requirement and the website will
+                generate a prototype compatibility assessment
+                and reference ID.
+
+            </p>
+
+            <br>
+
+            <p class="subtitle">
+
+                The current browser version is a front-end
+                demonstration. A production matching engine
+                can later connect to the PRANAURA database
+                and secure backend.
+
+            </p>
+
         </div>
 
-        <h2 class="section-title">
-            Tell us what you are looking for.
-        </h2>
 
-        <p class="section-text">
-            Submit your requirement and create a structured
-            PRANAURA match profile.
-        </p>
-
-    </div>
-
-    <div class="match-box">
-
-        <form id="matchForm">
+        <form
+        class="match-form"
+        id="matchForm"
+        >
 
             <div class="form-grid">
 
+
                 <div class="field">
 
-                    <label>Your Role</label>
+                    <label for="role">
+                        Your Role
+                    </label>
 
-                    <select id="matchRole" required>
+                    <select id="role" required>
 
                         <option value="">
                             Select role
                         </option>
 
-                        <option>Investor</option>
-                        <option>Buyer</option>
-                        <option>Builder</option>
-                        <option>Developer</option>
-                        <option>Landowner</option>
-                        <option>Other</option>
-
-                    </select>
-
-                </div>
-
-
-                <div class="field">
-
-                    <label>Preferred Location</label>
-
-                    <input
-                        id="matchLocation"
-                        placeholder="Example: Mysore"
-                        required
-                    >
-
-                </div>
-
-
-                <div class="field">
-
-                    <label>Property Type</label>
-
-                    <select id="matchProperty" required>
-
-                        <option value="">
-                            Select property type
+                        <option>
+                            Builder / Developer
                         </option>
 
-                        <option>Residential</option>
-                        <option>Plots</option>
-                        <option>Land</option>
-                        <option>Commercial</option>
-                        <option>Industrial</option>
-                        <option>Other</option>
+                        <option>
+                            Landowner
+                        </option>
+
+                        <option>
+                            Investor
+                        </option>
+
+                        <option>
+                            Property Buyer
+                        </option>
 
                     </select>
 
@@ -2666,12 +3675,15 @@ footer a{
 
                 <div class="field">
 
-                    <label>Budget / Investment Range</label>
+                    <label for="location">
+                        Preferred Location
+                    </label>
 
                     <input
-                        id="matchBudget"
-                        placeholder="Example: ₹25L – ₹50L"
-                        required
+                    id="location"
+                    type="text"
+                    placeholder="e.g. Mysuru"
+                    required
                     >
 
                 </div>
@@ -2679,15 +3691,42 @@ footer a{
 
                 <div class="field">
 
-                    <label>Timeline</label>
+                    <label for="propertyType">
+                        Property Type
+                    </label>
 
-                    <select id="matchTimeline">
+                    <select
+                    id="propertyType"
+                    required
+                    >
 
-                        <option>Immediate</option>
-                        <option>Within 3 months</option>
-                        <option>3–6 months</option>
-                        <option>6–12 months</option>
-                        <option>Exploring</option>
+                        <option value="">
+                            Select type
+                        </option>
+
+                        <option>
+                            Residential
+                        </option>
+
+                        <option>
+                            Commercial
+                        </option>
+
+                        <option>
+                            Land
+                        </option>
+
+                        <option>
+                            Plotted Development
+                        </option>
+
+                        <option>
+                            Investment Opportunity
+                        </option>
+
+                        <option>
+                            Development Partnership
+                        </option>
 
                     </select>
 
@@ -2696,13 +3735,64 @@ footer a{
 
                 <div class="field">
 
-                    <label>Phone</label>
+                    <label for="budget">
+                        Budget / Investment Range
+                    </label>
 
                     <input
-                        id="matchPhone"
-                        type="tel"
-                        placeholder="+91"
-                        required
+                    id="budget"
+                    type="text"
+                    placeholder="e.g. ₹50L – ₹1Cr"
+                    required
+                    >
+
+                </div>
+
+
+                <div class="field">
+
+                    <label for="timeline">
+                        Timeline
+                    </label>
+
+                    <select id="timeline">
+
+                        <option>
+                            Immediate
+                        </option>
+
+                        <option>
+                            1–3 Months
+                        </option>
+
+                        <option>
+                            3–6 Months
+                        </option>
+
+                        <option>
+                            6–12 Months
+                        </option>
+
+                        <option>
+                            Flexible
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="field">
+
+                    <label for="phone">
+                        Phone
+                    </label>
+
+                    <input
+                    id="phone"
+                    type="tel"
+                    inputmode="tel"
+                    placeholder="+91"
                     >
 
                 </div>
@@ -2710,716 +3800,188 @@ footer a{
 
                 <div class="field full">
 
-                    <label>Requirement</label>
+                    <label for="requirement">
+                        Requirement
+                    </label>
 
                     <textarea
-                        id="matchRequirement"
-                        placeholder="Describe what you are looking for..."
-                        required
+                    id="requirement"
+                    placeholder="Tell us briefly what you are looking for..."
+                    required
                     ></textarea>
 
                 </div>
 
-            </div>
-
-
-            <div class="form-submit">
-
-                <button class="primary-btn" type="submit">
-                    Create Match Profile
-                </button>
-
-            </div>
-
-        </form>
-
-
-        <div class="match-result" id="matchResult">
-
-            <div class="eyebrow">
-                MATCH PROFILE CREATED
-            </div>
-
-            <div class="match-id" id="matchID">
-                PRN-INV-000000
-            </div>
-
-            <p class="section-text" style="margin-top:10px;">
-                Your requirement has been structured for the
-                PRANAURA prototype system.
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =====================================================
-     AI
-===================================================== -->
-
-<section class="section" id="ai">
-
-    <div class="section-head">
-
-        <div class="eyebrow">
-            PRANAURA AI
-        </div>
-
-        <h2 class="section-title">
-            Intelligence for better connections.
-        </h2>
-
-    </div>
-
-    <div class="ai-box">
-
-        <div class="ai-title">
-            A smarter layer for the ecosystem.
-        </div>
-
-        <p class="ai-text">
-            PRANAURA is designed to eventually use AI to classify
-            requirements, organize partner information, assist
-            with matching and help the team manage relationships.
-        </p>
-
-        <br>
-
-        <p class="ai-text">
-            The current website contains a local AI assistant
-            prototype. A production implementation can connect
-            this interface to a secure backend and an Ollama/Qwen
-            model.
-        </p>
-
-        <br>
-
-        <button class="primary-btn"
-                onclick="toggleAI()">
-            Open PRANAURA AI
-        </button>
-
-    </div>
-
-</section>
-
-
-<!-- =====================================================
-     CRM
-===================================================== -->
-
-<section class="section alt" id="crm">
-
-    <div class="section-head">
-
-        <div class="eyebrow">
-            FUTURE PLATFORM
-        </div>
-
-        <h2 class="section-title">
-            Built to grow beyond a website.
-        </h2>
-
-    </div>
-
-    <div class="crm-grid">
-
-        <div class="crm-card">
-
-            <div class="feature-icon">
-                <svg viewBox="0 0 24 24">
-                    <path d="M12 3l9 9-9 9-9-9 9-9z"/>
-                    <path d="M12 8l4 4-4 4-4-4 4-4z"/>
-                </svg>
-            </div>
-
-            <h3>Lead Management</h3>
-
-            <p>
-                Organize enquiries, requirements, introductions
-                and follow-ups.
-            </p>
-
-        </div>
-
-        <div class="crm-card">
-
-            <div class="feature-icon">
-                <svg viewBox="0 0 24 24">
-                    <path d="M12 3l9 9-9 9-9-9 9-9z"/>
-                    <path d="M12 8l4 4-4 4-4-4 4-4z"/>
-                </svg>
-            </div>
-
-            <h3>Partner Profiles</h3>
-
-            <p>
-                Create structured profiles for builders,
-                investors, landowners and buyers.
-            </p>
-
-        </div>
-
-        <div class="crm-card">
-
-            <div class="feature-icon">
-                <svg viewBox="0 0 24 24">
-                    <path d="M12 3l9 9-9 9-9-9 9-9z"/>
-                    <path d="M12 8l4 4-4 4-4-4 4-4z"/>
-                </svg>
-            </div>
-
-            <h3>Analytics</h3>
-
-            <p>
-                Future dashboards can show enquiries,
-                matches, introductions and conversions.
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =====================================================
-     APPOINTMENTS
-===================================================== -->
-
-<section class="section" id="appointments">
-
-    <div class="section-head">
-
-        <div class="eyebrow">
-            APPOINTMENTS
-        </div>
-
-        <h2 class="section-title">
-            Start a focused conversation.
-        </h2>
-
-    </div>
-
-    <div class="appointment-box">
-
-        <form id="appointmentForm">
-
-            <div class="form-grid">
-
-                <div class="field">
-
-                    <label>Name</label>
-
-                    <input id="appointmentName"
-                           required>
-
-                </div>
-
-                <div class="field">
-
-                    <label>Phone</label>
-
-                    <input id="appointmentPhone"
-                           type="tel"
-                           required>
-
-                </div>
-
-                <div class="field">
-
-                    <label>Preferred Date</label>
-
-                    <input id="appointmentDate"
-                           type="date"
-                           required>
-
-                </div>
-
-                <div class="field">
-
-                    <label>Preferred Time</label>
-
-                    <input id="appointmentTime"
-                           type="time"
-                           required>
-
-                </div>
 
                 <div class="field full">
 
-                    <label>Purpose</label>
-
-                    <textarea id="appointmentPurpose"
-                              placeholder="What would you like to discuss?"
-                              required></textarea>
+                    <button
+                    class="btn btn-primary"
+                    type="submit"
+                    >
+                    Analyse My Requirement
+                    </button>
 
                 </div>
 
             </div>
 
-            <br>
 
-            <button class="primary-btn">
-                Request Appointment
-            </button>
+            <div
+            class="match-result"
+            id="matchResult"
+            aria-live="polite"
+            >
+
+                <div class="eyebrow">
+                    Prototype Match
+                </div>
+
+                <div
+                class="score"
+                id="matchScore"
+                >
+                0%
+                </div>
+
+                <p id="matchMessage"></p>
+
+                <div
+                class="reference"
+                id="matchReference"
+                ></div>
+
+            </div>
 
         </form>
 
     </div>
 
-</section>
-
-
-<!-- =====================================================
-     TRUST
-===================================================== -->
-
-<section class="section alt" id="trust">
-
-    <div class="section-head">
-
-        <div class="eyebrow">
-            TRUST & TRANSPARENCY
-        </div>
-
-        <h2 class="section-title">
-            Professional relationships first.
-        </h2>
-
-    </div>
-
-    <div class="trust-grid">
-
-        <div class="trust-card">
-
-            <div class="feature-icon">
-                <svg viewBox="0 0 24 24">
-                    <path d="M12 3l9 9-9 9-9-9 9-9z"/>
-                    <path d="M12 8l4 4-4 4-4-4 4-4z"/>
-                </svg>
-            </div>
-
-            <h3>Clear Communication</h3>
-
-            <p>
-                Information is organized around the needs
-                of the parties involved.
-            </p>
-
-        </div>
-
-        <div class="trust-card">
-
-            <div class="feature-icon">
-                <svg viewBox="0 0 24 24">
-                    <path d="M12 3l9 9-9 9-9-9 9-9z"/>
-                    <path d="M12 8l4 4-4 4-4-4 4-4z"/>
-                </svg>
-            </div>
-
-            <h3>Verification</h3>
-
-            <p>
-                Future platform workflows can include
-                structured verification and audit trails.
-            </p>
-
-        </div>
-
-        <div class="trust-card">
-
-            <div class="feature-icon">
-                <svg viewBox="0 0 24 24">
-                    <path d="M12 3l9 9-9 9-9-9 9-9z"/>
-                    <path d="M12 8l4 4-4 4-4-4 4-4z"/>
-                </svg>
-            </div>
-
-            <h3>Transparency</h3>
-
-            <p>
-                PRANAURA facilitates introductions and
-                does not guarantee transaction outcomes.
-            </p>
-
-        </div>
-
-    </div>
+</div>
 
 </section>
 
 
-<!-- =====================================================
-     DOCUMENTS / REFERRALS / COMMISSION
-===================================================== -->
+<!-- ======================================================
+     AI
+====================================================== -->
 
-<section class="section" id="tools">
+<section
+class="section"
+id="ai"
+>
 
-    <div class="section-head">
+<div class="container">
 
-        <div class="eyebrow">
-            PLATFORM TOOLS
-        </div>
-
-        <h2 class="section-title">
-            More than a contact form.
-        </h2>
-
-    </div>
-
-    <div class="utility-grid">
-
-        <div class="utility-card">
-
-            <h3>Document Vault</h3>
-
-            <p>
-                Future secure document storage for approved
-                partner and project information.
-            </p>
-
-            <button class="secondary-btn"
-                    onclick="openModal('documentModal')">
-                Request Document
-            </button>
-
-        </div>
-
-        <div class="utility-card">
-
-            <h3>Referral Network</h3>
-
-            <p>
-                Introduce builders, investors, buyers or
-                other relevant professional contacts.
-            </p>
-
-            <button class="secondary-btn"
-                    onclick="openModal('referralModal')">
-                Make Referral
-            </button>
-
-        </div>
-
-        <div class="utility-card">
-
-            <h3>Commission Calculator</h3>
-
-            <p>
-                Estimate a commission amount using a simple
-                percentage-based calculation.
-            </p>
-
-            <button class="secondary-btn"
-                    onclick="openModal('commissionModal')">
-                Calculate
-            </button>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =====================================================
-     FOUNDER — ONLY ONCE
-===================================================== -->
-
-<section class="founder" id="founder">
-
-    <div class="founder-inner">
-
-        <div class="eyebrow">
-            FOUNDER
-        </div>
-
-        <h2 class="founder-name">
-            Pranathi H.S.
-        </h2>
-
-        <div class="founder-role">
-            FOUNDER — PRANAURA
-        </div>
-
-        <p class="founder-text">
-            PRANAURA was created with the vision of bringing
-            greater structure, professionalism and technology
-            into real estate relationships while keeping people
-            at the center of every opportunity.
-        </p>
-
-    </div>
-
-</section>
-
-
-<!-- =====================================================
-     FAQ
-===================================================== -->
-
-<section class="section alt" id="faq">
-
-    <div class="section-head">
-
-        <div class="eyebrow">
-            FAQ
-        </div>
-
-        <h2 class="section-title">
-            Frequently asked questions.
-        </h2>
-
-    </div>
-
-    <div class="faq">
-
-        <div class="faq-item">
-
-            <button class="faq-question">
-                What is PRANAURA?
-                <span class="faq-symbol">+</span>
-            </button>
-
-            <div class="faq-answer">
-                PRANAURA is a real estate networking and advisory
-                platform designed to connect builders, developers,
-                landowners, investors and buyers.
-            </div>
-
-        </div>
-
-
-        <div class="faq-item">
-
-            <button class="faq-question">
-                Does PRANAURA own properties?
-                <span class="faq-symbol">+</span>
-            </button>
-
-            <div class="faq-answer">
-                No. PRANAURA does not own properties. It facilitates
-                introductions and professional business discussions.
-            </div>
-
-        </div>
-
-
-        <div class="faq-item">
-
-            <button class="faq-question">
-                Does PRANAURA guarantee investments?
-                <span class="faq-symbol">+</span>
-            </button>
-
-            <div class="faq-answer">
-                No. PRANAURA does not guarantee investment returns,
-                project outcomes or transaction completion.
-            </div>
-
-        </div>
-
-
-        <div class="faq-item">
-
-            <button class="faq-question">
-                Can builders partner with PRANAURA?
-                <span class="faq-symbol">+</span>
-            </button>
-
-            <div class="faq-answer">
-                Yes. Builders and developers can submit partnership
-                requirements through the platform.
-            </div>
-
-        </div>
-
-
-        <div class="faq-item">
-
-            <button class="faq-question">
-                Can investors submit requirements?
-                <span class="faq-symbol">+</span>
-            </button>
-
-            <div class="faq-answer">
-                Yes. Investors can use Smart Match to structure
-                their preferences and requirements.
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =====================================================
-     CONTACT
-===================================================== -->
-
-<section class="section" id="contact">
-
-    <div class="section-head">
-
-        <div class="eyebrow">
-            CONTACT
-        </div>
-
-        <h2 class="section-title">
-            Let us start with a conversation.
-        </h2>
-
-    </div>
-
-    <div class="contact-grid">
-
-        <div class="contact-info">
-
-            <h3>
-                Build the right connection.
-            </h3>
-
-            <p>
-                Whether you are a builder, investor, landowner,
-                buyer or strategic partner, share your requirement
-                with PRANAURA.
-            </p>
-
-            <div class="contact-list">
-
-                <div class="contact-item">
-
-                    <span class="icon">
-                        <svg viewBox="0 0 24 24">
-                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2
-                            19.79 19.79 0 0 1-8.63-3.07
-                            19.5 19.5 0 0 1-6-6
-                            19.79 19.79 0 0 1-3.07-8.67
-                            A2 2 0 0 1 4.11 2h3a2 2 0 0 1
-                            2 1.72c.12.9.33 1.78.62 2.63
-                            a2 2 0 0 1-.45 2.11L8 9.73
-                            a16 16 0 0 0 6 6l1.27-1.27
-                            a2 2 0 0 1 2.11-.45
-                            c.85.29 1.73.5 2.63.62
-                            A2 2 0 0 1 22 16.92z"/>
-                        </svg>
-                    </span>
-
-                    <span class="contact-item-text">
-                        +91 90197 46649
-                    </span>
-
-                </div>
-
-
-                <div class="contact-item">
-
-                    <span class="icon">
-                        <svg viewBox="0 0 24 24">
-                            <rect x="3" y="5" width="18" height="14" rx="2"/>
-                            <path d="M3 7l9 6 9-6"/>
-                        </svg>
-                    </span>
-
-                    <span class="contact-item-text">
-                        pranauraconnect@gmail.com
-                    </span>
-
-                </div>
-
-
-                <div class="contact-item">
-
-                    <span class="icon">
-                        <svg viewBox="0 0 24 24">
-                            <path d="M12 21s7-6.1 7-12
-                            a7 7 0 0 0-14 0c0 5.9 7 12 7 12z"/>
-                            <circle cx="12" cy="9" r="2.5"/>
-                        </svg>
-                    </span>
-
-                    <span class="contact-item-text">
-                        Vijayanagar, Mysore, Karnataka, India
-                    </span>
-
-                </div>
-
-            </div>
-
-        </div>
+    <div class="ai-layout">
 
 
         <div>
 
-            <form id="contactForm">
+            <div class="eyebrow">
+                PRANAURA AI
+            </div>
 
-                <div class="form-grid">
+            <h2 class="title">
+                Ask. Explore. Organize.
+            </h2>
 
-                    <div class="field">
+            <p class="subtitle">
 
-                        <label>Name</label>
+                The website includes an AI assistant interface
+                designed to help visitors understand PRANAURA,
+                organize requirements and explore the platform.
 
-                        <input id="contactName"
-                               required>
+            </p>
 
-                    </div>
+            <br>
 
-                    <div class="field">
+            <p class="subtitle">
 
-                        <label>Phone</label>
+                For production deployment, the AI can be connected
+                through a secure backend to Ollama, Qwen or another
+                selected model without exposing private infrastructure
+                directly to the public website.
 
-                        <input id="contactPhone"
-                               type="tel"
-                               required>
+            </p>
 
-                    </div>
+        </div>
 
-                    <div class="field">
 
-                        <label>Role</label>
+        <div class="ai-panel">
 
-                        <select id="contactRole">
+            <div class="ai-header">
 
-                            <option>Investor</option>
-                            <option>Buyer</option>
-                            <option>Builder</option>
-                            <option>Developer</option>
-                            <option>Landowner</option>
-                            <option>Other</option>
+                <strong>
+                    PRANAURA AI
+                </strong>
 
-                        </select>
+                <div class="ai-status">
 
-                    </div>
+                    <span></span>
 
-                    <div class="field">
-
-                        <label>Email</label>
-
-                        <input id="contactEmail"
-                               type="email">
-
-                    </div>
-
-                    <div class="field full">
-
-                        <label>Message</label>
-
-                        <textarea id="contactMessage"
-                                  required></textarea>
-
-                    </div>
+                    Online
 
                 </div>
 
-                <br>
+            </div>
 
-                <button class="primary-btn">
-                    Send Enquiry
+
+            <div
+            class="ai-messages"
+            id="aiMessages"
+            >
+
+                <div class="ai-message bot">
+
+                    Hello! I'm
+                    <strong>PRANAURA AI</strong>.
+
+                    <br><br>
+
+                    I can currently help you with:
+
+                    <br>
+                    • Investments
+                    <br>
+                    • Property requirements
+                    <br>
+                    • Builder partnerships
+                    <br>
+                    • Landowner partnerships
+                    <br>
+                    • Smart Match
+                    <br>
+                    • PRANAURA services
+
+                    <br><br>
+
+                    Tell me what you're looking for.
+
+                </div>
+
+            </div>
+
+
+            <form
+            class="ai-input-area"
+            id="aiForm"
+            >
+
+                <input
+                id="aiInput"
+                type="text"
+                placeholder="Ask PRANAURA AI..."
+                autocomplete="off"
+                aria-label="Ask PRANAURA AI"
+                >
+
+                <button
+                class="ai-send"
+                type="submit"
+                aria-label="Send message"
+                >
+                →
                 </button>
 
             </form>
@@ -3428,81 +3990,502 @@ footer a{
 
     </div>
 
+</div>
+
 </section>
 
 
-<!-- =====================================================
-     LEGAL
-===================================================== -->
+<!-- ======================================================
+     FOUNDER
+====================================================== -->
 
-<section class="section alt" id="legal">
+<section
+class="section section-alt"
+id="founder"
+>
 
-    <div class="section-head">
+<div class="container">
 
-        <div class="eyebrow">
-            LEGAL & TRANSPARENCY
+    <div class="founder">
+
+
+        <div class="founder-box">
+
+            <div class="founder-initial">
+                P
+            </div>
+
+            <div class="eyebrow">
+                Founder
+            </div>
+
+            <h2 class="title">
+                Pranathi H.S.
+            </h2>
+
+            <p>
+                Founder, PRANAURA
+            </p>
+
         </div>
 
-        <h2 class="section-title">
-            Clear expectations.
+
+        <div>
+
+            <div class="eyebrow">
+                Founder & Networking Lead
+            </div>
+
+            <h2 class="title">
+                Building a more structured property network.
+            </h2>
+
+            <p class="subtitle">
+
+                PRANAURA was created with the goal of bringing
+                people across the property ecosystem into more
+                organized, professional and technology-enabled
+                conversations.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- ======================================================
+     TRUST
+====================================================== -->
+
+<section
+class="section"
+id="trust"
+>
+
+<div class="container">
+
+    <div class="center">
+
+        <div class="eyebrow">
+            Trust & Transparency
+        </div>
+
+        <h2 class="title">
+            Clear relationships. Clear expectations.
         </h2>
 
     </div>
 
-    <div class="legal-grid">
 
-        <div class="legal-card">
+    <div class="trust-grid" style="margin-top:50px;">
 
-            <h3>Disclaimer</h3>
+
+        <div class="trust-item">
+
+            <strong>
+                No Property Ownership
+            </strong>
 
             <p>
-                PRANAURA facilitates introductions and business
-                communication. It does not guarantee property
-                quality, returns, approvals, transaction completion
-                or investment outcomes.
+                PRANAURA does not claim ownership of properties
+                discussed through its networking model.
             </p>
 
         </div>
 
-        <div class="legal-card">
 
-            <h3>Privacy</h3>
+        <div class="trust-item">
+
+            <strong>
+                No Guaranteed Transactions
+            </strong>
 
             <p>
-                Information submitted through the prototype forms
-                is intended for demonstration purposes. A production
-                system should implement secure storage, consent
-                management and applicable privacy requirements.
+                Introductions and networking do not guarantee
+                a transaction, investment return or property sale.
             </p>
 
         </div>
 
-        <div class="legal-card">
 
-            <h3>Verification</h3>
+        <div class="trust-item">
+
+            <strong>
+                Verification Matters
+            </strong>
 
             <p>
-                Information should be independently verified by
-                users before entering into any transaction,
-                investment or agreement.
+                Participants should independently verify property,
+                ownership, legal documents, approvals and commercial
+                information before proceeding.
             </p>
 
         </div>
 
     </div>
 
+</div>
+
 </section>
+
+
+<!-- ======================================================
+     FAQ
+====================================================== -->
+
+<section
+class="section section-alt"
+id="faq"
+>
+
+<div class="container">
+
+    <div class="center">
+
+        <div class="eyebrow">
+            FAQ
+        </div>
+
+        <h2 class="title">
+            Frequently Asked Questions
+        </h2>
+
+    </div>
+
+
+    <div class="faq">
+
+
+        <div class="faq-item">
+
+            <button
+            class="faq-question"
+            type="button"
+            >
+                What is PRANAURA?
+
+                <span class="faq-icon">
+                    +
+                </span>
+
+            </button>
+
+            <div class="faq-answer">
+
+                PRANAURA is a real estate advisory and networking
+                platform connecting builders, developers, landowners,
+                investors and property buyers.
+
+            </div>
+
+        </div>
+
+
+        <div class="faq-item">
+
+            <button
+            class="faq-question"
+            type="button"
+            >
+                Does PRANAURA own properties?
+
+                <span class="faq-icon">
+                    +
+                </span>
+
+            </button>
+
+            <div class="faq-answer">
+
+                No. PRANAURA operates as a networking and advisory
+                platform and does not represent itself as the owner
+                of the properties discussed.
+
+            </div>
+
+        </div>
+
+
+        <div class="faq-item">
+
+            <button
+            class="faq-question"
+            type="button"
+            >
+                How does Smart Match work?
+
+                <span class="faq-icon">
+                    +
+                </span>
+
+            </button>
+
+            <div class="faq-answer">
+
+                The current website prototype uses information such
+                as role, location, property type, budget, timeline and
+                requirement to produce a browser-based compatibility
+                assessment.
+
+            </div>
+
+        </div>
+
+
+        <div class="faq-item">
+
+            <button
+            class="faq-question"
+            type="button"
+            >
+                Is PRANAURA AI real?
+
+                <span class="faq-icon">
+                    +
+                </span>
+
+            </button>
+
+            <div class="faq-answer">
+
+                The current public website contains an AI assistant
+                interface with browser-based responses. A production
+                version can later connect securely to a backend and
+                an AI model such as Ollama/Qwen.
+
+            </div>
+
+        </div>
+
+
+        <div class="faq-item">
+
+            <button
+            class="faq-question"
+            type="button"
+            >
+                Are transactions guaranteed?
+
+                <span class="faq-icon">
+                    +
+                </span>
+
+            </button>
+
+            <div class="faq-answer">
+
+                No. A connection or introduction does not guarantee
+                a transaction, investment return, property availability
+                or successful completion.
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- ======================================================
+     CONTACT
+====================================================== -->
+
+<section
+class="section"
+id="contact"
+>
+
+<div class="container">
+
+    <div class="contact-grid">
+
+
+        <div>
+
+            <div class="eyebrow">
+                Contact
+            </div>
+
+            <h2 class="title">
+                Start a conversation.
+            </h2>
+
+            <p class="subtitle">
+
+                Tell PRANAURA what you are looking for and
+                we'll organize the initial requirement.
+
+            </p>
+
+
+            <div
+            class="contact-details"
+            style="margin-top:35px;"
+            >
+
+
+                <div class="contact-item">
+
+                    <small>
+                        Phone
+                    </small>
+
+                    <a href="tel:+919019746649">
+                        +91 90197 46649
+                    </a>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <small>
+                        Email
+                    </small>
+
+                    <a
+                    href="mailto:pranauraconnect@gmail.com"
+                    >
+                    pranauraconnect@gmail.com
+                    </a>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <small>
+                        Instagram
+                    </small>
+
+                    <a
+                    href="https://instagram.com/Pranaura_"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >
+                    @Pranaura_
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <form
+        class="contact-form"
+        id="contactForm"
+        >
+
+            <div class="form-grid">
+
+
+                <div class="field">
+
+                    <label for="contactName">
+                        Name
+                    </label>
+
+                    <input
+                    id="contactName"
+                    type="text"
+                    required
+                    autocomplete="name"
+                    >
+
+                </div>
+
+
+                <div class="field">
+
+                    <label for="contactPhone">
+                        Phone
+                    </label>
+
+                    <input
+                    id="contactPhone"
+                    type="tel"
+                    inputmode="tel"
+                    autocomplete="tel"
+                    >
+
+                </div>
+
+
+                <div class="field full">
+
+                    <label for="contactEmail">
+                        Email
+                    </label>
+
+                    <input
+                    id="contactEmail"
+                    type="email"
+                    required
+                    autocomplete="email"
+                    >
+
+                </div>
+
+
+                <div class="field full">
+
+                    <label for="contactMessage">
+                        Message
+                    </label>
+
+                    <textarea
+                    id="contactMessage"
+                    required
+                    ></textarea>
+
+                </div>
+
+
+                <div class="field full">
+
+                    <button
+                    type="submit"
+                    class="btn btn-primary"
+                    >
+                    Send Enquiry
+                    </button>
+
+                </div>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+</section>
+
 
 </main>
 
 
-<!-- =====================================================
+<!-- ======================================================
      FOOTER
-===================================================== -->
+====================================================== -->
 
 <footer>
 
+<div class="container">
+
     <div class="footer-grid">
+
 
         <div>
 
@@ -3510,10 +4493,12 @@ footer a{
                 PRANAURA
             </div>
 
-            <p class="footer-description">
+            <p class="footer-text">
+
                 Strategic Builder & Investor Partnerships.
-                Connecting people, property and progress through
-                professional real estate relationships.
+                Connecting people, property and opportunity
+                through structured professional networking.
+
             </p>
 
         </div>
@@ -3521,42 +4506,52 @@ footer a{
 
         <div>
 
-            <h4>EXPLORE</h4>
+            <div class="eyebrow">
+                Navigate
+            </div>
 
-            <a href="#about">About</a>
-            <a href="#process">Process</a>
-            <a href="#network">Network</a>
-            <a href="#services">Services</a>
+            <div class="footer-links">
+
+                <a href="#about">About</a>
+
+                <a href="#why">Why Us</a>
+
+                <a href="#process">Process</a>
+
+                <a href="#network">Network</a>
+
+                <a href="#services">Services</a>
+
+                <a href="#smartmatch">Smart Match</a>
+
+                <a href="#contact">Contact</a>
+
+            </div>
 
         </div>
 
 
         <div>
 
-            <h4>PLATFORM</h4>
+            <div class="eyebrow">
+                Legal
+            </div>
 
-            <a href="#match">Smart Match</a>
-            <a href="#ai">AI</a>
-            <a href="#trust">Trust</a>
-            <a href="#faq">FAQ</a>
+            <div class="footer-links">
 
-        </div>
+                <a href="#trust">
+                    Trust & Transparency
+                </a>
 
+                <a href="#faq">
+                    FAQ
+                </a>
 
-        <div>
+                <a href="#contact">
+                    Contact
+                </a>
 
-            <h4>CONNECT</h4>
-
-            <a href="#contact">Contact</a>
-            <a href="https://instagram.com/Pranaura_"
-               target="_blank">
-                Instagram
-            </a>
-
-            <a href="https://wa.me/919019746649"
-               target="_blank">
-                WhatsApp
-            </a>
+            </div>
 
         </div>
 
@@ -3570,510 +4565,188 @@ footer a{
         </span>
 
         <span>
-            Designed for a more connected real estate ecosystem.
+            Real estate networking & advisory.
         </span>
 
     </div>
 
+</div>
+
 </footer>
 
 
-<!-- =====================================================
-     AI CHAT
-===================================================== -->
+<!-- ======================================================
+     FLOATING WHATSAPP
+====================================================== -->
 
-<div class="ai-chat" id="aiChat">
+<a
+href="https://wa.me/919019746649"
+target="_blank"
+rel="noopener noreferrer"
+class="whatsapp"
+aria-label="Chat with PRANAURA on WhatsApp"
+>
 
-    <div class="ai-chat-head">
+<svg
+viewBox="0 0 32 32"
+aria-hidden="true"
+>
 
-        <div class="ai-chat-title">
-            PRANAURA AI
-        </div>
+<path d="
+M16 3
+C8.82 3 3 8.82 3 16
+C3 18.3 3.6 20.46 4.73 22.36
+L3.1 28.9
+L9.8 27.3
+C11.65 28.38 13.78 29 16 29
+C23.18 29 29 23.18 29 16
+C29 8.82 23.18 3 16 3
+ZM16 26.65
+C13.98 26.65 12.05 26.08 10.38 25.01
+L9.99 24.77
+L6.02 25.72
+L6.99 21.86
+L6.73 21.45
+C5.68 19.82 5.12 17.94 5.12 16
+C5.12 10.02 10.02 5.12 16 5.12
+C21.98 5.12 26.88 10.02 26.88 16
+C26.88 21.98 21.98 26.65 16 26.65ZM22.16 18.62
+C21.83 18.46 20.2 17.65 19.91 17.54
+C19.61 17.43 19.39 17.37 19.17 17.7
+C18.95 18.03 18.31 18.78 18.13 19
+C17.95 19.22 17.77 19.25 17.44 19.08
+C17.11 18.92 16.03 18.57 14.75 17.43
+C13.75 16.54 13.08 15.45 12.89 15.12
+C12.71 14.79 12.87 14.61 13.04 14.45
+C13.2 14.29 13.4 14.03 13.56 13.85
+C13.72 13.67 13.78 13.54 13.89 13.32
+C14 13.1 13.95 12.91 13.86 12.74
+C13.78 12.57 13.12 10.95 12.84 10.29
+C12.57 9.66 12.3 9.67 12.1 9.66
+C11.91 9.65 11.69 9.65 11.47 9.65
+C11.25 9.65 10.9 9.73 10.61 10.06
+C10.32 10.39 9.5 11.16 9.5 12.77
+C9.5 14.38 10.64 15.94 10.8 16.16
+C10.96 16.38 13.04 19.58 16.22 20.95
+C16.97 21.27 17.56 21.46 18.02 21.6
+C18.77 21.84 19.46 21.8 20.01 21.72
+C20.61 21.63 21.86 20.96 22.12 20.23
+C22.39 19.5 22.39 18.88 22.3 18.75
+C22.25 18.7 22.21 18.66 22.16 18.62Z
+"/>
 
-        <button class="ai-chat-close"
-                onclick="toggleAI()">
-            ×
-        </button>
-
-    </div>
-
-    <div class="ai-messages" id="aiMessages">
-
-        <div class="message bot">
-            Hello. I am the PRANAURA AI prototype.
-            Tell me whether you are an investor, buyer,
-            builder, developer or landowner.
-        </div>
-
-    </div>
-
-    <div class="ai-input">
-
-        <input id="aiInput"
-               placeholder="Ask PRANAURA AI...">
-
-        <button onclick="sendAI()">
-
-            <span class="icon">
-                <svg viewBox="0 0 24 24">
-                    <path d="M22 2L11 13"/>
-                    <path d="M22 2l-7 20-4-9-9-4 20-7z"/>
-                </svg>
-            </span>
-
-        </button>
-
-    </div>
-
-</div>
-
-
-<!-- =====================================================
-     AI FLOATING BUTTON
-===================================================== -->
-
-<button class="ai-floating"
-        onclick="toggleAI()"
-        aria-label="Open PRANAURA AI">
-
-    <svg viewBox="0 0 24 24">
-
-        <path d="M12 2l1.4 6.6L20 10l-6.6 1.4L12 18l-1.4-6.6L4 10l6.6-1.4L12 2z"/>
-
-        <path d="M19 15l.7 3.3L23 19l-3.3.7L19 23l-.7-3.3L15 19l3.3-.7L19 15z"/>
-
-    </svg>
-
-</button>
-
-
-<!-- =====================================================
-     WHATSAPP
-===================================================== -->
-
-<a class="whatsapp"
-   href="https://wa.me/919019746649"
-   target="_blank"
-   aria-label="WhatsApp">
-
-    <svg viewBox="0 0 32 32">
-
-        <path d="
-        M16 3
-        C8.82 3 3 8.82 3 16
-        c0 2.29.6 4.44 1.65 6.3
-        L3.1 29l6.88-1.5
-        A12.94 12.94 0 0 0 16 29
-        c7.18 0 13-5.82 13-13
-        S23.18 3 16 3z
-        M16 5.2
-        c5.96 0 10.8 4.84 10.8 10.8
-        S21.96 26.8 16 26.8
-        c-2.1 0-4.06-.6-5.72-1.64
-        l-.39-.24-4.09.89.9-3.98
-        -.25-.4
-        A10.74 10.74 0 0 1 5.2 16
-        C5.2 10.04 10.04 5.2 16 5.2z
-        " />
-
-        <path d="
-        M12.18 9.15
-        c-.27-.6-.55-.61-.8-.62
-        h-.68
-        c-.24 0-.63.09-.96.45
-        -.33.36-1.25 1.22-1.25 2.98
-        0 1.76 1.28 3.46 1.46 3.7
-        .18.24 2.47 3.96 6.08 5.39
-        3 .? 
-        " />
-
-        <path d="
-        M12.18 9.15
-        c-.27-.6-.55-.61-.8-.62
-        h-.68
-        c-.24 0-.63.09-.96.45
-        -.33.36-1.25 1.22-1.25 2.98
-        0 1.76 1.28 3.46 1.46 3.7
-        .18.24 2.47 3.96 6.08 5.39
-        3.01 1.19 3.63.95 4.28.89
-        .65-.06 2.09-.86 2.38-1.69
-        .3-.83.3-1.54.21-1.69
-        -.09-.15-.33-.24-.69-.42
-        -.36-.18-2.09-1.04-2.41-1.16
-        -.33-.12-.56-.18-.8.18
-        -.24.36-.92 1.16-1.13 1.4
-        -.21.24-.42.27-.77.09
-        -.36-.18-1.5-.55-2.86-1.76
-        -1.06-.95-1.78-2.12-1.99-2.47
-        -.21-.36-.02-.55.16-.73
-        .16-.16.36-.42.53-.62
-        .18-.21.24-.36.36-.59
-        .12-.24.06-.45-.03-.63
-        -.09-.18-.79-1.91-1.09-2.61z
-        " />
-
-    </svg>
+</svg>
 
 </a>
 
 
-<!-- =====================================================
-     BACK TO TOP
-===================================================== -->
+<!-- ======================================================
+     AI FLOAT BUTTON
+====================================================== -->
 
-<button class="back-top"
-        id="backTop"
-        aria-label="Back to top">
-
-    <span class="icon">
-        <svg viewBox="0 0 24 24">
-            <path d="M12 19V5"/>
-            <path d="M6 11l6-6 6 6"/>
-        </svg>
-    </span>
-
+<button
+class="ai-float"
+id="aiFloat"
+type="button"
+aria-label="Open PRANAURA AI"
+>
+✦
 </button>
 
 
-<!-- =====================================================
-     CONTACT MODAL
-===================================================== -->
+<!-- ======================================================
+     BACK TO TOP
+====================================================== -->
 
-<div class="modal"
-     id="contactModal">
-
-    <div class="modal-box">
-
-        <button class="modal-close"
-                onclick="closeModal('contactModal')">
-            ×
-        </button>
-
-        <div class="eyebrow">
-            CONNECT WITH PRANAURA
-        </div>
-
-        <div class="modal-title">
-            Start a Conversation
-        </div>
-
-        <p class="modal-text">
-            Share your requirement and the PRANAURA team
-            can understand the right next step.
-        </p>
-
-        <button class="primary-btn"
-                onclick="closeModal('contactModal');document.getElementById('contact').scrollIntoView()">
-            Continue to Contact
-        </button>
-
-    </div>
-
-</div>
+<button
+class="back-top"
+id="backTop"
+type="button"
+aria-label="Back to top"
+>
+↑
+</button>
 
 
-<!-- =====================================================
-     DOCUMENT MODAL
-===================================================== -->
-
-<div class="modal"
-     id="documentModal">
-
-    <div class="modal-box">
-
-        <button class="modal-close"
-                onclick="closeModal('documentModal')">
-            ×
-        </button>
-
-        <div class="eyebrow">
-            DOCUMENT REQUEST
-        </div>
-
-        <div class="modal-title">
-            Request Information
-        </div>
-
-        <p class="modal-text">
-            Production document storage will use secure
-            server-side storage and access controls.
-        </p>
-
-        <input class="field"
-               id="documentName"
-               placeholder="Your name"
-               style="margin-bottom:15px;">
-
-        <input class="field"
-               id="documentPhone"
-               placeholder="Phone"
-               style="margin-bottom:15px;">
-
-        <button class="primary-btn"
-                onclick="submitDocument()">
-            Submit Request
-        </button>
-
-    </div>
-
-</div>
-
-
-<!-- =====================================================
-     REFERRAL MODAL
-===================================================== -->
-
-<div class="modal"
-     id="referralModal">
-
-    <div class="modal-box">
-
-        <button class="modal-close"
-                onclick="closeModal('referralModal')">
-            ×
-        </button>
-
-        <div class="eyebrow">
-            REFERRAL NETWORK
-        </div>
-
-        <div class="modal-title">
-            Refer a Connection
-        </div>
-
-        <p class="modal-text">
-            Introduce a relevant builder, investor, buyer,
-            landowner or strategic partner.
-        </p>
-
-        <input id="referralName"
-               placeholder="Your name"
-               style="width:100%;padding:14px;margin-bottom:12px;border:1px solid var(--line);background:transparent;color:var(--text);">
-
-        <input id="referralContact"
-               placeholder="Referral contact"
-               style="width:100%;padding:14px;margin-bottom:12px;border:1px solid var(--line);background:transparent;color:var(--text);">
-
-        <button class="primary-btn"
-                onclick="submitReferral()">
-            Submit Referral
-        </button>
-
-    </div>
-
-</div>
-
-
-<!-- =====================================================
-     COMMISSION MODAL
-===================================================== -->
-
-<div class="modal"
-     id="commissionModal">
-
-    <div class="modal-box">
-
-        <button class="modal-close"
-                onclick="closeModal('commissionModal')">
-            ×
-        </button>
-
-        <div class="eyebrow">
-            COMMISSION CALCULATOR
-        </div>
-
-        <div class="modal-title">
-            Estimate
-        </div>
-
-        <div class="field"
-             style="margin-bottom:15px;">
-
-            <label>Transaction Value</label>
-
-            <input id="transactionValue"
-                   type="number"
-                   placeholder="Example: 5000000">
-
-        </div>
-
-        <div class="field"
-             style="margin-bottom:20px;">
-
-            <label>Commission Rate (%)</label>
-
-            <input id="commissionRate"
-                   type="number"
-                   step="0.1"
-                   placeholder="Example: 2">
-
-        </div>
-
-        <button class="primary-btn"
-                onclick="calculateCommission()">
-            Calculate
-        </button>
-
-        <div id="commissionResult"
-             style="margin-top:20px;font-family:var(--serif);font-size:30px;">
-        </div>
-
-    </div>
-
-</div>
-
-
-<!-- =====================================================
+<!-- ======================================================
      TOAST
-===================================================== -->
+====================================================== -->
 
-<div class="toast"
-     id="toast">
-</div>
+<div
+class="toast"
+id="toast"
+role="status"
+aria-live="polite"
+></div>
 
 
-<!-- =====================================================
-     CONSENT
-===================================================== -->
+<!-- ======================================================
+     COOKIE
+====================================================== -->
 
-<div class="consent"
-     id="consent">
+<div
+class="cookie-bar"
+id="cookieBar"
+>
+
+<div class="cookie-inner">
 
     <p>
-        This prototype uses local browser storage for
-        demonstration functionality. Production deployment
-        should implement appropriate privacy and security controls.
+        PRANAURA uses essential browser functionality to
+        operate this website. External services such as
+        fonts, WhatsApp and Instagram may have their own
+        privacy policies.
     </p>
 
-    <button onclick="acceptConsent()">
-        Continue
+    <button
+    class="cookie-btn"
+    id="cookieAccept"
+    type="button"
+    >
+    Continue
     </button>
 
 </div>
 
+</div>
+
+
+<!-- ======================================================
+     JAVASCRIPT
+====================================================== -->
 
 <script>
 
 /* =========================================================
-   STORAGE
+   HELPERS
 ========================================================= */
 
-const STORAGE = {
-    matches:"pranaura_matches",
-    enquiries:"pranaura_enquiries",
-    appointments:"pranaura_appointments",
-    documents:"pranaura_documents",
-    referrals:"pranaura_referrals"
-};
+const $ = id =>
+    document.getElementById(id);
+
+const $$ = selector =>
+    document.querySelectorAll(selector);
 
 
 /* =========================================================
-   UTILITIES
+   LOADER
 ========================================================= */
 
-function getData(key){
+window.addEventListener("load", () => {
 
-    try{
-        return JSON.parse(localStorage.getItem(key)) || [];
-    }
+    setTimeout(() => {
 
-    catch(e){
-        return [];
-    }
+        $("loader")?.classList.add("hide");
 
-}
-
-
-function saveData(key,data){
-
-    localStorage.setItem(
-        key,
-        JSON.stringify(data)
-    );
-
-}
-
-
-function toast(message){
-
-    const t =
-        document.getElementById("toast");
-
-    t.textContent = message;
-
-    t.classList.add("show");
-
-    setTimeout(()=>{
-        t.classList.remove("show");
-    },3000);
-
-}
-
-
-function generateID(role){
-
-    const date =
-        new Date()
-        .toISOString()
-        .slice(2,10)
-        .replaceAll("-","");
-
-    const random =
-        Math.floor(
-            100 +
-            Math.random()*900
-        );
-
-    const prefix =
-        role
-        ? role.substring(0,3).toUpperCase()
-        : "GEN";
-
-    return `PRN-${prefix}-${date}-${random}`;
-
-}
-
-
-/* =========================================================
-   MODALS
-========================================================= */
-
-function openModal(id){
-
-    const modal =
-        document.getElementById(id);
-
-    if(modal){
-        modal.classList.add("show");
-    }
-
-}
-
-
-function closeModal(id){
-
-    const modal =
-        document.getElementById(id);
-
-    if(modal){
-        modal.classList.remove("show");
-    }
-
-}
-
-
-document.querySelectorAll(".modal")
-.forEach(modal=>{
-
-    modal.addEventListener("click",(e)=>{
-
-        if(e.target === modal){
-            modal.classList.remove("show");
-        }
-
-    });
+    }, 1100);
 
 });
+
+setTimeout(() => {
+
+    $("loader")?.classList.add("hide");
+
+}, 3500);
 
 
 /* =========================================================
@@ -4081,28 +4754,92 @@ document.querySelectorAll(".modal")
 ========================================================= */
 
 const menuBtn =
-    document.getElementById("menuBtn");
+    $("menuBtn");
 
-const navLinks =
-    document.getElementById("navLinks");
+const navlinks =
+    $("navlinks");
 
-menuBtn.addEventListener("click",()=>{
 
-    navLinks.classList.toggle("show");
+function setMenu(open){
+
+    if(!menuBtn || !navlinks)
+        return;
+
+    navlinks.classList.toggle(
+        "open",
+        open
+    );
+
+    menuBtn.setAttribute(
+        "aria-expanded",
+        String(open)
+    );
+
+    menuBtn.setAttribute(
+        "aria-label",
+        open
+        ? "Close navigation"
+        : "Open navigation"
+    );
+
+    menuBtn.textContent =
+        open ? "×" : "☰";
+}
+
+
+menuBtn?.addEventListener(
+    "click",
+    () => {
+
+        setMenu(
+            !navlinks.classList.contains("open")
+        );
+
+    }
+);
+
+
+navlinks?.querySelectorAll("a")
+.forEach(link => {
+
+    link.addEventListener(
+        "click",
+        () => setMenu(false)
+    );
 
 });
 
 
-document.querySelectorAll(".nav-links a")
-.forEach(link=>{
+document.addEventListener(
+    "click",
+    event => {
 
-    link.addEventListener("click",()=>{
+        if(
+            navlinks?.classList.contains("open") &&
+            !navlinks.contains(event.target) &&
+            !menuBtn.contains(event.target)
+        ){
 
-        navLinks.classList.remove("show");
+            setMenu(false);
 
-    });
+        }
 
-});
+    }
+);
+
+
+document.addEventListener(
+    "keydown",
+    event => {
+
+        if(event.key === "Escape"){
+
+            setMenu(false);
+
+        }
+
+    }
+);
 
 
 /* =========================================================
@@ -4110,604 +4847,111 @@ document.querySelectorAll(".nav-links a")
 ========================================================= */
 
 const themeBtn =
-    document.getElementById("themeBtn");
+    $("themeBtn");
 
-themeBtn.addEventListener("click",()=>{
-
-    document.body.classList.toggle("dark");
-
-    localStorage.setItem(
-        "pranaura_theme",
-        document.body.classList.contains("dark")
-        ? "dark"
-        : "light"
+const savedTheme =
+    localStorage.getItem(
+        "pranaura-theme"
     );
 
-});
-
-
-if(localStorage.getItem("pranaura_theme")==="dark"){
+if(savedTheme === "dark"){
 
     document.body.classList.add("dark");
 
 }
 
 
+themeBtn?.addEventListener(
+    "click",
+    () => {
+
+        document.body.classList.toggle(
+            "dark"
+        );
+
+        localStorage.setItem(
+            "pranaura-theme",
+            document.body.classList.contains("dark")
+            ? "dark"
+            : "light"
+        );
+
+        showToast(
+            document.body.classList.contains("dark")
+            ? "Dark mode enabled"
+            : "Light mode enabled"
+        );
+
+    }
+);
+
+
 /* =========================================================
    LANGUAGE
 ========================================================= */
 
+let kannada = false;
+
 const languageBtn =
-    document.getElementById("languageBtn");
+    $("languageBtn");
 
-let kannada =
-    localStorage.getItem("pranaura_language")==="kn";
+languageBtn?.addEventListener(
+    "click",
+    () => {
 
-languageBtn.textContent =
-    kannada ? "EN" : "KN";
+        kannada = !kannada;
 
-languageBtn.addEventListener("click",()=>{
-
-    kannada = !kannada;
-
-    localStorage.setItem(
-        "pranaura_language",
-        kannada ? "kn" : "en"
-    );
-
-    languageBtn.textContent =
-        kannada ? "EN" : "KN";
-
-    toast(
-        kannada
-        ? "Kannada mode selected. Full translation can be connected to the production language system."
-        : "English mode selected."
-    );
-
-});
-
-
-/* =========================================================
-   SMART MATCH
-========================================================= */
-
-document.getElementById("matchForm")
-.addEventListener("submit",(e)=>{
-
-    e.preventDefault();
-
-    const role =
-        document.getElementById("matchRole").value;
-
-    const location =
-        document.getElementById("matchLocation").value;
-
-    const property =
-        document.getElementById("matchProperty").value;
-
-    const budget =
-        document.getElementById("matchBudget").value;
-
-    const timeline =
-        document.getElementById("matchTimeline").value;
-
-    const phone =
-        document.getElementById("matchPhone").value;
-
-    const requirement =
-        document.getElementById("matchRequirement").value;
-
-    const id =
-        generateID(role);
-
-    const record = {
-
-        id,
-        role,
-        location,
-        property,
-        budget,
-        timeline,
-        phone,
-        requirement,
-
-        createdAt:
-            new Date().toISOString()
-
-    };
-
-
-    const records =
-        getData(STORAGE.matches);
-
-    records.push(record);
-
-    saveData(
-        STORAGE.matches,
-        records
-    );
-
-
-    document.getElementById("matchID")
-    .textContent = id;
-
-    document.getElementById("matchResult")
-    .classList.add("show");
-
-    toast(
-        "Your PRANAURA Match Profile has been created."
-    );
-
-});
-
-
-/* =========================================================
-   CONTACT
-========================================================= */
-
-document.getElementById("contactForm")
-.addEventListener("submit",(e)=>{
-
-    e.preventDefault();
-
-    const enquiry = {
-
-        id:generateID("CON"),
-
-        name:
-            document.getElementById("contactName").value,
-
-        phone:
-            document.getElementById("contactPhone").value,
-
-        role:
-            document.getElementById("contactRole").value,
-
-        email:
-            document.getElementById("contactEmail").value,
-
-        message:
-            document.getElementById("contactMessage").value,
-
-        createdAt:
-            new Date().toISOString()
-
-    };
-
-
-    const records =
-        getData(STORAGE.enquiries);
-
-    records.push(enquiry);
-
-    saveData(
-        STORAGE.enquiries,
-        records
-    );
-
-
-    e.target.reset();
-
-    toast(
-        "Thank you. Your enquiry has been recorded."
-    );
-
-});
-
-
-/* =========================================================
-   APPOINTMENT
-========================================================= */
-
-document.getElementById("appointmentForm")
-.addEventListener("submit",(e)=>{
-
-    e.preventDefault();
-
-    const appointment = {
-
-        id:generateID("APP"),
-
-        name:
-            document.getElementById("appointmentName").value,
-
-        phone:
-            document.getElementById("appointmentPhone").value,
-
-        date:
-            document.getElementById("appointmentDate").value,
-
-        time:
-            document.getElementById("appointmentTime").value,
-
-        purpose:
-            document.getElementById("appointmentPurpose").value,
-
-        createdAt:
-            new Date().toISOString()
-
-    };
-
-
-    const records =
-        getData(STORAGE.appointments);
-
-    records.push(appointment);
-
-    saveData(
-        STORAGE.appointments,
-        records
-    );
-
-
-    e.target.reset();
-
-    toast(
-        "Appointment request submitted."
-    );
-
-});
-
-
-/* =========================================================
-   DOCUMENT
-========================================================= */
-
-function submitDocument(){
-
-    const name =
-        document.getElementById("documentName").value;
-
-    const phone =
-        document.getElementById("documentPhone").value;
-
-    if(!name || !phone){
-
-        toast(
-            "Please enter your name and phone."
+        document.body.classList.toggle(
+            "kn",
+            kannada
         );
 
-        return;
+        languageBtn.textContent =
+            kannada ? "KN" : "EN";
+
+        showToast(
+            kannada
+            ? "Kannada mode selected"
+            : "English mode selected"
+        );
 
     }
-
-
-    const records =
-        getData(STORAGE.documents);
-
-    records.push({
-
-        id:generateID("DOC"),
-        name,
-        phone,
-        createdAt:
-            new Date().toISOString()
-
-    });
-
-
-    saveData(
-        STORAGE.documents,
-        records
-    );
-
-
-    closeModal("documentModal");
-
-    toast(
-        "Document request submitted."
-    );
-
-}
+);
 
 
 /* =========================================================
-   REFERRAL
+   SMOOTH SCROLL
 ========================================================= */
 
-function submitReferral(){
+$$('a[href^="#"]')
+.forEach(link => {
 
-    const name =
-        document.getElementById("referralName").value;
+    link.addEventListener(
+        "click",
+        event => {
 
-    const contact =
-        document.getElementById("referralContact").value;
+            const href =
+                link.getAttribute("href");
 
-    if(!name || !contact){
+            if(!href || href === "#")
+                return;
 
-        toast(
-            "Please complete the referral details."
-        );
+            const target =
+                document.querySelector(href);
 
-        return;
+            if(target){
 
-    }
+                event.preventDefault();
 
+                target.scrollIntoView({
+                    behavior:"smooth",
+                    block:"start"
+                });
 
-    const records =
-        getData(STORAGE.referrals);
-
-    records.push({
-
-        id:generateID("REF"),
-        name,
-        contact,
-        createdAt:
-            new Date().toISOString()
-
-    });
-
-
-    saveData(
-        STORAGE.referrals,
-        records
-    );
-
-
-    closeModal("referralModal");
-
-    toast(
-        "Referral submitted."
-    );
-
-}
-
-
-/* =========================================================
-   COMMISSION
-========================================================= */
-
-function calculateCommission(){
-
-    const value =
-        Number(
-            document.getElementById(
-                "transactionValue"
-            ).value
-        );
-
-    const rate =
-        Number(
-            document.getElementById(
-                "commissionRate"
-            ).value
-        );
-
-    if(!value || !rate){
-
-        toast(
-            "Enter transaction value and commission rate."
-        );
-
-        return;
-
-    }
-
-
-    const commission =
-        value * rate / 100;
-
-
-    document.getElementById(
-        "commissionResult"
-    ).textContent =
-        "Estimated Commission: ₹" +
-        commission.toLocaleString("en-IN");
-
-}
-
-
-/* =========================================================
-   AI
-========================================================= */
-
-function toggleAI(){
-
-    document
-        .getElementById("aiChat")
-        .classList.toggle("show");
-
-}
-
-
-function addMessage(text,type){
-
-    const container =
-        document.getElementById("aiMessages");
-
-    const div =
-        document.createElement("div");
-
-    div.className =
-        "message " + type;
-
-    div.textContent =
-        text;
-
-    container.appendChild(div);
-
-    container.scrollTop =
-        container.scrollHeight;
-
-}
-
-
-function aiResponse(message){
-
-    const text =
-        message.toLowerCase();
-
-
-    if(
-        text.includes("investor") ||
-        text.includes("investment")
-    ){
-
-        return "If you are an investor, PRANAURA can structure your preferred location, property type, budget and timeline through Smart Match.";
-
-    }
-
-
-    if(
-        text.includes("builder") ||
-        text.includes("developer")
-    ){
-
-        return "Builders and developers can share their projects and partnership requirements so relevant introductions can be explored.";
-
-    }
-
-
-    if(
-        text.includes("landowner") ||
-        text.includes("land")
-    ){
-
-        return "Landowners can share location and partnership requirements for potential development conversations.";
-
-    }
-
-
-    if(
-        text.includes("buyer") ||
-        text.includes("property")
-    ){
-
-        return "Buyers can submit their preferred location, property type, budget and timeline through PRANAURA Smart Match.";
-
-    }
-
-
-    if(
-        text.includes("contact") ||
-        text.includes("phone")
-    ){
-
-        return "You can contact PRANAURA at +91 90197 46649 or pranauraconnect@gmail.com.";
-
-    }
-
-
-    return "I can help you understand PRANAURA, Smart Match, builder partnerships, investor requirements, landowner opportunities and how the platform works.";
-
-}
-
-
-function sendAI(){
-
-    const input =
-        document.getElementById("aiInput");
-
-    const message =
-        input.value.trim();
-
-    if(!message){
-        return;
-    }
-
-
-    addMessage(
-        message,
-        "user"
-    );
-
-    input.value = "";
-
-
-    setTimeout(()=>{
-
-        addMessage(
-            aiResponse(message),
-            "bot"
-        );
-
-    },400);
-
-}
-
-
-document.getElementById("aiInput")
-.addEventListener("keydown",(e)=>{
-
-    if(e.key==="Enter"){
-
-        sendAI();
-
-    }
-
-});
-
-
-/* =========================================================
-   FAQ
-========================================================= */
-
-document.querySelectorAll(".faq-question")
-.forEach(button=>{
-
-    button.addEventListener("click",()=>{
-
-        const item =
-            button.parentElement;
-
-        const wasOpen =
-            item.classList.contains("open");
-
-
-        document.querySelectorAll(".faq-item")
-        .forEach(other=>{
-            other.classList.remove("open");
-
-            other.querySelector(
-                ".faq-symbol"
-            ).textContent = "+";
-        });
-
-
-        if(!wasOpen){
-
-            item.classList.add("open");
-
-            button.querySelector(
-                ".faq-symbol"
-            ).textContent = "−";
+            }
 
         }
-
-    });
-
-});
-
-
-/* =========================================================
-   BACK TO TOP
-========================================================= */
-
-const backTop =
-    document.getElementById("backTop");
-
-
-window.addEventListener("scroll",()=>{
-
-    if(window.scrollY > 600){
-
-        backTop.classList.add("show");
-
-    }else{
-
-        backTop.classList.remove("show");
-
-    }
-
-});
-
-
-backTop.addEventListener("click",()=>{
-
-    window.scrollTo({
-        top:0,
-        behavior:"smooth"
-    });
+    );
 
 });
 
@@ -4716,126 +4960,813 @@ backTop.addEventListener("click",()=>{
    ACTIVE NAV
 ========================================================= */
 
-const sections =
-    document.querySelectorAll("section[id]");
+const navSections =
+    $$("main section[id]");
 
-const navAnchors =
-    document.querySelectorAll(".nav-links a");
+const navLinks =
+    $$("#navlinks a");
+
+const observer =
+    new IntersectionObserver(
+        entries => {
+
+            entries.forEach(entry => {
+
+                if(entry.isIntersecting){
+
+                    navLinks.forEach(
+                        link =>
+                        link.classList.remove("active")
+                    );
+
+                    const active =
+                        document.querySelector(
+                            '#navlinks a[href="#' +
+                            entry.target.id +
+                            '"]'
+                        );
+
+                    active?.classList.add(
+                        "active"
+                    );
+
+                }
+
+            });
+
+        },
+        {
+            rootMargin:
+                "-35% 0px -55% 0px"
+        }
+    );
 
 
-window.addEventListener("scroll",()=>{
+navSections.forEach(
+    section =>
+    observer.observe(section)
+);
 
-    let current = "";
 
-    sections.forEach(section=>{
+/* =========================================================
+   SCROLL PROGRESS
+========================================================= */
 
-        const top =
-            section.offsetTop - 150;
+window.addEventListener(
+    "scroll",
+    () => {
 
-        if(window.scrollY >= top){
+        const scrollTop =
+            window.scrollY;
 
-            current =
-                section.getAttribute("id");
+        const height =
+            document.documentElement.scrollHeight -
+            window.innerHeight;
+
+        const progress =
+            height > 0
+            ? (scrollTop / height) * 100
+            : 0;
+
+        $("scrollProgress").style.width =
+            progress + "%";
+
+    },
+    {passive:true}
+);
+
+
+/* =========================================================
+   BACK TO TOP
+========================================================= */
+
+const backTop =
+    $("backTop");
+
+window.addEventListener(
+    "scroll",
+    () => {
+
+        backTop?.classList.toggle(
+            "show",
+            window.scrollY > 600
+        );
+
+    },
+    {passive:true}
+);
+
+backTop?.addEventListener(
+    "click",
+    () => {
+
+        window.scrollTo({
+            top:0,
+            behavior:"smooth"
+        });
+
+    }
+);
+
+
+/* =========================================================
+   FAQ
+========================================================= */
+
+$$(".faq-question")
+.forEach(button => {
+
+    button.addEventListener(
+        "click",
+        () => {
+
+            const item =
+                button.closest(".faq-item");
+
+            const isOpen =
+                item.classList.contains("open");
+
+            $$(".faq-item")
+            .forEach(
+                faq =>
+                faq.classList.remove("open")
+            );
+
+            if(!isOpen){
+
+                item.classList.add("open");
+
+            }
+
+            const icon =
+                button.querySelector(
+                    ".faq-icon"
+                );
+
+            if(icon){
+
+                icon.textContent =
+                    isOpen ? "+" : "−";
+
+            }
+
+            $$(".faq-item:not(.open) .faq-icon")
+            .forEach(
+                i => i.textContent = "+"
+            );
 
         }
-
-    });
-
-
-    navAnchors.forEach(anchor=>{
-
-        anchor.classList.remove("active");
-
-        if(
-            anchor.getAttribute("href") ===
-            "#" + current
-        ){
-
-            anchor.classList.add("active");
-
-        }
-
-    });
+    );
 
 });
 
 
 /* =========================================================
-   CONSENT
+   TOAST
 ========================================================= */
 
-function acceptConsent(){
+let toastTimer;
 
-    localStorage.setItem(
-        "pranaura_consent",
-        "yes"
-    );
+function showToast(message){
 
-    document.getElementById(
-        "consent"
-    ).style.display = "none";
+    const toast =
+        $("toast");
 
-}
+    if(!toast)
+        return;
 
+    toast.textContent =
+        message;
 
-if(
-    localStorage.getItem(
-        "pranaura_consent"
-    ) === "yes"
-){
+    toast.classList.add("show");
 
-    document.getElementById(
-        "consent"
-    ).style.display = "none";
+    clearTimeout(toastTimer);
+
+    toastTimer =
+        setTimeout(
+            () => toast.classList.remove("show"),
+            2800
+        );
 
 }
 
 
 /* =========================================================
-   ESCAPE MODALS
+   SMART MATCH
 ========================================================= */
 
-document.addEventListener("keydown",(e)=>{
+$("matchForm")?.addEventListener(
+    "submit",
+    event => {
 
-    if(e.key === "Escape"){
+        event.preventDefault();
 
-        document.querySelectorAll(".modal")
-        .forEach(modal=>{
-            modal.classList.remove("show");
-        });
+        const role =
+            $("role").value.trim();
 
-        document
-            .getElementById("aiChat")
-            .classList.remove("show");
+        const location =
+            $("location").value.trim();
+
+        const propertyType =
+            $("propertyType").value.trim();
+
+        const budget =
+            $("budget").value.trim();
+
+        const timeline =
+            $("timeline").value.trim();
+
+        const requirement =
+            $("requirement").value.trim();
+
+        if(
+            !role ||
+            !location ||
+            !propertyType ||
+            !budget ||
+            !requirement
+        ){
+
+            showToast(
+                "Please complete the required fields."
+            );
+
+            return;
+
+        }
+
+
+        let score = 55;
+
+
+        if(location.length >= 3)
+            score += 8;
+
+        if(budget.length >= 3)
+            score += 8;
+
+        if(requirement.length >= 20)
+            score += 10;
+
+        if(timeline)
+            score += 5;
+
+        if(propertyType)
+            score += 5;
+
+
+        score =
+            Math.min(
+                score,
+                91
+            );
+
+
+        const reference =
+            "PRA-" +
+            new Date()
+            .getFullYear() +
+            "-" +
+            Math.random()
+            .toString(36)
+            .substring(2,8)
+            .toUpperCase();
+
+
+        $("matchScore").textContent =
+            score + "%";
+
+
+        $("matchMessage").textContent =
+            "Your requirement has been structured for a prototype compatibility assessment. A production version can compare this information against verified PRANAURA records and matching criteria.";
+
+
+        $("matchReference").textContent =
+            "Reference ID: " +
+            reference;
+
+
+        $("matchResult")
+        .classList.add("show");
+
+
+        showToast(
+            "Requirement analysed successfully."
+        );
+
+    }
+);
+
+
+/* =========================================================
+   AI
+========================================================= */
+
+function addAIMessage(
+    text,
+    type
+){
+
+    const message =
+        document.createElement("div");
+
+    message.className =
+        "ai-message " + type;
+
+    message.innerHTML =
+        text;
+
+    $("aiMessages")
+    .appendChild(message);
+
+    $("aiMessages").scrollTop =
+        $("aiMessages").scrollHeight;
+
+}
+
+
+function generateAIResponse(
+    question
+){
+
+    const q =
+        question.toLowerCase();
+
+
+    if(
+        q.includes("builder") ||
+        q.includes("developer")
+    ){
+
+        return `
+            PRANAURA can help organize builder and
+            developer networking requirements, including
+            investor, buyer and landowner connections.
+            <br><br>
+            Tell me your preferred location and the type
+            of partnership you are exploring.
+        `;
 
     }
 
+
+    if(
+        q.includes("invest") ||
+        q.includes("investor")
+    ){
+
+        return `
+            PRANAURA is designed to organize investor
+            preferences and connect them with relevant
+            property opportunities.
+            <br><br>
+            You can use Smart Match to provide your
+            location, investment range and timeline.
+        `;
+
+    }
+
+
+    if(
+        q.includes("land") ||
+        q.includes("landowner")
+    ){
+
+        return `
+            If you are a landowner interested in
+            development or partnership opportunities,
+            PRANAURA can help structure the initial
+            requirement and networking process.
+        `;
+
+    }
+
+
+    if(
+        q.includes("buy") ||
+        q.includes("property") ||
+        q.includes("home")
+    ){
+
+        return `
+            I can help organize your property requirement.
+            <br><br>
+            Tell me your preferred location, property type,
+            budget and timeline.
+        `;
+
+    }
+
+
+    if(
+        q.includes("smart match") ||
+        q.includes("match")
+    ){
+
+        return `
+            PRANAURA Smart Match collects your role,
+            location, property type, budget, timeline
+            and requirement.
+            <br><br>
+            The current website creates a prototype
+            compatibility assessment and reference ID.
+        `;
+
+    }
+
+
+    if(
+        q.includes("commission")
+    ){
+
+        return `
+            Commercial terms and commissions can depend
+            on the specific relationship, agreement and
+            completed transaction.
+            <br><br>
+            PRANAURA should confirm commercial terms
+            directly with the relevant participants.
+        `;
+
+    }
+
+
+    if(
+        q.includes("contact") ||
+        q.includes("whatsapp")
+    ){
+
+        return `
+            You can contact PRANAURA at:
+            <br><br>
+            <strong>+91 90197 46649</strong>
+            <br>
+            pranauraconnect@gmail.com
+            <br><br>
+            You can also use the WhatsApp button.
+        `;
+
+    }
+
+
+    return `
+        Hello! I'm <strong>PRANAURA AI</strong>.
+        <br><br>
+        I can currently help you with:
+        <br>
+        • Investments
+        <br>
+        • Property requirements
+        <br>
+        • Builder partnerships
+        <br>
+        • Landowner partnerships
+        <br>
+        • Smart Match
+        <br>
+        • PRANAURA services
+        <br><br>
+        Tell me what you are looking for.
+    `;
+
+}
+
+
+async function sendAI(){
+
+    const input =
+        $("aiInput");
+
+    const text =
+        input.value.trim();
+
+    if(!text)
+        return;
+
+
+    addAIMessage(
+        escapeHTML(text),
+        "user"
+    );
+
+
+    input.value = "";
+
+
+    const typing =
+        document.createElement("div");
+
+    typing.className =
+        "ai-message bot";
+
+    typing.id =
+        "typing";
+
+    typing.textContent =
+        "PRANAURA AI is thinking...";
+
+
+    $("aiMessages")
+    .appendChild(typing);
+
+
+    $("aiMessages").scrollTop =
+        $("aiMessages").scrollHeight;
+
+
+    setTimeout(
+        () => {
+
+            typing.remove();
+
+            addAIMessage(
+                generateAIResponse(text),
+                "bot"
+            );
+
+        },
+        650
+    );
+
+}
+
+
+$("aiForm")?.addEventListener(
+    "submit",
+    event => {
+
+        event.preventDefault();
+
+        sendAI();
+
+    }
+);
+
+
+/* =========================================================
+   AI FLOAT BUTTON
+========================================================= */
+
+$("aiFloat")?.addEventListener(
+    "click",
+    () => {
+
+        document
+        .querySelector("#ai")
+        ?.scrollIntoView({
+            behavior:"smooth"
+        });
+
+        setTimeout(
+            () =>
+            $("aiInput")?.focus(),
+            700
+        );
+
+    }
+);
+
+
+/* =========================================================
+   CONTACT FORM
+========================================================= */
+
+$("contactForm")?.addEventListener(
+    "submit",
+    event => {
+
+        event.preventDefault();
+
+        const name =
+            $("contactName").value.trim();
+
+        const email =
+            $("contactEmail").value.trim();
+
+        const message =
+            $("contactMessage").value.trim();
+
+
+        if(
+            !name ||
+            !email ||
+            !message
+        ){
+
+            showToast(
+                "Please complete the required fields."
+            );
+
+            return;
+
+        }
+
+
+        const subject =
+            encodeURIComponent(
+                "PRANAURA Website Enquiry"
+            );
+
+        const body =
+            encodeURIComponent(
+                "Name: " +
+                name +
+                "\n\nEmail: " +
+                email +
+                "\n\nPhone: " +
+                $("contactPhone").value.trim() +
+                "\n\nMessage:\n" +
+                message
+            );
+
+
+        window.location.href =
+            "mailto:pranauraconnect@gmail.com" +
+            "?subject=" +
+            subject +
+            "&body=" +
+            body;
+
+
+        showToast(
+            "Opening your email application..."
+        );
+
+    }
+);
+
+
+/* =========================================================
+   ONLINE / OFFLINE
+========================================================= */
+
+function updateConnection(){
+
+    document.body.classList.toggle(
+        "offline",
+        !navigator.onLine
+    );
+
+}
+
+window.addEventListener(
+    "online",
+    updateConnection
+);
+
+window.addEventListener(
+    "offline",
+    updateConnection
+);
+
+updateConnection();
+
+
+/* =========================================================
+   COOKIE
+========================================================= */
+
+const cookieBar =
+    $("cookieBar");
+
+const cookieAccepted =
+    localStorage.getItem(
+        "pranaura-cookie"
+    );
+
+
+if(!cookieAccepted){
+
+    setTimeout(
+        () =>
+        cookieBar?.classList.add("show"),
+        1800
+    );
+
+}
+
+
+$("cookieAccept")
+?.addEventListener(
+    "click",
+    () => {
+
+        localStorage.setItem(
+            "pranaura-cookie",
+            "1"
+        );
+
+        cookieBar?.classList.remove(
+            "show"
+        );
+
+    }
+);
+
+
+/* =========================================================
+   ESCAPE HTML
+========================================================= */
+
+function escapeHTML(value){
+
+    return String(value)
+        .replaceAll("&","&amp;")
+        .replaceAll("<","&lt;")
+        .replaceAll(">","&gt;")
+        .replaceAll('"',"&quot;")
+        .replaceAll("'","&#039;");
+
+}
+
+
+/* =========================================================
+   EXTERNAL LINKS
+========================================================= */
+
+$$('a[target="_blank"]')
+.forEach(link => {
+
+    link.setAttribute(
+        "rel",
+        "noopener noreferrer"
+    );
+
 });
 
 
 /* =========================================================
-   LOADER SAFETY
+   IMAGE PERFORMANCE
 ========================================================= */
 
-window.addEventListener("load",()=>{
+$$("img")
+.forEach(
+    (img,index) => {
 
-    setTimeout(()=>{
+        img.decoding = "async";
 
-        const loader =
-            document.getElementById("loader");
+        if(index > 0){
 
-        if(loader){
-
-            loader.style.pointerEvents =
-                "none";
+            img.loading = "lazy";
 
         }
 
-    },2000);
+    }
+);
+
+
+/* =========================================================
+   FORM ACCESSIBILITY
+========================================================= */
+
+$$("input, select, textarea")
+.forEach(field => {
+
+    field.addEventListener(
+        "invalid",
+        () => {
+
+            field.setAttribute(
+                "aria-invalid",
+                "true"
+            );
+
+        }
+    );
+
+    field.addEventListener(
+        "input",
+        () => {
+
+            if(field.checkValidity()){
+
+                field.removeAttribute(
+                    "aria-invalid"
+                );
+
+            }
+
+        }
+    );
 
 });
+
+
+/* =========================================================
+   CONSOLE BRANDING
+========================================================= */
+
+console.log(
+    "%cPRANAURA",
+    "font-size:28px;font-weight:bold;color:#5b3a20;"
+);
+
+console.log(
+    "Strategic Builder & Investor Partnerships"
+);
 
 </script>
 
 </body>
+
 </html>
