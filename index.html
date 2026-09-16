@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -10,6 +9,9 @@
 
 <meta name="description"
 content="PRANAURA connects builders, developers, landowners, investors and buyers through structured real estate networking and strategic partnerships.">
+
+<meta name="keywords"
+content="PRANAURA, real estate advisory, builders, investors, landowners, Mysore real estate, property networking">
 
 <meta name="author" content="Pranathi H.S.">
 
@@ -19,16 +21,13 @@ content="PRANAURA connects builders, developers, landowners, investors and buyer
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Noto+Sans+Kannada:wght@400;500;600&family=Poppins:wght@300;400;500;600&display=swap"
 rel="stylesheet">
 
-
 <style>
 
 /* =========================================================
-   PRANAURA
-   GLOBAL
+   PRANAURA — GLOBAL
 ========================================================= */
 
 :root{
-
     --cream:#f7f1e7;
     --cream-2:#fbf8f2;
     --cream-3:#efe5d6;
@@ -44,24 +43,16 @@ rel="stylesheet">
     --muted:#786a61;
 
     --line:#dfd1c0;
-
     --white:#fffdf9;
 
     --green:#25D366;
 
-    --shadow:
-        0 20px 60px rgba(47,31,21,.08);
+    --shadow:0 20px 60px rgba(47,31,21,.08);
 
-    --serif:
-        "Cormorant Garamond",serif;
-
-    --sans:
-        "Poppins",sans-serif;
-
-    --kannada:
-        "Noto Sans Kannada",sans-serif;
+    --serif:"Cormorant Garamond",serif;
+    --sans:"Poppins",sans-serif;
+    --kannada:"Noto Sans Kannada",sans-serif;
 }
-
 
 *{
     margin:0;
@@ -69,28 +60,19 @@ rel="stylesheet">
     box-sizing:border-box;
 }
 
-
 html{
     scroll-behavior:smooth;
 }
 
-
 body{
-
     font-family:var(--sans);
-
     background:var(--cream-2);
-
     color:var(--text);
-
     overflow-x:hidden;
-
     transition:.3s ease;
 }
 
-
 body.dark{
-
     --cream:#211812;
     --cream-2:#17110e;
     --cream-3:#2b2019;
@@ -106,12 +88,10 @@ body.dark{
     --white:#211812;
 }
 
-
 a{
     color:inherit;
     text-decoration:none;
 }
-
 
 button,
 input,
@@ -120,340 +100,218 @@ textarea{
     font-family:inherit;
 }
 
-
 button{
     cursor:pointer;
 }
-
 
 img{
     max-width:100%;
     display:block;
 }
 
-
 section{
     scroll-margin-top:100px;
 }
-
 
 /* =========================================================
    LOADER
 ========================================================= */
 
 .loader{
-
     position:fixed;
-
     inset:0;
-
     background:var(--cream);
-
     display:flex;
-
     justify-content:center;
-
     align-items:center;
-
     z-index:99999;
-
-    animation:
-        loaderOut 1.2s ease 1.7s forwards;
+    animation:loaderOut 1.2s ease 1.7s forwards;
 }
-
 
 .loader-inner{
     text-align:center;
 }
 
-
 .loader-logo{
-
     width:82px;
-
     margin:0 auto 18px;
-
-    animation:
-        logoFade 1.5s ease forwards;
+    animation:logoFade 1.5s ease forwards;
 }
-
 
 .loader-brand{
-
     font-family:var(--serif);
-
     font-size:35px;
-
     letter-spacing:12px;
-
     opacity:0;
-
-    animation:
-        brandFade 1s ease .4s forwards;
+    animation:brandFade 1s ease .4s forwards;
 }
 
-
 @keyframes logoFade{
-
     from{
-
         opacity:0;
-
         transform:scale(.75);
     }
-
     to{
-
         opacity:1;
-
         transform:scale(1);
     }
 }
 
-
 @keyframes brandFade{
-
     to{
-
         opacity:1;
     }
 }
 
-
 @keyframes loaderOut{
-
     to{
-
         opacity:0;
-
         visibility:hidden;
-
         pointer-events:none;
     }
 }
 
-
 /* =========================================================
    HEADER
-   IMPORTANT:
-   NO LOGO
-   NO PRANAURA IN HEADER
 ========================================================= */
 
 header{
-
     position:fixed;
-
     top:0;
     left:0;
-
     width:100%;
-
     height:78px;
-
     z-index:9000;
 
-    background:
-        rgba(247,241,231,.93);
-
-    backdrop-filter:
-        blur(18px);
-
-    border-bottom:
-        1px solid rgba(120,84,60,.12);
+    background:rgba(247,241,231,.93);
+    backdrop-filter:blur(18px);
+    border-bottom:1px solid rgba(120,84,60,.12);
 }
-
 
 body.dark header{
-
-    background:
-        rgba(23,17,14,.93);
+    background:rgba(23,17,14,.93);
 }
 
-
 .nav{
-
     width:min(1400px,92%);
-
     height:100%;
-
     margin:auto;
 
     display:flex;
-
     align-items:center;
-
     justify-content:center;
-
     gap:28px;
 }
 
-
 .nav-links{
-
     display:flex;
-
     align-items:center;
-
     justify-content:center;
-
     gap:25px;
 }
 
-
 .nav-links a{
-
     font-size:12px;
-
     color:var(--muted);
-
     transition:.25s ease;
-
     white-space:nowrap;
 }
 
-
 .nav-links a:hover,
 .nav-links a.active{
-
     color:var(--brown);
 }
 
-
 .nav-actions{
-
     display:flex;
-
     align-items:center;
-
     gap:10px;
-
     margin-left:18px;
 }
 
-
 .nav-btn{
-
-    border:
-        1px solid var(--line);
-
+    border:1px solid var(--line);
     background:transparent;
-
     color:var(--brown);
-
     width:46px;
-
     height:46px;
-
     border-radius:50%;
 
     display:flex;
-
     justify-content:center;
-
     align-items:center;
 
     transition:.25s ease;
 }
 
-
 .nav-btn:hover{
-
     background:var(--brown);
-
     color:var(--cream);
 }
 
-
 .connect-btn{
-
     border:none;
-
     background:var(--brown);
-
     color:var(--cream);
 
     padding:15px 25px;
-
     border-radius:30px;
 
     font-size:12px;
-
     font-weight:500;
 
     transition:.25s ease;
 }
 
-
 .connect-btn:hover{
-
     transform:translateY(-2px);
-
-    box-shadow:
-        0 12px 30px rgba(43,27,20,.18);
+    box-shadow:0 12px 30px rgba(43,27,20,.18);
 }
-
 
 .menu-btn{
     display:none;
 }
 
-
 /* =========================================================
    STANDARD ICON SYSTEM
 ========================================================= */
 
+/*
+   IMPORTANT:
+   All PRANAURA interface icons use this same visual language.
+   No mixed emojis.
+*/
+
 .icon{
-
     width:24px;
-
     height:24px;
 
     display:inline-flex;
-
     align-items:center;
-
     justify-content:center;
 
     color:var(--gold);
-
     flex:none;
 }
 
-
 .icon svg{
-
     width:100%;
-
     height:100%;
-
     stroke:currentColor;
-
     fill:none;
-
     stroke-width:1.6;
-
     stroke-linecap:round;
-
     stroke-linejoin:round;
 }
 
-
-/* =========================================================
-   UNIFORM VALUE ICONS
-   ALL FOUR ARE IDENTICAL
-========================================================= */
+/* Feature icon — SAME icon everywhere */
 
 .feature-icon{
-
     width:38px;
-
     height:38px;
 
     display:flex;
-
     align-items:center;
-
     justify-content:center;
 
     color:var(--gold);
@@ -461,1465 +319,925 @@ body.dark header{
     margin:0 auto 28px;
 }
 
-
 .feature-icon svg{
-
     width:27px;
-
     height:27px;
 
     fill:none;
-
     stroke:currentColor;
-
     stroke-width:1.5;
-
     stroke-linecap:round;
-
     stroke-linejoin:round;
 }
-
 
 /* =========================================================
    HERO
 ========================================================= */
 
 .hero{
-
     min-height:100vh;
 
     display:flex;
-
     align-items:center;
-
     justify-content:center;
 
     text-align:center;
 
-    padding:
-        150px 20px 100px;
+    padding:150px 20px 100px;
 
     background:var(--cream-2);
 }
 
-
 .hero-content{
-
     width:min(1100px,92%);
 }
 
-
 .hero-logo{
-
     width:105px;
-
     margin:0 auto 22px;
 
-    animation:
-        heroLogo 1.4s ease forwards;
+    animation:heroLogo 1.4s ease forwards;
 }
 
-
 @keyframes heroLogo{
-
     from{
-
         opacity:0;
-
         transform:translateY(18px);
     }
 
     to{
-
         opacity:1;
-
         transform:translateY(0);
     }
 }
 
-
 .hero-brand{
-
     font-family:var(--serif);
-
     font-size:76px;
-
     letter-spacing:16px;
-
     margin-bottom:25px;
-
     line-height:1;
 }
 
-
 .hero-label{
-
     font-size:11px;
-
     letter-spacing:6px;
-
     color:var(--gold);
-
     margin-bottom:25px;
 }
 
-
 .hero-title{
-
     font-family:var(--serif);
-
-    font-size:
-        clamp(60px,8vw,105px);
-
+    font-size:clamp(60px,8vw,105px);
     font-weight:500;
-
     line-height:.92;
-
     margin-bottom:30px;
 }
 
-
 .hero-description{
-
     max-width:720px;
-
     margin:auto;
 
     color:var(--muted);
-
     font-size:15px;
-
     line-height:1.9;
 }
 
-
 .hero-actions{
-
     display:flex;
-
     justify-content:center;
-
     gap:12px;
-
     flex-wrap:wrap;
 
     margin-top:35px;
 }
 
-
 .primary-btn,
 .secondary-btn{
-
     padding:16px 27px;
-
     border-radius:30px;
-
     font-size:12px;
-
-    border:
-        1px solid var(--brown);
+    border:1px solid var(--brown);
 
     transition:.25s ease;
 }
 
-
 .primary-btn{
-
     background:var(--brown);
-
     color:var(--cream);
 }
 
-
 .secondary-btn{
-
     background:transparent;
-
     color:var(--brown);
 }
 
-
 .primary-btn:hover,
 .secondary-btn:hover{
-
     transform:translateY(-3px);
 }
 
-
 .launch{
-
     margin-top:32px;
 
     display:inline-flex;
-
     align-items:center;
-
     gap:10px;
 
     font-size:10px;
-
     letter-spacing:3px;
-
     color:var(--gold);
-
     text-transform:uppercase;
 }
 
-
 .launch-dot{
-
     width:7px;
-
     height:7px;
-
     border-radius:50%;
-
     background:var(--gold);
 }
-
 
 /* =========================================================
    STATS
 ========================================================= */
 
 .stats{
-
-    border-top:
-        1px solid var(--line);
-
-    border-bottom:
-        1px solid var(--line);
+    border-top:1px solid var(--line);
+    border-bottom:1px solid var(--line);
 
     display:grid;
-
-    grid-template-columns:
-        repeat(4,1fr);
+    grid-template-columns:repeat(4,1fr);
 }
-
 
 .stat{
-
     padding:40px 20px;
-
     text-align:center;
-
-    border-right:
-        1px solid var(--line);
+    border-right:1px solid var(--line);
 }
 
-
 .stat:last-child{
-
     border-right:none;
 }
 
-
 .stat-number{
-
     font-family:var(--serif);
-
     font-size:43px;
 }
 
-
 .stat-label{
-
     margin-top:7px;
-
     color:var(--muted);
-
     font-size:11px;
-
     letter-spacing:1px;
 }
-
 
 /* =========================================================
    COMMON SECTION
 ========================================================= */
 
 .section{
-
-    padding:
-        120px 6%;
+    padding:120px 6%;
 }
 
-
 .section.alt{
-
     background:var(--cream);
 }
 
-
 .section-head{
-
     max-width:900px;
-
-    margin:
-        0 auto 70px;
-
+    margin:0 auto 70px;
     text-align:center;
 }
 
-
 .eyebrow{
-
     font-size:10px;
-
     letter-spacing:5px;
-
     color:var(--gold);
-
     margin-bottom:18px;
 }
 
-
 .section-title{
-
     font-family:var(--serif);
-
-    font-size:
-        clamp(45px,5vw,70px);
-
+    font-size:clamp(45px,5vw,70px);
     font-weight:500;
-
     line-height:1;
-
     margin-bottom:20px;
 }
 
-
 .section-text{
-
     color:var(--muted);
-
     line-height:1.9;
-
     font-size:14px;
 }
-
 
 /* =========================================================
    PEOPLE PROPERTY PROGRESS
 ========================================================= */
 
 .values{
-
-    padding:
-        130px 6%;
-
+    padding:130px 6%;
     text-align:center;
 }
 
-
 .values-title{
-
     font-family:var(--serif);
-
-    font-size:
-        clamp(55px,6vw,82px);
-
+    font-size:clamp(55px,6vw,82px);
     font-weight:500;
-
     margin-bottom:70px;
 }
 
-
 .values-grid{
-
     max-width:1200px;
-
     margin:auto;
 
     display:grid;
-
-    grid-template-columns:
-        repeat(4,1fr);
+    grid-template-columns:repeat(4,1fr);
 }
-
 
 .value{
-
-    padding:
-        15px 38px 25px;
-
-    border-right:
-        1px solid var(--line);
+    padding:15px 38px 25px;
+    border-right:1px solid var(--line);
 }
 
-
 .value:last-child{
-
     border-right:none;
 }
 
-
 .value h3{
-
     font-family:var(--serif);
-
     font-size:27px;
-
     font-weight:500;
-
     margin-bottom:13px;
 }
 
-
 .value p{
-
     color:var(--muted);
-
     font-size:13px;
-
     line-height:1.8;
 }
-
 
 /* =========================================================
    ABOUT
 ========================================================= */
 
 .about-grid{
-
     max-width:1200px;
-
     margin:auto;
 
     display:grid;
-
     grid-template-columns:1fr 1fr;
-
     gap:70px;
-
     align-items:center;
 }
 
-
 .about-large{
-
     font-family:var(--serif);
-
-    font-size:
-        clamp(42px,5vw,68px);
-
+    font-size:clamp(42px,5vw,68px);
     line-height:1.05;
 }
 
-
 .about-copy{
-
     color:var(--muted);
-
     line-height:2;
-
     font-size:14px;
 }
 
-
 .about-copy p{
-
     margin-bottom:20px;
 }
-
 
 /* =========================================================
    PROCESS
 ========================================================= */
 
 .process-grid{
-
     max-width:1200px;
-
     margin:auto;
 
     display:grid;
-
-    grid-template-columns:
-        repeat(5,1fr);
+    grid-template-columns:repeat(5,1fr);
 }
-
 
 .process{
-
-    padding:
-        35px 22px;
-
-    border-top:
-        1px solid var(--line);
-
-    border-right:
-        1px solid var(--line);
+    padding:35px 22px;
+    border-top:1px solid var(--line);
+    border-right:1px solid var(--line);
 }
 
-
 .process:last-child{
-
     border-right:none;
 }
 
-
 .process-number{
-
     font-family:var(--serif);
-
     font-size:40px;
-
     color:var(--gold);
-
     margin-bottom:20px;
 }
 
-
 .process h3{
-
     font-family:var(--serif);
-
     font-size:25px;
-
     margin-bottom:12px;
 }
 
-
 .process p{
-
     color:var(--muted);
-
     font-size:12px;
-
     line-height:1.8;
 }
-
 
 /* =========================================================
    NETWORK
 ========================================================= */
 
 .network-grid{
-
     max-width:1200px;
-
     margin:auto;
 
     display:grid;
-
-    grid-template-columns:
-        repeat(5,1fr);
-
+    grid-template-columns:repeat(5,1fr);
     gap:15px;
 }
 
-
 .network-card{
-
     background:var(--cream-2);
+    border:1px solid var(--line);
 
-    border:
-        1px solid var(--line);
-
-    padding:
-        35px 25px;
-
+    padding:35px 25px;
     text-align:center;
 
     transition:.3s ease;
 }
 
-
 .network-card:hover{
-
     transform:translateY(-6px);
-
     box-shadow:var(--shadow);
 }
 
-
 .network-card h3{
-
     font-family:var(--serif);
-
     font-size:27px;
-
-    margin:
-        20px 0 10px;
+    margin:20px 0 10px;
 }
-
 
 .network-card p{
-
     color:var(--muted);
-
     font-size:12px;
-
     line-height:1.8;
 }
-
 
 /* =========================================================
    SERVICES
 ========================================================= */
 
 .services-grid{
-
     max-width:1200px;
-
     margin:auto;
 
     display:grid;
-
-    grid-template-columns:
-        repeat(3,1fr);
-
+    grid-template-columns:repeat(3,1fr);
     gap:18px;
 }
 
-
 .service{
-
-    border:
-        1px solid var(--line);
-
-    padding:
-        42px 32px;
-
+    border:1px solid var(--line);
+    padding:42px 32px;
     background:var(--cream-2);
 }
 
-
 .service h3{
-
     font-family:var(--serif);
-
     font-size:30px;
-
     margin-bottom:14px;
 }
 
-
 .service p{
-
     color:var(--muted);
-
     font-size:13px;
-
     line-height:1.8;
 }
-
 
 /* =========================================================
    PLATFORM
 ========================================================= */
 
 .platform{
-
     max-width:1200px;
-
     margin:auto;
 
     display:grid;
-
     grid-template-columns:1fr 1fr;
-
     gap:20px;
 }
 
-
 .platform-card{
-
-    border:
-        1px solid var(--line);
-
+    border:1px solid var(--line);
     padding:45px;
-
     background:var(--cream-2);
 }
 
-
 .platform-card h3{
-
     font-family:var(--serif);
-
     font-size:34px;
-
     margin-bottom:15px;
 }
 
-
 .platform-card p{
-
     color:var(--muted);
-
     line-height:1.8;
-
     font-size:13px;
 }
-
 
 /* =========================================================
    OPPORTUNITIES
 ========================================================= */
 
 .opportunity-grid{
-
     max-width:1200px;
-
     margin:auto;
 
     display:grid;
-
-    grid-template-columns:
-        repeat(3,1fr);
-
+    grid-template-columns:repeat(3,1fr);
     gap:18px;
 }
 
-
 .opportunity{
-
-    border:
-        1px solid var(--line);
-
+    border:1px solid var(--line);
     background:var(--cream-2);
-
     padding:35px;
 }
 
-
 .opportunity-status{
-
     font-size:9px;
-
     letter-spacing:2px;
-
     color:var(--gold);
-
     text-transform:uppercase;
-
     margin-bottom:25px;
 }
 
-
 .opportunity h3{
-
     font-family:var(--serif);
-
     font-size:30px;
-
     margin-bottom:10px;
 }
 
-
 .opportunity p{
-
     color:var(--muted);
-
     font-size:12px;
-
     line-height:1.8;
 }
-
 
 /* =========================================================
    SMART MATCH
 ========================================================= */
 
 .match-box{
-
     max-width:1050px;
-
     margin:auto;
 
-    border:
-        1px solid var(--line);
-
+    border:1px solid var(--line);
     background:var(--cream-2);
 
     padding:50px;
 }
 
-
 .form-grid{
-
     display:grid;
-
-    grid-template-columns:
-        repeat(2,1fr);
-
+    grid-template-columns:repeat(2,1fr);
     gap:18px;
 }
 
-
 .field{
-
     display:flex;
-
     flex-direction:column;
-
     gap:8px;
 }
 
-
 .field.full{
-
     grid-column:1/-1;
 }
 
-
 .field label{
-
     font-size:10px;
-
     letter-spacing:1px;
-
     color:var(--muted);
 }
-
 
 .field input,
 .field select,
 .field textarea{
-
     width:100%;
 
-    border:
-        1px solid var(--line);
-
+    border:1px solid var(--line);
     background:transparent;
 
     padding:14px 15px;
 
     outline:none;
-
     color:var(--text);
 
     font-size:13px;
 }
 
-
 .field textarea{
-
     min-height:110px;
-
     resize:vertical;
 }
-
 
 .field input:focus,
 .field select:focus,
 .field textarea:focus{
-
     border-color:var(--gold);
 }
 
-
 .form-submit{
-
     margin-top:25px;
 }
 
-
 .match-result{
-
     display:none;
-
     margin-top:30px;
-
-    border-top:
-        1px solid var(--line);
-
+    border-top:1px solid var(--line);
     padding-top:30px;
 }
 
-
 .match-result.show{
-
     display:block;
 }
 
-
 .match-id{
-
     font-family:var(--serif);
-
     font-size:35px;
 }
-
 
 /* =========================================================
    AI
 ========================================================= */
 
 .ai-box{
-
     max-width:1050px;
-
     margin:auto;
 
-    border:
-        1px solid var(--line);
-
+    border:1px solid var(--line);
     padding:55px;
 
     background:var(--cream-2);
 }
 
-
 .ai-title{
-
     font-family:var(--serif);
-
     font-size:48px;
-
     margin-bottom:15px;
 }
 
-
 .ai-text{
-
     color:var(--muted);
-
     line-height:1.9;
-
     font-size:13px;
 }
-
 
 /* =========================================================
    CRM
 ========================================================= */
 
 .crm-grid{
-
     max-width:1200px;
-
     margin:auto;
 
     display:grid;
-
-    grid-template-columns:
-        repeat(3,1fr);
-
+    grid-template-columns:repeat(3,1fr);
     gap:18px;
 }
 
-
 .crm-card{
-
-    border:
-        1px solid var(--line);
-
+    border:1px solid var(--line);
     padding:35px;
 }
 
-
 .crm-card h3{
-
     font-family:var(--serif);
-
     font-size:29px;
-
     margin-bottom:12px;
 }
 
-
 .crm-card p{
-
     color:var(--muted);
-
     font-size:12px;
-
     line-height:1.8;
 }
-
 
 /* =========================================================
    APPOINTMENTS
 ========================================================= */
 
 .appointment-box{
-
     max-width:850px;
-
     margin:auto;
-
-    border:
-        1px solid var(--line);
-
+    border:1px solid var(--line);
     padding:50px;
 }
-
 
 /* =========================================================
    TRUST
 ========================================================= */
 
 .trust-grid{
-
     max-width:1000px;
-
     margin:auto;
 
     display:grid;
-
-    grid-template-columns:
-        repeat(3,1fr);
-
+    grid-template-columns:repeat(3,1fr);
     gap:18px;
 }
 
-
 .trust-card{
-
-    border:
-        1px solid var(--line);
-
+    border:1px solid var(--line);
     padding:35px;
-
     text-align:center;
 }
 
-
 .trust-card h3{
-
     font-family:var(--serif);
-
     font-size:28px;
-
-    margin:
-        20px 0 10px;
+    margin:20px 0 10px;
 }
 
-
 .trust-card p{
-
     color:var(--muted);
-
     font-size:12px;
-
     line-height:1.8;
 }
 
-
 /* =========================================================
-   UTILITY
+   DOCUMENTS / REFERRAL / COMMISSION
 ========================================================= */
 
 .utility-grid{
-
     max-width:1200px;
-
     margin:auto;
 
     display:grid;
-
-    grid-template-columns:
-        repeat(3,1fr);
-
+    grid-template-columns:repeat(3,1fr);
     gap:18px;
 }
 
-
 .utility-card{
-
-    border:
-        1px solid var(--line);
-
+    border:1px solid var(--line);
     padding:40px;
 }
 
-
 .utility-card h3{
-
     font-family:var(--serif);
-
     font-size:31px;
-
     margin-bottom:12px;
 }
 
-
 .utility-card p{
-
     color:var(--muted);
-
     font-size:12px;
-
     line-height:1.8;
-
     margin-bottom:20px;
 }
 
-
 /* =========================================================
    FOUNDER
-   ONLY ONE FOUNDER SECTION
 ========================================================= */
 
+/*
+   ONLY ONE FOUNDER SECTION.
+*/
+
 .founder{
-
-    padding:
-        130px 6%;
-
+    padding:130px 6%;
     text-align:center;
-
     background:var(--cream-2);
 }
 
-
 .founder-inner{
-
     max-width:900px;
-
     margin:auto;
 }
 
-
 .founder-name{
-
     font-family:var(--serif);
-
-    font-size:
-        clamp(55px,7vw,82px);
-
+    font-size:clamp(55px,7vw,82px);
     font-weight:500;
-
-    margin:
-        15px 0 20px;
+    margin:15px 0 20px;
 }
 
-
 .founder-role{
-
     color:var(--gold);
-
     letter-spacing:5px;
-
     font-size:10px;
-
     margin-bottom:35px;
 }
 
-
 .founder-text{
-
     color:var(--muted);
-
     font-size:14px;
-
     line-height:2;
 }
-
 
 /* =========================================================
    FAQ
 ========================================================= */
 
 .faq{
-
     max-width:900px;
-
     margin:auto;
 }
 
-
 .faq-item{
-
-    border-bottom:
-        1px solid var(--line);
+    border-bottom:1px solid var(--line);
 }
 
-
 .faq-question{
-
     width:100%;
 
     display:flex;
-
     justify-content:space-between;
-
     align-items:center;
 
     padding:25px 0;
 
     border:none;
-
     background:none;
 
     color:var(--text);
 
     font-family:var(--serif);
-
     font-size:25px;
-
     text-align:left;
 }
 
-
 .faq-answer{
-
     max-height:0;
-
     overflow:hidden;
-
     transition:.35s ease;
 
     color:var(--muted);
-
     font-size:13px;
-
     line-height:1.8;
 }
 
-
 .faq-item.open .faq-answer{
-
     max-height:300px;
-
     padding-bottom:25px;
 }
 
-
 .faq-symbol{
-
     font-family:var(--sans);
-
     font-size:20px;
 }
-
 
 /* =========================================================
    CONTACT
 ========================================================= */
 
 .contact-grid{
-
     max-width:1100px;
-
     margin:auto;
 
     display:grid;
-
     grid-template-columns:1fr 1fr;
-
     gap:50px;
 }
 
-
 .contact-info h3{
-
     font-family:var(--serif);
-
     font-size:45px;
-
     margin-bottom:20px;
 }
 
-
 .contact-info p{
-
     color:var(--muted);
-
     line-height:1.9;
-
     font-size:13px;
 }
 
-
 .contact-list{
-
     margin-top:30px;
 }
 
-
 .contact-item{
-
     padding:17px 0;
-
-    border-bottom:
-        1px solid var(--line);
+    border-bottom:1px solid var(--line);
 
     display:flex;
-
     gap:15px;
-
     align-items:center;
 }
 
-
 .contact-item-text{
-
     color:var(--muted);
-
     font-size:13px;
 }
-
 
 /* =========================================================
    LEGAL
 ========================================================= */
 
 .legal-grid{
-
     max-width:1100px;
-
     margin:auto;
 
     display:grid;
-
-    grid-template-columns:
-        repeat(3,1fr);
-
+    grid-template-columns:repeat(3,1fr);
     gap:18px;
 }
 
-
 .legal-card{
-
-    border:
-        1px solid var(--line);
-
+    border:1px solid var(--line);
     padding:35px;
 }
 
-
 .legal-card h3{
-
     font-family:var(--serif);
-
     font-size:28px;
-
     margin-bottom:12px;
 }
 
-
 .legal-card p{
-
     color:var(--muted);
-
     font-size:11px;
-
     line-height:1.9;
 }
-
 
 /* =========================================================
    FOOTER
 ========================================================= */
 
 footer{
-
-    padding:
-        70px 6% 35px;
-
+    padding:70px 6% 35px;
     background:var(--brown);
-
     color:var(--cream);
 }
 
-
 .footer-grid{
-
     max-width:1200px;
-
     margin:auto;
 
     display:grid;
-
-    grid-template-columns:
-        2fr 1fr 1fr 1fr;
-
+    grid-template-columns:2fr 1fr 1fr 1fr;
     gap:40px;
 }
 
-
 .footer-brand{
-
     font-family:var(--serif);
-
     font-size:38px;
-
     letter-spacing:8px;
-
     margin-bottom:15px;
 }
 
-
 .footer-description{
-
     color:#cdbdaf;
-
     font-size:12px;
-
     line-height:1.8;
-
     max-width:350px;
 }
 
-
 footer h4{
-
     font-size:11px;
-
     letter-spacing:2px;
-
     margin-bottom:20px;
 }
 
-
 footer a{
-
     display:block;
-
     color:#cdbdaf;
-
     font-size:11px;
-
     margin-bottom:10px;
 }
 
-
 .footer-bottom{
-
     max-width:1200px;
-
-    margin:
-        50px auto 0;
+    margin:50px auto 0;
 
     padding-top:25px;
 
-    border-top:
-        1px solid rgba(255,255,255,.14);
+    border-top:1px solid rgba(255,255,255,.14);
 
     color:#bca99a;
-
     font-size:10px;
 
     display:flex;
-
     justify-content:space-between;
 }
-
 
 /* =========================================================
    MODALS
 ========================================================= */
 
 .modal{
-
     position:fixed;
-
     inset:0;
 
-    background:
-        rgba(30,20,15,.55);
-
-    backdrop-filter:
-        blur(8px);
+    background:rgba(30,20,15,.55);
+    backdrop-filter:blur(8px);
 
     display:none;
-
     align-items:center;
-
     justify-content:center;
 
     z-index:15000;
@@ -1927,94 +1245,64 @@ footer a{
     padding:20px;
 }
 
-
 .modal.show{
-
     display:flex;
 }
 
-
 .modal-box{
-
     width:min(650px,100%);
-
     max-height:90vh;
-
     overflow:auto;
 
     background:var(--cream-2);
-
-    border:
-        1px solid var(--line);
+    border:1px solid var(--line);
 
     padding:40px;
 
     position:relative;
 
-    box-shadow:
-        0 30px 80px rgba(0,0,0,.2);
+    box-shadow:0 30px 80px rgba(0,0,0,.2);
 }
 
-
 .modal-close{
-
     position:absolute;
-
     top:18px;
-
     right:18px;
 
-    border:
-        1px solid var(--line);
-
+    border:1px solid var(--line);
     background:none;
-
     color:var(--brown);
 
     width:36px;
-
     height:36px;
 
     border-radius:50%;
 }
 
-
 .modal-title{
-
     font-family:var(--serif);
-
     font-size:40px;
-
     margin-bottom:10px;
 }
 
-
 .modal-text{
-
     color:var(--muted);
-
     font-size:12px;
-
     line-height:1.8;
-
     margin-bottom:25px;
 }
-
 
 /* =========================================================
    TOAST
 ========================================================= */
 
 .toast{
-
     position:fixed;
 
     right:25px;
-
     bottom:95px;
 
     background:var(--brown);
-
     color:var(--cream);
 
     padding:15px 20px;
@@ -2023,301 +1311,206 @@ footer a{
 
     z-index:20000;
 
-    transform:
-        translateY(30px);
-
+    transform:translateY(30px);
     opacity:0;
-
     pointer-events:none;
 
     transition:.3s ease;
 }
 
-
 .toast.show{
-
-    transform:
-        translateY(0);
-
+    transform:translateY(0);
     opacity:1;
 }
-
 
 /* =========================================================
    AI CHAT
 ========================================================= */
 
 .ai-floating{
-
     position:fixed;
 
     right:28px;
-
     bottom:105px;
 
     width:58px;
-
     height:58px;
 
     border:none;
-
     border-radius:50%;
 
     background:var(--brown);
-
     color:var(--cream);
 
     z-index:8000;
 
     display:flex;
-
     align-items:center;
-
     justify-content:center;
 
-    box-shadow:
-        0 15px 40px rgba(43,27,20,.2);
+    box-shadow:0 15px 40px rgba(43,27,20,.2);
 }
 
-
 .ai-floating svg{
-
     width:25px;
-
     height:25px;
-
     stroke:currentColor;
-
     fill:none;
-
     stroke-width:1.5;
 }
 
-
 .ai-chat{
-
     position:fixed;
 
     right:25px;
-
     bottom:175px;
 
     width:350px;
-
-    max-width:
-        calc(100vw - 40px);
+    max-width:calc(100vw - 40px);
 
     background:var(--cream-2);
-
-    border:
-        1px solid var(--line);
+    border:1px solid var(--line);
 
     z-index:8100;
 
     display:none;
 
-    box-shadow:
-        0 30px 70px rgba(0,0,0,.18);
+    box-shadow:0 30px 70px rgba(0,0,0,.18);
 }
 
-
 .ai-chat.show{
-
     display:block;
 }
 
-
 .ai-chat-head{
-
     padding:18px 20px;
 
     background:var(--brown);
-
     color:var(--cream);
 
     display:flex;
-
     justify-content:space-between;
-
     align-items:center;
 }
 
-
 .ai-chat-title{
-
     font-family:var(--serif);
-
     font-size:23px;
 }
 
-
 .ai-chat-close{
-
     border:none;
-
     background:none;
-
     color:inherit;
-
     font-size:18px;
 }
 
-
 .ai-messages{
-
     height:300px;
-
     overflow:auto;
-
     padding:18px;
 }
 
-
 .message{
-
     max-width:85%;
-
     padding:11px 13px;
-
     margin-bottom:10px;
 
     font-size:11px;
-
     line-height:1.6;
 }
 
-
 .message.bot{
-
     background:var(--cream);
 }
 
-
 .message.user{
-
     margin-left:auto;
-
     background:var(--brown);
-
     color:var(--cream);
 }
 
-
 .ai-input{
-
-    border-top:
-        1px solid var(--line);
-
+    border-top:1px solid var(--line);
     padding:12px;
 
     display:flex;
-
     gap:8px;
 }
 
-
 .ai-input input{
-
     flex:1;
 
-    border:
-        1px solid var(--line);
-
+    border:1px solid var(--line);
     background:transparent;
 
     padding:11px;
 
     color:var(--text);
-
     outline:none;
 }
 
-
 .ai-input button{
-
     width:42px;
 
     border:none;
-
     background:var(--brown);
-
     color:var(--cream);
 }
-
 
 /* =========================================================
    WHATSAPP
 ========================================================= */
 
 .whatsapp{
-
     position:fixed;
 
     right:25px;
-
     bottom:25px;
 
     width:64px;
-
     height:64px;
 
     border-radius:50%;
 
-    background:#25D366;
+    background:var(--green);
 
     display:flex;
-
     justify-content:center;
-
     align-items:center;
 
     z-index:8000;
 
-    box-shadow:
-        0 15px 40px rgba(0,0,0,.18);
+    box-shadow:0 15px 40px rgba(0,0,0,.18);
 
     transition:.25s ease;
 }
 
-
 .whatsapp:hover{
-
-    transform:
-        translateY(-4px) scale(1.03);
+    transform:translateY(-4px) scale(1.03);
 }
-
 
 .whatsapp svg{
-
-    width:36px;
-
-    height:36px;
-
+    width:34px;
+    height:34px;
     fill:white;
 }
-
 
 /* =========================================================
    BACK TO TOP
 ========================================================= */
 
 .back-top{
-
     position:fixed;
 
     right:28px;
-
     bottom:185px;
 
     width:45px;
-
     height:45px;
 
-    border:
-        1px solid var(--line);
-
+    border:1px solid var(--line);
     background:var(--cream-2);
-
     color:var(--brown);
 
     border-radius:50%;
@@ -2327,64 +1520,45 @@ footer a{
     z-index:7000;
 }
 
-
 .back-top.show{
-
     display:block;
 }
 
-
 /* =========================================================
-   CONSENT
+   COOKIE / CONSENT
 ========================================================= */
 
 .consent{
-
     position:fixed;
-
     left:20px;
-
     bottom:20px;
 
     max-width:450px;
 
     background:var(--brown);
-
     color:var(--cream);
 
     padding:20px;
 
     z-index:19000;
 
-    box-shadow:
-        0 20px 50px rgba(0,0,0,.2);
+    box-shadow:0 20px 50px rgba(0,0,0,.2);
 }
 
-
 .consent p{
-
     font-size:10px;
-
     line-height:1.7;
-
     margin-bottom:15px;
 }
 
-
 .consent button{
-
-    border:
-        1px solid rgba(255,255,255,.4);
-
+    border:1px solid rgba(255,255,255,.4);
     background:transparent;
-
     color:var(--cream);
 
     padding:8px 15px;
-
     font-size:10px;
 }
-
 
 /* =========================================================
    RESPONSIVE
@@ -2393,157 +1567,122 @@ footer a{
 @media(max-width:1100px){
 
     .nav{
-
         justify-content:flex-end;
     }
 
     .nav-links{
-
         gap:15px;
     }
 
     .nav-actions{
-
         margin-left:8px;
     }
 
     .values-grid{
-
-        grid-template-columns:
-            repeat(2,1fr);
+        grid-template-columns:repeat(2,1fr);
     }
 
     .value:nth-child(2){
-
         border-right:none;
     }
 
     .value:nth-child(-n+2){
-
-        border-bottom:
-            1px solid var(--line);
-
+        border-bottom:1px solid var(--line);
         padding-bottom:40px;
     }
 
     .value:nth-child(n+3){
-
         padding-top:40px;
     }
 
     .network-grid{
-
-        grid-template-columns:
-            repeat(3,1fr);
+        grid-template-columns:repeat(3,1fr);
     }
 
     .process-grid{
-
-        grid-template-columns:
-            repeat(3,1fr);
+        grid-template-columns:repeat(3,1fr);
     }
 
     .process{
-
-        border-bottom:
-            1px solid var(--line);
+        border-bottom:1px solid var(--line);
     }
 
 }
 
-
 @media(max-width:850px){
 
     header{
-
         height:70px;
     }
 
     .nav{
-
         width:90%;
     }
 
     .nav-links{
-
         position:absolute;
-
         top:70px;
-
         left:0;
-
         width:100%;
 
         background:var(--cream);
 
         display:none;
-
         flex-direction:column;
 
         padding:25px;
 
-        border-bottom:
-            1px solid var(--line);
+        border-bottom:1px solid var(--line);
+    }
+
+    body.dark .nav-links{
+        background:var(--cream);
     }
 
     .nav-links.show{
-
         display:flex;
     }
 
     .nav-links a{
-
         padding:10px;
     }
 
     .nav-actions{
-
         margin-left:auto;
     }
 
     .menu-btn{
-
         display:flex;
     }
 
     .connect-btn{
-
         display:none;
     }
 
     .hero-brand{
-
         font-size:55px;
-
         letter-spacing:10px;
     }
 
     .hero-title{
-
         font-size:60px;
     }
 
     .stats{
-
-        grid-template-columns:
-            repeat(2,1fr);
+        grid-template-columns:repeat(2,1fr);
     }
 
     .stat:nth-child(2){
-
         border-right:none;
     }
 
     .stat:nth-child(-n+2){
-
-        border-bottom:
-            1px solid var(--line);
+        border-bottom:1px solid var(--line);
     }
 
     .about-grid,
     .platform,
     .contact-grid{
-
         grid-template-columns:1fr;
     }
 
@@ -2552,91 +1691,67 @@ footer a{
     .crm-grid,
     .utility-grid,
     .legal-grid{
-
-        grid-template-columns:
-            1fr 1fr;
+        grid-template-columns:1fr 1fr;
     }
 
     .network-grid{
-
-        grid-template-columns:
-            1fr 1fr;
+        grid-template-columns:1fr 1fr;
     }
 
     .trust-grid{
-
         grid-template-columns:1fr;
     }
 
     .footer-grid{
-
-        grid-template-columns:
-            1fr 1fr;
+        grid-template-columns:1fr 1fr;
     }
 
 }
-
 
 @media(max-width:600px){
 
     .section,
     .values,
     .founder{
-
-        padding:
-            85px 6%;
+        padding:85px 6%;
     }
 
     .hero{
-
         padding-top:125px;
     }
 
     .hero-logo{
-
         width:80px;
     }
 
     .hero-brand{
-
         font-size:42px;
-
         letter-spacing:7px;
     }
 
     .hero-title{
-
         font-size:48px;
     }
 
     .hero-description{
-
         font-size:13px;
     }
 
     .values-title{
-
         font-size:48px;
     }
 
     .values-grid{
-
         grid-template-columns:1fr;
     }
 
     .value{
-
         border-right:none!important;
-
-        border-bottom:
-            1px solid var(--line)!important;
-
-        padding:
-            35px 15px!important;
+        border-bottom:1px solid var(--line)!important;
+        padding:35px 15px!important;
     }
 
     .value:last-child{
-
         border-bottom:none!important;
     }
 
@@ -2647,107 +1762,80 @@ footer a{
     .utility-grid,
     .legal-grid,
     .network-grid{
-
         grid-template-columns:1fr;
     }
 
     .process{
-
         border-right:none;
     }
 
     .form-grid{
-
         grid-template-columns:1fr;
     }
 
     .field.full{
-
         grid-column:auto;
     }
 
     .match-box,
     .ai-box,
     .appointment-box{
-
-        padding:
-            30px 20px;
+        padding:30px 20px;
     }
 
     .footer-grid{
-
         grid-template-columns:1fr;
     }
 
     .footer-bottom{
-
         flex-direction:column;
-
         gap:10px;
     }
 
     .ai-floating{
-
         right:18px;
-
         bottom:100px;
     }
 
     .whatsapp{
-
         right:18px;
-
         bottom:20px;
     }
 
     .back-top{
-
         right:18px;
-
         bottom:170px;
     }
 
     .ai-chat{
-
         right:15px;
-
         bottom:170px;
     }
 
     .consent{
-
         left:12px;
-
         right:12px;
-
         bottom:12px;
     }
 
 }
-
 
 @media(prefers-reduced-motion:reduce){
 
     *,
     *::before,
     *::after{
-
         scroll-behavior:auto!important;
-
         animation:none!important;
-
         transition:none!important;
     }
 
 }
 
 </style>
-
 </head>
 
-
 <body>
-
 
 <!-- =====================================================
      LOADER
@@ -2757,11 +1845,9 @@ footer a{
 
     <div class="loader-inner">
 
-        <img
-            src="logo.png"
-            class="loader-logo"
-            alt="PRANAURA Logo"
-        >
+        <img src="logo.png"
+             class="loader-logo"
+             alt="PRANAURA Logo">
 
         <div class="loader-brand">
             PRANAURA
@@ -2774,112 +1860,72 @@ footer a{
 
 <!-- =====================================================
      HEADER
-     NO LOGO / NO PRANAURA HERE
 ===================================================== -->
 
 <header>
 
     <nav class="nav">
 
+        <!-- NO LOGO HERE -->
+        <!-- NO PRANAURA HERE -->
+
         <div class="nav-links" id="navLinks">
 
             <a href="#about">About</a>
-
             <a href="#why">Why Us</a>
-
             <a href="#path">Your Path</a>
-
             <a href="#process">Process</a>
-
             <a href="#network">Network</a>
-
             <a href="#services">Services</a>
-
             <a href="#match">Smart Match</a>
-
             <a href="#ai">AI</a>
-
             <a href="#trust">Trust</a>
-
             <a href="#faq">FAQ</a>
-
             <a href="#contact">Contact</a>
 
         </div>
 
-
         <div class="nav-actions">
 
-            <button
-                class="nav-btn"
-                id="languageBtn"
-                aria-label="Change language">
-
+            <button class="nav-btn"
+                    id="languageBtn"
+                    aria-label="Change language">
                 KN
-
             </button>
 
-
-            <button
-                class="nav-btn"
-                id="themeBtn"
-                aria-label="Toggle theme">
+            <button class="nav-btn"
+                    id="themeBtn"
+                    aria-label="Toggle theme">
 
                 <span class="icon">
-
                     <svg viewBox="0 0 24 24">
-
-                        <circle
-                            cx="12"
-                            cy="12"
-                            r="4"
-                        />
-
+                        <circle cx="12" cy="12" r="4"/>
                         <path d="M12 2v2"/>
-
                         <path d="M12 20v2"/>
-
                         <path d="M4.93 4.93l1.42 1.42"/>
-
                         <path d="M17.65 17.65l1.42 1.42"/>
-
                         <path d="M2 12h2"/>
-
                         <path d="M20 12h2"/>
-
                     </svg>
-
                 </span>
 
             </button>
 
-
-            <button
-                class="connect-btn"
-                onclick="openModal('contactModal')">
-
+            <button class="connect-btn"
+                    onclick="openModal('contactModal')">
                 Connect
-
             </button>
 
-
-            <button
-                class="nav-btn menu-btn"
-                id="menuBtn"
-                aria-label="Open menu">
+            <button class="nav-btn menu-btn"
+                    id="menuBtn"
+                    aria-label="Open menu">
 
                 <span class="icon">
-
                     <svg viewBox="0 0 24 24">
-
                         <path d="M4 7h16"/>
-
                         <path d="M4 12h16"/>
-
                         <path d="M4 17h16"/>
-
                     </svg>
-
                 </span>
 
             </button>
@@ -2902,73 +1948,46 @@ footer a{
 
     <div class="hero-content">
 
-
         <div class="hero-label">
-
             A MORE CONNECTED REAL ESTATE ECOSYSTEM
-
         </div>
 
-
-        <img
-            src="logo.png"
-            class="hero-logo"
-            alt="PRANAURA Logo"
-        >
-
+        <img src="logo.png"
+             class="hero-logo"
+             alt="PRANAURA Logo">
 
         <div class="hero-brand">
-
             PRANAURA
-
         </div>
 
-
         <h1 class="hero-title">
-
             Strategic Builder &<br>
             Investor Partnerships.
-
         </h1>
 
-
         <p class="hero-description">
-
             A structured real estate networking platform designed
             to connect builders, developers, landowners, investors
             and buyers through meaningful, professional relationships.
-
         </p>
-
 
         <div class="hero-actions">
 
-            <button
-                class="primary-btn"
-                onclick="document.getElementById('match').scrollIntoView()">
-
+            <button class="primary-btn"
+                    onclick="document.getElementById('match').scrollIntoView()">
                 Explore Smart Match
-
             </button>
 
-
-            <button
-                class="secondary-btn"
-                onclick="openModal('contactModal')">
-
+            <button class="secondary-btn"
+                    onclick="openModal('contactModal')">
                 Start a Conversation
-
             </button>
 
         </div>
 
-
         <div class="launch">
-
             <span class="launch-dot"></span>
-
             Launching September 2026
-
         </div>
 
     </div>
@@ -2983,54 +2002,23 @@ footer a{
 <section class="stats">
 
     <div class="stat">
-
-        <div class="stat-number">
-            01
-        </div>
-
-        <div class="stat-label">
-            Structured Network
-        </div>
-
+        <div class="stat-number">01</div>
+        <div class="stat-label">Structured Network</div>
     </div>
 
-
     <div class="stat">
-
-        <div class="stat-number">
-            02
-        </div>
-
-        <div class="stat-label">
-            Need-Based Matching
-        </div>
-
+        <div class="stat-number">02</div>
+        <div class="stat-label">Need-Based Matching</div>
     </div>
 
-
     <div class="stat">
-
-        <div class="stat-number">
-            03
-        </div>
-
-        <div class="stat-label">
-            Professional Introductions
-        </div>
-
+        <div class="stat-number">03</div>
+        <div class="stat-label">Professional Introductions</div>
     </div>
 
-
     <div class="stat">
-
-        <div class="stat-number">
-            04
-        </div>
-
-        <div class="stat-label">
-            Long-Term Relationships
-        </div>
-
+        <div class="stat-number">04</div>
+        <div class="stat-label">Long-Term Relationships</div>
     </div>
 
 </section>
@@ -3038,218 +2026,106 @@ footer a{
 
 <!-- =====================================================
      PEOPLE PROPERTY PROGRESS
-     ONLY CHANGE:
-     ALL FOUR ICONS ARE IDENTICAL
 ===================================================== -->
 
 <section class="values" id="why">
 
-
     <div class="eyebrow">
-
         THE PRANAURA APPROACH
-
     </div>
 
-
     <h2 class="values-title">
-
         People. Property. Progress.
-
     </h2>
-
 
     <div class="values-grid">
 
-
+        <!-- SAME ICON -->
         <div class="value">
 
-
             <div class="feature-icon">
-
                 <svg viewBox="0 0 24 24">
-
-                    <path d="
-                        M12 3
-                        L21 12
-                        L12 21
-                        L3 12
-                        Z
-                    "/>
-
-                    <path d="
-                        M12 7
-                        L17 12
-                        L12 17
-                        L7 12
-                        Z
-                    "/>
-
+                    <path d="M12 3l9 9-9 9-9-9 9-9z"/>
+                    <path d="M12 8l4 4-4 4-4-4 4-4z"/>
                 </svg>
-
             </div>
 
-
             <h3>
-
                 Trusted Network
-
             </h3>
 
-
             <p>
-
                 Professional and value-aligned relationships
                 across the real estate ecosystem.
-
             </p>
 
         </div>
 
 
-
+        <!-- SAME ICON -->
         <div class="value">
 
-
             <div class="feature-icon">
-
-                <!-- EXACT SAME ICON -->
-
                 <svg viewBox="0 0 24 24">
-
-                    <path d="
-                        M12 3
-                        L21 12
-                        L12 21
-                        L3 12
-                        Z
-                    "/>
-
-                    <path d="
-                        M12 7
-                        L17 12
-                        L12 17
-                        L7 12
-                        Z
-                    "/>
-
+                    <path d="M12 3l9 9-9 9-9-9 9-9z"/>
+                    <path d="M12 8l4 4-4 4-4-4 4-4z"/>
                 </svg>
-
             </div>
 
-
             <h3>
-
                 Smarter Matches
-
             </h3>
 
-
             <p>
-
                 Need-based connections designed around
                 requirements and objectives.
-
             </p>
 
         </div>
 
 
-
+        <!-- SAME ICON -->
         <div class="value">
 
-
             <div class="feature-icon">
-
-                <!-- EXACT SAME ICON -->
-
                 <svg viewBox="0 0 24 24">
-
-                    <path d="
-                        M12 3
-                        L21 12
-                        L12 21
-                        L3 12
-                        Z
-                    "/>
-
-                    <path d="
-                        M12 7
-                        L17 12
-                        L12 17
-                        L7 12
-                        Z
-                    "/>
-
+                    <path d="M12 3l9 9-9 9-9-9 9-9z"/>
+                    <path d="M12 8l4 4-4 4-4-4 4-4z"/>
                 </svg>
-
             </div>
 
-
             <h3>
-
                 End-to-End Support
-
             </h3>
 
-
             <p>
-
                 From understanding requirements to facilitating
                 meaningful introductions.
-
             </p>
 
         </div>
 
 
-
+        <!-- SAME ICON -->
         <div class="value">
 
-
             <div class="feature-icon">
-
-                <!-- EXACT SAME ICON -->
-
                 <svg viewBox="0 0 24 24">
-
-                    <path d="
-                        M12 3
-                        L21 12
-                        L12 21
-                        L3 12
-                        Z
-                    "/>
-
-                    <path d="
-                        M12 7
-                        L17 12
-                        L12 17
-                        L7 12
-                        Z
-                    "/>
-
+                    <path d="M12 3l9 9-9 9-9-9 9-9z"/>
+                    <path d="M12 8l4 4-4 4-4-4 4-4z"/>
                 </svg>
-
             </div>
 
-
             <h3>
-
                 Long-Term Value
-
             </h3>
 
-
             <p>
-
                 Relationships built for sustainable growth
                 and future opportunities.
-
             </p>
 
         </div>
-
 
     </div>
 
@@ -3262,66 +2138,48 @@ footer a{
 
 <section class="section alt" id="about">
 
-
     <div class="section-head">
 
         <div class="eyebrow">
             ABOUT PRANAURA
         </div>
 
-
         <h2 class="section-title">
             Real estate, connected with purpose.
         </h2>
 
-
         <p class="section-text">
-
             PRANAURA is designed to bring greater structure,
             professionalism and technology into real estate
             relationships.
-
         </p>
 
     </div>
 
-
     <div class="about-grid">
 
-
         <div class="about-large">
-
             Better connections can create better opportunities.
-
         </div>
-
 
         <div class="about-copy">
 
             <p>
-
                 PRANAURA works as a professional intermediary
                 and networking platform connecting builders,
                 developers, landowners, prospective investors
                 and buyers.
-
             </p>
 
-
             <p>
-
                 The platform focuses on understanding requirements,
                 organizing information and facilitating relevant
                 introductions.
-
             </p>
 
-
             <p>
-
                 PRANAURA does not own properties and does not
                 guarantee investment returns or project outcomes.
-
             </p>
 
         </div>
@@ -3337,151 +2195,94 @@ footer a{
 
 <section class="section" id="path">
 
-
     <div class="section-head">
 
         <div class="eyebrow">
             YOUR PATH
         </div>
 
-
         <h2 class="section-title">
             A clearer way forward.
         </h2>
 
-
         <p class="section-text">
-
             Whether you are building, investing, owning land
             or looking for the right opportunity, PRANAURA
             organizes the journey around your requirement.
-
         </p>
 
     </div>
 
-
     <div class="network-grid">
 
-
         <div class="network-card">
 
             <div class="feature-icon">
-
                 <svg viewBox="0 0 24 24">
-
                     <path d="M12 3l9 9-9 9-9-9 9-9z"/>
-
                     <path d="M12 8l4 4-4 4-4-4 4-4z"/>
-
                 </svg>
-
             </div>
 
-
-            <h3>
-                Builder
-            </h3>
-
+            <h3>Builder</h3>
 
             <p>
-
                 Connect with relevant investors,
                 buyers and strategic partners.
-
             </p>
 
         </div>
 
-
-
         <div class="network-card">
 
             <div class="feature-icon">
-
                 <svg viewBox="0 0 24 24">
-
                     <path d="M12 3l9 9-9 9-9-9 9-9z"/>
-
                     <path d="M12 8l4 4-4 4-4-4 4-4z"/>
-
                 </svg>
-
             </div>
 
-
-            <h3>
-                Investor
-            </h3>
-
+            <h3>Investor</h3>
 
             <p>
-
                 Share your investment preferences
                 and explore relevant opportunities.
-
             </p>
 
         </div>
 
-
-
         <div class="network-card">
 
             <div class="feature-icon">
-
                 <svg viewBox="0 0 24 24">
-
                     <path d="M12 3l9 9-9 9-9-9 9-9z"/>
-
                     <path d="M12 8l4 4-4 4-4-4 4-4z"/>
-
                 </svg>
-
             </div>
 
-
-            <h3>
-                Landowner
-            </h3>
-
+            <h3>Landowner</h3>
 
             <p>
-
                 Explore structured development
                 and partnership conversations.
-
             </p>
 
         </div>
 
-
-
         <div class="network-card">
 
             <div class="feature-icon">
-
                 <svg viewBox="0 0 24 24">
-
                     <path d="M12 3l9 9-9 9-9-9 9-9z"/>
-
                     <path d="M12 8l4 4-4 4-4-4 4-4z"/>
-
                 </svg>
-
             </div>
 
-
-            <h3>
-                Buyer
-            </h3>
-
+            <h3>Buyer</h3>
 
             <p>
-
                 Communicate your requirements and
                 receive structured introductions.
-
             </p>
 
         </div>
@@ -3497,13 +2298,11 @@ footer a{
 
 <section class="section alt" id="process">
 
-
     <div class="section-head">
 
         <div class="eyebrow">
             HOW PRANAURA WORKS
         </div>
-
 
         <h2 class="section-title">
             From requirement to relationship.
@@ -3511,107 +2310,51 @@ footer a{
 
     </div>
 
-
     <div class="process-grid">
 
-
         <div class="process">
-
-            <div class="process-number">
-                01
-            </div>
-
-            <h3>
-                Requirement
-            </h3>
-
+            <div class="process-number">01</div>
+            <h3>Requirement</h3>
             <p>
-
                 Understand the objective, budget,
                 location and preferred timeline.
-
             </p>
-
         </div>
 
-
         <div class="process">
-
-            <div class="process-number">
-                02
-            </div>
-
-            <h3>
-                Review
-            </h3>
-
+            <div class="process-number">02</div>
+            <h3>Review</h3>
             <p>
-
                 Organize and review relevant
                 information before introduction.
-
             </p>
-
         </div>
 
-
         <div class="process">
-
-            <div class="process-number">
-                03
-            </div>
-
-            <h3>
-                Matching
-            </h3>
-
+            <div class="process-number">03</div>
+            <h3>Matching</h3>
             <p>
-
                 Identify relevant connections based
                 on available requirements.
-
             </p>
-
         </div>
 
-
         <div class="process">
-
-            <div class="process-number">
-                04
-            </div>
-
-            <h3>
-                Introduction
-            </h3>
-
+            <div class="process-number">04</div>
+            <h3>Introduction</h3>
             <p>
-
                 Facilitate a professional introduction
                 between relevant parties.
-
             </p>
-
         </div>
 
-
         <div class="process">
-
-            <div class="process-number">
-                05
-            </div>
-
-            <h3>
-                Follow-up
-            </h3>
-
+            <div class="process-number">05</div>
+            <h3>Follow-up</h3>
             <p>
-
                 Support communication and relationship
                 continuity where appropriate.
-
             </p>
-
         </div>
 
     </div>
@@ -3625,13 +2368,11 @@ footer a{
 
 <section class="section" id="network">
 
-
     <div class="section-head">
 
         <div class="eyebrow">
             THE NETWORK
         </div>
-
 
         <h2 class="section-title">
             One ecosystem. Multiple possibilities.
@@ -3639,87 +2380,46 @@ footer a{
 
     </div>
 
-
     <div class="network-grid">
 
-
         <div class="network-card">
-
-            <h3>
-                Builders
-            </h3>
-
+            <h3>Builders</h3>
             <p>
-
                 Project relationships, investor connections
                 and strategic introductions.
-
             </p>
-
         </div>
 
-
         <div class="network-card">
-
-            <h3>
-                Developers
-            </h3>
-
+            <h3>Developers</h3>
             <p>
-
                 Structured networking around development
                 opportunities.
-
             </p>
-
         </div>
 
-
         <div class="network-card">
-
-            <h3>
-                Landowners
-            </h3>
-
+            <h3>Landowners</h3>
             <p>
-
                 Partnership conversations and development
                 possibilities.
-
             </p>
-
         </div>
 
-
         <div class="network-card">
-
-            <h3>
-                Investors
-            </h3>
-
+            <h3>Investors</h3>
             <p>
-
                 Requirement-driven access to relevant
                 opportunities.
-
             </p>
-
         </div>
 
-
         <div class="network-card">
-
-            <h3>
-                Buyers
-            </h3>
-
+            <h3>Buyers</h3>
             <p>
-
                 Organized communication around property
                 requirements.
-
             </p>
-
         </div>
 
     </div>
@@ -3733,13 +2433,11 @@ footer a{
 
 <section class="section alt" id="services">
 
-
     <div class="section-head">
 
         <div class="eyebrow">
             SERVICES
         </div>
-
 
         <h2 class="section-title">
             Built around relationships.
@@ -3747,95 +2445,58 @@ footer a{
 
     </div>
 
-
     <div class="services-grid">
 
-
         <div class="service">
 
             <div class="feature-icon">
-
                 <svg viewBox="0 0 24 24">
-
                     <path d="M12 3l9 9-9 9-9-9 9-9z"/>
-
                     <path d="M12 8l4 4-4 4-4-4 4-4z"/>
-
                 </svg>
-
             </div>
 
-
-            <h3>
-                Builder Partnerships
-            </h3>
-
+            <h3>Builder Partnerships</h3>
 
             <p>
-
                 Professional networking and requirement-based
                 introductions for builders and developers.
-
             </p>
 
         </div>
 
-
         <div class="service">
 
             <div class="feature-icon">
-
                 <svg viewBox="0 0 24 24">
-
                     <path d="M12 3l9 9-9 9-9-9 9-9z"/>
-
                     <path d="M12 8l4 4-4 4-4-4 4-4z"/>
-
                 </svg>
-
             </div>
 
-
-            <h3>
-                Investor Connections
-            </h3>
-
+            <h3>Investor Connections</h3>
 
             <p>
-
                 Organize investment requirements and identify
                 suitable networking opportunities.
-
             </p>
 
         </div>
 
-
         <div class="service">
 
             <div class="feature-icon">
-
                 <svg viewBox="0 0 24 24">
-
                     <path d="M12 3l9 9-9 9-9-9 9-9z"/>
-
                     <path d="M12 8l4 4-4 4-4-4 4-4z"/>
-
                 </svg>
-
             </div>
 
-
-            <h3>
-                Land Partnerships
-            </h3>
-
+            <h3>Land Partnerships</h3>
 
             <p>
-
                 Facilitate conversations between landowners
                 and relevant development partners.
-
             </p>
 
         </div>
@@ -3851,31 +2512,24 @@ footer a{
 
 <section class="section" id="opportunities">
 
-
     <div class="section-head">
 
         <div class="eyebrow">
             OPPORTUNITIES
         </div>
 
-
         <h2 class="section-title">
             Structured opportunity discovery.
         </h2>
 
-
         <p class="section-text">
-
             The examples below represent the type of information
             PRANAURA can organize. They are not live property listings.
-
         </p>
 
     </div>
 
-
     <div class="opportunity-grid">
-
 
         <div class="opportunity">
 
@@ -3883,11 +2537,7 @@ footer a{
                 Information Received
             </div>
 
-
-            <h3>
-                Plotted Development
-            </h3>
-
+            <h3>Plotted Development</h3>
 
             <p>
                 Mysore region · Development opportunity
@@ -3895,18 +2545,13 @@ footer a{
 
         </div>
 
-
         <div class="opportunity">
 
             <div class="opportunity-status">
                 Preliminary Review
             </div>
 
-
-            <h3>
-                Residential Development
-            </h3>
-
+            <h3>Residential Development</h3>
 
             <p>
                 Karnataka · Residential opportunity
@@ -3914,18 +2559,13 @@ footer a{
 
         </div>
 
-
         <div class="opportunity">
 
             <div class="opportunity-status">
                 Partner Discussion
             </div>
 
-
-            <h3>
-                Land Partnership
-            </h3>
-
+            <h3>Land Partnership</h3>
 
             <p>
                 Mysore region · Partnership discussion
@@ -3944,44 +2584,32 @@ footer a{
 
 <section class="section alt" id="match">
 
-
     <div class="section-head">
 
         <div class="eyebrow">
             PRANAURA SMART MATCH
         </div>
 
-
         <h2 class="section-title">
             Tell us what you are looking for.
         </h2>
 
-
         <p class="section-text">
-
             Submit your requirement and create a structured
             PRANAURA match profile.
-
         </p>
 
     </div>
 
-
     <div class="match-box">
-
 
         <form id="matchForm">
 
-
             <div class="form-grid">
-
 
                 <div class="field">
 
-                    <label>
-                        Your Role
-                    </label>
-
+                    <label>Your Role</label>
 
                     <select id="matchRole" required>
 
@@ -3989,29 +2617,12 @@ footer a{
                             Select role
                         </option>
 
-                        <option>
-                            Investor
-                        </option>
-
-                        <option>
-                            Buyer
-                        </option>
-
-                        <option>
-                            Builder
-                        </option>
-
-                        <option>
-                            Developer
-                        </option>
-
-                        <option>
-                            Landowner
-                        </option>
-
-                        <option>
-                            Other
-                        </option>
+                        <option>Investor</option>
+                        <option>Buyer</option>
+                        <option>Builder</option>
+                        <option>Developer</option>
+                        <option>Landowner</option>
+                        <option>Other</option>
 
                     </select>
 
@@ -4020,10 +2631,7 @@ footer a{
 
                 <div class="field">
 
-                    <label>
-                        Preferred Location
-                    </label>
-
+                    <label>Preferred Location</label>
 
                     <input
                         id="matchLocation"
@@ -4036,42 +2644,20 @@ footer a{
 
                 <div class="field">
 
-                    <label>
-                        Property Type
-                    </label>
+                    <label>Property Type</label>
 
-
-                    <select
-                        id="matchProperty"
-                        required>
+                    <select id="matchProperty" required>
 
                         <option value="">
                             Select property type
                         </option>
 
-                        <option>
-                            Residential
-                        </option>
-
-                        <option>
-                            Plots
-                        </option>
-
-                        <option>
-                            Land
-                        </option>
-
-                        <option>
-                            Commercial
-                        </option>
-
-                        <option>
-                            Industrial
-                        </option>
-
-                        <option>
-                            Other
-                        </option>
+                        <option>Residential</option>
+                        <option>Plots</option>
+                        <option>Land</option>
+                        <option>Commercial</option>
+                        <option>Industrial</option>
+                        <option>Other</option>
 
                     </select>
 
@@ -4080,10 +2666,7 @@ footer a{
 
                 <div class="field">
 
-                    <label>
-                        Budget / Investment Range
-                    </label>
-
+                    <label>Budget / Investment Range</label>
 
                     <input
                         id="matchBudget"
@@ -4096,32 +2679,15 @@ footer a{
 
                 <div class="field">
 
-                    <label>
-                        Timeline
-                    </label>
-
+                    <label>Timeline</label>
 
                     <select id="matchTimeline">
 
-                        <option>
-                            Immediate
-                        </option>
-
-                        <option>
-                            Within 3 months
-                        </option>
-
-                        <option>
-                            3–6 months
-                        </option>
-
-                        <option>
-                            6–12 months
-                        </option>
-
-                        <option>
-                            Exploring
-                        </option>
+                        <option>Immediate</option>
+                        <option>Within 3 months</option>
+                        <option>3–6 months</option>
+                        <option>6–12 months</option>
+                        <option>Exploring</option>
 
                     </select>
 
@@ -4130,10 +2696,7 @@ footer a{
 
                 <div class="field">
 
-                    <label>
-                        Phone
-                    </label>
-
+                    <label>Phone</label>
 
                     <input
                         id="matchPhone"
@@ -4147,15 +2710,13 @@ footer a{
 
                 <div class="field full">
 
-                    <label>
-                        Requirement
-                    </label>
-
+                    <label>Requirement</label>
 
                     <textarea
                         id="matchRequirement"
                         placeholder="Describe what you are looking for..."
-                        required></textarea>
+                        required
+                    ></textarea>
 
                 </div>
 
@@ -4164,12 +2725,8 @@ footer a{
 
             <div class="form-submit">
 
-                <button
-                    class="primary-btn"
-                    type="submit">
-
+                <button class="primary-btn" type="submit">
                     Create Match Profile
-
                 </button>
 
             </div>
@@ -4177,32 +2734,19 @@ footer a{
         </form>
 
 
-        <div
-            class="match-result"
-            id="matchResult">
-
+        <div class="match-result" id="matchResult">
 
             <div class="eyebrow">
                 MATCH PROFILE CREATED
             </div>
 
-
-            <div
-                class="match-id"
-                id="matchID">
-
+            <div class="match-id" id="matchID">
                 PRN-INV-000000
-
             </div>
 
-
-            <p
-                class="section-text"
-                style="margin-top:10px;">
-
+            <p class="section-text" style="margin-top:10px;">
                 Your requirement has been structured for the
                 PRANAURA prototype system.
-
             </p>
 
         </div>
@@ -4218,13 +2762,11 @@ footer a{
 
 <section class="section" id="ai">
 
-
     <div class="section-head">
 
         <div class="eyebrow">
             PRANAURA AI
         </div>
-
 
         <h2 class="section-title">
             Intelligence for better connections.
@@ -4232,48 +2774,32 @@ footer a{
 
     </div>
 
-
     <div class="ai-box">
 
-
         <div class="ai-title">
-
             A smarter layer for the ecosystem.
-
         </div>
 
-
         <p class="ai-text">
-
             PRANAURA is designed to eventually use AI to classify
             requirements, organize partner information, assist
             with matching and help the team manage relationships.
-
         </p>
-
 
         <br>
 
-
         <p class="ai-text">
-
             The current website contains a local AI assistant
             prototype. A production implementation can connect
             this interface to a secure backend and an Ollama/Qwen
             model.
-
         </p>
-
 
         <br>
 
-
-        <button
-            class="primary-btn"
-            onclick="toggleAI()">
-
+        <button class="primary-btn"
+                onclick="toggleAI()">
             Open PRANAURA AI
-
         </button>
 
     </div>
@@ -4287,13 +2813,11 @@ footer a{
 
 <section class="section alt" id="crm">
 
-
     <div class="section-head">
 
         <div class="eyebrow">
             FUTURE PLATFORM
         </div>
-
 
         <h2 class="section-title">
             Built to grow beyond a website.
@@ -4301,95 +2825,58 @@ footer a{
 
     </div>
 
-
     <div class="crm-grid">
 
-
         <div class="crm-card">
 
             <div class="feature-icon">
-
                 <svg viewBox="0 0 24 24">
-
                     <path d="M12 3l9 9-9 9-9-9 9-9z"/>
-
                     <path d="M12 8l4 4-4 4-4-4 4-4z"/>
-
                 </svg>
-
             </div>
 
-
-            <h3>
-                Lead Management
-            </h3>
-
+            <h3>Lead Management</h3>
 
             <p>
-
                 Organize enquiries, requirements, introductions
                 and follow-ups.
-
             </p>
 
         </div>
 
-
         <div class="crm-card">
 
             <div class="feature-icon">
-
                 <svg viewBox="0 0 24 24">
-
                     <path d="M12 3l9 9-9 9-9-9 9-9z"/>
-
                     <path d="M12 8l4 4-4 4-4-4 4-4z"/>
-
                 </svg>
-
             </div>
 
-
-            <h3>
-                Partner Profiles
-            </h3>
-
+            <h3>Partner Profiles</h3>
 
             <p>
-
                 Create structured profiles for builders,
                 investors, landowners and buyers.
-
             </p>
 
         </div>
 
-
         <div class="crm-card">
 
             <div class="feature-icon">
-
                 <svg viewBox="0 0 24 24">
-
                     <path d="M12 3l9 9-9 9-9-9 9-9z"/>
-
                     <path d="M12 8l4 4-4 4-4-4 4-4z"/>
-
                 </svg>
-
             </div>
 
-
-            <h3>
-                Analytics
-            </h3>
-
+            <h3>Analytics</h3>
 
             <p>
-
                 Future dashboards can show enquiries,
                 matches, introductions and conversions.
-
             </p>
 
         </div>
@@ -4405,13 +2892,11 @@ footer a{
 
 <section class="section" id="appointments">
 
-
     <div class="section-head">
 
         <div class="eyebrow">
             APPOINTMENTS
         </div>
-
 
         <h2 class="section-title">
             Start a focused conversation.
@@ -4419,98 +2904,67 @@ footer a{
 
     </div>
 
-
     <div class="appointment-box">
-
 
         <form id="appointmentForm">
 
-
             <div class="form-grid">
 
-
                 <div class="field">
 
-                    <label>
-                        Name
-                    </label>
+                    <label>Name</label>
 
-                    <input
-                        id="appointmentName"
-                        required
-                    >
+                    <input id="appointmentName"
+                           required>
 
                 </div>
 
-
                 <div class="field">
 
-                    <label>
-                        Phone
-                    </label>
+                    <label>Phone</label>
 
-                    <input
-                        id="appointmentPhone"
-                        type="tel"
-                        required
-                    >
+                    <input id="appointmentPhone"
+                           type="tel"
+                           required>
 
                 </div>
 
-
                 <div class="field">
 
-                    <label>
-                        Preferred Date
-                    </label>
+                    <label>Preferred Date</label>
 
-                    <input
-                        id="appointmentDate"
-                        type="date"
-                        required
-                    >
+                    <input id="appointmentDate"
+                           type="date"
+                           required>
 
                 </div>
 
-
                 <div class="field">
 
-                    <label>
-                        Preferred Time
-                    </label>
+                    <label>Preferred Time</label>
 
-                    <input
-                        id="appointmentTime"
-                        type="time"
-                        required
-                    >
+                    <input id="appointmentTime"
+                           type="time"
+                           required>
 
                 </div>
-
 
                 <div class="field full">
 
-                    <label>
-                        Purpose
-                    </label>
+                    <label>Purpose</label>
 
-                    <textarea
-                        id="appointmentPurpose"
-                        placeholder="What would you like to discuss?"
-                        required></textarea>
+                    <textarea id="appointmentPurpose"
+                              placeholder="What would you like to discuss?"
+                              required></textarea>
 
                 </div>
 
             </div>
 
-
             <br>
 
-
             <button class="primary-btn">
-
                 Request Appointment
-
             </button>
 
         </form>
@@ -4526,13 +2980,11 @@ footer a{
 
 <section class="section alt" id="trust">
 
-
     <div class="section-head">
 
         <div class="eyebrow">
             TRUST & TRANSPARENCY
         </div>
-
 
         <h2 class="section-title">
             Professional relationships first.
@@ -4540,98 +2992,58 @@ footer a{
 
     </div>
 
-
     <div class="trust-grid">
 
-
         <div class="trust-card">
 
-
             <div class="feature-icon">
-
                 <svg viewBox="0 0 24 24">
-
                     <path d="M12 3l9 9-9 9-9-9 9-9z"/>
-
                     <path d="M12 8l4 4-4 4-4-4 4-4z"/>
-
                 </svg>
-
             </div>
 
-
-            <h3>
-                Clear Communication
-            </h3>
-
+            <h3>Clear Communication</h3>
 
             <p>
-
                 Information is organized around the needs
                 of the parties involved.
-
             </p>
 
         </div>
 
-
         <div class="trust-card">
 
-
             <div class="feature-icon">
-
                 <svg viewBox="0 0 24 24">
-
                     <path d="M12 3l9 9-9 9-9-9 9-9z"/>
-
                     <path d="M12 8l4 4-4 4-4-4 4-4z"/>
-
                 </svg>
-
             </div>
 
-
-            <h3>
-                Verification
-            </h3>
-
+            <h3>Verification</h3>
 
             <p>
-
                 Future platform workflows can include
                 structured verification and audit trails.
-
             </p>
 
         </div>
 
-
         <div class="trust-card">
 
-
             <div class="feature-icon">
-
                 <svg viewBox="0 0 24 24">
-
                     <path d="M12 3l9 9-9 9-9-9 9-9z"/>
-
                     <path d="M12 8l4 4-4 4-4-4 4-4z"/>
-
                 </svg>
-
             </div>
 
-
-            <h3>
-                Transparency
-            </h3>
-
+            <h3>Transparency</h3>
 
             <p>
-
                 PRANAURA facilitates introductions and
                 does not guarantee transaction outcomes.
-
             </p>
 
         </div>
@@ -4642,11 +3054,10 @@ footer a{
 
 
 <!-- =====================================================
-     PLATFORM TOOLS
+     DOCUMENTS / REFERRALS / COMMISSION
 ===================================================== -->
 
 <section class="section" id="tools">
-
 
     <div class="section-head">
 
@@ -4654,90 +3065,58 @@ footer a{
             PLATFORM TOOLS
         </div>
 
-
         <h2 class="section-title">
             More than a contact form.
         </h2>
 
     </div>
 
-
     <div class="utility-grid">
 
-
         <div class="utility-card">
 
-            <h3>
-                Document Vault
-            </h3>
-
+            <h3>Document Vault</h3>
 
             <p>
-
                 Future secure document storage for approved
                 partner and project information.
-
             </p>
 
-
-            <button
-                class="secondary-btn"
-                onclick="openModal('documentModal')">
-
+            <button class="secondary-btn"
+                    onclick="openModal('documentModal')">
                 Request Document
-
             </button>
 
         </div>
 
-
         <div class="utility-card">
 
-            <h3>
-                Referral Network
-            </h3>
-
+            <h3>Referral Network</h3>
 
             <p>
-
                 Introduce builders, investors, buyers or
                 other relevant professional contacts.
-
             </p>
 
-
-            <button
-                class="secondary-btn"
-                onclick="openModal('referralModal')">
-
+            <button class="secondary-btn"
+                    onclick="openModal('referralModal')">
                 Make Referral
-
             </button>
 
         </div>
 
-
         <div class="utility-card">
 
-            <h3>
-                Commission Calculator
-            </h3>
-
+            <h3>Commission Calculator</h3>
 
             <p>
-
                 Estimate a commission amount using a simple
                 percentage-based calculation.
-
             </p>
 
-
-            <button
-                class="secondary-btn"
-                onclick="openModal('commissionModal')">
-
+            <button class="secondary-btn"
+                    onclick="openModal('commissionModal')">
                 Calculate
-
             </button>
 
         </div>
@@ -4748,44 +3127,30 @@ footer a{
 
 
 <!-- =====================================================
-     FOUNDER
-     ONLY ONE
+     FOUNDER — ONLY ONCE
 ===================================================== -->
 
 <section class="founder" id="founder">
 
-
     <div class="founder-inner">
 
-
         <div class="eyebrow">
-
             FOUNDER
-
         </div>
-
 
         <h2 class="founder-name">
-
             Pranathi H.S.
-
         </h2>
 
-
         <div class="founder-role">
-
             FOUNDER — PRANAURA
-
         </div>
 
-
         <p class="founder-text">
-
             PRANAURA was created with the vision of bringing
             greater structure, professionalism and technology
             into real estate relationships while keeping people
             at the center of every opportunity.
-
         </p>
 
     </div>
@@ -4799,13 +3164,11 @@ footer a{
 
 <section class="section alt" id="faq">
 
-
     <div class="section-head">
 
         <div class="eyebrow">
             FAQ
         </div>
-
 
         <h2 class="section-title">
             Frequently asked questions.
@@ -4813,130 +3176,79 @@ footer a{
 
     </div>
 
-
     <div class="faq">
-
 
         <div class="faq-item">
 
-
             <button class="faq-question">
-
                 What is PRANAURA?
-
-                <span class="faq-symbol">
-                    +
-                </span>
-
+                <span class="faq-symbol">+</span>
             </button>
 
-
             <div class="faq-answer">
-
                 PRANAURA is a real estate networking and advisory
                 platform designed to connect builders, developers,
                 landowners, investors and buyers.
-
             </div>
 
         </div>
 
 
-
         <div class="faq-item">
 
-
             <button class="faq-question">
-
                 Does PRANAURA own properties?
-
-                <span class="faq-symbol">
-                    +
-                </span>
-
+                <span class="faq-symbol">+</span>
             </button>
 
-
             <div class="faq-answer">
-
                 No. PRANAURA does not own properties. It facilitates
                 introductions and professional business discussions.
-
             </div>
 
         </div>
 
 
-
         <div class="faq-item">
 
-
             <button class="faq-question">
-
                 Does PRANAURA guarantee investments?
-
-                <span class="faq-symbol">
-                    +
-                </span>
-
+                <span class="faq-symbol">+</span>
             </button>
 
-
             <div class="faq-answer">
-
                 No. PRANAURA does not guarantee investment returns,
                 project outcomes or transaction completion.
-
             </div>
 
         </div>
 
 
-
         <div class="faq-item">
 
-
             <button class="faq-question">
-
                 Can builders partner with PRANAURA?
-
-                <span class="faq-symbol">
-                    +
-                </span>
-
+                <span class="faq-symbol">+</span>
             </button>
 
-
             <div class="faq-answer">
-
                 Yes. Builders and developers can submit partnership
                 requirements through the platform.
-
             </div>
 
         </div>
 
 
-
         <div class="faq-item">
 
-
             <button class="faq-question">
-
                 Can investors submit requirements?
-
-                <span class="faq-symbol">
-                    +
-                </span>
-
+                <span class="faq-symbol">+</span>
             </button>
 
-
             <div class="faq-answer">
-
                 Yes. Investors can use Smart Match to structure
                 their preferences and requirements.
-
             </div>
 
         </div>
@@ -4952,13 +3264,11 @@ footer a{
 
 <section class="section" id="contact">
 
-
     <div class="section-head">
 
         <div class="eyebrow">
             CONTACT
         </div>
-
 
         <h2 class="section-title">
             Let us start with a conversation.
@@ -4966,126 +3276,75 @@ footer a{
 
     </div>
 
-
     <div class="contact-grid">
 
-
         <div class="contact-info">
-
 
             <h3>
                 Build the right connection.
             </h3>
 
-
             <p>
-
                 Whether you are a builder, investor, landowner,
                 buyer or strategic partner, share your requirement
                 with PRANAURA.
-
             </p>
-
 
             <div class="contact-list">
 
-
                 <div class="contact-item">
 
-
                     <span class="icon">
-
                         <svg viewBox="0 0 24 24">
-
-                            <path d="
-                                M22 16.92v3a2 2 0 0 1-2.18 2
-                                19.79 19.79 0 0 1-8.63-3.07
-                                19.5 19.5 0 0 1-6-6
-                                19.79 19.79 0 0 1-3.07-8.67
-                                A2 2 0 0 1 4.11 2h3a2 2 0 0 1
-                                2 1.72c.12.9.33 1.78.62 2.63
-                                a2 2 0 0 1-.45 2.11L8 9.73
-                                a16 16 0 0 0 6 6l1.27-1.27
-                                a2 2 0 0 1 2.11-.45
-                                c.85.29 1.73.5 2.63.62
-                                A2 2 0 0 1 22 16.92z
-                            "/>
-
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2
+                            19.79 19.79 0 0 1-8.63-3.07
+                            19.5 19.5 0 0 1-6-6
+                            19.79 19.79 0 0 1-3.07-8.67
+                            A2 2 0 0 1 4.11 2h3a2 2 0 0 1
+                            2 1.72c.12.9.33 1.78.62 2.63
+                            a2 2 0 0 1-.45 2.11L8 9.73
+                            a16 16 0 0 0 6 6l1.27-1.27
+                            a2 2 0 0 1 2.11-.45
+                            c.85.29 1.73.5 2.63.62
+                            A2 2 0 0 1 22 16.92z"/>
                         </svg>
-
                     </span>
 
-
                     <span class="contact-item-text">
-
                         +91 90197 46649
-
                     </span>
 
                 </div>
 
 
-
                 <div class="contact-item">
 
-
                     <span class="icon">
-
                         <svg viewBox="0 0 24 24">
-
-                            <rect
-                                x="3"
-                                y="5"
-                                width="18"
-                                height="14"
-                                rx="2"
-                            />
-
+                            <rect x="3" y="5" width="18" height="14" rx="2"/>
                             <path d="M3 7l9 6 9-6"/>
-
                         </svg>
-
                     </span>
 
-
                     <span class="contact-item-text">
-
                         pranauraconnect@gmail.com
-
                     </span>
 
                 </div>
 
 
-
                 <div class="contact-item">
 
-
                     <span class="icon">
-
                         <svg viewBox="0 0 24 24">
-
-                            <path d="
-                                M12 21s7-6.1 7-12
-                                a7 7 0 0 0-14 0
-                                c0 5.9 7 12 7 12z
-                            "/>
-
-                            <circle
-                                cx="12"
-                                cy="9"
-                                r="2.5"
-                            />
-
+                            <path d="M12 21s7-6.1 7-12
+                            a7 7 0 0 0-14 0c0 5.9 7 12 7 12z"/>
+                            <circle cx="12" cy="9" r="2.5"/>
                         </svg>
-
                     </span>
 
-
                     <span class="contact-item-text">
-
                         Vijayanagar, Mysore, Karnataka, India
-
                     </span>
 
                 </div>
@@ -5095,119 +3354,72 @@ footer a{
         </div>
 
 
-
         <div>
-
 
             <form id="contactForm">
 
-
                 <div class="form-grid">
 
-
                     <div class="field">
 
-                        <label>
-                            Name
-                        </label>
+                        <label>Name</label>
 
-                        <input
-                            id="contactName"
-                            required
-                        >
+                        <input id="contactName"
+                               required>
 
                     </div>
 
-
                     <div class="field">
 
-                        <label>
-                            Phone
-                        </label>
+                        <label>Phone</label>
 
-                        <input
-                            id="contactPhone"
-                            type="tel"
-                            required
-                        >
+                        <input id="contactPhone"
+                               type="tel"
+                               required>
 
                     </div>
 
-
                     <div class="field">
 
-                        <label>
-                            Role
-                        </label>
-
+                        <label>Role</label>
 
                         <select id="contactRole">
 
-                            <option>
-                                Investor
-                            </option>
-
-                            <option>
-                                Buyer
-                            </option>
-
-                            <option>
-                                Builder
-                            </option>
-
-                            <option>
-                                Developer
-                            </option>
-
-                            <option>
-                                Landowner
-                            </option>
-
-                            <option>
-                                Other
-                            </option>
+                            <option>Investor</option>
+                            <option>Buyer</option>
+                            <option>Builder</option>
+                            <option>Developer</option>
+                            <option>Landowner</option>
+                            <option>Other</option>
 
                         </select>
 
                     </div>
 
-
                     <div class="field">
 
-                        <label>
-                            Email
-                        </label>
+                        <label>Email</label>
 
-                        <input
-                            id="contactEmail"
-                            type="email"
-                        >
+                        <input id="contactEmail"
+                               type="email">
 
                     </div>
 
-
                     <div class="field full">
 
-                        <label>
-                            Message
-                        </label>
+                        <label>Message</label>
 
-                        <textarea
-                            id="contactMessage"
-                            required></textarea>
+                        <textarea id="contactMessage"
+                                  required></textarea>
 
                     </div>
 
                 </div>
 
-
                 <br>
 
-
                 <button class="primary-btn">
-
                     Send Enquiry
-
                 </button>
 
             </form>
@@ -5225,13 +3437,11 @@ footer a{
 
 <section class="section alt" id="legal">
 
-
     <div class="section-head">
 
         <div class="eyebrow">
             LEGAL & TRANSPARENCY
         </div>
-
 
         <h2 class="section-title">
             Clear expectations.
@@ -5239,61 +3449,42 @@ footer a{
 
     </div>
 
-
     <div class="legal-grid">
-
 
         <div class="legal-card">
 
-            <h3>
-                Disclaimer
-            </h3>
-
+            <h3>Disclaimer</h3>
 
             <p>
-
                 PRANAURA facilitates introductions and business
                 communication. It does not guarantee property
                 quality, returns, approvals, transaction completion
                 or investment outcomes.
-
             </p>
 
         </div>
 
-
         <div class="legal-card">
 
-            <h3>
-                Privacy
-            </h3>
-
+            <h3>Privacy</h3>
 
             <p>
-
                 Information submitted through the prototype forms
                 is intended for demonstration purposes. A production
                 system should implement secure storage, consent
                 management and applicable privacy requirements.
-
             </p>
 
         </div>
 
-
         <div class="legal-card">
 
-            <h3>
-                Verification
-            </h3>
-
+            <h3>Verification</h3>
 
             <p>
-
                 Information should be independently verified by
                 users before entering into any transaction,
                 investment or agreement.
-
             </p>
 
         </div>
@@ -5301,7 +3492,6 @@ footer a{
     </div>
 
 </section>
-
 
 </main>
 
@@ -5312,26 +3502,18 @@ footer a{
 
 <footer>
 
-
     <div class="footer-grid">
-
 
         <div>
 
-
             <div class="footer-brand">
-
                 PRANAURA
-
             </div>
 
-
             <p class="footer-description">
-
                 Strategic Builder & Investor Partnerships.
                 Connecting people, property and progress through
                 professional real estate relationships.
-
             </p>
 
         </div>
@@ -5339,83 +3521,41 @@ footer a{
 
         <div>
 
-            <h4>
-                EXPLORE
-            </h4>
+            <h4>EXPLORE</h4>
 
-
-            <a href="#about">
-                About
-            </a>
-
-            <a href="#process">
-                Process
-            </a>
-
-            <a href="#network">
-                Network
-            </a>
-
-            <a href="#services">
-                Services
-            </a>
+            <a href="#about">About</a>
+            <a href="#process">Process</a>
+            <a href="#network">Network</a>
+            <a href="#services">Services</a>
 
         </div>
 
 
         <div>
 
-            <h4>
-                PLATFORM
-            </h4>
+            <h4>PLATFORM</h4>
 
-
-            <a href="#match">
-                Smart Match
-            </a>
-
-            <a href="#ai">
-                AI
-            </a>
-
-            <a href="#trust">
-                Trust
-            </a>
-
-            <a href="#faq">
-                FAQ
-            </a>
+            <a href="#match">Smart Match</a>
+            <a href="#ai">AI</a>
+            <a href="#trust">Trust</a>
+            <a href="#faq">FAQ</a>
 
         </div>
 
 
         <div>
 
-            <h4>
-                CONNECT
-            </h4>
+            <h4>CONNECT</h4>
 
-
-            <a href="#contact">
-                Contact
-            </a>
-
-
-            <a
-                href="https://instagram.com/Pranaura_"
-                target="_blank">
-
+            <a href="#contact">Contact</a>
+            <a href="https://instagram.com/Pranaura_"
+               target="_blank">
                 Instagram
-
             </a>
 
-
-            <a
-                href="https://wa.me/919019746649"
-                target="_blank">
-
+            <a href="https://wa.me/919019746649"
+               target="_blank">
                 WhatsApp
-
             </a>
 
         </div>
@@ -5426,16 +3566,11 @@ footer a{
     <div class="footer-bottom">
 
         <span>
-
             © 2026 PRANAURA. All rights reserved.
-
         </span>
 
-
         <span>
-
             Designed for a more connected real estate ecosystem.
-
         </span>
 
     </div>
@@ -5447,75 +3582,44 @@ footer a{
      AI CHAT
 ===================================================== -->
 
-<div
-    class="ai-chat"
-    id="aiChat">
-
+<div class="ai-chat" id="aiChat">
 
     <div class="ai-chat-head">
 
-
         <div class="ai-chat-title">
-
             PRANAURA AI
-
         </div>
 
-
-        <button
-            class="ai-chat-close"
-            onclick="toggleAI()">
-
+        <button class="ai-chat-close"
+                onclick="toggleAI()">
             ×
-
         </button>
 
     </div>
 
-
-    <div
-        class="ai-messages"
-        id="aiMessages">
-
+    <div class="ai-messages" id="aiMessages">
 
         <div class="message bot">
-
             Hello. I am the PRANAURA AI prototype.
             Tell me whether you are an investor, buyer,
             builder, developer or landowner.
-
         </div>
 
     </div>
 
-
     <div class="ai-input">
 
-
-        <input
-            id="aiInput"
-            placeholder="Ask PRANAURA AI..."
-        >
-
+        <input id="aiInput"
+               placeholder="Ask PRANAURA AI...">
 
         <button onclick="sendAI()">
 
-
             <span class="icon">
-
                 <svg viewBox="0 0 24 24">
-
                     <path d="M22 2L11 13"/>
-
-                    <path d="
-                        M22 2l-7 20-4-9-9-4
-                        20-7z
-                    "/>
-
+                    <path d="M22 2l-7 20-4-9-9-4 20-7z"/>
                 </svg>
-
             </span>
-
 
         </button>
 
@@ -5528,38 +3632,15 @@ footer a{
      AI FLOATING BUTTON
 ===================================================== -->
 
-<button
-    class="ai-floating"
-    onclick="toggleAI()"
-    aria-label="Open PRANAURA AI">
-
+<button class="ai-floating"
+        onclick="toggleAI()"
+        aria-label="Open PRANAURA AI">
 
     <svg viewBox="0 0 24 24">
 
-        <path d="
-            M12 2
-            l1.4 6.6
-            L20 10
-            l-6.6 1.4
-            L12 18
-            l-1.4-6.6
-            L4 10
-            l6.6-1.4
-            L12 2z
-        "/>
+        <path d="M12 2l1.4 6.6L20 10l-6.6 1.4L12 18l-1.4-6.6L4 10l6.6-1.4L12 2z"/>
 
-
-        <path d="
-            M19 15
-            l.7 3.3
-            L23 19
-            l-3.3.7
-            L19 23
-            l-.7-3.3
-            L15 19
-            l3.3-.7
-            L19 15z
-        "/>
+        <path d="M19 15l.7 3.3L23 19l-3.3.7L19 23l-.7-3.3L15 19l3.3-.7L19 15z"/>
 
     </svg>
 
@@ -5570,68 +3651,66 @@ footer a{
      WHATSAPP
 ===================================================== -->
 
-<a
-    class="whatsapp"
-    href="https://wa.me/919019746649"
-    target="_blank"
-    aria-label="WhatsApp">
+<a class="whatsapp"
+   href="https://wa.me/919019746649"
+   target="_blank"
+   aria-label="WhatsApp">
 
+    <svg viewBox="0 0 32 32">
 
-    <svg
-        viewBox="0 0 32 32"
-        aria-hidden="true">
+        <path d="
+        M16 3
+        C8.82 3 3 8.82 3 16
+        c0 2.29.6 4.44 1.65 6.3
+        L3.1 29l6.88-1.5
+        A12.94 12.94 0 0 0 16 29
+        c7.18 0 13-5.82 13-13
+        S23.18 3 16 3z
+        M16 5.2
+        c5.96 0 10.8 4.84 10.8 10.8
+        S21.96 26.8 16 26.8
+        c-2.1 0-4.06-.6-5.72-1.64
+        l-.39-.24-4.09.89.9-3.98
+        -.25-.4
+        A10.74 10.74 0 0 1 5.2 16
+        C5.2 10.04 10.04 5.2 16 5.2z
+        " />
 
+        <path d="
+        M12.18 9.15
+        c-.27-.6-.55-.61-.8-.62
+        h-.68
+        c-.24 0-.63.09-.96.45
+        -.33.36-1.25 1.22-1.25 2.98
+        0 1.76 1.28 3.46 1.46 3.7
+        .18.24 2.47 3.96 6.08 5.39
+        3 .? 
+        " />
 
-        <path
-            fill="white"
-            d="
-                M16 3
-                C8.82 3 3 8.82 3 16
-                c0 2.29.6 4.44 1.65 6.3
-                L3.1 29l6.88-1.5
-                A12.94 12.94 0 0 0 16 29
-                c7.18 0 13-5.82 13-13
-                S23.18 3 16 3z
-
-                M16 5.2
-                c5.96 0 10.8 4.84 10.8 10.8
-                S21.96 26.8 16 26.8
-                c-2.1 0-4.06-.6-5.72-1.64
-                l-.39-.24-4.09.89.9-3.98
-                -.25-.4
-                A10.74 10.74 0 0 1 5.2 16
-                C5.2 10.04 10.04 5.2 16 5.2z
-            "
-        />
-
-
-        <path
-            fill="white"
-            d="
-                M12.18 9.15
-                c-.27-.6-.55-.61-.8-.62
-                h-.68
-                c-.24 0-.63.09-.96.45
-                -.33.36-1.25 1.22-1.25 2.98
-                0 1.76 1.28 3.46 1.46 3.7
-                .18.24 2.47 3.96 6.08 5.39
-                3.01 1.19 3.63.95 4.28.89
-                .65-.06 2.09-.86 2.38-1.69
-                .3-.83.3-1.54.21-1.69
-                -.09-.15-.33-.24-.69-.42
-                -.36-.18-2.09-1.04-2.41-1.16
-                -.33-.12-.56-.18-.8.18
-                -.24.36-.92 1.16-1.13 1.4
-                -.21.24-.42.27-.77.09
-                -.36-.18-1.5-.55-2.86-1.76
-                -1.06-.95-1.78-2.12-1.99-2.47
-                -.21-.36-.02-.55.16-.73
-                .16-.16.36-.42.53-.62
-                .18-.21.24-.36.36-.59
-                .12-.24.06-.45-.03-.63
-                -.09-.18-.79-1.91-1.09-2.61z
-            "
-        />
+        <path d="
+        M12.18 9.15
+        c-.27-.6-.55-.61-.8-.62
+        h-.68
+        c-.24 0-.63.09-.96.45
+        -.33.36-1.25 1.22-1.25 2.98
+        0 1.76 1.28 3.46 1.46 3.7
+        .18.24 2.47 3.96 6.08 5.39
+        3.01 1.19 3.63.95 4.28.89
+        .65-.06 2.09-.86 2.38-1.69
+        .3-.83.3-1.54.21-1.69
+        -.09-.15-.33-.24-.69-.42
+        -.36-.18-2.09-1.04-2.41-1.16
+        -.33-.12-.56-.18-.8.18
+        -.24.36-.92 1.16-1.13 1.4
+        -.21.24-.42.27-.77.09
+        -.36-.18-1.5-.55-2.86-1.76
+        -1.06-.95-1.78-2.12-1.99-2.47
+        -.21-.36-.02-.55.16-.73
+        .16-.16.36-.42.53-.62
+        .18-.21.24-.36.36-.59
+        .12-.24.06-.45-.03-.63
+        -.09-.18-.79-1.91-1.09-2.61z
+        " />
 
     </svg>
 
@@ -5642,22 +3721,15 @@ footer a{
      BACK TO TOP
 ===================================================== -->
 
-<button
-    class="back-top"
-    id="backTop"
-    aria-label="Back to top">
-
+<button class="back-top"
+        id="backTop"
+        aria-label="Back to top">
 
     <span class="icon">
-
         <svg viewBox="0 0 24 24">
-
             <path d="M12 19V5"/>
-
             <path d="M6 11l6-6 6 6"/>
-
         </svg>
-
     </span>
 
 </button>
@@ -5667,54 +3739,32 @@ footer a{
      CONTACT MODAL
 ===================================================== -->
 
-<div
-    class="modal"
-    id="contactModal">
-
+<div class="modal"
+     id="contactModal">
 
     <div class="modal-box">
 
-
-        <button
-            class="modal-close"
-            onclick="closeModal('contactModal')">
-
+        <button class="modal-close"
+                onclick="closeModal('contactModal')">
             ×
-
         </button>
 
-
         <div class="eyebrow">
-
             CONNECT WITH PRANAURA
-
         </div>
-
 
         <div class="modal-title">
-
             Start a Conversation
-
         </div>
 
-
         <p class="modal-text">
-
             Share your requirement and the PRANAURA team
             can understand the right next step.
-
         </p>
 
-
-        <button
-            class="primary-btn"
-            onclick="
-                closeModal('contactModal');
-                document.getElementById('contact').scrollIntoView();
-            ">
-
+        <button class="primary-btn"
+                onclick="closeModal('contactModal');document.getElementById('contact').scrollIntoView()">
             Continue to Contact
-
         </button>
 
     </div>
@@ -5726,75 +3776,42 @@ footer a{
      DOCUMENT MODAL
 ===================================================== -->
 
-<div
-    class="modal"
-    id="documentModal">
-
+<div class="modal"
+     id="documentModal">
 
     <div class="modal-box">
 
-
-        <button
-            class="modal-close"
-            onclick="closeModal('documentModal')">
-
+        <button class="modal-close"
+                onclick="closeModal('documentModal')">
             ×
-
         </button>
-
 
         <div class="eyebrow">
             DOCUMENT REQUEST
         </div>
 
-
         <div class="modal-title">
             Request Information
         </div>
 
-
         <p class="modal-text">
-
             Production document storage will use secure
             server-side storage and access controls.
-
         </p>
 
+        <input class="field"
+               id="documentName"
+               placeholder="Your name"
+               style="margin-bottom:15px;">
 
-        <input
-            id="documentName"
-            placeholder="Your name"
-            style="
-                width:100%;
-                padding:14px;
-                margin-bottom:15px;
-                border:1px solid var(--line);
-                background:transparent;
-                color:var(--text);
-            "
-        >
+        <input class="field"
+               id="documentPhone"
+               placeholder="Phone"
+               style="margin-bottom:15px;">
 
-
-        <input
-            id="documentPhone"
-            placeholder="Phone"
-            style="
-                width:100%;
-                padding:14px;
-                margin-bottom:15px;
-                border:1px solid var(--line);
-                background:transparent;
-                color:var(--text);
-            "
-        >
-
-
-        <button
-            class="primary-btn"
-            onclick="submitDocument()">
-
+        <button class="primary-btn"
+                onclick="submitDocument()">
             Submit Request
-
         </button>
 
     </div>
@@ -5806,75 +3823,40 @@ footer a{
      REFERRAL MODAL
 ===================================================== -->
 
-<div
-    class="modal"
-    id="referralModal">
-
+<div class="modal"
+     id="referralModal">
 
     <div class="modal-box">
 
-
-        <button
-            class="modal-close"
-            onclick="closeModal('referralModal')">
-
+        <button class="modal-close"
+                onclick="closeModal('referralModal')">
             ×
-
         </button>
-
 
         <div class="eyebrow">
             REFERRAL NETWORK
         </div>
 
-
         <div class="modal-title">
             Refer a Connection
         </div>
 
-
         <p class="modal-text">
-
             Introduce a relevant builder, investor, buyer,
             landowner or strategic partner.
-
         </p>
 
+        <input id="referralName"
+               placeholder="Your name"
+               style="width:100%;padding:14px;margin-bottom:12px;border:1px solid var(--line);background:transparent;color:var(--text);">
 
-        <input
-            id="referralName"
-            placeholder="Your name"
-            style="
-                width:100%;
-                padding:14px;
-                margin-bottom:12px;
-                border:1px solid var(--line);
-                background:transparent;
-                color:var(--text);
-            "
-        >
+        <input id="referralContact"
+               placeholder="Referral contact"
+               style="width:100%;padding:14px;margin-bottom:12px;border:1px solid var(--line);background:transparent;color:var(--text);">
 
-
-        <input
-            id="referralContact"
-            placeholder="Referral contact"
-            style="
-                width:100%;
-                padding:14px;
-                margin-bottom:12px;
-                border:1px solid var(--line);
-                background:transparent;
-                color:var(--text);
-            "
-        >
-
-
-        <button
-            class="primary-btn"
-            onclick="submitReferral()">
-
+        <button class="primary-btn"
+                onclick="submitReferral()">
             Submit Referral
-
         </button>
 
     </div>
@@ -5886,87 +3868,54 @@ footer a{
      COMMISSION MODAL
 ===================================================== -->
 
-<div
-    class="modal"
-    id="commissionModal">
-
+<div class="modal"
+     id="commissionModal">
 
     <div class="modal-box">
 
-
-        <button
-            class="modal-close"
-            onclick="closeModal('commissionModal')">
-
+        <button class="modal-close"
+                onclick="closeModal('commissionModal')">
             ×
-
         </button>
-
 
         <div class="eyebrow">
             COMMISSION CALCULATOR
         </div>
 
-
         <div class="modal-title">
             Estimate
         </div>
 
+        <div class="field"
+             style="margin-bottom:15px;">
 
-        <div
-            class="field"
-            style="margin-bottom:15px;">
+            <label>Transaction Value</label>
 
-            <label>
-                Transaction Value
-            </label>
-
-
-            <input
-                id="transactionValue"
-                type="number"
-                placeholder="Example: 5000000"
-            >
+            <input id="transactionValue"
+                   type="number"
+                   placeholder="Example: 5000000">
 
         </div>
 
+        <div class="field"
+             style="margin-bottom:20px;">
 
-        <div
-            class="field"
-            style="margin-bottom:20px;">
+            <label>Commission Rate (%)</label>
 
-            <label>
-                Commission Rate (%)
-            </label>
-
-
-            <input
-                id="commissionRate"
-                type="number"
-                step="0.1"
-                placeholder="Example: 2"
-            >
+            <input id="commissionRate"
+                   type="number"
+                   step="0.1"
+                   placeholder="Example: 2">
 
         </div>
 
-
-        <button
-            class="primary-btn"
-            onclick="calculateCommission()">
-
+        <button class="primary-btn"
+                onclick="calculateCommission()">
             Calculate
-
         </button>
 
-
-        <div
-            id="commissionResult"
-            style="
-                margin-top:20px;
-                font-family:var(--serif);
-                font-size:30px;
-            ">
-
+        <div id="commissionResult"
+             style="margin-top:20px;font-family:var(--serif);font-size:30px;">
         </div>
 
     </div>
@@ -5978,9 +3927,8 @@ footer a{
      TOAST
 ===================================================== -->
 
-<div
-    class="toast"
-    id="toast">
+<div class="toast"
+     id="toast">
 </div>
 
 
@@ -5988,24 +3936,17 @@ footer a{
      CONSENT
 ===================================================== -->
 
-<div
-    class="consent"
-    id="consent">
-
+<div class="consent"
+     id="consent">
 
     <p>
-
         This prototype uses local browser storage for
         demonstration functionality. Production deployment
         should implement appropriate privacy and security controls.
-
     </p>
 
-
     <button onclick="acceptConsent()">
-
         Continue
-
     </button>
 
 </div>
@@ -6018,22 +3959,11 @@ footer a{
 ========================================================= */
 
 const STORAGE = {
-
-    matches:
-        "pranaura_matches",
-
-    enquiries:
-        "pranaura_enquiries",
-
-    appointments:
-        "pranaura_appointments",
-
-    documents:
-        "pranaura_documents",
-
-    referrals:
-        "pranaura_referrals"
-
+    matches:"pranaura_matches",
+    enquiries:"pranaura_enquiries",
+    appointments:"pranaura_appointments",
+    documents:"pranaura_documents",
+    referrals:"pranaura_referrals"
 };
 
 
@@ -6044,17 +3974,11 @@ const STORAGE = {
 function getData(key){
 
     try{
-
-        return JSON.parse(
-            localStorage.getItem(key)
-        ) || [];
-
+        return JSON.parse(localStorage.getItem(key)) || [];
     }
 
     catch(e){
-
         return [];
-
     }
 
 }
@@ -6075,16 +3999,12 @@ function toast(message){
     const t =
         document.getElementById("toast");
 
-    t.textContent =
-        message;
+    t.textContent = message;
 
     t.classList.add("show");
 
-
     setTimeout(()=>{
-
         t.classList.remove("show");
-
     },3000);
 
 }
@@ -6098,19 +4018,16 @@ function generateID(role){
         .slice(2,10)
         .replaceAll("-","");
 
-
     const random =
         Math.floor(
             100 +
             Math.random()*900
         );
 
-
     const prefix =
         role
         ? role.substring(0,3).toUpperCase()
         : "GEN";
-
 
     return `PRN-${prefix}-${date}-${random}`;
 
@@ -6127,9 +4044,7 @@ function openModal(id){
         document.getElementById(id);
 
     if(modal){
-
         modal.classList.add("show");
-
     }
 
 }
@@ -6141,9 +4056,7 @@ function closeModal(id){
         document.getElementById(id);
 
     if(modal){
-
         modal.classList.remove("show");
-
     }
 
 }
@@ -6155,9 +4068,7 @@ document.querySelectorAll(".modal")
     modal.addEventListener("click",(e)=>{
 
         if(e.target === modal){
-
             modal.classList.remove("show");
-
         }
 
     });
@@ -6175,28 +4086,21 @@ const menuBtn =
 const navLinks =
     document.getElementById("navLinks");
 
+menuBtn.addEventListener("click",()=>{
 
-menuBtn.addEventListener(
-    "click",
-    ()=>{
+    navLinks.classList.toggle("show");
 
-        navLinks.classList.toggle("show");
-
-    }
-);
+});
 
 
 document.querySelectorAll(".nav-links a")
 .forEach(link=>{
 
-    link.addEventListener(
-        "click",
-        ()=>{
+    link.addEventListener("click",()=>{
 
-            navLinks.classList.remove("show");
+        navLinks.classList.remove("show");
 
-        }
-    );
+    });
 
 });
 
@@ -6208,33 +4112,21 @@ document.querySelectorAll(".nav-links a")
 const themeBtn =
     document.getElementById("themeBtn");
 
+themeBtn.addEventListener("click",()=>{
 
-themeBtn.addEventListener(
-    "click",
-    ()=>{
+    document.body.classList.toggle("dark");
 
-        document.body.classList.toggle("dark");
+    localStorage.setItem(
+        "pranaura_theme",
+        document.body.classList.contains("dark")
+        ? "dark"
+        : "light"
+    );
 
-
-        localStorage.setItem(
-
-            "pranaura_theme",
-
-            document.body.classList.contains("dark")
-            ? "dark"
-            : "light"
-
-        );
-
-    }
-);
+});
 
 
-if(
-    localStorage.getItem(
-        "pranaura_theme"
-    ) === "dark"
-){
+if(localStorage.getItem("pranaura_theme")==="dark"){
 
     document.body.classList.add("dark");
 
@@ -6248,308 +4140,213 @@ if(
 const languageBtn =
     document.getElementById("languageBtn");
 
-
 let kannada =
-    localStorage.getItem(
-        "pranaura_language"
-    ) === "kn";
-
+    localStorage.getItem("pranaura_language")==="kn";
 
 languageBtn.textContent =
     kannada ? "EN" : "KN";
 
+languageBtn.addEventListener("click",()=>{
 
-languageBtn.addEventListener(
-    "click",
-    ()=>{
+    kannada = !kannada;
 
-        kannada = !kannada;
+    localStorage.setItem(
+        "pranaura_language",
+        kannada ? "kn" : "en"
+    );
 
+    languageBtn.textContent =
+        kannada ? "EN" : "KN";
 
-        localStorage.setItem(
+    toast(
+        kannada
+        ? "Kannada mode selected. Full translation can be connected to the production language system."
+        : "English mode selected."
+    );
 
-            "pranaura_language",
-
-            kannada ? "kn" : "en"
-
-        );
-
-
-        languageBtn.textContent =
-            kannada ? "EN" : "KN";
-
-
-        toast(
-
-            kannada
-
-            ? "Kannada mode selected. Full translation can be connected to the production language system."
-
-            : "English mode selected."
-
-        );
-
-    }
-);
+});
 
 
 /* =========================================================
    SMART MATCH
 ========================================================= */
 
-document
-.getElementById("matchForm")
-.addEventListener(
-    "submit",
-    (e)=>{
+document.getElementById("matchForm")
+.addEventListener("submit",(e)=>{
 
-        e.preventDefault();
+    e.preventDefault();
 
+    const role =
+        document.getElementById("matchRole").value;
 
-        const role =
-            document.getElementById(
-                "matchRole"
-            ).value;
+    const location =
+        document.getElementById("matchLocation").value;
 
+    const property =
+        document.getElementById("matchProperty").value;
 
-        const location =
-            document.getElementById(
-                "matchLocation"
-            ).value;
+    const budget =
+        document.getElementById("matchBudget").value;
 
+    const timeline =
+        document.getElementById("matchTimeline").value;
 
-        const property =
-            document.getElementById(
-                "matchProperty"
-            ).value;
+    const phone =
+        document.getElementById("matchPhone").value;
 
+    const requirement =
+        document.getElementById("matchRequirement").value;
 
-        const budget =
-            document.getElementById(
-                "matchBudget"
-            ).value;
+    const id =
+        generateID(role);
 
+    const record = {
 
-        const timeline =
-            document.getElementById(
-                "matchTimeline"
-            ).value;
+        id,
+        role,
+        location,
+        property,
+        budget,
+        timeline,
+        phone,
+        requirement,
 
+        createdAt:
+            new Date().toISOString()
 
-        const phone =
-            document.getElementById(
-                "matchPhone"
-            ).value;
-
-
-        const requirement =
-            document.getElementById(
-                "matchRequirement"
-            ).value;
+    };
 
 
-        const id =
-            generateID(role);
+    const records =
+        getData(STORAGE.matches);
+
+    records.push(record);
+
+    saveData(
+        STORAGE.matches,
+        records
+    );
 
 
-        const record = {
+    document.getElementById("matchID")
+    .textContent = id;
 
-            id,
-            role,
-            location,
-            property,
-            budget,
-            timeline,
-            phone,
-            requirement,
+    document.getElementById("matchResult")
+    .classList.add("show");
 
-            createdAt:
-                new Date().toISOString()
+    toast(
+        "Your PRANAURA Match Profile has been created."
+    );
 
-        };
-
-
-        const records =
-            getData(
-                STORAGE.matches
-            );
-
-
-        records.push(record);
-
-
-        saveData(
-            STORAGE.matches,
-            records
-        );
-
-
-        document
-        .getElementById("matchID")
-        .textContent = id;
-
-
-        document
-        .getElementById("matchResult")
-        .classList.add("show");
-
-
-        toast(
-            "Your PRANAURA Match Profile has been created."
-        );
-
-    }
-);
+});
 
 
 /* =========================================================
    CONTACT
 ========================================================= */
 
-document
-.getElementById("contactForm")
-.addEventListener(
-    "submit",
-    (e)=>{
+document.getElementById("contactForm")
+.addEventListener("submit",(e)=>{
 
-        e.preventDefault();
+    e.preventDefault();
 
+    const enquiry = {
 
-        const enquiry = {
+        id:generateID("CON"),
 
-            id:
-                generateID("CON"),
+        name:
+            document.getElementById("contactName").value,
 
-            name:
-                document.getElementById(
-                    "contactName"
-                ).value,
+        phone:
+            document.getElementById("contactPhone").value,
 
-            phone:
-                document.getElementById(
-                    "contactPhone"
-                ).value,
+        role:
+            document.getElementById("contactRole").value,
 
-            role:
-                document.getElementById(
-                    "contactRole"
-                ).value,
+        email:
+            document.getElementById("contactEmail").value,
 
-            email:
-                document.getElementById(
-                    "contactEmail"
-                ).value,
+        message:
+            document.getElementById("contactMessage").value,
 
-            message:
-                document.getElementById(
-                    "contactMessage"
-                ).value,
+        createdAt:
+            new Date().toISOString()
 
-            createdAt:
-                new Date().toISOString()
-
-        };
+    };
 
 
-        const records =
-            getData(
-                STORAGE.enquiries
-            );
+    const records =
+        getData(STORAGE.enquiries);
+
+    records.push(enquiry);
+
+    saveData(
+        STORAGE.enquiries,
+        records
+    );
 
 
-        records.push(enquiry);
+    e.target.reset();
 
+    toast(
+        "Thank you. Your enquiry has been recorded."
+    );
 
-        saveData(
-            STORAGE.enquiries,
-            records
-        );
-
-
-        e.target.reset();
-
-
-        toast(
-            "Thank you. Your enquiry has been recorded."
-        );
-
-    }
-);
+});
 
 
 /* =========================================================
    APPOINTMENT
 ========================================================= */
 
-document
-.getElementById("appointmentForm")
-.addEventListener(
-    "submit",
-    (e)=>{
+document.getElementById("appointmentForm")
+.addEventListener("submit",(e)=>{
 
-        e.preventDefault();
+    e.preventDefault();
 
+    const appointment = {
 
-        const appointment = {
+        id:generateID("APP"),
 
-            id:
-                generateID("APP"),
+        name:
+            document.getElementById("appointmentName").value,
 
-            name:
-                document.getElementById(
-                    "appointmentName"
-                ).value,
+        phone:
+            document.getElementById("appointmentPhone").value,
 
-            phone:
-                document.getElementById(
-                    "appointmentPhone"
-                ).value,
+        date:
+            document.getElementById("appointmentDate").value,
 
-            date:
-                document.getElementById(
-                    "appointmentDate"
-                ).value,
+        time:
+            document.getElementById("appointmentTime").value,
 
-            time:
-                document.getElementById(
-                    "appointmentTime"
-                ).value,
+        purpose:
+            document.getElementById("appointmentPurpose").value,
 
-            purpose:
-                document.getElementById(
-                    "appointmentPurpose"
-                ).value,
+        createdAt:
+            new Date().toISOString()
 
-            createdAt:
-                new Date().toISOString()
-
-        };
+    };
 
 
-        const records =
-            getData(
-                STORAGE.appointments
-            );
+    const records =
+        getData(STORAGE.appointments);
+
+    records.push(appointment);
+
+    saveData(
+        STORAGE.appointments,
+        records
+    );
 
 
-        records.push(appointment);
+    e.target.reset();
 
+    toast(
+        "Appointment request submitted."
+    );
 
-        saveData(
-            STORAGE.appointments,
-            records
-        );
-
-
-        e.target.reset();
-
-
-        toast(
-            "Appointment request submitted."
-        );
-
-    }
-);
+});
 
 
 /* =========================================================
@@ -6559,16 +4356,10 @@ document
 function submitDocument(){
 
     const name =
-        document.getElementById(
-            "documentName"
-        ).value;
-
+        document.getElementById("documentName").value;
 
     const phone =
-        document.getElementById(
-            "documentPhone"
-        ).value;
-
+        document.getElementById("documentPhone").value;
 
     if(!name || !phone){
 
@@ -6582,20 +4373,13 @@ function submitDocument(){
 
 
     const records =
-        getData(
-            STORAGE.documents
-        );
-
+        getData(STORAGE.documents);
 
     records.push({
 
-        id:
-            generateID("DOC"),
-
+        id:generateID("DOC"),
         name,
-
         phone,
-
         createdAt:
             new Date().toISOString()
 
@@ -6608,10 +4392,7 @@ function submitDocument(){
     );
 
 
-    closeModal(
-        "documentModal"
-    );
-
+    closeModal("documentModal");
 
     toast(
         "Document request submitted."
@@ -6627,16 +4408,10 @@ function submitDocument(){
 function submitReferral(){
 
     const name =
-        document.getElementById(
-            "referralName"
-        ).value;
-
+        document.getElementById("referralName").value;
 
     const contact =
-        document.getElementById(
-            "referralContact"
-        ).value;
-
+        document.getElementById("referralContact").value;
 
     if(!name || !contact){
 
@@ -6650,20 +4425,13 @@ function submitReferral(){
 
 
     const records =
-        getData(
-            STORAGE.referrals
-        );
-
+        getData(STORAGE.referrals);
 
     records.push({
 
-        id:
-            generateID("REF"),
-
+        id:generateID("REF"),
         name,
-
         contact,
-
         createdAt:
             new Date().toISOString()
 
@@ -6676,10 +4444,7 @@ function submitReferral(){
     );
 
 
-    closeModal(
-        "referralModal"
-    );
-
+    closeModal("referralModal");
 
     toast(
         "Referral submitted."
@@ -6701,14 +4466,12 @@ function calculateCommission(){
             ).value
         );
 
-
     const rate =
         Number(
             document.getElementById(
                 "commissionRate"
             ).value
         );
-
 
     if(!value || !rate){
 
@@ -6728,12 +4491,8 @@ function calculateCommission(){
     document.getElementById(
         "commissionResult"
     ).textContent =
-
         "Estimated Commission: ₹" +
-
-        commission.toLocaleString(
-            "en-IN"
-        );
+        commission.toLocaleString("en-IN");
 
 }
 
@@ -6745,39 +4504,27 @@ function calculateCommission(){
 function toggleAI(){
 
     document
-    .getElementById("aiChat")
-    .classList.toggle("show");
+        .getElementById("aiChat")
+        .classList.toggle("show");
 
 }
 
 
-function addMessage(
-    text,
-    type
-){
+function addMessage(text,type){
 
     const container =
-        document.getElementById(
-            "aiMessages"
-        );
-
+        document.getElementById("aiMessages");
 
     const div =
-        document.createElement(
-            "div"
-        );
-
+        document.createElement("div");
 
     div.className =
         "message " + type;
 
-
     div.textContent =
         text;
 
-
     container.appendChild(div);
-
 
     container.scrollTop =
         container.scrollHeight;
@@ -6849,19 +4596,13 @@ function aiResponse(message){
 function sendAI(){
 
     const input =
-        document.getElementById(
-            "aiInput"
-        );
-
+        document.getElementById("aiInput");
 
     const message =
         input.value.trim();
 
-
     if(!message){
-
         return;
-
     }
 
 
@@ -6870,106 +4611,72 @@ function sendAI(){
         "user"
     );
 
-
     input.value = "";
 
 
-    setTimeout(
-        ()=>{
+    setTimeout(()=>{
 
-            addMessage(
-                aiResponse(message),
-                "bot"
-            );
+        addMessage(
+            aiResponse(message),
+            "bot"
+        );
 
-        },
-        400
-    );
+    },400);
 
 }
 
 
-document
-.getElementById("aiInput")
-.addEventListener(
-    "keydown",
-    (e)=>{
+document.getElementById("aiInput")
+.addEventListener("keydown",(e)=>{
 
-        if(e.key === "Enter"){
+    if(e.key==="Enter"){
 
-            sendAI();
-
-        }
+        sendAI();
 
     }
-);
+
+});
 
 
 /* =========================================================
    FAQ
 ========================================================= */
 
-document
-.querySelectorAll(".faq-question")
-.forEach(
-    button=>{
+document.querySelectorAll(".faq-question")
+.forEach(button=>{
 
-        button.addEventListener(
-            "click",
-            ()=>{
+    button.addEventListener("click",()=>{
 
-                const item =
-                    button.parentElement;
+        const item =
+            button.parentElement;
 
-
-                const wasOpen =
-                    item.classList.contains(
-                        "open"
-                    );
+        const wasOpen =
+            item.classList.contains("open");
 
 
-                document
-                .querySelectorAll(".faq-item")
-                .forEach(
-                    other=>{
+        document.querySelectorAll(".faq-item")
+        .forEach(other=>{
+            other.classList.remove("open");
 
-                        other.classList.remove(
-                            "open"
-                        );
-
-
-                        other
-                        .querySelector(
-                            ".faq-symbol"
-                        )
-                        .textContent =
-                            "+";
-
-                    }
-                );
+            other.querySelector(
+                ".faq-symbol"
+            ).textContent = "+";
+        });
 
 
-                if(!wasOpen){
+        if(!wasOpen){
 
-                    item.classList.add(
-                        "open"
-                    );
+            item.classList.add("open");
 
+            button.querySelector(
+                ".faq-symbol"
+            ).textContent = "−";
 
-                    button
-                    .querySelector(
-                        ".faq-symbol"
-                    )
-                    .textContent =
-                        "−";
+        }
 
-                }
+    });
 
-            }
-        );
-
-    }
-);
+});
 
 
 /* =========================================================
@@ -6977,50 +4684,32 @@ document
 ========================================================= */
 
 const backTop =
-    document.getElementById(
-        "backTop"
-    );
+    document.getElementById("backTop");
 
 
-window.addEventListener(
-    "scroll",
-    ()=>{
+window.addEventListener("scroll",()=>{
 
-        if(
-            window.scrollY > 600
-        ){
+    if(window.scrollY > 600){
 
-            backTop.classList.add(
-                "show"
-            );
+        backTop.classList.add("show");
 
-        }
-        else{
+    }else{
 
-            backTop.classList.remove(
-                "show"
-            );
-
-        }
+        backTop.classList.remove("show");
 
     }
-);
+
+});
 
 
-backTop.addEventListener(
-    "click",
-    ()=>{
+backTop.addEventListener("click",()=>{
 
-        window.scrollTo({
+    window.scrollTo({
+        top:0,
+        behavior:"smooth"
+    });
 
-            top:0,
-
-            behavior:"smooth"
-
-        });
-
-    }
-);
+});
 
 
 /* =========================================================
@@ -7028,71 +4717,47 @@ backTop.addEventListener(
 ========================================================= */
 
 const sections =
-    document.querySelectorAll(
-        "section[id]"
-    );
-
+    document.querySelectorAll("section[id]");
 
 const navAnchors =
-    document.querySelectorAll(
-        ".nav-links a"
-    );
+    document.querySelectorAll(".nav-links a");
 
 
-window.addEventListener(
-    "scroll",
-    ()=>{
+window.addEventListener("scroll",()=>{
 
-        let current = "";
+    let current = "";
 
+    sections.forEach(section=>{
 
-        sections.forEach(
-            section=>{
+        const top =
+            section.offsetTop - 150;
 
-                const top =
-                    section.offsetTop - 150;
+        if(window.scrollY >= top){
 
+            current =
+                section.getAttribute("id");
 
-                if(
-                    window.scrollY >= top
-                ){
+        }
 
-                    current =
-                        section.getAttribute(
-                            "id"
-                        );
-
-                }
-
-            }
-        );
+    });
 
 
-        navAnchors.forEach(
-            anchor=>{
+    navAnchors.forEach(anchor=>{
 
-                anchor.classList.remove(
-                    "active"
-                );
+        anchor.classList.remove("active");
 
+        if(
+            anchor.getAttribute("href") ===
+            "#" + current
+        ){
 
-                if(
-                    anchor.getAttribute(
-                        "href"
-                    ) === "#" + current
-                ){
+            anchor.classList.add("active");
 
-                    anchor.classList.add(
-                        "active"
-                    );
+        }
 
-                }
+    });
 
-            }
-        );
-
-    }
-);
+});
 
 
 /* =========================================================
@@ -7106,11 +4771,9 @@ function acceptConsent(){
         "yes"
     );
 
-
     document.getElementById(
         "consent"
-    ).style.display =
-        "none";
+    ).style.display = "none";
 
 }
 
@@ -7123,83 +4786,56 @@ if(
 
     document.getElementById(
         "consent"
-    ).style.display =
-        "none";
+    ).style.display = "none";
 
 }
 
 
 /* =========================================================
-   ESCAPE
+   ESCAPE MODALS
 ========================================================= */
 
-document.addEventListener(
-    "keydown",
-    (e)=>{
+document.addEventListener("keydown",(e)=>{
 
-        if(
-            e.key === "Escape"
-        ){
+    if(e.key === "Escape"){
 
-            document
-            .querySelectorAll(".modal")
-            .forEach(
-                modal=>{
+        document.querySelectorAll(".modal")
+        .forEach(modal=>{
+            modal.classList.remove("show");
+        });
 
-                    modal.classList.remove(
-                        "show"
-                    );
-
-                }
-            );
-
-
-            document
+        document
             .getElementById("aiChat")
-            .classList.remove(
-                "show"
-            );
-
-        }
+            .classList.remove("show");
 
     }
-);
+
+});
 
 
 /* =========================================================
    LOADER SAFETY
 ========================================================= */
 
-window.addEventListener(
-    "load",
-    ()=>{
+window.addEventListener("load",()=>{
 
-        setTimeout(
-            ()=>{
+    setTimeout(()=>{
 
-                const loader =
-                    document.getElementById(
-                        "loader"
-                    );
+        const loader =
+            document.getElementById("loader");
 
+        if(loader){
 
-                if(loader){
+            loader.style.pointerEvents =
+                "none";
 
-                    loader.style.pointerEvents =
-                        "none";
+        }
 
-                }
+    },2000);
 
-            },
-            2000
-        );
-
-    }
-);
+});
 
 </script>
 
-
 </body>
-
 </html>
