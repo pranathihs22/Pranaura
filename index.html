@@ -2695,7 +2695,58 @@ body.offline .offline-bar{
 }
 
 </style>
+<!-- PRANAURA VISUAL OVERRIDES -->
+<style>
 
+/* ================================
+   1. HERO LOGO — 250 x 250
+   ================================ */
+
+.hero-logo {
+    width: 250px !important;
+    height: 250px !important;
+}
+
+
+/* ================================
+   2. STANDARDIZED CARD ICONS
+   ================================ */
+
+.card-icon {
+    width: 42px !important;
+    height: 42px !important;
+}
+
+.card-icon::before {
+    width: 14px !important;
+    height: 14px !important;
+}
+
+.card-icon::after {
+    width: 6px !important;
+    height: 6px !important;
+}
+
+
+/* ================================
+   3. KEEP THE LOGO RESPONSIVE
+   ================================ */
+
+@media (max-width: 760px) {
+    .hero-logo {
+        width: 200px !important;
+        height: 200px !important;
+    }
+}
+
+@media (max-width: 430px) {
+    .hero-logo {
+        width: 176px !important;
+        height: 176px !important;
+    }
+}
+
+</style>
 </head>
 
 
@@ -2846,16 +2897,6 @@ id="home"
 >
 
 <div class="hero-inner">
-
-
-    <div class="launch">
-
-        <span class="launch-dot"></span>
-
-        Launching September 2026
-
-    </div>
-
 
     <img
     src="logo.png"
